@@ -1,0 +1,557 @@
+{
+  "generated_at": "2026-05-25T13:39:23.254573+00:00",
+  "source_nodes": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "mode": "apply",
+  "max_score": 22.0,
+  "min_improvement": 1.0,
+  "selected_nodes": 110,
+  "improved_nodes": 41,
+  "unchanged_nodes": 69,
+  "avg_delta": 1.927,
+  "total_delta": 79.0,
+  "changes": [
+    {
+      "node_id": "mathematics_field",
+      "label": "Mathematics",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Mathematics is the study of abstract structures including number, quantity, shape, and change. It provides the universal language through which all other sciences express their law",
+      "new_desc_preview": "Mathematics is the study of abstract structures including number, quantity, shape, and change. It provides the universal language through which all other sciences express their law"
+    },
+    {
+      "node_id": "physics_field",
+      "label": "Physics",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Physics investigates the fundamental nature of matter, energy, space, and time through observation, experimentation, and mathematical modeling. It seeks universal laws governing ev",
+      "new_desc_preview": "Physics is a foundational field in physics that organizes key principles, methods, and evidence into a coherent framework. It seeks universal laws governing everything from subatom"
+    },
+    {
+      "node_id": "medicine_field",
+      "label": "Medicine",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Medicine is the science and practice of diagnosing, treating, and preventing disease in humans. It synthesizes knowledge from biology, chemistry, physics, and psychology to maintai",
+      "new_desc_preview": "Medicine is the science and practice of diagnosing, treating, and preventing disease in humans. It synthesizes knowledge from biology, chemistry, physics, and psychology to maintai"
+    },
+    {
+      "node_id": "arts_field",
+      "label": "Arts",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The arts constitute a broad domain of human creative expression encompassing visual forms (painting, sculpture, photography, architecture), auditory forms (music, opera, sound art)",
+      "new_desc_preview": "Arts is a foundational field in arts that organizes key principles, methods, and evidence into a coherent framework. Distinct from purely functional or scientific endeavors, the ar"
+    },
+    {
+      "node_id": "geometry_field",
+      "label": "Geometry",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Geometry studies the properties of shapes, spaces, and their relationships. Beginning with Euclid's axiomatic system in ancient Greece, it expanded into non-Euclidean geometries th",
+      "new_desc_preview": "Geometry studies the properties of shapes, spaces, and their relationships. Beginning with Euclid's axiomatic system in ancient Greece, it expanded into non-Euclidean geometries th"
+    },
+    {
+      "node_id": "logic_field",
+      "label": "Logic",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "Limited cross-domain reach in connections"
+      ],
+      "after_diagnostics": [
+        "Limited cross-domain reach in connections"
+      ],
+      "old_desc_preview": "Logic studies the principles of valid reasoning and inference. Originating in ancient Greek philosophy, it became the formal foundation of mathematics and computer science in the 2",
+      "new_desc_preview": "Logic studies the principles of valid reasoning and inference. Originating in ancient Greek philosophy, it became the formal foundation of mathematics and computer science in the 2"
+    },
+    {
+      "node_id": "genetics_field",
+      "label": "Genetics",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Genetics studies how biological information is stored in DNA, transmitted between generations, and expressed as physical traits. From Mendel's pea plants to CRISPR gene editing, ge",
+      "new_desc_preview": "Genetics studies how biological information is stored in DNA, transmitted between generations, and expressed as physical traits. From Mendel's pea plants to CRISPR gene editing, ge"
+    },
+    {
+      "node_id": "neuroscience_field",
+      "label": "Neuroscience",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Neuroscience studies the nervous system — its structure, function, development, and disorders. By bridging biology, medicine, psychology, and increasingly computer science, it seek",
+      "new_desc_preview": "Neuroscience studies the nervous system — its structure, function, development, and disorders. By bridging biology, medicine, psychology, and increasingly computer science, it seek"
+    },
+    {
+      "node_id": "political_science_field",
+      "label": "Political Science",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Political science studies power, governance, institutions, and the collective organization of human societies at every scale. From Plato's Republic to modern computational electora",
+      "new_desc_preview": "Political science studies power, governance, institutions, and the collective organization of human societies at every scale. From Plato's Republic to modern computational electora"
+    },
+    {
+      "node_id": "cognitive_science_field",
+      "label": "Cognitive Science",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Cognitive science studies the nature of mind and intelligence through an interdisciplinary lens combining neuroscience, psychology, linguistics, philosophy, and computer science. I",
+      "new_desc_preview": "Cognitive science studies the nature of mind and intelligence through an interdisciplinary lens combining neuroscience, psychology, linguistics, philosophy, and computer science. I"
+    },
+    {
+      "node_id": "periodic_law_concept",
+      "label": "Periodic Law",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The periodic law states that chemical elements, when arranged by atomic number, exhibit recurring patterns in their properties — a regularity that Mendeleev famously used to predic",
+      "new_desc_preview": "Periodic Law is a foundational concept in chemistry and physics that organizes key principles, methods, and evidence into a coherent framework. This pattern was later explained by "
+    },
+    {
+      "node_id": "immune_system_concept",
+      "label": "Immune System",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "Limited cross-domain reach in connections"
+      ],
+      "after_diagnostics": [
+        "Limited cross-domain reach in connections"
+      ],
+      "old_desc_preview": "The immune system is the body's multilayered defense network that distinguishes self from non-self and eliminates pathogens through innate barriers, adaptive antibody responses, an",
+      "new_desc_preview": "The immune system is the body's multilayered defense network that distinguishes self from non-self and eliminates pathogens through innate barriers, adaptive antibody responses, an"
+    },
+    {
+      "node_id": "machine_learning_concept",
+      "label": "Machine Learning",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Machine learning studies algorithms that learn a mapping from data to predictions or decisions and improve with experience on a defined objective. Most modern methods optimize stat",
+      "new_desc_preview": "Machine learning studies algorithms that learn a mapping from data to predictions or decisions and improve with experience on a defined objective. Most modern methods optimize stat"
+    },
+    {
+      "node_id": "paradigm_shifts_concept",
+      "label": "Paradigm Shifts",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Paradigm shifts, described by Thomas Kuhn, are revolutionary transformations in scientific frameworks where accumulated anomalies force replacement of an entire worldview: Copernic",
+      "new_desc_preview": "Paradigm shifts, described by Thomas Kuhn, are revolutionary transformations in scientific frameworks where accumulated anomalies force replacement of an entire worldview: Copernic"
+    },
+    {
+      "node_id": "molecular_structure_concept",
+      "label": "Molecular Structure",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Molecular structure describes the three-dimensional arrangement of atoms within molecules, determined by chemical bonds, electron repulsion, and quantum mechanics. Structure dictat",
+      "new_desc_preview": "Molecular structure describes the three-dimensional arrangement of atoms within molecules, determined by chemical bonds, electron repulsion, and quantum mechanics. Structure dictat"
+    },
+    {
+      "node_id": "distributed_computing_concept",
+      "label": "Distributed Computing",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Distributed computing coordinates multiple networked computers to solve problems collectively, handling challenges of concurrency, fault tolerance, and consistency. The CAP theorem",
+      "new_desc_preview": "Distributed Computing is a foundational concept in technology and mathematics that organizes key principles, methods, and evidence into a coherent framework. The CAP theorem reveal"
+    },
+    {
+      "node_id": "social_network_analysis_concept",
+      "label": "Social Network Analysis",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Social network analysis studies patterns of relationships between social actors using graph theory to reveal hidden structures of influence, information flow, and community formati",
+      "new_desc_preview": "Social network analysis studies patterns of relationships between social actors using graph theory to reveal hidden structures of influence, information flow, and community formati"
+    },
+    {
+      "node_id": "oral_tradition_concept",
+      "label": "Oral Tradition",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Oral tradition encompasses the transmission of cultural knowledge, stories, laws, and histories through spoken word rather than writing. It shaped human culture for millennia befor",
+      "new_desc_preview": "Oral Tradition is a foundational concept in humanities and history that organizes key principles, methods, and evidence into a coherent framework. It shaped human culture for mille"
+    },
+    {
+      "node_id": "cross_cultural_exchange_concept",
+      "label": "Cross-Cultural Exchange",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Cross-cultural exchange studies how artistic forms, techniques, and ideas travel between civilizations through trade, conquest, migration, and communication. Silk Road transmission",
+      "new_desc_preview": "Cross-cultural exchange studies how artistic forms, techniques, and ideas travel between civilizations through trade, conquest, migration, and communication. Silk Road transmission"
+    },
+    {
+      "node_id": "intellectual_history_concept",
+      "label": "Intellectual History",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Intellectual history traces the development, transmission, and transformation of ideas across time and context. It examines how concepts migrate between disciplines, how political ",
+      "new_desc_preview": "Intellectual History is a foundational concept in history and philosophy that organizes key principles, methods, and evidence into a coherent framework. It examines how concepts mi"
+    },
+    {
+      "node_id": "electrostatics_concept",
+      "label": "Electrostatics",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Electrostatics studies stationary electric charges, the fields they create, and the forces they exert. Coulomb's law quantifies charge interactions; Gauss's law relates field to ch",
+      "new_desc_preview": "Electrostatics studies stationary electric charges, the fields they create, and the forces they exert. Coulomb's law quantifies charge interactions; Gauss's law relates field to ch"
+    },
+    {
+      "node_id": "cloud_computing_concept",
+      "label": "Cloud Computing",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Cloud computing delivers computing resources (storage, processing, services) over networks on demand, shifting from owned infrastructure to utility-like consumption. Virtualization",
+      "new_desc_preview": "Cloud Computing is a foundational concept in technology and engineering that organizes key principles, methods, and evidence into a coherent framework. Virtualization, containeriza"
+    },
+    {
+      "node_id": "real_analysis_concept",
+      "label": "Real Analysis",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Real analysis rigorously constructs the foundations of calculus: limits, continuity, differentiation, and integration defined through epsilon-delta proofs rather than intuition. It",
+      "new_desc_preview": "Real analysis rigorously constructs the foundations of calculus: limits, continuity, differentiation, and integration defined through epsilon-delta proofs rather than intuition. It"
+    },
+    {
+      "node_id": "bioinformatics_concept",
+      "label": "Bioinformatics",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Bioinformatics applies computational methods to biological data—genome sequences, protein structures, gene expression profiles, and metabolic networks. Sequence alignment, phylogen",
+      "new_desc_preview": "Bioinformatics is a foundational concept in biology and technology that organizes key principles, methods, and evidence into a coherent framework. Sequence alignment, phylogenetic "
+    },
+    {
+      "node_id": "additive_manufacturing_concept",
+      "label": "Additive Manufacturing",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Additive manufacturing (3D printing) builds objects layer by layer from digital models, enabling complex geometries impossible with subtractive methods. Technologies span fused dep",
+      "new_desc_preview": "Additive Manufacturing is a foundational concept in engineering and technology that organizes key principles, methods, and evidence into a coherent framework. Technologies span fus"
+    },
+    {
+      "node_id": "algebraic_topology_concept",
+      "label": "Algebraic Topology",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Algebraic topology uses algebraic structures (groups, rings, modules) to classify topological spaces up to continuous deformation. Fundamental groups capture loop structure; homolo",
+      "new_desc_preview": "Algebraic Topology is a foundational concept in mathematics and physics that organizes key principles, methods, and evidence into a coherent framework. Fundamental groups capture l"
+    },
+    {
+      "node_id": "max_weber_person",
+      "label": "Max Weber",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Max Weber (1864–1920) was a German sociologist, political economist, and philosopher whose theoretical contributions fundamentally reshaped the social sciences and continue to info",
+      "new_desc_preview": "Max Weber is a foundational scholar in social science and philosophy that organizes key principles, methods, and evidence into a coherent framework. Widely regarded as one of the f"
+    },
+    {
+      "node_id": "hippocrates_person",
+      "label": "Hippocrates",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Hippocrates of Cos (c. 460–370 BCE) is the ancient Greek physician universally regarded as the father of Western medicine, who fundamentally transformed the understanding and pract",
+      "new_desc_preview": "Hippocrates is a foundational scholar in medicine and philosophy that organizes key principles, methods, and evidence into a coherent framework. 460–370 BCE) is the ancient Greek p"
+    },
+    {
+      "node_id": "dmitri_mendeleev_person",
+      "label": "Dmitri Mendeleev",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Dmitri Mendeleev (1834-1907) organized known elements into a periodic table and used recurring property patterns to predict then-undiscovered elements. The predictive successes str",
+      "new_desc_preview": "Dmitri Mendeleev is a foundational scholar in chemistry and physics that organizes key principles, methods, and evidence into a coherent framework. The predictive successes strengt"
+    },
+    {
+      "node_id": "industrial_revolution_event",
+      "label": "Industrial Revolution",
+      "before_score": 22.0,
+      "after_score": 25.0,
+      "delta": 3.0,
+      "before_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Beginning in Britain around 1760, this transformation replaced human and animal labor with machine power, fundamentally reshaping economies, societies, and landscapes. Steam engine",
+      "new_desc_preview": "Beginning in Britain around 1760, this transformation replaced human and animal labor with machine power, fundamentally reshaping economies, societies, and landscapes. Steam engine"
+    },
+    {
+      "node_id": "apollo_program_event",
+      "label": "Apollo Program",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The Apollo Program was NASA's landmark human spaceflight initiative (1961–1972), specifically designed to land astronauts on the Moon and return them safely to Earth. Comprising se",
+      "new_desc_preview": "Apollo Program is a foundational historical event in engineering and physics that organizes key principles, methods, and evidence into a coherent framework. Comprising seventeen mi"
+    },
+    {
+      "node_id": "sonata_form_concept",
+      "label": "Sonata Form",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "A musical structure organizing a movement into exposition, development, and recapitulation — presenting themes, transforming them through key changes, then resolving tensions by re",
+      "new_desc_preview": "Sonata Form is a foundational concept in arts and mathematics that organizes key principles, methods, and evidence into a coherent framework. It dominated Western classical music f"
+    },
+    {
+      "node_id": "medical_imaging_concept",
+      "label": "Medical Imaging",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Medical Imaging is a foundational concept in medicine and physics that organizes key principles, methods, and evidence into a coherent framework. Each modality exploits different p",
+      "new_desc_preview": "Medical Imaging is a foundational concept in medicine and physics that organizes key principles, methods, and evidence into a coherent framework. Each modality exploits different p"
+    },
+    {
+      "node_id": "quantum_chemistry_concept",
+      "label": "Quantum Chemistry",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The application of quantum mechanics to chemical systems, explaining molecular bonding, reaction mechanisms, and spectroscopic properties from first principles. It solves the Schrö",
+      "new_desc_preview": "Quantum Chemistry is a foundational concept in chemistry and physics that organizes key principles, methods, and evidence into a coherent framework. It solves the Schrödinger equat"
+    },
+    {
+      "node_id": "superconductivity_concept",
+      "label": "Superconductivity",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "A quantum phenomenon where certain materials conduct electricity with zero resistance below a critical temperature, also expelling magnetic fields (Meissner effect). Discovered in ",
+      "new_desc_preview": "Superconductivity is a foundational concept in physics and engineering that organizes key principles, methods, and evidence into a coherent framework. Discovered in 1911, its theor"
+    },
+    {
+      "node_id": "standard_model_concept",
+      "label": "Standard Model of Particle Physics",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The theoretical framework classifying all known elementary particles and describing three of four fundamental forces (electromagnetic, weak, and strong) through quantum field theor",
+      "new_desc_preview": "Standard Model of Particle Physics is a foundational concept in physics and mathematics that organizes key principles, methods, and evidence into a coherent framework. Completed wi"
+    },
+    {
+      "node_id": "science_and_technology_studies_concept",
+      "label": "Science and Technology Studies",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "An interdisciplinary field examining how social, political, and cultural factors shape scientific knowledge production and technological development. It argues that science is not ",
+      "new_desc_preview": "Science and Technology Studies is a foundational concept in social science and philosophy that organizes key principles, methods, and evidence into a coherent framework. It argues "
+    },
+    {
+      "node_id": "theater_performance_concept",
+      "label": "Theater and Performance Studies",
+      "before_score": 22.0,
+      "after_score": 23.0,
+      "delta": 1.0,
+      "before_diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "Limited cross-domain reach in connections"
+      ],
+      "after_diagnostics": [
+        "Limited cross-domain reach in connections"
+      ],
+      "old_desc_preview": "Theater and Performance Studies is an interdisciplinary academic field that examines live performance as a distinct art form, analyzing how meaning emerges through the embodied pre",
+      "new_desc_preview": "Theater and Performance Studies is an interdisciplinary academic field that examines live performance as a distinct art form, analyzing how meaning emerges through the embodied pre"
+    },
+    {
+      "node_id": "film_language_concept",
+      "label": "Film Language and Montage",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "Film language and montage refer to the systematic set of visual, auditory, and editorial techniques through which cinema constructs meaning, emotion, and narrative. Just as spoken ",
+      "new_desc_preview": "Film Language and Montage is a foundational concept in arts and technology that organizes key principles, methods, and evidence into a coherent framework. Just as spoken and writte"
+    },
+    {
+      "node_id": "agricultural_revolution_concept",
+      "label": "Agricultural Revolution",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The transformation of farming (c.1700-1850) through crop rotation, selective breeding, enclosure, and mechanization that dramatically increased food output and freed labor for indu",
+      "new_desc_preview": "Agricultural Revolution is a foundational concept in history and biology that organizes key principles, methods, and evidence into a coherent framework. From Tull's seed drill to T"
+    },
+    {
+      "node_id": "printing_revolution_concept",
+      "label": "The Printing Revolution",
+      "before_score": 22.0,
+      "after_score": 24.0,
+      "delta": 2.0,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "after_diagnostics": [],
+      "old_desc_preview": "The transformation of European society (c.1450-1600) triggered by Gutenberg's movable type: exponential growth in book production (from thousands to millions of copies), standardiz",
+      "new_desc_preview": "The Printing Revolution is a foundational concept in history and technology that organizes key principles, methods, and evidence into a coherent framework. It bridges technology an"
+    }
+  ]
+}

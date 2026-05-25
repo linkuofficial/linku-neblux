@@ -1,0 +1,263 @@
+{
+  "timestamp": "2026-05-25T13:27:14.888967+00:00",
+  "batch": {
+    "number": 2,
+    "start": 10,
+    "end": 20,
+    "size": 10
+  },
+  "candidates_source": "p3_candidates_significance.json",
+  "total_candidates": 53,
+  "batch_results": [
+    {
+      "node_id": "deviance_and_social_control_concept",
+      "label": "Deviance and Social Control",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 23,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Deviance and social control refer to the sociological study of how societies define behaviors as violations of established norms, and the mechanisms societies employ to prevent, manage, or punish such violations. Deviance is not an intrinsic quality of an act itself but rather a social construction, shaped by cultural context, power relations, and historical moment — a foundational insight advanced by labeling theorists such as Howard Becker and Edwin Lemert.\n\nThis framework carries profound significance across disciplines. In sociology, it reveals how institutions — law, medicine, education — function as instruments of normalization and power, exposing whose definitions of \"normal\" dominate public life. Theorists from Émile Durkheim, who argued deviance performs essential social boundary-maintenance functions, to Michel Foucault, who traced how discipline and surveillance govern bodies, have made deviance central to understanding social order itself.\n\nThe concept bridges multiple fields in substantive ways. In philosophy, it raises questions about moral relativism, autonomy, and the legitimacy of punishment. In history, it illuminates how categories like \"madness,\" \"criminality,\" and \"heresy\" have been deployed to marginalize populations across different eras. In political science and law, social control mechanisms connect directly to debates about civil liberties, state authority, and structural inequality. For psychology, deviance intersects with stigma, identity formation, and mental health classification.",
+      "original_description": "Deviance studies how societies define, label, and respond to behavior that violates norms. Social co..."
+    },
+    {
+      "node_id": "archival_science_concept",
+      "label": "Archival Science",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 25,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Archival science is the systematic discipline concerned with the theory, methodology, and practice of creating, appraising, arranging, describing, preserving, and providing access to records and archives across their entire lifecycle. It establishes the intellectual and practical frameworks that determine which documents survive, how they are organized, and how future generations can retrieve and trust them.\n\nThe significance of archival science extends well beyond library stacks and storage rooms. Archives constitute the evidentiary foundation of historical research, legal accountability, and collective memory; without rigorous archival principles, entire cultures, judicial records, and scientific datasets risk distortion or irretrievable loss. The discipline's core concepts — provenance, original order, and the continuum of records — directly shape how societies construct authoritative narratives and hold institutions responsible over time.\n\nArchival science functions as a genuine crossroads discipline. It intersects with **history** by governing how primary sources are authenticated and contextualized; with **information science and computer science** through digital preservation standards, metadata schemas, and long-term format migration strategies; with **law** regarding chain-of-custody and evidentiary integrity; and with **sociology and postcolonial studies** by critically examining whose records are preserved and whose are systematically excluded. As increasing volumes of born-digital material challenge traditional models, archival science also engages **data management and cybersecurity**, making its methodological evolution central to how",
+      "original_description": "Archival science studies the principles and methods for preserving, organizing, and providing access..."
+    },
+    {
+      "node_id": "statistical_inference_concept",
+      "label": "Statistical Inference",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Statistical inference is the branch of statistics concerned with drawing conclusions about population parameters from sample data, using probability theory to quantify uncertainty in those conclusions. Its core methods include hypothesis testing, confidence intervals, and Bayesian updating — each providing a principled framework for deciding what the data support and with what degree of confidence.\n\nThe significance of statistical inference extends far beyond mathematics: it is the epistemological engine that allows empirical sciences to move from observed evidence to general claims. Without it, clinical trials could not establish whether a drug outperforms a placebo, sociological surveys could not characterize national populations from thousands of responses, or economists could not estimate causal effects from observational data. It fundamentally shapes how knowledge is validated and how uncertainty is communicated in research.\n\nAs a bridge concept, statistical inference connects mathematics and probability theory to an exceptionally wide range of disciplines. In medicine, it governs the standards for evidence-based practice and regulatory approval. In sociology, it enables researchers to generalize findings from samples to entire communities. In public policy, it informs decisions under uncertainty. In machine learning, inferential logic underlies model evaluation and generalization theory. Understanding statistical inference is therefore not merely a technical skill but a foundational literacy for any field that relies on data to build knowledge — making it one of the most practically consequential concepts in modern intellectual life.",
+      "original_description": "Statistical inference is the set of methods for drawing conclusions about populations from limited s..."
+    },
+    {
+      "node_id": "modeling_and_simulation_concept",
+      "label": "Modeling and Simulation",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 25,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 4
+      },
+      "enhanced_description": "Modeling and simulation refers to the practice of constructing abstract, computational, or mathematical representations of real-world systems in order to study their behavior, test hypotheses, and predict outcomes under varying conditions. A model captures the essential structure or dynamics of a system, while simulation executes that model over time or across scenarios, generating observable results without requiring direct interaction with the actual system.\n\nThe significance of modeling and simulation lies in its capacity to make the intractable tractable: it enables scientists, engineers, and policymakers to explore phenomena that are too dangerous, costly, slow, or physically impossible to study directly. From crash-testing vehicle designs and predicting epidemic spread to simulating climate systems and training pilots in flight simulators, the approach has fundamentally transformed how knowledge is generated and decisions are made across every technical and scientific domain.\n\nIts power as a cross-disciplinary bridge is particularly notable. In physics, simulations model quantum interactions and cosmological evolution; in engineering, they optimize structural integrity and fluid dynamics; in medicine, computational models guide surgical planning and drug development; in social science and economics, agent-based simulations reveal emergent behaviors in markets and populations. By providing a shared methodological language, modeling and simulation dissolves disciplinary boundaries, allowing insights from one field to inform another and enabling genuinely interdisciplinary problem-solving at scale.",
+      "original_description": "Modeling and simulation is the practice of creating abstract representations of real-world systems t..."
+    },
+    {
+      "node_id": "pattern_recognition_concept",
+      "label": "Pattern Recognition",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Pattern recognition is the cognitive and computational process of identifying regularities, structures, and meaningful configurations within data, sensory input, or symbolic systems — enabling the classification of new information based on learned or innate templates.\n\nIts significance lies in being a foundational mechanism underlying both biological intelligence and artificial systems. Without the ability to extract recurring structure from noise, neither human perception nor machine learning could function: vision, language acquisition, medical diagnosis, and financial forecasting all depend on detecting reliable patterns within complex, high-dimensional data. In cognitive science, it explains how the brain efficiently compresses experience into reusable schemas; in mathematics, it drives the discovery of theorems and sequences; in evolutionary biology, it accounts for adaptive behaviors refined across generations.\n\nAs a bridging concept, pattern recognition uniquely connects disciplines that rarely share vocabulary. In the arts, compositional structure and aesthetic response rest on the detection of rhythm, symmetry, and deviation from expectation. In philosophy of mind, it sits at the center of debates about inductive reasoning and concept formation. In computer science and artificial intelligence, it gave rise to entire subfields — including neural networks and deep learning — that now reshape medicine, linguistics, and climate modeling. This cross-domain reach makes pattern recognition not merely a technical capability but a unifying principle for understanding how any intelligent system — biological or artificial — makes sense of a complex world.",
+      "original_description": "Pattern recognition is the ability to detect regularities, structures, and meaningful configurations..."
+    },
+    {
+      "node_id": "stability_and_instability_concept",
+      "label": "Stability and Instability",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "Stability and instability refer to the behavioral tendencies of a system when subjected to perturbations: a stable system returns toward its equilibrium state after displacement, while an unstable system diverges progressively away from it. Mathematically, stability is characterized through eigenvalue analysis, Lyapunov functions, or phase portrait examination, capturing whether small deviations amplify or decay over time.\n\nThe significance of this framework is foundational across virtually every quantitative discipline. In engineering, stability analysis determines whether control systems, bridges, or aircraft will behave predictably under operational stress. In physics, it distinguishes bound orbits from escape trajectories and governs phase transitions. In ecology, it predicts whether population dynamics will settle into sustainable equilibria or collapse into extinction cascades. In economics, it underlies models of market equilibrium and systemic financial risk.\n\nThis concept serves as a genuine intellectual bridge across disciplines precisely because the underlying mathematics—differential equations, perturbation theory, and bifurcation analysis—applies universally regardless of the physical substrate. A neuroscientist analyzing neural firing patterns and a mechanical engineer evaluating structural resonance deploy the same analytical vocabulary. Bifurcation theory, which describes how qualitative system behavior changes as parameters vary, emerged from mathematics yet now informs climate science, epidemiology, and social dynamics modeling. Understanding stability and instability therefore equips learners with a transferable analytical lens for",
+      "original_description": "Stability analysis determines whether a system returns to equilibrium after perturbation (stable) or..."
+    },
+    {
+      "node_id": "gravitational_force_concept",
+      "label": "Gravitational Force",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Gravitational force is the fundamental attractive interaction between any two objects possessing mass, quantified by Newton's Law of Universal Gravitation: F = Gm₁m₂/r², where the force is directly proportional to the product of the masses and inversely proportional to the square of the distance separating them. Unlike contact forces, gravity acts across vast distances without a medium, making it the dominant force shaping large-scale structures in the universe.\n\nIts significance extends far beyond classical mechanics. Gravitational force unified terrestrial and celestial physics for the first time, dissolving the ancient distinction between earthly and heavenly realms. Einstein's General Theory of Relativity later reframed gravity not as a force but as the curvature of spacetime caused by mass-energy, fundamentally transforming our understanding of space, time, and cosmology. This conceptual evolution underpins predictions ranging from black hole formation to gravitational wave detection, confirmed by LIGO in 2016.\n\nThe concept bridges multiple disciplines with remarkable precision. In **engineering**, it governs orbital mechanics, enabling satellite deployment, GPS calibration, and space mission trajectory planning. In **mathematics**, it inspired the development of calculus, differential equations, and field theory. In **geophysics**, gravitational variation across Earth's surface informs resource exploration and tectonic modeling. Even in **philosophy of science**, gravity's historical development",
+      "original_description": "Gravitational force is the universal attraction between masses, described by Newton's inverse-square..."
+    },
+    {
+      "node_id": "collective_action_concept",
+      "label": "Collective Action",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Collective action refers to the coordinated effort of individuals within a group to achieve shared goals, despite the inherent tension between personal rational self-interest and the collective good. Central to this concept is the \"free-rider problem,\" wherein individuals benefit from a collective outcome without contributing to its production, undermining cooperative endeavors. Mancur Olson's foundational work formalized these dynamics, demonstrating that large groups face systematic barriers to cooperation that small groups or individuals do not.\n\nThe significance of collective action theory extends far beyond academic sociology: it provides essential tools for understanding why public goods are underprovided, how social movements succeed or fail, and what institutional designs best sustain cooperation over time. It reframes political and economic problems — from climate agreements to labor organizing — as coordination challenges requiring structural, not merely motivational, solutions.\n\nRemarkably, collective action bridges multiple disciplines with precision. In biology, it illuminates kin selection and mutualism, explaining cooperative behavior among organisms. In mathematics and game theory, it is formalized through models such as the Prisoner's Dilemma and stag hunt scenarios, enabling rigorous analysis of strategic interdependence. In philosophy, it raises foundational questions about individual obligation versus communal responsibility. This cross-domain reach makes collective action one of the most analytically versatile concepts in modern scholarship, relevant wherever the tension between individual incentives and group welfare must be resolved.",
+      "original_description": "Collective action theory studies how groups overcome the tendency for individual rational behavior t..."
+    },
+    {
+      "node_id": "discourse_analysis_concept",
+      "label": "Discourse Analysis",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 4
+      },
+      "enhanced_description": "Discourse analysis is a multidisciplinary methodology that examines how language in use — across spoken conversation, written texts, and institutional communication — actively constructs social reality, power relations, identity, and knowledge rather than merely reflecting them. It encompasses a range of approaches, from conversation analysis and critical discourse analysis (CDA) to Foucauldian discourse theory, each investigating how meaning is produced, contested, and reproduced within specific social and historical contexts.\n\nThe significance of discourse analysis lies in its foundational challenge to the assumption that language is a neutral medium of communication. By demonstrating that discourse shapes what counts as truth, legitimacy, and normality within a given society, it has transformed how researchers investigate ideology, inequality, and social change. Its tools for revealing hidden power structures have proven indispensable for understanding phenomena ranging from media representation to political rhetoric and institutional authority.\n\nAs a bridging framework, discourse analysis operates across an unusually wide intellectual terrain. In psychology, it informs discursive approaches to identity and cognition. In political science, it underpins the analysis of populist and hegemonic narratives. In medicine, it illuminates how clinical language constructs patient identity and shapes health policy. In artificial intelligence, it increasingly informs natural language processing and the ethical auditing of generative systems. This cross-domain reach makes discourse analysis not merely a linguistic tool but a critical lens applicable wherever language mediates human understanding and",
+      "original_description": "Discourse analysis examines how language use constructs social reality, power relations, and knowled..."
+    },
+    {
+      "node_id": "labor_economics_concept",
+      "label": "Labor Economics",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Labor economics is the branch of economics that systematically analyzes markets for human work, examining how wages are determined, why employment levels fluctuate, and how individuals invest in skills and education to enhance their productivity. It treats labor not merely as a commodity but as a dynamic resource shaped by individual decisions, institutional structures, and broader macroeconomic forces.\n\nThe significance of labor economics extends far beyond academic theory. Its frameworks directly inform minimum wage legislation, unemployment insurance design, anti-discrimination policy, and workforce development programs — shaping the material conditions of billions of workers globally. By rigorously modeling supply and demand in labor markets, it reveals mechanisms behind income inequality, occupational segregation, and the economic returns to education, providing evidence-based tools for addressing some of society's most pressing challenges.\n\nLabor economics serves as a compelling intellectual bridge across multiple disciplines. It draws on **sociology** to understand how social stratification and gender norms influence occupational choice and wage gaps. It engages **history** to trace how industrialization, unionization, and technological change have restructured work across centuries. Its quantitative methods — including regression analysis, natural experiments, and causal inference techniques — connect it firmly to **mathematics and statistics**. Meanwhile, its engagement with human motivation, fairness, and bargaining intersects with **psychology and philosophy**. This cross-disciplinary reach makes labor economics indispensable for understanding not just markets, but the human experience of",
+      "original_description": "Labor economics studies markets for human work: wage determination, employment, human capital invest..."
+    }
+  ],
+  "summary": {
+    "total_processed": 10,
+    "completed": 10,
+    "errors": 0,
+    "avg_score_improvement": 3.7
+  }
+}

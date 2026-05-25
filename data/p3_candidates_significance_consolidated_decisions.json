@@ -1,0 +1,541 @@
+{
+  "source": "p3_candidates_significance_consolidated.json",
+  "total_decisions": 39,
+  "approve": 37,
+  "review": 2,
+  "decisions": [
+    {
+      "node_id": "aesthetic_theory_concept",
+      "label": "Aesthetic Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "digital_humanities_concept",
+      "label": "Digital Humanities",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "diplomatic_history_concept",
+      "label": "Diplomatic History",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "narrative_concept",
+      "label": "Narrative",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "historical_method_concept",
+      "label": "Historical Method",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "computer_science_field",
+      "label": "Computer Science",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "feedback_loops_concept",
+      "label": "Feedback Loops",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 20,
+      "score_after": 25,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "adaptation_concept",
+      "label": "Adaptation",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 20,
+      "score_after": 25,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "diagnostic_reasoning_concept",
+      "label": "Diagnostic Reasoning",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 20,
+      "score_after": 25,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "globalization_concept",
+      "label": "Globalization",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "deviance_and_social_control_concept",
+      "label": "Deviance and Social Control",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 20,
+      "score_after": 23,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "archival_science_concept",
+      "label": "Archival Science",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 20,
+      "score_after": 25,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "statistical_inference_concept",
+      "label": "Statistical Inference",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "modeling_and_simulation_concept",
+      "label": "Modeling and Simulation",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 20,
+      "score_after": 25,
+      "improvement": 5,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "pattern_recognition_concept",
+      "label": "Pattern Recognition",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "stability_and_instability_concept",
+      "label": "Stability and Instability",
+      "decision": "REVIEW",
+      "reason": "Minimal improvement (+1 points): requires manual review",
+      "score_before": 20,
+      "score_after": 21,
+      "improvement": 1,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "gravitational_force_concept",
+      "label": "Gravitational Force",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "collective_action_concept",
+      "label": "Collective Action",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "discourse_analysis_concept",
+      "label": "Discourse Analysis",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 20,
+      "score_after": 23,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "labor_economics_concept",
+      "label": "Labor Economics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 20,
+      "score_after": 24,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "language_and_thought_concept",
+      "label": "Language and Thought",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 20,
+      "score_after": 23,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "ethnomusicology_concept",
+      "label": "Ethnomusicology",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 20,
+      "score_after": 23,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "theater_performance_concept",
+      "label": "Theater and Performance Studies",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 20,
+      "score_after": 22,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "differential_equations_concept",
+      "label": "Differential Equations",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 20,
+      "score_after": 22,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "medical_anthropology_concept",
+      "label": "Medical Anthropology",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 20,
+      "score_after": 23,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "neuroplasticity_concept",
+      "label": "Neuroplasticity",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 20,
+      "score_after": 22,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "political_philosophy_concept",
+      "label": "Political Philosophy",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 21,
+      "score_after": 25,
+      "improvement": 4,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "sociolinguistics_concept",
+      "label": "Sociolinguistics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "triage_concept",
+      "label": "Triage",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 21,
+      "score_after": 24,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "photochemistry_concept",
+      "label": "Photochemistry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 21,
+      "score_after": 24,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "historiography_concept",
+      "label": "Historiography",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 21,
+      "score_after": 24,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mathematical_music_concept",
+      "label": "Mathematics of Music",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 21,
+      "score_after": 24,
+      "improvement": 3,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "symmetry_concept",
+      "label": "Symmetry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "karl_marx_person",
+      "label": "Karl Marx",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "randomized_controlled_trial_concept",
+      "label": "Randomized Controlled Trial",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "history_of_emotions_concept",
+      "label": "History of Emotions",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "electrochemistry_applications_concept",
+      "label": "Electrochemistry Applications",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "colloid_chemistry_concept",
+      "label": "Colloid and Interface Science",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 21,
+      "score_after": 23,
+      "improvement": 2,
+      "diagnostics_before": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "behavioral_genetics_concept",
+      "label": "Behavioral Genetics",
+      "decision": "REVIEW",
+      "reason": "Minimal improvement (+1 points): requires manual review",
+      "score_before": 21,
+      "score_after": 22,
+      "improvement": 1,
+      "diagnostics_before": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    }
+  ]
+}

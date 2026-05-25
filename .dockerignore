@@ -1,0 +1,12 @@
+# Nexus Docker ignore
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.env
+.venv/
+.git/
+tests/
+scripts/
+docs/
+*.log

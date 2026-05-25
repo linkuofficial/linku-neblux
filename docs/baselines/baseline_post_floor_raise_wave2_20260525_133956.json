@@ -1,0 +1,280 @@
+{
+  "generated_at": "2026-05-25T13:39:56.358252+00:00",
+  "source_nodes": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "quality": {
+    "node_count": 627,
+    "grade_distribution": {
+      "A": 606,
+      "B": 21,
+      "C": 0,
+      "D": 0,
+      "F": 0
+    },
+    "avg_total_score": 23.676,
+    "avg_description_score": 9.662,
+    "avg_connection_score": 9.061,
+    "avg_information_score": 4.954,
+    "top_diagnostics": [
+      [
+        "Limited cross-domain reach in connections",
+        73
+      ],
+      [
+        "SIGNIFICANCE could be stronger",
+        66
+      ],
+      [
+        "WHAT element weak or missing in opening",
+        21
+      ],
+      [
+        "SIGNIFICANCE element weak or missing",
+        15
+      ],
+      [
+        "No cross-domain connections resolved",
+        14
+      ],
+      [
+        "All connections use same relation_type",
+        10
+      ],
+      [
+        "BRIDGE implied but no specific domain mentioned",
+        3
+      ]
+    ],
+    "lowest_20_nodes": [
+      {
+        "id": "historiography_field",
+        "label": "Historiography",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "medicinal_chemistry_concept",
+        "label": "Medicinal Chemistry",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "computer_science_field",
+        "label": "Computer Science",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "electromagnetism_field",
+        "label": "Electromagnetism",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "architecture_field",
+        "label": "Architecture",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "materials_science_field",
+        "label": "Materials Science",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "limit_concept",
+        "label": "Limit",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "fundamental_theorem_of_calculus_concept",
+        "label": "Fundamental Theorem of Calculus",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "catalysis_concept",
+        "label": "Catalysis",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "photosynthesis_concept",
+        "label": "Photosynthesis",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "social_contract_concept",
+        "label": "Social Contract",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "historiographical_schools_concept",
+        "label": "Historiographical Schools",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "probability_theory_concept",
+        "label": "Probability Theory",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "group_theory_concept",
+        "label": "Group Theory",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "linear_algebra_concept",
+        "label": "Linear Algebra",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "mathematical_proof_concept",
+        "label": "Mathematical Proof",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "archimedes_person",
+        "label": "Archimedes",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "theory_of_relativity_event",
+        "label": "Publication of Theory of Relativity",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "tissue_engineering_concept",
+        "label": "Tissue Engineering",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "oncology_concept",
+        "label": "Oncology",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "nodes": 627,
+    "nodes_with_errors": 0,
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "i18n_labels": {
+    "counts": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "keyset_aligned_to_en": true,
+    "missing_vs_en": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    }
+  },
+  "i18n_descriptions": {
+    "baseline_source": "data/all_nodes.json descriptions",
+    "baseline_count": 627,
+    "raw_counts": {
+      "en": 0,
+      "zh": 627,
+      "ja": 6
+    },
+    "effective_counts_after_fallback": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "missing_vs_baseline_after_fallback": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    },
+    "raw_coverage_pct": {
+      "en": 0.0,
+      "zh": 100.0,
+      "ja": 0.96
+    },
+    "effective_coverage_pct": {
+      "en": 100.0,
+      "zh": 100.0,
+      "ja": 100.0
+    }
+  }
+}

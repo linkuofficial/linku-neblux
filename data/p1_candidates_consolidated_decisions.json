@@ -1,0 +1,2229 @@
+{
+  "source": "p1_candidates_consolidated.json",
+  "total_decisions": 156,
+  "approve": 155,
+  "review": 1,
+  "decisions": [
+    {
+      "node_id": "stochastic_processes_concept",
+      "label": "Stochastic Processes",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "conservation_principles_concept",
+      "label": "Conservation Principles",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "genetic_regulation_concept",
+      "label": "Gene Regulation",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "thought_experiments_concept",
+      "label": "Thought Experiments",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "oscillations_and_waves_concept",
+      "label": "Oscillations and Waves",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "quantum_computing_concept",
+      "label": "Quantum Computing",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+6 points): automatically approved",
+      "score_before": 18,
+      "score_after": 24,
+      "improvement": 6,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "visualization_concept",
+      "label": "Visualization",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "biomedical_imaging_concept",
+      "label": "Biomedical Imaging",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "renewable_energy_concept",
+      "label": "Renewable Energy",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "behavioral_economics_concept",
+      "label": "Behavioral Economics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "rehabilitation_concept",
+      "label": "Rehabilitation Medicine",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mechatronics_concept",
+      "label": "Mechatronics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "world_systems_theory_concept",
+      "label": "World-Systems Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "neurodegenerative_disease_concept",
+      "label": "Neurodegenerative Disease",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "aerospace_engineering_concept",
+      "label": "Aerospace Engineering",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "counterpoint_concept",
+      "label": "Counterpoint",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "sublime_concept",
+      "label": "The Sublime",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "laser_concept",
+      "label": "Laser",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "computational_linguistics_concept",
+      "label": "Computational Linguistics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "polymer_science_concept",
+      "label": "Polymer Science",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "impressionism_concept",
+      "label": "Impressionism",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "baroque_art_concept",
+      "label": "Baroque Art and Architecture",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "surrealism_concept",
+      "label": "Surrealism",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "opera_concept",
+      "label": "Opera",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "jazz_concept",
+      "label": "Jazz",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "medical_ethics_concept",
+      "label": "Medical Ethics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "gothic_architecture_concept",
+      "label": "Gothic Architecture",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "expressionism_concept",
+      "label": "Expressionism",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "art_education_concept",
+      "label": "Art Education",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "arts_field",
+      "label": "Arts",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 18,
+      "score_after": 20,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "statistics_field",
+      "label": "Statistics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "linearity_and_nonlinearity_concept",
+      "label": "Linearity and Nonlinearity",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cognitive_modeling_concept",
+      "label": "Cognitive Modeling",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "sound_design_concept",
+      "label": "Sound Design",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "epidemiological_modeling_concept",
+      "label": "Epidemiological Modeling",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "apollo_program_event",
+      "label": "Apollo Program",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 18,
+      "score_after": 20,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "invention_of_calculus_event",
+      "label": "Invention of Calculus",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "iconography_concept",
+      "label": "Iconography",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "oral_poetry_concept",
+      "label": "Oral Poetry",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "philology_concept",
+      "label": "Philology",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "patronage_concept",
+      "label": "Patronage",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mimesis_concept",
+      "label": "Mimesis",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "bioethics_concept",
+      "label": "Bioethics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "science_communication_concept",
+      "label": "Science Communication",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "neuroaesthetics_concept",
+      "label": "Neuroaesthetics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cognitive_architecture_concept",
+      "label": "Cognitive Architecture",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "synthetic_biology_concept",
+      "label": "Synthetic Biology",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "epigenetics_concept",
+      "label": "Epigenetics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "big_history_concept",
+      "label": "Big History",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "food_chemistry_concept",
+      "label": "Food Chemistry",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "romanticism_concept",
+      "label": "Romanticism",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "film_language_concept",
+      "label": "Film Language and Montage",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 18,
+      "score_after": 20,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "postmodernism_art_concept",
+      "label": "Postmodern Art",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "comparative_religion_concept",
+      "label": "Comparative Religion",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "antibiotic_resistance_concept",
+      "label": "Antibiotic Resistance",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 18,
+      "score_after": 23,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "orchestration_concept",
+      "label": "Orchestration",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "literary_criticism_concept",
+      "label": "Literary Criticism and Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "landscape_painting_concept",
+      "label": "Landscape Art",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "ottoman_empire_concept",
+      "label": "Ottoman Empire",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "pathology_concept",
+      "label": "Pathology",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "pain_science_concept",
+      "label": "Pain Science",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "bioarchaeology_concept",
+      "label": "Bioarchaeology",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "philosophy_of_art_concept",
+      "label": "Philosophy of Art",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "animation_art_concept",
+      "label": "Animation",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "game_art_concept",
+      "label": "Video Game Art and Design",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "emergency_medicine_concept",
+      "label": "Emergency Medicine",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "chemical_safety_concept",
+      "label": "Chemical Safety and Regulation",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "humanities_field",
+      "label": "Humanities",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "greek_golden_age_event",
+      "label": "Greek Golden Age",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "renaissance_event",
+      "label": "Renaissance",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "copernican_revolution_event",
+      "label": "Copernican Revolution",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cliometrics_concept",
+      "label": "Cliometrics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "dark_matter_concept",
+      "label": "Dark Matter",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 18,
+      "score_after": 20,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "radioactivity_concept",
+      "label": "Radioactivity",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "acid_base_theory_concept",
+      "label": "Acid-Base Theory",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "forensic_science_concept",
+      "label": "Forensic Science",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "archaeometry_concept",
+      "label": "Archaeometry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "crispr_concept",
+      "label": "CRISPR Gene Editing",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 18,
+      "score_after": 22,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "proteomics_concept",
+      "label": "Proteomics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "political_polarization_concept",
+      "label": "Political Polarization",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "dance_notation_concept",
+      "label": "Dance Notation",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 18,
+      "score_after": 20,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "atmospheric_chemistry_concept",
+      "label": "Atmospheric Chemistry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "nuclear_chemistry_applications_concept",
+      "label": "Nuclear Chemistry Applications",
+      "decision": "REVIEW",
+      "reason": "Minimal improvement (+1 points): requires manual review",
+      "score_before": 18,
+      "score_after": 19,
+      "improvement": 1,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "calligraphy_concept",
+      "label": "Calligraphy",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "atlantic_slave_trade_concept",
+      "label": "The Atlantic Slave Trade",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 18,
+      "score_after": 21,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "signal_and_noise_concept",
+      "label": "Signal and Noise",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cybersecurity_concept",
+      "label": "Cybersecurity",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "counterfactual_history_concept",
+      "label": "Counterfactual History",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "structural_engineering_concept",
+      "label": "Structural Engineering",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "history_of_medicine_concept",
+      "label": "History of Medicine",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "landscape_architecture_concept",
+      "label": "Landscape Architecture",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+5 points): automatically approved",
+      "score_before": 19,
+      "score_after": 24,
+      "improvement": 5,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "constraint_satisfaction_concept",
+      "label": "Constraint Satisfaction",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "robotics_concept",
+      "label": "Robotics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "media_theory_concept",
+      "label": "Media Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "statistical_mechanics_concept",
+      "label": "Statistical Mechanics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "green_chemistry_concept",
+      "label": "Green Chemistry",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "chemical_engineering_concept",
+      "label": "Chemical Engineering",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "autonomous_systems_concept",
+      "label": "Autonomous Systems",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "biomedical_engineering_concept",
+      "label": "Biomedical Engineering",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "digital_art_concept",
+      "label": "Digital Art",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "architectural_theory_concept",
+      "label": "Architectural Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "photovoltaics_concept",
+      "label": "Photovoltaics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "power_systems_concept",
+      "label": "Power Systems Engineering",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "decision_theory_concept",
+      "label": "Decision Theory",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "nanotechnology_concept",
+      "label": "Nanotechnology",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "environmental_engineering_concept",
+      "label": "Environmental Engineering",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "biomechanics_concept",
+      "label": "Biomechanics",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "information_theory_founding_event",
+      "label": "Founding of Information Theory",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "antisepsis_concept",
+      "label": "Antisepsis",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "game_theory_applications_concept",
+      "label": "Game Theory Applications",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "digital_sociology_concept",
+      "label": "Digital Sociology",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "printmaking_history_concept",
+      "label": "Printmaking and Reproduction",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "art_nouveau_concept",
+      "label": "Art Nouveau",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "ceramics_art_concept",
+      "label": "Ceramics and Pottery",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "novel_form_concept",
+      "label": "The Novel",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "silk_road_concept",
+      "label": "The Silk Road",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "mythology_concept",
+      "label": "Mythology and Mythic Thinking",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "empire_concept",
+      "label": "Empire and Imperial Systems",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "ancient_rome_concept",
+      "label": "Roman Civilization",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "psychiatry_concept",
+      "label": "Psychiatry and Mental Health",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "indigenous_knowledge_concept",
+      "label": "Indigenous Knowledge Systems",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "typography_history_concept",
+      "label": "Typography",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "meiji_restoration_concept",
+      "label": "Meiji Restoration",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mosaic_art_concept",
+      "label": "Mosaic Art",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "museum_theory_concept",
+      "label": "Museum Theory and Practice",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "language_endangerment_concept",
+      "label": "Language Endangerment",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "food_culture_concept",
+      "label": "Food Culture and Gastronomy",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": [
+        "WHAT element weak or missing in opening"
+      ]
+    },
+    {
+      "node_id": "byzantine_empire_concept",
+      "label": "Byzantine Empire",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "electromagnetic_radiation_concept",
+      "label": "Electromagnetic Radiation",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "information_asymmetry_concept",
+      "label": "Information Asymmetry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "artificial_intelligence_concept",
+      "label": "Artificial Intelligence",
+      "decision": "APPROVE",
+      "reason": "Strong improvement (+4 points): automatically approved",
+      "score_before": 19,
+      "score_after": 23,
+      "improvement": 4,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "germ_theory_acceptance_event",
+      "label": "Acceptance of Germ Theory",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "human_genome_project_event",
+      "label": "Human Genome Project",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "world_war_two_event",
+      "label": "World War II",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "chinese_invention_of_paper_event",
+      "label": "Chinese Invention of Paper and Printing",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "chemical_thermodynamics_concept",
+      "label": "Chemical Thermodynamics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mass_spectrometry_concept",
+      "label": "Mass Spectrometry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "mathematical_biology_concept",
+      "label": "Mathematical Biology",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "econophysics_concept",
+      "label": "Econophysics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+2 points): approved with review",
+      "score_before": 19,
+      "score_after": 21,
+      "improvement": 2,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": [
+        "SIGNIFICANCE could be stronger"
+      ]
+    },
+    {
+      "node_id": "perspective_drawing_concept",
+      "label": "Linear Perspective",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "postcolonial_literature_concept",
+      "label": "Postcolonial Literature",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "computational_chemistry_concept",
+      "label": "Computational Chemistry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "astrochemistry_concept",
+      "label": "Astrochemistry",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "materials_by_design_concept",
+      "label": "Materials by Design",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "medieval_period_concept",
+      "label": "Medieval Period",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "ancient_china_concept",
+      "label": "Ancient Chinese Civilization",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "nutrition_science_concept",
+      "label": "Nutrition Science",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "neuroimaging_concept",
+      "label": "Neuroimaging",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cubism_concept",
+      "label": "Cubism",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "world_literature_concept",
+      "label": "World Literature",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "age_of_revolutions_concept",
+      "label": "Age of Revolutions",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "history_of_mathematics_concept",
+      "label": "History of Mathematics",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "cultural_heritage_concept",
+      "label": "Cultural Heritage Preservation",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "rhetoric_classical_concept",
+      "label": "Classical Rhetoric",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    },
+    {
+      "node_id": "telecommunications_engineering_concept",
+      "label": "Telecommunications Engineering",
+      "decision": "APPROVE",
+      "reason": "Moderate improvement (+3 points): approved with review",
+      "score_before": 19,
+      "score_after": 22,
+      "improvement": 3,
+      "diagnostics_before": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "diagnostics_after": []
+    }
+  ]
+}

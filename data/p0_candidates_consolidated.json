@@ -1,0 +1,1983 @@
+{
+  "timestamp": "2026-05-25T06:58:44.927951+00:00",
+  "consolidation": {
+    "source_prefix": "p0_candidates",
+    "num_batches": 5
+  },
+  "summary": {
+    "total_processed": 48,
+    "completed": 48,
+    "errors": 0,
+    "success_rate": "100.0%",
+    "score_improvements": {
+      "min": -1,
+      "max": 6,
+      "mean": 4.4375,
+      "median": 5
+    },
+    "description_improvements": {
+      "min": 0,
+      "max": 6,
+      "mean": 4.416666666666667
+    },
+    "distribution": {
+      "very_good": 21,
+      "excellent": 4,
+      "good": 19,
+      "declined": 1,
+      "moderate": 3
+    },
+    "recommendations": [
+      "⊙ 建議逐筆審核後套用：平均提升未達 +4.5 分",
+      "⊙ 提升幅度變化較大：從 -1 到 6 分不等",
+      "⚠ 注意：1 個節點分數下降，請逐筆審查原因"
+    ]
+  },
+  "review_table": [
+    {
+      "node_id": "publication_of_origin_of_species_event",
+      "label": "Publication of On the Origin of Species",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 16,
+      "after_score": 21,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Published in 1859, Charles Darwin's On the Origin of Species formally introduced natural selection a...",
+      "enhanced_description": "The publication of *On the Origin of Species* on November 24, 1859, is the landmark event in which Charles Darwin formally presented his theory of evolution by natural selection to a general scientifi..."
+    },
+    {
+      "node_id": "antoine_lavoisier_person",
+      "label": "Antoine Lavoisier",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [
+        "WHAT element weak or missing in opening"
+      ],
+      "original_description": "Antoine Lavoisier (1743-1794) helped establish modern chemistry by replacing phlogiston explanations...",
+      "enhanced_description": "Antoine Lavoisier (1743–1794) was a French chemist and natural philosopher widely regarded as the founder of modern chemistry, whose systematic application of quantitative methods transformed the disc..."
+    },
+    {
+      "node_id": "public_health_concept",
+      "label": "Public Health",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 23,
+      "improvement": 6,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Public health protects and improves population health through prevention, health promotion, and poli...",
+      "enhanced_description": "Public health is a multidisciplinary field and social practice dedicated to protecting, promoting, and improving the health of entire populations rather than individual patients. It operates through o..."
+    },
+    {
+      "node_id": "relativity_general_concept",
+      "label": "General Relativity",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 23,
+      "improvement": 6,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "original_description": "General relativity reinterprets gravity not as a force but as the curvature of spacetime caused by m...",
+      "enhanced_description": "General relativity is Einstein's geometric theory of gravitation, published in 1915, which reinterprets gravity not as a force acting between masses but as the curvature of a four-dimensional spacetim..."
+    },
+    {
+      "node_id": "conservation_biology_concept",
+      "label": "Conservation Biology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 23,
+      "improvement": 6,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The scientific study of threats to biodiversity and the development of strategies to protect species...",
+      "enhanced_description": "Conservation biology is an applied scientific discipline that integrates ecological theory, population genetics, and environmental policy to understand, mitigate, and reverse the threats facing Earth'..."
+    },
+    {
+      "node_id": "nuclear_engineering_concept",
+      "label": "Nuclear Engineering",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 23,
+      "improvement": 6,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The engineering of nuclear fission and fusion systems — power reactors, fuel cycles, radiation shiel...",
+      "enhanced_description": "Nuclear engineering is the branch of applied science and engineering concerned with harnessing the energy and radiation produced by nuclear reactions — primarily fission, fusion, and radioactive decay..."
+    },
+    {
+      "node_id": "philosophy_of_language_concept",
+      "label": "Philosophy of Language",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Philosophy of language investigates the nature of meaning, reference, truth, and the relationship be...",
+      "enhanced_description": "Philosophy of language is a branch of philosophy that systematically investigates the fundamental nature of language itself — examining how linguistic expressions acquire meaning, how words and phrase..."
+    },
+    {
+      "node_id": "surface_chemistry_concept",
+      "label": "Surface Chemistry",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Surface chemistry studies chemical phenomena at interfaces between phases—solid/liquid, solid/gas, l...",
+      "enhanced_description": "Surface chemistry is the branch of physical chemistry that investigates chemical and physical phenomena occurring at the interfaces between two distinct phases—solid/liquid, solid/gas, liquid/gas, or ..."
+    },
+    {
+      "node_id": "precision_medicine_concept",
+      "label": "Precision Medicine",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Precision medicine tailors treatment to individual patient characteristics—genomic variants, biomark...",
+      "enhanced_description": "Precision medicine is a medical and scientific approach that tailors prevention, diagnosis, and treatment strategies to the individual characteristics of each patient, rather than applying uniform pro..."
+    },
+    {
+      "node_id": "abolition_of_slavery_event",
+      "label": "Abolition of Slavery",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A global movement spanning the late 18th to late 19th centuries that ended the legal ownership of hu...",
+      "enhanced_description": "The abolition of slavery refers to the historical process and coordinated global movement through which the legal institution of chattel slavery was progressively dismantled, culminating in the formal..."
+    },
+    {
+      "node_id": "darwinian_synthesis_event",
+      "label": "Modern Evolutionary Synthesis",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "In the 1930s–1940s, biologists unified Darwin’s natural selection with Mendelian genetics and popula...",
+      "enhanced_description": "The Modern Evolutionary Synthesis, also called the New Synthesis or Neo-Darwinism, is the landmark intellectual unification achieved in the 1930s and 1940s that reconciled Charles Darwin's theory of n..."
+    },
+    {
+      "node_id": "golden_ratio_concept",
+      "label": "Golden Ratio",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "An irrational number (approximately 1.618) appearing when a line is divided so the ratio of the whol...",
+      "enhanced_description": "The golden ratio is an irrational mathematical constant, approximately equal to 1.6180339887, defined by a precise geometric relationship: a line segment is divided into two parts such that the ratio ..."
+    },
+    {
+      "node_id": "tonality_concept",
+      "label": "Tonality",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The system organizing music around a central pitch (tonic) using hierarchical relationships between ...",
+      "enhanced_description": "Tonality is a hierarchical system of musical organization in which all pitches and chords relate functionally to a central reference pitch called the tonic, creating a framework of tension and resolut..."
+    },
+    {
+      "node_id": "crystal_structure_concept",
+      "label": "Crystal Structure",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The repeating three-dimensional arrangement of atoms in a crystalline solid, determined by X-ray dif...",
+      "enhanced_description": "Crystal structure refers to the precise, repeating three-dimensional arrangement of atoms, ions, or molecules within a crystalline solid, defined by a characteristic unit cell that tiles space through..."
+    },
+    {
+      "node_id": "environmental_economics_concept",
+      "label": "Environmental Economics",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The study of how economic systems interact with natural ecosystems, developing tools to value enviro...",
+      "enhanced_description": "Environmental economics is a branch of applied economics that examines the relationship between economic activity and the natural environment, providing analytical frameworks to understand how human d..."
+    },
+    {
+      "node_id": "restorative_justice_concept",
+      "label": "Restorative Justice",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "An approach to justice focusing on repairing harm through dialogue between victims, offenders, and c...",
+      "enhanced_description": "Restorative justice is a philosophy and practice of responding to wrongdoing that prioritizes repairing harm over punishing offenders, centering the needs and voices of those directly affected by a co..."
+    },
+    {
+      "node_id": "documentary_film_concept",
+      "label": "Documentary Film",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A cinematic form using real footage to represent reality, from Flaherty's Nanook of the North (1922)...",
+      "enhanced_description": "Documentary film is a non-fiction cinematic form that systematically records, interprets, and presents real-world subjects, events, and perspectives using actual footage, interviews, archival material..."
+    },
+    {
+      "node_id": "sculpture_concept",
+      "label": "Sculpture",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The art of creating three-dimensional forms through carving, modeling, casting, or assembling materi...",
+      "enhanced_description": "Sculpture is a visual art form concerned with the creation of three-dimensional objects or environments that occupy or interact with physical space. Unlike painting or drawing, which represent depth o..."
+    },
+    {
+      "node_id": "musical_form_concept",
+      "label": "Musical Form and Structure",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The large-scale organization of music in time — sonata, fugue, rondo, theme-and-variations, through-...",
+      "enhanced_description": "Musical form and structure refers to the principled organization of musical elements across time, governing how a composition is shaped, sectioned, and unified into a coherent whole. At its core, musi..."
+    },
+    {
+      "node_id": "art_market_concept",
+      "label": "Art Markets and Collecting",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The economic systems through which art acquires monetary value — from Renaissance patronage and Dutc...",
+      "enhanced_description": "Art markets and collecting refers to the interconnected economic, social, and institutional systems through which artworks acquire monetary value, change ownership, and are preserved or displayed — en..."
+    },
+    {
+      "node_id": "decolonization_concept",
+      "label": "Decolonization",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The process (c.1945-1975) by which colonized peoples achieved political independence from European e...",
+      "enhanced_description": "Decolonization refers to the historical process through which colonized peoples dismantled European imperial rule and established political sovereignty, occurring most intensively between approximatel..."
+    },
+    {
+      "node_id": "vaccination_science_concept",
+      "label": "Vaccination Science",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The science of stimulating immune memory against pathogens without causing disease — from Jenner's c...",
+      "enhanced_description": "Vaccination science is the interdisciplinary study of how deliberately introducing antigenic material into the body trains the adaptive immune system to recognize and respond to specific pathogens, co..."
+    },
+    {
+      "node_id": "electronic_music_concept",
+      "label": "Electronic Music",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Music created using electronic instruments, synthesizers, samplers, and computers — from musique con...",
+      "enhanced_description": "Electronic music is a broad genre and practice in which sound is generated, manipulated, or reproduced primarily through electronic and electromechanical means — encompassing synthesizers, samplers, s..."
+    },
+    {
+      "node_id": "hydraulic_engineering_concept",
+      "label": "Hydraulic Engineering",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The engineering of water systems — dams, canals, aqueducts, irrigation, flood control, and water sup...",
+      "enhanced_description": "Hydraulic engineering is the branch of civil and mechanical engineering concerned with the controlled movement, storage, and distribution of water through the design and construction of physical infra..."
+    },
+    {
+      "node_id": "robotics_engineering_concept",
+      "label": "Robotics Engineering",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The engineering of machines that sense, plan, and act in physical environments — integrating mechani...",
+      "enhanced_description": "Robotics engineering is the interdisciplinary branch of engineering concerned with the design, construction, programming, and operation of robots — autonomous or semi-autonomous machines capable of se..."
+    },
+    {
+      "node_id": "internet_of_things_concept",
+      "label": "Internet of Things",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The Internet of Things (IoT) connects physical objects—sensors, actuators, vehicles, appliances—to n...",
+      "enhanced_description": "The Internet of Things (IoT) is a paradigm in which physical objects embedded with sensors, processors, and communication hardware are connected to the internet and to one another, enabling them to co..."
+    },
+    {
+      "node_id": "islamic_golden_age_event",
+      "label": "Islamic Golden Age",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A period of extraordinary scholarly achievement (roughly 750–1258 CE) centered in Baghdad, Cairo, an...",
+      "enhanced_description": "The Islamic Golden Age refers to a period of remarkable intellectual and scientific flourishing spanning roughly 750–1258 CE, during which scholars working primarily under the Abbasid Caliphate in Bag..."
+    },
+    {
+      "node_id": "first_wave_feminism_event",
+      "label": "First-Wave Feminism",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A political movement (roughly 1848–1920) demanding women’s legal rights, especially suffrage, educat...",
+      "enhanced_description": "First-wave feminism refers to the first organized, large-scale political movement advocating for women's legal equality, active primarily between 1848 and 1920 in Western Europe and North America. It ..."
+    },
+    {
+      "node_id": "oral_history_methodology_concept",
+      "label": "Oral History Methodology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A research method using recorded interviews with participants and witnesses to document experiences ...",
+      "enhanced_description": "Oral history methodology is a systematic research approach that collects, preserves, and interprets firsthand accounts of human experience through recorded interviews with eyewitnesses, participants, ..."
+    },
+    {
+      "node_id": "coordination_chemistry_concept",
+      "label": "Coordination Chemistry",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The study of metal ions bonded to surrounding molecules (ligands) in specific geometric arrangements...",
+      "enhanced_description": "Coordination chemistry is the branch of chemistry concerned with the formation, structure, and reactivity of coordination compounds — molecules in which a central metal ion is surrounded by and bonded..."
+    },
+    {
+      "node_id": "digital_twin_concept",
+      "label": "Digital Twin",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 22,
+      "improvement": 5,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A virtual replica of a physical system updated in real-time with sensor data, enabling simulation, p...",
+      "enhanced_description": "A digital twin is a dynamic virtual representation of a physical object, process, or system that maintains continuous synchronization with its real-world counterpart through sensor data, IoT connectiv..."
+    },
+    {
+      "node_id": "microelectromechanical_systems_concept",
+      "label": "MEMS (Microelectromechanical Systems)",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Miniaturized mechanical and electromechanical elements fabricated using semiconductor manufacturing ...",
+      "enhanced_description": "Microelectromechanical Systems (MEMS) is a technology platform that integrates miniaturized mechanical structures, sensors, actuators, and electronic circuits onto a single substrate — typically silic..."
+    },
+    {
+      "node_id": "microbiome_concept",
+      "label": "Microbiome",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The community of trillions of microorganisms living in and on the human body, now recognized as a fu...",
+      "enhanced_description": "The microbiome is the collective community of trillions of microorganisms — including bacteria, viruses, fungi, and archaea — along with their genetic material, that inhabit the human body, particular..."
+    },
+    {
+      "node_id": "memory_studies_concept",
+      "label": "Memory Studies",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The interdisciplinary study of how societies remember, forget, and construct shared pasts through mo...",
+      "enhanced_description": "Memory Studies is an interdisciplinary field that examines how individuals, groups, and societies construct, transmit, and transform their understanding of the past through collective remembrance and ..."
+    },
+    {
+      "node_id": "chemical_ecology_concept",
+      "label": "Chemical Ecology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The study of how organisms use chemical signals (pheromones, toxins, allelopathics) to interact with...",
+      "enhanced_description": "Chemical ecology is the scientific discipline that investigates how chemical compounds mediate interactions between organisms and their environments, encompassing the production, release, detection, a..."
+    },
+    {
+      "node_id": "narrative_theory_concept",
+      "label": "Narrative Theory",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The systematic study of how stories work — their structures (plot, character, point of view, tempora...",
+      "enhanced_description": "Narrative theory is the systematic, interdisciplinary study of how stories are structured, how they generate meaning, and how they function across human cultures and communication. Rooted in classical..."
+    },
+    {
+      "node_id": "gender_studies_concept",
+      "label": "Gender Studies",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The interdisciplinary study of how gender — as a social construction, performance, and power relatio...",
+      "enhanced_description": "Gender studies is an interdisciplinary academic field that examines how gender — understood as a social construction, a mode of performance, and a structure of power — shapes human experience, identit..."
+    },
+    {
+      "node_id": "art_therapy_concept",
+      "label": "Art Therapy",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The use of creative art-making (drawing, painting, sculpture, music, drama) as a therapeutic interve...",
+      "enhanced_description": "Art therapy is a form of psychotherapeutic practice that uses guided creative processes — including drawing, painting, sculpture, collage, and sometimes music or drama — as primary vehicles for psycho..."
+    },
+    {
+      "node_id": "sport_science_concept",
+      "label": "Sport Science",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The multidisciplinary study of human physical performance — integrating exercise physiology, biomech...",
+      "enhanced_description": "Sport science is an interdisciplinary academic and applied field that systematically investigates the physiological, biomechanical, psychological, and nutritional factors governing human physical perf..."
+    },
+    {
+      "node_id": "classical_music_concept",
+      "label": "Western Classical Music Tradition",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The notated art-music tradition from Gregorian chant through polyphony, Baroque, Classical, Romantic...",
+      "enhanced_description": "The Western Classical Music Tradition is a continuous, notated art-music lineage originating in medieval Europe and extending through the present day, encompassing Gregorian chant, medieval polyphony,..."
+    },
+    {
+      "node_id": "toxicology_concept",
+      "label": "Toxicology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The science of poisons — studying how chemical substances harm living organisms, determining safe ex...",
+      "enhanced_description": "Toxicology is the scientific discipline concerned with understanding the nature, mechanisms, and effects of chemical, biological, and physical agents that cause harm to living organisms. Rooted in the..."
+    },
+    {
+      "node_id": "cardiology_concept",
+      "label": "Cardiology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The medical specialty of the heart and cardiovascular system — from the stethoscope (1816) and ECG (...",
+      "enhanced_description": "Cardiology is the branch of medicine dedicated to the study, diagnosis, and treatment of diseases and disorders affecting the heart and cardiovascular system, encompassing conditions ranging from cong..."
+    },
+    {
+      "node_id": "battery_technology_concept",
+      "label": "Battery Technology",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The science and engineering of electrochemical energy storage — from Volta's pile (1800) through lea...",
+      "enhanced_description": "Battery technology is the interdisciplinary field encompassing the science, engineering, and design of devices that store and convert chemical energy into electrical energy through controlled electroc..."
+    },
+    {
+      "node_id": "theory_of_relativity_event",
+      "label": "Publication of Theory of Relativity",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 16,
+      "improvement": -1,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Einstein published special relativity in 1905 and general relativity in 1915, revealing that space, ...",
+      "enhanced_description": "The publication of the theory of relativity refers to two landmark events in physics: Albert Einstein's release of his special theory of relativity in 1905 and his general theory of relativity in 1915..."
+    },
+    {
+      "node_id": "anesthesia_concept",
+      "label": "Anesthesia",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 20,
+      "improvement": 3,
+      "before_diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Anesthesia is the controlled use of drugs to prevent pain, awareness, and reflex responses during pr...",
+      "enhanced_description": "Anesthesia is the medically induced, reversible state of controlled unconsciousness, analgesia, and muscle relaxation achieved through the administration of pharmacological agents, enabling surgical a..."
+    },
+    {
+      "node_id": "decolonization_historiography_concept",
+      "label": "Decolonization of History",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 20,
+      "improvement": 3,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "A scholarly movement challenging Eurocentric historical narratives by recovering suppressed indigeno...",
+      "enhanced_description": "Decolonization of history is a critical scholarly movement and methodological framework that systematically examines and dismantles the Eurocentric biases embedded in historical knowledge production, ..."
+    },
+    {
+      "node_id": "modernism_art_concept",
+      "label": "Modernism in Art",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 20,
+      "improvement": 3,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "The revolutionary break with representational tradition in visual art (c.1860–1970), encompassing Im...",
+      "enhanced_description": "Modernism in art is a broad cultural and aesthetic movement spanning roughly 1860 to 1970, defined by a deliberate and self-conscious rejection of traditional representational conventions in favour of..."
+    },
+    {
+      "node_id": "biomedical_devices_concept",
+      "label": "Biomedical Devices",
+      "decision": "PENDING",
+      "reason": "",
+      "before_score": 17,
+      "after_score": 21,
+      "improvement": 4,
+      "before_diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "after_diagnostics": [],
+      "original_description": "Engineered devices for diagnosis, monitoring, and treatment — from X-ray machines and MRI scanners t...",
+      "enhanced_description": "Biomedical devices are engineered instruments, systems, and implants specifically designed to diagnose, monitor, treat, or replace biological functions within the human body. Ranging from relatively s..."
+    }
+  ],
+  "raw_results": [
+    {
+      "node_id": "publication_of_origin_of_species_event",
+      "label": "Publication of On the Origin of Species",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 16,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "The publication of *On the Origin of Species* on November 24, 1859, is the landmark event in which Charles Darwin formally presented his theory of evolution by natural selection to a general scientific audience, fundamentally transforming humanity's understanding of biological diversity and the origins of life on Earth. In this work, Darwin synthesized decades of observational evidence — drawn from his Beagle voyage, selective breeding practices, and comparative anatomy — into a coherent mechanism explaining how species change over time through differential reproductive success.\n\nThe significance of this publication extends far beyond biology. Within the natural sciences, it provided the unifying theoretical framework upon which modern genetics, ecology, and evolutionary biology are built. The discovery that all living organisms share common ancestry, shaped by impersonal natural forces rather than deliberate design, represented one of the most consequential intellectual shifts in recorded history. Its immediate reception was explosive: the first edition sold out on its publication day, and it provoked intense debate within scientific, religious, and philosophical communities that continues in various forms today.\n\nThe work's cross-domain influence is equally profound. In philosophy, it challenged teleological accounts of nature and prompted new thinking about purpose, causality, and the nature of scientific explanation — engaging figures from Herbert Spencer to Karl Popper. In social thought, it catalyzed (and was frequently misappropriated by) movements in sociology and political theory, most notoriously in Social Darwinism",
+      "original_description": "Published in 1859, Charles Darwin's On the Origin of Species formally introduced natural selection a..."
+    },
+    {
+      "node_id": "antoine_lavoisier_person",
+      "label": "Antoine Lavoisier",
+      "status": "completed",
+      "before": {
+        "description_score": 3,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 22,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Antoine Lavoisier (1743–1794) was a French chemist and natural philosopher widely regarded as the founder of modern chemistry, whose systematic application of quantitative methods transformed the discipline from a practice rooted in speculative tradition into a rigorous experimental science. Working in Paris during the latter half of the eighteenth century, Lavoisier brought to chemistry the precision of measurement and the discipline of controlled experimentation that defined Enlightenment scientific ideals.\n\nLavoisier's most consequential contribution was the dismantling of the phlogiston theory, which had dominated chemical explanation for nearly a century. Through meticulous experiments on combustion and respiration, he demonstrated that burning and breathing both involve the consumption of a specific component of air, which he named oxygen. By insisting on precise measurement of mass before and after chemical reactions, he articulated what became the law of conservation of mass — the principle that matter is neither created nor destroyed in chemical processes. This foundational law gave chemistry a quantitative backbone it had previously lacked and remains a cornerstone of physical science today.\n\nHis significance extends well beyond any single discovery. Lavoisier co-authored the *Méthode de nomenclature chimique* (1787), establishing a systematic naming convention for chemical compounds that rationalized communication across the scientific community and directly shapes chemical nomenclature still in use. His *Traité élémentaire de chimie*",
+      "original_description": "Antoine Lavoisier (1743-1794) helped establish modern chemistry by replacing phlogiston explanations..."
+    },
+    {
+      "node_id": "public_health_concept",
+      "label": "Public Health",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Public health is a multidisciplinary field and social practice dedicated to protecting, promoting, and improving the health of entire populations rather than individual patients. It operates through organized community effort, encompassing disease surveillance, epidemiological research, health policy, environmental regulation, behavioral intervention, and equity-focused resource allocation. Where clinical medicine addresses illness in the individual, public health addresses the conditions — biological, social, economic, and environmental — that determine whether populations stay well or fall sick.\n\nThe significance of public health is difficult to overstate. Historically, public health interventions — clean water systems, sewage infrastructure, vaccination campaigns, and tobacco regulation — have contributed more to increases in human life expectancy than almost any single medical breakthrough. The eradication of smallpox, the near-elimination of polio, and dramatic reductions in infant mortality stand as landmark achievements produced not by individual physicians but by coordinated public systems. In this sense, public health operates as the infrastructure of civilization's biological sustainability, shaping the background conditions within which all other human activity unfolds.\n\nWhat distinguishes public health from adjacent fields is precisely its interdisciplinary architecture. It draws on **medicine and epidemiology** to understand disease causation and transmission; on **sociology and anthropology** to analyze how culture, inequality, and community structure shape health outcomes; on **philosophy and ethics** to navigate tensions between individual liberty and collective welfare — as seen in debates over mandatory vaccination or quar",
+      "original_description": "Public health protects and improves population health through prevention, health promotion, and poli..."
+    },
+    {
+      "node_id": "relativity_general_concept",
+      "label": "General Relativity",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "General relativity is Einstein's geometric theory of gravitation, published in 1915, which reinterprets gravity not as a force acting between masses but as the curvature of a four-dimensional spacetime continuum caused by the presence of mass and energy. Where Newtonian mechanics treated gravity as an instantaneous action at a distance, general relativity describes how massive objects warp the fabric of spacetime, and how other objects and even light follow the straightest possible paths — geodesics — through that curved geometry. The equivalence principle, a cornerstone of the theory, asserts that the effects of gravitational acceleration are locally indistinguishable from those of inertial acceleration.\n\nThe significance of general relativity extends far beyond a refinement of classical mechanics. It constitutes a foundational revolution in humanity's understanding of space, time, and causality. The theory successfully predicted phenomena that Newtonian gravity could not account for, including the precession of Mercury's perihelion, the bending of starlight around the Sun, and gravitational redshift. In the century since its publication, it has been confirmed with extraordinary precision — most dramatically by the direct detection of gravitational waves by LIGO in 2015 and by the first imaging of a black hole's event horizon in 2019. It also underlies the standard model of cosmology, providing the mathematical framework within which the Big Bang, cosmic expansion",
+      "original_description": "General relativity reinterprets gravity not as a force but as the curvature of spacetime caused by m..."
+    },
+    {
+      "node_id": "conservation_biology_concept",
+      "label": "Conservation Biology",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Conservation biology is an applied scientific discipline that integrates ecological theory, population genetics, and environmental policy to understand, mitigate, and reverse the threats facing Earth's biodiversity. It emerged as a formal field in the late 1970s and 1980s in direct response to accelerating rates of habitat destruction, species extinction, and ecosystem degradation driven by human activity—circumstances that demanded a science explicitly oriented toward crisis intervention rather than purely descriptive inquiry.\n\nAt its core, conservation biology examines the biological mechanisms underlying species vulnerability, including minimum viable population sizes, genetic drift in isolated populations, and the cascading effects of keystone species loss. It draws heavily on island biogeography theory and metapopulation dynamics to inform the design of protected areas, wildlife corridors, and habitat restoration programs. Unlike traditional ecology, which may maintain analytical neutrality, conservation biology openly acknowledges a normative commitment: preserving biological diversity is treated as both a scientific and ethical imperative.\n\nThe significance of this field extends well beyond academic biology. As global biodiversity loss is now recognized as a planetary boundary condition—comparable in urgency to climate change—conservation biology provides the empirical foundation for international policy frameworks such as the Convention on Biological Diversity and the IUCN Red List assessments. Its findings directly shape land-use legislation, environmental impact assessments, and international conservation targets.\n\nConservation biology is inherently cross-disciplinary, functioning as a bridge",
+      "original_description": "The scientific study of threats to biodiversity and the development of strategies to protect species..."
+    },
+    {
+      "node_id": "nuclear_engineering_concept",
+      "label": "Nuclear Engineering",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Nuclear engineering is the branch of applied science and engineering concerned with harnessing the energy and radiation produced by nuclear reactions — primarily fission, fusion, and radioactive decay — for practical human purposes. It encompasses the design, construction, operation, and safety analysis of nuclear reactors, fuel cycle facilities, radiation shielding systems, and waste management infrastructure. At its core, the discipline translates fundamental nuclear physics — quantum mechanical models of atomic nuclei, neutron transport theory, and thermodynamic principles — into engineered systems capable of sustained, controlled energy release.\n\nThe significance of nuclear engineering extends well beyond electricity generation, though that application alone is consequential: nuclear power plants currently supply approximately ten percent of global electricity and represent one of the lowest-carbon baseload energy sources available, making the field central to contemporary debates over climate change mitigation. The discipline emerged from the Manhattan Project and the subsequent Atoms for Peace initiative, reshaping geopolitics, energy policy, and scientific infrastructure throughout the twentieth century. Its theoretical foundations — neutron criticality, reactor kinetics, and radiation transport — represent some of the most sophisticated applied mathematics in any engineering discipline.\n\nNuclear engineering bridges an unusually wide range of fields. In medicine, nuclear engineering principles underpin radiation therapy for cancer, diagnostic imaging via PET and SPECT scanners, and the production of radioisotopes in research reactors — making it indispensable to modern oncology and medical physics.",
+      "original_description": "The engineering of nuclear fission and fusion systems — power reactors, fuel cycles, radiation shiel..."
+    },
+    {
+      "node_id": "philosophy_of_language_concept",
+      "label": "Philosophy of Language",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Philosophy of language is a branch of philosophy that systematically investigates the fundamental nature of language itself — examining how linguistic expressions acquire meaning, how words and phrases refer to objects and states of affairs in the world, and what makes statements true or false. It addresses foundational questions such as: What is the relationship between a word and what it represents? How do speakers communicate intentions beyond literal content? And how does language shape, or constrain, human thought?\n\nThe significance of philosophy of language extends well beyond academic philosophy. During the twentieth century, it became arguably the central discipline within Western analytic philosophy, with figures such as Gottlob Frege, Bertrand Russell, Ludwig Wittgenstein, and J.L. Austin fundamentally reshaping how philosophers approached every domain of inquiry. Frege's distinction between sense and reference, Russell's theory of descriptions, and Wittgenstein's later emphasis on meaning as use each provided conceptual tools that continue to inform debates across logic, epistemology, and metaphysics. The discipline demonstrated that many longstanding philosophical puzzles — about knowledge, identity, and existence — were, at least in part, puzzles about language.\n\nIts cross-domain reach is both broad and concrete. In linguistics, philosophy of language underpins formal semantics and pragmatics, providing theoretical frameworks that explain how syntactic structures map onto meaning. In cognitive science and psychology, debates about linguistic relativity —",
+      "original_description": "Philosophy of language investigates the nature of meaning, reference, truth, and the relationship be..."
+    },
+    {
+      "node_id": "surface_chemistry_concept",
+      "label": "Surface Chemistry",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Surface chemistry is the branch of physical chemistry that investigates chemical and physical phenomena occurring at the interfaces between two distinct phases—solid/liquid, solid/gas, liquid/gas, or liquid/liquid boundaries. At these interfacial regions, the properties of matter differ fundamentally from those of the bulk phases on either side, because atoms and molecules at surfaces experience asymmetric forces and incomplete bonding environments. This asymmetry gives rise to phenomena such as adsorption, wetting, surface tension, catalysis, and self-assembly, which are governed by principles distinct from those describing bulk behavior.\n\nThe significance of surface chemistry extends far beyond academic interest. Heterogeneous catalysis—in which reactions occur at the surface of a solid catalyst—underlies the industrial production of ammonia via the Haber–Bosch process, petroleum refining, and the catalytic converters that reduce automotive emissions. Adsorption phenomena govern how pollutants bind to activated carbon in water purification systems and how drugs interact with biological membranes. The field also provides the theoretical foundation for understanding corrosion, electrochemical energy storage in batteries and fuel cells, and the stability of colloidal suspensions used in food science, pharmaceuticals, and materials manufacturing. Without a rigorous understanding of surface interactions, the rational design of semiconductors, coatings, and nanomaterials would be impossible.\n\nSurface chemistry serves as a powerful conceptual",
+      "original_description": "Surface chemistry studies chemical phenomena at interfaces between phases—solid/liquid, solid/gas, l..."
+    },
+    {
+      "node_id": "precision_medicine_concept",
+      "label": "Precision Medicine",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Precision medicine is a medical and scientific approach that tailors prevention, diagnosis, and treatment strategies to the individual characteristics of each patient, rather than applying uniform protocols designed for the average person. It integrates genomic sequencing, molecular biomarkers, clinical data, lifestyle factors, and environmental exposures to construct a comprehensive biological profile that guides therapeutic decision-making. The result is a shift from the traditional \"one-size-fits-all\" model toward interventions that are specifically matched to a patient's unique biological context.\n\nThe significance of precision medicine lies in its capacity to fundamentally redefine clinical outcomes across a broad spectrum of diseases. In oncology, for instance, identifying tumor-specific mutations allows clinicians to prescribe targeted therapies—such as BRAF inhibitors for melanoma or HER2-directed agents for breast cancer—that dramatically outperform conventional chemotherapy in selected populations. Beyond cancer, precision approaches are transforming the management of rare genetic disorders, cardiovascular disease, autoimmune conditions, and neuropsychiatric illness, reducing trial-and-error prescribing and minimizing adverse drug reactions. At the population level, initiatives like the NIH All of Us Research Program and the UK Biobank demonstrate that large-scale genomic and phenotypic data collection can accelerate biomarker discovery and stratify disease risk with unprecedented resolution.\n\nPrecision medicine is inherently multidisciplinary, serving as a",
+      "original_description": "Precision medicine tailors treatment to individual patient characteristics—genomic variants, biomark..."
+    },
+    {
+      "node_id": "abolition_of_slavery_event",
+      "label": "Abolition of Slavery",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "The abolition of slavery refers to the historical process and coordinated global movement through which the legal institution of chattel slavery was progressively dismantled, culminating in the formal prohibition of human ownership across most of the world between the late 18th and late 19th centuries. Beginning with early Quaker and Enlightenment-era condemnations in the 1770s, the movement gained decisive momentum through landmark legislation such as Britain's Slave Trade Act (1807) and Slavery Abolition Act (1833), the Haitian Revolution (1791–1804), and the United States' Thirteenth Amendment (1865), ultimately reshaping the legal and moral architecture of modern societies.\n\nThe significance of abolition extends far beyond a single legislative achievement. It represents one of the most consequential transformations in human history: the overturning of an economic system that had structured Atlantic trade, colonial enterprise, and racial hierarchy for over three centuries. Abolition forced a fundamental reconception of personhood, citizenship, and universal human rights, directly influencing subsequent frameworks such as the 1948 Universal Declaration of Human Rights. It also exposed the structural contradictions between Enlightenment ideals of liberty and the lived realities of enslaved peoples, generating lasting debates about the relationship between moral philosophy and political economy.\n\nAcross disciplines, abolition serves as a critical intellectual and empirical reference point. In history, it",
+      "original_description": "A global movement spanning the late 18th to late 19th centuries that ended the legal ownership of hu..."
+    },
+    {
+      "node_id": "darwinian_synthesis_event",
+      "label": "Modern Evolutionary Synthesis",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "The Modern Evolutionary Synthesis, also called the New Synthesis or Neo-Darwinism, is the landmark intellectual unification achieved in the 1930s and 1940s that reconciled Charles Darwin's theory of natural selection with Mendelian genetics, population genetics, paleontology, systematics, and biogeography into a single, coherent evolutionary framework. Before this synthesis, biologists were divided: geneticists studying discrete heritable traits and naturalists observing gradual change in wild populations often appeared to be describing incompatible phenomena. The Synthesis resolved this tension by demonstrating that Mendelian inheritance, operating through allele frequency changes in populations, is precisely the mechanism through which Darwinian selection acts over time.\n\nKey architects of the Synthesis include Ronald Fisher, Sewall Wright, and J.B.S. Haldane, who provided the mathematical foundations through population genetics; Theodosius Dobzhansky, who bridged laboratory genetics and field biology in *Genetics and the Origin of Species* (1937); Ernst Mayr, who contributed a rigorous biological species concept; George Gaylord Simpson, who integrated the fossil record; and G. Ledyard Stebbins, who extended the framework to plant biology.\n\nThe significance of the Modern Evolutionary Synthesis is difficult to overstate. It transformed evolutionary biology from a descriptive, historically fragmented",
+      "original_description": "In the 1930s–1940s, biologists unified Darwin’s natural selection with Mendelian genetics and popula..."
+    },
+    {
+      "node_id": "golden_ratio_concept",
+      "label": "Golden Ratio",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 5
+      },
+      "enhanced_description": "The golden ratio is an irrational mathematical constant, approximately equal to 1.6180339887, defined by a precise geometric relationship: a line segment is divided into two parts such that the ratio of the whole segment to the longer part equals the ratio of the longer part to the shorter part. This self-referential proportion, commonly denoted by the Greek letter φ (phi), satisfies the unique algebraic equation φ² = φ + 1, making it the positive root of x² − x − 1 = 0. It is intimately related to the Fibonacci sequence, in which the ratio of consecutive terms converges toward φ as the sequence progresses.\n\nThe significance of the golden ratio extends far beyond its mathematical elegance. In geometry, it appears in the construction of regular pentagons, pentagrams, and Platonic solids, and it forms the structural basis of the golden rectangle and the logarithmic spiral. These connections gave it foundational importance in classical Greek mathematics, where it was studied extensively by Euclid under the name \"extreme and mean ratio.\" Its properties have continued to engage mathematicians, from Renaissance scholars to modern number theorists.\n\nAcross disciplines, the golden ratio serves as a rare conceptual bridge linking abstract mathematics, natural science, and the visual arts. In biology, φ emerges in the arrangement of seeds in sunflowers, the branching patterns of trees",
+      "original_description": "An irrational number (approximately 1.618) appearing when a line is divided so the ratio of the whol..."
+    },
+    {
+      "node_id": "tonality_concept",
+      "label": "Tonality",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Tonality is a hierarchical system of musical organization in which all pitches and chords relate functionally to a central reference pitch called the tonic, creating a framework of tension and resolution that governs melodic direction, harmonic progression, and formal structure. Within this system, the seven pitches of a diatonic scale assume distinct roles and weights — the dominant pulling toward resolution, the leading tone creating expectation, the subdominant providing contrast — producing the sense of directional movement that distinguishes tonal music from modal or atonal alternatives.\n\nTonality emerged as the dominant organizational principle of Western music roughly between 1600 and 1900, structuring virtually every major compositional form of that era, from the fugues of Bach to the symphonies of Beethoven to the operas of Verdi. Its significance lies not merely in its historical prevalence but in its cognitive and emotional effectiveness: tonal hierarchies exploit the human auditory system's sensitivity to harmonic relationships, particularly the natural resonance of the overtone series, allowing composers to generate and discharge psychological tension with remarkable precision. This capacity to manipulate listener expectation made tonality one of the most powerful expressive tools in the history of art.\n\nThe concept bridges multiple disciplines in instructive ways. In **physics and acoustics**, tonality is grounded in the mathematical ratios of frequency relationships — the perfect fifth corresponds to a 3:2",
+      "original_description": "The system organizing music around a central pitch (tonic) using hierarchical relationships between ..."
+    },
+    {
+      "node_id": "crystal_structure_concept",
+      "label": "Crystal Structure",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Crystal structure refers to the precise, repeating three-dimensional arrangement of atoms, ions, or molecules within a crystalline solid, defined by a characteristic unit cell that tiles space through regular translation. This geometric organization is described by one of fourteen Bravais lattices combined with a basis of constituent particles, producing the seven crystal systems — from cubic to triclinic — each with distinct symmetry properties encoded in space group notation.\n\nThe significance of crystal structure extends far beyond descriptive geometry. It is the fundamental determinant of a material's physical and chemical behavior: electrical conductivity, optical transparency, mechanical hardness, thermal expansion, and magnetic response all emerge directly from how atoms are packed and bonded in three-dimensional space. The discovery that X-ray diffraction patterns encode structural information — pioneered by Max von Laue and the Braggs in the early twentieth century — transformed materials science into a rigorous, predictive discipline and earned multiple Nobel Prizes. Understanding crystal structure was, for instance, the essential step toward deciphering the double helix of DNA, illustrating how a tool from physics and chemistry became foundational to molecular biology.\n\nThe concept bridges multiple disciplines in concrete and consequential ways. In chemistry, crystal structure governs reactivity, solubility, and polymorphism — the same compound crystallizing into forms with radically different properties, as seen in graphite versus diamond or the pharmaceutical importance of drug polymorphs. In",
+      "original_description": "The repeating three-dimensional arrangement of atoms in a crystalline solid, determined by X-ray dif..."
+    },
+    {
+      "node_id": "environmental_economics_concept",
+      "label": "Environmental Economics",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Environmental economics is a branch of applied economics that examines the relationship between economic activity and the natural environment, providing analytical frameworks to understand how human decisions affect ecosystem health, resource depletion, and environmental quality. At its core, the field seeks to assign measurable value to environmental goods and services — clean air, biodiversity, carbon sequestration — that conventional markets systematically undervalue or ignore entirely.\n\nThe field's significance lies in its capacity to make environmental considerations legible within the policy and business frameworks that govern modern societies. By developing concepts such as externalities, public goods, and the social cost of carbon, environmental economists have transformed how governments design regulation, tax pollution, and negotiate international climate agreements. Tools like cost-benefit analysis, contingent valuation, and cap-and-trade systems emerged directly from this discipline and now shape policy decisions worth trillions of dollars globally. The Stern Review on climate economics, for instance, fundamentally altered how policymakers assessed the long-term costs of inaction on climate change, demonstrating the field's direct influence on international governance.\n\nEnvironmental economics bridges multiple disciplines in substantive ways. It draws from ecology and biology to quantify ecosystem services — the measurable benefits that functioning natural systems provide to human welfare — translating biological complexity into economic terms that inform land-use planning and conservation policy. From engineering and technology studies, it borrows methods for assessing abatement costs and the economic feasibility of renewable",
+      "original_description": "The study of how economic systems interact with natural ecosystems, developing tools to value enviro..."
+    },
+    {
+      "node_id": "restorative_justice_concept",
+      "label": "Restorative Justice",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Restorative justice is a philosophy and practice of responding to wrongdoing that prioritizes repairing harm over punishing offenders, centering the needs and voices of those directly affected by a conflict or crime. Unlike conventional retributive justice systems, which focus primarily on determining guilt and administering punishment through adversarial legal proceedings, restorative justice brings together victims, offenders, and affected community members in structured dialogue processes — such as victim-offender mediation, community conferencing, and sentencing circles — to collectively address harm, establish accountability, and negotiate meaningful repair.\n\nThe significance of restorative justice lies in its fundamental challenge to dominant assumptions about what justice should accomplish. By reframing crime not merely as a violation of law but as a rupture in human relationships and community trust, it shifts the central question from \"what punishment does the offender deserve?\" to \"what does the harmed party need, and how can those needs be met?\" Empirical research consistently shows that restorative processes yield higher victim satisfaction, lower rates of reoffending, and greater compliance with agreed-upon outcomes compared to conventional sentencing. These outcomes carry profound implications for criminal justice reform, public policy, and the design of legal institutions.\n\nThe concept draws on and enriches multiple academic disciplines simultaneously. Philosophically, it engages debates in moral theory around punishment, desert, and the nature of moral repair — intersecting with thinkers from",
+      "original_description": "An approach to justice focusing on repairing harm through dialogue between victims, offenders, and c..."
+    },
+    {
+      "node_id": "documentary_film_concept",
+      "label": "Documentary Film",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Documentary film is a non-fiction cinematic form that systematically records, interprets, and presents real-world subjects, events, and perspectives using actual footage, interviews, archival materials, and observational techniques rather than scripted performance or staged narrative. Unlike fiction film, documentary operates under an implicit contract with audiences that the events and individuals depicted have an authentic relationship to reality, though the degree of mediation and subjective framing varies considerably across its many modes and traditions.\n\nThe form's significance lies in its unique capacity to function simultaneously as artistic expression, historical record, journalistic investigation, and instrument of social advocacy. Robert Flaherty's *Nanook of the North* (1922) established foundational conventions for the genre, while Dziga Vertov's *kino-pravda* movement theorized the camera as a tool for revealing truths invisible to the naked eye. The subsequent emergence of Direct Cinema and *cinéma vérité* in the 1960s—enabled by portable synchronous sound equipment—transformed documentary practice by prioritizing unobtrusive observation and spontaneous interaction. From Riefenstahl's propagandistic *Triumph of the Will* to Errol Morris's forensically reconstructed *The Thin Blue Line*, the form has continuously tested the boundaries between evidence and persuasion, objectivity and authorship.\n\nAcross disciplines, documentary film carries substantial intellectual weight. In sociology",
+      "original_description": "A cinematic form using real footage to represent reality, from Flaherty's Nanook of the North (1922)..."
+    },
+    {
+      "node_id": "sculpture_concept",
+      "label": "Sculpture",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Sculpture is a visual art form concerned with the creation of three-dimensional objects or environments that occupy or interact with physical space. Unlike painting or drawing, which represent depth on a flat surface, sculpture engages directly with volume, mass, texture, and spatial relationships, making it one of humanity's most immediate and materially grounded modes of expression. Practitioners work through four primary processes — carving (subtracting material from a solid mass), modeling (building up pliable substances such as clay), casting (pouring liquid material into a mold), and assembling or constructing (joining discrete components) — each of which demands a distinct understanding of materials and structural behavior.\n\nThe significance of sculpture extends across millennia and civilizations. From Paleolithic Venus figurines and Egyptian monumental reliefs to Michelangelo's marble figures and Rodin's psychologically charged bronzes, sculptural traditions have served ritual, commemorative, political, and purely aesthetic purposes. Sculpture has consistently operated at the frontier of cultural meaning-making, giving tangible form to beliefs, power structures, and philosophical ideals that written records alone cannot fully convey.\n\nIts importance, however, is not limited to art history. Sculpture sits at a productive intersection between art and engineering. The design of large-scale or public works requires knowledge of statics, load-bearing principles, material science, and environmental durability — concerns shared with architecture and civil engineering.",
+      "original_description": "The art of creating three-dimensional forms through carving, modeling, casting, or assembling materi..."
+    },
+    {
+      "node_id": "musical_form_concept",
+      "label": "Musical Form and Structure",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Musical form and structure refers to the principled organization of musical elements across time, governing how a composition is shaped, sectioned, and unified into a coherent whole. At its core, musical form describes the large-scale architecture of a piece — the patterns by which themes are introduced, developed, contrasted, and resolved — while structure addresses the internal relationships between those patterns at every hierarchical level, from the phrase to the movement to the complete work.\n\nEstablished forms include the sonata form, in which an exposition, development, and recapitulation create a narrative arc of tension and resolution; the fugue, which deploys contrapuntal imitation according to strict logical procedures; the rondo, built on the recurrence of a refrain between contrasting episodes; and theme-and-variations, where a melodic idea is systematically transformed while retaining its identity. These frameworks are not rigid formulas but flexible templates that composers have consistently adapted, subverted, and expanded throughout Western music history.\n\nThe significance of musical form extends well beyond compositional craft. Form is the primary vehicle through which music communicates expectation, surprise, and emotional continuity — it is what allows a listener to perceive a forty-minute symphony as a unified experience rather than an arbitrary sequence of sounds. The analytical study of form also reveals how musical meaning is constructed over time, making it foundational to music theory, musicology, and performance practice.\n\nThe",
+      "original_description": "The large-scale organization of music in time — sonata, fugue, rondo, theme-and-variations, through-..."
+    },
+    {
+      "node_id": "art_market_concept",
+      "label": "Art Markets and Collecting",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Art markets and collecting refers to the interconnected economic, social, and institutional systems through which artworks acquire monetary value, change ownership, and are preserved or displayed — encompassing everything from individual patronage and auction houses to galleries, dealers, and museum acquisition policies.\n\nAt its core, the concept addresses a fundamental tension: art objects carry both cultural and financial value, and the mechanisms that assign price to creative works reveal as much about a society's priorities as they do about aesthetic judgment. The market for art is not a neutral exchange system but a structured arena where taste, power, wealth, and ideology converge to determine which objects are elevated as masterpieces and which are forgotten.\n\nHistorically, the field spans Renaissance patronage networks in which Church and aristocratic commissions defined artistic production, through the emergence of the Dutch Golden Age's open art market in the seventeenth century — one of the earliest examples of art traded speculatively as a commodity — to the globalized, multibillion-dollar contemporary market dominated by auction houses such as Christie's and Sotheby's. Each phase reflects broader economic transformations, from mercantile capitalism to financialization.\n\nThe significance of studying art markets extends well beyond economics. In sociology, collecting practices illuminate class formation, status signaling, and the construction of cultural capital, as theorized by Pierre Bourdieu. In history, provenance research — tracing ownership chains — has become essential to understanding colonial",
+      "original_description": "The economic systems through which art acquires monetary value — from Renaissance patronage and Dutc..."
+    },
+    {
+      "node_id": "decolonization_concept",
+      "label": "Decolonization",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Decolonization refers to the historical process through which colonized peoples dismantled European imperial rule and established political sovereignty, occurring most intensively between approximately 1945 and 1975. More broadly, the term encompasses not only formal political independence but also the ongoing intellectual, cultural, and psychological efforts to overcome the legacies of colonial domination. At its core, decolonization involves the transfer of political authority from colonial powers to indigenous or locally governed states, reshaping the international order that European empires had constructed over several centuries.\n\nThe significance of decolonization extends far beyond the emergence of new nation-states across Africa, Asia, the Caribbean, and the Pacific. It fundamentally reorganized global politics, dissolving empires that had structured world affairs since the fifteenth century and producing the post-1945 international system of formally sovereign states. Economically, decolonization raised enduring questions about dependency, resource extraction, and whether formal independence translated into genuine self-determination—questions that animated decades of development theory and remain actively contested. Demographically and socially, the process triggered large-scale migrations, border disputes rooted in arbitrarily drawn colonial boundaries, and violent conflicts whose reverberations persist into the present.\n\nDecolonization is also a profoundly cross-disciplinary concept that bridges history, sociology, philosophy, and political theory. In philosophy and literary studies, thinkers such as",
+      "original_description": "The process (c.1945-1975) by which colonized peoples achieved political independence from European e..."
+    },
+    {
+      "node_id": "vaccination_science_concept",
+      "label": "Vaccination Science",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Vaccination science is the interdisciplinary study of how deliberately introducing antigenic material into the body trains the adaptive immune system to recognize and respond to specific pathogens, conferring protection without the risks of natural infection. It encompasses the design, development, testing, and deployment of vaccines — biological preparations that stimulate immunological memory through the activation of B cells, T cells, and the subsequent production of pathogen-specific antibodies.\n\nThe field traces its origins to Edward Jenner's 1796 observation that cowpox exposure protected milkmaids from smallpox, a foundational insight that Louis Pasteur later extended into a general principle of attenuated pathogen immunity. From these empirical beginnings, vaccination science has evolved into a rigorous discipline integrating molecular biology, immunology, epidemiology, and clinical medicine. Modern vaccine platforms — including live-attenuated, inactivated, subunit, viral vector, and mRNA-based formulations — reflect over two centuries of accumulated mechanistic understanding of how immune systems distinguish self from non-self and mount durable protective responses.\n\nThe significance of vaccination science is difficult to overstate. It has achieved the global eradication of smallpox, the near-elimination of poliomyelitis, and dramatic reductions in mortality from diseases such as measles, diphtheria, and pertussis. The rapid development of effective COVID-19 vaccines using",
+      "original_description": "The science of stimulating immune memory against pathogens without causing disease — from Jenner's c..."
+    },
+    {
+      "node_id": "electronic_music_concept",
+      "label": "Electronic Music",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Electronic music is a broad genre and practice in which sound is generated, manipulated, or reproduced primarily through electronic and electromechanical means — encompassing synthesizers, samplers, sequencers, drum machines, and digital audio workstations — rather than through conventional acoustic instruments alone. It ranges historically from early experimental works such as Pierre Schaeffer's *musique concrète* and Karlheinz Stockhausen's electronic compositions in the 1950s, through the emergence of synthesizer-driven popular music in the 1970s and 1980s, to contemporary genres including ambient, techno, house, and algorithmically generated sound art.\n\nThe significance of electronic music extends well beyond aesthetics. It fundamentally redefined what constitutes a musical instrument and who can create music, democratizing composition by making sophisticated sound design accessible outside traditional conservatory training. It introduced new organizing principles — loop structures, layered textures, precise rhythmic programming — that have since shaped mainstream popular music globally. The recording studio itself became a compositional tool, a development that transformed the entire music industry's production paradigm.\n\nFrom a technological standpoint, electronic music has driven substantial innovation in signal processing, acoustics engineering, and human-computer interaction. Voltage-controlled synthesizers pioneered by Robert Moog in the 1960s required deep engagement with physics — particularly the behavior of oscillators, filters,",
+      "original_description": "Music created using electronic instruments, synthesizers, samplers, and computers — from musique con..."
+    },
+    {
+      "node_id": "hydraulic_engineering_concept",
+      "label": "Hydraulic Engineering",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Hydraulic engineering is the branch of civil and mechanical engineering concerned with the controlled movement, storage, and distribution of water through the design and construction of physical infrastructure — including dams, canals, aqueducts, levees, spillways, irrigation networks, and urban water supply systems. It applies principles drawn from fluid mechanics, hydrology, and materials science to solve practical problems involving the behavior of water in motion and at rest.\n\nThe significance of hydraulic engineering extends far beyond technical construction. It is one of the oldest and most consequential branches of applied science, with roots traceable to Mesopotamian irrigation systems, Egyptian flood management along the Nile, and Roman aqueduct networks that supplied cities of over a million people with clean water. These achievements were not merely feats of labor — they represented sophisticated empirical knowledge of flow, pressure, and gradient that predated formal mathematical theory by millennia. In the modern era, hydraulic engineering underpins food security through large-scale irrigation, enables hydroelectric power generation, manages the flood risks that threaten densely populated river deltas, and supports municipal water treatment infrastructure that has dramatically reduced waterborne disease globally.\n\nThe field serves as a natural bridge between several disciplines. In physics, it demands rigorous application of fluid dynamics, including Bernoulli's principle, Reynolds numbers, and turbulent flow analysis. In environmental science and ecology, large hydraulic projects such as dams alter sediment",
+      "original_description": "The engineering of water systems — dams, canals, aqueducts, irrigation, flood control, and water sup..."
+    },
+    {
+      "node_id": "robotics_engineering_concept",
+      "label": "Robotics Engineering",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Robotics engineering is the interdisciplinary branch of engineering concerned with the design, construction, programming, and operation of robots — autonomous or semi-autonomous machines capable of sensing their environment, processing information, and executing physical actions in the world. It draws systematically from mechanical engineering, electrical engineering, computer science, and control theory to produce systems that can perform tasks ranging from precise surgical procedures to large-scale industrial manufacturing.\n\nThe significance of robotics engineering extends well beyond the automation of repetitive labor. It represents a fundamental rethinking of how intelligent systems interact with physical reality, pushing the boundaries of what machines can perceive, decide, and accomplish without continuous human intervention. Advances in robotic systems have transformed manufacturing efficiency, enabled exploration of environments inaccessible to humans — deep ocean floors, planetary surfaces, nuclear facilities — and opened entirely new frontiers in medical treatment through minimally invasive surgery and prosthetic limb design. As robots increasingly operate alongside humans in shared spaces, the field also confronts foundational questions about reliability, safety, and human-machine trust that carry consequences far beyond engineering.\n\nRobotics engineering serves as a powerful convergence point for multiple disciplines. In computer science, it drives advances in machine learning, computer vision, and path-planning algorithms. In biology and neuroscience, biomimetic robotics draws inspiration from animal locomotion and sensory systems to build more adaptable machines, while simultaneously offering models for understanding biological movement",
+      "original_description": "The engineering of machines that sense, plan, and act in physical environments — integrating mechani..."
+    },
+    {
+      "node_id": "internet_of_things_concept",
+      "label": "Internet of Things",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "The Internet of Things (IoT) is a paradigm in which physical objects embedded with sensors, processors, and communication hardware are connected to the internet and to one another, enabling them to collect, exchange, and act upon data without requiring direct human intervention. These objects range from household appliances and wearable devices to industrial machinery, vehicles, and urban infrastructure, all networked to create systems that monitor and respond to the physical world in near real time.\n\nThe significance of IoT lies in its capacity to dissolve the boundary between the digital and physical realms, generating unprecedented volumes of operational data and enabling automated decision-making at scale. In healthcare, connected devices continuously monitor patient vitals and alert clinicians to anomalies before crises develop. In manufacturing, IoT-enabled predictive maintenance reduces downtime by detecting equipment failures before they occur. In agriculture, soil sensors and automated irrigation systems optimize water use and crop yields. Across smart city initiatives, IoT infrastructure manages traffic flow, energy grids, and waste collection with measurable gains in efficiency and sustainability.\n\nFrom an engineering perspective, IoT design demands expertise in embedded systems, wireless communication protocols (such as MQTT, Zigbee, and LoRaWAN), edge computing, and hardware miniaturization. From a computer science perspective, it raises critical challenges in data management, real-time processing, and machine learning for sensor-generated streams. Sociologically, the per",
+      "original_description": "The Internet of Things (IoT) connects physical objects—sensors, actuators, vehicles, appliances—to n..."
+    },
+    {
+      "node_id": "islamic_golden_age_event",
+      "label": "Islamic Golden Age",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "The Islamic Golden Age refers to a period of remarkable intellectual and scientific flourishing spanning roughly 750–1258 CE, during which scholars working primarily under the Abbasid Caliphate in Baghdad, and later in Cairo, Córdoba, and other centers, produced foundational advances across mathematics, medicine, philosophy, astronomy, chemistry, and the humanities. This era began with the translation movement, in which Greek, Persian, and Indian texts were systematically rendered into Arabic, and culminated in original scholarship that substantially extended — and in many cases corrected — the classical knowledge it inherited.\n\nThe significance of this period extends well beyond its own time and geography. Islamic Golden Age scholars did not merely preserve ancient knowledge; they transformed it. Al-Khwarizmi formalized algebra as an independent discipline and introduced algorithmic thinking, directly shaping the trajectory of modern mathematics and computer science. Ibn Sina's *Canon of Medicine* served as the primary medical textbook in European universities for over five centuries, synthesizing clinical observation with systematic theory. Ibn al-Haytham's work on optics established experimental methodology as central to scientific inquiry, anticipating principles later associated with the Scientific Revolution. Al-Biruni conducted rigorous comparative studies in anthropology, geography, and natural philosophy with a methodological precision centuries ahead of his contemporaries.\n\nThis body of work functions as a critical intellectual bridge between the ancient world and the European Renaissance. Through translation",
+      "original_description": "A period of extraordinary scholarly achievement (roughly 750–1258 CE) centered in Baghdad, Cairo, an..."
+    },
+    {
+      "node_id": "first_wave_feminism_event",
+      "label": "First-Wave Feminism",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "First-wave feminism refers to the first organized, large-scale political movement advocating for women's legal equality, active primarily between 1848 and 1920 in Western Europe and North America. It is defined by its focused pursuit of formal rights that had been systematically denied to women: the right to vote, access to education, legal standing in courts, property ownership, and participation in public life. The movement is conventionally dated from the Seneca Falls Convention (1848) in New York—where Elizabeth Cady Stanton and others drafted the Declaration of Sentiments—to the ratification of the Nineteenth Amendment in the United States (1920) and equivalent legislative milestones in the United Kingdom and beyond.\n\nThe significance of first-wave feminism extends far beyond the franchise itself. By establishing that citizenship and political rights must be universal rather than sex-restricted, the movement fundamentally challenged Enlightenment-era contradictions: a political philosophy premised on natural equality had for over a century excluded roughly half the population. The legal victories secured during this period created structural preconditions for subsequent waves of feminist activism and for broader civil rights movements, demonstrating that organized advocacy could reshape constitutional frameworks.\n\nAcross disciplines, first-wave feminism functions as a critical intersection point. In **political philosophy**, it forced a re-examination of social contract theory—Locke, Rousseau, and Mill were each sel",
+      "original_description": "A political movement (roughly 1848–1920) demanding women’s legal rights, especially suffrage, educat..."
+    },
+    {
+      "node_id": "oral_history_methodology_concept",
+      "label": "Oral History Methodology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 4
+      },
+      "enhanced_description": "Oral history methodology is a systematic research approach that collects, preserves, and interprets firsthand accounts of human experience through recorded interviews with eyewitnesses, participants, and community members. Unlike documentary or archival research, it actively generates primary sources by capturing spoken testimony, personal memory, and lived experience that would otherwise remain unrecorded or be lost entirely. The methodology encompasses the full research cycle: designing interview protocols, conducting ethically informed interviews, archiving recordings and transcripts, and analyzing narrative content within its historical and social context.\n\nThe significance of oral history methodology lies in its capacity to democratize the historical record. Traditional historiography has long privileged written documents produced by literate, institutionally connected, or socially dominant groups, systematically excluding the perspectives of women, working-class communities, indigenous populations, and other marginalized groups. Oral history directly counters this imbalance by treating spoken testimony as legitimate historical evidence, recovering voices and experiences that conventional archives rarely preserve. Landmark projects — such as Studs Terkel's interviews with Depression-era Americans or the testimonies collected by the United States Holocaust Memorial Museum — demonstrate how the methodology can transform collective understanding of major historical events by grounding grand narratives in individual human experience.\n\nBeyond history, oral history methodology bridges multiple disciplines in substantive ways. In sociology and anthropology, it complements ethnographic fieldwork by providing richly contextual data about social identity, cultural",
+      "original_description": "A research method using recorded interviews with participants and witnesses to document experiences ..."
+    },
+    {
+      "node_id": "coordination_chemistry_concept",
+      "label": "Coordination Chemistry",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Coordination chemistry is the branch of chemistry concerned with the formation, structure, and reactivity of coordination compounds — molecules in which a central metal ion is surrounded by and bonded to a set of electron-donating atoms, molecules, or ions called ligands. These ligands coordinate to the metal through dative (coordinate covalent) bonds, producing stable assemblies known as coordination complexes that adopt characteristic three-dimensional geometries, such as octahedral, tetrahedral, and square planar arrangements. The field systematically describes how the identity of the metal, its oxidation state, and the nature of the ligands collectively determine a complex's electronic structure, color, magnetic behavior, and chemical reactivity.\n\nThe significance of coordination chemistry extends well beyond inorganic synthesis. It provides the conceptual and mechanistic foundation for understanding catalysis, explaining how transition metals activate otherwise inert bonds in both industrial and biological contexts. Heterogeneous and homogeneous catalysts responsible for the synthesis of pharmaceuticals, polymers, and bulk chemicals rely on coordination principles to tune selectivity and efficiency. The field also undergirds materials science, where coordination networks and metal-organic frameworks (MOFs) are engineered for gas storage, separations, and sensing applications.\n\nCoordination chemistry serves as a critical bridge between chemistry and biology through the discipline of bioinorganic chemistry. Nearly one-third of all proteins require a metal cofactor to function, and",
+      "original_description": "The study of metal ions bonded to surrounding molecules (ligands) in specific geometric arrangements..."
+    },
+    {
+      "node_id": "digital_twin_concept",
+      "label": "Digital Twin",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 4
+      },
+      "enhanced_description": "A digital twin is a dynamic virtual representation of a physical object, process, or system that maintains continuous synchronization with its real-world counterpart through sensor data, IoT connectivity, and real-time data streams. Unlike static simulations or conventional models, a digital twin evolves alongside the physical entity it mirrors, capturing changes in state, performance, and environmental conditions as they occur. This bidirectional relationship allows the virtual model to reflect actual conditions while simultaneously enabling predictions, diagnostics, and controlled experimentation that would be impractical or costly to perform on the physical system itself.\n\nThe significance of digital twins lies in their capacity to fundamentally reshape how complex systems are designed, monitored, and maintained. By providing a persistent, high-fidelity model that operators can interrogate without interrupting real-world operations, digital twins reduce risk, lower costs, and accelerate decision-making across the full lifecycle of a system—from initial design through decommissioning. Early identification of failure modes, optimization of operational parameters, and scenario testing under extreme conditions become tractable problems rather than prohibitively expensive experiments. NASA and aerospace engineers were among the first to formalize the concept, using paired physical and virtual models to manage spacecraft integrity, but its relevance has since expanded far beyond any single sector.\n\nDigital twins serve as a powerful bridge across engineering, medicine, urban planning, and environmental science. In manufacturing, they enable predictive maintenance and production optimization on factory",
+      "original_description": "A virtual replica of a physical system updated in real-time with sensor data, enabling simulation, p..."
+    },
+    {
+      "node_id": "microelectromechanical_systems_concept",
+      "label": "MEMS (Microelectromechanical Systems)",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Microelectromechanical Systems (MEMS) is a technology platform that integrates miniaturized mechanical structures, sensors, actuators, and electronic circuits onto a single substrate — typically silicon — using the same photolithographic fabrication processes developed for semiconductor manufacturing. These devices operate at the microscale, with characteristic dimensions ranging from one to hundreds of micrometers, enabling them to interact with physical phenomena — motion, pressure, temperature, chemical concentration, and light — at unprecedented levels of precision and miniaturization.\n\nThe significance of MEMS lies in its capacity to embed physical intelligence into compact, low-power, mass-producible systems. By uniting mechanical function with electronic control at the chip level, MEMS dissolved the traditional boundary between sensing the world and computing about it. The accelerometers in every modern smartphone, the pressure sensors managing automotive airbag deployment, the microphones in hearing aids, and the micromirrors directing light in digital projectors are all MEMS devices — technologies so thoroughly embedded in contemporary infrastructure that their absence would fundamentally alter medicine, transportation, communications, and consumer electronics.\n\nFabrication draws on bulk micromachining, surface micromachining, and LIGA (a German acronym for lithography, electroplating, and molding) techniques, each offering distinct trade-offs between structural complexity, material choice, and production cost. Understanding MEMS design therefore demands fluency across",
+      "original_description": "Miniaturized mechanical and electromechanical elements fabricated using semiconductor manufacturing ..."
+    },
+    {
+      "node_id": "microbiome_concept",
+      "label": "Microbiome",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "The microbiome is the collective community of trillions of microorganisms — including bacteria, viruses, fungi, and archaea — along with their genetic material, that inhabit the human body, particularly the gastrointestinal tract, skin, oral cavity, and respiratory system. Rather than being merely passive residents, these microbial communities exist in dynamic, largely symbiotic relationships with their human host, performing functions essential to survival that the body cannot accomplish alone.\n\nThe significance of the microbiome extends well beyond digestive health. Research over the past two decades has fundamentally repositioned the microbiome from a biological curiosity to a central axis of human physiology. Microbial communities regulate immune system development, synthesize vitamins such as B12 and K, modulate inflammatory responses, and produce neuroactive compounds that influence mood and cognition through the gut-brain axis. Disruption of microbial balance — termed dysbiosis — has been linked to conditions ranging from inflammatory bowel disease and obesity to depression, autism spectrum disorder, and autoimmune conditions, suggesting that understanding the microbiome is inseparable from understanding chronic disease.\n\nThis concept bridges an unusually wide range of disciplines. In medicine, microbiome research is reshaping approaches to treatment, from fecal microbiota transplantation for recurrent *Clostridioides difficile* infection to microbiome-targeted intervent",
+      "original_description": "The community of trillions of microorganisms living in and on the human body, now recognized as a fu..."
+    },
+    {
+      "node_id": "memory_studies_concept",
+      "label": "Memory Studies",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Memory Studies is an interdisciplinary field that examines how individuals, groups, and societies construct, transmit, and transform their understanding of the past through collective remembrance and strategic forgetting. Distinct from the cognitive psychology of individual memory, this field focuses on the social and cultural dimensions of memory—how shared narratives, commemorations, material artifacts, and institutional practices shape collective identity and historical consciousness.\n\nThe field draws on foundational concepts such as Maurice Halbwachs's notion of \"collective memory,\" Jan and Aleida Assmann's distinction between \"communicative\" and \"cultural\" memory, and Pierre Nora's influential framework of *lieux de mémoire* (sites of memory)—physical and symbolic spaces where collective memory crystallizes. These theoretical frameworks have fundamentally reoriented how scholars approach the relationship between past and present, revealing that what communities remember—and crucially, what they forget or suppress—is never neutral but always shaped by power, politics, and identity.\n\nThe significance of Memory Studies lies in its capacity to expose the constructed nature of historical narratives and to explain why societies contest the meaning of their pasts. It has transformed scholarly understanding of phenomena such as post-conflict reconciliation, national identity formation, trauma, and the politics of heritage. By revealing how commemorative practices can legitimize authority, marginalize communities, or sustain grievance across generations, the field carries direct implications for transitional justice",
+      "original_description": "The interdisciplinary study of how societies remember, forget, and construct shared pasts through mo..."
+    },
+    {
+      "node_id": "chemical_ecology_concept",
+      "label": "Chemical Ecology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Chemical ecology is the scientific discipline that investigates how chemical compounds mediate interactions between organisms and their environments, encompassing the production, release, detection, and functional consequences of biologically active molecules across all living systems. At its core, the field examines how organisms—from microbes and plants to insects and vertebrates—synthesize and respond to chemical signals such as pheromones, allelochemicals, defensive toxins, kairomones, and synomones to navigate competition, reproduction, predation, and mutualism.\n\nThe significance of chemical ecology extends well beyond describing natural curiosity. By decoding the molecular language of ecosystems, the discipline has fundamentally reshaped our understanding of biodiversity, coevolution, and ecological stability. Landmark discoveries—such as the identification of insect sex pheromones and plant volatile defenses—have revealed that chemical communication is not incidental to life but is instead a primary driver of evolutionary adaptation and species interactions. These insights have challenged reductionist views of ecology and established chemistry as inseparable from biological function at every scale.\n\nThe field carries profound practical consequences across multiple disciplines. In agriculture, chemical ecology underpins the development of biopesticides, semiochemical-based pest management, and companion planting strategies that reduce dependence on synthetic insecticides. In medicine and pharmacology, understanding allelopathic compounds and organismal toxins has accelerated the discovery",
+      "original_description": "The study of how organisms use chemical signals (pheromones, toxins, allelopathics) to interact with..."
+    },
+    {
+      "node_id": "narrative_theory_concept",
+      "label": "Narrative Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Narrative theory is the systematic, interdisciplinary study of how stories are structured, how they generate meaning, and how they function across human cultures and communication. Rooted in classical rhetoric and poetics — most notably Aristotle's analysis of dramatic form — and formalized as a scholarly discipline through twentieth-century structuralism and semiotics, narrative theory examines the fundamental components of storytelling: plot architecture, character construction, point of view, temporal ordering, narrative voice, and the dynamic relationship between a story's events (the *story*) and how those events are presented (the *discourse*).\n\nThe significance of narrative theory extends well beyond literary criticism. It offers a rigorous framework for understanding how human beings organize experience into coherent sequences of cause, consequence, and meaning — what cognitive scientists now recognize as a fundamental mode of human thought. By revealing the structural and rhetorical mechanisms through which narratives shape belief, identity, and collective memory, narrative theory provides essential tools for critically evaluating the stories that underpin culture, ideology, and social institutions.\n\nIts cross-disciplinary reach is substantial. In **psychology and cognitive science**, narrative theory informs research on how individuals construct autobiographical identity and process trauma. In **philosophy**, it intersects with questions of personal identity, ethics, and the nature of historical understanding — particularly in the work of Paul Ricœur, who argued that human time is fundamentally narrative in structure. In **medicine",
+      "original_description": "The systematic study of how stories work — their structures (plot, character, point of view, tempora..."
+    },
+    {
+      "node_id": "gender_studies_concept",
+      "label": "Gender Studies",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Gender studies is an interdisciplinary academic field that examines how gender — understood as a social construction, a mode of performance, and a structure of power — shapes human experience, identity, institutions, and cultural production across time and place. Rather than treating gender as a fixed biological given, the field investigates how categories such as \"woman,\" \"man,\" and \"non-binary\" are produced, contested, and reproduced through language, law, medicine, media, and everyday practice.\n\nThe field's significance lies in its capacity to reveal how gender operates not merely as a personal attribute but as a foundational axis of social organization, deeply entangled with race, class, sexuality, nationality, and ability. Drawing on feminist theory, queer theory, postcolonial thought, and psychoanalysis, gender studies has fundamentally challenged assumptions that long structured disciplines from history and philosophy to biology and economics. Scholars such as Simone de Beauvoir, Judith Butler, and bell hooks demonstrated that what appears natural or inevitable about gender is, in fact, historically contingent and politically produced — a recognition with far-reaching consequences for how scholars understand inequality, subjectivity, and social change.\n\nGender studies bridges multiple academic domains in specific and consequential ways. In history, it has prompted the recovery of women's and LGBTQ+ experiences systematically excluded from the archive. In medicine and public health, it has exposed how gendered assumptions shape",
+      "original_description": "The interdisciplinary study of how gender — as a social construction, performance, and power relatio..."
+    },
+    {
+      "node_id": "art_therapy_concept",
+      "label": "Art Therapy",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Art therapy is a form of psychotherapeutic practice that uses guided creative processes — including drawing, painting, sculpture, collage, and sometimes music or drama — as primary vehicles for psychological assessment, emotional expression, and mental health treatment. Unlike conventional talk therapies, art therapy operates on the premise that nonverbal, symbolic communication through creative work can access psychological material that language alone may fail to reach, making it particularly valuable for individuals who struggle to articulate distress verbally.\n\nThe significance of art therapy lies in its integration of two historically separate domains: clinical psychology and aesthetic practice. Rooted in early 20th-century observations by psychiatrists who noticed the diagnostic and expressive value of artwork produced by patients, the field was formally systematized by pioneers such as Margaret Naumburg and Edith Kramer in the mid-20th century. Naumburg emphasized the psychoanalytic interpretation of spontaneous imagery, while Kramer focused on the healing properties inherent in the creative act itself — a distinction that continues to shape theoretical debates within the discipline.\n\nClinically, art therapy has demonstrated effectiveness across a wide range of conditions, including post-traumatic stress disorder, anxiety, depression, dementia, eating disorders, and autism spectrum conditions. Its applications extend across the lifespan, from children processing developmental trauma to elderly patients maintaining cognitive function. In medical settings, it is increasingly integrated into palliative care, oncology",
+      "original_description": "The use of creative art-making (drawing, painting, sculpture, music, drama) as a therapeutic interve..."
+    },
+    {
+      "node_id": "sport_science_concept",
+      "label": "Sport Science",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Sport science is an interdisciplinary academic and applied field that systematically investigates the physiological, biomechanical, psychological, and nutritional factors governing human physical performance, health, and athletic development. Drawing on foundational principles from biology, physics, medicine, and psychology, it seeks to understand how the human body responds and adapts to exercise, training, and competitive stress — and how those responses can be optimized for performance or health outcomes.\n\nThe significance of sport science extends well beyond elite athletics. Its findings have fundamentally reshaped clinical rehabilitation protocols, public health guidelines on physical activity, and the management of chronic diseases such as type 2 diabetes, cardiovascular disease, and obesity. Evidence-based training methodologies developed within sport science have reduced injury rates, extended athletic careers, and democratized access to high-performance coaching principles across amateur and professional contexts alike. The field has also contributed critical insights into aging, as research on muscle adaptation and aerobic capacity has informed geriatric medicine and longevity science.\n\nAt its disciplinary core, sport science integrates several specialized subdisciplines: exercise physiology examines metabolic and cardiorespiratory responses to physical stress; biomechanics applies Newtonian mechanics and engineering principles to analyze movement efficiency and injury risk; sport psychology investigates motivation, arousal regulation, and cognitive performance under pressure; and sport nutrition explores how macronutrient timing, hydration, and supplement",
+      "original_description": "The multidisciplinary study of human physical performance — integrating exercise physiology, biomech..."
+    },
+    {
+      "node_id": "classical_music_concept",
+      "label": "Western Classical Music Tradition",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "The Western Classical Music Tradition is a continuous, notated art-music lineage originating in medieval Europe and extending through the present day, encompassing Gregorian chant, medieval polyphony, Renaissance counterpoint, Baroque complexity, Classical formal structures, Romantic expressionism, and twentieth-century modernism. Unlike folk or oral musical traditions, it is defined by written notation, institutional transmission through conservatories and universities, and a sustained theoretical apparatus that governs harmony, counterpoint, form, and orchestration. This tradition represents one of the most thoroughly documented and analytically developed artistic systems in human history.\n\nIts significance extends well beyond aesthetics. The tradition served as a primary vehicle for theological expression throughout the medieval and Renaissance periods, making it inseparable from the intellectual history of Christianity and European institutional life. The development of precise rhythmic and pitch notation between the ninth and fourteenth centuries constitutes a technological breakthrough comparable in consequence to the printing press, enabling large-scale musical collaboration across time and geography. The formalization of tonal harmony during the Baroque period provided a structural language—tension, resolution, hierarchy—that shaped Western conceptions of narrative, argument, and emotional architecture across multiple art forms.\n\nThe tradition bridges numerous academic disciplines in concrete and traceable ways. In mathematics and physics, the acoustical investigations of figures such as Pythagoras, Mersenne, and Helmholtz emerged directly from attempts to understand musical intervals,",
+      "original_description": "The notated art-music tradition from Gregorian chant through polyphony, Baroque, Classical, Romantic..."
+    },
+    {
+      "node_id": "toxicology_concept",
+      "label": "Toxicology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Toxicology is the scientific discipline concerned with understanding the nature, mechanisms, and effects of chemical, biological, and physical agents that cause harm to living organisms. Rooted in the foundational principle attributed to Paracelsus — \"the dose makes the poison\" — toxicology recognizes that virtually any substance can be harmful depending on the quantity, route of exposure, duration, and biological context. It encompasses the study of how toxic agents are absorbed, distributed, metabolized, and excreted by the body, as well as the cellular and molecular mechanisms through which they disrupt normal physiological function.\n\nThe significance of toxicology extends far beyond the laboratory. It provides the scientific foundation for setting safe exposure limits in workplaces and environments, evaluating the safety of pharmaceuticals before they reach patients, and assessing the ecological impact of industrial chemicals and pesticides. Without rigorous toxicological evaluation, drug development, food safety regulation, and environmental protection policy would lack the empirical grounding needed to make defensible decisions about public health. Its contribution to forensic science — enabling the identification of poisoning in criminal and medicolegal investigations — further demonstrates its practical reach across human affairs.\n\nToxicology is inherently interdisciplinary, functioning as a critical bridge between the biological sciences, chemistry, medicine, and public policy. From biochemistry and pharmacology, it borrows the tools to trace molecular interactions between toxins and biological targets.",
+      "original_description": "The science of poisons — studying how chemical substances harm living organisms, determining safe ex..."
+    },
+    {
+      "node_id": "cardiology_concept",
+      "label": "Cardiology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Cardiology is the branch of medicine dedicated to the study, diagnosis, and treatment of diseases and disorders affecting the heart and cardiovascular system, encompassing conditions ranging from congenital defects and arrhythmias to coronary artery disease and heart failure. As a discipline, it integrates anatomical knowledge of cardiac structure, physiological understanding of circulatory mechanics, and increasingly sophisticated technological tools to assess and restore cardiovascular function.\n\nThe significance of cardiology is difficult to overstate: cardiovascular disease remains the leading cause of death globally, accounting for nearly 18 million deaths annually. The field's development has been marked by transformative milestones — René Laennec's invention of the stethoscope in 1816 enabled non-invasive auscultation for the first time, while Willem Einthoven's electrocardiograph (ECG) in the early 1900s provided a window into the heart's electrical activity that remains clinically indispensable today. Subsequent breakthroughs — cardiac catheterization, coronary bypass surgery, implantable defibrillators, and transcatheter valve replacement — have progressively shifted conditions once considered fatal into manageable, often curable, diagnoses. These advances have not merely extended lifespans but fundamentally altered how medicine conceptualizes organ-level intervention.\n\nCardiology is also a powerful bridge across disciplines. Its intersection",
+      "original_description": "The medical specialty of the heart and cardiovascular system — from the stethoscope (1816) and ECG (..."
+    },
+    {
+      "node_id": "battery_technology_concept",
+      "label": "Battery Technology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Battery technology is the interdisciplinary field encompassing the science, engineering, and design of devices that store and convert chemical energy into electrical energy through controlled electrochemical reactions. At its core, a battery consists of one or more electrochemical cells, each containing an anode, cathode, and electrolyte, whose thermodynamic and kinetic properties govern energy density, power output, cycle life, and safety.\n\nThe field's origins trace to Alessandro Volta's voltaic pile (1800), which provided scientists with the first reliable source of continuous electrical current and catalyzed a century of discovery in electromagnetism and electrochemistry. Subsequent milestones — Gaston Planté's lead-acid cell (1859), the nickel-cadmium battery, and Sony's commercialization of lithium-ion technology (1991) — each represented step-changes in energy storage capability that directly enabled new industries and reshaped daily life. The lithium-ion battery in particular transformed portable electronics, making smartphones, laptops, and medical implants practical at scale.\n\nThe significance of battery technology in the twenty-first century extends far beyond consumer devices. Electrochemical storage is now recognized as a foundational enabler of the global energy transition: grid-scale battery systems allow intermittent renewable sources such as wind and solar to supply stable baseload power, while advances in electric vehicle batteries are restructuring transportation infrastructure,",
+      "original_description": "The science and engineering of electrochemical energy storage — from Volta's pile (1800) through lea..."
+    },
+    {
+      "node_id": "theory_of_relativity_event",
+      "label": "Publication of Theory of Relativity",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 7,
+        "total_score": 16,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "improvement": {
+        "score_delta": -1,
+        "description_delta": 0
+      },
+      "enhanced_description": "The publication of the theory of relativity refers to two landmark events in physics: Albert Einstein's release of his special theory of relativity in 1905 and his general theory of relativity in 1915. Special relativity introduced the principle that the laws of physics are identical for all observers moving at constant velocities, establishing that space and time are not absolute but interwoven into a single four-dimensional continuum called spacetime, and that energy and mass are equivalent, expressed through the iconic equation E=mc². General relativity extended these principles to accelerating frames of reference, reinterpreting gravity not as a force but as the curvature of spacetime caused by mass and energy.\n\nThe significance of these publications cannot be overstated. They fundamentally dismantled the Newtonian framework that had governed scientific thought for over two centuries, replacing absolute space and time with a dynamic, relational model of the universe. General relativity predicted phenomena—gravitational lensing, the precession of Mercury's orbit, gravitational waves, and black holes—that have since been confirmed through observation, including the direct detection of gravitational waves in 2015 by LIGO. The theory also underpins modern cosmology, providing the mathematical foundation for the Big Bang model and the study of an expanding universe.\n\nThe cross-disciplinary reach of relativity is profound. In mathematics, it accelerated the development of differential geometry and",
+      "original_description": "Einstein published special relativity in 1905 and general relativity in 1915, revealing that space, ..."
+    },
+    {
+      "node_id": "anesthesia_concept",
+      "label": "Anesthesia",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Anesthesia is the medically induced, reversible state of controlled unconsciousness, analgesia, and muscle relaxation achieved through the administration of pharmacological agents, enabling surgical and diagnostic procedures to be performed without pain, awareness, or harmful physiological stress responses in the patient.\n\nModern anesthesia encompasses three primary forms: general anesthesia, which produces whole-body unconsciousness; regional anesthesia, which blocks sensation in a specific anatomical region through nerve or spinal cord intervention; and local anesthesia, which numbs a discrete tissue area. Each modality involves carefully calibrated drug combinations—including inhaled volatile agents such as isoflurane, intravenous hypnotics such as propofol, analgesics such as opioids, and neuromuscular blocking agents—whose mechanisms operate on ion channels, neurotransmitter receptors, and synaptic pathways within the central and peripheral nervous systems.\n\nThe significance of anesthesia to medicine and human welfare cannot be overstated. Prior to its clinical introduction in the mid-nineteenth century, surgery was an experience of profound agony, limiting procedures to desperate, life-threatening situations and constraining surgical complexity to what could be completed in minutes. The development of reliable anesthetic techniques fundamentally transformed surgery from a last resort into a precise, elective discipline, enabling the expansion of cardiac surgery, organ transplantation, neurosurgery",
+      "original_description": "Anesthesia is the controlled use of drugs to prevent pain, awareness, and reflex responses during pr..."
+    },
+    {
+      "node_id": "decolonization_historiography_concept",
+      "label": "Decolonization of History",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Decolonization of history is a critical scholarly movement and methodological framework that systematically examines and dismantles the Eurocentric biases embedded in historical knowledge production, narrative construction, and archival practices. It refers specifically to the intellectual project of recovering, centering, and legitimizing historical perspectives, voices, and epistemologies that have been marginalized, suppressed, or erased through centuries of colonial dominance — including those of Indigenous peoples, African societies, Asian civilizations, and other communities rendered peripheral by imperial historiography.\n\nAt its core, the movement challenges foundational assumptions about whose experiences constitute \"universal\" history, interrogating not only what is recorded but how, by whom, and in service of which power structures. Scholars working within this framework engage with oral traditions, material culture, and community-based knowledge systems as methodologically valid historical sources, alongside — and sometimes in preference to — conventional written archives that frequently reflect colonial perspectives.\n\nThe significance of this framework extends well beyond academic history departments. By fundamentally reorienting how the past is understood, decolonized historiography has practical consequences for contemporary political discourse, transitional justice, land rights claims, and educational curricula worldwide. It challenges the legitimacy of inherited institutional arrangements and provides intellectual grounding for reparative policies and reconciliation processes. Nations confronting legacies of colonialism — from South Africa to Australia to Canada — have drawn directly on decolon",
+      "original_description": "A scholarly movement challenging Eurocentric historical narratives by recovering suppressed indigeno..."
+    },
+    {
+      "node_id": "modernism_art_concept",
+      "label": "Modernism in Art",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Modernism in art is a broad cultural and aesthetic movement spanning roughly 1860 to 1970, defined by a deliberate and self-conscious rejection of traditional representational conventions in favour of experimentation with form, abstraction, and subjective expression. Rather than depicting the visible world with fidelity, modernist artists pursued the underlying structures, emotions, and ideas that conventional techniques could not adequately capture, transforming the fundamental question of art from *what* is depicted to *how* and *why*.\n\nEmerging in response to rapid industrialisation, urbanisation, and the fracturing of established social and religious certainties, modernism encompassed a succession of overlapping movements — Impressionism, Post-Impressionism, Cubism, Expressionism, Futurism, Surrealism, and Abstract Expressionism among them — each challenging inherited assumptions about perspective, colour, narrative, and the role of the artist. Figures such as Cézanne, Picasso, Kandinsky, and Duchamp did not merely introduce new styles; they redefined the ontological status of the art object itself, asking what a painting fundamentally is and whether art requires beauty, skill, or resemblance at all.\n\nThe significance of modernism extends well beyond aesthetic history. Its insistence on rupture, originality, and the questioning of inherited authority became a template for intellectual innovation across disciplines. In literature",
+      "original_description": "The revolutionary break with representational tradition in visual art (c.1860–1970), encompassing Im..."
+    },
+    {
+      "node_id": "biomedical_devices_concept",
+      "label": "Biomedical Devices",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 3
+      },
+      "enhanced_description": "Biomedical devices are engineered instruments, systems, and implants specifically designed to diagnose, monitor, treat, or replace biological functions within the human body. Ranging from relatively simple tools such as stethoscopes and glucose monitors to highly sophisticated systems including MRI scanners, cochlear implants, robotic surgical platforms, and ventricular assist devices, they represent the deliberate application of engineering principles to clinical medicine.\n\nThe significance of biomedical devices extends well beyond individual patient care. They have fundamentally reshaped the practice of medicine by enabling non-invasive visualization of internal anatomy, continuous real-time physiological monitoring, and precise therapeutic interventions that were unimaginable a century ago. Pacemakers restored cardiac rhythm to millions of patients who would otherwise have faced severely limited lifespans; dialysis machines substituted for failed kidneys; prosthetic limbs with neural interfaces are now restoring motor agency to amputees. Each of these advances represents not merely a technical achievement but a redefinition of what medicine can offer.\n\nThe field sits at a uniquely productive intersection of multiple disciplines. From engineering, it draws on mechanical, electrical, materials, and software expertise to build reliable, miniaturized, and biocompatible systems. From medicine and physiology, it derives the clinical requirements and safety standards that constrain design. Regulatory science and ethics govern how devices are tested, approved, and deployed,",
+      "original_description": "Engineered devices for diagnosis, monitoring, and treatment — from X-ray machines and MRI scanners t..."
+    }
+  ],
+  "errors": []
+}

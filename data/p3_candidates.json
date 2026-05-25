@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-05-25T13:22:19.726117+00:00",
+  "label": "P3",
+  "threshold_min_total_score": null,
+  "threshold_max_total_score": 21,
+  "threshold_max_description_score": null,
+  "required_diagnostics": [
+    "WHAT",
+    "SIGNIFICANCE"
+  ],
+  "total_count": 0,
+  "candidates": [],
+  "diagnostics_distribution": {}
+}

@@ -1,0 +1,34 @@
+{
+  "status": "fail",
+  "current": "docs\\benchmarks\\latest.json",
+  "baseline": "docs\\benchmarks\\baseline.json",
+  "max_regression_pct": 0.1,
+  "thresholds": {
+    "max_graph_p95_ms": 50.0,
+    "max_search_p95_ms": 20.0
+  },
+  "regressions": {
+    "graph_subgraph": {
+      "avg_ms": 0.0,
+      "p95_ms": 0.0
+    },
+    "search": {
+      "avg_ms": 0.0,
+      "p95_ms": 0.0
+    }
+  },
+  "violation_summary": {
+    "threshold": 2
+  },
+  "violations": [
+    {
+      "category": "threshold",
+      "message": "graph_subgraph p95_ms=288.03 > 50.00"
+    },
+    {
+      "category": "threshold",
+      "message": "search p95_ms=110.51 > 20.00"
+    }
+  ],
+  "notes": []
+}

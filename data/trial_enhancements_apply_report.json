@@ -1,0 +1,38 @@
+{
+  "applied_at": "2026-05-25T04:54:35.415494Z",
+  "review_csv": "D:\\LINKU\\Nexus\\data\\trial_enhancements_review.csv",
+  "trial_json": "D:\\LINKU\\Nexus\\data\\trial_enhancements.json",
+  "nodes_json": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "backup_file": "D:\\LINKU\\Nexus\\data\\backups\\all_nodes.pre_enhancement_apply.20260525T045435Z.json",
+  "review_updates": {
+    "changed_decisions": 20,
+    "changed_notes": 1,
+    "accepted_count": 20
+  },
+  "apply_result": {
+    "changed_count": 20,
+    "changed_ids": [
+      "french_revolution_event",
+      "publication_of_origin_of_species_event",
+      "ethnomusicology_concept",
+      "finite_element_method_concept",
+      "tissue_engineering_concept",
+      "cybersecurity_engineering_concept",
+      "natural_language_processing_applications_concept",
+      "materials_characterization_concept",
+      "autonomous_vehicles_concept",
+      "edge_computing_concept",
+      "comparative_mythology_concept",
+      "medicinal_chemistry_concept",
+      "nuclear_chemistry_applications_concept",
+      "colonialism_legacy_concept",
+      "regenerative_medicine_concept",
+      "aesthetic_experience_concept",
+      "documentary_tradition_concept",
+      "street_art_concept",
+      "oncology_concept",
+      "solid_state_chemistry_concept"
+    ],
+    "missing_candidates": []
+  }
+}

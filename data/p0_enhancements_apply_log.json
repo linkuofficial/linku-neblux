@@ -1,0 +1,1571 @@
+{
+  "timestamp": "2026-05-25T07:28:21.509292+00:00",
+  "source_consolidated": "p1_candidates_consolidated.json",
+  "source_decisions": "p1_candidates_consolidated_decisions.json",
+  "source_nodes": "all_nodes.json",
+  "backup_file": "all_nodes_backup_p0_20260525_152821.json",
+  "summary": {
+    "total_decisions": 156,
+    "applied": 155,
+    "skipped": 1,
+    "errors": 0
+  },
+  "change_log": [
+    {
+      "node_id": "stochastic_processes_concept",
+      "label": "Stochastic Processes",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Stochastic processes model systems evolving randomly over time, providing the ma...",
+      "new_desc_preview": "Stochastic processes are mathematical models that describe the evolution of syst..."
+    },
+    {
+      "node_id": "conservation_principles_concept",
+      "label": "Conservation Principles",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Conservation principles state that certain quantities remain constant through ch...",
+      "new_desc_preview": "Conservation principles are fundamental laws of nature stating that certain meas..."
+    },
+    {
+      "node_id": "genetic_regulation_concept",
+      "label": "Gene Regulation",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Gene regulation controls when, where, and how much protein each gene produces. T...",
+      "new_desc_preview": "Gene regulation is the set of molecular mechanisms by which cells control the ex..."
+    },
+    {
+      "node_id": "thought_experiments_concept",
+      "label": "Thought Experiments",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Thought experiments use imagined scenarios to test intuitions, explore consequen...",
+      "new_desc_preview": "Thought experiments are structured imaginative exercises in which a thinker cons..."
+    },
+    {
+      "node_id": "oscillations_and_waves_concept",
+      "label": "Oscillations and Waves",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Oscillations and waves describe repetitive motion and its spatial propagation, g...",
+      "new_desc_preview": "Oscillations and waves are two intimately related physical phenomena: oscillatio..."
+    },
+    {
+      "node_id": "quantum_computing_concept",
+      "label": "Quantum Computing",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 24,
+      "score_delta": 6,
+      "old_desc_preview": "Quantum computing exploits superposition, entanglement, and interference to solv...",
+      "new_desc_preview": "Quantum computing is a paradigm of information processing that harnesses the pri..."
+    },
+    {
+      "node_id": "visualization_concept",
+      "label": "Visualization",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Visualization transforms abstract data and relationships into visual representat...",
+      "new_desc_preview": "Visualization is the practice of transforming abstract data, complex relationshi..."
+    },
+    {
+      "node_id": "biomedical_imaging_concept",
+      "label": "Biomedical Imaging",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Biomedical imaging visualizes internal body structures and functions non-invasiv...",
+      "new_desc_preview": "Biomedical imaging is a collection of technologies and techniques that produce v..."
+    },
+    {
+      "node_id": "renewable_energy_concept",
+      "label": "Renewable Energy",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Renewable energy harnesses naturally replenishing sources—solar, wind, hydroelec...",
+      "new_desc_preview": "Renewable energy refers to energy derived from naturally replenishing sources—so..."
+    },
+    {
+      "node_id": "behavioral_economics_concept",
+      "label": "Behavioral Economics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Behavioral economics integrates psychological insights about human judgment into...",
+      "new_desc_preview": "Behavioral economics is a field of study that systematically integrates psycholo..."
+    },
+    {
+      "node_id": "rehabilitation_concept",
+      "label": "Rehabilitation Medicine",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Rehabilitation medicine restores function after injury, illness, or surgery thro...",
+      "new_desc_preview": "Rehabilitation medicine is a medical specialty focused on diagnosing, evaluating..."
+    },
+    {
+      "node_id": "mechatronics_concept",
+      "label": "Mechatronics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Mechatronics integrates mechanical engineering, electronics, computer science, a...",
+      "new_desc_preview": "Mechatronics is an interdisciplinary engineering field that systematically combi..."
+    },
+    {
+      "node_id": "world_systems_theory_concept",
+      "label": "World-Systems Theory",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "World-systems theory (Wallerstein) analyzes global history as a single capitalis...",
+      "new_desc_preview": "World-systems theory is a macro-sociological and historical framework, developed..."
+    },
+    {
+      "node_id": "neurodegenerative_disease_concept",
+      "label": "Neurodegenerative Disease",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Neurodegenerative diseases (Alzheimer's, Parkinson's, ALS) involve progressive l...",
+      "new_desc_preview": "Neurodegenerative disease refers to a broad class of progressive neurological di..."
+    },
+    {
+      "node_id": "aerospace_engineering_concept",
+      "label": "Aerospace Engineering",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Aerospace engineering designs aircraft and spacecraft through integration of aer...",
+      "new_desc_preview": "Aerospace engineering is the branch of engineering concerned with the design, de..."
+    },
+    {
+      "node_id": "counterpoint_concept",
+      "label": "Counterpoint",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "A compositional technique where two or more independent melodic lines sound simu...",
+      "new_desc_preview": "Counterpoint is a compositional technique in which two or more melodically indep..."
+    },
+    {
+      "node_id": "sublime_concept",
+      "label": "The Sublime",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "An aesthetic experience of overwhelming vastness or power that transcends ordina...",
+      "new_desc_preview": "The sublime is an aesthetic and philosophical category referring to experiences ..."
+    },
+    {
+      "node_id": "laser_concept",
+      "label": "Laser",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "A device producing coherent, monochromatic light through stimulated emission of ...",
+      "new_desc_preview": "A laser (Light Amplification by Stimulated Emission of Radiation) is a device th..."
+    },
+    {
+      "node_id": "computational_linguistics_concept",
+      "label": "Computational Linguistics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The scientific study of language from a computational perspective, developing fo...",
+      "new_desc_preview": "Computational linguistics is an interdisciplinary field that applies computation..."
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The evolutionary process by which bacteria, viruses, and parasites develop resis...",
+      "new_desc_preview": "Antimicrobial resistance (AMR) is the phenomenon by which microorganisms — inclu..."
+    },
+    {
+      "node_id": "polymer_science_concept",
+      "label": "Polymer Science",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The study of macromolecules built from repeating monomer units — from synthetic ...",
+      "new_desc_preview": "Polymer science is the interdisciplinary field that studies macromolecules — lar..."
+    },
+    {
+      "node_id": "impressionism_concept",
+      "label": "Impressionism",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "A painting movement (1860s-1880s) capturing fleeting effects of light and atmosp...",
+      "new_desc_preview": "Impressionism is a revolutionary art movement that emerged in France during the ..."
+    },
+    {
+      "node_id": "baroque_art_concept",
+      "label": "Baroque Art and Architecture",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "A grandly theatrical style (c.1600-1750) characterized by dramatic lighting, ric...",
+      "new_desc_preview": "Baroque art and architecture is a sweeping cultural and aesthetic movement origi..."
+    },
+    {
+      "node_id": "surrealism_concept",
+      "label": "Surrealism",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "An art movement (1920s-1960s) that sought to unleash the creative potential of t...",
+      "new_desc_preview": "Surrealism is a revolutionary cultural and artistic movement that emerged in Eur..."
+    },
+    {
+      "node_id": "opera_concept",
+      "label": "Opera",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "A total art form (Gesamtkunstwerk) combining music, drama, poetry, visual specta...",
+      "new_desc_preview": "Opera is a theatrical art form in which dramatic narrative is conveyed primarily..."
+    },
+    {
+      "node_id": "jazz_concept",
+      "label": "Jazz",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "A music tradition originating in African-American communities (c.1900) character...",
+      "new_desc_preview": "Jazz is a distinctly American musical tradition that originated in African-Ameri..."
+    },
+    {
+      "node_id": "medical_ethics_concept",
+      "label": "Medical Ethics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The moral principles governing medical practice — from the Hippocratic oath's 'd...",
+      "new_desc_preview": "Medical ethics is the systematic application of moral reasoning to questions ari..."
+    },
+    {
+      "node_id": "gothic_architecture_concept",
+      "label": "Gothic Architecture",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The architectural style (c.1140-1500) defined by pointed arches, ribbed vaults, ...",
+      "new_desc_preview": "Gothic Architecture is a medieval European architectural style flourishing appro..."
+    },
+    {
+      "node_id": "expressionism_concept",
+      "label": "Expressionism",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "An art movement (c.1905-1930) prioritizing emotional truth over visual accuracy ...",
+      "new_desc_preview": "Expressionism is a modernist movement in art, literature, theatre, and film (eme..."
+    },
+    {
+      "node_id": "art_education_concept",
+      "label": "Art Education",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The theory and practice of teaching visual arts, music, drama, and creative expr...",
+      "new_desc_preview": "Art education is the structured discipline concerned with teaching and learning ..."
+    },
+    {
+      "node_id": "arts_field",
+      "label": "Arts",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 20,
+      "score_delta": 2,
+      "old_desc_preview": "The arts encompass human creative expression through visual, auditory, and perfo...",
+      "new_desc_preview": "The arts constitute a broad domain of human creative expression encompassing vis..."
+    },
+    {
+      "node_id": "statistics_field",
+      "label": "Statistics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Statistics develops methods for collecting, analyzing, and interpreting data und...",
+      "new_desc_preview": "Statistics is the mathematical science concerned with the collection, organizati..."
+    },
+    {
+      "node_id": "linearity_and_nonlinearity_concept",
+      "label": "Linearity and Nonlinearity",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Linearity means that outputs scale proportionally with inputs and effects superp...",
+      "new_desc_preview": "Linearity is a mathematical property describing systems in which outputs scale p..."
+    },
+    {
+      "node_id": "cognitive_modeling_concept",
+      "label": "Cognitive Modeling",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Cognitive modeling creates computational representations of human mental process...",
+      "new_desc_preview": "Cognitive modeling is a scientific and computational approach that constructs ex..."
+    },
+    {
+      "node_id": "sound_design_concept",
+      "label": "Sound Design",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Sound design creates and manipulates audio for film, games, theater, and install...",
+      "new_desc_preview": "Sound design is the disciplined practice of creating, manipulating, and orchestr..."
+    },
+    {
+      "node_id": "epidemiological_modeling_concept",
+      "label": "Epidemiological Modeling",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "Epidemiological modeling uses mathematical frameworks (SIR/SEIR compartmental mo...",
+      "new_desc_preview": "Epidemiological modeling is the systematic application of mathematical and compu..."
+    },
+    {
+      "node_id": "apollo_program_event",
+      "label": "Apollo Program",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 20,
+      "score_delta": 2,
+      "old_desc_preview": "NASA's lunar exploration program (1961–1972) culminating in humans walking on th...",
+      "new_desc_preview": "The Apollo Program was NASA's landmark human spaceflight initiative (1961–1972),..."
+    },
+    {
+      "node_id": "invention_of_calculus_event",
+      "label": "Invention of Calculus",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Independently developed by Newton and Leibniz in the 1660s–1680s, calculus provi...",
+      "new_desc_preview": "The invention of calculus is the landmark mathematical development of the late s..."
+    },
+    {
+      "node_id": "iconography_concept",
+      "label": "Iconography",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of visual imagery and symbolism in art — decoding what specific object...",
+      "new_desc_preview": "Iconography is the systematic study and interpretation of visual imagery, symbol..."
+    },
+    {
+      "node_id": "oral_poetry_concept",
+      "label": "Oral Poetry",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Poetry composed and transmitted without writing, using formulaic phrases, meter,...",
+      "new_desc_preview": "Oral poetry is a form of verbal art in which poetry is composed, performed, and ..."
+    },
+    {
+      "node_id": "philology_concept",
+      "label": "Philology",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of language in historical texts — reconstructing lost languages, datin...",
+      "new_desc_preview": "Philology is the scholarly discipline concerned with the study of language as pr..."
+    },
+    {
+      "node_id": "patronage_concept",
+      "label": "Patronage",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "A system where wealthy individuals or institutions fund artists, scholars, and s...",
+      "new_desc_preview": "Patronage is a structured relationship in which a wealthy individual, institutio..."
+    },
+    {
+      "node_id": "mimesis_concept",
+      "label": "Mimesis",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The concept of artistic imitation or representation of reality, central to Weste...",
+      "new_desc_preview": "Mimesis is the philosophical and aesthetic concept referring to the imitation, r..."
+    },
+    {
+      "node_id": "bioethics_concept",
+      "label": "Bioethics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "A field applying ethical reasoning to biological and medical dilemmas — from eut...",
+      "new_desc_preview": "Bioethics is an interdisciplinary field that applies systematic ethical reasonin..."
+    },
+    {
+      "node_id": "science_communication_concept",
+      "label": "Science Communication",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The practice and study of communicating scientific knowledge to non-specialist a...",
+      "new_desc_preview": "Science communication is the practice and scholarly study of conveying scientifi..."
+    },
+    {
+      "node_id": "neuroaesthetics_concept",
+      "label": "Neuroaesthetics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The scientific study of how the brain processes beauty, art, and aesthetic exper...",
+      "new_desc_preview": "Neuroaesthetics is an interdisciplinary field that investigates how the human br..."
+    },
+    {
+      "node_id": "cognitive_architecture_concept",
+      "label": "Cognitive Architecture",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Computational frameworks modeling the fixed structures and processes of human co...",
+      "new_desc_preview": "Cognitive architecture refers to a theoretical and computational framework that ..."
+    },
+    {
+      "node_id": "synthetic_biology_concept",
+      "label": "Synthetic Biology",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The engineering discipline that applies design principles (standardization, abst...",
+      "new_desc_preview": "Synthetic biology is an interdisciplinary field that combines principles from mo..."
+    },
+    {
+      "node_id": "epigenetics_concept",
+      "label": "Epigenetics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of heritable changes in gene expression that occur without alterations...",
+      "new_desc_preview": "Epigenetics is the branch of biology that investigates heritable changes in gene..."
+    },
+    {
+      "node_id": "big_history_concept",
+      "label": "Big History",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "A scholarly framework narrating history from the Big Bang through star formation...",
+      "new_desc_preview": "Big History is an interdisciplinary academic framework that narrates the entire ..."
+    },
+    {
+      "node_id": "food_chemistry_concept",
+      "label": "Food Chemistry",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of chemical processes and interactions of all biological and non-biolo...",
+      "new_desc_preview": "Food chemistry is the scientific discipline that investigates the chemical compo..."
+    },
+    {
+      "node_id": "romanticism_concept",
+      "label": "Romanticism",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "A cultural and intellectual movement (c.1790-1850) emphasizing emotion, individu...",
+      "new_desc_preview": "Romanticism is a sweeping cultural, intellectual, and artistic movement that eme..."
+    },
+    {
+      "node_id": "film_language_concept",
+      "label": "Film Language and Montage",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 20,
+      "score_delta": 2,
+      "old_desc_preview": "The grammar of cinema — how editing (montage), camera movement, framing, and sou...",
+      "new_desc_preview": "Film language and montage refer to the systematic set of visual, auditory, and e..."
+    },
+    {
+      "node_id": "postmodernism_art_concept",
+      "label": "Postmodern Art",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Art practices (c.1960s-present) rejecting modernist claims to universal truth, o...",
+      "new_desc_preview": "Postmodern art is a broad cultural and aesthetic movement emerging in the 1960s ..."
+    },
+    {
+      "node_id": "comparative_religion_concept",
+      "label": "Comparative Religion",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The academic study of religions through cross-cultural comparison — examining sh...",
+      "new_desc_preview": "Comparative religion is an academic discipline that systematically examines the ..."
+    },
+    {
+      "node_id": "antibiotic_resistance_concept",
+      "label": "Antibiotic Resistance",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 23,
+      "score_delta": 5,
+      "old_desc_preview": "The evolution of bacteria to survive antibiotic treatment — through mutation and...",
+      "new_desc_preview": "Antibiotic resistance is the capacity of bacteria to withstand the effects of dr..."
+    },
+    {
+      "node_id": "orchestration_concept",
+      "label": "Orchestration",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The art of combining instrumental timbres in an orchestra to create sonic textur...",
+      "new_desc_preview": "Orchestration is the craft and theory of combining, balancing, and deploying the..."
+    },
+    {
+      "node_id": "literary_criticism_concept",
+      "label": "Literary Criticism and Theory",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The systematic interpretation and evaluation of literature — from Aristotle's Po...",
+      "new_desc_preview": "Literary criticism and theory is the systematic study of literature that encompa..."
+    },
+    {
+      "node_id": "landscape_painting_concept",
+      "label": "Landscape Art",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The depiction of natural scenery as a primary subject — evolving from background...",
+      "new_desc_preview": "Landscape art is a genre of visual art in which natural scenery — mountains, val..."
+    },
+    {
+      "node_id": "ottoman_empire_concept",
+      "label": "Ottoman Empire",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "A multiethnic Islamic empire (c.1299-1922) spanning Southeast Europe, Western As...",
+      "new_desc_preview": "The Ottoman Empire is one of history's most enduring and expansive political ent..."
+    },
+    {
+      "node_id": "pathology_concept",
+      "label": "Pathology",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The medical science of disease mechanisms — studying how normal cellular and tis...",
+      "new_desc_preview": "Pathology is the scientific discipline concerned with the study of disease — enc..."
+    },
+    {
+      "node_id": "pain_science_concept",
+      "label": "Pain Science",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of pain as a complex neurobiological, psychological, and social phenom...",
+      "new_desc_preview": "Pain science is an interdisciplinary field of study that investigates pain as a ..."
+    },
+    {
+      "node_id": "bioarchaeology_concept",
+      "label": "Bioarchaeology",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The study of human skeletal remains from archaeological contexts to reconstruct ...",
+      "new_desc_preview": "Bioarchaeology is an integrative scientific discipline that applies biological a..."
+    },
+    {
+      "node_id": "philosophy_of_art_concept",
+      "label": "Philosophy of Art",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The philosophical investigation of what art is, what makes it valuable, and how ...",
+      "new_desc_preview": "Philosophy of Art, also known as aesthetics, is the systematic philosophical inv..."
+    },
+    {
+      "node_id": "animation_art_concept",
+      "label": "Animation",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The art of creating the illusion of movement from static images — from Émile Rey...",
+      "new_desc_preview": "Animation is the art and technical discipline of creating the illusion of moveme..."
+    },
+    {
+      "node_id": "game_art_concept",
+      "label": "Video Game Art and Design",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The artistic dimension of video games — combining visual design, sound, narrativ...",
+      "new_desc_preview": "Video game art and design is the multidisciplinary practice of crafting the aest..."
+    },
+    {
+      "node_id": "emergency_medicine_concept",
+      "label": "Emergency Medicine",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The medical specialty of acute illness and injury — managing life-threatening co...",
+      "new_desc_preview": "Emergency medicine is the medical specialty dedicated to the immediate recogniti..."
+    },
+    {
+      "node_id": "chemical_safety_concept",
+      "label": "Chemical Safety and Regulation",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "The systems for assessing and managing chemical hazards — from Material Safety D...",
+      "new_desc_preview": "Chemical safety and regulation refers to the comprehensive frameworks, standards..."
+    },
+    {
+      "node_id": "humanities_field",
+      "label": "Humanities",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The humanities study human culture, expression, and meaning through language, li...",
+      "new_desc_preview": "The humanities are a broad cluster of academic disciplines dedicated to the syst..."
+    },
+    {
+      "node_id": "greek_golden_age_event",
+      "label": "Greek Golden Age",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "A period of extraordinary intellectual flourishing in Athens and the Greek world...",
+      "new_desc_preview": "The Greek Golden Age refers to a period of unprecedented intellectual, artistic,..."
+    },
+    {
+      "node_id": "renaissance_event",
+      "label": "Renaissance",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "A cultural and intellectual movement originating in Italy (roughly 1400–1600) th...",
+      "new_desc_preview": "The Renaissance is a transformative cultural, intellectual, and artistic movemen..."
+    },
+    {
+      "node_id": "copernican_revolution_event",
+      "label": "Copernican Revolution",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "Copernicus proposed in 1543 that Earth orbits the Sun, overturning 1,400 years o...",
+      "new_desc_preview": "The Copernican Revolution is the foundational intellectual transformation in ear..."
+    },
+    {
+      "node_id": "cliometrics_concept",
+      "label": "Cliometrics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The application of economic theory and statistical methods to historical data, t...",
+      "new_desc_preview": "Cliometrics is a rigorous academic methodology that applies quantitative analysi..."
+    },
+    {
+      "node_id": "dark_matter_concept",
+      "label": "Dark Matter",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 20,
+      "score_delta": 2,
+      "old_desc_preview": "An invisible substance comprising roughly 27% of the universe's total mass-energ...",
+      "new_desc_preview": "Dark matter is a form of matter that does not emit, absorb, or reflect electroma..."
+    },
+    {
+      "node_id": "radioactivity_concept",
+      "label": "Radioactivity",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The spontaneous emission of particles or energy from unstable atomic nuclei, dis...",
+      "new_desc_preview": "Radioactivity is the spontaneous process by which unstable atomic nuclei release..."
+    },
+    {
+      "node_id": "acid_base_theory_concept",
+      "label": "Acid-Base Theory",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "Theoretical frameworks explaining proton transfer (Brønsted-Lowry, 1923) and ele...",
+      "new_desc_preview": "Acid-base theory refers to a set of complementary theoretical frameworks that de..."
+    },
+    {
+      "node_id": "forensic_science_concept",
+      "label": "Forensic Science",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The application of scientific methods to legal questions — using DNA analysis, t...",
+      "new_desc_preview": "Forensic science is the systematic application of scientific principles and meth..."
+    },
+    {
+      "node_id": "archaeometry_concept",
+      "label": "Archaeometry",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The application of physical and chemical analytical techniques to archaeological...",
+      "new_desc_preview": "Archaeometry is the systematic application of physical and chemical analytical t..."
+    },
+    {
+      "node_id": "crispr_concept",
+      "label": "CRISPR Gene Editing",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "A revolutionary gene-editing technology adapted from bacterial immune systems th...",
+      "new_desc_preview": "CRISPR (Clustered Regularly Interspaced Short Palindromic Repeats) gene editing ..."
+    },
+    {
+      "node_id": "proteomics_concept",
+      "label": "Proteomics",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The large-scale study of all proteins expressed by an organism, tissue, or cell ...",
+      "new_desc_preview": "Proteomics is the large-scale, systematic study of the complete set of proteins ..."
+    },
+    {
+      "node_id": "political_polarization_concept",
+      "label": "Political Polarization",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The increasing ideological distance between political groups, where moderates di...",
+      "new_desc_preview": "Political polarization is a social and political phenomenon in which the ideolog..."
+    },
+    {
+      "node_id": "dance_notation_concept",
+      "label": "Dance Notation",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 20,
+      "score_delta": 2,
+      "old_desc_preview": "Systems for recording human movement in written symbols — primarily Labanotation...",
+      "new_desc_preview": "Dance notation refers to systematic methods of recording and preserving human mo..."
+    },
+    {
+      "node_id": "atmospheric_chemistry_concept",
+      "label": "Atmospheric Chemistry",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The study of chemical reactions occurring in Earth's atmosphere, from ozone form...",
+      "new_desc_preview": "Atmospheric chemistry is the scientific discipline that investigates the chemica..."
+    },
+    {
+      "node_id": "nuclear_chemistry_applications_concept",
+      "label": "Nuclear Chemistry Applications",
+      "status": "skipped",
+      "reason": "Minimal improvement (+1 points): requires manual review"
+    },
+    {
+      "node_id": "calligraphy_concept",
+      "label": "Calligraphy",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The art of beautiful writing, elevated in East Asian, Islamic, and Western tradi...",
+      "new_desc_preview": "Calligraphy is the art of skilled, expressive handwriting in which the formation..."
+    },
+    {
+      "node_id": "atlantic_slave_trade_concept",
+      "label": "The Atlantic Slave Trade",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 21,
+      "score_delta": 3,
+      "old_desc_preview": "The forced transport of approximately 12.5 million enslaved Africans to the Amer...",
+      "new_desc_preview": "The Atlantic Slave Trade refers to the systematic, coerced transportation of app..."
+    },
+    {
+      "node_id": "signal_and_noise_concept",
+      "label": "Signal and Noise",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The signal-to-noise ratio quantifies how much meaningful information can be extr...",
+      "new_desc_preview": "Signal and noise is a foundational concept referring to the distinction between ..."
+    },
+    {
+      "node_id": "cybersecurity_concept",
+      "label": "Cybersecurity",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Cybersecurity protects digital systems, networks, and data from unauthorized acc...",
+      "new_desc_preview": "Cybersecurity is the practice and discipline concerned with protecting digital s..."
+    },
+    {
+      "node_id": "counterfactual_history_concept",
+      "label": "Counterfactual History",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Counterfactual history rigorously asks 'what if?' to test causal claims about th...",
+      "new_desc_preview": "Counterfactual history is a structured intellectual method in which historians a..."
+    },
+    {
+      "node_id": "structural_engineering_concept",
+      "label": "Structural Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Structural engineering ensures that built structures (buildings, bridges, dams) ...",
+      "new_desc_preview": "Structural engineering is the branch of civil engineering concerned with the ana..."
+    },
+    {
+      "node_id": "history_of_medicine_concept",
+      "label": "History of Medicine",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "History of medicine traces how societies have understood health, disease, and he...",
+      "new_desc_preview": "History of medicine is the scholarly discipline that examines the evolution of m..."
+    },
+    {
+      "node_id": "landscape_architecture_concept",
+      "label": "Landscape Architecture",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Landscape architecture designs outdoor spaces—parks, gardens, campuses, urban co...",
+      "new_desc_preview": "Landscape architecture is a professional discipline and design practice concerne..."
+    },
+    {
+      "node_id": "constraint_satisfaction_concept",
+      "label": "Constraint Satisfaction",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Constraint satisfaction involves finding states that simultaneously meet multipl...",
+      "new_desc_preview": "Constraint satisfaction is a computational and mathematical framework for findin..."
+    },
+    {
+      "node_id": "robotics_concept",
+      "label": "Robotics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Robotics integrates mechanical design, sensor systems, control algorithms, and a...",
+      "new_desc_preview": "Robotics is the interdisciplinary field concerned with the design, construction,..."
+    },
+    {
+      "node_id": "media_theory_concept",
+      "label": "Media Theory",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Media theory analyzes how communication technologies shape human perception, soc...",
+      "new_desc_preview": "Media theory is an interdisciplinary field of inquiry that examines how communic..."
+    },
+    {
+      "node_id": "statistical_mechanics_concept",
+      "label": "Statistical Mechanics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Statistical mechanics bridges microscopic particle dynamics and macroscopic ther...",
+      "new_desc_preview": "Statistical mechanics is a fundamental theoretical framework that explains how t..."
+    },
+    {
+      "node_id": "green_chemistry_concept",
+      "label": "Green Chemistry",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Green chemistry redesigns chemical products and processes to minimize hazardous ...",
+      "new_desc_preview": "Green chemistry is a scientific framework and design philosophy that seeks to el..."
+    },
+    {
+      "node_id": "chemical_engineering_concept",
+      "label": "Chemical Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Chemical engineering scales laboratory reactions to industrial production throug...",
+      "new_desc_preview": "Chemical engineering is a discipline that applies principles of chemistry, physi..."
+    },
+    {
+      "node_id": "autonomous_systems_concept",
+      "label": "Autonomous Systems",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Autonomous systems operate independently in complex environments, making decisio...",
+      "new_desc_preview": "Autonomous systems are technological entities — encompassing robots, software ag..."
+    },
+    {
+      "node_id": "biomedical_engineering_concept",
+      "label": "Biomedical Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Biomedical engineering applies engineering principles to biology and medicine, d...",
+      "new_desc_preview": "Biomedical engineering is an interdisciplinary field that systematically applies..."
+    },
+    {
+      "node_id": "digital_art_concept",
+      "label": "Digital Art",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Digital art creates aesthetic works using computational tools—algorithmic genera...",
+      "new_desc_preview": "Digital art is a broad creative practice in which digital technology serves as t..."
+    },
+    {
+      "node_id": "architectural_theory_concept",
+      "label": "Architectural Theory",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Architectural theory provides conceptual frameworks for understanding buildings ...",
+      "new_desc_preview": "Architectural theory is the systematic body of ideas, principles, and critical f..."
+    },
+    {
+      "node_id": "photovoltaics_concept",
+      "label": "Photovoltaics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Photovoltaics converts light directly to electricity via the photovoltaic effect...",
+      "new_desc_preview": "Photovoltaics is the science and technology of converting light directly into el..."
+    },
+    {
+      "node_id": "power_systems_concept",
+      "label": "Power Systems Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Power systems engineering designs and operates electrical grids that generate, t...",
+      "new_desc_preview": "Power systems engineering is the specialized branch of electrical engineering co..."
+    },
+    {
+      "node_id": "decision_theory_concept",
+      "label": "Decision Theory",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Decision theory provides formal frameworks for rational choice under uncertainty...",
+      "new_desc_preview": "Decision theory is a formal discipline that studies how rational agents ought to..."
+    },
+    {
+      "node_id": "nanotechnology_concept",
+      "label": "Nanotechnology",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Nanotechnology manipulates matter at 1-100 nanometer scale where quantum effects...",
+      "new_desc_preview": "Nanotechnology is a multidisciplinary field of science and engineering concerned..."
+    },
+    {
+      "node_id": "environmental_engineering_concept",
+      "label": "Environmental Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "Environmental engineering applies science and engineering to protect and restore...",
+      "new_desc_preview": "Environmental engineering is a discipline that applies principles from chemistry..."
+    },
+    {
+      "node_id": "biomechanics_concept",
+      "label": "Biomechanics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Biomechanics applies mechanical principles to biological systems: how bones bear...",
+      "new_desc_preview": "Biomechanics is the scientific discipline that applies the principles of classic..."
+    },
+    {
+      "node_id": "information_theory_founding_event",
+      "label": "Founding of Information Theory",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Claude Shannon's 1948 paper, A Mathematical Theory of Communication, defined inf...",
+      "new_desc_preview": "The founding of information theory refers to the landmark intellectual event ini..."
+    },
+    {
+      "node_id": "antisepsis_concept",
+      "label": "Antisepsis",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The practice of using chemical agents to kill bacteria on wounds and surgical in...",
+      "new_desc_preview": "Antisepsis is the practice of applying chemical agents to living tissue — such a..."
+    },
+    {
+      "node_id": "game_theory_applications_concept",
+      "label": "Game Theory Applications",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The application of strategic decision mathematics to contexts far beyond economi...",
+      "new_desc_preview": "Game theory applications refers to the systematic use of mathematical frameworks..."
+    },
+    {
+      "node_id": "digital_sociology_concept",
+      "label": "Digital Sociology",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The study of how digital technologies and platforms reshape social life — from i...",
+      "new_desc_preview": "Digital sociology is a subfield of sociology that examines how digital technolog..."
+    },
+    {
+      "node_id": "printmaking_history_concept",
+      "label": "Printmaking and Reproduction",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The techniques of creating images from matrices (woodblock, engraving, etching, ...",
+      "new_desc_preview": "Printmaking and reproduction refers to the ensemble of techniques by which artis..."
+    },
+    {
+      "node_id": "art_nouveau_concept",
+      "label": "Art Nouveau",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "A decorative art movement (c.1890-1910) characterized by sinuous organic lines, ...",
+      "new_desc_preview": "Art Nouveau is an internationally influential decorative and fine art movement t..."
+    },
+    {
+      "node_id": "ceramics_art_concept",
+      "label": "Ceramics and Pottery",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "The art and science of shaping and firing clay into permanent objects — from Neo...",
+      "new_desc_preview": "Ceramics and pottery refer to the art and science of transforming raw clay into ..."
+    },
+    {
+      "node_id": "novel_form_concept",
+      "label": "The Novel",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "A long-form prose narrative that became the dominant literary form of modernity,...",
+      "new_desc_preview": "The novel is an extended work of prose fiction, typically of substantial length,..."
+    },
+    {
+      "node_id": "silk_road_concept",
+      "label": "The Silk Road",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The network of trade routes connecting China to the Mediterranean (c.130 BCE - 1...",
+      "new_desc_preview": "The Silk Road refers to an interconnected network of overland and maritime trade..."
+    },
+    {
+      "node_id": "mythology_concept",
+      "label": "Mythology and Mythic Thinking",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "Sacred narratives that cultures create to explain origins, natural phenomena, mo...",
+      "new_desc_preview": "Mythology and mythic thinking refer to the body of sacred narratives, symbolic s..."
+    },
+    {
+      "node_id": "empire_concept",
+      "label": "Empire and Imperial Systems",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Large-scale political entities that rule diverse peoples under centralized autho...",
+      "new_desc_preview": "Empire and Imperial Systems refers to large-scale political formations in which ..."
+    },
+    {
+      "node_id": "ancient_rome_concept",
+      "label": "Roman Civilization",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The civilization spanning Republic (509 BCE) through Empire (27 BCE - 476 CE) th...",
+      "new_desc_preview": "Roman Civilization refers to the complex political, cultural, and social order t..."
+    },
+    {
+      "node_id": "psychiatry_concept",
+      "label": "Psychiatry and Mental Health",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The medical specialty treating mental disorders through biological (pharmacology...",
+      "new_desc_preview": "Psychiatry and mental health is the medical specialty and interdisciplinary fiel..."
+    },
+    {
+      "node_id": "indigenous_knowledge_concept",
+      "label": "Indigenous Knowledge Systems",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Bodies of knowledge developed by indigenous peoples over millennia through susta...",
+      "new_desc_preview": "Indigenous Knowledge Systems (IKS) refers to the cumulative, dynamic bodies of k..."
+    },
+    {
+      "node_id": "typography_history_concept",
+      "label": "Typography",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The art and technology of arranging type to make written language legible, reada...",
+      "new_desc_preview": "Typography is the art, craft, and technical discipline of arranging typefaces, l..."
+    },
+    {
+      "node_id": "meiji_restoration_concept",
+      "label": "Meiji Restoration",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Japan's rapid transformation (1868-1912) from feudal shogunate to industrial nat...",
+      "new_desc_preview": "The Meiji Restoration is a pivotal period of state-directed modernization in Jap..."
+    },
+    {
+      "node_id": "mosaic_art_concept",
+      "label": "Mosaic Art",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The art of creating images from small pieces of stone, glass, or ceramic (tesser...",
+      "new_desc_preview": "Mosaic art is a visual art form in which small, discrete pieces of colored mater..."
+    },
+    {
+      "node_id": "museum_theory_concept",
+      "label": "Museum Theory and Practice",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The theory and practice of collecting, preserving, interpreting, and displaying ...",
+      "new_desc_preview": "Museum Theory and Practice is an interdisciplinary field concerned with the inte..."
+    },
+    {
+      "node_id": "language_endangerment_concept",
+      "label": "Language Endangerment",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The accelerating loss of linguistic diversity — approximately half of the world'...",
+      "new_desc_preview": "Language endangerment is the process by which a language progressively loses its..."
+    },
+    {
+      "node_id": "food_culture_concept",
+      "label": "Food Culture and Gastronomy",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "The study of food as cultural practice — how cuisines encode history, identity, ...",
+      "new_desc_preview": "Food culture and gastronomy refer to the systematic study of food as a cultural,..."
+    },
+    {
+      "node_id": "byzantine_empire_concept",
+      "label": "Byzantine Empire",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "The eastern continuation of the Roman Empire (330–1453 CE) — preserving Greco-Ro...",
+      "new_desc_preview": "The Byzantine Empire is the eastern continuation of the Roman Empire that persis..."
+    },
+    {
+      "node_id": "electromagnetic_radiation_concept",
+      "label": "Electromagnetic Radiation",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Electromagnetic radiation encompasses all waves of oscillating electric and magn...",
+      "new_desc_preview": "Electromagnetic radiation is a form of energy that propagates through space as c..."
+    },
+    {
+      "node_id": "information_asymmetry_concept",
+      "label": "Information Asymmetry",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Information asymmetry occurs when one party in an interaction possesses more rel...",
+      "new_desc_preview": "Information asymmetry is a condition in which two or more parties engaged in a t..."
+    },
+    {
+      "node_id": "artificial_intelligence_concept",
+      "label": "Artificial Intelligence",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Artificial intelligence aims to create systems that perform tasks requiring huma...",
+      "new_desc_preview": "Artificial intelligence (AI) is a field of computer science and engineering conc..."
+    },
+    {
+      "node_id": "germ_theory_acceptance_event",
+      "label": "Acceptance of Germ Theory",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Through the work of Pasteur and Koch in the 1860s-1880s, medicine finally proved...",
+      "new_desc_preview": "The acceptance of germ theory is the pivotal 19th-century scientific and medical..."
+    },
+    {
+      "node_id": "human_genome_project_event",
+      "label": "Human Genome Project",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "An international effort (1990–2003) that sequenced all three billion base pairs ...",
+      "new_desc_preview": "The Human Genome Project (HGP) is a landmark international scientific collaborat..."
+    },
+    {
+      "node_id": "world_war_two_event",
+      "label": "World War II",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "A global conflict (1939–1945) that killed over 70 million people and restructure...",
+      "new_desc_preview": "World War II is the deadliest and most geographically expansive armed conflict i..."
+    },
+    {
+      "node_id": "chinese_invention_of_paper_event",
+      "label": "Chinese Invention of Paper and Printing",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Paper was invented in China around 105 CE by Cai Lun, and woodblock printing app...",
+      "new_desc_preview": "The Chinese invention of paper and printing refers to two foundational technolog..."
+    },
+    {
+      "node_id": "chemical_thermodynamics_concept",
+      "label": "Chemical Thermodynamics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The application of thermodynamic laws to chemical reactions, predicting whether ...",
+      "new_desc_preview": "Chemical thermodynamics is the branch of physical chemistry that applies the fun..."
+    },
+    {
+      "node_id": "mass_spectrometry_concept",
+      "label": "Mass Spectrometry",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "An analytical technique that ionizes molecules and separates them by mass-to-cha...",
+      "new_desc_preview": "Mass spectrometry is an analytical technique that determines the molecular compo..."
+    },
+    {
+      "node_id": "mathematical_biology_concept",
+      "label": "Mathematical Biology",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The use of mathematical tools — differential equations, graph theory, stochastic...",
+      "new_desc_preview": "Mathematical biology is an interdisciplinary field that applies mathematical fra..."
+    },
+    {
+      "node_id": "econophysics_concept",
+      "label": "Econophysics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "The application of statistical physics methods to economic and financial systems...",
+      "new_desc_preview": "Econophysics is an interdisciplinary research field that applies the theoretical..."
+    },
+    {
+      "node_id": "perspective_drawing_concept",
+      "label": "Linear Perspective",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "A mathematical system for representing three-dimensional space on a flat surface...",
+      "new_desc_preview": "Linear perspective is a geometric and mathematical system for representing three..."
+    },
+    {
+      "node_id": "postcolonial_literature_concept",
+      "label": "Postcolonial Literature",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Literature written by and about peoples formerly under colonial rule, exploring ...",
+      "new_desc_preview": "Postcolonial literature is a body of literary work produced by writers from, or ..."
+    },
+    {
+      "node_id": "computational_chemistry_concept",
+      "label": "Computational Chemistry",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The use of computer simulation to solve chemical problems — predicting molecular...",
+      "new_desc_preview": "Computational chemistry is a branch of chemistry that applies mathematical model..."
+    },
+    {
+      "node_id": "astrochemistry_concept",
+      "label": "Astrochemistry",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The study of chemical reactions and molecules in space — from simple hydrogen in...",
+      "new_desc_preview": "Astrochemistry is the scientific discipline that investigates the formation, abu..."
+    },
+    {
+      "node_id": "materials_by_design_concept",
+      "label": "Materials by Design",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "A paradigm using computational prediction and machine learning to design materia...",
+      "new_desc_preview": "Materials by Design is a transformative paradigm in materials science that syste..."
+    },
+    {
+      "node_id": "medieval_period_concept",
+      "label": "Medieval Period",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The millennium between the fall of Rome (476) and the Renaissance (c.1450), ofte...",
+      "new_desc_preview": "The Medieval Period refers to the approximately one-thousand-year era in Europea..."
+    },
+    {
+      "node_id": "ancient_china_concept",
+      "label": "Ancient Chinese Civilization",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "One of the world's oldest continuous civilizations, producing foundational innov...",
+      "new_desc_preview": "Ancient Chinese Civilization refers to the continuous cultural, political, and i..."
+    },
+    {
+      "node_id": "nutrition_science_concept",
+      "label": "Nutrition Science",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The study of how nutrients (macronutrients, vitamins, minerals) interact with bi...",
+      "new_desc_preview": "Nutrition science is the interdisciplinary field that investigates how nutrients..."
+    },
+    {
+      "node_id": "neuroimaging_concept",
+      "label": "Neuroimaging",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "Technologies for visualizing brain structure and function in living subjects — f...",
+      "new_desc_preview": "Neuroimaging refers to a suite of technologies and methods used to visualize, me..."
+    },
+    {
+      "node_id": "cubism_concept",
+      "label": "Cubism",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "A revolutionary art movement (1907-1920s) initiated by Picasso and Braque that s...",
+      "new_desc_preview": "Cubism is a groundbreaking visual art movement developed collaboratively by Pabl..."
+    },
+    {
+      "node_id": "world_literature_concept",
+      "label": "World Literature",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The concept (Goethe's Weltliteratur, 1827) and practice of reading literature ac...",
+      "new_desc_preview": "World literature is the study and practice of reading, teaching, and interpretin..."
+    },
+    {
+      "node_id": "age_of_revolutions_concept",
+      "label": "Age of Revolutions",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The era (c.1775-1848) when interconnected revolutions (American, French, Haitian...",
+      "new_desc_preview": "The Age of Revolutions refers to the interconnected period of political, social,..."
+    },
+    {
+      "node_id": "history_of_mathematics_concept",
+      "label": "History of Mathematics",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The study of how mathematical ideas developed across civilizations — Babylonian ...",
+      "new_desc_preview": "The history of mathematics is the scholarly discipline that traces the origin, e..."
+    },
+    {
+      "node_id": "cultural_heritage_concept",
+      "label": "Cultural Heritage Preservation",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The interdisciplinary effort to identify, document, protect, and transmit tangib...",
+      "new_desc_preview": "Cultural Heritage Preservation is the interdisciplinary field dedicated to ident..."
+    },
+    {
+      "node_id": "rhetoric_classical_concept",
+      "label": "Classical Rhetoric",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The systematic art of persuasion developed by Greeks and Romans — Aristotle's th...",
+      "new_desc_preview": "Classical Rhetoric is the systematic study and practice of effective persuasion,..."
+    },
+    {
+      "node_id": "telecommunications_engineering_concept",
+      "label": "Telecommunications Engineering",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The engineering of long-distance communication systems — from telegraph (1837) a...",
+      "new_desc_preview": "Telecommunications engineering is the discipline concerned with the design, deve..."
+    }
+  ]
+}

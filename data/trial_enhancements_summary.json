@@ -1,0 +1,41 @@
+{
+  "selection": {
+    "domain": null,
+    "limit": 30,
+    "max_description_score": 7,
+    "max_total_score": 16,
+    "pool_size": 20,
+    "selected_size": 20,
+    "dry_run": false,
+    "model": "claude-sonnet-4-6"
+  },
+  "results": {
+    "generated_at": "2026-05-25T04:36:49.954296+00:00",
+    "total_records": 20,
+    "with_candidates": 20,
+    "improved_count": 19,
+    "unchanged_count": 1,
+    "regressed_count": 0,
+    "improved_ratio": 0.95,
+    "avg_delta_description_score": 3.3,
+    "top_diagnostics": [
+      [
+        "WHAT element weak or missing in opening",
+        20
+      ],
+      [
+        "SIGNIFICANCE element weak or missing",
+        12
+      ],
+      [
+        "SIGNIFICANCE could be stronger",
+        8
+      ],
+      [
+        "BRIDGE implied but no specific domain mentioned",
+        2
+      ]
+    ]
+  },
+  "output_file": "D:\\LINKU\\Nexus\\data\\trial_enhancements.json"
+}

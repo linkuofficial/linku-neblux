@@ -1,0 +1,1591 @@
+{
+  "timestamp": "2026-05-25T12:36:10.016448+00:00",
+  "source_consolidated": "p2_candidates_consolidated.json",
+  "source_decisions": "p2_candidates_consolidated_decisions_resolved.json",
+  "source_nodes": "all_nodes.json",
+  "backup_file": "all_nodes_backup_p2_candidates_20260525_203609.json",
+  "summary": {
+    "total_decisions": 158,
+    "applied": 157,
+    "skipped": 1,
+    "errors": 0
+  },
+  "change_log": [
+    {
+      "node_id": "engineering_field",
+      "label": "Engineering",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Engineering is a professional and academic discipline concerned with the applica...",
+      "new_desc_preview": "Engineering is a professional and academic discipline concerned with the applica..."
+    },
+    {
+      "node_id": "information_theory_field",
+      "label": "Information Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Information theory is the mathematical study of quantification, storage, and tra...",
+      "new_desc_preview": "Information theory is the mathematical study of quantification, storage, and tra..."
+    },
+    {
+      "node_id": "measurement_concept",
+      "label": "Measurement",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Measurement is the systematic process of assigning numerical values or categorie...",
+      "new_desc_preview": "Measurement is the systematic process of assigning numerical values or categorie..."
+    },
+    {
+      "node_id": "dimensional_analysis_concept",
+      "label": "Dimensional Analysis",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Dimensional analysis is a systematic mathematical technique that examines the ph...",
+      "new_desc_preview": "Dimensional analysis is a systematic mathematical technique that examines the ph..."
+    },
+    {
+      "node_id": "network_effects_concept",
+      "label": "Network Effects",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Network effects refer to the phenomenon whereby the value or utility of a produc...",
+      "new_desc_preview": "Network effects refer to the phenomenon whereby the value or utility of a produc..."
+    },
+    {
+      "node_id": "reductionism_vs_holism_concept",
+      "label": "Reductionism vs Holism",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Reductionism and holism are two foundational and competing philosophical framewo...",
+      "new_desc_preview": "Reductionism and holism are two foundational and competing philosophical framewo..."
+    },
+    {
+      "node_id": "boundary_conditions_concept",
+      "label": "Boundary Conditions",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Boundary conditions are mathematical or physical constraints imposed at the edge...",
+      "new_desc_preview": "Boundary conditions are mathematical or physical constraints imposed at the edge..."
+    },
+    {
+      "node_id": "randomness_and_determinism_concept",
+      "label": "Randomness and Determinism",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "The tension between randomness and determinism pervades all knowledge: Newtonian...",
+      "new_desc_preview": "Randomness and determinism refer to two fundamental and competing frameworks for..."
+    },
+    {
+      "node_id": "biomimicry_concept",
+      "label": "Biomimicry",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Biomimicry is a design philosophy and innovation methodology that draws on strat...",
+      "new_desc_preview": "Biomimicry is a design philosophy and innovation methodology that draws on strat..."
+    },
+    {
+      "node_id": "systems_engineering_concept",
+      "label": "Systems Engineering",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Systems engineering is an interdisciplinary methodology that integrates multiple...",
+      "new_desc_preview": "Systems engineering is an interdisciplinary methodology that integrates multiple..."
+    },
+    {
+      "node_id": "communication_networks_concept",
+      "label": "Communication Networks",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Communication networks are interconnected systems of nodes and links designed to...",
+      "new_desc_preview": "Communication networks are interconnected systems of nodes and links designed to..."
+    },
+    {
+      "node_id": "data_science_concept",
+      "label": "Data Science",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Data science is an interdisciplinary field that integrates statistical analysis,...",
+      "new_desc_preview": "Data science is an interdisciplinary field that integrates statistical analysis,..."
+    },
+    {
+      "node_id": "power_structures_concept",
+      "label": "Power Structures",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Power structures refer to the systematic arrangements — both formal and informal...",
+      "new_desc_preview": "Power structures refer to the systematic arrangements — both formal and informal..."
+    },
+    {
+      "node_id": "existentialism_concept",
+      "label": "Existentialism",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Existentialism is a philosophical movement holding that existence precedes essen...",
+      "new_desc_preview": "Existentialism is a philosophical movement holding that existence precedes essen..."
+    },
+    {
+      "node_id": "polymer_chemistry_concept",
+      "label": "Polymer Chemistry",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Polymer chemistry is the branch of chemistry that investigates the synthesis, st...",
+      "new_desc_preview": "Polymer chemistry is the branch of chemistry that investigates the synthesis, st..."
+    },
+    {
+      "node_id": "metabolism_concept",
+      "label": "Metabolism",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Metabolism is the complete set of life-sustaining chemical reactions occurring w...",
+      "new_desc_preview": "Metabolism is the complete set of life-sustaining chemical reactions occurring w..."
+    },
+    {
+      "node_id": "sensory_systems_concept",
+      "label": "Sensory Systems",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Sensory systems are the specialized biological networks through which living org...",
+      "new_desc_preview": "Sensory systems are the specialized biological networks through which living org..."
+    },
+    {
+      "node_id": "telecommunications_concept",
+      "label": "Telecommunications",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Telecommunications is the science and practice of transmitting information acros...",
+      "new_desc_preview": "Telecommunications is the science and practice of transmitting information acros..."
+    },
+    {
+      "node_id": "blockchain_concept",
+      "label": "Blockchain Technology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Blockchain technology is a decentralized data structure that records transaction...",
+      "new_desc_preview": "Blockchain technology is a decentralized data structure that records transaction..."
+    },
+    {
+      "node_id": "philosophy_of_history_concept",
+      "label": "Philosophy of History",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Philosophy of history is the branch of philosophy that systematically examines t...",
+      "new_desc_preview": "Philosophy of history is the branch of philosophy that systematically examines t..."
+    },
+    {
+      "node_id": "comparative_politics_concept",
+      "label": "Comparative Politics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Comparative politics is a subfield of political science that systematically exam...",
+      "new_desc_preview": "Comparative politics is a subfield of political science that systematically exam..."
+    },
+    {
+      "node_id": "global_health_concept",
+      "label": "Global Health",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Global health is an interdisciplinary field and set of priorities concerned with...",
+      "new_desc_preview": "Global health is an interdisciplinary field and set of priorities concerned with..."
+    },
+    {
+      "node_id": "evidence_based_medicine_concept",
+      "label": "Evidence-Based Medicine",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Evidence-based medicine (EBM) is a systematic framework for clinical decision-ma...",
+      "new_desc_preview": "Evidence-based medicine (EBM) is a systematic framework for clinical decision-ma..."
+    },
+    {
+      "node_id": "optimization_concept",
+      "label": "Optimization",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Optimization is the mathematical discipline concerned with systematically findin...",
+      "new_desc_preview": "Optimization is the mathematical discipline concerned with systematically findin..."
+    },
+    {
+      "node_id": "representation_concept",
+      "label": "Representation",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Representation is the cognitive and semiotic process by which signs, symbols, im...",
+      "new_desc_preview": "Representation is the cognitive and semiotic process by which signs, symbols, im..."
+    },
+    {
+      "node_id": "longue_duree_concept",
+      "label": "Longue Duree",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Longue durée refers to the analytical framework developed by French historian Fe...",
+      "new_desc_preview": "Longue durée refers to the analytical framework developed by French historian Fe..."
+    },
+    {
+      "node_id": "number_theory_concept",
+      "label": "Number Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Number theory is a branch of pure mathematics devoted to the systematic study of...",
+      "new_desc_preview": "Number theory is a branch of pure mathematics devoted to the systematic study of..."
+    },
+    {
+      "node_id": "biogeochemical_cycles_concept",
+      "label": "Biogeochemical Cycles",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Biogeochemical cycles are the continuous, interconnected pathways through which ...",
+      "new_desc_preview": "Biogeochemical cycles are the continuous, interconnected pathways through which ..."
+    },
+    {
+      "node_id": "surgical_principles_concept",
+      "label": "Surgical Principles",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Surgical principles encompass the foundational concepts governing operative inte...",
+      "new_desc_preview": "Surgical principles refer to the foundational framework of evidence-based rules,..."
+    },
+    {
+      "node_id": "socialization_concept",
+      "label": "Socialization",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Socialization is the lifelong process through which individuals acquire the norm...",
+      "new_desc_preview": "Socialization is the lifelong process through which individuals acquire the norm..."
+    },
+    {
+      "node_id": "cognitive_linguistics_concept",
+      "label": "Cognitive Linguistics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Cognitive linguistics studies how language reflects and shapes conceptual struct...",
+      "new_desc_preview": "Cognitive linguistics is an interdisciplinary field of study that investigates t..."
+    },
+    {
+      "node_id": "postcolonial_theory_concept",
+      "label": "Postcolonial Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Postcolonial theory is a critical intellectual framework that analyzes the lasti...",
+      "new_desc_preview": "Postcolonial theory is a critical intellectual framework that analyzes the lasti..."
+    },
+    {
+      "node_id": "computer_vision_concept",
+      "label": "Computer Vision",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Computer vision is a field of artificial intelligence and computational science ...",
+      "new_desc_preview": "Computer vision is a field of artificial intelligence and computational science ..."
+    },
+    {
+      "node_id": "research_methodology_concept",
+      "label": "Research Methodology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Research methodology refers to the structured system of principles, procedures, ...",
+      "new_desc_preview": "Research methodology refers to the structured system of principles, procedures, ..."
+    },
+    {
+      "node_id": "developmental_biology_concept",
+      "label": "Developmental Biology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Developmental biology is the scientific discipline that investigates how a singl...",
+      "new_desc_preview": "Developmental biology is the scientific discipline that investigates how a singl..."
+    },
+    {
+      "node_id": "augmented_reality_concept",
+      "label": "Augmented Reality",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Augmented reality (AR) is a technology that superimposes digitally generated con...",
+      "new_desc_preview": "Augmented reality (AR) is a technology that superimposes digitally generated con..."
+    },
+    {
+      "node_id": "dynamical_systems_concept",
+      "label": "Dynamical Systems",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Dynamical systems theory is a branch of mathematics and applied science that stu...",
+      "new_desc_preview": "Dynamical systems theory is a branch of mathematics and applied science that stu..."
+    },
+    {
+      "node_id": "music_cognition_concept",
+      "label": "Music Cognition",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Music cognition is an interdisciplinary field of inquiry that investigates how t...",
+      "new_desc_preview": "Music cognition is an interdisciplinary field of inquiry that investigates how t..."
+    },
+    {
+      "node_id": "ibn_khaldun_person",
+      "label": "Ibn Khaldun",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Ibn Khaldun (1332–1406) is a North African Arab historian, philosopher, and stat...",
+      "new_desc_preview": "Ibn Khaldun (1332–1406) is a North African Arab historian, philosopher, and stat..."
+    },
+    {
+      "node_id": "discovery_of_dna_structure_event",
+      "label": "Discovery of DNA Structure",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The discovery of DNA's double helix structure is a landmark scientific event occ...",
+      "new_desc_preview": "The discovery of DNA's double helix structure is a landmark scientific event occ..."
+    },
+    {
+      "node_id": "manhattan_project_event",
+      "label": "Manhattan Project",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "A secret wartime research program (1942–1946) that produced the first nuclear we...",
+      "new_desc_preview": "The Manhattan Project was a classified U.S.-led scientific and military research..."
+    },
+    {
+      "node_id": "neolithic_revolution_event",
+      "label": "Neolithic Revolution",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The Neolithic Revolution is the term historians and archaeologists use to descri...",
+      "new_desc_preview": "The Neolithic Revolution is the term historians and archaeologists use to descri..."
+    },
+    {
+      "node_id": "invention_of_computer_event",
+      "label": "Invention of the Electronic Computer",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The invention of the electronic computer refers to the convergence of theoretica...",
+      "new_desc_preview": "The invention of the electronic computer refers to the convergence of theoretica..."
+    },
+    {
+      "node_id": "vaccination_invention_event",
+      "label": "Invention of Vaccination",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The invention of vaccination refers to the landmark medical and scientific achie...",
+      "new_desc_preview": "The invention of vaccination refers to the landmark medical and scientific achie..."
+    },
+    {
+      "node_id": "chiaroscuro_concept",
+      "label": "Chiaroscuro",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Chiaroscuro is a foundational pictorial technique in Western art that employs st...",
+      "new_desc_preview": "Chiaroscuro is a foundational pictorial technique in Western art that employs st..."
+    },
+    {
+      "node_id": "allegory_concept",
+      "label": "Allegory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Allegory is a sustained literary and artistic mode in which characters, events, ...",
+      "new_desc_preview": "Allegory is a sustained literary and artistic mode in which characters, events, ..."
+    },
+    {
+      "node_id": "pandemic_dynamics_concept",
+      "label": "Pandemic Dynamics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Pandemic dynamics refers to the quantitative and conceptual study of how infecti...",
+      "new_desc_preview": "Pandemic dynamics refers to the quantitative and conceptual study of how infecti..."
+    },
+    {
+      "node_id": "stem_cells_concept",
+      "label": "Stem Cells",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Stem cells are undifferentiated biological cells defined by two fundamental prop...",
+      "new_desc_preview": "Stem cells are undifferentiated biological cells defined by two fundamental prop..."
+    },
+    {
+      "node_id": "telemedicine_concept",
+      "label": "Telemedicine",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Telemedicine is the delivery of clinical healthcare services across geographic d...",
+      "new_desc_preview": "Telemedicine is the delivery of clinical healthcare services across geographic d..."
+    },
+    {
+      "node_id": "epidemiological_transition_concept",
+      "label": "Epidemiological Transition",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Epidemiological transition is a foundational demographic and public health conce...",
+      "new_desc_preview": "Epidemiological transition is a foundational demographic and public health conce..."
+    },
+    {
+      "node_id": "photography_history_concept",
+      "label": "Photography as Art",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Photography as Art refers to the intellectual, cultural, and aesthetic movement ...",
+      "new_desc_preview": "Photography as Art refers to the intellectual, cultural, and aesthetic movement ..."
+    },
+    {
+      "node_id": "cold_war_concept",
+      "label": "The Cold War",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The Cold War is a term describing the sustained geopolitical, ideological, and m...",
+      "new_desc_preview": "The Cold War is a term describing the sustained geopolitical, ideological, and m..."
+    },
+    {
+      "node_id": "surgery_history_concept",
+      "label": "Surgery",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Surgery is the branch of medicine that diagnoses and treats diseases, injuries, ...",
+      "new_desc_preview": "Surgery is the branch of medicine that diagnoses and treats diseases, injuries, ..."
+    },
+    {
+      "node_id": "bauhaus_concept",
+      "label": "Bauhaus",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Bauhaus is a German art school and influential design movement (Weimar, 1919–193...",
+      "new_desc_preview": "Bauhaus is a German art school and influential design movement (Weimar, 1919–193..."
+    },
+    {
+      "node_id": "womens_health_concept",
+      "label": "Women's Health and Reproductive Medicine",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Women's Health and Reproductive Medicine is a specialized interdisciplinary fiel...",
+      "new_desc_preview": "Women's Health and Reproductive Medicine is a specialized interdisciplinary fiel..."
+    },
+    {
+      "node_id": "mongol_empire_concept",
+      "label": "Mongol Empire",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The Mongol Empire was a vast imperial state that emerged from the Eurasian stepp...",
+      "new_desc_preview": "The Mongol Empire was a vast imperial state that emerged from the Eurasian stepp..."
+    },
+    {
+      "node_id": "science_and_religion_concept",
+      "label": "Science and Religion Dialogue",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Science and Religion Dialogue refers to the ongoing intellectual exchange betwee...",
+      "new_desc_preview": "Science and Religion Dialogue refers to the ongoing intellectual exchange betwee..."
+    },
+    {
+      "node_id": "minimalism_art_concept",
+      "label": "Minimalism in Art",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Minimalism in art is a movement that emerged primarily in New York during the 19...",
+      "new_desc_preview": "Minimalism in art is a movement that emerged primarily in New York during the 19..."
+    },
+    {
+      "node_id": "cold_war_science_concept",
+      "label": "Cold War and Science",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Cold War and Science refers to the profound, bidirectional relationship between ...",
+      "new_desc_preview": "Cold War and Science refers to the profound, bidirectional relationship between ..."
+    },
+    {
+      "node_id": "textile_engineering_concept",
+      "label": "Textile Engineering",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Textile engineering is the applied science and technology concerned with the des...",
+      "new_desc_preview": "Textile engineering is the applied science and technology concerned with the des..."
+    },
+    {
+      "node_id": "plague_history_concept",
+      "label": "Plague and Pandemic History",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Plague and pandemic history is the systematic study of epidemic and pandemic dis...",
+      "new_desc_preview": "Plague and pandemic history is the systematic study of epidemic and pandemic dis..."
+    },
+    {
+      "node_id": "evolution_field",
+      "label": "Evolution",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Evolutionary biology is the scientific field that investigates how populations o...",
+      "new_desc_preview": "Evolutionary biology is the scientific field that investigates how populations o..."
+    },
+    {
+      "node_id": "electromagnetism_field",
+      "label": "Electromagnetism",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Electromagnetism studies electric and magnetic fields and their unification into...",
+      "new_desc_preview": "Electromagnetism is one of the four fundamental forces of nature, describing the..."
+    },
+    {
+      "node_id": "economics_field",
+      "label": "Economics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Economics is the systematic study of how individuals, institutions, and societie...",
+      "new_desc_preview": "Economics is the systematic study of how individuals, institutions, and societie..."
+    },
+    {
+      "node_id": "philosophy_of_science_field",
+      "label": "Philosophy of Science",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Philosophy of science is the branch of philosophy that critically examines the f...",
+      "new_desc_preview": "Philosophy of science is the branch of philosophy that critically examines the f..."
+    },
+    {
+      "node_id": "epistemology_field",
+      "label": "Epistemology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Epistemology is the branch of philosophy dedicated to investigating the nature, ...",
+      "new_desc_preview": "Epistemology is the branch of philosophy dedicated to investigating the nature, ..."
+    },
+    {
+      "node_id": "music_theory_field",
+      "label": "Music Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Music theory is the systematic study of the principles, structures, and processe...",
+      "new_desc_preview": "Music theory is the systematic study of the principles, structures, and processe..."
+    },
+    {
+      "node_id": "architecture_field",
+      "label": "Architecture",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Architecture is the art and science of designing and constructing buildings and ...",
+      "new_desc_preview": "Architecture is the discipline concerned with the design, planning, and construc..."
+    },
+    {
+      "node_id": "anthropology_field",
+      "label": "Anthropology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Anthropology is the systematic, comparative study of human beings in all their b...",
+      "new_desc_preview": "Anthropology is the systematic, comparative study of human beings in all their b..."
+    },
+    {
+      "node_id": "environmental_science_field",
+      "label": "Environmental Science",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Environmental science is an interdisciplinary field that systematically investig...",
+      "new_desc_preview": "Environmental science is an interdisciplinary field that systematically investig..."
+    },
+    {
+      "node_id": "game_theory_field",
+      "label": "Game Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Game theory is the mathematical study of strategic interaction among rational de...",
+      "new_desc_preview": "Game theory is the mathematical study of strategic interaction among rational de..."
+    },
+    {
+      "node_id": "ecosystem_concept",
+      "label": "Ecosystem",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "An ecosystem is a dynamic, self-regulating system comprising all living organism...",
+      "new_desc_preview": "An ecosystem is a dynamic, self-regulating system comprising all living organism..."
+    },
+    {
+      "node_id": "homeostasis_concept",
+      "label": "Homeostasis",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Homeostasis is the process by which living organisms actively maintain relativel...",
+      "new_desc_preview": "Homeostasis is the process by which living organisms actively maintain relativel..."
+    },
+    {
+      "node_id": "structural_mechanics_concept",
+      "label": "Structural Mechanics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Structural mechanics is the branch of applied mechanics that investigates how so...",
+      "new_desc_preview": "Structural mechanics is the branch of applied mechanics that investigates how so..."
+    },
+    {
+      "node_id": "energy_transformation_concept",
+      "label": "Energy Transformation",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Energy transformation refers to the process by which energy changes from one for...",
+      "new_desc_preview": "Energy transformation refers to the process by which energy changes from one for..."
+    },
+    {
+      "node_id": "control_theory_concept",
+      "label": "Control Theory",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Control theory is the mathematical framework concerned with analyzing and design...",
+      "new_desc_preview": "Control theory is the mathematical framework concerned with analyzing and design..."
+    },
+    {
+      "node_id": "environmental_history_concept",
+      "label": "Environmental History",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Environmental history is an interdisciplinary field of scholarly inquiry that ex...",
+      "new_desc_preview": "Environmental history is an interdisciplinary field of scholarly inquiry that ex..."
+    },
+    {
+      "node_id": "cosmology_concept",
+      "label": "Cosmology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Cosmology is the scientific and philosophical study of the universe as a unified...",
+      "new_desc_preview": "Cosmology is the scientific and philosophical study of the universe as a unified..."
+    },
+    {
+      "node_id": "geomorphology_concept",
+      "label": "Geomorphology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Geomorphology is the scientific study of Earth's surface landforms — including m...",
+      "new_desc_preview": "Geomorphology is the scientific study of Earth's surface landforms — including m..."
+    },
+    {
+      "node_id": "michel_foucault_person",
+      "label": "Michel Foucault",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Michel Foucault is the philosopher and historian who analyzed how power operates...",
+      "new_desc_preview": "Michel Foucault (1926–1984) is a French philosopher, historian, and social theor..."
+    },
+    {
+      "node_id": "leonardo_da_vinci_person",
+      "label": "Leonardo da Vinci",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Leonardo da Vinci (1452–1519) is an Italian Renaissance polymath widely regarded...",
+      "new_desc_preview": "Leonardo da Vinci (1452–1519) is an Italian Renaissance polymath widely regarded..."
+    },
+    {
+      "node_id": "intertextuality_concept",
+      "label": "Intertextuality",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Intertextuality is the theoretical principle that every text is fundamentally sh...",
+      "new_desc_preview": "Intertextuality is the theoretical principle that every text is fundamentally sh..."
+    },
+    {
+      "node_id": "placebo_effect_concept",
+      "label": "Placebo Effect",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The placebo effect is a measurable physiological and psychological phenomenon in...",
+      "new_desc_preview": "The placebo effect is a measurable physiological and psychological phenomenon in..."
+    },
+    {
+      "node_id": "black_hole_concept",
+      "label": "Black Hole",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "A region of spacetime where gravity is so intense that nothing — not even light ...",
+      "new_desc_preview": "A black hole is a region of spacetime where gravitational curvature becomes so e..."
+    },
+    {
+      "node_id": "philosophy_of_economics_concept",
+      "label": "Philosophy of Economics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Critical examination of the assumptions, methods, and values embedded in economi...",
+      "new_desc_preview": "Philosophy of Economics is the systematic philosophical inquiry into the foundat..."
+    },
+    {
+      "node_id": "history_of_technology_concept",
+      "label": "History of Technology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "History of Technology is an interdisciplinary field of scholarly inquiry that ex...",
+      "new_desc_preview": "History of Technology is an interdisciplinary field of scholarly inquiry that ex..."
+    },
+    {
+      "node_id": "limit_concept",
+      "label": "Limit",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "A limit describes the value that a mathematical function approaches as its input...",
+      "new_desc_preview": "A limit is a fundamental concept in mathematical analysis that formalizes the no..."
+    },
+    {
+      "node_id": "catalysis_concept",
+      "label": "Catalysis",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Catalysis is the acceleration of chemical reactions by substances — catalysts — ...",
+      "new_desc_preview": "Catalysis is the process by which a substance — the catalyst — increases the rat..."
+    },
+    {
+      "node_id": "photosynthesis_concept",
+      "label": "Photosynthesis",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Photosynthesis is the biochemical process by which plants, algae, and cyanobacte...",
+      "new_desc_preview": "Photosynthesis is the fundamental biochemical process by which photoautotrophic ..."
+    },
+    {
+      "node_id": "neurotransmission_concept",
+      "label": "Neurotransmission",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Neurotransmission is the process by which nerve cells communicate through chemic...",
+      "new_desc_preview": "Neurotransmission is the process by which neurons communicate with one another a..."
+    },
+    {
+      "node_id": "canon_formation_concept",
+      "label": "Canon Formation",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "The process by which certain works are selected as masterpieces worthy of preser...",
+      "new_desc_preview": "Canon Formation refers to the systematic process by which certain works, authors..."
+    },
+    {
+      "node_id": "dark_matter_concept",
+      "label": "Dark Matter",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 21,
+      "score_delta": 1,
+      "old_desc_preview": "Dark matter is a form of matter that does not emit, absorb, or reflect electroma...",
+      "new_desc_preview": "Dark matter is a hypothetical form of matter that does not emit, absorb, or refl..."
+    },
+    {
+      "node_id": "geographic_information_systems_concept",
+      "label": "Geographic Information Systems",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Geographic Information Systems (GIS) refers to an integrated framework of hardwa...",
+      "new_desc_preview": "Geographic Information Systems (GIS) refers to an integrated framework of hardwa..."
+    },
+    {
+      "node_id": "entropy_concept",
+      "label": "Entropy",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Entropy is a fundamental physical quantity that measures the degree of disorder,...",
+      "new_desc_preview": "Entropy is a fundamental physical quantity that measures the degree of disorder,..."
+    },
+    {
+      "node_id": "technology_field",
+      "label": "Technology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Technology is the systematic application of scientific knowledge, tools, techniq...",
+      "new_desc_preview": "Technology is the systematic application of scientific knowledge, tools, techniq..."
+    },
+    {
+      "node_id": "philosophy_of_mind_concept",
+      "label": "Philosophy of Mind",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Philosophy of mind is a branch of philosophy that systematically investigates th...",
+      "new_desc_preview": "Philosophy of mind is a branch of philosophy that systematically investigates th..."
+    },
+    {
+      "node_id": "diffusion_concept",
+      "label": "Diffusion",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Diffusion is the net movement of particles, molecules, energy, or information fr...",
+      "new_desc_preview": "Diffusion is the net movement of particles, molecules, energy, or information fr..."
+    },
+    {
+      "node_id": "spatial_reasoning_concept",
+      "label": "Spatial Reasoning",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Spatial reasoning is the cognitive ability to mentally represent, manipulate, an...",
+      "new_desc_preview": "Spatial reasoning is the cognitive ability to mentally represent, manipulate, an..."
+    },
+    {
+      "node_id": "reaction_kinetics_concept",
+      "label": "Reaction Kinetics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Reaction kinetics is the branch of physical chemistry that quantitatively descri...",
+      "new_desc_preview": "Reaction kinetics is the branch of physical chemistry that quantitatively descri..."
+    },
+    {
+      "node_id": "epidemiology_concept",
+      "label": "Epidemiology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Epidemiology is the scientific discipline that investigates the distribution, de...",
+      "new_desc_preview": "Epidemiology is the scientific discipline that investigates the distribution, de..."
+    },
+    {
+      "node_id": "materiality_in_art_concept",
+      "label": "Materiality in Art",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Materiality in art refers to the study and practice of how the physical properti...",
+      "new_desc_preview": "Materiality in art refers to the study and practice of how the physical properti..."
+    },
+    {
+      "node_id": "social_stratification_concept",
+      "label": "Social Stratification",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Social stratification refers to the structured ranking of individuals and groups...",
+      "new_desc_preview": "Social stratification refers to the structured ranking of individuals and groups..."
+    },
+    {
+      "node_id": "history_from_below_concept",
+      "label": "History from Below",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "History from below is a historiographical approach that centers the lived experi...",
+      "new_desc_preview": "History from below is a historiographical approach that centers the lived experi..."
+    },
+    {
+      "node_id": "acoustics_concept",
+      "label": "Acoustics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Acoustics is the branch of physics concerned with the production, propagation, a...",
+      "new_desc_preview": "Acoustics is the branch of physics concerned with the production, propagation, a..."
+    },
+    {
+      "node_id": "supramolecular_chemistry_concept",
+      "label": "Supramolecular Chemistry",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Supramolecular chemistry is the branch of chemistry concerned with the design, s...",
+      "new_desc_preview": "Supramolecular chemistry is the branch of chemistry concerned with the design, s..."
+    },
+    {
+      "node_id": "analytical_chemistry_concept",
+      "label": "Analytical Chemistry",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Analytical chemistry is the branch of chemistry dedicated to identifying the che...",
+      "new_desc_preview": "Analytical chemistry is the branch of chemistry dedicated to identifying the che..."
+    },
+    {
+      "node_id": "social_movements_concept",
+      "label": "Social Movements",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Social movements are organized, sustained collective efforts by groups of people...",
+      "new_desc_preview": "Social movements are organized, sustained collective efforts by groups of people..."
+    },
+    {
+      "node_id": "identity_politics_concept",
+      "label": "Identity and Politics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "Identity politics refers to political and social movements in which individuals ...",
+      "new_desc_preview": "Identity politics refers to political and social movements in which individuals ..."
+    },
+    {
+      "node_id": "adam_smith_person",
+      "label": "Adam Smith",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Adam Smith is the moral philosopher and economist whose Wealth of Nations (1776)...",
+      "new_desc_preview": "Adam Smith (1723–1790) was a Scottish moral philosopher and political economist ..."
+    },
+    {
+      "node_id": "galileo_galilei_person",
+      "label": "Galileo Galilei",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Galileo Galilei is the physicist and astronomer who pioneered the experimental m...",
+      "new_desc_preview": "Galileo Galilei (1564–1642) was an Italian physicist, astronomer, and mathematic..."
+    },
+    {
+      "node_id": "calculus_field",
+      "label": "Calculus",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Calculus is the branch of mathematics devoted to the rigorous study of continuou...",
+      "new_desc_preview": "Calculus is the branch of mathematics devoted to the rigorous study of continuou..."
+    },
+    {
+      "node_id": "ecology_field",
+      "label": "Ecology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Ecology is the scientific discipline that investigates the relationships between...",
+      "new_desc_preview": "Ecology is the scientific discipline that investigates the relationships between..."
+    },
+    {
+      "node_id": "quantum_mechanics_field",
+      "label": "Quantum Mechanics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Quantum mechanics is the fundamental branch of physics that governs the behavior...",
+      "new_desc_preview": "Quantum mechanics is the fundamental branch of physics that governs the behavior..."
+    },
+    {
+      "node_id": "linguistics_field",
+      "label": "Linguistics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Linguistics is the scientific study of language in all its dimensions — encompas...",
+      "new_desc_preview": "Linguistics is the scientific study of language in all its dimensions — encompas..."
+    },
+    {
+      "node_id": "ethics_field",
+      "label": "Ethics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Ethics is the branch of philosophy that systematically investigates moral princi...",
+      "new_desc_preview": "Ethics is the branch of philosophy that systematically investigates moral princi..."
+    },
+    {
+      "node_id": "natural_selection_concept",
+      "label": "Natural Selection",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Natural selection is the primary evolutionary mechanism by which heritable trait...",
+      "new_desc_preview": "Natural selection is the primary evolutionary mechanism by which heritable trait..."
+    },
+    {
+      "node_id": "causation_in_history_concept",
+      "label": "Historical Causation",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Historical causation refers to the systematic analysis of why and how historical...",
+      "new_desc_preview": "Historical causation refers to the systematic analysis of why and how historical..."
+    },
+    {
+      "node_id": "emergence_concept",
+      "label": "Emergence",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Emergence describes how complex system-level properties arise from simpler compo...",
+      "new_desc_preview": "Emergence is the phenomenon whereby complex, higher-order properties arise from ..."
+    },
+    {
+      "node_id": "complex_systems_concept",
+      "label": "Complex Systems",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Complex systems is a scientific framework that studies entities composed of many...",
+      "new_desc_preview": "Complex systems is a scientific framework that studies entities composed of many..."
+    },
+    {
+      "node_id": "self_organization_concept",
+      "label": "Self-Organization",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Self-organization is the process by which ordered structures, patterns, and func...",
+      "new_desc_preview": "Self-organization is the process by which ordered structures, patterns, and func..."
+    },
+    {
+      "node_id": "evolution_of_cooperation_concept",
+      "label": "Evolution of Cooperation",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "The evolution of cooperation is a foundational concept in evolutionary biology a...",
+      "new_desc_preview": "The evolution of cooperation is a foundational concept in evolutionary biology a..."
+    },
+    {
+      "node_id": "duality_concept",
+      "label": "Duality",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Duality is a structural principle in mathematics, physics, and philosophy whereb...",
+      "new_desc_preview": "Duality is a structural principle in mathematics, physics, and philosophy whereb..."
+    },
+    {
+      "node_id": "coevolution_concept",
+      "label": "Coevolution",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Coevolution refers to the process by which two or more interacting species or sy...",
+      "new_desc_preview": "Coevolution refers to the process by which two or more interacting species or sy..."
+    },
+    {
+      "node_id": "scientific_method_concept",
+      "label": "Scientific Method",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "The scientific method is the systematic approach to knowledge through observatio...",
+      "new_desc_preview": "The scientific method is a systematic, iterative framework for generating reliab..."
+    },
+    {
+      "node_id": "resilience_concept",
+      "label": "Resilience",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Resilience is a system's capacity to absorb disturbance, adapt through reorganiz...",
+      "new_desc_preview": "Resilience is a system's capacity to absorb disturbance, adapt through reorganiz..."
+    },
+    {
+      "node_id": "spectroscopy_concept",
+      "label": "Spectroscopy",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Spectroscopy is the scientific study of how matter interacts with electromagneti...",
+      "new_desc_preview": "Spectroscopy is the scientific study of how matter interacts with electromagneti..."
+    },
+    {
+      "node_id": "population_dynamics_concept",
+      "label": "Population Dynamics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Population dynamics is the quantitative study of how populations change in size,...",
+      "new_desc_preview": "Population dynamics is the quantitative study of how populations change in size,..."
+    },
+    {
+      "node_id": "institutional_economics_concept",
+      "label": "Institutional Economics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Institutional economics is a school of economic thought that examines how formal...",
+      "new_desc_preview": "Institutional economics is a school of economic thought that examines how formal..."
+    },
+    {
+      "node_id": "philosophy_of_mathematics_concept",
+      "label": "Philosophy of Mathematics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Philosophy of mathematics is the branch of philosophy that investigates the natu...",
+      "new_desc_preview": "Philosophy of mathematics is the branch of philosophy that investigates the natu..."
+    },
+    {
+      "node_id": "clinical_trials_concept",
+      "label": "Clinical Trials",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Clinical trials are rigorously controlled scientific studies that evaluate the s...",
+      "new_desc_preview": "Clinical trials are rigorously controlled scientific studies that evaluate the s..."
+    },
+    {
+      "node_id": "urbanization_concept",
+      "label": "Urbanization",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Urbanization is the process by which populations migrate from rural areas to cit...",
+      "new_desc_preview": "Urbanization is the process by which populations migrate from rural areas to cit..."
+    },
+    {
+      "node_id": "aesthetics_concept",
+      "label": "Aesthetics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Aesthetics is the philosophical study of beauty, taste, art, and sensory experie...",
+      "new_desc_preview": "Aesthetics is the branch of philosophy concerned with the nature of beauty, arti..."
+    },
+    {
+      "node_id": "public_history_concept",
+      "label": "Public History",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Public history is a field of professional and scholarly practice that applies hi...",
+      "new_desc_preview": "Public history is a field of professional and scholarly practice that applies hi..."
+    },
+    {
+      "node_id": "phonology_concept",
+      "label": "Phonology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Phonology is the branch of linguistics that investigates the systematic organiza...",
+      "new_desc_preview": "Phonology is the branch of linguistics that investigates the systematic organiza..."
+    },
+    {
+      "node_id": "behavioral_ecology_concept",
+      "label": "Behavioral Ecology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Behavioral ecology is a scientific discipline that investigates how natural sele...",
+      "new_desc_preview": "Behavioral ecology is a scientific discipline that investigates how natural sele..."
+    },
+    {
+      "node_id": "max_weber_person",
+      "label": "Max Weber",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 21,
+      "score_delta": 0,
+      "old_desc_preview": "Max Weber is the sociologist who developed foundational concepts: ideal types (a...",
+      "new_desc_preview": "Max Weber (1864–1920) was a German sociologist, political economist, and philoso..."
+    },
+    {
+      "node_id": "hippocrates_person",
+      "label": "Hippocrates",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 21,
+      "score_delta": 0,
+      "old_desc_preview": "Hippocrates is the ancient Greek physician regarded as the father of Western med...",
+      "new_desc_preview": "Hippocrates of Cos (c. 460–370 BCE) is the ancient Greek physician universally r..."
+    },
+    {
+      "node_id": "microhistory_concept",
+      "label": "Microhistory",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Microhistory is a historical methodology that focuses intense analytical scrutin...",
+      "new_desc_preview": "Microhistory is a historical methodology that focuses intense analytical scrutin..."
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Antimicrobial resistance (AMR) is the biological phenomenon by which microorgani...",
+      "new_desc_preview": "Antimicrobial resistance (AMR) is the biological phenomenon by which microorgani..."
+    },
+    {
+      "node_id": "ancient_medicine_concept",
+      "label": "Ancient and Traditional Medicine",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Ancient and Traditional Medicine refers to the diverse body of medical knowledge...",
+      "new_desc_preview": "Ancient and Traditional Medicine refers to the diverse body of medical knowledge..."
+    },
+    {
+      "node_id": "world_war_one_concept",
+      "label": "World War One",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "World War One (1914–1918) is a global armed conflict that began with the assassi...",
+      "new_desc_preview": "World War One (1914–1918) is a global armed conflict that began with the assassi..."
+    },
+    {
+      "node_id": "psychology_field",
+      "label": "Psychology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Psychology studies human thought, emotion, perception, and behavior through scie...",
+      "new_desc_preview": "Psychology is the scientific study of mind and behavior, encompassing the full r..."
+    },
+    {
+      "node_id": "signal_processing_concept",
+      "label": "Signal Processing",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Signal processing is the mathematical manipulation of signals — any quantity var...",
+      "new_desc_preview": "Signal processing is the mathematical analysis, manipulation, and transformation..."
+    },
+    {
+      "node_id": "color_theory_concept",
+      "label": "Color Theory",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Color theory is the body of principles governing how colors mix, contrast, and i...",
+      "new_desc_preview": "Color theory is the systematic body of principles governing how colors are perce..."
+    },
+    {
+      "node_id": "architectural_design_concept",
+      "label": "Architectural Design",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Architectural design is the art and engineering of shaping built environments th...",
+      "new_desc_preview": "Architectural design is the disciplined process of conceiving, planning, and rea..."
+    },
+    {
+      "node_id": "topology_concept",
+      "label": "Topology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Topology studies the properties of spaces that remain unchanged under continuous...",
+      "new_desc_preview": "Topology is a branch of mathematics that studies the properties of spaces preser..."
+    },
+    {
+      "node_id": "acid_base_chemistry_concept",
+      "label": "Acid-Base Chemistry",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Acid-base chemistry studies proton transfer reactions (Bronsted-Lowry) and elect...",
+      "new_desc_preview": "Acid-base chemistry is the branch of chemistry that systematically studies proto..."
+    },
+    {
+      "node_id": "museum_studies_concept",
+      "label": "Museum Studies",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Museum studies examines how museums collect, preserve, interpret, and display cu...",
+      "new_desc_preview": "Museum studies is an interdisciplinary academic field that examines the theory, ..."
+    },
+    {
+      "node_id": "art_history_methodology_concept",
+      "label": "Art History Methodology",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Art history methodology encompasses approaches to analyzing visual culture: form...",
+      "new_desc_preview": "Art history methodology refers to the systematic frameworks and analytical appro..."
+    },
+    {
+      "node_id": "tragedy_concept",
+      "label": "Tragedy",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "A dramatic form originating in ancient Athens where a noble protagonist is destr...",
+      "new_desc_preview": "Tragedy is a dramatic literary form originating in ancient Athens during the fif..."
+    },
+    {
+      "node_id": "informed_consent_concept",
+      "label": "Informed Consent",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "The ethical and legal principle that patients must understand and voluntarily ag...",
+      "new_desc_preview": "Informed consent is the ethical and legal principle requiring that individuals v..."
+    },
+    {
+      "node_id": "chaos_theory_concept",
+      "label": "Chaos Theory",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "The study of deterministic systems that are inherently unpredictable because tin...",
+      "new_desc_preview": "Chaos theory is the mathematical and scientific study of deterministic dynamical..."
+    },
+    {
+      "node_id": "econophysics_concept",
+      "label": "Econophysics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Econophysics is an interdisciplinary research field that applies the theoretical...",
+      "new_desc_preview": "Econophysics is an interdisciplinary research field that applies the theoretical..."
+    },
+    {
+      "node_id": "sculpture_concept",
+      "label": "Sculpture",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Sculpture is a visual art form concerned with the creation of three-dimensional ...",
+      "new_desc_preview": "Sculpture is a three-dimensional visual art form concerned with the creation of ..."
+    },
+    {
+      "node_id": "orchestration_concept",
+      "label": "Orchestration",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "Orchestration is the craft and theory of combining, balancing, and deploying the...",
+      "new_desc_preview": "Orchestration is the craft and theoretical discipline of combining, balancing, a..."
+    },
+    {
+      "node_id": "analytical_method_concept",
+      "label": "Analytical Chemistry Methods",
+      "status": "skipped",
+      "reason": "Score declined (-1 points): requires analysis and possible revert"
+    },
+    {
+      "node_id": "geriatrics_concept",
+      "label": "Geriatric Medicine",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "The medical specialty focused on health care of elderly people — managing multim...",
+      "new_desc_preview": "Geriatric medicine is the medical specialty dedicated to the comprehensive healt..."
+    },
+    {
+      "node_id": "pediatrics_concept",
+      "label": "Pediatrics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 22,
+      "score_delta": 1,
+      "old_desc_preview": "The medical specialty caring for infants, children, and adolescents — recognizin...",
+      "new_desc_preview": "Pediatrics is the branch of medicine dedicated to the physical, cognitive, emoti..."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-05-25T13:42:04.166767+00:00",
+  "overall": "pass",
+  "failing_checks": [],
+  "checks": {
+    "validate_nodes": {
+      "status": "pass",
+      "with_errors": 0,
+      "duplicates": 0,
+      "total": 627,
+      "clean": 627
+    },
+    "quality": {
+      "status": "pass",
+      "avg_total_score": 23.676,
+      "min_avg_score": 20.0,
+      "grade_distribution": {
+        "A": 606,
+        "B": 21,
+        "C": 0,
+        "D": 0,
+        "F": 0
+      },
+      "df_nodes": 0,
+      "max_df_nodes": 0,
+      "count": 627
+    },
+    "i18n": {
+      "status": "pass",
+      "labels_keyset_aligned": true,
+      "baseline_description_keys": 627,
+      "raw_description_counts": {
+        "en": 0,
+        "zh": 627,
+        "ja": 627
+      },
+      "effective_description_counts": {
+        "en": 627,
+        "zh": 627,
+        "ja": 627
+      },
+      "raw_description_coverage_pct": {
+        "en": 0.0,
+        "zh": 100.0,
+        "ja": 100.0
+      },
+      "effective_description_coverage_pct": {
+        "en": 100.0,
+        "zh": 100.0,
+        "ja": 100.0
+      },
+      "raw_coverage_thresholds_pct": {
+        "en": 0.0,
+        "zh": 95.0,
+        "ja": 60.0
+      }
+    },
+    "tests": {
+      "status": "pass",
+      "returncode": 0,
+      "stdout_tail": "...........................................................              [100%]\n59 passed in 9.92s\n",
+      "stderr_tail": ""
+    },
+    "benchmark": {
+      "status": "skipped",
+      "reason": "benchmark-current not set"
+    }
+  }
+}

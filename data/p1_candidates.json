@@ -1,0 +1,3172 @@
+{
+  "timestamp": "2026-05-25T07:05:18.045289+00:00",
+  "label": "P1",
+  "threshold_min_total_score": 18,
+  "threshold_max_total_score": 19,
+  "threshold_max_description_score": null,
+  "required_diagnostics": [
+    "WHAT",
+    "SIGNIFICANCE"
+  ],
+  "total_count": 156,
+  "candidates": [
+    {
+      "node_id": "stochastic_processes_concept",
+      "label": "Stochastic Processes",
+      "domain": [
+        "MAT",
+        "PHY",
+        "BIO",
+        "SOC",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Stochastic processes model systems evolving randomly over time, providing the mathematical framework...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "conservation_principles_concept",
+      "label": "Conservation Principles",
+      "domain": [
+        "PHY",
+        "CHE",
+        "MAT",
+        "ENG",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Conservation principles state that certain quantities remain constant through change: energy, moment...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "genetic_regulation_concept",
+      "label": "Gene Regulation",
+      "domain": [
+        "BIO",
+        "CHE",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Gene regulation controls when, where, and how much protein each gene produces. Transcription factors...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "thought_experiments_concept",
+      "label": "Thought Experiments",
+      "domain": [
+        "PHI",
+        "PHY",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Thought experiments use imagined scenarios to test intuitions, explore consequences of principles, a...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "oscillations_and_waves_concept",
+      "label": "Oscillations and Waves",
+      "domain": [
+        "PHY",
+        "MAT",
+        "ENG",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Oscillations and waves describe repetitive motion and its spatial propagation, governed by restoring...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "quantum_computing_concept",
+      "label": "Quantum Computing",
+      "domain": [
+        "TEC",
+        "PHY",
+        "MAT",
+        "CHE"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 4,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Quantum computing exploits superposition, entanglement, and interference to solve problems intractab...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "visualization_concept",
+      "label": "Visualization",
+      "domain": [
+        "ART",
+        "TEC",
+        "MAT",
+        "MED",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Visualization transforms abstract data and relationships into visual representations that exploit hu...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "biomedical_imaging_concept",
+      "label": "Biomedical Imaging",
+      "domain": [
+        "MED",
+        "PHY",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Biomedical imaging visualizes internal body structures and functions non-invasively using physical p...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "renewable_energy_concept",
+      "label": "Renewable Energy",
+      "domain": [
+        "ENG",
+        "PHY",
+        "CHE",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Renewable energy harnesses naturally replenishing sources—solar, wind, hydroelectric, geothermal, an...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "behavioral_economics_concept",
+      "label": "Behavioral Economics",
+      "domain": [
+        "SOC",
+        "PHI",
+        "BIO",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Behavioral economics integrates psychological insights about human judgment into economic models, re...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "rehabilitation_concept",
+      "label": "Rehabilitation Medicine",
+      "domain": [
+        "MED",
+        "BIO",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Rehabilitation medicine restores function after injury, illness, or surgery through structured exerc...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "mechatronics_concept",
+      "label": "Mechatronics",
+      "domain": [
+        "ENG",
+        "TEC",
+        "PHY",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Mechatronics integrates mechanical engineering, electronics, computer science, and control theory to...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "world_systems_theory_concept",
+      "label": "World-Systems Theory",
+      "domain": [
+        "HIS",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "World-systems theory (Wallerstein) analyzes global history as a single capitalist world-economy divi...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "neurodegenerative_disease_concept",
+      "label": "Neurodegenerative Disease",
+      "domain": [
+        "MED",
+        "BIO",
+        "CHE"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Neurodegenerative diseases (Alzheimer's, Parkinson's, ALS) involve progressive loss of neurons throu...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "aerospace_engineering_concept",
+      "label": "Aerospace Engineering",
+      "domain": [
+        "ENG",
+        "PHY",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Aerospace engineering designs aircraft and spacecraft through integration of aerodynamics, propulsio...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "counterpoint_concept",
+      "label": "Counterpoint",
+      "domain": [
+        "ART",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A compositional technique where two or more independent melodic lines sound simultaneously, followin...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "sublime_concept",
+      "label": "The Sublime",
+      "domain": [
+        "PHI",
+        "ART"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "An aesthetic experience of overwhelming vastness or power that transcends ordinary beauty — the feel...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "laser_concept",
+      "label": "Laser",
+      "domain": [
+        "PHY",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "A device producing coherent, monochromatic light through stimulated emission of radiation — a quantu...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "computational_linguistics_concept",
+      "label": "Computational Linguistics",
+      "domain": [
+        "TEC",
+        "HUM",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The scientific study of language from a computational perspective, developing formal models of gramm...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "domain": [
+        "MED",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The evolutionary process by which bacteria, viruses, and parasites develop resistance to drugs desig...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "polymer_science_concept",
+      "label": "Polymer Science",
+      "domain": [
+        "CHE",
+        "ENG",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of macromolecules built from repeating monomer units — from synthetic plastics and rubber ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "impressionism_concept",
+      "label": "Impressionism",
+      "domain": [
+        "ART",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A painting movement (1860s-1880s) capturing fleeting effects of light and atmosphere through visible...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "baroque_art_concept",
+      "label": "Baroque Art and Architecture",
+      "domain": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A grandly theatrical style (c.1600-1750) characterized by dramatic lighting, rich color, dynamic mov...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "surrealism_concept",
+      "label": "Surrealism",
+      "domain": [
+        "ART",
+        "PHI",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "An art movement (1920s-1960s) that sought to unleash the creative potential of the unconscious mind ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "opera_concept",
+      "label": "Opera",
+      "domain": [
+        "ART",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A total art form (Gesamtkunstwerk) combining music, drama, poetry, visual spectacle, and dance into ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "jazz_concept",
+      "label": "Jazz",
+      "domain": [
+        "ART",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A music tradition originating in African-American communities (c.1900) characterized by swing, blue ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "medical_ethics_concept",
+      "label": "Medical Ethics",
+      "domain": [
+        "MED",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The moral principles governing medical practice — from the Hippocratic oath's 'do no harm' through i...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "gothic_architecture_concept",
+      "label": "Gothic Architecture",
+      "domain": [
+        "ART",
+        "ENG",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "The architectural style (c.1140-1500) defined by pointed arches, ribbed vaults, flying buttresses, a...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "expressionism_concept",
+      "label": "Expressionism",
+      "domain": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "An art movement (c.1905-1930) prioritizing emotional truth over visual accuracy — distorting color, ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "art_education_concept",
+      "label": "Art Education",
+      "domain": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The theory and practice of teaching visual arts, music, drama, and creative expression — from appren...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "arts_field",
+      "label": "Arts",
+      "domain": [
+        "ART"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The arts encompass human creative expression through visual, auditory, and performative forms includ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "statistics_field",
+      "label": "Statistics",
+      "domain": [
+        "MAT",
+        "SOC"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Statistics develops methods for collecting, analyzing, and interpreting data under uncertainty. It i...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "linearity_and_nonlinearity_concept",
+      "label": "Linearity and Nonlinearity",
+      "domain": [
+        "MAT",
+        "PHY",
+        "ENG",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Linearity means that outputs scale proportionally with inputs and effects superpose; nonlinearity me...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "cognitive_modeling_concept",
+      "label": "Cognitive Modeling",
+      "domain": [
+        "SOC",
+        "TEC",
+        "PHI",
+        "BIO",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Cognitive modeling creates computational representations of human mental processes including percept...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "sound_design_concept",
+      "label": "Sound Design",
+      "domain": [
+        "ART",
+        "PHY",
+        "TEC",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Sound design creates and manipulates audio for film, games, theater, and installations. It combines ...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "epidemiological_modeling_concept",
+      "label": "Epidemiological Modeling",
+      "domain": [
+        "MED",
+        "MAT",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Epidemiological modeling uses mathematical frameworks (SIR/SEIR compartmental models, agent-based si...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "apollo_program_event",
+      "label": "Apollo Program",
+      "domain": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "NASA's lunar exploration program (1961–1972) culminating in humans walking on the Moon — the largest...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "invention_of_calculus_event",
+      "label": "Invention of Calculus",
+      "domain": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Independently developed by Newton and Leibniz in the 1660s–1680s, calculus provided mathematics with...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "iconography_concept",
+      "label": "Iconography",
+      "domain": [
+        "ART",
+        "HUM",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of visual imagery and symbolism in art — decoding what specific objects, gestures, and com...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "oral_poetry_concept",
+      "label": "Oral Poetry",
+      "domain": [
+        "HUM",
+        "ART",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Poetry composed and transmitted without writing, using formulaic phrases, meter, and repetition as m...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "philology_concept",
+      "label": "Philology",
+      "domain": [
+        "HUM",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of language in historical texts — reconstructing lost languages, dating manuscripts, and t...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "patronage_concept",
+      "label": "Patronage",
+      "domain": [
+        "ART",
+        "SOC",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A system where wealthy individuals or institutions fund artists, scholars, and scientists in exchang...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "mimesis_concept",
+      "label": "Mimesis",
+      "domain": [
+        "PHI",
+        "ART",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The concept of artistic imitation or representation of reality, central to Western aesthetics since ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "bioethics_concept",
+      "label": "Bioethics",
+      "domain": [
+        "PHI",
+        "MED",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A field applying ethical reasoning to biological and medical dilemmas — from euthanasia and genetic ...",
+      "connection_count": 8
+    },
+    {
+      "node_id": "science_communication_concept",
+      "label": "Science Communication",
+      "domain": [
+        "SOC",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The practice and study of communicating scientific knowledge to non-specialist audiences through jou...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "neuroaesthetics_concept",
+      "label": "Neuroaesthetics",
+      "domain": [
+        "ART",
+        "BIO",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The scientific study of how the brain processes beauty, art, and aesthetic experience, using neuroim...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "cognitive_architecture_concept",
+      "label": "Cognitive Architecture",
+      "domain": [
+        "TEC",
+        "BIO",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Computational frameworks modeling the fixed structures and processes of human cognition — how memory...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "synthetic_biology_concept",
+      "label": "Synthetic Biology",
+      "domain": [
+        "ENG",
+        "BIO",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The engineering discipline that applies design principles (standardization, abstraction, modularity)...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "epigenetics_concept",
+      "label": "Epigenetics",
+      "domain": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of heritable changes in gene expression that occur without alterations to the DNA sequence...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "big_history_concept",
+      "label": "Big History",
+      "domain": [
+        "HIS",
+        "PHY",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A scholarly framework narrating history from the Big Bang through star formation, life's origin, hum...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "food_chemistry_concept",
+      "label": "Food Chemistry",
+      "domain": [
+        "CHE",
+        "BIO",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of chemical processes and interactions of all biological and non-biological components of ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "romanticism_concept",
+      "label": "Romanticism",
+      "domain": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A cultural and intellectual movement (c.1790-1850) emphasizing emotion, individualism, nature, and t...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "film_language_concept",
+      "label": "Film Language and Montage",
+      "domain": [
+        "ART",
+        "TEC",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The grammar of cinema — how editing (montage), camera movement, framing, and sound design create mea...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "postmodernism_art_concept",
+      "label": "Postmodern Art",
+      "domain": [
+        "ART",
+        "PHI",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Art practices (c.1960s-present) rejecting modernist claims to universal truth, originality, and prog...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "comparative_religion_concept",
+      "label": "Comparative Religion",
+      "domain": [
+        "HUM",
+        "HIS",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The academic study of religions through cross-cultural comparison — examining shared structures (rit...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "antibiotic_resistance_concept",
+      "label": "Antibiotic Resistance",
+      "domain": [
+        "MED",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The evolution of bacteria to survive antibiotic treatment — through mutation and horizontal gene tra...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "orchestration_concept",
+      "label": "Orchestration",
+      "domain": [
+        "ART",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The art of combining instrumental timbres in an orchestra to create sonic textures, colors, and spat...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "literary_criticism_concept",
+      "label": "Literary Criticism and Theory",
+      "domain": [
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The systematic interpretation and evaluation of literature — from Aristotle's Poetics through New Cr...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "landscape_painting_concept",
+      "label": "Landscape Art",
+      "domain": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The depiction of natural scenery as a primary subject — evolving from background detail in religious...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "ottoman_empire_concept",
+      "label": "Ottoman Empire",
+      "domain": [
+        "HIS",
+        "SOC",
+        "ART"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A multiethnic Islamic empire (c.1299-1922) spanning Southeast Europe, Western Asia, and North Africa...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "pathology_concept",
+      "label": "Pathology",
+      "domain": [
+        "MED",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The medical science of disease mechanisms — studying how normal cellular and tissue function becomes...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "pain_science_concept",
+      "label": "Pain Science",
+      "domain": [
+        "MED",
+        "BIO",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of pain as a complex neurobiological, psychological, and social phenomenon — from gate con...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "bioarchaeology_concept",
+      "label": "Bioarchaeology",
+      "domain": [
+        "HIS",
+        "BIO",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of human skeletal remains from archaeological contexts to reconstruct past health, diet, m...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "philosophy_of_art_concept",
+      "label": "Philosophy of Art",
+      "domain": [
+        "PHI",
+        "ART",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The philosophical investigation of what art is, what makes it valuable, and how it relates to truth,...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "animation_art_concept",
+      "label": "Animation",
+      "domain": [
+        "ART",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The art of creating the illusion of movement from static images — from Émile Reynaud's praxinoscope ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "game_art_concept",
+      "label": "Video Game Art and Design",
+      "domain": [
+        "ART",
+        "TEC",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The artistic dimension of video games — combining visual design, sound, narrative, interaction desig...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "emergency_medicine_concept",
+      "label": "Emergency Medicine",
+      "domain": [
+        "MED",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The medical specialty of acute illness and injury — managing life-threatening conditions (cardiac ar...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "chemical_safety_concept",
+      "label": "Chemical Safety and Regulation",
+      "domain": [
+        "CHE",
+        "SOC",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The systems for assessing and managing chemical hazards — from Material Safety Data Sheets to REACH ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "humanities_field",
+      "label": "Humanities",
+      "domain": [
+        "HUM"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The humanities study human culture, expression, and meaning through language, literature, philosophy...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "greek_golden_age_event",
+      "label": "Greek Golden Age",
+      "domain": [
+        "PHI",
+        "MAT",
+        "HIS",
+        "ART"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A period of extraordinary intellectual flourishing in Athens and the Greek world (roughly 500–300 BC...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "renaissance_event",
+      "label": "Renaissance",
+      "domain": [
+        "ART",
+        "HUM",
+        "PHI",
+        "HIS"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A cultural and intellectual movement originating in Italy (roughly 1400–1600) that revived classical...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "copernican_revolution_event",
+      "label": "Copernican Revolution",
+      "domain": [
+        "PHY",
+        "PHI",
+        "HIS"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Copernicus proposed in 1543 that Earth orbits the Sun, overturning 1,400 years of Ptolemaic geocentr...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "cliometrics_concept",
+      "label": "Cliometrics",
+      "domain": [
+        "HIS",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The application of economic theory and statistical methods to historical data, treating the past as ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "dark_matter_concept",
+      "label": "Dark Matter",
+      "domain": [
+        "PHY",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "An invisible substance comprising roughly 27% of the universe's total mass-energy, detected only thr...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "radioactivity_concept",
+      "label": "Radioactivity",
+      "domain": [
+        "PHY",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The spontaneous emission of particles or energy from unstable atomic nuclei, discovered by Becquerel...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "acid_base_theory_concept",
+      "label": "Acid-Base Theory",
+      "domain": [
+        "CHE",
+        "BIO",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Theoretical frameworks explaining proton transfer (Brønsted-Lowry, 1923) and electron pair donation ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "forensic_science_concept",
+      "label": "Forensic Science",
+      "domain": [
+        "CHE",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The application of scientific methods to legal questions — using DNA analysis, toxicology, ballistic...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "archaeometry_concept",
+      "label": "Archaeometry",
+      "domain": [
+        "HIS",
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The application of physical and chemical analytical techniques to archaeological materials — radioca...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "crispr_concept",
+      "label": "CRISPR Gene Editing",
+      "domain": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A revolutionary gene-editing technology adapted from bacterial immune systems that allows precise cu...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "proteomics_concept",
+      "label": "Proteomics",
+      "domain": [
+        "BIO",
+        "CHE",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The large-scale study of all proteins expressed by an organism, tissue, or cell at a given time — th...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "political_polarization_concept",
+      "label": "Political Polarization",
+      "domain": [
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The increasing ideological distance between political groups, where moderates disappear and opposing...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "dance_notation_concept",
+      "label": "Dance Notation",
+      "domain": [
+        "ART",
+        "MAT",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Systems for recording human movement in written symbols — primarily Labanotation (1928) and Benesh n...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "atmospheric_chemistry_concept",
+      "label": "Atmospheric Chemistry",
+      "domain": [
+        "CHE",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The study of chemical reactions occurring in Earth's atmosphere, from ozone formation and depletion ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "nuclear_chemistry_applications_concept",
+      "label": "Nuclear Chemistry Applications",
+      "domain": [
+        "CHE",
+        "PHY",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Nuclear chemistry applications constitute the practical use of nuclear reactions and radioactive iso...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "calligraphy_concept",
+      "label": "Calligraphy",
+      "domain": [
+        "ART",
+        "HUM",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The art of beautiful writing, elevated in East Asian, Islamic, and Western traditions to the status ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "atlantic_slave_trade_concept",
+      "label": "The Atlantic Slave Trade",
+      "domain": [
+        "HIS",
+        "SOC",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 18
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The forced transport of approximately 12.5 million enslaved Africans to the Americas (1501-1867), th...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "signal_and_noise_concept",
+      "label": "Signal and Noise",
+      "domain": [
+        "TEC",
+        "PHY",
+        "MAT",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The signal-to-noise ratio quantifies how much meaningful information can be extracted from corrupted...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "cybersecurity_concept",
+      "label": "Cybersecurity",
+      "domain": [
+        "TEC",
+        "MAT",
+        "SOC",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Cybersecurity protects digital systems, networks, and data from unauthorized access, theft, and disr...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "counterfactual_history_concept",
+      "label": "Counterfactual History",
+      "domain": [
+        "HIS",
+        "PHI",
+        "SOC",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Counterfactual history rigorously asks 'what if?' to test causal claims about the past: Would indust...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "structural_engineering_concept",
+      "label": "Structural Engineering",
+      "domain": [
+        "ENG",
+        "PHY",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Structural engineering ensures that built structures (buildings, bridges, dams) safely resist loads ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "history_of_medicine_concept",
+      "label": "History of Medicine",
+      "domain": [
+        "HIS",
+        "MED",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "History of medicine traces how societies have understood health, disease, and healing—from Hippocrat...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "landscape_architecture_concept",
+      "label": "Landscape Architecture",
+      "domain": [
+        "ART",
+        "ENG",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Landscape architecture designs outdoor spaces—parks, gardens, campuses, urban corridors, ecological ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "constraint_satisfaction_concept",
+      "label": "Constraint Satisfaction",
+      "domain": [
+        "MAT",
+        "TEC",
+        "ENG",
+        "PHY",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Constraint satisfaction involves finding states that simultaneously meet multiple requirements withi...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "robotics_concept",
+      "label": "Robotics",
+      "domain": [
+        "ENG",
+        "TEC",
+        "MAT",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Robotics integrates mechanical design, sensor systems, control algorithms, and artificial intelligen...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "media_theory_concept",
+      "label": "Media Theory",
+      "domain": [
+        "HUM",
+        "SOC",
+        "TEC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Media theory analyzes how communication technologies shape human perception, social organization, an...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "statistical_mechanics_concept",
+      "label": "Statistical Mechanics",
+      "domain": [
+        "PHY",
+        "MAT",
+        "CHE",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Statistical mechanics bridges microscopic particle dynamics and macroscopic thermodynamic properties...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "green_chemistry_concept",
+      "label": "Green Chemistry",
+      "domain": [
+        "CHE",
+        "ENG",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Green chemistry redesigns chemical products and processes to minimize hazardous substances, waste, a...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "chemical_engineering_concept",
+      "label": "Chemical Engineering",
+      "domain": [
+        "ENG",
+        "CHE",
+        "PHY",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Chemical engineering scales laboratory reactions to industrial production through transport phenomen...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "autonomous_systems_concept",
+      "label": "Autonomous Systems",
+      "domain": [
+        "TEC",
+        "ENG",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Autonomous systems operate independently in complex environments, making decisions without continuou...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "biomedical_engineering_concept",
+      "label": "Biomedical Engineering",
+      "domain": [
+        "ENG",
+        "MED",
+        "BIO",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Biomedical engineering applies engineering principles to biology and medicine, developing technologi...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "digital_art_concept",
+      "label": "Digital Art",
+      "domain": [
+        "ART",
+        "TEC",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Digital art creates aesthetic works using computational tools—algorithmic generation, interactive in...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "architectural_theory_concept",
+      "label": "Architectural Theory",
+      "domain": [
+        "ART",
+        "PHI",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Architectural theory provides conceptual frameworks for understanding buildings as cultural artifact...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "photovoltaics_concept",
+      "label": "Photovoltaics",
+      "domain": [
+        "PHY",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Photovoltaics converts light directly to electricity via the photovoltaic effect in semiconductor ma...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "power_systems_concept",
+      "label": "Power Systems Engineering",
+      "domain": [
+        "ENG",
+        "PHY",
+        "TEC",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Power systems engineering designs and operates electrical grids that generate, transmit, and distrib...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "decision_theory_concept",
+      "label": "Decision Theory",
+      "domain": [
+        "PHI",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Decision theory provides formal frameworks for rational choice under uncertainty. Expected utility t...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "nanotechnology_concept",
+      "label": "Nanotechnology",
+      "domain": [
+        "CHE",
+        "PHY",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Nanotechnology manipulates matter at 1-100 nanometer scale where quantum effects and surface-to-volu...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "environmental_engineering_concept",
+      "label": "Environmental Engineering",
+      "domain": [
+        "ENG",
+        "CHE",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Environmental engineering applies science and engineering to protect and restore environmental quali...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "biomechanics_concept",
+      "label": "Biomechanics",
+      "domain": [
+        "ENG",
+        "BIO",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Biomechanics applies mechanical principles to biological systems: how bones bear loads, muscles gene...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "information_theory_founding_event",
+      "label": "Founding of Information Theory",
+      "domain": [
+        "MAT",
+        "TEC",
+        "ENG"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Claude Shannon's 1948 paper, A Mathematical Theory of Communication, defined information in probabil...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "antisepsis_concept",
+      "label": "Antisepsis",
+      "domain": [
+        "MED",
+        "CHE"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The practice of using chemical agents to kill bacteria on wounds and surgical instruments, introduce...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "game_theory_applications_concept",
+      "label": "Game Theory Applications",
+      "domain": [
+        "MAT",
+        "SOC",
+        "BIO",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The application of strategic decision mathematics to contexts far beyond economics — including evolu...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "digital_sociology_concept",
+      "label": "Digital Sociology",
+      "domain": [
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of how digital technologies and platforms reshape social life — from identity formation on...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "printmaking_history_concept",
+      "label": "Printmaking and Reproduction",
+      "domain": [
+        "ART",
+        "TEC",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The techniques of creating images from matrices (woodblock, engraving, etching, lithography, screenp...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "art_nouveau_concept",
+      "label": "Art Nouveau",
+      "domain": [
+        "ART",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A decorative art movement (c.1890-1910) characterized by sinuous organic lines, floral motifs, and t...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "ceramics_art_concept",
+      "label": "Ceramics and Pottery",
+      "domain": [
+        "ART",
+        "CHE",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The art and science of shaping and firing clay into permanent objects — from Neolithic storage vesse...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "novel_form_concept",
+      "label": "The Novel",
+      "domain": [
+        "HUM",
+        "ART",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A long-form prose narrative that became the dominant literary form of modernity, uniquely capable of...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "silk_road_concept",
+      "label": "The Silk Road",
+      "domain": [
+        "HIS",
+        "SOC",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The network of trade routes connecting China to the Mediterranean (c.130 BCE - 1450 CE), transmittin...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "mythology_concept",
+      "label": "Mythology and Mythic Thinking",
+      "domain": [
+        "HUM",
+        "ART",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Sacred narratives that cultures create to explain origins, natural phenomena, moral order, and the h...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "empire_concept",
+      "label": "Empire and Imperial Systems",
+      "domain": [
+        "HIS",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Large-scale political entities that rule diverse peoples under centralized authority — from Persia, ...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "ancient_rome_concept",
+      "label": "Roman Civilization",
+      "domain": [
+        "HIS",
+        "ENG",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The civilization spanning Republic (509 BCE) through Empire (27 BCE - 476 CE) that created enduring ...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "psychiatry_concept",
+      "label": "Psychiatry and Mental Health",
+      "domain": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The medical specialty treating mental disorders through biological (pharmacology, neurostimulation) ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "indigenous_knowledge_concept",
+      "label": "Indigenous Knowledge Systems",
+      "domain": [
+        "HUM",
+        "HIS",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Bodies of knowledge developed by indigenous peoples over millennia through sustained observation of ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "typography_history_concept",
+      "label": "Typography",
+      "domain": [
+        "ART",
+        "TEC",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The art and technology of arranging type to make written language legible, readable, and aesthetical...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "meiji_restoration_concept",
+      "label": "Meiji Restoration",
+      "domain": [
+        "HIS",
+        "TEC",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Japan's rapid transformation (1868-1912) from feudal shogunate to industrial nation-state, deliberat...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "mosaic_art_concept",
+      "label": "Mosaic Art",
+      "domain": [
+        "ART",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The art of creating images from small pieces of stone, glass, or ceramic (tesserae) arranged in patt...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "museum_theory_concept",
+      "label": "Museum Theory and Practice",
+      "domain": [
+        "HUM",
+        "ART",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The theory and practice of collecting, preserving, interpreting, and displaying objects for public b...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "language_endangerment_concept",
+      "label": "Language Endangerment",
+      "domain": [
+        "HUM",
+        "SOC",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The accelerating loss of linguistic diversity — approximately half of the world's 7,000 languages ma...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "food_culture_concept",
+      "label": "Food Culture and Gastronomy",
+      "domain": [
+        "HUM",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of food as cultural practice — how cuisines encode history, identity, class, gender, and e...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "byzantine_empire_concept",
+      "label": "Byzantine Empire",
+      "domain": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The eastern continuation of the Roman Empire (330–1453 CE) — preserving Greco-Roman knowledge, devel...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "electromagnetic_radiation_concept",
+      "label": "Electromagnetic Radiation",
+      "domain": [
+        "PHY",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Electromagnetic radiation encompasses all waves of oscillating electric and magnetic fields travelin...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "information_asymmetry_concept",
+      "label": "Information Asymmetry",
+      "domain": [
+        "SOC",
+        "BIO",
+        "PHI",
+        "TEC",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Information asymmetry occurs when one party in an interaction possesses more relevant knowledge than...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "artificial_intelligence_concept",
+      "label": "Artificial Intelligence",
+      "domain": [
+        "TEC",
+        "PHI",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Artificial intelligence aims to create systems that perform tasks requiring human-like intelligence:...",
+      "connection_count": 7
+    },
+    {
+      "node_id": "germ_theory_acceptance_event",
+      "label": "Acceptance of Germ Theory",
+      "domain": [
+        "MED",
+        "BIO",
+        "CHE"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Through the work of Pasteur and Koch in the 1860s-1880s, medicine finally proved that specific micro...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "human_genome_project_event",
+      "label": "Human Genome Project",
+      "domain": [
+        "BIO",
+        "TEC",
+        "MED"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "An international effort (1990–2003) that sequenced all three billion base pairs of human DNA, provid...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "world_war_two_event",
+      "label": "World War II",
+      "domain": [
+        "HIS",
+        "TEC",
+        "SOC",
+        "PHI"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A global conflict (1939–1945) that killed over 70 million people and restructured the entire interna...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "chinese_invention_of_paper_event",
+      "label": "Chinese Invention of Paper and Printing",
+      "domain": [
+        "TEC",
+        "HUM",
+        "HIS"
+      ],
+      "type": "event",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Paper was invented in China around 105 CE by Cai Lun, and woodblock printing appeared by the 7th cen...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "chemical_thermodynamics_concept",
+      "label": "Chemical Thermodynamics",
+      "domain": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The application of thermodynamic laws to chemical reactions, predicting whether reactions will occur...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "mass_spectrometry_concept",
+      "label": "Mass Spectrometry",
+      "domain": [
+        "CHE",
+        "PHY",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "An analytical technique that ionizes molecules and separates them by mass-to-charge ratio, identifyi...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "mathematical_biology_concept",
+      "label": "Mathematical Biology",
+      "domain": [
+        "MAT",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The use of mathematical tools — differential equations, graph theory, stochastic processes — to mode...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "econophysics_concept",
+      "label": "Econophysics",
+      "domain": [
+        "PHY",
+        "SOC",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The application of statistical physics methods to economic and financial systems, treating markets a...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "perspective_drawing_concept",
+      "label": "Linear Perspective",
+      "domain": [
+        "ART",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A mathematical system for representing three-dimensional space on a flat surface using vanishing poi...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "postcolonial_literature_concept",
+      "label": "Postcolonial Literature",
+      "domain": [
+        "HUM",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Literature written by and about peoples formerly under colonial rule, exploring identity, displaceme...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "computational_chemistry_concept",
+      "label": "Computational Chemistry",
+      "domain": [
+        "CHE",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The use of computer simulation to solve chemical problems — predicting molecular properties, modelin...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "astrochemistry_concept",
+      "label": "Astrochemistry",
+      "domain": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The study of chemical reactions and molecules in space — from simple hydrogen in stellar atmospheres...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "materials_by_design_concept",
+      "label": "Materials by Design",
+      "domain": [
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A paradigm using computational prediction and machine learning to design materials with desired prop...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "medieval_period_concept",
+      "label": "Medieval Period",
+      "domain": [
+        "HIS",
+        "HUM",
+        "ART"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The millennium between the fall of Rome (476) and the Renaissance (c.1450), often mischaracterized a...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "ancient_china_concept",
+      "label": "Ancient Chinese Civilization",
+      "domain": [
+        "HIS",
+        "TEC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "One of the world's oldest continuous civilizations, producing foundational innovations: writing (ora...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "nutrition_science_concept",
+      "label": "Nutrition Science",
+      "domain": [
+        "MED",
+        "BIO",
+        "CHE"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The study of how nutrients (macronutrients, vitamins, minerals) interact with biological systems to ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "neuroimaging_concept",
+      "label": "Neuroimaging",
+      "domain": [
+        "MED",
+        "TEC",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Technologies for visualizing brain structure and function in living subjects — from CT and MRI (anat...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "cubism_concept",
+      "label": "Cubism",
+      "domain": [
+        "ART",
+        "PHI",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "A revolutionary art movement (1907-1920s) initiated by Picasso and Braque that shattered single-poin...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "world_literature_concept",
+      "label": "World Literature",
+      "domain": [
+        "HUM",
+        "HIS",
+        "ART"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The concept (Goethe's Weltliteratur, 1827) and practice of reading literature across national and li...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "age_of_revolutions_concept",
+      "label": "Age of Revolutions",
+      "domain": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The era (c.1775-1848) when interconnected revolutions (American, French, Haitian, Latin American, 18...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "history_of_mathematics_concept",
+      "label": "History of Mathematics",
+      "domain": [
+        "MAT",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The study of how mathematical ideas developed across civilizations — Babylonian astronomy, Egyptian ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "cultural_heritage_concept",
+      "label": "Cultural Heritage Preservation",
+      "domain": [
+        "HUM",
+        "TEC",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The interdisciplinary effort to identify, document, protect, and transmit tangible (monuments, artif...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "rhetoric_classical_concept",
+      "label": "Classical Rhetoric",
+      "domain": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The systematic art of persuasion developed by Greeks and Romans — Aristotle's three appeals (ethos, ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "telecommunications_engineering_concept",
+      "label": "Telecommunications Engineering",
+      "domain": [
+        "ENG",
+        "TEC",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The engineering of long-distance communication systems — from telegraph (1837) and telephone through...",
+      "connection_count": 4
+    }
+  ],
+  "diagnostics_distribution": {
+    "WHAT element weak or missing in opening": 156,
+    "SIGNIFICANCE could be stronger": 68,
+    "SIGNIFICANCE element weak or missing": 88,
+    "BRIDGE implied but no specific domain mentioned": 5,
+    "BRIDGE element missing — no cross-domain reference": 4
+  }
+}

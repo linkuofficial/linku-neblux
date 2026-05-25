@@ -1,0 +1,480 @@
+{
+  "timestamp": "2026-05-25T12:22:46.822331+00:00",
+  "batch": {
+    "number": 4,
+    "start": 60,
+    "end": 80,
+    "size": 20
+  },
+  "candidates_source": "p2_candidates.json",
+  "total_candidates": 158,
+  "batch_results": [
+    {
+      "node_id": "plague_history_concept",
+      "label": "Plague and Pandemic History",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Plague and pandemic history is the systematic study of epidemic and pandemic disease events across human civilizations, examining how infectious outbreaks originated, spread, and fundamentally altered societies, political structures, economies, and medical understanding. The field encompasses both the biological dimensions of pathogens — such as *Yersinia pestis* in bubonic plague or the influenza A subtypes behind the 1918 pandemic — and the human responses those pathogens provoked across time.\n\nThe historical record is anchored by several transformative episodes: the Antonine Plague (165–180 CE), which destabilized the Roman Empire during its peak; the Black Death (1347–1351), which killed an estimated one-third of Europe's population and dismantled feudal labor structures; the Columbian Exchange pandemics that decimated Indigenous American populations by up to 90 percent; the 1918 influenza pandemic, which killed more people than the First World War; and the ongoing HIV/AIDS crisis, which reshaped global public health infrastructure and civil rights discourse simultaneously.\n\nThe significance of this field extends well beyond medical history. Pandemics have repeatedly served as catalysts for institutional transformation — the Black Death accelerated the collapse of serfdom, contributed to the conditions enabling the Renaissance, and prompted early quarantine legislation in Italian city-states. The cholera epidemics of the nineteenth century drove the development",
+      "original_description": "How epidemic diseases shaped civilizations — the Antonine Plague (165 CE), Black Death (1347–1351, k..."
+    },
+    {
+      "node_id": "evolution_field",
+      "label": "Evolution",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Evolutionary biology is the scientific field that investigates how populations of living organisms change across generations through heritable variation, natural selection, genetic drift, mutation, and gene flow. At its core, evolution refers to descent with modification — the process by which all life on Earth shares common ancestry while diversifying into the remarkable variety of forms observed today. The field integrates evidence from genetics, paleontology, comparative anatomy, developmental biology, and ecology to reconstruct the history of life and explain the mechanisms driving biological change over time.\n\nThe significance of evolutionary biology extends far beyond explaining biodiversity. Darwin's foundational insight that species are not fixed but continuously shaped by selective pressures fundamentally reorganized humanity's understanding of life, displacing centuries of static, typological thinking. This paradigm shift ranks among the most consequential intellectual revolutions in scientific history, comparable in scope to the Copernican model in astronomy. The modern evolutionary synthesis — which united Mendelian genetics with Darwinian selection in the mid-twentieth century — provided biology with a unifying theoretical framework analogous to atomic theory in chemistry or quantum mechanics in physics. Without evolutionary thinking, biology would lack the organizing principle that connects its otherwise disparate subdisciplines.\n\nPractically, evolutionary biology underpins critical advances in medicine, agriculture, and conservation. Understanding pathogen evolution guides vaccine design and antibiotic stewardship, as resistance to treatments is itself an evolutionary process. Crop domestication",
+      "original_description": "Evolutionary biology studies how living organisms change across generations through mechanisms inclu..."
+    },
+    {
+      "node_id": "electromagnetism_field",
+      "label": "Electromagnetism",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 2
+      },
+      "enhanced_description": "Electromagnetism is one of the four fundamental forces of nature, describing the physical interactions that arise from electric charges and their motion, encompassing both electric fields — generated by stationary charges — and magnetic fields — generated by moving charges and changing electric fields. These two phenomena, once treated as distinct, were unified into a single coherent theoretical framework through James Clerk Maxwell's formulation of his equations in the 1860s, revealing that light itself is an electromagnetic wave propagating through space.\n\nThe significance of electromagnetism in the history of science and technology can scarcely be overstated. Maxwell's unification stands as one of the great intellectual achievements of the nineteenth century, providing the first successful synthesis of multiple physical phenomena into a single mathematical structure — a template that would inspire Einstein's relativity and the subsequent development of quantum field theory. At the practical level, electromagnetic principles underpin virtually all modern technology: electric motors and generators, radio and wireless communication, radar, lasers, and the entire infrastructure of electrical power distribution trace directly to this foundational theory.\n\nElectromagnetism also occupies a central position at the intersection of multiple disciplines. In physics, it served as the conceptual bridge leading to special relativity, since Maxwell's equations proved incompatible with classical Newtonian mechanics and demanded a revision of space and time. In chemistry and materials science, electromagnetic interactions govern atomic bonding, molecular structure, and the optical properties of materials.",
+      "original_description": "Electromagnetism studies electric and magnetic fields and their unification into a single force gove..."
+    },
+    {
+      "node_id": "economics_field",
+      "label": "Economics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Economics is the systematic study of how individuals, institutions, and societies make decisions about allocating scarce resources to satisfy competing needs and wants. At its core, the discipline examines the mechanisms through which goods and services are produced, distributed, and consumed, and how incentives shape human behavior at every level of analysis — from a single household's budget to the monetary policy of nation-states.\n\nThe significance of economics extends far beyond financial markets or policy debates. It provides a rigorous analytical framework for understanding some of the most consequential questions facing humanity: Why do some nations prosper while others stagnate? How do markets fail, and when should institutions intervene? What are the distributional consequences of technological change? By combining formal mathematical modeling with empirical observation, economics has fundamentally transformed how governments design public policy, how organizations allocate resources, and how societies evaluate trade-offs between competing values such as efficiency and equity. The development of concepts like comparative advantage, market equilibrium, and game theory has reshaped international trade, regulatory law, and strategic decision-making across virtually every sector of public and private life.\n\nEconomics is inherently interdisciplinary. Its mathematical foundations — including calculus, linear algebra, probability theory, and statistical inference — place it firmly within quantitative science, while its questions about human behavior, social institutions, and collective welfare position it at the center of the social sciences. Behavioral economics draws directly from cognitive psychology and neuroscience to",
+      "original_description": "Economics studies how individuals, institutions, and societies allocate scarce resources. Using math..."
+    },
+    {
+      "node_id": "philosophy_of_science_field",
+      "label": "Philosophy of Science",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Philosophy of science is the branch of philosophy that critically examines the foundations, methods, assumptions, and implications of scientific inquiry and knowledge. It addresses fundamental questions about what science is, how scientific knowledge is generated and validated, what constitutes a sound explanation, and what the relationship is between scientific theories and reality. Core concerns include the demarcation problem (distinguishing science from non-science), the logic of hypothesis testing and confirmation, the nature of scientific revolutions, and debates between realism and anti-realism about whether scientific theories describe the world as it truly is.\n\nThe significance of philosophy of science extends well beyond academic philosophy. By scrutinizing the epistemic standards that underpin scientific practice, it provides the conceptual tools necessary for evaluating claims across every empirical discipline—from physics and biology to psychology and economics. Landmark contributions by figures such as Karl Popper, Thomas Kuhn, Imre Lakatos, and Paul Feyerabend have fundamentally reshaped how scientists and scholars understand progress, paradigm shifts, and the limits of empirical method. Kuhn's concept of paradigm shifts, for instance, transformed not only the history of science but also fields as diverse as sociology, literary theory, and organizational management. Without rigorous philosophical analysis, sciences risk proceeding on unexamined assumptions about causation, measurement, objectivity, and evidence—errors with serious practical consequences in medicine, climate policy,",
+      "original_description": "Philosophy of science examines the foundations, methods, and implications of scientific knowledge. I..."
+    },
+    {
+      "node_id": "epistemology_field",
+      "label": "Epistemology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Epistemology is the branch of philosophy dedicated to investigating the nature, origins, scope, and limits of human knowledge. At its core, it addresses foundational questions: What constitutes genuine knowledge? How do we distinguish justified belief from mere opinion? What are the reliable sources of knowledge — reason, perception, testimony, or memory — and under what conditions do they succeed or fail? By systematically examining these questions, epistemology establishes the conceptual standards by which any claim to knowledge can be evaluated.\n\nThe significance of epistemology extends far beyond academic philosophy. It provides the critical infrastructure underlying every intellectual discipline, since any field that makes knowledge claims — whether scientific, historical, or ethical — implicitly depends on epistemological assumptions about evidence, justification, and truth. The scientific revolution, for instance, was as much an epistemological transformation as a technological one: it demanded new accounts of how observation and experiment generate reliable knowledge. Similarly, debates in artificial intelligence about machine learning and knowledge representation draw directly on epistemological frameworks, as do legal standards for admissible evidence and medical criteria for clinical certainty.\n\nHistorically, epistemology has shaped entire intellectual traditions. Descartes' methodological skepticism, Locke and Hume's empiricism, and Kant's synthesis of rationalism and empiricism each redirected philosophy and left lasting marks on psychology, cognitive science, and the philosophy of science. Contemporary epistemology continues",
+      "original_description": "Epistemology is the branch of philosophy concerned with the nature, sources, and limits of knowledge..."
+    },
+    {
+      "node_id": "music_theory_field",
+      "label": "Music Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Music theory is the systematic study of the principles, structures, and processes that govern musical sound, encompassing the analysis of pitch, rhythm, harmony, melody, counterpoint, form, and timbre. It operates simultaneously as a descriptive discipline—explaining how existing music works—and as a prescriptive one, providing composers and performers with frameworks for creating and interpreting musical works.\n\nThe significance of music theory extends well beyond the practice room or concert hall. Its frameworks have shaped Western musical tradition for over two millennia, from the modal systems of ancient Greece codified by Pythagoras and later Boethius, through the polyphonic innovations of the Renaissance, the harmonic language of the Common Practice Period, and into the experimental idioms of the twentieth and twenty-first centuries. Without a rigorous theoretical vocabulary, the transmission, preservation, and development of musical knowledge across generations would be fundamentally impaired. Music theory also provides the intellectual foundation upon which formal musical education rests, enabling musicians to move from intuitive practice to analytical understanding.\n\nCritically, music theory occupies a productive intersection between multiple disciplines. Its deep relationship with **mathematics** is perhaps the most historically significant: interval ratios, tuning systems such as just intonation and equal temperament, and rhythmic proportionality all rely on number theory, acoustics, and abstract algebra. This connection directly influenced early mathematical thought, as Pythagorean harmonic ratios",
+      "original_description": "Music theory studies the structure, composition, and perception of music through analysis of pitch, ..."
+    },
+    {
+      "node_id": "architecture_field",
+      "label": "Architecture",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 2
+      },
+      "enhanced_description": "Architecture is the discipline concerned with the design, planning, and construction of buildings and spatial environments that serve human needs, combining aesthetic intent with structural functionality. As both an art and an applied science, it encompasses the conception of form, the organization of space, the selection of materials, and the coordination of complex technical and social requirements into coherent built structures.\n\nThe significance of architecture extends far beyond the production of individual buildings. It shapes the physical fabric of civilizations, encoding cultural values, political ideologies, and technological capabilities into durable material form. From the civic grandeur of ancient Roman infrastructure to the modernist rejection of ornament in the twentieth century, architectural movements have consistently reflected and, in turn, influenced broader intellectual and social transformations. Architecture determines how communities are organized, how public and private life are distinguished, and how individuals experience space, light, and movement on a daily basis. In this sense, it is among the most consequential of human creative endeavors, with effects that are both immediate and intergenerational.\n\nArchitecture occupies a uniquely cross-disciplinary position within the academy and professional practice. It draws heavily on structural and civil engineering for load-bearing analysis, material science, and systems integration, while engaging with urban planning and geography in the design of neighborhoods, transportation corridors, and public infrastructure. Its historical and theoretical dimensions connect it to art history, cultural studies, and philosophy—particularly in debates around phenomenology, representation, and the meaning",
+      "original_description": "Architecture is the art and science of designing and constructing buildings and spaces for human use..."
+    },
+    {
+      "node_id": "anthropology_field",
+      "label": "Anthropology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Anthropology is the systematic, comparative study of human beings in all their biological, cultural, linguistic, and archaeological dimensions, examined across both time and space. It seeks to understand what makes humans distinct as a species, how human societies and cultures have developed and diversified, and what commonalities underlie the remarkable variation found across human populations worldwide. The discipline is organized around four major subfields: biological (or physical) anthropology, which investigates human evolution, genetics, and primatology; cultural anthropology, which examines the beliefs, practices, and social structures of living societies; linguistic anthropology, which explores the relationship between language and culture; and archaeology, which reconstructs past human lifeways through material remains.\n\nThe significance of anthropology lies in its uniquely holistic and cross-cultural perspective on the human condition. At a time when ethnocentrism and cultural misunderstanding have profound real-world consequences, anthropology provides analytical tools to challenge assumptions about what is \"natural\" or \"universal\" in human behavior. Foundational contributions—from Franz Boas's dismantling of scientific racism to Claude Lévi-Strauss's structural analysis of myth—have reshaped how scholars across multiple disciplines think about race, culture, and human cognition. Anthropology has also been instrumental in documenting endangered languages and disappearing cultural practices, preserving knowledge that would otherwise be irretrievably lost.\n\nAs a",
+      "original_description": "Anthropology studies human beings in all their biological and cultural diversity across time and spa..."
+    },
+    {
+      "node_id": "environmental_science_field",
+      "label": "Environmental Science",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Environmental science is an interdisciplinary field that systematically investigates the interactions between human activities and natural systems — including the atmosphere, hydrosphere, lithosphere, and biosphere — to understand environmental processes, assess human impacts, and develop evidence-based solutions to ecological challenges.\n\nAt its core, environmental science integrates principles from biology, chemistry, physics, geology, and ecology to analyze phenomena such as climate change, biodiversity loss, pollution, resource depletion, and land-use change. Rather than studying natural systems in isolation, it explicitly examines the feedback loops between human civilization and planetary processes, making it distinct from pure natural sciences in both scope and purpose.\n\nThe significance of environmental science lies in its direct relevance to some of the most consequential challenges of the modern era. By providing rigorous, quantitative frameworks for understanding ecosystem degradation, atmospheric chemistry, and biogeochemical cycles, the field generates the scientific foundation upon which environmental policy, conservation strategy, and sustainability planning are built. Without this body of knowledge, informed responses to climate disruption, freshwater scarcity, or toxic contamination would be impossible. Environmental science has fundamentally shifted how societies conceptualize the relationship between economic development and ecological health — moving from a model of unlimited resource extraction toward one grounded in carrying capacity and long-term resilience.\n\nAs a bridge discipline, environmental science draws from and contributes to an exceptionally wide range of fields. It intersects",
+      "original_description": "Environmental science studies the interactions between human activity and natural systems — atmosphe..."
+    },
+    {
+      "node_id": "game_theory_field",
+      "label": "Game Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Game theory is the mathematical study of strategic interaction among rational decision-makers, analyzing how individuals or groups choose actions when their outcomes depend not only on their own choices but on the choices of others. Rooted in the foundational work of John von Neumann and Oskar Morgenstern in the 1940s and later extended by John Nash, it provides a rigorous framework for modeling conflict, cooperation, competition, and negotiation under conditions of interdependence.\n\nThe significance of game theory extends far beyond mathematics. Nash's concept of the equilibrium — a state in which no player can benefit by unilaterally changing strategy — transformed how economists model markets, bargaining, and institutional behavior, earning multiple Nobel Prizes in Economics and reshaping the discipline's theoretical foundations. During the Cold War, game-theoretic reasoning directly informed nuclear deterrence strategy and arms control negotiations, demonstrating its capacity to address real-world problems of existential consequence. More recently, the theory has driven breakthroughs in mechanism design, auction theory, and the architecture of internet advertising markets.\n\nGame theory serves as a genuine intellectual bridge across disciplines. In biology, evolutionary game theory explains the emergence of cooperation, altruistic behavior, and stable population dynamics without assuming conscious rationality — connecting Darwinian evolution to formal strategic logic. In political science, it models voting behavior, coalition formation, and international treaty compliance. In computer science, it underpins algorithm",
+      "original_description": "Game theory is the mathematical study of strategic decision-making among rational agents. Developed ..."
+    },
+    {
+      "node_id": "ecosystem_concept",
+      "label": "Ecosystem",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "An ecosystem is a dynamic, self-regulating system comprising all living organisms (the biotic community) within a defined area, together with the non-living physical environment (abiotic factors such as soil, water, climate, and sunlight), functioning as an integrated whole through continuous exchanges of energy and matter. Rather than a mere collection of species, an ecosystem is defined by the relationships and processes that bind its components: nutrient cycling, energy flow through trophic levels, decomposition, and feedback mechanisms that confer stability and resilience.\n\nThe concept holds foundational significance across the natural sciences and beyond. Ecologically, it provides the organizing framework for understanding how life sustains itself on Earth — why forests regulate rainfall, how ocean phytoplankton produce atmospheric oxygen, and what drives the collapse of fisheries. Arthur Tansley's formalization of the term in 1935 marked a pivotal shift from studying individual organisms or species to analyzing the system-level processes that govern biological communities, effectively creating the discipline of systems ecology. This shift in perspective proved transformative: it established that biological processes cannot be meaningfully separated from their physical context.\n\nThe significance of ecosystem thinking extends well beyond biology. In economics, the concept underpins the valuation of ecosystem services — the quantifiable benefits that natural systems provide to human societies, including clean water, carbon sequestration, pollination, and flood regulation — a framework now central to environmental policy",
+      "original_description": "An ecosystem is the integrated system of living organisms interacting with each other and their phys..."
+    },
+    {
+      "node_id": "homeostasis_concept",
+      "label": "Homeostasis",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Homeostasis is the process by which living organisms actively maintain relatively stable internal conditions — such as body temperature, blood pH, glucose concentration, and osmotic pressure — despite continuous fluctuations in the external environment. First systematically described by Claude Bernard in the 19th century as *milieu intérieur* and later named by Walter Cannon in 1926, homeostasis operates through feedback mechanisms, most commonly negative feedback loops, in which sensors detect deviations from a set point and trigger corrective responses to restore equilibrium.\n\nThe significance of homeostasis extends far beyond basic physiology. It is a foundational organizing principle of biology: virtually every organ system in the human body — endocrine, renal, cardiovascular, respiratory, and neurological — participates in homeostatic regulation. Disruptions to these mechanisms underlie a vast range of clinical conditions, from diabetes mellitus (impaired glucose homeostasis) to hypertension and septic shock. Understanding homeostasis is therefore essential to diagnosing disease, designing therapeutic interventions, and interpreting pharmacological effects. At a deeper level, the concept reframes life itself as an active, energy-consuming process of resistance against entropy, rather than a passive state of being.\n\nThe intellectual reach of homeostasis extends well beyond biology and medicine. In engineering, the principles of negative feedback and set-point regulation directly inspired control systems theory and the design of therm",
+      "original_description": "Homeostasis describes how organisms regulate internal variables (such as temperature, pH, glucose, a..."
+    },
+    {
+      "node_id": "structural_mechanics_concept",
+      "label": "Structural Mechanics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Structural mechanics is the branch of applied mechanics that investigates how solid bodies — beams, columns, frames, shells, and composite assemblies — respond to external forces, moments, and environmental loads through deformation, stress distribution, and strain. Rooted in Newtonian mechanics and the mathematical theory of elasticity, it applies principles of equilibrium, compatibility, and constitutive relations to predict whether a structure will remain stable, deform within acceptable limits, or fail under prescribed loading conditions.\n\nThe significance of structural mechanics extends far beyond the engineering drawing board. It provides the analytical foundation upon which virtually every constructed object in the modern world depends — from suspension bridges and high-rise buildings to aircraft fuselages and surgical implants. Without rigorous structural analysis, engineers cannot distinguish between a safe design and a catastrophic one; the field therefore sits at the intersection of physical intuition and mathematical precision, making it indispensable for managing risk in built environments. Historically, its development — from Galileo's early beam experiments and Euler's column buckling theory to the finite element methods of the twentieth century — has repeatedly transformed what humanity can build, enabling structures of previously unimaginable scale and complexity.\n\nStructurally, the discipline bridges multiple domains in concrete and productive ways. In physics, it draws directly on continuum mechanics, thermodynamics, and wave propagation theory, particularly when addressing dynamic loading and fatigue. In materials",
+      "original_description": "Structural mechanics is the study of how solid bodies deform and bear loads under applied forces — t..."
+    },
+    {
+      "node_id": "energy_transformation_concept",
+      "label": "Energy Transformation",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Energy transformation refers to the process by which energy changes from one form to another — such as from kinetic to thermal, chemical to electrical, or radiant to biochemical — while the total quantity of energy within a closed system remains constant. This principle is formally expressed through the First Law of Thermodynamics, which establishes that energy can neither be created nor destroyed, only converted between forms. Crucially, every transformation also involves some degree of energy dispersal into less useful forms, a constraint captured by the Second Law of Thermodynamics and the concept of entropy.\n\nThe significance of energy transformation extends far beyond academic physics. It constitutes the mechanistic foundation upon which virtually all natural and engineered systems operate. Without a rigorous understanding of how energy converts and dissipates, modern civilization's technological infrastructure — from internal combustion engines and photovoltaic cells to nuclear reactors and electrical grids — could not have been systematically designed or optimized. The concept has driven foundational breakthroughs in thermodynamics, quantum mechanics, and statistical physics, reshaping our understanding of why processes occur in one direction rather than another.\n\nAcross disciplines, energy transformation serves as a unifying analytical framework. In **biology**, it explains cellular respiration and photosynthesis — the molecular machinery through which living organisms harvest, store, and expend chemical energy to maintain order against entropy. In **chemistry**, it governs reaction spontaneity and the",
+      "original_description": "Energy transformation is the conversion of energy from one form to another, governed by conservation..."
+    },
+    {
+      "node_id": "control_theory_concept",
+      "label": "Control Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Control theory is the mathematical framework concerned with analyzing and designing systems that regulate their own behavior to achieve and maintain desired outputs, even in the presence of disturbances or uncertainty. At its core, it formalizes the relationship between inputs, outputs, and feedback: by continuously measuring a system's actual state and comparing it to a target state, a controller computes corrective actions that drive the system toward the desired behavior. This feedback loop principle, alongside concepts such as stability, controllability, observability, transfer functions, and state-space representation, forms the foundational vocabulary of the discipline.\n\nThe significance of control theory extends well beyond its engineering origins. It provides one of the few rigorous mathematical languages capable of describing how complex systems self-regulate—a problem that arises in virtually every scientific domain. In aerospace and mechanical engineering, it enabled the design of autopilots, robotic manipulators, and spacecraft attitude control systems. In electrical engineering, it underpins power grid stabilization and signal processing. Crucially, control theory offered the first systematic tools for guaranteeing system stability and performance, transforming engineering from empirical trial-and-error into a principled discipline grounded in mathematical proof.\n\nIts cross-domain reach is particularly remarkable. In biology, control-theoretic models describe homeostatic regulation—how the body maintains temperature, blood glucose, and hormone levels within narrow bounds—revealing that living systems evolved feedback architectures independently of human",
+      "original_description": "Control theory is the mathematical framework for designing systems that maintain desired behavior de..."
+    },
+    {
+      "node_id": "environmental_history_concept",
+      "label": "Environmental History",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Environmental history is an interdisciplinary field of scholarly inquiry that examines the dynamic, reciprocal relationships between human societies and the natural world across time. It investigates how natural environments have shaped human cultures, economies, and political systems, while simultaneously analyzing how human activities — from agriculture and industrialization to urbanization and resource extraction — have transformed landscapes, climates, ecosystems, and biodiversity. Unlike traditional history, which centers human agency almost exclusively, environmental history restores nature as an active participant and force in historical change.\n\nThe significance of environmental history lies in its capacity to reframe our understanding of some of the most pressing questions in human experience. By tracing the long-term consequences of land use, pollution, deforestation, and climate change, it provides essential historical context for contemporary environmental crises, demonstrating that ecological degradation is rarely sudden but instead accumulates across generations. Foundational works — such as Alfred Crosby's research on ecological imperialism or William Cronon's studies of American landscapes — revealed that conquest, colonialism, and economic development carried profound biological and environmental dimensions that conventional historiography had largely ignored. This reframing proved transformative, compelling historians, scientists, and policymakers alike to reconsider causation, collapse, and sustainability in human civilizations.\n\nEnvironmental history serves as a critical intellectual bridge across multiple disciplines. It draws on ecology and biology to understand species change and ecosystem dynamics; on climatology and geology",
+      "original_description": "Environmental history studies the changing relationships between human societies and the natural wor..."
+    },
+    {
+      "node_id": "cosmology_concept",
+      "label": "Cosmology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Cosmology is the scientific and philosophical study of the universe as a unified whole, encompassing its origin, large-scale structure, evolution, and ultimate fate. As a discipline, it seeks to answer the most fundamental questions humanity can pose: how the universe began, what it is made of, how it is organized across vast scales, and where it is heading. Its scope extends from the first fractions of a second after the Big Bang to the projected billions of years remaining before the cosmos reaches thermodynamic equilibrium or collapses.\n\nThe theoretical backbone of modern cosmology rests on general relativity, quantum field theory, and observational data from instruments such as the Hubble Space Telescope and the Planck satellite. The Big Bang model, supported by evidence including cosmic microwave background radiation and the observed expansion of the universe, provides the standard framework for understanding cosmic history. Within this framework, key constituents such as dark matter and dark energy—though not yet directly detected—have been inferred from gravitational effects and accelerating expansion, representing two of the most pressing open problems in all of science.\n\nThe significance of cosmology extends well beyond physics. It has fundamentally reshaped humanity's understanding of time, causality, and existence itself, forcing revisions to philosophical concepts that predate modern science by millennia. Questions about the fine-tuning of physical constants and the anthropic principle engage philosophy of science and metaphysics directly.",
+      "original_description": "Cosmology studies the origin, structure, and evolution of the universe as a whole. The Big Bang theo..."
+    },
+    {
+      "node_id": "geomorphology_concept",
+      "label": "Geomorphology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Geomorphology is the scientific study of Earth's surface landforms — including mountains, valleys, rivers, coastlines, glaciers, and deserts — along with the processes responsible for shaping, maintaining, and transforming them over time. It examines both endogenic forces (tectonics, volcanism) and exogenic processes (erosion, weathering, mass wasting, fluvial and aeolian action) that continuously sculpt the landscape at timescales ranging from instantaneous events to millions of years.\n\nThe significance of geomorphology extends well beyond describing terrain. It provides the conceptual framework through which scientists understand landscape evolution, sediment dynamics, and the feedback relationships between climate and surface change. In an era of accelerating climate disruption, geomorphological analysis is essential for predicting how sea-level rise will reshape coastlines, how glacial retreat will alter river systems, and how increased storm intensity will accelerate erosion. Its findings directly inform hazard assessment for landslides, floods, and desertification — making it indispensable to environmental management and urban planning worldwide. Furthermore, geomorphology has historically reshaped scientific thinking: the recognition of glacial landforms in the 19th century, for instance, overturned prevailing geological assumptions and helped establish deep time as a legitimate scientific concept.\n\nAs a discipline, geomorphology serves as a critical bridge across multiple fields. It connects with",
+      "original_description": "Geomorphology studies Earth's surface landforms and the processes creating them: erosion, weathering..."
+    },
+    {
+      "node_id": "michel_foucault_person",
+      "label": "Michel Foucault",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "Michel Foucault (1926–1984) is a French philosopher, historian, and social theorist whose work fundamentally transformed how scholars understand the relationships between power, knowledge, and subjectivity. Rather than treating knowledge as a neutral accumulation of facts, Foucault argued that all knowledge systems are entangled with power relations — that what counts as \"true\" or \"normal\" in any given era is shaped by institutional forces, social practices, and historical contingency. This insight, developed through his concepts of *discourse*, *genealogy*, and *biopower*, constitutes one of the most influential intellectual contributions of the twentieth century.\n\nFoucault's significance lies in his radical reorientation of critical inquiry. By tracing how institutions such as prisons, hospitals, and schools produce and regulate human subjects, he exposed the mechanisms through which modern societies exercise control not through overt coercion alone, but through the internalization of norms. His major works — including *Discipline and Punish* (1975) and *The History of Sexuality* (1976–1984) — challenged Enlightenment assumptions about progress, reason, and liberation, forcing scholars to ask not merely \"what is true?\" but \"who decides what is true, and with what effects?\"\n\nFoucault's cross-disciplinary reach is exceptionally broad and concrete. In **sociology**, his concept of biopower res",
+      "original_description": "Michel Foucault is the philosopher and historian who analyzed how power operates through knowledge s..."
+    }
+  ],
+  "summary": {
+    "total_processed": 20,
+    "completed": 20,
+    "errors": 0,
+    "avg_score_improvement": 1.9
+  }
+}

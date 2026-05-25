@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "current": "docs\\benchmarks\\prelaunch_smoke.json",
+  "baseline": "docs\\benchmarks\\baseline.json",
+  "max_regression_pct": 35.0,
+  "thresholds": {
+    "max_graph_p95_ms": 300.0,
+    "max_search_p95_ms": 120.0
+  },
+  "regressions": {
+    "graph_subgraph": {
+      "avg_ms": -53.09,
+      "p95_ms": -62.34
+    },
+    "search": {
+      "avg_ms": -80.08,
+      "p95_ms": -89.3
+    }
+  },
+  "violation_summary": {},
+  "violations": [],
+  "notes": []
+}

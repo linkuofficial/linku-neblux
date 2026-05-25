@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-05-25T13:30:04.988805+00:00",
+  "batch": {
+    "number": 6,
+    "start": 50,
+    "end": 53,
+    "size": 10
+  },
+  "candidates_source": "p3_candidates_significance.json",
+  "total_candidates": 53,
+  "batch_results": [
+    {
+      "node_id": "neuroscience_field",
+      "status": "error",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbPNJjDFJfVAqXqyEqTgA'}"
+    },
+    {
+      "node_id": "political_science_field",
+      "status": "error",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbPNJkd5s49dYJuipuWW1'}"
+    },
+    {
+      "node_id": "immune_system_concept",
+      "status": "error",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbPNJmhpUD2qTowHx54R9'}"
+    }
+  ],
+  "summary": {
+    "total_processed": 0,
+    "completed": 0,
+    "errors": 3,
+    "avg_score_improvement": 0
+  }
+}

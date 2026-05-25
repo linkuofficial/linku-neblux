@@ -1,0 +1,211 @@
+{
+  "timestamp": "2026-05-25T06:58:18.888778+00:00",
+  "batch": {
+    "number": 5,
+    "start": 40,
+    "end": 48,
+    "size": 10
+  },
+  "candidates_source": "p0_candidates.json",
+  "total_candidates": 48,
+  "batch_results": [
+    {
+      "node_id": "toxicology_concept",
+      "label": "Toxicology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Toxicology is the scientific discipline concerned with understanding the nature, mechanisms, and effects of chemical, biological, and physical agents that cause harm to living organisms. Rooted in the foundational principle attributed to Paracelsus — \"the dose makes the poison\" — toxicology recognizes that virtually any substance can be harmful depending on the quantity, route of exposure, duration, and biological context. It encompasses the study of how toxic agents are absorbed, distributed, metabolized, and excreted by the body, as well as the cellular and molecular mechanisms through which they disrupt normal physiological function.\n\nThe significance of toxicology extends far beyond the laboratory. It provides the scientific foundation for setting safe exposure limits in workplaces and environments, evaluating the safety of pharmaceuticals before they reach patients, and assessing the ecological impact of industrial chemicals and pesticides. Without rigorous toxicological evaluation, drug development, food safety regulation, and environmental protection policy would lack the empirical grounding needed to make defensible decisions about public health. Its contribution to forensic science — enabling the identification of poisoning in criminal and medicolegal investigations — further demonstrates its practical reach across human affairs.\n\nToxicology is inherently interdisciplinary, functioning as a critical bridge between the biological sciences, chemistry, medicine, and public policy. From biochemistry and pharmacology, it borrows the tools to trace molecular interactions between toxins and biological targets.",
+      "original_description": "The science of poisons — studying how chemical substances harm living organisms, determining safe ex..."
+    },
+    {
+      "node_id": "cardiology_concept",
+      "label": "Cardiology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Cardiology is the branch of medicine dedicated to the study, diagnosis, and treatment of diseases and disorders affecting the heart and cardiovascular system, encompassing conditions ranging from congenital defects and arrhythmias to coronary artery disease and heart failure. As a discipline, it integrates anatomical knowledge of cardiac structure, physiological understanding of circulatory mechanics, and increasingly sophisticated technological tools to assess and restore cardiovascular function.\n\nThe significance of cardiology is difficult to overstate: cardiovascular disease remains the leading cause of death globally, accounting for nearly 18 million deaths annually. The field's development has been marked by transformative milestones — René Laennec's invention of the stethoscope in 1816 enabled non-invasive auscultation for the first time, while Willem Einthoven's electrocardiograph (ECG) in the early 1900s provided a window into the heart's electrical activity that remains clinically indispensable today. Subsequent breakthroughs — cardiac catheterization, coronary bypass surgery, implantable defibrillators, and transcatheter valve replacement — have progressively shifted conditions once considered fatal into manageable, often curable, diagnoses. These advances have not merely extended lifespans but fundamentally altered how medicine conceptualizes organ-level intervention.\n\nCardiology is also a powerful bridge across disciplines. Its intersection",
+      "original_description": "The medical specialty of the heart and cardiovascular system — from the stethoscope (1816) and ECG (..."
+    },
+    {
+      "node_id": "battery_technology_concept",
+      "label": "Battery Technology",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Battery technology is the interdisciplinary field encompassing the science, engineering, and design of devices that store and convert chemical energy into electrical energy through controlled electrochemical reactions. At its core, a battery consists of one or more electrochemical cells, each containing an anode, cathode, and electrolyte, whose thermodynamic and kinetic properties govern energy density, power output, cycle life, and safety.\n\nThe field's origins trace to Alessandro Volta's voltaic pile (1800), which provided scientists with the first reliable source of continuous electrical current and catalyzed a century of discovery in electromagnetism and electrochemistry. Subsequent milestones — Gaston Planté's lead-acid cell (1859), the nickel-cadmium battery, and Sony's commercialization of lithium-ion technology (1991) — each represented step-changes in energy storage capability that directly enabled new industries and reshaped daily life. The lithium-ion battery in particular transformed portable electronics, making smartphones, laptops, and medical implants practical at scale.\n\nThe significance of battery technology in the twenty-first century extends far beyond consumer devices. Electrochemical storage is now recognized as a foundational enabler of the global energy transition: grid-scale battery systems allow intermittent renewable sources such as wind and solar to supply stable baseload power, while advances in electric vehicle batteries are restructuring transportation infrastructure,",
+      "original_description": "The science and engineering of electrochemical energy storage — from Volta's pile (1800) through lea..."
+    },
+    {
+      "node_id": "theory_of_relativity_event",
+      "label": "Publication of Theory of Relativity",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 7,
+        "total_score": 16,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "improvement": {
+        "score_delta": -1,
+        "description_delta": 0
+      },
+      "enhanced_description": "The publication of the theory of relativity refers to two landmark events in physics: Albert Einstein's release of his special theory of relativity in 1905 and his general theory of relativity in 1915. Special relativity introduced the principle that the laws of physics are identical for all observers moving at constant velocities, establishing that space and time are not absolute but interwoven into a single four-dimensional continuum called spacetime, and that energy and mass are equivalent, expressed through the iconic equation E=mc². General relativity extended these principles to accelerating frames of reference, reinterpreting gravity not as a force but as the curvature of spacetime caused by mass and energy.\n\nThe significance of these publications cannot be overstated. They fundamentally dismantled the Newtonian framework that had governed scientific thought for over two centuries, replacing absolute space and time with a dynamic, relational model of the universe. General relativity predicted phenomena—gravitational lensing, the precession of Mercury's orbit, gravitational waves, and black holes—that have since been confirmed through observation, including the direct detection of gravitational waves in 2015 by LIGO. The theory also underpins modern cosmology, providing the mathematical foundation for the Big Bang model and the study of an expanding universe.\n\nThe cross-disciplinary reach of relativity is profound. In mathematics, it accelerated the development of differential geometry and",
+      "original_description": "Einstein published special relativity in 1905 and general relativity in 1915, revealing that space, ..."
+    },
+    {
+      "node_id": "anesthesia_concept",
+      "label": "Anesthesia",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Anesthesia is the medically induced, reversible state of controlled unconsciousness, analgesia, and muscle relaxation achieved through the administration of pharmacological agents, enabling surgical and diagnostic procedures to be performed without pain, awareness, or harmful physiological stress responses in the patient.\n\nModern anesthesia encompasses three primary forms: general anesthesia, which produces whole-body unconsciousness; regional anesthesia, which blocks sensation in a specific anatomical region through nerve or spinal cord intervention; and local anesthesia, which numbs a discrete tissue area. Each modality involves carefully calibrated drug combinations—including inhaled volatile agents such as isoflurane, intravenous hypnotics such as propofol, analgesics such as opioids, and neuromuscular blocking agents—whose mechanisms operate on ion channels, neurotransmitter receptors, and synaptic pathways within the central and peripheral nervous systems.\n\nThe significance of anesthesia to medicine and human welfare cannot be overstated. Prior to its clinical introduction in the mid-nineteenth century, surgery was an experience of profound agony, limiting procedures to desperate, life-threatening situations and constraining surgical complexity to what could be completed in minutes. The development of reliable anesthetic techniques fundamentally transformed surgery from a last resort into a precise, elective discipline, enabling the expansion of cardiac surgery, organ transplantation, neurosurgery",
+      "original_description": "Anesthesia is the controlled use of drugs to prevent pain, awareness, and reflex responses during pr..."
+    },
+    {
+      "node_id": "decolonization_historiography_concept",
+      "label": "Decolonization of History",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Decolonization of history is a critical scholarly movement and methodological framework that systematically examines and dismantles the Eurocentric biases embedded in historical knowledge production, narrative construction, and archival practices. It refers specifically to the intellectual project of recovering, centering, and legitimizing historical perspectives, voices, and epistemologies that have been marginalized, suppressed, or erased through centuries of colonial dominance — including those of Indigenous peoples, African societies, Asian civilizations, and other communities rendered peripheral by imperial historiography.\n\nAt its core, the movement challenges foundational assumptions about whose experiences constitute \"universal\" history, interrogating not only what is recorded but how, by whom, and in service of which power structures. Scholars working within this framework engage with oral traditions, material culture, and community-based knowledge systems as methodologically valid historical sources, alongside — and sometimes in preference to — conventional written archives that frequently reflect colonial perspectives.\n\nThe significance of this framework extends well beyond academic history departments. By fundamentally reorienting how the past is understood, decolonized historiography has practical consequences for contemporary political discourse, transitional justice, land rights claims, and educational curricula worldwide. It challenges the legitimacy of inherited institutional arrangements and provides intellectual grounding for reparative policies and reconciliation processes. Nations confronting legacies of colonialism — from South Africa to Australia to Canada — have drawn directly on decolon",
+      "original_description": "A scholarly movement challenging Eurocentric historical narratives by recovering suppressed indigeno..."
+    },
+    {
+      "node_id": "modernism_art_concept",
+      "label": "Modernism in Art",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 20,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Modernism in art is a broad cultural and aesthetic movement spanning roughly 1860 to 1970, defined by a deliberate and self-conscious rejection of traditional representational conventions in favour of experimentation with form, abstraction, and subjective expression. Rather than depicting the visible world with fidelity, modernist artists pursued the underlying structures, emotions, and ideas that conventional techniques could not adequately capture, transforming the fundamental question of art from *what* is depicted to *how* and *why*.\n\nEmerging in response to rapid industrialisation, urbanisation, and the fracturing of established social and religious certainties, modernism encompassed a succession of overlapping movements — Impressionism, Post-Impressionism, Cubism, Expressionism, Futurism, Surrealism, and Abstract Expressionism among them — each challenging inherited assumptions about perspective, colour, narrative, and the role of the artist. Figures such as Cézanne, Picasso, Kandinsky, and Duchamp did not merely introduce new styles; they redefined the ontological status of the art object itself, asking what a painting fundamentally is and whether art requires beauty, skill, or resemblance at all.\n\nThe significance of modernism extends well beyond aesthetic history. Its insistence on rupture, originality, and the questioning of inherited authority became a template for intellectual innovation across disciplines. In literature",
+      "original_description": "The revolutionary break with representational tradition in visual art (c.1860–1970), encompassing Im..."
+    },
+    {
+      "node_id": "biomedical_devices_concept",
+      "label": "Biomedical Devices",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 17,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 3
+      },
+      "enhanced_description": "Biomedical devices are engineered instruments, systems, and implants specifically designed to diagnose, monitor, treat, or replace biological functions within the human body. Ranging from relatively simple tools such as stethoscopes and glucose monitors to highly sophisticated systems including MRI scanners, cochlear implants, robotic surgical platforms, and ventricular assist devices, they represent the deliberate application of engineering principles to clinical medicine.\n\nThe significance of biomedical devices extends well beyond individual patient care. They have fundamentally reshaped the practice of medicine by enabling non-invasive visualization of internal anatomy, continuous real-time physiological monitoring, and precise therapeutic interventions that were unimaginable a century ago. Pacemakers restored cardiac rhythm to millions of patients who would otherwise have faced severely limited lifespans; dialysis machines substituted for failed kidneys; prosthetic limbs with neural interfaces are now restoring motor agency to amputees. Each of these advances represents not merely a technical achievement but a redefinition of what medicine can offer.\n\nThe field sits at a uniquely productive intersection of multiple disciplines. From engineering, it draws on mechanical, electrical, materials, and software expertise to build reliable, miniaturized, and biocompatible systems. From medicine and physiology, it derives the clinical requirements and safety standards that constrain design. Regulatory science and ethics govern how devices are tested, approved, and deployed,",
+      "original_description": "Engineered devices for diagnosis, monitoring, and treatment — from X-ray machines and MRI scanners t..."
+    }
+  ],
+  "summary": {
+    "total_processed": 8,
+    "completed": 8,
+    "errors": 0,
+    "avg_score_improvement": 3.0
+  }
+}

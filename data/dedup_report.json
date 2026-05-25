@@ -1,0 +1,490 @@
+{
+  "timestamp": "2026-05-23T02:48:20.440919",
+  "config": {
+    "string_threshold": 0.85,
+    "semantic_threshold": null,
+    "connection_threshold": 0.6
+  },
+  "duplicates": [
+    {
+      "type": "similar_label",
+      "node_a": "evolution_field",
+      "label_a": "Evolution",
+      "node_b": "coevolution_concept",
+      "label_b": "Coevolution",
+      "score": 0.9,
+      "method": "string"
+    },
+    {
+      "type": "exact_label",
+      "node_a": "historiography_field",
+      "label_a": "Historiography",
+      "node_b": "historiography_concept",
+      "label_b": "Historiography",
+      "score": 1.0,
+      "method": "string"
+    },
+    {
+      "type": "exact_label",
+      "node_a": "game_theory_field",
+      "label_a": "Game Theory",
+      "node_b": "game_theory_concept",
+      "label_b": "Game Theory",
+      "score": 1.0,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "electrochemistry_concept",
+      "label_a": "Electrochemistry",
+      "node_b": "petrochemistry_concept",
+      "label_b": "Petrochemistry",
+      "score": 0.867,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "neuroscience_concepts_concept",
+      "label_a": "Neural Plasticity",
+      "node_b": "neuroplasticity_concept",
+      "label_b": "Neuroplasticity",
+      "score": 0.875,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "biomedical_imaging_concept",
+      "label_a": "Biomedical Imaging",
+      "node_b": "medical_imaging_concept",
+      "label_b": "Medical Imaging",
+      "score": 0.909,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "systems_engineering_concept",
+      "label_a": "Systems Engineering",
+      "node_b": "power_systems_concept",
+      "label_b": "Power Systems Engineering",
+      "score": 0.864,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "art_history_methodology_concept",
+      "label_a": "Art History Methodology",
+      "node_b": "oral_history_methodology_concept",
+      "label_b": "Oral History Methodology",
+      "score": 0.894,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "photochemistry_concept",
+      "label_a": "Photochemistry",
+      "node_b": "petrochemistry_concept",
+      "label_b": "Petrochemistry",
+      "score": 0.857,
+      "method": "string"
+    },
+    {
+      "type": "similar_label",
+      "node_a": "astrochemistry_concept",
+      "label_a": "Astrochemistry",
+      "node_b": "petrochemistry_concept",
+      "label_b": "Petrochemistry",
+      "score": 0.857,
+      "method": "string"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "physics_field",
+      "label_a": "Physics",
+      "node_b": "conservation_laws_concept",
+      "label_b": "Conservation Laws",
+      "score": 0.6,
+      "shared_targets": [
+        "engineering_field",
+        "chemistry_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "engineering_field",
+      "label_a": "Engineering",
+      "node_b": "topology_concept",
+      "label_b": "Topology",
+      "score": 0.6,
+      "shared_targets": [
+        "physics_field",
+        "mathematics_field",
+        "technology_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "geometry_field",
+      "label_a": "Geometry",
+      "node_b": "music_theory_field",
+      "label_b": "Music Theory",
+      "score": 1.0,
+      "shared_targets": [
+        "arts_field",
+        "physics_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "logic_field",
+      "label_a": "Logic",
+      "node_b": "algorithm_concept",
+      "label_b": "Algorithm",
+      "score": 0.6,
+      "shared_targets": [
+        "computer_science_field",
+        "philosophy_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "logic_field",
+      "label_a": "Logic",
+      "node_b": "mathematical_proof_concept",
+      "label_b": "Mathematical Proof",
+      "score": 0.75,
+      "shared_targets": [
+        "computer_science_field",
+        "philosophy_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "genetics_field",
+      "label_a": "Genetics",
+      "node_b": "immune_system_concept",
+      "label_b": "Immune System",
+      "score": 0.75,
+      "shared_targets": [
+        "biology_field",
+        "chemistry_field",
+        "medicine_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "thermodynamics_field",
+      "label_a": "Thermodynamics",
+      "node_b": "materials_science_field",
+      "label_b": "Materials Science",
+      "score": 1.0,
+      "shared_targets": [
+        "engineering_field",
+        "chemistry_field",
+        "physics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "thermodynamics_field",
+      "label_a": "Thermodynamics",
+      "node_b": "conservation_laws_concept",
+      "label_b": "Conservation Laws",
+      "score": 0.6,
+      "shared_targets": [
+        "physics_field",
+        "chemistry_field",
+        "engineering_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "ethics_field",
+      "label_a": "Ethics",
+      "node_b": "cell_theory_concept",
+      "label_b": "Cell Theory",
+      "score": 0.75,
+      "shared_targets": [
+        "medicine_field",
+        "philosophy_field",
+        "technology_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "political_science_field",
+      "label_a": "Political Science",
+      "node_b": "law_field",
+      "label_b": "Law",
+      "score": 1.0,
+      "shared_targets": [
+        "philosophy_field",
+        "social_science_field",
+        "history_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "materials_science_field",
+      "label_a": "Materials Science",
+      "node_b": "conservation_laws_concept",
+      "label_b": "Conservation Laws",
+      "score": 0.6,
+      "shared_targets": [
+        "engineering_field",
+        "chemistry_field",
+        "physics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "special_relativity_concept",
+      "label_a": "Special Relativity",
+      "node_b": "structural_mechanics_concept",
+      "label_b": "Structural Mechanics",
+      "score": 0.6,
+      "shared_targets": [
+        "engineering_field",
+        "physics_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "catalysis_concept",
+      "label_a": "Catalysis",
+      "node_b": "photosynthesis_concept",
+      "label_b": "Photosynthesis",
+      "score": 1.0,
+      "shared_targets": [
+        "biology_field",
+        "engineering_field",
+        "chemistry_field",
+        "environmental_science_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "cell_theory_concept",
+      "label_a": "Cell Theory",
+      "node_b": "immune_system_concept",
+      "label_b": "Immune System",
+      "score": 0.6,
+      "shared_targets": [
+        "medicine_field",
+        "biology_field",
+        "technology_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "feedback_control_concept",
+      "label_a": "Feedback Control",
+      "node_b": "linear_algebra_concept",
+      "label_b": "Linear Algebra",
+      "score": 0.6,
+      "shared_targets": [
+        "engineering_field",
+        "technology_field",
+        "mathematics_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "cognitive_bias_concept",
+      "label_a": "Cognitive Bias",
+      "node_b": "philosophy_of_mind_concept",
+      "label_b": "Philosophy of Mind",
+      "score": 0.6,
+      "shared_targets": [
+        "psychology_field",
+        "philosophy_field",
+        "technology_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "causality_concept",
+      "label_a": "Causality",
+      "node_b": "scientific_method_concept",
+      "label_b": "Scientific Method",
+      "score": 0.667,
+      "shared_targets": [
+        "epistemology_concept",
+        "philosophy_field",
+        "evidence_based_medicine_concept",
+        "statistical_inference_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "phase_transitions_concept",
+      "label_a": "Phase Transitions",
+      "node_b": "universality_concept",
+      "label_b": "Universality",
+      "score": 0.667,
+      "shared_targets": [
+        "scale_invariance_concept",
+        "physics_field",
+        "symmetry_concept",
+        "complex_systems_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "institutional_economics_concept",
+      "label_a": "Institutional Economics",
+      "node_b": "collective_action_concept",
+      "label_b": "Collective Action",
+      "score": 0.667,
+      "shared_targets": [
+        "social_contract_concept",
+        "game_theory_concept",
+        "evolution_of_cooperation_concept",
+        "social_science_field"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "charles_darwin_person",
+      "label_a": "Charles Darwin",
+      "node_b": "gregor_mendel_person",
+      "label_b": "Gregor Mendel",
+      "score": 0.6,
+      "shared_targets": [
+        "biology_field",
+        "scientific_method_concept",
+        "natural_selection_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "chiaroscuro_concept",
+      "label_a": "Chiaroscuro",
+      "node_b": "photography_history_concept",
+      "label_b": "Photography as Art",
+      "score": 0.6,
+      "shared_targets": [
+        "arts_field",
+        "perspective_concept",
+        "optics_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "drug_resistance_concept",
+      "label_a": "Antimicrobial Resistance",
+      "node_b": "antibiotic_resistance_concept",
+      "label_b": "Antibiotic Resistance",
+      "score": 0.6,
+      "shared_targets": [
+        "discovery_of_penicillin_event",
+        "medicine_field",
+        "natural_selection_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "photography_history_concept",
+      "label_a": "Photography as Art",
+      "node_b": "impressionism_concept",
+      "label_b": "Impressionism",
+      "score": 0.6,
+      "shared_targets": [
+        "arts_field",
+        "modernism_art_concept",
+        "optics_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "photography_history_concept",
+      "label_a": "Photography as Art",
+      "node_b": "cubism_concept",
+      "label_b": "Cubism",
+      "score": 0.6,
+      "shared_targets": [
+        "arts_field",
+        "perspective_concept",
+        "modernism_art_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "impressionism_concept",
+      "label_a": "Impressionism",
+      "node_b": "expressionism_concept",
+      "label_b": "Expressionism",
+      "score": 0.6,
+      "shared_targets": [
+        "arts_field",
+        "modernism_art_concept",
+        "color_theory_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "surrealism_concept",
+      "label_a": "Surrealism",
+      "node_b": "cubism_concept",
+      "label_b": "Cubism",
+      "score": 0.6,
+      "shared_targets": [
+        "abstraction_concept",
+        "arts_field",
+        "modernism_art_concept"
+      ],
+      "method": "connection_overlap"
+    },
+    {
+      "type": "connection_overlap",
+      "node_a": "medieval_period_concept",
+      "label_a": "Medieval Period",
+      "node_b": "byzantine_empire_concept",
+      "label_b": "Byzantine Empire",
+      "score": 0.6,
+      "shared_targets": [
+        "islamic_golden_age_event",
+        "greek_golden_age_event",
+        "renaissance_event"
+      ],
+      "method": "connection_overlap"
+    }
+  ],
+  "orphans": [],
+  "summary": {
+    "exact": 2,
+    "string_similar": 8,
+    "semantic_similar": 0,
+    "connection_overlaps": 27,
+    "orphans": 0
+  }
+}

@@ -1,0 +1,2334 @@
+{
+  "generation_metadata": {
+    "prompt_version": "2.0",
+    "generation_phase": 1,
+    "schema_version": 1,
+    "nodes_generated": 50,
+    "pending_connections_count": 0
+  },
+  "nodes": [
+    {
+      "id": "mathematics_field",
+      "label": "Mathematics",
+      "type": "field",
+      "domain": [
+        "MAT"
+      ],
+      "display_tags": [
+        "foundational",
+        "abstract",
+        "axiomatic",
+        "ancient"
+      ],
+      "description": "Mathematics is the study of abstract structures including number, quantity, shape, and change. It provides the universal language through which all other sciences express their laws and models. From ancient counting systems to modern cryptography, mathematics underpins nearly every human intellectual endeavor, making it the most cross-domain discipline in human knowledge.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Physics uses mathematics as its primary language for expressing laws of nature",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "computer_science_field",
+          "relation_type": "logical",
+          "relation": "Computer science is built on mathematical foundations including logic, algebra, and combinatorics",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "economics_field",
+          "relation_type": "applied",
+          "relation": "Modern economics relies on mathematical modeling, statistics, and calculus for analysis",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "physics_field",
+      "label": "Physics",
+      "type": "field",
+      "domain": [
+        "PHY"
+      ],
+      "display_tags": [
+        "foundational",
+        "experimental",
+        "ancient",
+        "natural_world"
+      ],
+      "description": "Physics investigates the fundamental nature of matter, energy, space, and time through observation, experimentation, and mathematical modeling. It seeks universal laws governing everything from subatomic particles to the structure of the cosmos itself. Its mathematical language has become the indispensable foundation for all engineering disciplines, and its discoveries have directly transformed modern medicine through technologies like MRI imaging and radiation therapy.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Physics expresses all its fundamental laws through mathematical equations",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "logical",
+          "relation": "Chemistry emerges from the physical laws governing atomic and molecular interactions",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "Engineering applies physical principles to design and build structures, machines, and systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "chemistry_field",
+      "label": "Chemistry",
+      "type": "field",
+      "domain": [
+        "CHE"
+      ],
+      "display_tags": [
+        "experimental",
+        "molecular_scale",
+        "ancient",
+        "foundational"
+      ],
+      "description": "Chemistry studies the composition, structure, properties, and transformation of matter at the molecular and atomic level. It bridges physics and biology by explaining how atoms combine to form the molecules of life, materials, and medicines. Chemistry's reach extends into every manufactured object, every drug, and every biological process on Earth.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "The behavior of atoms and molecules is governed by quantum mechanical principles from physics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "biology_field",
+          "relation_type": "applied",
+          "relation": "Biochemistry explains life processes through chemical reactions occurring in living organisms",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Pharmacology and drug development are fundamentally chemical disciplines",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "biology_field",
+      "label": "Biology",
+      "type": "field",
+      "domain": [
+        "BIO"
+      ],
+      "display_tags": [
+        "experimental",
+        "cellular_scale",
+        "ancient",
+        "foundational"
+      ],
+      "description": "Biology is the scientific study of life — its origins, structure, function, growth, evolution, and distribution. It spans scales from molecules and cells to ecosystems and the biosphere. Biology's insights into evolution, genetics, and ecology have transformed medicine, agriculture, environmental policy, and our understanding of humanity's place in nature.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "chemistry_field",
+          "relation_type": "logical",
+          "relation": "All biological processes are ultimately chemical reactions occurring in living systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Medicine applies biological knowledge of the human body to prevent and treat disease",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "ecology_field",
+          "relation_type": "logical",
+          "relation": "Ecology studies the relationships between living organisms and their environments",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "medicine_field",
+      "label": "Medicine",
+      "type": "field",
+      "domain": [
+        "MED"
+      ],
+      "display_tags": [
+        "applied",
+        "ancient",
+        "human_scale",
+        "experimental"
+      ],
+      "description": "Medicine is the science and practice of diagnosing, treating, and preventing disease in humans. It synthesizes knowledge from biology, chemistry, physics, and psychology to maintain and restore health. Medicine drives some of humanity's most urgent ethical debates — around life, death, equity, and the limits of human intervention in nature.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Medical knowledge is grounded in biological understanding of human anatomy and physiology",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "applied",
+          "relation": "Drug development and pharmacology are applications of chemical principles to human health",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "applied",
+          "relation": "Medical ethics applies philosophical reasoning to questions of life, consent, and justice in healthcare",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "engineering_field",
+      "label": "Engineering",
+      "type": "field",
+      "domain": [
+        "ENG"
+      ],
+      "display_tags": [
+        "applied",
+        "ancient",
+        "human_scale",
+        "practical_breakthrough"
+      ],
+      "description": "Engineering applies scientific and mathematical knowledge to design, build, and maintain structures, machines, and systems in the physical world. From the aqueducts of Rome to modern suspension bridges and jet engines, engineering translates abstract principles into tangible solutions. It is the discipline most directly responsible for the material conditions of human civilization.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Engineering solutions are constrained and enabled by the physical laws of the natural world",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Engineering design relies on mathematical modeling, optimization, and calculation",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "technology_field",
+          "relation_type": "applied",
+          "relation": "Modern engineering increasingly integrates digital and computational systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "technology_field",
+      "label": "Technology",
+      "type": "field",
+      "domain": [
+        "TEC"
+      ],
+      "display_tags": [
+        "applied",
+        "20th_century",
+        "information_age",
+        "computational"
+      ],
+      "description": "Technology encompasses the development and application of digital, computational, and information systems to solve problems and extend human capability. Emerging from mathematics and engineering, it now permeates every domain of human activity. Technology raises profound questions about intelligence, privacy, labor, and the future of human society that intersect with philosophy, economics, and law.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Computing is built on mathematical logic, discrete mathematics, and information theory",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "historical",
+          "relation": "Technology evolved from engineering as digital systems became distinct from physical ones",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "applied",
+          "relation": "Technology's social impacts are studied through economics, sociology, and political science",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "social_science_field",
+      "label": "Social Science",
+      "type": "field",
+      "domain": [
+        "SOC"
+      ],
+      "display_tags": [
+        "empirical",
+        "human_scale",
+        "19th_century",
+        "interdisciplinary"
+      ],
+      "description": "Social science studies human society, behavior, and institutions through systematic observation, experimentation, and statistical analysis. It encompasses economics, sociology, political science, psychology, and anthropology as major branches. Its quantitative research methods borrow heavily from mathematics and statistics, while its insights into collective human behavior now critically inform artificial intelligence design, public health policy, and urban planning.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "history_field",
+          "relation_type": "logical",
+          "relation": "Social science draws on historical evidence to understand patterns of human behavior over time",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "applied",
+          "relation": "Statistics and mathematical modeling are core tools for analyzing social data",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "humanities_field",
+          "relation_type": "logical",
+          "relation": "Social science and humanities share questions about human meaning, culture, and value",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "humanities_field",
+      "label": "Humanities",
+      "type": "field",
+      "domain": [
+        "HUM"
+      ],
+      "display_tags": [
+        "ancient",
+        "qualitative",
+        "interpretive",
+        "human_experience"
+      ],
+      "description": "The humanities study human culture, expression, and meaning through language, literature, art, and history. Unlike the natural sciences, they emphasize interpretation and context over prediction and measurement. The humanities ask what it means to be human — questions that no equation can answer but that shape every civilization's values, stories, and self-understanding.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Philosophy provides the humanities with frameworks for analyzing meaning, value, and knowledge",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "arts_field",
+          "relation_type": "logical",
+          "relation": "The arts are both an object of study and a primary mode of expression within the humanities",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Humanities and social sciences overlap in studying human culture, society, and behavior",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "philosophy_field",
+      "label": "Philosophy",
+      "type": "field",
+      "domain": [
+        "PHI"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "abstract",
+        "philosophical"
+      ],
+      "description": "Philosophy examines the most fundamental questions about existence, knowledge, reason, value, and mind. It is the discipline from which all other academic fields originally emerged. Philosophy's methods of rigorous logical analysis and conceptual clarification continue to shape mathematics, science, law, and ethics — making it the silent foundation of all systematic human thought.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "historical",
+          "relation": "Ancient Greek philosophy gave birth to formal logic and axiomatic reasoning, the foundations of mathematics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "science_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of science examines what constitutes valid knowledge and how scientific reasoning works",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "humanities_field",
+          "relation_type": "logical",
+          "relation": "Philosophy underpins humanistic inquiry by providing tools for analyzing meaning and value",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "arts_field",
+      "label": "Arts",
+      "type": "field",
+      "domain": [
+        "ART"
+      ],
+      "display_tags": [
+        "ancient",
+        "creative",
+        "human_experience",
+        "aesthetic"
+      ],
+      "description": "The arts encompass human creative expression through visual, auditory, and performative forms including painting, music, literature, theater, and dance. Art communicates meaning, emotion, and cultural identity in ways that transcend language and logic. Throughout history, the arts have been inseparable from religion, politics, science, and philosophy — reflecting and shaping every civilization.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "humanities_field",
+          "relation_type": "logical",
+          "relation": "The arts are a primary subject of humanistic study and interpretation",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Aesthetics, a branch of philosophy, studies the nature of beauty and artistic experience",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Art history traces human creative expression across time and cultures as a record of civilization",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "history_field",
+      "label": "History",
+      "type": "field",
+      "domain": [
+        "HIS"
+      ],
+      "display_tags": [
+        "ancient",
+        "qualitative",
+        "historiography",
+        "foundational"
+      ],
+      "description": "History as a discipline studies how humans understand, reconstruct, and interpret the past using evidence, sources, and critical methods. It asks not just what happened, but why it matters, how we know, and whose story is being told. Historical thinking is essential to every other discipline — understanding where ideas came from is inseparable from understanding what they mean.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "History provides the empirical record that social sciences use to identify patterns of human behavior",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "humanities_field",
+          "relation_type": "logical",
+          "relation": "History shares the humanistic goal of understanding human meaning and cultural change over time",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of history examines how we construct narratives about the past and what historical explanation means",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "calculus_field",
+      "label": "Calculus",
+      "type": "field",
+      "domain": [
+        "MAT"
+      ],
+      "display_tags": [
+        "17th_century",
+        "foundational",
+        "mathematical_model",
+        "requires_calculus"
+      ],
+      "description": "Calculus is the mathematical study of continuous change, divided into differential calculus — which analyzes rates of change — and integral calculus, which computes accumulated quantities. Developed independently by Newton and Leibniz in the 17th century, it became the indispensable language of physics, engineering, economics, and any field that models change over time.",
+      "era": {
+        "start": 1666,
+        "end": 1696
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Calculus is a core subfield of mathematics built on the foundations of algebra and geometry",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Classical mechanics, electromagnetism, and quantum mechanics are all formulated in the language of calculus",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "economics_field",
+          "relation_type": "applied",
+          "relation": "Marginal analysis, optimization, and dynamic modeling in economics all rely on calculus",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "algebra_field",
+      "label": "Algebra",
+      "type": "field",
+      "domain": [
+        "MAT"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "abstract",
+        "axiomatic"
+      ],
+      "description": "Algebra is the branch of mathematics that studies symbols and the rules for manipulating them to express and solve equations. From balancing ancient trade accounts to describing quantum states, algebra provides the structural language for all of mathematics. Its abstraction — letting letters stand for unknowns — was one of humanity's greatest intellectual leaps.",
+      "era": {
+        "start": 820,
+        "end": 850
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Algebra is one of the foundational branches of mathematics underlying all further study",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "Algebraic manipulation is a prerequisite skill for working with calculus",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "cryptography_concept",
+          "relation_type": "applied",
+          "relation": "Modern cryptography is built on abstract algebra, particularly number theory and group theory",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": true
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Linear algebra and group theory provide the mathematical language for quantum mechanics and relativity",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "geometry_field",
+      "label": "Geometry",
+      "type": "field",
+      "domain": [
+        "MAT"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "axiomatic",
+        "visual_learning"
+      ],
+      "description": "Geometry studies the properties of shapes, spaces, and their relationships. Beginning with Euclid's axiomatic system in ancient Greece, it expanded into non-Euclidean geometries that proved essential for Einstein's theory of relativity. Geometry connects mathematics to the physical world, to art, to architecture, and to the deepest questions in modern physics.",
+      "era": {
+        "start": -300,
+        "end": -270
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Geometry is one of the oldest and most foundational branches of mathematics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Non-Euclidean geometry is the mathematical foundation of Einstein's general theory of relativity",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "arts_field",
+          "relation_type": "applied",
+          "relation": "Geometric principles of proportion, symmetry, and perspective are fundamental to visual art and architecture",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "statistics_field",
+      "label": "Statistics",
+      "type": "field",
+      "domain": [
+        "MAT",
+        "SOC"
+      ],
+      "display_tags": [
+        "17th_century",
+        "probabilistic",
+        "applied",
+        "quantitative"
+      ],
+      "description": "Statistics develops methods for collecting, analyzing, and interpreting data under uncertainty. It is the primary tool through which science tests hypotheses, medicine evaluates treatments, and governments make policy. Statistics sits at the intersection of mathematics and every empirical discipline, making it one of the most broadly applicable fields in modern knowledge.",
+      "era": {
+        "start": 1654,
+        "end": 1700
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Statistics is grounded in probability theory and mathematical analysis",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "applied",
+          "relation": "Statistics is the primary quantitative tool for social science research and policy analysis",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Clinical trials and epidemiology depend entirely on statistical methods to evaluate treatments",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "logic_field",
+      "label": "Logic",
+      "type": "field",
+      "domain": [
+        "MAT",
+        "PHI"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "axiomatic",
+        "philosophical"
+      ],
+      "description": "Logic studies the principles of valid reasoning and inference. Originating in ancient Greek philosophy, it became the formal foundation of mathematics and computer science in the 20th century. Logic connects philosophy, mathematics, and technology — every proof, every algorithm, and every argument relies on its rules, making it the invisible backbone of rational thought.",
+      "era": {
+        "start": -350,
+        "end": -320
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Formal logic provides the axiomatic foundation on which all mathematical proof is built",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "historical",
+          "relation": "Logic originated in Aristotle's systematic study of valid argument forms in ancient Greece",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "computer_science_field",
+          "relation_type": "applied",
+          "relation": "Boolean logic and formal systems are the direct mathematical foundation of computing",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "computer_science_field",
+      "label": "Computer Science",
+      "type": "field",
+      "domain": [
+        "TEC",
+        "MAT"
+      ],
+      "display_tags": [
+        "20th_century",
+        "computational",
+        "algorithmic",
+        "information_age"
+      ],
+      "description": "Computer science studies computation, algorithms, data structures, and the theory and practice of building software and hardware systems. Born from mathematics and logic in the mid-20th century, it has become the infrastructural discipline of modern civilization. Computer science now intersects with every other field, from genomics to linguistics to art, through the shared tool of computation.",
+      "era": {
+        "start": 1936,
+        "end": 1950
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Computer science is grounded in mathematical logic, discrete mathematics, and computability theory",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "logic_field",
+          "relation_type": "logical",
+          "relation": "Turing's foundational work on computation emerged directly from mathematical logic",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "technology_field",
+          "relation_type": "logical",
+          "relation": "Computer science provides the theoretical foundations for all technological software development",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "ecology_field",
+      "label": "Ecology",
+      "type": "field",
+      "domain": [
+        "BIO"
+      ],
+      "display_tags": [
+        "19th_century",
+        "ecological_scale",
+        "systems_biology",
+        "environmental_application"
+      ],
+      "description": "Ecology studies the complex relationships between living organisms and their physical environments, examining interactions from individual organisms to entire planetary biospheres. It reveals how energy flows and nutrients cycle through deeply interconnected natural systems. Its mathematical models of population dynamics and resource competition share deep structural similarities with economic market models, epidemiological disease forecasting, and network science.",
+      "era": {
+        "start": 1866,
+        "end": 1900
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Ecology is a subdiscipline of biology focused on organisms in their environmental context",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "applied",
+          "relation": "Biogeochemical cycles that sustain ecosystems involve chemical processes in soil, water, and atmosphere",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "applied",
+          "relation": "Environmental policy and conservation require integrating ecological science with economics and political science",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "genetics_field",
+      "label": "Genetics",
+      "type": "field",
+      "domain": [
+        "BIO"
+      ],
+      "display_tags": [
+        "19th_century",
+        "molecular_scale",
+        "foundational",
+        "experimental"
+      ],
+      "description": "Genetics studies how biological information is stored in DNA, transmitted between generations, and expressed as physical traits. From Mendel's pea plants to CRISPR gene editing, genetics has revolutionized medicine, agriculture, and our understanding of evolution. It sits at the intersection of biology, chemistry, and increasingly, computer science through bioinformatics.",
+      "era": {
+        "start": 1866,
+        "end": 1900
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Genetics is a core subfield of biology explaining the molecular basis of heredity and variation",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "logical",
+          "relation": "DNA and RNA are chemical molecules whose structure determines genetic information",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Genetic medicine including gene therapy and pharmacogenomics applies genetics directly to human health",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "evolution_field",
+      "label": "Evolution",
+      "type": "field",
+      "domain": [
+        "BIO"
+      ],
+      "display_tags": [
+        "19th_century",
+        "foundational",
+        "controversial",
+        "paradigm_shift"
+      ],
+      "description": "Evolutionary biology studies how living organisms change across generations through mechanisms including natural selection, mutation, and genetic drift. Darwin's theory of evolution by natural selection is the unifying framework of all modern biology. It extends beyond biology into psychology, economics, and philosophy, reshaping how humans understand their own origins and nature.",
+      "era": {
+        "start": 1859,
+        "end": 1900
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Evolution is the central unifying theory of all biological sciences",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "genetics_field",
+          "relation_type": "logical",
+          "relation": "Genetics provides the molecular mechanism through which evolutionary change occurs and is inherited",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "applied",
+          "relation": "Evolutionary theory has profound implications for philosophy of mind, ethics, and the nature of human consciousness",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "neuroscience_field",
+      "label": "Neuroscience",
+      "type": "field",
+      "domain": [
+        "BIO",
+        "MED"
+      ],
+      "display_tags": [
+        "20th_century",
+        "cellular_scale",
+        "interdisciplinary",
+        "experimental"
+      ],
+      "description": "Neuroscience studies the nervous system — its structure, function, development, and disorders. By bridging biology, medicine, psychology, and increasingly computer science, it seeks to explain how brains generate thought, perception, memory, and consciousness. Neuroscience sits at the frontier of the deepest unsolved problem in science: understanding the biological basis of mind.",
+      "era": {
+        "start": 1890,
+        "end": 1920
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Neuroscience studies the nervous system as a biological organ system",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Neurology and psychiatry apply neuroscience to diagnose and treat disorders of the brain and mind",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "computer_science_field",
+          "relation_type": "applied",
+          "relation": "Artificial neural networks in machine learning are directly inspired by the structure of biological neurons",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "quantum_mechanics_field",
+      "label": "Quantum Mechanics",
+      "type": "field",
+      "domain": [
+        "PHY"
+      ],
+      "display_tags": [
+        "20th_century",
+        "foundational",
+        "philosophical",
+        "paradigm_shift"
+      ],
+      "description": "Quantum mechanics describes the behavior of matter and energy at the smallest scales, where particles behave as waves and classical physics breaks down entirely. Developed in the early 20th century, it underpins modern chemistry, materials science, and electronics. Its philosophical implications — including uncertainty and the role of observation — remain the most debated in all of physics.",
+      "era": {
+        "start": 1900,
+        "end": 1930
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Quantum mechanics is the foundational theory of modern physics at atomic and subatomic scales",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "applied",
+          "relation": "The electronic structure of atoms and the nature of chemical bonds are explained by quantum mechanics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "applied",
+          "relation": "Quantum mechanics raises fundamental philosophical questions about determinism, reality, and the nature of observation",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "thermodynamics_field",
+      "label": "Thermodynamics",
+      "type": "field",
+      "domain": [
+        "PHY",
+        "CHE"
+      ],
+      "display_tags": [
+        "19th_century",
+        "foundational",
+        "industrial_age",
+        "energy"
+      ],
+      "description": "Thermodynamics studies heat, energy, and the laws governing their transformation and flow. Its four fundamental laws describe why engines work, why ice melts, and ultimately why time moves forward. Thermodynamics connects physics and chemistry to engineering, biology, and cosmology — entropy, its central concept, is one of the most profound ideas in all of science.",
+      "era": {
+        "start": 1824,
+        "end": 1870
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Thermodynamics is a core branch of physics describing the macroscopic behavior of energy and matter",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "applied",
+          "relation": "Chemical thermodynamics determines whether reactions occur spontaneously and how much energy they release",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "The design of engines, refrigerators, and power plants is governed by thermodynamic principles",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "electromagnetism_field",
+      "label": "Electromagnetism",
+      "type": "field",
+      "domain": [
+        "PHY"
+      ],
+      "display_tags": [
+        "19th_century",
+        "foundational",
+        "wave",
+        "field"
+      ],
+      "description": "Electromagnetism studies electric and magnetic fields and their unification into a single force governing light, radiation, and the interactions of charged particles. Maxwell's equations, formulated in the 1860s, unified electricity, magnetism, and optics and predicted the existence of radio waves. Electromagnetism is the basis for all electrical technology, communications, and modern electronics.",
+      "era": {
+        "start": 1820,
+        "end": 1873
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Electromagnetism is one of the four fundamental forces of physics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "Electrical engineering applies electromagnetic principles to design circuits, motors, and communication systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "quantum_mechanics_field",
+          "relation_type": "logical",
+          "relation": "Quantum electrodynamics extends electromagnetic theory into the quantum domain",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "economics_field",
+      "label": "Economics",
+      "type": "field",
+      "domain": [
+        "SOC",
+        "MAT"
+      ],
+      "display_tags": [
+        "18th_century",
+        "quantitative",
+        "applied",
+        "foundational"
+      ],
+      "description": "Economics studies how individuals, institutions, and societies allocate scarce resources. Using mathematical models, statistical analysis, and historical evidence, it explains prices, growth, inequality, trade, and the consequences of policy. Economics extends its reach into political science, psychology, and sociology, shaping every major decision from personal budgets to global trade agreements.",
+      "era": {
+        "start": 1776,
+        "end": 1800
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "applied",
+          "relation": "Economic models use calculus, statistics, and game theory as their primary analytical tools",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Economics is a social science studying human decision-making and resource allocation in society",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Economic history examines how material conditions and resource systems have shaped human civilizations",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "psychology_field",
+      "label": "Psychology",
+      "type": "field",
+      "domain": [
+        "SOC",
+        "BIO"
+      ],
+      "display_tags": [
+        "19th_century",
+        "empirical",
+        "human_experience",
+        "experimental"
+      ],
+      "description": "Psychology studies human thought, emotion, perception, and behavior through scientific observation and experiment. It bridges biology — by examining brain processes — and social science — by studying behavior in social contexts. Psychology's insights into motivation, cognition, and mental health influence medicine, education, law, economics, and the design of virtually every human-facing system.",
+      "era": {
+        "start": 1879,
+        "end": 1900
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Biological psychology studies how brain structures and neurochemistry produce behavior and mental states",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Social psychology examines how group dynamics and cultural context shape individual behavior",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Clinical psychology and psychiatry apply psychological knowledge to the treatment of mental disorders",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "linguistics_field",
+      "label": "Linguistics",
+      "type": "field",
+      "domain": [
+        "HUM",
+        "SOC"
+      ],
+      "display_tags": [
+        "19th_century",
+        "foundational",
+        "interdisciplinary",
+        "human_experience"
+      ],
+      "description": "Linguistics is the scientific study of language — its structure, acquisition, use, and change over time. Language is the defining human capability, shaping thought, identity, and social organization. Linguistics connects the humanities and social sciences to cognitive science, neuroscience, and artificial intelligence, making it central to understanding both human minds and machine communication.",
+      "era": {
+        "start": 1816,
+        "end": 1870
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "humanities_field",
+          "relation_type": "logical",
+          "relation": "Linguistics studies language as the medium through which culture, literature, and meaning are transmitted",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Sociolinguistics examines how language varies across social groups and shapes social identity",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "computer_science_field",
+          "relation_type": "applied",
+          "relation": "Natural language processing in AI draws directly on linguistic theories of grammar and semantics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "philosophy_of_science_field",
+      "label": "Philosophy of Science",
+      "type": "field",
+      "domain": [
+        "PHI",
+        "HIS"
+      ],
+      "display_tags": [
+        "20th_century",
+        "philosophical",
+        "foundational",
+        "epistemology"
+      ],
+      "description": "Philosophy of science examines the foundations, methods, and implications of scientific knowledge. It asks what distinguishes science from non-science, how theories relate to evidence, and whether scientific progress reveals truth about reality. Its insights shape how scientists understand their own work and have profound implications for medicine, policy, and public trust in expertise.",
+      "era": {
+        "start": 1920,
+        "end": 1960
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of science is a subfield of epistemology — the philosophical study of knowledge and justification",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "logical",
+          "relation": "History of science provides the empirical cases that philosophy of science uses to develop its theories",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Quantum mechanics and relativity triggered the most important 20th-century debates in philosophy of science",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "ethics_field",
+      "label": "Ethics",
+      "type": "field",
+      "domain": [
+        "PHI"
+      ],
+      "display_tags": [
+        "ancient",
+        "philosophical",
+        "normative",
+        "human_experience"
+      ],
+      "description": "Ethics is the branch of philosophy that investigates moral principles — what is right, what is good, and how humans ought to act. From Aristotle's virtue ethics to modern bioethics and AI ethics, it provides frameworks for navigating human choices. Ethics is inseparable from law, medicine, politics, and technology, wherever human decisions affect other beings.",
+      "era": {
+        "start": -350,
+        "end": -320
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Ethics is one of the three core branches of philosophy alongside epistemology and metaphysics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Bioethics applies ethical frameworks to decisions about medical treatment, research, and genetic intervention",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "technology_field",
+          "relation_type": "applied",
+          "relation": "AI ethics examines the moral responsibilities involved in designing and deploying artificial intelligence systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "epistemology_field",
+      "label": "Epistemology",
+      "type": "field",
+      "domain": [
+        "PHI"
+      ],
+      "display_tags": [
+        "ancient",
+        "philosophical",
+        "foundational",
+        "abstract"
+      ],
+      "description": "Epistemology is the branch of philosophy concerned with the nature, sources, and limits of knowledge. It asks how we know what we know, what justifies belief, and what the difference is between knowledge and mere opinion. Epistemology underlies every other discipline — science, mathematics, history, and law all depend on assumptions about knowledge that epistemology examines.",
+      "era": {
+        "start": -400,
+        "end": -350
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Epistemology is one of the three core branches of philosophy, alongside ethics and metaphysics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_of_science_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of science is applied epistemology focused on the specific knowledge claims of the sciences",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Historiography raises epistemological questions about how historical knowledge is possible and reliable",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "music_theory_field",
+      "label": "Music Theory",
+      "type": "field",
+      "domain": [
+        "ART",
+        "MAT"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "wave",
+        "mathematical_model"
+      ],
+      "description": "Music theory studies the structure, composition, and perception of music through analysis of pitch, rhythm, harmony, and form. Since ancient Greece, thinkers have noted music's deep mathematical structure — harmonic ratios, wave frequencies, and pattern. Music theory bridges art and mathematics, with applications in acoustics, psychology of perception, and digital audio processing.",
+      "era": {
+        "start": -550,
+        "end": -400
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "arts_field",
+          "relation_type": "logical",
+          "relation": "Music theory provides the analytical framework for understanding musical composition and performance",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Musical intervals, scales, and rhythm have precise mathematical descriptions through ratios and patterns",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Acoustics — the physics of sound waves — explains why musical instruments produce specific tones",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "architecture_field",
+      "label": "Architecture",
+      "type": "field",
+      "domain": [
+        "ART",
+        "ENG"
+      ],
+      "display_tags": [
+        "ancient",
+        "applied",
+        "human_scale",
+        "creative"
+      ],
+      "description": "Architecture is the art and science of designing and constructing buildings and spaces for human use. It balances structural engineering with aesthetic vision, cultural meaning, and social function. Architecture is a record of civilization — every era's buildings reflect its values, technologies, and power structures, making it simultaneously an art, an engineering discipline, and a historical document.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "arts_field",
+          "relation_type": "logical",
+          "relation": "Architecture is one of the oldest art forms, expressing cultural values and aesthetic vision through built space",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "logical",
+          "relation": "Structural engineering principles determine what architectural forms are physically possible",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Architectural history reads buildings as primary sources for understanding past societies and civilizations",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "political_science_field",
+      "label": "Political Science",
+      "type": "field",
+      "domain": [
+        "SOC"
+      ],
+      "display_tags": [
+        "ancient",
+        "empirical",
+        "normative",
+        "human_experience"
+      ],
+      "description": "Political science studies power, governance, institutions, and the collective organization of human societies at every scale. From Plato's Republic to modern computational electoral analysis, it examines how binding decisions are made collectively and how authority is legitimized. Its use of game theory and statistical modeling creates deep bridges to mathematics, while its normative theories of justice connect fundamentally to philosophy and ethics.",
+      "era": {
+        "start": -380,
+        "end": -330
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Political science is a core social science studying how humans organize collective decision-making",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Political history examines how states, empires, and governments have risen, governed, and fallen",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Political philosophy examines the normative foundations of justice, legitimacy, and the state",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "anthropology_field",
+      "label": "Anthropology",
+      "type": "field",
+      "domain": [
+        "SOC",
+        "HIS"
+      ],
+      "display_tags": [
+        "19th_century",
+        "empirical",
+        "interdisciplinary",
+        "human_experience"
+      ],
+      "description": "Anthropology studies human beings in all their biological and cultural diversity across time and space. Combining biological, archaeological, linguistic, and cultural approaches, it asks what it means to be human. Anthropology bridges the natural sciences and humanities, revealing that human nature is inseparable from culture and that diversity is the defining characteristic of our species.",
+      "era": {
+        "start": 1860,
+        "end": 1900
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Cultural anthropology studies how human societies organize meaning, kinship, ritual, and social life",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Biological anthropology studies human evolution, genetics, and physical variation across populations",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Archaeology, a subfield of anthropology, recovers evidence of past human societies through material remains",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "law_field",
+      "label": "Law",
+      "type": "field",
+      "domain": [
+        "SOC",
+        "PHI"
+      ],
+      "display_tags": [
+        "ancient",
+        "normative",
+        "applied",
+        "human_experience"
+      ],
+      "description": "Law is the system of rules created and enforced by societies to regulate behavior, resolve disputes, and protect rights. As both a practical institution and an intellectual discipline, it draws on philosophy, history, economics, and social science. Law shapes every dimension of human social life and raises fundamental questions about justice, authority, and the relationship between individuals and the state.",
+      "era": {
+        "start": -1750,
+        "end": -1700
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Legal philosophy examines the nature of justice, rights, and the moral foundations of legal systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "logical",
+          "relation": "Law is a social institution that shapes and is shaped by economic, political, and cultural forces",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "Legal history traces how societies have constructed and revised their systems of rules and justice",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "astronomy_field",
+      "label": "Astronomy",
+      "type": "field",
+      "domain": [
+        "PHY"
+      ],
+      "display_tags": [
+        "ancient",
+        "observational",
+        "cosmic_scale",
+        "foundational"
+      ],
+      "description": "Astronomy studies celestial objects and phenomena — stars, planets, galaxies, and the universe as a whole. The oldest of the natural sciences, it drove the development of mathematics, navigation, and eventually the scientific revolution. Modern astronomy merges physics, chemistry, and computer science to reveal the origin, structure, and ultimate fate of the cosmos.",
+      "era": null,
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Astrophysics applies physical laws to understand the structure, evolution, and behavior of stars and galaxies",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Mathematical models and calculus are essential tools for predicting celestial motions and cosmic evolution",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "historical",
+          "relation": "Ancient astronomical observations in Babylon, Greece, and China were among the first systematic scientific activities",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "materials_science_field",
+      "label": "Materials Science",
+      "type": "field",
+      "domain": [
+        "ENG",
+        "CHE",
+        "PHY"
+      ],
+      "display_tags": [
+        "20th_century",
+        "applied",
+        "molecular_scale",
+        "interdisciplinary"
+      ],
+      "description": "Materials science studies the structure, properties, processing, and applications of solid materials including metals, ceramics, polymers, composites, and semiconductors. By connecting atomic-level quantum physics with macroscale engineering applications, it enables critical technological breakthroughs ranging from stronger bridges to faster computer chips. Its quantum mechanical and thermodynamic foundations link it deeply to both chemistry and condensed matter physics.",
+      "era": {
+        "start": 1950,
+        "end": 1970
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "Materials science provides engineers with the knowledge to select and design materials for specific applications",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "logical",
+          "relation": "The chemical composition and bonding of materials determine their physical properties",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Condensed matter physics explains the quantum mechanical behavior of electrons in solid materials",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "environmental_science_field",
+      "label": "Environmental Science",
+      "type": "field",
+      "domain": [
+        "BIO",
+        "CHE"
+      ],
+      "display_tags": [
+        "20th_century",
+        "interdisciplinary",
+        "applied",
+        "ecological_scale"
+      ],
+      "description": "Environmental science studies the interactions between human activity and natural systems — atmosphere, water, soil, and living organisms. Drawing on biology, chemistry, physics, and social science, it addresses the consequences of pollution, climate change, and resource depletion. Environmental science is inseparable from policy, economics, and ethics in navigating the planetary crisis of the 21st century.",
+      "era": {
+        "start": 1960,
+        "end": 1980
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "ecology_field",
+          "relation_type": "logical",
+          "relation": "Environmental science applies ecological principles to understanding and managing human impacts on natural systems",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "logical",
+          "relation": "Atmospheric and water chemistry are central to understanding pollution and climate mechanisms",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "social_science_field",
+          "relation_type": "applied",
+          "relation": "Environmental policy requires integrating scientific findings with economics, political science, and ethics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "cognitive_science_field",
+      "label": "Cognitive Science",
+      "type": "field",
+      "domain": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "display_tags": [
+        "20th_century",
+        "interdisciplinary",
+        "computational",
+        "human_experience"
+      ],
+      "description": "Cognitive science studies the nature of mind and intelligence through an interdisciplinary lens combining neuroscience, psychology, linguistics, philosophy, and computer science. It asks how brains process information, how language encodes thought, and whether machines can think. Cognitive science is the field where human self-understanding and artificial intelligence most directly meet.",
+      "era": {
+        "start": 1956,
+        "end": 1980
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "neuroscience_field",
+          "relation_type": "logical",
+          "relation": "Cognitive neuroscience studies the brain mechanisms underlying perception, memory, and reasoning",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "linguistics_field",
+          "relation_type": "logical",
+          "relation": "Psycholinguistics studies how the brain acquires, processes, and produces language",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "computer_science_field",
+          "relation_type": "applied",
+          "relation": "Artificial intelligence research draws on cognitive science models of human reasoning and perception",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "historiography_field",
+      "label": "Historiography",
+      "type": "field",
+      "domain": [
+        "HIS"
+      ],
+      "display_tags": [
+        "ancient",
+        "methodology",
+        "epistemology",
+        "foundational"
+      ],
+      "description": "Historiography is the study of how history is written — the methods, theories, and interpretive frameworks historians use to reconstruct the past. It examines whose voices are preserved, which events are deemed significant, and how the present shapes our reading of the past. Historiography makes visible the choices behind every historical narrative and is the self-critical foundation of the discipline.",
+      "era": {
+        "start": -450,
+        "end": -400
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "history_field",
+          "relation_type": "logical",
+          "relation": "Historiography is the methodological and theoretical core of the historical discipline",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "philosophy_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of history overlaps with historiography in examining the logic and ethics of historical explanation",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "epistemology_field",
+          "relation_type": "logical",
+          "relation": "Historiography raises epistemological questions about the nature and limits of historical knowledge",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "information_theory_field",
+      "label": "Information Theory",
+      "type": "field",
+      "domain": [
+        "MAT",
+        "TEC",
+        "PHI"
+      ],
+      "display_tags": [
+        "20th_century",
+        "foundational",
+        "computational",
+        "paradigm_shift"
+      ],
+      "description": "Information theory, founded by Claude Shannon in 1948, provides the mathematical framework for quantifying, storing, and transmitting information. It defines the fundamental limits of communication systems and underpins all digital technology. Its concept of entropy connects mathematics, physics, and philosophy, revealing deep connections between information, thermodynamics, and the nature of knowledge itself.",
+      "era": {
+        "start": 1948,
+        "end": 1960
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Information theory is built on probability theory and uses mathematical entropy as its central measure",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "technology_field",
+          "relation_type": "applied",
+          "relation": "All digital communication — the internet, compression, error correction — is built on information theory",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "thermodynamics_field",
+          "relation_type": "conceptual",
+          "relation": "Shannon entropy is mathematically identical in form to thermodynamic entropy, connecting information and physics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "game_theory_field",
+      "label": "Game Theory",
+      "type": "field",
+      "domain": [
+        "MAT",
+        "SOC"
+      ],
+      "display_tags": [
+        "20th_century",
+        "mathematical_model",
+        "applied",
+        "interdisciplinary"
+      ],
+      "description": "Game theory is the mathematical study of strategic decision-making among rational agents. Developed by von Neumann and Nash in the mid-20th century, it models competition, cooperation, and negotiation in economics, biology, political science, and computer science. Game theory reveals that individual rationality and collective outcomes can dramatically diverge — a finding with profound implications across human knowledge.",
+      "era": {
+        "start": 1928,
+        "end": 1950
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Game theory is a branch of applied mathematics using formal models of strategic interaction",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "economics_field",
+          "relation_type": "applied",
+          "relation": "Game theory is the primary tool for modeling market competition, auctions, and bargaining in economics",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "evolution_field",
+          "relation_type": "applied",
+          "relation": "Evolutionary game theory models how strategies spread through populations under natural selection",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "science_field",
+      "label": "Science",
+      "type": "field",
+      "domain": [
+        "PHY",
+        "CHE",
+        "BIO",
+        "MAT"
+      ],
+      "display_tags": [
+        "ancient",
+        "foundational",
+        "empirical",
+        "paradigm_shift"
+      ],
+      "description": "Science is the systematic enterprise of building and organizing knowledge about the natural world through observation, hypothesis, and experiment. As a method and a culture, it emerged from ancient Greek philosophy and transformed the world through the Scientific Revolution. Science is not merely a collection of facts but a self-correcting process — the most reliable method humanity has developed for understanding reality.",
+      "era": {
+        "start": -600,
+        "end": -400
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "philosophy_of_science_field",
+          "relation_type": "logical",
+          "relation": "Philosophy of science examines what makes science a reliable method for producing knowledge",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "Mathematics provides the language and tools through which scientific theories are expressed and tested",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "history_field",
+          "relation_type": "applied",
+          "relation": "History of science traces how scientific knowledge and institutions have developed across cultures and centuries",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    }
+  ]
+}

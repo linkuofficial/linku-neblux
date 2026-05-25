@@ -1,0 +1,292 @@
+{
+  "generated_at": "2026-05-25T13:30:58.905773+00:00",
+  "source_nodes": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "quality": {
+    "node_count": 627,
+    "grade_distribution": {
+      "A": 585,
+      "B": 42,
+      "C": 0,
+      "D": 0,
+      "F": 0
+    },
+    "avg_total_score": 23.469,
+    "avg_description_score": 9.455,
+    "avg_connection_score": 9.061,
+    "avg_information_score": 4.954,
+    "top_diagnostics": [
+      [
+        "SIGNIFICANCE could be stronger",
+        77
+      ],
+      [
+        "Limited cross-domain reach in connections",
+        73
+      ],
+      [
+        "WHAT element weak or missing in opening",
+        53
+      ],
+      [
+        "SIGNIFICANCE element weak or missing",
+        21
+      ],
+      [
+        "No cross-domain connections resolved",
+        14
+      ],
+      [
+        "BRIDGE element missing — no cross-domain reference",
+        12
+      ],
+      [
+        "All connections use same relation_type",
+        10
+      ],
+      [
+        "BRIDGE implied but no specific domain mentioned",
+        7
+      ]
+    ],
+    "lowest_20_nodes": [
+      {
+        "id": "fundamental_theorem_of_calculus_concept",
+        "label": "Fundamental Theorem of Calculus",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "historiography_field",
+        "label": "Historiography",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "cultural_relativism_concept",
+        "label": "Cultural Relativism",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "stability_and_instability_concept",
+        "label": "Stability and Instability",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      {
+        "id": "natural_language_processing_concept",
+        "label": "Natural Language Processing",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "french_revolution_event",
+        "label": "French Revolution",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "combustion_chemistry_concept",
+        "label": "Combustion Chemistry",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      {
+        "id": "connected_history_concept",
+        "label": "Connected/Global History",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "medicinal_chemistry_concept",
+        "label": "Medicinal Chemistry",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "infectious_disease_concept",
+        "label": "Infectious Disease",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "street_art_concept",
+        "label": "Street Art and Graffiti",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      {
+        "id": "computer_science_field",
+        "label": "Computer Science",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "electromagnetism_field",
+        "label": "Electromagnetism",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "architecture_field",
+        "label": "Architecture",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "materials_science_field",
+        "label": "Materials Science",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "limit_concept",
+        "label": "Limit",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "catalysis_concept",
+        "label": "Catalysis",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "photosynthesis_concept",
+        "label": "Photosynthesis",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "social_contract_concept",
+        "label": "Social Contract",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "periodization_concept",
+        "label": "Periodization",
+        "grade": "B",
+        "score": 21,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "nodes": 627,
+    "nodes_with_errors": 0,
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "i18n_labels": {
+    "counts": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "keyset_aligned_to_en": true,
+    "missing_vs_en": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    }
+  },
+  "i18n_descriptions": {
+    "baseline_source": "data/all_nodes.json descriptions",
+    "baseline_count": 627,
+    "raw_counts": {
+      "en": 0,
+      "zh": 627,
+      "ja": 6
+    },
+    "effective_counts_after_fallback": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "missing_vs_baseline_after_fallback": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    },
+    "raw_coverage_pct": {
+      "en": 0.0,
+      "zh": 100.0,
+      "ja": 0.96
+    },
+    "effective_coverage_pct": {
+      "en": 100.0,
+      "zh": 100.0,
+      "ja": 100.0
+    }
+  }
+}

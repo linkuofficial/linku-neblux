@@ -1,0 +1,257 @@
+{
+  "timestamp": "2026-05-25T13:25:48.941248+00:00",
+  "batch": {
+    "number": 1,
+    "start": 0,
+    "end": 10,
+    "size": 10
+  },
+  "candidates_source": "p3_candidates_significance.json",
+  "total_candidates": 53,
+  "batch_results": [
+    {
+      "node_id": "aesthetic_theory_concept",
+      "label": "Aesthetic Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 18,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Aesthetic theory is a branch of philosophy that systematically examines the nature of beauty, taste, sensory experience, and artistic value — investigating whether these qualities are objective features of the world or subjective responses of the perceiver. It encompasses foundational questions about what makes something art, how aesthetic judgments can be justified, and why certain experiences produce pleasure, discomfort, or sublimity.\n\nThe significance of aesthetic theory extends well beyond the arts: it provides the conceptual vocabulary through which cultures define, contest, and transmit value. From Plato's suspicion of art's power over reason, to Kant's grounding of aesthetic judgment in universal human cognition, to contemporary debates about digital and AI-generated art, aesthetic theory has continually reshaped how societies understand creativity, authenticity, and meaning. Its insights have informed movements in ethics, political philosophy, and cultural criticism, demonstrating that questions of beauty are never merely decorative.\n\nAs a bridge discipline, aesthetic theory connects philosophy, sociology, cognitive science, and the arts in productive dialogue. Sociologists such as Bourdieu revealed how aesthetic preferences reinforce social stratification, while cognitive scientists investigate the neural correlates of aesthetic experience. Art historians, literary critics, and architects all draw on aesthetic frameworks to evaluate and interpret their respective practices. This cross-domain reach makes aesthetic theory an indispensable foundation for anyone seeking to understand how human beings create, judge, and",
+      "original_description": "Aesthetic theory investigates the nature of beauty, taste, and artistic value — asking whether beaut..."
+    },
+    {
+      "node_id": "digital_humanities_concept",
+      "label": "Digital Humanities",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Digital humanities is an interdisciplinary field that applies computational and digital methods to the study, interpretation, and dissemination of humanistic knowledge across literature, history, linguistics, philosophy, and cultural studies. It encompasses practices such as text mining, corpus analysis, network visualization, geographic information systems (GIS), digital archiving, and machine learning applied to historical and literary sources.\n\nThe significance of digital humanities lies in its capacity to transform scholarship at scale: where a researcher might spend years analyzing hundreds of texts manually, computational tools enable systematic examination of millions of documents, revealing patterns, trends, and connections previously inaccessible to human readers. This methodological expansion has produced concrete breakthroughs — recovering marginalized voices in historical archives, tracing the evolution of language across centuries, and challenging long-held interpretive assumptions through quantitative evidence.\n\nAs a bridging discipline, digital humanities connects humanistic inquiry with computer science, mathematics, library science, and cognitive science in substantive ways. Its network analysis methods draw directly from graph theory and sociology; its natural language processing pipelines rely on statistics and machine learning; its archival practices inform information science and data preservation standards. Conversely, humanities questions — about meaning, context, ethics, and cultural bias — critically shape how computational tools are designed and evaluated, making digital humanities a two-way intellectual exchange rather than a simple application of technology to traditional scholarship.",
+      "original_description": "Digital humanities applies computational methods to humanistic inquiry: text mining literature corpo..."
+    },
+    {
+      "node_id": "diplomatic_history_concept",
+      "label": "Diplomatic History",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Diplomatic history is the scholarly study of international relations conducted through the systematic analysis of negotiations, treaties, alliances, and the decisions of state actors across time. It examines how governments communicate, compete, and cooperate, tracing the formal and informal mechanisms through which nations pursue their interests and manage conflict.\n\nThe field carries foundational significance for understanding how the modern international order was constructed and sustained. By documenting the origins of landmark agreements—from the Peace of Westphalia to the United Nations Charter—diplomatic history reveals the contingent, human-driven processes behind structures that shape global governance, sovereignty, and international law. It demonstrates that geopolitical outcomes are rarely inevitable, but are instead products of deliberate choices, miscalculations, and negotiated compromises.\n\nAs a discipline, diplomatic history serves as a critical bridge across multiple fields. It informs political science by grounding theoretical models of state behavior in empirical precedent. It intersects with economics through analysis of trade agreements and sanctions regimes. It connects to philosophy and ethics by interrogating the moral frameworks that justify or constrain state conduct, including concepts of just war and sovereign equality. Cultural historians draw on diplomatic archives to understand how ideological worldviews shape foreign policy decisions. For university learners, mastering diplomatic history provides an analytical framework for interpreting contemporary international conflicts, multilateral institutions, and the enduring tension between national interest and collective global responsibility.",
+      "original_description": "Diplomatic history studies international relations through the analysis of negotiations, treaties, a..."
+    },
+    {
+      "node_id": "narrative_concept",
+      "label": "Narrative",
+      "status": "completed",
+      "before": {
+        "description_score": 6,
+        "total_score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Narrative is a fundamental cognitive and communicative structure through which humans organize sequences of events into causally and temporally coherent wholes, assigning meaning, agency, and consequence to experience. At its core, a narrative requires a temporal arc, a sense of causality, and a perspective from which events are interpreted — distinguishing it from mere lists or chronicles of facts.\n\nThe significance of narrative extends far beyond literary analysis. Cognitive scientists identify narrative as a primary mode of human memory and identity formation; we understand ourselves and others through the stories we construct and inhabit. In psychology, narrative therapy reveals how reframing personal stories can reshape mental health outcomes. In history and sociology, the study of master narratives exposes how collective identities, power structures, and social movements are sustained or challenged through shared storytelling.\n\nNarrative functions as a powerful bridge across disciplines. In biology and medicine, disease narratives shape patient experience and clinical communication, influencing diagnosis and treatment adherence. In data science and science communication, researchers increasingly recognize that embedding findings within narrative frameworks dramatically improves public comprehension and retention. In law, the construction of competing narratives determines courtroom outcomes. Philosophy of mind draws on narrative theory to address questions of personal identity and consciousness over time.\n\nBy operating simultaneously as a cognitive tool, a social mechanism, and an artistic form, narrative occupies a uniquely central position in understanding what it means to be human.",
+      "original_description": "Narrative is the fundamental human cognitive structure of organizing experience into causally connec..."
+    },
+    {
+      "node_id": "historical_method_concept",
+      "label": "Historical Method",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "The historical method is a rigorous, systematic framework of principles and techniques that historians employ to locate, evaluate, and interpret primary and secondary sources in order to construct reliable accounts of the past. It encompasses source criticism (distinguishing authentic documents from forgeries), corroboration across independent evidence, contextual analysis, and the careful distinction between what sources explicitly state and what they imply.\n\nIts significance lies in establishing history as a disciplined intellectual enterprise rather than mere storytelling or political narrative. By demanding evidentiary standards comparable to those in the natural sciences, the historical method transformed how human societies understand causation, change over time, and collective memory. It became foundational to modern scholarship precisely because it introduced reproducible, contestable reasoning into humanistic inquiry—allowing findings to be challenged, revised, and refined across generations.\n\nThe method's reach extends well beyond academic history. In philosophy, it informs epistemological debates about objectivity, interpretation, and the nature of historical truth. In sociology and anthropology, it underpins qualitative research methodologies concerned with reconstructing social contexts. In law, principles of source authentication and corroboration directly mirror legal standards of evidence. Archival science, digital humanities, and even investigative journalism draw on its core logic. By providing a shared standard for evaluating claims about the past, the historical method serves as an intellectual bridge connecting disciplines that all depend, in varying degrees, on understanding how evidence should be gathered, assessed",
+      "original_description": "The historical method is the systematic set of techniques historians use to evaluate sources, establ..."
+    },
+    {
+      "node_id": "computer_science_field",
+      "label": "Computer Science",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 21,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Computer science is the systematic study of computation, algorithms, data structures, programming languages, and the theoretical foundations underlying the design and analysis of software and hardware systems. It encompasses both formal mathematical theory—such as computability, complexity, and logic—and the engineering practice of building reliable, efficient computational systems.\n\nThe significance of computer science to modern civilization can scarcely be overstated. It has fundamentally transformed how knowledge is stored, transmitted, and processed, enabling breakthroughs across virtually every intellectual and industrial domain. From the development of the internet and artificial intelligence to advances in cryptography and distributed systems, computer science provides the conceptual and practical infrastructure of the digital age.\n\nIts cross-disciplinary reach is profound and specific. In biology, computational methods power genomic sequencing and protein structure prediction. In mathematics, formal verification and automated theorem proving extend the boundaries of proof. In linguistics, natural language processing models illuminate the structure of human communication. In physics and chemistry, simulation algorithms make tractable problems that are analytically unsolvable. Even the social sciences and economics depend increasingly on computational modeling and data analysis. Computer science thus functions not merely as a technical discipline but as a universal language and toolset through which other fields accelerate their own inquiry, making it one of the most consequential intellectual developments of the twentieth and twenty-first centuries.",
+      "original_description": "Computer science studies computation, algorithms, data structures, and the theory and practice of bu..."
+    },
+    {
+      "node_id": "feedback_loops_concept",
+      "label": "Feedback Loops",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 25,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Feedback loops refer to dynamic processes in which a system's output is returned as input, creating circular causal chains that either amplify or counteract change. Two fundamental types exist: positive feedback accelerates deviation from an initial state, while negative feedback resists change and promotes stability. These mechanisms are defined by their directionality, time delay, and the sensitivity of the system's response.\n\nFeedback loops are foundational to understanding how complex systems self-regulate, evolve, and occasionally destabilize. Their significance extends far beyond any single discipline: without negative feedback, organisms could not maintain homeostasis, economies could not self-correct, and engineers could not design stable control systems. Positive feedback explains phenomena as varied as population explosions, technological adoption cascades, and the runaway greenhouse effect — making these mechanisms essential tools for interpreting both resilience and catastrophic tipping points in natural and human-made systems.\n\nThe concept bridges disciplines with remarkable precision. In biology, the hypothalamic-pituitary axis regulates hormone secretion through cascading feedback. In electrical engineering, operational amplifiers exploit feedback to control signal gain. In sociology, public opinion dynamics exhibit reinforcing feedback through social conformity. In climate science, ice-albedo feedback accelerates polar warming. This cross-domain applicability traces partly to cybernetics, the mid-twentieth-century framework developed by Norbert Wiener, which formalized feedback as a universal",
+      "original_description": "Feedback loops occur when a system's output is routed back as input, creating circular causal chains..."
+    },
+    {
+      "node_id": "adaptation_concept",
+      "label": "Adaptation",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 25,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Adaptation refers to the process by which a system — biological, social, technological, or cognitive — adjusts its structure, behavior, or function in response to changing environmental conditions, thereby improving fit, performance, or survival within that environment.\n\nIn biology, adaptation operates through natural selection, producing heritable traits that increase reproductive success over generations; it remains a cornerstone of evolutionary theory. In psychology and medicine, adaptation describes how organisms maintain homeostasis or develop resilience under stress. In engineering and computer science, adaptive systems — from control algorithms to machine learning models — dynamically recalibrate outputs based on feedback, enabling robust performance under uncertainty.\n\nThe concept's significance lies in its explanatory power across scales: it accounts for molecular mutations, behavioral flexibility, cultural change, and institutional reform within a single unifying framework. This breadth makes adaptation foundational not only to biology but to systems theory, organizational management, urban planning, and climate science, where understanding adaptive capacity directly informs policy and design decisions.\n\nBridging disciplines, adaptation connects Darwinian evolutionary biology with cybernetics (feedback-driven adjustment), social theory (cultural and institutional change), and philosophy of mind (cognitive flexibility and learning). By identifying a common structural logic — variation, selection pressure, and adjusted response — the concept enables productive cross-domain dialogue, allowing insights from ecology to inform organizational resilience, and engineering principles to enrich our understanding of biological plasticity.",
+      "original_description": "Adaptation is the process and result of adjustment to environmental conditions. Biological adaptatio..."
+    },
+    {
+      "node_id": "diagnostic_reasoning_concept",
+      "label": "Diagnostic Reasoning",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 25,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Diagnostic reasoning is the structured cognitive process of systematically gathering, weighing, and interpreting evidence — symptoms, signs, test results, and contextual factors — to identify the underlying cause of a problem and guide corrective action. Rooted in clinical medicine, where it underpins the differential diagnosis framework, it operates through iterative hypothesis generation and testing, drawing on both probabilistic inference and pattern recognition.\n\nIts significance extends far beyond bedside medicine. Diagnostic reasoning provides a rigorous epistemological foundation for decision-making under uncertainty, a challenge common to virtually every analytical discipline. In clinical practice, deficiencies in this process account for a substantial proportion of medical errors, making its study directly consequential for patient safety. More broadly, formalizing its principles has driven advances in artificial intelligence — particularly in expert systems and machine learning models designed to replicate or augment human judgment.\n\nThe concept bridges multiple intellectual domains in precise and productive ways. In philosophy, it maps onto abductive reasoning and inference to the best explanation, central concerns of epistemology and logic. In mathematics and statistics, it is operationalized through Bayesian probability, where prior beliefs are updated systematically as new evidence emerges. In engineering and computer science, it informs fault diagnosis, anomaly detection, and automated troubleshooting systems. This cross-disciplinary reach makes diagnostic reasoning not merely a clinical skill but a foundational model for rational inquiry, applicable wherever incomplete",
+      "original_description": "Diagnostic reasoning is the cognitive process of determining disease identity from symptoms, signs, ..."
+    },
+    {
+      "node_id": "globalization_concept",
+      "label": "Globalization",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Globalization refers to the accelerating process by which economies, societies, cultures, and political systems become increasingly interdependent through the cross-border movement of goods, capital, people, and information. It is characterized by the dismantling of geographic barriers to exchange, driven by advances in transportation, digital communication, and international trade agreements.\n\nThe significance of globalization is difficult to overstate: it has fundamentally restructured labor markets, redistributed economic power between nations, and generated both unprecedented material prosperity and sharp inequalities within and across societies. It has enabled the rapid diffusion of technologies and ideas while simultaneously exposing local cultures to homogenizing pressures, raising urgent questions about cultural preservation, sovereignty, and democratic accountability.\n\nAs a concept, globalization bridges multiple disciplines in concrete ways. In economics, it informs theories of comparative advantage, supply chain organization, and financial contagion. In sociology and anthropology, it frames debates on identity, migration, and cultural hybridity. In history, it provides a long-run lens connecting early maritime trade networks to contemporary digital commerce. In philosophy and political theory, it challenges the nation-state as the primary unit of moral obligation, prompting cosmopolitan and communitarian responses alike. In technology studies, it both explains and is explained by the architecture of the internet and global logistics systems. Understanding globalization is therefore essential for any serious analysis of modern social, political, or economic life.",
+      "original_description": "Globalization describes the increasing interconnection of economies, cultures, and populations throu..."
+    }
+  ],
+  "summary": {
+    "total_processed": 10,
+    "completed": 10,
+    "errors": 0,
+    "avg_score_improvement": 4.2
+  }
+}

@@ -1,0 +1,61 @@
+# ─── Nexus Knowledge Graph Configuration ───────────────────────
+# 所有可調參數集中管理，避免 hardcoded magic numbers
+
+generation:
+  model: "claude-sonnet-4-6"
+  critique_model: "claude-haiku-4"  # 品質審查用輕量模型（成本 ~12x 低於 Sonnet）
+  max_tokens_base: 2000        # 基礎 token 上限
+  max_tokens_per_node: 800     # 每節點額外 token（動態計算: base + per_node * batch_size）
+  batch_size: 20               # 每批最多生成節點數
+  batches: 1                   # 預設批次數
+  delay_between_batches: 2.0   # 批次間延遲（秒）
+  context_max_ids: 500         # 注入 context 的最大 ID 數
+  context_per_domain: 42       # 分層抽樣時每 domain 取的最大數量
+
+retry:
+  max_attempts: 3              # 最大重試次數
+  backoff_base: 2.0            # 指數退避基數（秒）
+  backoff_max: 30.0            # 最大退避時間（秒）
+  retryable_status_codes:      # 可重試的 HTTP status codes
+    - 429   # Rate limit
+    - 500   # Server error
+    - 502   # Bad gateway
+    - 503   # Service unavailable
+
+quality:
+  critique_reject_threshold: 10  # 低於此分數的節點被拒絕（滿分15）
+  min_relation_words: 10         # connection relation 文本最少字數
+
+validation:
+  min_description_words: 50
+  max_description_words: 250
+  min_connections: 3
+  min_connection_domains: 2
+  max_display_tags: 8
+  min_display_tags: 2
+
+deduplication:
+  string_threshold: 0.85       # SequenceMatcher 閾值
+  semantic_threshold: 0.80     # Embedding cosine similarity 閾值
+  connection_overlap_threshold: 0.6  # Connection target 重疊比例閾值
+  embedding_model: "all-MiniLM-L6-v2"
+
+cost_tracking:
+  enabled: true
+  log_file: "data/generation_log.jsonl"
+  budget_warning_usd: 5.0      # 累計超過此金額時發出警告
+  # Claude Sonnet 4 定價（每百萬 tokens）
+  input_cost_per_mtok: 3.0
+  output_cost_per_mtok: 15.0
+
+neo4j:
+  uri: "bolt://localhost:7687"
+  # user 和 password 由環境變數 NEO4J_USER / NEO4J_PASSWORD 提供
+
+paths:
+  nodes_file: "data/all_nodes.json"
+  field_nodes_file: "data/field_nodes.json"
+  tags_file: "data/display_tags_seed.json"
+  prompt_file: "docs/generation_prompt_v2.md"
+  batch_dir: "data/batches"
+  log_file: "data/generation_log.jsonl"

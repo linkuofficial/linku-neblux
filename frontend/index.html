@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nexus - Deep Field Survey</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#051424",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#4f453a",
+                        "secondary-fixed-dim": "#c2c7d0",
+                        "surface-container-lowest": "#010f1f",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#0d1c2d",
+                        "primary": "#c4c6ce",
+                        "surface-tint": "#c4c6ce",
+                        "primary-fixed": "#e0e2ea",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#42474f",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-high": "#1c2b3c",
+                        "on-secondary": "#2c3138",
+                        "on-surface": "#d4e4fa",
+                        "tertiary-fixed-dim": "#d2c4b5",
+                        "on-tertiary-container": "#83786b",
+                        "secondary": "#c2c7d0",
+                        "surface-container": "#122131",
+                        "secondary-container": "#42474f",
+                        "on-secondary-fixed": "#171c23",
+                        "primary-fixed-dim": "#c4c6ce",
+                        "outline": "#909095",
+                        "surface-container-highest": "#273647",
+                        "on-primary-fixed-variant": "#44474d",
+                        "inverse-primary": "#5b5e65",
+                        "outline-variant": "#45474b",
+                        "surface-bright": "#2c3a4c",
+                        "secondary-fixed": "#dee2ec",
+                        "on-tertiary": "#372f25",
+                        "on-primary": "#2d3036",
+                        "on-tertiary-fixed": "#221a11",
+                        "on-background": "#d4e4fa",
+                        "tertiary": "#d2c4b5",
+                        "on-secondary-container": "#b1b5bf",
+                        "on-primary-fixed": "#181c21",
+                        "surface-variant": "#273647",
+                        "primary-container": "#070a0f",
+                        "on-surface-variant": "#c6c6cb",
+                        "inverse-on-surface": "#233143",
+                        "surface-dim": "#051424",
+                        "inverse-surface": "#d4e4fa",
+                        "background": "#051424",
+                        "tertiary-fixed": "#efe0d0",
+                        "on-primary-container": "#777980",
+                        "tertiary-container": "#0f0903"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Sora"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-base": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "body-sm": ["Sora"],
+                        "label-code": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-code": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Sora', sans-serif;
+            background-color: #070a0f;
+        }
+
+        .glass-pane {
+            background-color: rgba(26, 31, 38, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(196, 198, 206, 0.05);
+        }
+
+        .search-glow:focus-within {
+            box-shadow: 0 0 20px rgba(196, 198, 206, 0.15), inset 0 0 10px rgba(196, 198, 206, 0.05);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .subtle-pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        /* Hairline borders */
+        .hairline-border {
+            border: 0.5px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hairline-bottom {
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .hairline-right {
+            border-right: 0.5px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Ruler ticks */
+        .ruler-x::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+            background-size: 50px 100%;
+        }
+
+        .ruler-y::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 4px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+            background-size: 100% 50px;
+        }
+
+        /* Search results dropdown */
+        .search-results {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            max-height: 320px;
+            overflow-y: auto;
+            z-index: 50;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(196, 198, 206, 0.2) transparent;
+        }
+
+        .search-results::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .search-results::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .search-results::-webkit-scrollbar-thumb {
+            background: rgba(196, 198, 206, 0.2);
+            border-radius: 2px;
+        }
+
+        .search-result-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .search-result-item:hover,
+        .search-result-item.active {
+            background-color: rgba(196, 198, 206, 0.08);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Domain color dots */
+        .domain-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Type badge */
+        .type-badge {
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Language toggle (borderless segmented text) */
+        #langToggle {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .lang-btn {
+            position: relative;
+            border: none;
+            background: transparent;
+            color: rgba(212, 228, 250, 0.55);
+            padding: 0 7px;
+            cursor: pointer;
+            font: inherit;
+            letter-spacing: 0.08em;
+            transition: color 160ms ease;
+        }
+
+        .lang-btn:hover {
+            color: rgba(212, 228, 250, 0.86);
+        }
+
+        .lang-btn.active {
+            color: rgba(212, 228, 250, 1);
+        }
+
+        .lang-btn+.lang-btn::before {
+            content: '/';
+            position: absolute;
+            left: -4px;
+            color: rgba(212, 228, 250, 0.38);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface min-h-screen overflow-hidden relative antialiased hairline-border m-4 rounded-xl">
+    <!-- Canvas Background -->
+    <canvas class="absolute inset-0 z-0 w-full h-full rounded-xl" id="particleCanvas"></canvas>
+
+    <!-- Coordinate Markers (Rulers) -->
+    <div class="absolute top-0 left-0 right-0 h-4 ruler-x z-10 pointer-events-none opacity-50 ml-4"></div>
+    <div class="absolute top-0 left-0 bottom-0 w-4 ruler-y z-10 pointer-events-none opacity-50 mt-4"></div>
+    <div class="absolute top-5 left-5 font-label-code text-[10px] text-on-surface/30 z-10 pointer-events-none">0,0</div>
+
+    <!-- TopAppBar -->
+    <header
+        class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter mx-auto top-0 left-0 right-0">
+        <div
+            class="font-label-code text-label-code opacity-50 tracking-widest text-on-surface cursor-pointer hover:opacity-100 transition-opacity duration-300 ml-4 mt-2">
+            NEXUS
+        </div>
+        <div id="langToggle"
+            class="font-label-code text-label-code opacity-90 transition-opacity duration-300 mr-4 mt-2"
+            aria-label="Language selector">
+            <button class="lang-btn" data-lang="en" type="button" aria-label="Switch language to English">EN</button>
+            <button class="lang-btn" data-lang="zh" type="button" aria-label="Switch language to Chinese">中</button>
+            <button class="lang-btn" data-lang="ja" type="button" aria-label="Switch language to Japanese">日</button>
+        </div>
+    </header>
+
+    <!-- Main Canvas -->
+    <main
+        class="relative z-10 w-full h-screen flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop pointer-events-none">
+        <!-- Search Area -->
+        <div class="w-full max-w-2xl mx-auto flex flex-col items-center space-y-8 mt-16 pointer-events-auto">
+            <!-- Value Proposition -->
+            <section class="text-center px-2">
+                <p id="heroKicker" class="font-label-code text-label-code text-on-surface/60 tracking-[0.14em] mb-3">
+                    LEARN FASTER</p>
+                <h1 id="heroTitle" class="font-display-lg-mobile md:font-display-lg text-on-surface leading-tight mb-3">
+                    Turn complex topics into
+                    <span class="text-primary">clear learning paths</span>
+                </h1>
+                <p id="heroSubtitle" class="font-body-base text-on-surface/70 max-w-xl mx-auto">
+                    Search once, see prerequisite links instantly, and move from a concept to your next study step in
+                    seconds.
+                </p>
+            </section>
+
+            <!-- Primary CTAs -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+                <a id="ctaExplore"
+                    class="glass-pane rounded-full px-6 py-3 text-center font-label-code text-label-code text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    href="app.html">Start Exploring Graph</a>
+                <button id="ctaSearch"
+                    class="glass-pane rounded-full px-6 py-3 text-center font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    type="button">Search Directly</button>
+            </div>
+
+            <!-- Search Container (relative for dropdown positioning) -->
+            <div class="relative w-full">
+                <div class="relative w-full glass-pane rounded-full overflow-hidden flex items-center p-2 search-glow transition-all duration-300"
+                    id="searchContainer">
+                    <span class="material-symbols-outlined ml-4 text-on-surface opacity-50"
+                        style="font-variation-settings: 'wght' 200;">search</span>
+                    <input id="searchInput"
+                        class="w-full bg-transparent border-none text-on-surface placeholder-on-surface/30 focus:ring-0 focus:outline-none px-4 font-body-base h-12"
+                        placeholder="Explore the infinite..." type="text" autocomplete="off" />
+                    <span id="searchSpinner"
+                        class="material-symbols-outlined mr-4 text-on-surface opacity-0 animate-spin transition-opacity"
+                        style="font-variation-settings: 'wght' 200;">progress_activity</span>
+                </div>
+                <!-- Search Results Dropdown -->
+                <div id="searchResults" class="search-results glass-pane rounded-xl hidden"></div>
+            </div>
+
+            <!-- Suggestion Pills -->
+            <div id="suggestionPills" class="flex flex-wrap justify-center gap-3">
+                <button
+                    class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    data-query="black hole">
+                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-primary subtle-pulse"></span>
+                    <span class="pill-label">Black Holes</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    data-node="evolution_field">
+                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-tertiary subtle-pulse"
+                        style="animation-delay: 0.5s;"></span>
+                    <span class="pill-label">Evolution</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300 hidden sm:block"
+                    data-query="industrial revolution">
+                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-error subtle-pulse"
+                        style="animation-delay: 1s;"></span>
+                    <span class="pill-label">Industrial Revolution</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    data-query="neural network">
+                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-secondary subtle-pulse"
+                        style="animation-delay: 1.5s;"></span>
+                    <span class="pill-label">Neural Networks</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300 hidden md:block"
+                    data-node="quantum_mechanics_field">
+                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-inverse-primary subtle-pulse"
+                        style="animation-delay: 2s;"></span>
+                    <span class="pill-label">Quantum Mechanics</span>
+                </button>
+            </div>
+
+            <!-- Node count indicator -->
+            <div id="nodeCount"
+                class="font-label-code text-[11px] text-on-surface/20 tracking-wider opacity-0 transition-opacity duration-700">
+                <!-- Populated after data loads -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+        class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter bottom-0 left-0 right-0 pointer-events-none">
+        <div class="font-label-code text-label-code text-on-surface-variant opacity-40 mb-2 ml-4">
+            &copy; 2024 NEXUS. EXPLORE THE INFINITE.
+        </div>
+        <div class="hidden md:flex gap-6 pointer-events-auto mb-2 mr-4">
+            <a class="font-label-code text-label-code text-on-surface-variant opacity-40 hover:text-primary hover:opacity-100 transition-colors duration-300"
+                href="app.html">Graph</a>
+            <a class="font-label-code text-label-code text-on-surface-variant opacity-40 hover:text-primary hover:opacity-100 transition-colors duration-300"
+                href="explorer.html">Explorer</a>
+        </div>
+    </footer>
+
+    <script>
+        // ─── Domain Colors ───────────────────────────────────────────────
+        const DOMAIN_COLORS = {
+            MAT: '#5b9bd5', PHY: '#7b68ee', CHE: '#e06c75',
+            BIO: '#10b981', MED: '#f06292', ENG: '#ffb74d',
+            TEC: '#4dd0e1', SOC: '#ce93d8', HUM: '#a1887f',
+            PHI: '#90a4ae', ART: '#ff8a65', HIS: '#f59e0b'
+        };
+        const TYPE_COLORS = {
+            field: 'rgba(91, 155, 213, 0.25)',
+            concept: 'rgba(196, 198, 206, 0.15)',
+            person: 'rgba(240, 192, 80, 0.2)',
+            event: 'rgba(255, 180, 171, 0.2)'
+        };
+
+        // ─── State ───────────────────────────────────────────────────────
+        const SUPPORTED_LANGS = ['en', 'zh', 'ja'];
+        let allNodes = [];
+        let searchIndex = [];
+        let i18n = null;
+        let lang = normalizeLang(localStorage.getItem('nexus-lang'));
+        let activeIndex = -1;
+
+        function normalizeLang(value) {
+            if (!value) return 'en';
+            if (value === 'zh-TW') return 'zh';
+            if (value.toLowerCase() === 'ja-jp') return 'ja';
+            return SUPPORTED_LANGS.includes(value) ? value : 'en';
+        }
+
+        function htmlLang(value) {
+            if (value === 'zh') return 'zh-Hant';
+            return value;
+        }
+
+        // ─── DOM ─────────────────────────────────────────────────────────
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const searchSpinner = document.getElementById('searchSpinner');
+        const nodeCountEl = document.getElementById('nodeCount');
+        const langToggle = document.getElementById('langToggle');
+        const heroKicker = document.getElementById('heroKicker');
+        const heroTitle = document.getElementById('heroTitle');
+        const heroSubtitle = document.getElementById('heroSubtitle');
+        const ctaExplore = document.getElementById('ctaExplore');
+        const ctaSearch = document.getElementById('ctaSearch');
+
+        // ─── Data Loading ────────────────────────────────────────────────
+        async function loadData() {
+            try {
+                let data;
+                const cacheKey = 'nexus:index:graph:v1';
+                try {
+                    const cachedRaw = sessionStorage.getItem(cacheKey);
+                    if (cachedRaw) {
+                        data = JSON.parse(cachedRaw);
+                    }
+                } catch (_) {
+                    // Ignore invalid cache and fetch fresh.
+                }
+
+                if (!data || !Array.isArray(data.nodes)) {
+                    try {
+                        const apiRes = await fetch('/api/graph/full');
+                        if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`);
+                        data = await apiRes.json();
+                    } catch (_) {
+                        const fallbackRes = await fetch('../data/all_nodes.json');
+                        if (!fallbackRes.ok) throw new Error(`HTTP ${fallbackRes.status}`);
+                        data = await fallbackRes.json();
+                    }
+                    try {
+                        sessionStorage.setItem(cacheKey, JSON.stringify(data));
+                    } catch (_) {
+                        // Ignore storage quota errors.
+                    }
+                }
+                allNodes = data.nodes || [];
+                searchIndex = allNodes.map((node) => ({
+                    node,
+                    id: node.id.toLowerCase(),
+                    label: (node.label || '').toLowerCase(),
+                    tags: (node.display_tags || []).map((t) => String(t).toLowerCase()),
+                    desc: (node.description || '').toLowerCase(),
+                }));
+                nodeCountEl.textContent = `${allNodes.length} NODES · ${countEdges(data)} EDGES`;
+                nodeCountEl.style.opacity = '1';
+            } catch (e) {
+                console.error('Failed to load nodes:', e);
+            }
+        }
+
+        async function loadI18n(locale) {
+            if (locale === 'en') {
+                i18n = null;
+                return;
+            }
+            try {
+                let data;
+                try {
+                    const apiRes = await fetch(`/api/i18n/${encodeURIComponent(locale)}`);
+                    if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`);
+                    data = await apiRes.json();
+                } catch (_) {
+                    const fallbackRes = await fetch(`../data/i18n/${encodeURIComponent(locale)}.json`);
+                    if (!fallbackRes.ok) throw new Error(`HTTP ${fallbackRes.status}`);
+                    data = await fallbackRes.json();
+                }
+                i18n = data;
+            } catch (e) {
+                console.warn('i18n load failed:', e);
+                i18n = null;
+            }
+        }
+
+        function countEdges(data) {
+            if (data.edges) return data.edges.length;
+            let count = 0;
+            for (const node of (data.nodes || [])) {
+                count += (node.connections || []).length;
+            }
+            return Math.floor(count / 2);
+        }
+
+        // ─── Search ──────────────────────────────────────────────────────
+        function search(query) {
+            if (!query || query.length < 2) return [];
+            const q = query.toLowerCase();
+            const scored = [];
+
+            for (const entry of searchIndex) {
+                const node = entry.node;
+                let score = 0;
+                const label = getLabel(node).toLowerCase();
+
+                // Exact label match
+                if (label === q || entry.id === q) { score = 100; }
+                // Label starts with query
+                else if (label.startsWith(q) || entry.id.startsWith(q)) { score = 80; }
+                // Label contains query
+                else if (label.includes(q) || entry.id.includes(q)) { score = 60; }
+                // Tags match
+                else if (entry.tags.some(t => t.includes(q))) { score = 40; }
+                // Description contains
+                else if (entry.desc.includes(q)) { score = 20; }
+
+                if (score > 0) {
+                    scored.push({ node, score });
+                }
+            }
+
+            scored.sort((a, b) => b.score - a.score);
+            return scored.slice(0, 8);
+        }
+
+        function getLabel(node) {
+            if (lang !== 'en' && i18n && i18n[node.id]) {
+                return i18n[node.id];
+            }
+            return node.label;
+        }
+
+        function renderResults(results) {
+            if (results.length === 0) {
+                searchResults.classList.add('hidden');
+                return;
+            }
+
+            searchResults.innerHTML = results.map((r, i) => {
+                const node = r.node;
+                const domainDots = (node.domain || []).map(d =>
+                    `<span class="domain-dot" style="background:${DOMAIN_COLORS[d] || '#888'}"></span>`
+                ).join(' ');
+                const typeColor = TYPE_COLORS[node.type] || TYPE_COLORS.concept;
+
+                return `<div class="search-result-item ${i === activeIndex ? 'active' : ''}" data-node-id="${node.id}" data-index="${i}">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        ${domainDots}
+                        <span class="text-on-surface font-body-sm">${escapeHtml(getLabel(node))}</span>
+                    </div>
+                    <span class="type-badge" style="background:${typeColor}; color: rgba(212, 228, 250, 0.7);">${node.type}</span>
+                </div>
+                <div class="text-on-surface/40 text-[11px] mt-1 line-clamp-1 font-label-code">${escapeHtml((node.description || '').slice(0, 80))}${(node.description || '').length > 80 ? '…' : ''}</div>
+            </div>`;
+            }).join('');
+
+            searchResults.classList.remove('hidden');
+        }
+
+        function escapeHtml(str) {
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // ─── Navigation ──────────────────────────────────────────────────
+        function navigateToNode(nodeId) {
+            window.location.href = `app.html?node=${encodeURIComponent(nodeId)}`;
+        }
+
+        function navigateToSearch(query) {
+            window.location.href = `app.html?search=${encodeURIComponent(query)}`;
+        }
+
+        // ─── Event Handlers ──────────────────────────────────────────────
+        let debounceTimer = null;
+        let latestResults = [];
+        searchInput.addEventListener('input', () => {
+            clearTimeout(debounceTimer);
+            const q = searchInput.value.trim();
+            if (q.length < 2) {
+                searchResults.classList.add('hidden');
+                activeIndex = -1;
+                latestResults = [];
+                return;
+            }
+            debounceTimer = setTimeout(() => {
+                const results = search(q);
+                latestResults = results;
+                activeIndex = -1;
+                renderResults(results);
+            }, 150);
+        });
+
+        searchInput.addEventListener('keydown', (e) => {
+            const items = searchResults.querySelectorAll('.search-result-item');
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                activeIndex = Math.min(activeIndex + 1, items.length - 1);
+                renderResults(latestResults);
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                activeIndex = Math.max(activeIndex - 1, -1);
+                renderResults(latestResults);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                if (activeIndex >= 0 && items[activeIndex]) {
+                    const nodeId = items[activeIndex].dataset.nodeId;
+                    navigateToNode(nodeId);
+                } else if (searchInput.value.trim().length >= 2) {
+                    navigateToSearch(searchInput.value.trim());
+                }
+            } else if (e.key === 'Escape') {
+                searchResults.classList.add('hidden');
+                activeIndex = -1;
+            }
+        });
+
+        searchResults.addEventListener('click', (e) => {
+            const item = e.target.closest('.search-result-item');
+            if (item) {
+                navigateToNode(item.dataset.nodeId);
+            }
+        });
+
+        // Close results on outside click
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('#searchContainer') && !e.target.closest('#searchResults')) {
+                searchResults.classList.add('hidden');
+                activeIndex = -1;
+            }
+        });
+
+        // Suggestion pills
+        document.querySelectorAll('.pill-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const nodeId = btn.dataset.node;
+                const query = btn.dataset.query;
+                if (nodeId) {
+                    navigateToNode(nodeId);
+                } else if (query) {
+                    navigateToSearch(query);
+                }
+            });
+        });
+
+        async function setLang(nextLang) {
+            if (!SUPPORTED_LANGS.includes(nextLang) || nextLang === lang) return;
+            lang = nextLang;
+            localStorage.setItem('nexus-lang', lang);
+            document.documentElement.lang = htmlLang(lang);
+            await loadI18n(lang);
+            applyLang();
+        }
+
+        // Language toggle (direct selection, no cycling)
+        langToggle.addEventListener('click', async (e) => {
+            const btn = e.target.closest('.lang-btn');
+            if (!btn) return;
+            await setLang(btn.dataset.lang);
+        });
+
+        langToggle.addEventListener('keydown', async (e) => {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            const btn = e.target.closest('.lang-btn');
+            if (!btn) return;
+            e.preventDefault();
+            await setLang(btn.dataset.lang);
+        });
+
+        ctaSearch.addEventListener('click', () => {
+            searchInput.focus();
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        function applyLang() {
+            const copy = {
+                en: {
+                    heroKicker: 'LEARN FASTER',
+                    heroTitle: 'Turn complex topics into<br><span class="text-primary">clear learning paths</span>',
+                    heroSubtitle: 'Search once, see prerequisite links instantly, and move from a concept to your next study step in seconds.',
+                    ctaExplore: 'Start Exploring Graph',
+                    ctaSearch: 'Search Directly',
+                    placeholder: 'Explore the infinite...',
+                },
+                zh: {
+                    heroKicker: '快速掌握知識脈絡',
+                    heroTitle: '把複雜主題整理成<br><span class="text-primary">清楚可走的學習路徑</span>',
+                    heroSubtitle: '一次搜尋就看到前置知識與下一步，從概念到行動只要幾秒。',
+                    ctaExplore: '開始探索圖譜',
+                    ctaSearch: '直接搜尋',
+                    placeholder: '探索無限知識…',
+                },
+                ja: {
+                    heroKicker: '学習をもっと速く',
+                    heroTitle: '複雑なテーマを<br><span class="text-primary">明確な学習パスに変える</span>',
+                    heroSubtitle: '一度の検索で前提知識と次の一歩を可視化し、理解から行動までを最短でつなぎます。',
+                    ctaExplore: 'グラフ探索を開始',
+                    ctaSearch: 'すぐ検索',
+                    placeholder: '無限の知識を探索…',
+                }
+            };
+
+            const pillMap = {
+                en: {
+                    'Black Holes': 'Black Holes',
+                    'Evolution': 'Evolution',
+                    'Industrial Revolution': 'Industrial Revolution',
+                    'Neural Networks': 'Neural Networks',
+                    'Quantum Mechanics': 'Quantum Mechanics'
+                },
+                zh: {
+                    'Black Holes': '黑洞',
+                    'Evolution': '演化',
+                    'Industrial Revolution': '工業革命',
+                    'Neural Networks': '神經網路',
+                    'Quantum Mechanics': '量子力學'
+                },
+                ja: {
+                    'Black Holes': 'ブラックホール',
+                    'Evolution': '進化',
+                    'Industrial Revolution': '産業革命',
+                    'Neural Networks': 'ニューラルネットワーク',
+                    'Quantum Mechanics': '量子力学'
+                }
+            };
+
+            const langCopy = copy[lang] || copy.en;
+            heroKicker.textContent = langCopy.heroKicker;
+            heroTitle.innerHTML = langCopy.heroTitle;
+            heroSubtitle.textContent = langCopy.heroSubtitle;
+            ctaExplore.textContent = langCopy.ctaExplore;
+            ctaSearch.textContent = langCopy.ctaSearch;
+            searchInput.placeholder = langCopy.placeholder;
+            langToggle.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            document.querySelectorAll('.pill-label').forEach(el => {
+                if (!el.dataset.en) {
+                    el.dataset.en = el.textContent;
+                }
+                const base = el.dataset.en;
+                el.textContent = (pillMap[lang] && pillMap[lang][base]) || base;
+            });
+
+            const query = searchInput.value.trim();
+            if (query.length >= 2) {
+                renderResults(search(query));
+            }
+        }
+
+        // ─── Init ────────────────────────────────────────────────────────
+        document.documentElement.lang = htmlLang(lang);
+        localStorage.setItem('nexus-lang', lang);
+        Promise.all([loadData(), loadI18n(lang)]).then(() => {
+            applyLang();
+        });
+
+        // ─── Particle Canvas ─────────────────────────────────────────────
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let width, height;
+        let particles = [];
+        const colors = ['#5b9bd5', '#f59e0b', '#10b981', '#c4c6ce'];
+
+        let mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', function (event) {
+            mouse.x = event.x;
+            mouse.y = event.y;
+        });
+
+        window.addEventListener('mouseout', function () {
+            mouse.x = undefined;
+            mouse.y = undefined;
+        });
+
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                const angle = Math.random() * Math.PI * 2;
+                const radius = Math.random() * Math.min(width, height) * (Math.random() > 0.3 ? 0.3 : 0.8);
+
+                this.x = width / 2 + Math.cos(angle) * radius;
+                this.y = height / 2 + Math.sin(angle) * radius;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.density = (Math.random() * 30) + 1;
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+                this.vx = (Math.random() - 0.5) * 0.1;
+                this.vy = (Math.random() - 0.5) * 0.1;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = 0.6;
+                ctx.fill();
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
+
+                if (mouse.x != null) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    let forceDirectionX = dx / distance;
+                    let forceDirectionY = dy / distance;
+                    let maxDistance = mouse.radius;
+                    let force = (maxDistance - distance) / maxDistance;
+                    let directionX = forceDirectionX * force * this.density;
+                    let directionY = forceDirectionY * force * this.density;
+
+                    if (distance < mouse.radius) {
+                        this.x -= directionX * 0.05;
+                        this.y -= directionY * 0.05;
+                    }
+                }
+            }
+        }
+
+        function init() {
+            resize();
+            particles = [];
+            let numberOfParticles = (width * height) / 12000;
+            if (numberOfParticles > 150) numberOfParticles = 150;
+
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function connect() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x))
+                        + ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                    if (distance < (canvas.width / 7) * (canvas.height / 7)) {
+                        let opacityValue = 1 - (distance / 20000);
+                        ctx.strokeStyle = `rgba(196, 198, 206, ${opacityValue * 0.15})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            connect();
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', init);
+        init();
+        animate();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,786 @@
+[
+  {
+    "rank": 1,
+    "node_id": "comparative_mythology_concept",
+    "label": "Comparative Mythology",
+    "domain": [
+      "HUM",
+      "SOC",
+      "PHI"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The systematic comparison of myths across cultures to identify universal patterns (flood narratives, hero's journey, creation stories) and explain their recurrence through shared psychology, diffusion, or common human experience. From Frazer's Golden Bough to Campbell's monomyth to structural analysis. It bridges humanities and psychology by asking whether universal mythic patterns reveal innate cognitive structures or simply common human predicaments.",
+    "original_word_count": 62,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: comparative_mythology_concept\n- label: Comparative Mythology\n- type: concept\n- domains: HUM, SOC, PHI\n- display_tags: anthropology, 19th_century, interpretive, cross_domain_bridge, foundational\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe systematic comparison of myths across cultures to identify universal patterns (flood narratives, hero's journey, creation stories) and explain their recurrence through shared psychology, diffusion, or common human experience. From Frazer's Golden Bough to Campbell's monomyth to structural analysis. It bridges humanities and psychology by asking whether universal mythic patterns reveal innate cognitive structures or simply common human predicaments.",
+    "candidate": "Comparative mythology is the systematic scholarly study of myths across diverse cultures to identify recurring universal patterns—such as flood narratives, hero journeys, and creation stories—and explain their recurrence through shared psychology, cultural diffusion, or common human experience. Foundational works by Frazer, Jung, and Campbell transformed how scholars understand human meaning-making, enabling cross-cultural frameworks that remain central to anthropology and literary theory. This field bridges humanities and cognitive science by investigating whether universal mythic structures reveal innate neural architecture or reflect universally shared existential predicaments.",
+    "candidate_word_count": 88,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 5,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 2,
+    "node_id": "regenerative_medicine_concept",
+    "label": "Regenerative Medicine",
+    "domain": [
+      "MED",
+      "BIO",
+      "ENG"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The field aiming to repair or replace damaged tissues and organs using stem cells, tissue engineering, gene therapy, and biomaterials. From bone marrow transplants to lab-grown organs to CRISPR-corrected cells. It bridges medicine and engineering because growing functional tissues requires both biological knowledge (cell signaling, differentiation) and engineering principles (scaffold design, bioreactor mechanics, vascularization).",
+    "original_word_count": 56,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: regenerative_medicine_concept\n- label: Regenerative Medicine\n- type: concept\n- domains: MED, BIO, ENG\n- display_tags: cell_biology, 21st_century, currently_active_research, applied, paradigm_shift\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe field aiming to repair or replace damaged tissues and organs using stem cells, tissue engineering, gene therapy, and biomaterials. From bone marrow transplants to lab-grown organs to CRISPR-corrected cells. It bridges medicine and engineering because growing functional tissues requires both biological knowledge (cell signaling, differentiation) and engineering principles (scaffold design, bioreactor mechanics, vascularization).",
+    "candidate": "Regenerative medicine is a biomedical field focused on restoring or replacing damaged tissues and organs through stem cell therapies, tissue engineering, gene editing, and biomaterial scaffolds. It has enabled breakthrough treatments — from bone marrow transplants to lab-grown cartilage — transforming previously irreversible conditions into potentially curable ones. This field is foundational to 21st-century healthcare and bridges biological science and mechanical engineering, as fabricating functional tissues demands both cellular signaling expertise and precision scaffold design with bioreactor mechanics.",
+    "candidate_word_count": 78,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 5,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 3,
+    "node_id": "aesthetic_experience_concept",
+    "label": "Aesthetic Experience",
+    "domain": [
+      "HUM",
+      "PHI",
+      "ART"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The philosophical investigation of what happens when humans engage with beauty, art, and nature — from Kant's disinterested pleasure and Burke's sublime to Dewey's pragmatist aesthetics and contemporary neuroaesthetics. It bridges philosophy and neuroscience because explaining why certain forms, sounds, or images produce pleasure, awe, or catharsis requires both phenomenological description of subjective experience and empirical investigation of brain mechanisms.",
+    "original_word_count": 62,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: aesthetic_experience_concept\n- label: Aesthetic Experience\n- type: concept\n- domains: HUM, PHI, ART\n- display_tags: aesthetics, 18th_century, foundational, theoretical, human_experience\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe philosophical investigation of what happens when humans engage with beauty, art, and nature — from Kant's disinterested pleasure and Burke's sublime to Dewey's pragmatist aesthetics and contemporary neuroaesthetics. It bridges philosophy and neuroscience because explaining why certain forms, sounds, or images produce pleasure, awe, or catharsis requires both phenomenological description of subjective experience and empirical investigation of brain mechanisms.",
+    "candidate": "Aesthetic experience is the philosophical concept describing the distinctive quality of human perception and feeling that arises when engaging with beauty, art, or nature — characterized by heightened attention, emotional resonance, and often a sense of transcendence. Foundational thinkers including Kant, Burke, and Dewey transformed how we understand subjective judgment and sensory meaning, making this concept central to humanistic inquiry. It bridges philosophy and cognitive neuroscience, as explaining responses like awe or catharsis demands both phenomenological analysis and empirical investigation of neural mechanisms underlying perception.",
+    "candidate_word_count": 84,
+    "candidate_description_score": 9,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 4,
+    "node_id": "autonomous_vehicles_concept",
+    "label": "Autonomous Vehicles",
+    "domain": [
+      "TEC",
+      "ENG",
+      "SOC"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "Self-driving vehicles that perceive their environment through sensors (lidar, cameras, radar) and navigate without human input using AI decision-making. They integrate computer vision, path planning, control theory, and ethical programming. They bridge technology and society because deploying autonomous vehicles requires solving not just engineering problems (sensor fusion, edge cases) but also legal liability, ethical trolley problems, and public trust.",
+    "original_word_count": 61,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: autonomous_vehicles_concept\n- label: Autonomous Vehicles\n- type: concept\n- domains: TEC, ENG, SOC\n- display_tags: robotics, artificial_intelligence, 21st_century, currently_active_research, applied\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nSelf-driving vehicles that perceive their environment through sensors (lidar, cameras, radar) and navigate without human input using AI decision-making. They integrate computer vision, path planning, control theory, and ethical programming. They bridge technology and society because deploying autonomous vehicles requires solving not just engineering problems (sensor fusion, edge cases) but also legal liability, ethical trolley problems, and public trust.",
+    "candidate": "Autonomous vehicles are self-driving systems that perceive their surroundings through sensors — including lidar, cameras, and radar — and navigate independently using AI-driven decision-making. This technology has transformed transportation engineering by integrating computer vision, path planning, and control theory into a unified framework. Its significance extends beyond engineering breakthroughs, fundamentally reshaping urban infrastructure, public safety policy, and legal liability frameworks. In the sociological domain, deployment challenges around public trust and algorithmic ethics highlight how autonomous vehicles bridge technological innovation with governance and human behavior.",
+    "candidate_word_count": 85,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 5,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 5,
+    "node_id": "colonialism_legacy_concept",
+    "label": "Colonialism and Its Legacy",
+    "domain": [
+      "HIS",
+      "SOC",
+      "HUM"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The system of political domination and economic exploitation by European powers over territories in Africa, Asia, and the Americas (c.1500-1960s), and its enduring consequences in language, borders, economic structures, and cultural hierarchies. It bridges history and contemporary society because colonial-era institutions, trade patterns, and racial ideologies continue to shape global inequality, identity politics, and international relations decades after formal decolonization.",
+    "original_word_count": 63,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: colonialism_legacy_concept\n- label: Colonialism and Its Legacy\n- type: concept\n- domains: HIS, SOC, HUM\n- display_tags: postcolonial_studies, 16th_century, shapes_culture, global_history, age_of_exploration\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe system of political domination and economic exploitation by European powers over territories in Africa, Asia, and the Americas (c.1500-1960s), and its enduring consequences in language, borders, economic structures, and cultural hierarchies. It bridges history and contemporary society because colonial-era institutions, trade patterns, and racial ideologies continue to shape global inequality, identity politics, and international relations decades after formal decolonization.",
+    "candidate": "Colonialism is the system by which European powers politically dominated and economically exploited territories across Africa, Asia, and the Americas from roughly 1500 to the 1960s, fundamentally transforming indigenous societies through imposed borders, languages, and racial hierarchies. Its significance lies in how colonial-era institutions enabled persistent global inequality, shaping contemporary trade structures, identity politics, and postcolonial governance. This concept bridges history and political science, as decolonization movements and modern international relations remain inseparable from understanding colonial foundations.",
+    "candidate_word_count": 78,
+    "candidate_description_score": 9,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 6,
+    "node_id": "cybersecurity_engineering_concept",
+    "label": "Cybersecurity Engineering",
+    "domain": [
+      "TEC",
+      "ENG",
+      "MAT"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The systematic practice of designing, building, and maintaining systems that resist malicious attack — from cryptographic protocols to network architecture to social engineering defenses. It requires thinking like an adversary. It bridges mathematics and engineering because security depends on mathematical hardness assumptions (prime factoring, discrete logarithms) implemented in real systems where human error, side channels, and complexity create vulnerabilities no proof can prevent.",
+    "original_word_count": 62,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: cybersecurity_engineering_concept\n- label: Cybersecurity Engineering\n- type: concept\n- domains: TEC, ENG, MAT\n- display_tags: cybersecurity, 21st_century, applied, currently_active_research, foundational\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe systematic practice of designing, building, and maintaining systems that resist malicious attack — from cryptographic protocols to network architecture to social engineering defenses. It requires thinking like an adversary. It bridges mathematics and engineering because security depends on mathematical hardness assumptions (prime factoring, discrete logarithms) implemented in real systems where human error, side channels, and complexity create vulnerabilities no proof can prevent.",
+    "candidate": "Cybersecurity engineering is the disciplined practice of designing, building, and maintaining systems that resist malicious attack, encompassing cryptographic protocols, network architecture, and social engineering defenses. It has become foundational to modern digital infrastructure, enabling secure communication, commerce, and critical systems worldwide. Its significance lies in transforming theoretical guarantees into resilient real-world deployments. It bridges mathematics and engineering, as security depends on mathematical hardness assumptions — prime factoring, discrete logarithms — implemented in physical systems where human error, side channels, and complexity introduce vulnerabilities that no formal proof alone can prevent.",
+    "candidate_word_count": 89,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 5,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 7,
+    "node_id": "ethnomusicology_concept",
+    "label": "Ethnomusicology",
+    "domain": [
+      "ART",
+      "SOC",
+      "HUM"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The study of music as a social and cultural phenomenon rather than purely an aesthetic object — examining how music functions in ritual, identity, resistance, and daily life across all human societies. It challenges Western classical music's claim to universal standards. It bridges art and anthropology by revealing that music is never just sound but always embedded in social relationships, power structures, and collective meaning-making.",
+    "original_word_count": 66,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: ethnomusicology_concept\n- label: Ethnomusicology\n- type: concept\n- domains: ART, SOC, HUM\n- display_tags: music_theory, anthropology, 20th_century, interdisciplinary, qualitative\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe study of music as a social and cultural phenomenon rather than purely an aesthetic object — examining how music functions in ritual, identity, resistance, and daily life across all human societies. It challenges Western classical music's claim to universal standards. It bridges art and anthropology by revealing that music is never just sound but always embedded in social relationships, power structures, and collective meaning-making.",
+    "candidate": "Ethnomusicology is the systematic scholarly study of music as a social and cultural practice, analyzing how music functions in ritual, identity, resistance, and everyday life across diverse human societies. It transformed musicology by challenging Western classical music's claim to universal aesthetic standards, establishing that no musical tradition holds inherent superiority. By bridging the humanities with anthropology and sociology, ethnomusicology reveals that music is always embedded in power structures, social relationships, and collective meaning-making — never reducible to pure sound alone.",
+    "candidate_word_count": 81,
+    "candidate_description_score": 7,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 2,
+      "bridge": 2
+    },
+    "delta_description_score": 2,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 8,
+    "node_id": "french_revolution_event",
+    "label": "French Revolution",
+    "domain": [
+      "SOC",
+      "HIS",
+      "PHI"
+    ],
+    "type": "event",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger",
+      "BRIDGE implied but no specific domain mentioned"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).",
+      "Strengthen BRIDGE: explicitly name at least one other domain and explain the cross-domain connection."
+    ],
+    "original_description": "A decade of radical political upheaval (1789–1799) that overthrew monarchy and feudalism in France, replacing them with principles of popular sovereignty and universal rights. It demonstrated that Enlightenment philosophy could be translated into political reality — violently reshaping governance across Europe. Its concepts of citizenship, constitutionalism, and human rights became the foundation of modern political science and international law.",
+    "original_word_count": 59,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 2
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: french_revolution_event\n- label: French Revolution\n- type: event\n- domains: SOC, HIS, PHI\n- display_tags: 18th_century, age_of_revolution, paradigm_shift, historically_significant, political_philosophy, european\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n- Strengthen BRIDGE: explicitly name at least one other domain and explain the cross-domain connection.\n\nCurrent description:\nA decade of radical political upheaval (1789–1799) that overthrew monarchy and feudalism in France, replacing them with principles of popular sovereignty and universal rights. It demonstrated that Enlightenment philosophy could be translated into political reality — violently reshaping governance across Europe. Its concepts of citizenship, constitutionalism, and human rights became the foundation of modern political science and international law.",
+    "candidate": "The French Revolution (1789–1799) was a decade of radical political transformation that dismantled France's monarchy and feudal order, establishing popular sovereignty and universal rights as governing principles. It foundationally demonstrated that Enlightenment philosophy could be violently yet concretely enacted, reshaping European governance and inspiring subsequent democratic movements worldwide. Its concepts of citizenship, constitutionalism, and human rights became cornerstones of modern political science, while also profoundly influencing philosophical ethics and the development of international law as a distinct discipline.",
+    "candidate_word_count": 80,
+    "candidate_description_score": 7,
+    "candidate_description_breakdown": {
+      "what": 1,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 2,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 9,
+    "node_id": "publication_of_origin_of_species_event",
+    "label": "Publication of On the Origin of Species",
+    "domain": [
+      "BIO",
+      "PHI",
+      "SOC",
+      "HIS"
+    ],
+    "type": "event",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger",
+      "BRIDGE implied but no specific domain mentioned"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).",
+      "Strengthen BRIDGE: explicitly name at least one other domain and explain the cross-domain connection."
+    ],
+    "original_description": "Darwin's 1859 book presented natural selection as the mechanism driving evolution, supported by twenty years of accumulated evidence. It unified biology under a single explanatory framework and demolished the idea that species were fixed creations. Beyond biology, it revolutionized philosophy by replacing teleological thinking with mechanistic explanation, and sparked fierce social debates about human nature that persist today.",
+    "original_word_count": 59,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 2
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: publication_of_origin_of_species_event\n- label: Publication of On the Origin of Species\n- type: event\n- domains: BIO, PHI, SOC, HIS\n- display_tags: 19th_century, paradigm_shift, discovery, evolution, historically_significant, controversial\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n- Strengthen BRIDGE: explicitly name at least one other domain and explain the cross-domain connection.\n\nCurrent description:\nDarwin's 1859 book presented natural selection as the mechanism driving evolution, supported by twenty years of accumulated evidence. It unified biology under a single explanatory framework and demolished the idea that species were fixed creations. Beyond biology, it revolutionized philosophy by replacing teleological thinking with mechanistic explanation, and sparked fierce social debates about human nature that persist today.",
+    "candidate": "Published in 1859, Charles Darwin's On the Origin of Species formally introduced natural selection as the primary mechanism driving biological evolution, grounded in two decades of meticulous empirical research. This landmark work transformed biology by unifying life's diversity under a single explanatory framework, rendering fixed-species creationism scientifically untenable. Its significance extends into philosophy, where it foundationally displaced teleological reasoning with mechanistic causation, and into sociology, where ongoing debates about human nature, morality, and social organization trace directly to its provocative conclusions.",
+    "candidate_word_count": 84,
+    "candidate_description_score": 5,
+    "candidate_description_breakdown": {
+      "what": 1,
+      "significance": 3,
+      "bridge": 1
+    },
+    "delta_description_score": 0,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 10,
+    "node_id": "street_art_concept",
+    "label": "Street Art and Graffiti",
+    "domain": [
+      "ART",
+      "SOC",
+      "HUM"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "Visual art created in public spaces — from 1970s New York subway graffiti through muralism, stencil art (Banksy), and yarn bombing to sanctioned urban art festivals. It challenges institutional art by reclaiming public space as canvas. It bridges art and social commentary because street art operates outside galleries, directly addressing communities with political messages, humor, or beauty in spaces where art would otherwise be absent — democratizing both production and reception.",
+    "original_word_count": 69,
+    "original_description_score": 5,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: street_art_concept\n- label: Street Art and Graffiti\n- type: concept\n- domains: ART, SOC, HUM\n- display_tags: street_art, 20th_century, shapes_culture, human_experience, contemporary\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nVisual art created in public spaces — from 1970s New York subway graffiti through muralism, stencil art (Banksy), and yarn bombing to sanctioned urban art festivals. It challenges institutional art by reclaiming public space as canvas. It bridges art and social commentary because street art operates outside galleries, directly addressing communities with political messages, humor, or beauty in spaces where art would otherwise be absent — democratizing both production and reception.",
+    "candidate": "Street art and graffiti constitute a form of visual expression created directly in public spaces, emerging prominently from 1970s New York subway culture and evolving through muralism, stencil work, and sanctioned urban festivals. This movement fundamentally transformed how communities engage with art by democratizing both its production and reception outside institutional gatekeepers. Its significance bridges the domains of sociology and urban studies, as street art reshapes neighborhood identity, challenges power structures, and converts overlooked environments into sites of political dialogue and collective human experience.",
+    "candidate_word_count": 84,
+    "candidate_description_score": 7,
+    "candidate_description_breakdown": {
+      "what": 1,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 2,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 11,
+    "node_id": "finite_element_method_concept",
+    "label": "Finite Element Method",
+    "domain": [
+      "ENG",
+      "MAT",
+      "PHY"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "A computational technique dividing complex structures into small elements to approximate solutions to partial differential equations governing stress, heat flow, and fluid dynamics. It makes the unsolvable solvable by breaking continuous problems into many simple pieces. It bridges engineering and mathematics because virtually every modern engineered structure — bridges, aircraft, microchips — is validated through finite element simulation before being built.",
+    "original_word_count": 59,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: finite_element_method_concept\n- label: Finite Element Method\n- type: concept\n- domains: ENG, MAT, PHY\n- display_tags: numerical_methods, 20th_century, computational, tool_or_method, mechanical_engineering\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nA computational technique dividing complex structures into small elements to approximate solutions to partial differential equations governing stress, heat flow, and fluid dynamics. It makes the unsolvable solvable by breaking continuous problems into many simple pieces. It bridges engineering and mathematics because virtually every modern engineered structure — bridges, aircraft, microchips — is validated through finite element simulation before being built.",
+    "candidate": "The Finite Element Method (FEM) is a numerical technique that discretizes complex geometries into small, interconnected elements to approximate solutions to partial differential equations governing stress, heat transfer, and fluid dynamics. FEM transformed modern engineering by enabling accurate simulation of structures previously too complex to analyze analytically, becoming foundational to aerospace, civil, and biomedical design. By bridging computational mathematics and physical sciences, FEM allows physicists to model phenomena ranging from quantum mechanics to seismic wave propagation, ensuring virtually every major engineered system is validated through simulation before construction.",
+    "candidate_word_count": 88,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 12,
+    "node_id": "natural_language_processing_applications_concept",
+    "label": "Natural Language Processing Applications",
+    "domain": [
+      "TEC",
+      "HUM",
+      "SOC"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The practical deployment of NLP technology in translation, summarization, sentiment analysis, chatbots, and large language models that process and generate human text at scale. GPT and transformer architectures represent the current frontier. It bridges technology and humanities because these systems must encode semantic meaning, pragmatic context, and cultural nuance — problems that require linguistic theory as much as engineering.",
+    "original_word_count": 58,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: natural_language_processing_applications_concept\n- label: Natural Language Processing Applications\n- type: concept\n- domains: TEC, HUM, SOC\n- display_tags: natural_language_processing, 21st_century, applied, currently_active_research, practical_breakthrough\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe practical deployment of NLP technology in translation, summarization, sentiment analysis, chatbots, and large language models that process and generate human text at scale. GPT and transformer architectures represent the current frontier. It bridges technology and humanities because these systems must encode semantic meaning, pragmatic context, and cultural nuance — problems that require linguistic theory as much as engineering.",
+    "candidate": "Natural Language Processing Applications refers to the real-world deployment of computational systems that interpret, generate, and transform human language across tasks such as machine translation, sentiment analysis, summarization, and conversational AI. Transformer-based architectures like GPT have enabled breakthrough capabilities, fundamentally transforming how humans interact with information systems. These applications bridge technology and the social sciences, as effective language models must encode cultural context, pragmatic meaning, and sociolinguistic variation — challenges demanding insights from linguistics, anthropology, and communication theory alongside engineering expertise.",
+    "candidate_word_count": 82,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 13,
+    "node_id": "documentary_tradition_concept",
+    "label": "Documentary Tradition",
+    "domain": [
+      "ART",
+      "HUM",
+      "SOC"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The practice of using photography, film, and audio to record reality for artistic, journalistic, or historical purposes — from social reform photography (Riis, Hine) through cinema vérité to modern podcast and video essay. The paradox: every documentary choice (framing, editing, narration) constructs rather than merely captures reality. It bridges art and ethics because documentary makers wield power over their subjects, raising questions of consent, exploitation, and truth.",
+    "original_word_count": 66,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: documentary_tradition_concept\n- label: Documentary Tradition\n- type: concept\n- domains: ART, HUM, SOC\n- display_tags: film_studies, photography, 20th_century, applied, human_experience\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe practice of using photography, film, and audio to record reality for artistic, journalistic, or historical purposes — from social reform photography (Riis, Hine) through cinema vérité to modern podcast and video essay. The paradox: every documentary choice (framing, editing, narration) constructs rather than merely captures reality. It bridges art and ethics because documentary makers wield power over their subjects, raising questions of consent, exploitation, and truth.",
+    "candidate": "Documentary tradition is a practice-based concept encompassing the systematic use of photography, film, and audio recording to represent reality for artistic, journalistic, or historical purposes. Pioneered by social reform photographers such as Riis and Hine, it transformed public awareness of inequality and enabled policy change. Crucially, every documentary choice—framing, editing, narration—constructs rather than merely captures reality. This paradox bridges media studies and ethics, as practitioners wield significant power over subjects, raising foundational questions of consent, exploitation, and truth that resonate equally within sociological research methodology.",
+    "candidate_word_count": 88,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 14,
+    "node_id": "edge_computing_concept",
+    "label": "Edge Computing",
+    "domain": [
+      "TEC",
+      "ENG"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "A computing paradigm that processes data near its source (sensors, devices) rather than sending everything to distant cloud servers, reducing latency and bandwidth requirements. It enables real-time responses for autonomous vehicles, industrial automation, and AR/VR. It bridges cloud and physical computing by distributing intelligence to where data is generated, creating a hierarchy from tiny embedded processors to massive data centers.",
+    "original_word_count": 62,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: edge_computing_concept\n- label: Edge Computing\n- type: concept\n- domains: TEC, ENG\n- display_tags: distributed_systems, 21st_century, applied, currently_active_research, information_age\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nA computing paradigm that processes data near its source (sensors, devices) rather than sending everything to distant cloud servers, reducing latency and bandwidth requirements. It enables real-time responses for autonomous vehicles, industrial automation, and AR/VR. It bridges cloud and physical computing by distributing intelligence to where data is generated, creating a hierarchy from tiny embedded processors to massive data centers.",
+    "candidate": "Edge Computing is a distributed computing paradigm that processes data at or near its source — on sensors, devices, or local nodes — rather than routing everything to remote cloud servers, thereby reducing latency and bandwidth consumption. This approach has transformed real-time applications, enabling breakthroughs in autonomous vehicles, industrial automation, and augmented reality. By distributing computational intelligence across a hierarchy from embedded processors to centralized data centers, it bridges the engineering domain of physical systems with large-scale cloud infrastructure and network architecture design.",
+    "candidate_word_count": 83,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 15,
+    "node_id": "materials_characterization_concept",
+    "label": "Materials Characterization",
+    "domain": [
+      "ENG",
+      "CHE",
+      "PHY"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The suite of techniques (electron microscopy, X-ray diffraction, spectroscopy, mechanical testing) used to determine the structure, composition, and properties of materials at scales from atomic to macroscopic. It is the empirical foundation of materials science. It bridges engineering and physics because designing new materials requires first measuring existing ones — and every measurement technique exploits different physical phenomena (electron scattering, photon absorption, acoustic waves).",
+    "original_word_count": 64,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: materials_characterization_concept\n- label: Materials Characterization\n- type: concept\n- domains: ENG, CHE, PHY\n- display_tags: materials_science, 20th_century, experimental, tool_or_method, foundational\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe suite of techniques (electron microscopy, X-ray diffraction, spectroscopy, mechanical testing) used to determine the structure, composition, and properties of materials at scales from atomic to macroscopic. It is the empirical foundation of materials science. It bridges engineering and physics because designing new materials requires first measuring existing ones — and every measurement technique exploits different physical phenomena (electron scattering, photon absorption, acoustic waves).",
+    "candidate": "Materials characterization is the systematic application of techniques — including electron microscopy, X-ray diffraction, spectroscopy, and mechanical testing — to determine the structure, composition, and properties of materials across atomic to macroscopic scales. It is foundational to materials science, enabling researchers to validate theoretical models, guide synthesis, and accelerate the development of advanced materials. By exploiting distinct physical phenomena such as electron scattering and photon absorption, it bridges engineering and physics, transforming raw experimental data into actionable design principles for fields ranging from semiconductor fabrication to biomedical engineering.",
+    "candidate_word_count": 87,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 4,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 16,
+    "node_id": "nuclear_chemistry_applications_concept",
+    "label": "Nuclear Chemistry Applications",
+    "domain": [
+      "CHE",
+      "PHY",
+      "MED"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The practical applications of nuclear reactions and radioactive isotopes — from nuclear power generation and radiometric dating to PET scanning and cancer radiotherapy to neutron activation analysis. It bridges chemistry and medicine because radioactive tracers allow visualization of metabolic processes in living patients, while radiation therapy exploits nuclear decay to destroy tumors with millimeter precision.",
+    "original_word_count": 54,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: nuclear_chemistry_applications_concept\n- label: Nuclear Chemistry Applications\n- type: concept\n- domains: CHE, PHY, MED\n- display_tags: nuclear_chemistry, 20th_century, applied, practical_breakthrough, interdisciplinary\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe practical applications of nuclear reactions and radioactive isotopes — from nuclear power generation and radiometric dating to PET scanning and cancer radiotherapy to neutron activation analysis. It bridges chemistry and medicine because radioactive tracers allow visualization of metabolic processes in living patients, while radiation therapy exploits nuclear decay to destroy tumors with millimeter precision.",
+    "candidate": "Nuclear chemistry applications constitute the practical use of nuclear reactions and radioactive isotopes across energy, medicine, and analytical science — encompassing nuclear power generation, radiometric dating, PET scanning, cancer radiotherapy, and neutron activation analysis. These applications transformed modern civilization by enabling carbon-free electricity, precise archaeological dating, and life-saving diagnostics. Bridging chemistry and medicine, radioactive tracers allow real-time visualization of metabolic processes in living patients, while targeted radiation therapy exploits controlled nuclear decay to destroy tumors with millimeter precision.",
+    "candidate_word_count": 80,
+    "candidate_description_score": 7,
+    "candidate_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 4
+    },
+    "delta_description_score": 1,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 17,
+    "node_id": "oncology_concept",
+    "label": "Oncology",
+    "domain": [
+      "MED",
+      "BIO",
+      "CHE"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The medical specialty studying and treating cancer — from Virchow's cellular pathology through radiation therapy, chemotherapy, targeted therapy, and immunotherapy. Cancer is fundamentally a disease of uncontrolled cell division driven by accumulated genetic mutations. It bridges medicine and molecular biology because effective cancer treatment requires understanding each tumor's unique molecular profile — its driver mutations, immune microenvironment, and vulnerabilities — to select precisely targeted therapies.",
+    "original_word_count": 64,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 3
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: oncology_concept\n- label: Oncology\n- type: concept\n- domains: MED, BIO, CHE\n- display_tags: cell_biology, 20th_century, applied, currently_active_research, interdisciplinary\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe medical specialty studying and treating cancer — from Virchow's cellular pathology through radiation therapy, chemotherapy, targeted therapy, and immunotherapy. Cancer is fundamentally a disease of uncontrolled cell division driven by accumulated genetic mutations. It bridges medicine and molecular biology because effective cancer treatment requires understanding each tumor's unique molecular profile — its driver mutations, immune microenvironment, and vulnerabilities — to select precisely targeted therapies.",
+    "candidate": "Oncology is the medical and scientific discipline dedicated to the study, diagnosis, and treatment of cancer, encompassing approaches from radiation therapy and chemotherapy to targeted therapy and immunotherapy. Its significance is foundational to modern medicine, having transformed survival outcomes through precision therapies that exploit tumor-specific vulnerabilities. Cancer's basis in uncontrolled cell division driven by accumulated genetic mutations bridges oncology directly with molecular biology and chemistry, as effective treatment increasingly demands detailed characterization of each tumor's driver mutations, immune microenvironment, and druggable molecular targets.",
+    "candidate_word_count": 86,
+    "candidate_description_score": 9,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 3,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 18,
+    "node_id": "solid_state_chemistry_concept",
+    "label": "Solid-State Chemistry",
+    "domain": [
+      "CHE",
+      "PHY",
+      "ENG"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE element weak or missing"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The study of synthesis, structure, and properties of solid materials — crystals, ceramics, glasses, and semiconductors. Understanding how atomic arrangements create bulk properties (conductivity, magnetism, hardness, optical behavior). It bridges chemistry and physics because solid-state phenomena (superconductivity, ferromagnetism, band gaps) emerge from collective quantum effects in periodic arrays of atoms — requiring both chemical bonding theory and condensed matter physics.",
+    "original_word_count": 59,
+    "original_description_score": 6,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 1,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: solid_state_chemistry_concept\n- label: Solid-State Chemistry\n- type: concept\n- domains: CHE, PHY, ENG\n- display_tags: materials_science, 20th_century, foundational, applied, interdisciplinary\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe study of synthesis, structure, and properties of solid materials — crystals, ceramics, glasses, and semiconductors. Understanding how atomic arrangements create bulk properties (conductivity, magnetism, hardness, optical behavior). It bridges chemistry and physics because solid-state phenomena (superconductivity, ferromagnetism, band gaps) emerge from collective quantum effects in periodic arrays of atoms — requiring both chemical bonding theory and condensed matter physics.",
+    "candidate": "Solid-state chemistry is the scientific discipline concerned with the synthesis, crystal structure, and physical properties of solid materials, including ceramics, glasses, semiconductors, and crystalline compounds. It is foundational to modern materials science, having enabled breakthroughs in superconductivity, magnetic storage, and semiconductor device fabrication. By explaining how atomic arrangements and chemical bonding determine bulk properties such as conductivity, hardness, and optical behavior, it bridges chemistry and condensed matter physics, directly informing engineering applications in electronics, energy storage, and advanced functional materials.",
+    "candidate_word_count": 81,
+    "candidate_description_score": 9,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 3,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 19,
+    "node_id": "medicinal_chemistry_concept",
+    "label": "Medicinal Chemistry",
+    "domain": [
+      "CHE",
+      "MED",
+      "BIO"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The discipline designing, synthesizing, and optimizing molecules for therapeutic use — balancing potency, selectivity, bioavailability, and safety. It transforms understanding of disease mechanisms into actual drugs through iterative molecular design. It bridges chemistry and medicine because curing disease at the molecular level requires both understanding biological targets (proteins, receptors) and crafting molecules with precisely tuned chemical properties to reach and modulate them.",
+    "original_word_count": 61,
+    "original_description_score": 7,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: medicinal_chemistry_concept\n- label: Medicinal Chemistry\n- type: concept\n- domains: CHE, MED, BIO\n- display_tags: medicinal_chemistry, 20th_century, applied, interdisciplinary, practical_breakthrough\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe discipline designing, synthesizing, and optimizing molecules for therapeutic use — balancing potency, selectivity, bioavailability, and safety. It transforms understanding of disease mechanisms into actual drugs through iterative molecular design. It bridges chemistry and medicine because curing disease at the molecular level requires both understanding biological targets (proteins, receptors) and crafting molecules with precisely tuned chemical properties to reach and modulate them.",
+    "candidate": "Medicinal chemistry is the scientific discipline focused on designing, synthesizing, and optimizing small molecules for therapeutic application, rigorously balancing potency, selectivity, bioavailability, and safety. It transformed modern healthcare by enabling the rational development of targeted drugs rather than relying on trial-and-error discovery, making it foundational to 20th-century pharmaceutical breakthroughs. By bridging chemistry and biology, it translates molecular-level understanding of disease-related proteins and receptors into precisely engineered compounds, directly informing clinical medicine and pharmacology.",
+    "candidate_word_count": 78,
+    "candidate_description_score": 9,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 3
+    },
+    "delta_description_score": 2,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  },
+  {
+    "rank": 20,
+    "node_id": "tissue_engineering_concept",
+    "label": "Tissue Engineering",
+    "domain": [
+      "ENG",
+      "MED",
+      "BIO"
+    ],
+    "type": "concept",
+    "diagnostics": [
+      "WHAT element weak or missing in opening",
+      "SIGNIFICANCE could be stronger"
+    ],
+    "repair_instructions": [
+      "Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.",
+      "Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough)."
+    ],
+    "original_description": "The use of scaffolds, cells, and biochemical signals to grow functional biological tissues for transplantation or drug testing, combining engineering principles with cell biology. It aims to solve the organ shortage crisis by growing replacement tissues. It bridges engineering and biology because building living tissue requires understanding both mechanical properties (scaffold design, fluid flow) and biological processes (cell differentiation, vascularization).",
+    "original_word_count": 60,
+    "original_description_score": 7,
+    "original_description_breakdown": {
+      "what": 1,
+      "significance": 2,
+      "bridge": 4
+    },
+    "prompt": "You are editing a knowledge-graph node description in English.\nRewrite the description to improve quality while preserving factual meaning.\n\nConstraints:\n- Output only the revised description text, no JSON, no bullets.\n- 50 to 100 words.\n- Keep it in English.\n- Keep the same topic and key terminology.\n- Ensure structure includes WHAT + SIGNIFICANCE + BRIDGE.\n- BRIDGE must explicitly mention at least one different domain.\n\nNode metadata:\n- id: tissue_engineering_concept\n- label: Tissue Engineering\n- type: concept\n- domains: ENG, MED, BIO\n- display_tags: biomedical_engineering, 21st_century, interdisciplinary, currently_active_research, applied\n\nQuality repair instructions:\n- Strengthen WHAT: open with a precise definition sentence that clearly states what this concept/person/event/field is.\n- Strengthen SIGNIFICANCE: include concrete impact language (e.g., enabled, transformed, foundational, breakthrough).\n\nCurrent description:\nThe use of scaffolds, cells, and biochemical signals to grow functional biological tissues for transplantation or drug testing, combining engineering principles with cell biology. It aims to solve the organ shortage crisis by growing replacement tissues. It bridges engineering and biology because building living tissue requires understanding both mechanical properties (scaffold design, fluid flow) and biological processes (cell differentiation, vascularization).",
+    "candidate": "Tissue engineering is an interdisciplinary field that combines scaffolds, living cells, and biochemical signals to fabricate functional biological tissues for transplantation, disease modeling, and drug testing. It has transformed regenerative medicine by offering breakthrough solutions to the global organ shortage crisis, enabling lab-grown skin, cartilage, and vascular grafts. By demanding simultaneous mastery of mechanical design and cellular biology, tissue engineering bridges biomedical engineering and materials science, where scaffold architecture and biomaterial selection directly govern cell differentiation, vascularization, and long-term tissue viability.",
+    "candidate_word_count": 83,
+    "candidate_description_score": 10,
+    "candidate_description_breakdown": {
+      "what": 3,
+      "significance": 3,
+      "bridge": 4
+    },
+    "delta_description_score": 3,
+    "used_model": "claude-sonnet-4-6",
+    "errors": []
+  }
+]

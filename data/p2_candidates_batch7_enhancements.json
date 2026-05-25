@@ -1,0 +1,483 @@
+{
+  "timestamp": "2026-05-25T12:31:17.231628+00:00",
+  "batch": {
+    "number": 7,
+    "start": 120,
+    "end": 140,
+    "size": 20
+  },
+  "candidates_source": "p2_candidates.json",
+  "total_candidates": 158,
+  "batch_results": [
+    {
+      "node_id": "evolution_of_cooperation_concept",
+      "label": "Evolution of Cooperation",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "The evolution of cooperation is a foundational concept in evolutionary biology and game theory that investigates how cooperative behavior among self-interested individuals or organisms can emerge, stabilize, and persist through natural selection, despite the apparent competitive pressures that favor defection or free-riding. Rather than treating altruism as a paradox, this framework explains cooperation as a product of mechanisms such as kin selection, reciprocal altruism, network reciprocity, group selection, and indirect reciprocity — each offering a distinct pathway through which cooperative strategies become evolutionarily advantageous.\n\nThe significance of this concept extends well beyond biology. Robert Axelrod's landmark computer tournaments in the 1980s demonstrated that the simple strategy of \"tit-for-tat\" consistently outperformed more aggressive alternatives in iterated Prisoner's Dilemma settings, providing a rigorous, empirical basis for understanding how cooperation evolves without central authority or enforcement. This finding reshaped how researchers think about social norms, institutional design, and the origins of morality itself. William Hamilton's earlier work on inclusive fitness offered a mathematical basis for altruism among relatives, while Robert Trivers' reciprocal altruism extended cooperative logic to unrelated individuals — together constructing a comprehensive evolutionary account of prosocial behavior.\n\nThe concept serves as a powerful intellectual bridge across multiple disciplines. In economics and political science, it informs models of international",
+      "original_description": "The evolution of cooperation examines how mutually beneficial behavior emerges and persists among se..."
+    },
+    {
+      "node_id": "duality_concept",
+      "label": "Duality",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Duality is a structural principle in mathematics, physics, and philosophy whereby two seemingly distinct frameworks, representations, or systems turn out to be equivalent descriptions of the same underlying reality. Rather than one framework being more fundamental than the other, dual descriptions coexist symmetrically: each can be translated into the other through a precise formal correspondence, and insights derived in one domain transfer directly to the other.\n\nThe significance of duality across intellectual history is difficult to overstate. In mathematics, projective duality — where points and lines exchange roles without altering the validity of geometric theorems — established that truth can be representation-independent, a foundational insight for modern abstract geometry. In physics, wave-particle duality, central to quantum mechanics, shattered classical assumptions about the nature of matter and energy, compelling physicists to abandon the demand for a single intuitive picture of physical reality. More recently, string theory's S-duality and T-duality, along with the AdS/CFT correspondence, have revealed that strongly coupled physical systems can be studied by analyzing their weakly coupled duals — a transformative tool that has opened otherwise intractable problems to rigorous analysis. In optimization and linear algebra, Lagrangian duality provides a systematic method for bounding and solving complex problems by constructing equivalent dual formulations, with applications spanning economics, engineering, and machine learning.\n\nBeyond the technical sciences, duality resonates in philosophy and the humanities",
+      "original_description": "Duality is a structural principle where two seemingly different mathematical or physical frameworks ..."
+    },
+    {
+      "node_id": "coevolution_concept",
+      "label": "Coevolution",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Coevolution refers to the process by which two or more interacting species or systems exert reciprocal selective pressures on one another, driving parallel evolutionary change over time. Unlike unidirectional adaptation, coevolution is fundamentally relational: each party's traits are shaped by, and in turn reshape, the other's. Classic biological examples include predator-prey arms races, where cheetah speed and gazelle agility escalate in tandem, and mutualistic partnerships such as flowering plants and their pollinators, where anatomical and behavioral traits become tightly interlocked across generations.\n\nThe significance of coevolution extends well beyond describing species interactions. It fundamentally reframes how we understand adaptation itself — not as a passive response to a static environment, but as a dynamic negotiation between interdependent actors. This insight shifted evolutionary biology from organism-centered models toward relational and systems-level thinking, influencing foundational concepts such as the Red Queen hypothesis, which proposes that organisms must continuously evolve simply to maintain fitness against co-evolving competitors. Coevolution also helps explain the extraordinary diversity of life: many of Earth's most elaborate biological structures — from orchid morphology to immune system complexity — are products of sustained reciprocal selection pressure.\n\nThe concept bridges multiple disciplines with notable precision. In ecology, it explains community structure and the stability of mutualistic networks. In medicine, it underlies our",
+      "original_description": "Coevolution describes reciprocal evolutionary influence between interacting entities: predators and ..."
+    },
+    {
+      "node_id": "scientific_method_concept",
+      "label": "Scientific Method",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "The scientific method is a systematic, iterative framework for generating reliable knowledge about the natural world through structured cycles of observation, hypothesis formation, experimentation, and evidence-based revision. At its core, it operates on the principle that claims about reality must be testable, falsifiable, and subject to independent verification — distinguishing scientific knowledge from other forms of inquiry such as intuition, authority, or pure reasoning.\n\nIts significance lies in its transformative role as the foundational epistemological engine of modern civilization. Prior to its consolidation during the Scientific Revolution of the 16th and 17th centuries, knowledge claims were largely evaluated by appeal to tradition or theological authority. The scientific method replaced this paradigm with a self-correcting process grounded in empirical evidence, enabling cumulative progress across generations of researchers. This shift produced not only landmark discoveries — from Newton's laws of motion to the germ theory of disease — but also an entirely new standard for what it means to *know* something rigorously.\n\nThe framework's influence extends far beyond the natural sciences. In **medicine**, randomized controlled trials and systematic reviews apply its core logic to evaluate treatment efficacy, directly shaping clinical practice and public health policy. In **psychology and social science**, it provides the architecture for behavioral research, though its application raises important questions about replication, bias, and the complexity of human subjects. In **philosophy**, it anchors debates in epistemology and the philosophy",
+      "original_description": "The scientific method is the systematic approach to knowledge through observation, hypothesis format..."
+    },
+    {
+      "node_id": "resilience_concept",
+      "label": "Resilience",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Resilience is a system's capacity to absorb disturbance, adapt through reorganization, and continue performing its essential functions without collapsing into a qualitatively different state. At its core, the concept captures not merely the ability to \"bounce back\" to a prior condition, but the dynamic capacity to persist, transform, and even strengthen in the face of stress, shock, or chronic pressure. A resilient system maintains its identity and core processes while tolerating significant internal or external perturbation.\n\nThe significance of resilience as a conceptual framework lies in its power to reframe how scientists, engineers, clinicians, and policymakers understand stability and change. Rather than treating disturbance as a problem to be eliminated, resilience thinking reveals that the capacity to absorb and adapt is itself a form of functional strength. This shift has proven transformative: in ecology, it redefined how conservation biologists assess ecosystem health beyond simple species counts; in engineering, it prompted infrastructure designers to prioritize adaptive capacity over rigid structural resistance; and in medicine, it changed clinical models of recovery to account for psychological and physiological adaptation over time.\n\nResilience bridges disciplines with unusual coherence because the underlying mathematical and conceptual structures—thresholds, feedback loops, adaptive cycles, and regime shifts—apply across systems of vastly different scales and compositions. In ecology, C.S. Holling's foundational work established the concept of ecological resilience",
+      "original_description": "Resilience is a system's capacity to absorb disturbance, reorganize, and maintain essential function..."
+    },
+    {
+      "node_id": "spectroscopy_concept",
+      "label": "Spectroscopy",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Spectroscopy is the scientific study of how matter interacts with electromagnetic radiation across a broad spectrum of wavelengths, from gamma rays and X-rays through visible light to infrared, microwave, and radio frequencies. By analyzing the characteristic ways in which atoms and molecules absorb, emit, or scatter radiation, spectroscopy reveals the composition, structure, energy states, and physical properties of substances with remarkable precision and often without destructive sampling.\n\nThe significance of spectroscopy in modern science is difficult to overstate. It provided the first empirical evidence for the quantization of atomic energy levels, directly informing the development of quantum mechanics in the early twentieth century. The distinct spectral \"fingerprints\" that every element and compound produces have become one of the most powerful analytical tools in existence, enabling identification of substances at trace concentrations, determination of molecular geometries, and measurement of physical parameters such as temperature and pressure in systems that would otherwise be inaccessible.\n\nSpectroscopy bridges disciplines with exceptional breadth and depth. In chemistry, techniques such as nuclear magnetic resonance (NMR), infrared (IR), and mass spectrometry are indispensable for elucidating molecular structure and monitoring chemical reactions in real time. In physics, spectroscopic data underpin atomic theory, quantum electrodynamics, and precision measurements used to test fundamental constants. In astronomy and astrophysics, spectroscopy is the",
+      "original_description": "Spectroscopy studies interactions between matter and electromagnetic radiation to determine composit..."
+    },
+    {
+      "node_id": "population_dynamics_concept",
+      "label": "Population Dynamics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Population dynamics is the quantitative study of how populations change in size, structure, and composition over time, governed by the interplay of birth rates, death rates, immigration, and emigration. It encompasses both the mathematical modeling of these processes and the biological, environmental, and social mechanisms that drive them. Core frameworks include exponential and logistic growth models, predator-prey relationships formalized by Lotka-Volterra equations, age-structured models such as the Leslie matrix, and stochastic approaches that account for random fluctuations in small populations.\n\nThe significance of population dynamics extends well beyond descriptive ecology. It provides the theoretical foundation for understanding how living systems self-regulate, collapse, or recover under pressure—insights that are indispensable for managing fisheries, designing vaccination programs, forecasting disease outbreaks, and setting conservation priorities for endangered species. The field gained transformative importance in the twentieth century when mathematical tools developed for biological populations were recognized as broadly applicable to any system characterized by replication, competition, and resource limitation. This recognition reshaped how scientists think about stability, resilience, and change across virtually every empirical discipline.\n\nThe cross-domain reach of population dynamics is exceptional. In **epidemiology and medicine**, compartmental models (SIR, SEIR) derived directly from population dynamics govern how public health agencies predict the spread of infectious diseases and evaluate intervention strategies. In **economics and social science**, analog",
+      "original_description": "Population dynamics studies how populations change in size and composition over time due to birth, d..."
+    },
+    {
+      "node_id": "institutional_economics_concept",
+      "label": "Institutional Economics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Institutional economics is a school of economic thought that examines how formal rules (laws, contracts, property rights), informal norms (customs, conventions, cultural practices), and organizations (firms, governments, markets) collectively shape economic behavior, resource allocation, and developmental outcomes. Unlike neoclassical economics, which often assumes rational agents operating in frictionless markets, institutional economics foregrounds the historical, social, and political context within which economic activity is embedded.\n\nThe significance of institutional economics lies in its capacity to explain what mainstream economic models frequently cannot: why some societies remain persistently poor despite possessing natural resources, why identical policies produce divergent outcomes across different countries, and why markets require non-market foundations—trust, enforcement mechanisms, shared expectations—to function effectively. Pioneered by Thorstein Veblen, John R. Commons, and Wesley Mitchell in the late nineteenth and early twentieth centuries, and later revitalized by Douglass North, Oliver Williamson, and Elinor Ostrom, the field has demonstrated that institutions are not mere background conditions but active determinants of economic performance. North's work on transaction costs and path dependence, for instance, fundamentally reoriented how economists and historians understand long-run growth, earning him the Nobel Memorial Prize in Economic Sciences in 1993.\n\nInstitutionalism bridges multiple disciplines in concrete and productive ways. In sociology, it informs theories of social structure and organizational behavior",
+      "original_description": "Institutional economics studies how rules, norms, and organizations shape economic behavior and outc..."
+    },
+    {
+      "node_id": "philosophy_of_mathematics_concept",
+      "label": "Philosophy of Mathematics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Philosophy of mathematics is the branch of philosophy that investigates the nature, foundations, and epistemological status of mathematical knowledge, asking fundamental questions about what mathematics is, why it works, and what mathematical objects and truths actually are. It encompasses debates over whether mathematical entities such as numbers, sets, and functions exist independently of human minds (realism or Platonism), are constructed through mental or social activity (intuitionism and constructivism), or are merely useful symbolic systems devoid of intrinsic meaning (formalism and nominalism).\n\nThe significance of philosophy of mathematics extends far beyond academic philosophy. The foundational crises of the late nineteenth and early twentieth centuries—triggered by paradoxes in set theory and resolved through competing programs advanced by Frege, Russell, Hilbert, and Brouwer—fundamentally reshaped logic, mathematics, and the theory of computation. Gödel's incompleteness theorems, which emerged directly from these foundational debates, demonstrated that no consistent formal system can prove all mathematical truths expressible within it, permanently altering humanity's understanding of the limits of formal reasoning. These results carry consequences that reach into theoretical computer science, epistemology, and cognitive science.\n\nThe field serves as a critical bridge between multiple disciplines. In mathematics itself, philosophical scrutiny of foundations has motivated entire subfields, including proof theory, model theory, and reverse mathematics. In computer science, questions about constructive",
+      "original_description": "Philosophy of mathematics examines the nature, foundations, and limits of mathematical knowledge. Pl..."
+    },
+    {
+      "node_id": "clinical_trials_concept",
+      "label": "Clinical Trials",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Clinical trials are rigorously controlled scientific studies that evaluate the safety, efficacy, and optimal dosing of medical interventions — including drugs, vaccines, surgical procedures, and behavioral therapies — by systematically administering them to human participants under carefully monitored conditions. Governed by predefined protocols, they typically progress through four sequential phases: Phase I assesses safety and dosage in small groups; Phase II examines efficacy and side effects in larger cohorts; Phase III compares the intervention against standard treatments across diverse populations; and Phase IV monitors long-term outcomes following regulatory approval.\n\nThe significance of clinical trials extends far beyond individual studies. They constitute the foundational mechanism by which medical knowledge transitions from laboratory hypothesis to evidence-based clinical practice, serving as the definitive arbiters of what actually works in human biology. Without them, modern medicine would lack the empirical grounding to distinguish effective treatments from ineffective or harmful ones — a distinction with profound consequences for public health. Landmark trials have reshaped entire fields: the Salk polio vaccine trials mobilized over one million child participants and effectively ended a global epidemic, while randomized controlled trials of statins fundamentally altered cardiovascular disease management worldwide.\n\nClinical trials occupy a genuinely multidisciplinary space. In **mathematics and statistics**, they demand sophisticated designs — randomization, blinding, power calculations, and Bayesian or frequentist inference — making them central objects of study in bio",
+      "original_description": "Clinical trials are systematic experiments testing medical interventions in human subjects through c..."
+    },
+    {
+      "node_id": "urbanization_concept",
+      "label": "Urbanization",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Urbanization is the process by which populations migrate from rural areas to cities, resulting in the physical expansion of urban settlements and a fundamental restructuring of how human societies are organized, governed, and sustained. It encompasses not only demographic shift but also the transformation of land use, economic activity, social relations, and built infrastructure that accompanies concentrated human settlement.\n\nThe significance of urbanization extends across virtually every dimension of modern life. Historically, the emergence of cities enabled the specialization of labor, the accumulation of capital, and the exchange of ideas at densities impossible in agrarian societies — conditions that catalyzed industrialization, democratic governance, and scientific advancement. Today, urbanization is among the most consequential processes shaping the twenty-first century: more than half of the global population now lives in cities, a proportion expected to reach two-thirds by 2050. How cities grow — or fail to grow equitably — determines outcomes in public health, economic mobility, political stability, and environmental sustainability on a global scale.\n\nUrbanization sits at the intersection of multiple disciplines, making it an indispensable concept across fields of study. In **sociology**, it reshapes kinship networks, class formation, and cultural identity. In **history**, the rise and decline of urban centers marks the rhythms of civilization itself, from ancient Mesopotamia to post-industrial Detroit. In **engineering and urban planning**, it drives the design of transportation systems, water infrastructure",
+      "original_description": "Urbanization is the demographic shift from rural to urban living that has transformed human societie..."
+    },
+    {
+      "node_id": "aesthetics_concept",
+      "label": "Aesthetics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 2
+      },
+      "enhanced_description": "Aesthetics is the branch of philosophy concerned with the nature of beauty, artistic value, sensory experience, and the principles governing taste and judgment. It investigates foundational questions such as whether beauty is an objective property of the world or a subjective response of the perceiver, what distinguishes art from non-art, how sensory experiences generate emotional and intellectual meaning, and what criteria — if any — can ground aesthetic evaluation across cultures and historical periods.\n\nThe significance of aesthetics extends far beyond the philosophy of art. Kant's *Critique of Judgment* (1790) established aesthetic experience as a bridge between pure reason and moral feeling, making aesthetics central to understanding how humans unify their cognitive and emotional lives. Hegel treated art as a vehicle through which cultures articulate their deepest self-understanding, positioning aesthetics as indispensable to philosophy of history and cultural theory. More recently, questions in aesthetics have become urgent in debates about representation, identity, and power — challenging whose standards of beauty have been normalized and with what social consequences.\n\nAesthetics bridges an unusually wide range of disciplines. In cognitive science and psychology, it informs empirical research into perceptual preference, neural responses to beauty, and the evolutionary origins of artistic behavior. In literary studies and art history, aesthetic theory provides the analytical vocabulary for interpreting works and evaluating critical methodologies. In design, architecture, and human-computer interaction, aesthetic",
+      "original_description": "Aesthetics is the philosophical study of beauty, taste, art, and sensory experience. It asks whether..."
+    },
+    {
+      "node_id": "public_history_concept",
+      "label": "Public History",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Public history is a field of professional and scholarly practice that applies historical methods, expertise, and interpretive frameworks to engage audiences outside the traditional academic setting. Rather than confining historical knowledge to peer-reviewed journals and university classrooms, public historians work in museums, archives, historic preservation organizations, government agencies, documentary film, digital media, and community heritage projects to make the past accessible, relevant, and meaningful to general audiences.\n\nThe significance of public history lies in its dual role as both a democratizing force and a rigorous discipline. By bringing scholarly standards of evidence, contextualization, and critical interpretation into public spaces, it challenges simplified or politically motivated narratives and empowers communities to participate actively in shaping how their own histories are remembered and represented. This is particularly consequential in debates over contested heritage sites, monument preservation, and the memorialization of marginalized groups whose stories have been systematically excluded from official historical accounts. Public history does not merely popularize existing scholarship; it generates new historical knowledge through community-based oral history projects, collaborative archival work, and engagement with living memory.\n\nPublic history occupies a productive intersection among multiple disciplines. With sociology and anthropology, it shares an investment in community identity and collective memory. Its engagement with digital technologies—including geographic information systems, interactive databases, and online archives—connects it to information science and digital humanities, raising important questions about access, preservation, and representation in the digital age. Its work with policy institutions and",
+      "original_description": "Public history is a field that brings historical scholarship to audiences beyond academia through mu..."
+    },
+    {
+      "node_id": "phonology_concept",
+      "label": "Phonology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Phonology is the branch of linguistics that investigates the systematic organization of speech sounds within and across human languages, examining not merely which sounds exist but how they function as abstract cognitive units—called phonemes—that create meaningful distinctions between words. Unlike phonetics, which focuses on the physical production and acoustic properties of sounds, phonology is concerned with the mental representations and rules governing how sounds pattern, combine, and alternate within a given linguistic system. Core areas of study include phoneme inventories, syllable structure, stress and tone patterns, and the phonological processes by which sounds shift predictably in different environments (such as assimilation, deletion, or metathesis).\n\nThe significance of phonology extends well beyond theoretical linguistics. It provides the foundational framework for understanding how human language is mentally encoded and processed, making it indispensable to cognitive science and psycholinguistics. Phonological analysis has transformed our understanding of language acquisition, revealing that children internalize abstract sound rules—not merely imitate surface-level sounds—from remarkably early ages. In clinical contexts, phonological theory underpins the diagnosis and treatment of speech and language disorders, guiding speech-language pathology in distinguishing systematic phonological impairments from articulatory difficulties. Computationally, phonological models are integral to automatic speech recognition, text-to-speech synthesis, and natural language processing systems, directly shaping how machines interpret and generate human speech.",
+      "original_description": "Phonology studies the systematic organization of speech sounds in languages—which sound contrasts di..."
+    },
+    {
+      "node_id": "behavioral_ecology_concept",
+      "label": "Behavioral Ecology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Behavioral ecology is a scientific discipline that investigates how natural selection shapes animal behavior in response to ecological pressures, examining the adaptive value of behavioral strategies in terms of survival and reproductive success. Rooted in Darwinian evolutionary theory, it treats behavior as a phenotypic trait subject to selective forces, asking not merely *what* animals do, but *why* particular behaviors have been favored over evolutionary time. Core frameworks include optimal foraging theory, sexual selection, kin selection, and game theory models such as the hawk-dove paradigm, all of which seek to explain behavioral patterns as solutions to ecological and social challenges.\n\nThe significance of behavioral ecology lies in its power to unify proximate mechanisms with ultimate evolutionary explanations, providing a rigorous analytical foundation that transformed biology in the latter twentieth century. By formalizing the relationship between cost-benefit trade-offs and adaptive behavior, it resolved longstanding puzzles in evolutionary biology—such as the evolution of altruism and cooperative breeding—that classical Darwinism struggled to explain. The development of inclusive fitness theory by W.D. Hamilton, and its integration into behavioral ecology, fundamentally reshaped how scientists understand social evolution across taxa, from insects to primates.\n\nBeyond biology, behavioral ecology exerts substantial influence across multiple disciplines. In economics and social science, its game-theoretic models of strategic interaction informed the development of evolutionary game theory, which now underpins research on human",
+      "original_description": "Behavioral ecology studies how natural selection shapes animal behavior in ecological contexts. Opti..."
+    },
+    {
+      "node_id": "max_weber_person",
+      "label": "Max Weber",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 0,
+        "description_delta": 0
+      },
+      "enhanced_description": "Max Weber (1864–1920) was a German sociologist, political economist, and philosopher whose theoretical contributions fundamentally reshaped the social sciences and continue to inform scholarly inquiry across multiple disciplines. Widely regarded as one of the founding figures of modern sociology, Weber developed an interpretive approach to social analysis that distinguished the study of human society from the natural sciences by emphasizing the role of meaning, intention, and subjective understanding — a method he termed *Verstehen* (interpretive understanding).\n\nWeber's conceptual toolkit remains indispensable to social analysis. His theory of **ideal types** provides analytical models — deliberately abstracted constructs such as \"bureaucracy\" or \"capitalism\" — that scholars use as interpretive benchmarks rather than empirical descriptions. His account of **rationalization** traces how modern Western societies increasingly organize social life according to calculable, rule-bound procedures, displacing tradition and charismatic authority. His tripartite framework of **legitimate domination** — traditional, charismatic, and rational-legal authority — remains a foundational framework for understanding political power and institutional legitimacy.\n\nWeber's significance extends well beyond sociology. His *Protestant Ethic and the Spirit of Capitalism* (1905) argued that Calvinist religious ethics catalyzed the cultural preconditions for modern capitalism, forging a lasting bridge between religious history, economic sociology, and cultural analysis. His work on bureaucracy directly in",
+      "original_description": "Max Weber is the sociologist who developed foundational concepts: ideal types (analytical models), b..."
+    },
+    {
+      "node_id": "hippocrates_person",
+      "label": "Hippocrates",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 0,
+        "description_delta": 0
+      },
+      "enhanced_description": "Hippocrates of Cos (c. 460–370 BCE) is the ancient Greek physician universally regarded as the father of Western medicine, who fundamentally transformed the understanding and practice of healing by establishing medicine as a rational discipline grounded in systematic observation rather than supernatural explanation.\n\nPrior to Hippocrates, disease was widely attributed to divine punishment or demonic intervention. His decisive contribution was to argue that illness arises from natural causes — environmental conditions, diet, and physiological imbalance — a shift that effectively separated medicine from religion and myth. Through the Hippocratic Corpus, a collection of approximately sixty texts associated with him and his school on the island of Cos, he codified clinical practices including patient observation, prognosis, and the careful documentation of symptoms. The famous Hippocratic Oath, still invoked symbolically in medical education today, established an ethical framework for the physician's obligations to patients and society — arguably the earliest formal code of professional medical ethics in Western history.\n\nHis significance extends well beyond clinical practice. In philosophy, Hippocrates contributed to the empiricist tradition by insisting that knowledge must be derived from direct sensory experience and careful inference, influencing thinkers from Aristotle to Francis Bacon. His theory of the four humors — blood, phlegm, yellow bile, and black bile — though ultimately superseded, dominated Western and Islamic medical thought for nearly two millenni",
+      "original_description": "Hippocrates is the ancient Greek physician regarded as the father of Western medicine, who separated..."
+    },
+    {
+      "node_id": "microhistory_concept",
+      "label": "Microhistory",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Microhistory is a historical methodology that focuses intense analytical scrutiny on a single person, community, event, or document, using that narrowly defined subject as a lens through which to illuminate broader social, cultural, and economic structures. Rather than constructing grand narratives across vast timeframes, microhistory operates on a deliberately reduced scale, recovering the lived experiences of ordinary individuals and marginal groups who are typically absent from conventional historical accounts.\n\nEmerging as a distinct approach in the 1970s and 1980s, particularly through the work of Italian scholars such as Carlo Ginzburg and Giovanni Levi, microhistory challenged the dominance of large-scale quantitative and structural history by demonstrating that the particular and the exceptional could reveal what the general had obscured. Ginzburg's *The Cheese and the Worms* (1976), reconstructing the cosmological beliefs of a sixteenth-century Italian miller through Inquisition records, became a foundational demonstration of the method's power: a single case study exposing the complex interplay between elite and popular culture across early modern Europe.\n\nThe significance of microhistory extends well beyond historiography. By foregrounding individual agency, contingency, and the texture of everyday life, it reshaped how historians think about causation, evidence, and the relationship between the exceptional and the typical. It also contributed a rigorous model for reading fragmentary and marg",
+      "original_description": "A historical methodology that examines a single person, event, or community in extraordinary detail ..."
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Antimicrobial resistance (AMR) is the biological phenomenon by which microorganisms — including bacteria, viruses, fungi, and parasites — evolve the capacity to withstand the drugs designed to eliminate them, rendering standard treatments ineffective and allowing infections to persist, spread, and cause greater harm. This resistance arises through mechanisms such as genetic mutation, horizontal gene transfer, and selective pressure imposed by the overuse or misuse of antimicrobial agents, producing strains colloquially known as \"superbugs.\"\n\nThe significance of AMR extends well beyond clinical medicine. The World Health Organization identifies it as one of the foremost global public health threats of the twenty-first century, with drug-resistant infections already attributable to millions of deaths annually and projections suggesting catastrophic mortality burdens by mid-century if current trajectories continue. Crucially, AMR undermines the foundational safety of modern medicine: routine surgeries, chemotherapy, and organ transplantation all depend on effective antimicrobials to prevent secondary infections. Without functional antibiotics, the therapeutic advances of the past century are placed in jeopardy.\n\nAMR is an inherently cross-disciplinary problem that bridges the natural sciences, social sciences, and policy domains in consequential ways. In biology and microbiology, it exemplifies Darwinian natural selection operating on accelerated timescales, offering a real-world model of evolutionary dynamics",
+      "original_description": "Antimicrobial resistance (AMR) is the phenomenon by which microorganisms — including bacteria, virus..."
+    },
+    {
+      "node_id": "ancient_medicine_concept",
+      "label": "Ancient and Traditional Medicine",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Ancient and Traditional Medicine refers to the diverse body of medical knowledge, therapeutic practices, and theoretical frameworks developed independently across major civilizations prior to the modern scientific era. These systems sought to explain illness, maintain health, and restore bodily function through empirical observation, philosophical reasoning, and cultural tradition. Core examples include Greek humoral theory — systematized by Hippocrates and later expanded by Galen — which attributed health to the balance of four bodily fluids; Ayurveda, the Indian system grounded in the interplay of three doshas and holistic mind-body harmony; Traditional Chinese Medicine, which centers on qi (vital energy), yin-yang balance, and meridian-based acupuncture; and Egyptian medical practice, documented in texts such as the Ebers Papyrus, which combined empirical wound treatment with ritual healing.\n\nThe significance of these traditions extends far beyond historical curiosity. They represent humanity's earliest systematic attempts to understand the human body, codify clinical knowledge, and establish professional medical ethics — most notably in the Hippocratic Oath, which continues to underpin medical practice today. Many pharmacological agents still in clinical use, including aspirin derivatives, quinine, and numerous plant-based compounds, were first identified within traditional frameworks. These systems also pioneered concepts such as preventive care, dietary medicine, and the patient-practitioner relationship that remain central to contemporary healthcare philosophy.\n\nFrom a",
+      "original_description": "Medical systems developed independently across civilizations — Greek humoral theory (Hippocrates, Ga..."
+    }
+  ],
+  "summary": {
+    "total_processed": 20,
+    "completed": 20,
+    "errors": 0,
+    "avg_score_improvement": 1.7
+  }
+}

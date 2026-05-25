@@ -1,0 +1,1054 @@
+{
+  "timestamp": "2026-05-25T13:22:24.938009+00:00",
+  "label": "P3",
+  "threshold_min_total_score": null,
+  "threshold_max_total_score": 22,
+  "threshold_max_description_score": null,
+  "required_diagnostics": [
+    "SIGNIFICANCE"
+  ],
+  "total_count": 53,
+  "candidates": [
+    {
+      "node_id": "aesthetic_theory_concept",
+      "label": "Aesthetic Theory",
+      "domain": [
+        "ART",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 18
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Aesthetic theory investigates the nature of beauty, taste, and artistic value — asking whether beaut...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "digital_humanities_concept",
+      "label": "Digital Humanities",
+      "domain": [
+        "HUM",
+        "TEC",
+        "MAT",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Digital humanities applies computational methods to humanistic inquiry: text mining literature corpo...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "diplomatic_history_concept",
+      "label": "Diplomatic History",
+      "domain": [
+        "HIS",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 19
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Diplomatic history studies international relations through the analysis of negotiations, treaties, a...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "narrative_concept",
+      "label": "Narrative",
+      "domain": [
+        "HUM",
+        "SOC",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 19
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Narrative is the fundamental human cognitive structure of organizing experience into causally connec...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "historical_method_concept",
+      "label": "Historical Method",
+      "domain": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 19
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The historical method is the systematic set of techniques historians use to evaluate sources, establ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "computer_science_field",
+      "label": "Computer Science",
+      "domain": [
+        "TEC",
+        "MAT"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 8,
+        "total": 19
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Computer science studies computation, algorithms, data structures, and the theory and practice of bu...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "feedback_loops_concept",
+      "label": "Feedback Loops",
+      "domain": [
+        "ENG",
+        "BIO",
+        "SOC",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Feedback loops occur when a system's output is routed back as input, creating circular causal chains...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "adaptation_concept",
+      "label": "Adaptation",
+      "domain": [
+        "BIO",
+        "SOC",
+        "ENG",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Adaptation is the process and result of adjustment to environmental conditions. Biological adaptatio...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "diagnostic_reasoning_concept",
+      "label": "Diagnostic Reasoning",
+      "domain": [
+        "MED",
+        "PHI",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Diagnostic reasoning is the cognitive process of determining disease identity from symptoms, signs, ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "globalization_concept",
+      "label": "Globalization",
+      "domain": [
+        "SOC",
+        "HIS",
+        "TEC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Globalization describes the increasing interconnection of economies, cultures, and populations throu...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "deviance_and_social_control_concept",
+      "label": "Deviance and Social Control",
+      "domain": [
+        "SOC",
+        "PHI",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Deviance studies how societies define, label, and respond to behavior that violates norms. Social co...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "archival_science_concept",
+      "label": "Archival Science",
+      "domain": [
+        "HUM",
+        "HIS",
+        "TEC",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 5,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Archival science studies the principles and methods for preserving, organizing, and providing access...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "statistical_inference_concept",
+      "label": "Statistical Inference",
+      "domain": [
+        "SOC",
+        "MAT",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Statistical inference is the set of methods for drawing conclusions about populations from limited s...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "modeling_and_simulation_concept",
+      "label": "Modeling and Simulation",
+      "domain": [
+        "MAT",
+        "ENG",
+        "PHY",
+        "TEC",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Modeling and simulation is the practice of creating abstract representations of real-world systems t...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "pattern_recognition_concept",
+      "label": "Pattern Recognition",
+      "domain": [
+        "TEC",
+        "MAT",
+        "BIO",
+        "PHI",
+        "ART"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Pattern recognition is the ability to detect regularities, structures, and meaningful configurations...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "stability_and_instability_concept",
+      "label": "Stability and Instability",
+      "domain": [
+        "ENG",
+        "PHY",
+        "MAT",
+        "BIO",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Stability analysis determines whether a system returns to equilibrium after perturbation (stable) or...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "gravitational_force_concept",
+      "label": "Gravitational Force",
+      "domain": [
+        "PHY",
+        "MAT",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Gravitational force is the universal attraction between masses, described by Newton's inverse-square...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "collective_action_concept",
+      "label": "Collective Action",
+      "domain": [
+        "SOC",
+        "PHI",
+        "BIO",
+        "MAT"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Collective action theory studies how groups overcome the tendency for individual rational behavior t...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "discourse_analysis_concept",
+      "label": "Discourse Analysis",
+      "domain": [
+        "HUM",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Discourse analysis examines how language use constructs social reality, power relations, and knowled...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "labor_economics_concept",
+      "label": "Labor Economics",
+      "domain": [
+        "SOC",
+        "MAT",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Labor economics studies markets for human work: wage determination, employment, human capital invest...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "language_and_thought_concept",
+      "label": "Language and Thought",
+      "domain": [
+        "HUM",
+        "PHI",
+        "SOC",
+        "BIO",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The relationship between language and thought—whether language shapes cognition (Sapir-Whorf hypothe...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "ethnomusicology_concept",
+      "label": "Ethnomusicology",
+      "domain": [
+        "ART",
+        "SOC",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE implied but no specific domain mentioned"
+      ],
+      "original_description": "Ethnomusicology is the systematic scholarly study of music as a social and cultural practice, analyz...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "theater_performance_concept",
+      "label": "Theater and Performance Studies",
+      "domain": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of live performance as a unique art form where meaning is created through the embodied pre...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "differential_equations_concept",
+      "label": "Differential Equations",
+      "domain": [
+        "MAT",
+        "PHY",
+        "BIO",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Differential equations are mathematical expressions that relate a quantity to its own rates of chang...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "medical_anthropology_concept",
+      "label": "Medical Anthropology",
+      "domain": [
+        "SOC",
+        "MED",
+        "HUM"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of how illness, healing, and the body are understood across different cultures, revealing ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "neuroplasticity_concept",
+      "label": "Neuroplasticity",
+      "domain": [
+        "MED",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 20
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The brain's ability to reorganize its structure and function throughout life in response to experien...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "political_philosophy_concept",
+      "label": "Political Philosophy",
+      "domain": [
+        "PHI",
+        "SOC",
+        "HIS"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 6,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger",
+        "BRIDGE element missing — no cross-domain reference"
+      ],
+      "original_description": "Political philosophy examines foundational questions about justice, authority, rights, liberty, and ...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "sociolinguistics_concept",
+      "label": "Sociolinguistics",
+      "domain": [
+        "HUM",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Sociolinguistics studies how language varies and changes in social context: regional dialects, socia...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "triage_concept",
+      "label": "Triage",
+      "domain": [
+        "MED",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "A system for prioritizing patients based on urgency and likelihood of survival when resources are in...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "photochemistry_concept",
+      "label": "Photochemistry",
+      "domain": [
+        "CHE",
+        "PHY",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of chemical reactions initiated by light absorption — from photosynthesis to photographic ...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "historiography_concept",
+      "label": "Historiography",
+      "domain": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of how history itself is written — its methods, assumptions, biases, and evolving interpre...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "mathematical_music_concept",
+      "label": "Mathematics of Music",
+      "domain": [
+        "MAT",
+        "ART",
+        "PHY"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 7,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The deep connections between mathematics and music — from Pythagorean ratios defining consonance thr...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "symmetry_concept",
+      "label": "Symmetry",
+      "domain": [
+        "PHY",
+        "MAT",
+        "CHE",
+        "ART",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Symmetry describes invariance under transformation and unifies vast domains of knowledge. In mathema...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "karl_marx_person",
+      "label": "Karl Marx",
+      "domain": [
+        "SOC",
+        "PHI",
+        "HIS"
+      ],
+      "type": "person",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Karl Marx is the philosopher and economist who developed historical materialism and critique of poli...",
+      "connection_count": 6
+    },
+    {
+      "node_id": "randomized_controlled_trial_concept",
+      "label": "Randomized Controlled Trial",
+      "domain": [
+        "MED",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "An experimental design where participants are randomly assigned to treatment or control groups, elim...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "history_of_emotions_concept",
+      "label": "History of Emotions",
+      "domain": [
+        "HIS",
+        "SOC",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of how emotions are experienced, expressed, and regulated differently across historical pe...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "electrochemistry_applications_concept",
+      "label": "Electrochemistry Applications",
+      "domain": [
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The practical exploitation of electron transfer reactions at electrode surfaces — powering batteries...",
+      "connection_count": 5
+    },
+    {
+      "node_id": "colloid_chemistry_concept",
+      "label": "Colloid and Interface Science",
+      "domain": [
+        "CHE",
+        "BIO",
+        "ENG"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "The study of systems where finely divided particles (1-1000nm) are dispersed in a medium — including...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "behavioral_genetics_concept",
+      "label": "Behavioral Genetics",
+      "domain": [
+        "BIO",
+        "SOC",
+        "PHI"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 9,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The study of how genes and environment interact to produce variation in behavior, using twin studies...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "palliative_care_concept",
+      "label": "Palliative Care",
+      "domain": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 9,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Medical care focused on relieving suffering and improving quality of life for patients with serious ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "petrochemistry_concept",
+      "label": "Petrochemistry",
+      "domain": [
+        "CHE",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 9,
+        "total": 21
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The branch of chemistry dealing with petroleum refining and the synthesis of chemicals from oil and ...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "dmitri_mendeleev_person",
+      "label": "Dmitri Mendeleev",
+      "domain": [
+        "CHE",
+        "PHY",
+        "MAT"
+      ],
+      "type": "person",
+      "current_score": {
+        "description": 7,
+        "total": 22
+      },
+      "diagnostics": [
+        "WHAT element weak or missing in opening",
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Dmitri Mendeleev (1834-1907) organized known elements into a periodic table and used recurring prope...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "mathematics_field",
+      "label": "Mathematics",
+      "domain": [
+        "MAT"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 8,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Mathematics is the study of abstract structures including number, quantity, shape, and change. It pr...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "medicine_field",
+      "label": "Medicine",
+      "domain": [
+        "MED"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 8,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Medicine is the science and practice of diagnosing, treating, and preventing disease in humans. It s...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "cognitive_science_field",
+      "label": "Cognitive Science",
+      "domain": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 8,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Cognitive science studies the nature of mind and intelligence through an interdisciplinary lens comb...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "machine_learning_concept",
+      "label": "Machine Learning",
+      "domain": [
+        "TEC",
+        "MAT",
+        "BIO"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Machine learning studies algorithms that learn a mapping from data to predictions or decisions and i...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "molecular_structure_concept",
+      "label": "Molecular Structure",
+      "domain": [
+        "CHE",
+        "BIO",
+        "PHY",
+        "MED"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 8,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE element weak or missing"
+      ],
+      "original_description": "Molecular structure describes the three-dimensional arrangement of atoms within molecules, determine...",
+      "connection_count": 4
+    },
+    {
+      "node_id": "geometry_field",
+      "label": "Geometry",
+      "domain": [
+        "MAT"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Geometry studies the properties of shapes, spaces, and their relationships. Beginning with Euclid's ...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "logic_field",
+      "label": "Logic",
+      "domain": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Logic studies the principles of valid reasoning and inference. Originating in ancient Greek philosop...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "genetics_field",
+      "label": "Genetics",
+      "domain": [
+        "BIO"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Genetics studies how biological information is stored in DNA, transmitted between generations, and e...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "neuroscience_field",
+      "label": "Neuroscience",
+      "domain": [
+        "BIO",
+        "MED"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Neuroscience studies the nervous system — its structure, function, development, and disorders. By br...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "political_science_field",
+      "label": "Political Science",
+      "domain": [
+        "SOC"
+      ],
+      "type": "field",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "Political science studies power, governance, institutions, and the collective organization of human ...",
+      "connection_count": 3
+    },
+    {
+      "node_id": "immune_system_concept",
+      "label": "Immune System",
+      "domain": [
+        "MED",
+        "BIO",
+        "CHE"
+      ],
+      "type": "concept",
+      "current_score": {
+        "description": 9,
+        "total": 22
+      },
+      "diagnostics": [
+        "SIGNIFICANCE could be stronger"
+      ],
+      "original_description": "The immune system is the body's multilayered defense network that distinguishes self from non-self a...",
+      "connection_count": 4
+    }
+  ],
+  "diagnostics_distribution": {
+    "SIGNIFICANCE element weak or missing": 31,
+    "SIGNIFICANCE could be stronger": 22,
+    "BRIDGE implied but no specific domain mentioned": 3,
+    "BRIDGE element missing — no cross-domain reference": 17,
+    "WHAT element weak or missing in opening": 1
+  }
+}

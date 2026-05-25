@@ -1,0 +1,304 @@
+{
+  "generated_at": "2026-05-25T13:21:59.676887+00:00",
+  "source_nodes": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "quality": {
+    "node_count": 627,
+    "grade_distribution": {
+      "A": 549,
+      "B": 78,
+      "C": 0,
+      "D": 0,
+      "F": 0
+    },
+    "avg_total_score": 23.273,
+    "avg_description_score": 9.26,
+    "avg_connection_score": 9.061,
+    "avg_information_score": 4.952,
+    "top_diagnostics": [
+      [
+        "SIGNIFICANCE could be stronger",
+        88
+      ],
+      [
+        "Limited cross-domain reach in connections",
+        73
+      ],
+      [
+        "WHAT element weak or missing in opening",
+        52
+      ],
+      [
+        "SIGNIFICANCE element weak or missing",
+        46
+      ],
+      [
+        "BRIDGE element missing — no cross-domain reference",
+        29
+      ],
+      [
+        "No cross-domain connections resolved",
+        14
+      ],
+      [
+        "All connections use same relation_type",
+        10
+      ],
+      [
+        "BRIDGE implied but no specific domain mentioned",
+        9
+      ]
+    ],
+    "lowest_20_nodes": [
+      {
+        "id": "aesthetic_theory_concept",
+        "label": "Aesthetic Theory",
+        "grade": "B",
+        "score": 18,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "computer_science_field",
+        "label": "Computer Science",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "fundamental_theorem_of_calculus_concept",
+        "label": "Fundamental Theorem of Calculus",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "narrative_concept",
+        "label": "Narrative",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "historical_method_concept",
+        "label": "Historical Method",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "No cross-domain connections resolved"
+        ]
+      },
+      {
+        "id": "digital_humanities_concept",
+        "label": "Digital Humanities",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "diplomatic_history_concept",
+        "label": "Diplomatic History",
+        "grade": "B",
+        "score": 19,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "historiography_field",
+        "label": "Historiography",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "Limited cross-domain reach in connections",
+          "All connections use same relation_type"
+        ]
+      },
+      {
+        "id": "differential_equations_concept",
+        "label": "Differential Equations",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "statistical_inference_concept",
+        "label": "Statistical Inference",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      {
+        "id": "cultural_relativism_concept",
+        "label": "Cultural Relativism",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "BRIDGE element missing — no cross-domain reference",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "modeling_and_simulation_concept",
+        "label": "Modeling and Simulation",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "pattern_recognition_concept",
+        "label": "Pattern Recognition",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "feedback_loops_concept",
+        "label": "Feedback Loops",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "stability_and_instability_concept",
+        "label": "Stability and Instability",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      {
+        "id": "language_and_thought_concept",
+        "label": "Language and Thought",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "Limited cross-domain reach in connections"
+        ]
+      },
+      {
+        "id": "adaptation_concept",
+        "label": "Adaptation",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "gravitational_force_concept",
+        "label": "Gravitational Force",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "diagnostic_reasoning_concept",
+        "label": "Diagnostic Reasoning",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      {
+        "id": "collective_action_concept",
+        "label": "Collective Action",
+        "grade": "B",
+        "score": 20,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      }
+    ]
+  },
+  "validation": {
+    "nodes": 627,
+    "nodes_with_errors": 0,
+    "error_count": 0,
+    "warning_count": 0
+  },
+  "i18n_labels": {
+    "counts": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "keyset_aligned_to_en": true,
+    "missing_vs_en": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    }
+  },
+  "i18n_descriptions": {
+    "baseline_source": "data/all_nodes.json descriptions",
+    "baseline_count": 627,
+    "raw_counts": {
+      "en": 0,
+      "zh": 627,
+      "ja": 6
+    },
+    "effective_counts_after_fallback": {
+      "en": 627,
+      "zh": 627,
+      "ja": 627
+    },
+    "missing_vs_baseline_after_fallback": {
+      "en": 0,
+      "zh": 0,
+      "ja": 0
+    },
+    "raw_coverage_pct": {
+      "en": 0.0,
+      "zh": 100.0,
+      "ja": 0.96
+    },
+    "effective_coverage_pct": {
+      "en": 100.0,
+      "zh": 100.0,
+      "ja": 100.0
+    }
+  }
+}

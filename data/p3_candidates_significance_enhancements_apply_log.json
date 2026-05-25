@@ -1,0 +1,397 @@
+{
+  "timestamp": "2026-05-25T13:30:30.628815+00:00",
+  "source_consolidated": "p3_candidates_significance_consolidated.json",
+  "source_decisions": "p3_candidates_significance_consolidated_decisions.json",
+  "source_nodes": "all_nodes.json",
+  "backup_file": "all_nodes_backup_p3_candidates_significance_20260525_213030.json",
+  "summary": {
+    "total_decisions": 39,
+    "applied": 37,
+    "skipped": 2,
+    "errors": 0
+  },
+  "change_log": [
+    {
+      "node_id": "aesthetic_theory_concept",
+      "label": "Aesthetic Theory",
+      "status": "applied",
+      "before_score": 18,
+      "after_score": 22,
+      "score_delta": 4,
+      "old_desc_preview": "Aesthetic theory investigates the nature of beauty, taste, and artistic value — ...",
+      "new_desc_preview": "Aesthetic theory is a branch of philosophy that systematically examines the natu..."
+    },
+    {
+      "node_id": "digital_humanities_concept",
+      "label": "Digital Humanities",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Digital humanities applies computational methods to humanistic inquiry: text min...",
+      "new_desc_preview": "Digital humanities is an interdisciplinary field that applies computational and ..."
+    },
+    {
+      "node_id": "diplomatic_history_concept",
+      "label": "Diplomatic History",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 24,
+      "score_delta": 5,
+      "old_desc_preview": "Diplomatic history studies international relations through the analysis of negot...",
+      "new_desc_preview": "Diplomatic history is the scholarly study of international relations conducted t..."
+    },
+    {
+      "node_id": "narrative_concept",
+      "label": "Narrative",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 23,
+      "score_delta": 4,
+      "old_desc_preview": "Narrative is the fundamental human cognitive structure of organizing experience ...",
+      "new_desc_preview": "Narrative is a fundamental cognitive and communicative structure through which h..."
+    },
+    {
+      "node_id": "historical_method_concept",
+      "label": "Historical Method",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 22,
+      "score_delta": 3,
+      "old_desc_preview": "The historical method is the systematic set of techniques historians use to eval...",
+      "new_desc_preview": "The historical method is a rigorous, systematic framework of principles and tech..."
+    },
+    {
+      "node_id": "computer_science_field",
+      "label": "Computer Science",
+      "status": "applied",
+      "before_score": 19,
+      "after_score": 21,
+      "score_delta": 2,
+      "old_desc_preview": "Computer science studies computation, algorithms, data structures, and the theor...",
+      "new_desc_preview": "Computer science is the systematic study of computation, algorithms, data struct..."
+    },
+    {
+      "node_id": "feedback_loops_concept",
+      "label": "Feedback Loops",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 25,
+      "score_delta": 5,
+      "old_desc_preview": "Feedback loops occur when a system's output is routed back as input, creating ci...",
+      "new_desc_preview": "Feedback loops refer to dynamic processes in which a system's output is returned..."
+    },
+    {
+      "node_id": "adaptation_concept",
+      "label": "Adaptation",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 25,
+      "score_delta": 5,
+      "old_desc_preview": "Adaptation is the process and result of adjustment to environmental conditions. ...",
+      "new_desc_preview": "Adaptation refers to the process by which a system — biological, social, technol..."
+    },
+    {
+      "node_id": "diagnostic_reasoning_concept",
+      "label": "Diagnostic Reasoning",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 25,
+      "score_delta": 5,
+      "old_desc_preview": "Diagnostic reasoning is the cognitive process of determining disease identity fr...",
+      "new_desc_preview": "Diagnostic reasoning is the structured cognitive process of systematically gathe..."
+    },
+    {
+      "node_id": "globalization_concept",
+      "label": "Globalization",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Globalization describes the increasing interconnection of economies, cultures, a...",
+      "new_desc_preview": "Globalization refers to the accelerating process by which economies, societies, ..."
+    },
+    {
+      "node_id": "deviance_and_social_control_concept",
+      "label": "Deviance and Social Control",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Deviance studies how societies define, label, and respond to behavior that viola...",
+      "new_desc_preview": "Deviance and social control refer to the sociological study of how societies def..."
+    },
+    {
+      "node_id": "archival_science_concept",
+      "label": "Archival Science",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 25,
+      "score_delta": 5,
+      "old_desc_preview": "Archival science studies the principles and methods for preserving, organizing, ...",
+      "new_desc_preview": "Archival science is the systematic discipline concerned with the theory, methodo..."
+    },
+    {
+      "node_id": "statistical_inference_concept",
+      "label": "Statistical Inference",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Statistical inference is the set of methods for drawing conclusions about popula...",
+      "new_desc_preview": "Statistical inference is the branch of statistics concerned with drawing conclus..."
+    },
+    {
+      "node_id": "modeling_and_simulation_concept",
+      "label": "Modeling and Simulation",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 25,
+      "score_delta": 5,
+      "old_desc_preview": "Modeling and simulation is the practice of creating abstract representations of ...",
+      "new_desc_preview": "Modeling and simulation refers to the practice of constructing abstract, computa..."
+    },
+    {
+      "node_id": "pattern_recognition_concept",
+      "label": "Pattern Recognition",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Pattern recognition is the ability to detect regularities, structures, and meani...",
+      "new_desc_preview": "Pattern recognition is the cognitive and computational process of identifying re..."
+    },
+    {
+      "node_id": "stability_and_instability_concept",
+      "label": "Stability and Instability",
+      "status": "skipped",
+      "reason": "Minimal improvement (+1 points): requires manual review"
+    },
+    {
+      "node_id": "gravitational_force_concept",
+      "label": "Gravitational Force",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Gravitational force is the universal attraction between masses, described by New...",
+      "new_desc_preview": "Gravitational force is the fundamental attractive interaction between any two ob..."
+    },
+    {
+      "node_id": "collective_action_concept",
+      "label": "Collective Action",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Collective action theory studies how groups overcome the tendency for individual...",
+      "new_desc_preview": "Collective action refers to the coordinated effort of individuals within a group..."
+    },
+    {
+      "node_id": "discourse_analysis_concept",
+      "label": "Discourse Analysis",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Discourse analysis examines how language use constructs social reality, power re...",
+      "new_desc_preview": "Discourse analysis is a multidisciplinary methodology that examines how language..."
+    },
+    {
+      "node_id": "labor_economics_concept",
+      "label": "Labor Economics",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 24,
+      "score_delta": 4,
+      "old_desc_preview": "Labor economics studies markets for human work: wage determination, employment, ...",
+      "new_desc_preview": "Labor economics is the branch of economics that systematically analyzes markets ..."
+    },
+    {
+      "node_id": "language_and_thought_concept",
+      "label": "Language and Thought",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The relationship between language and thought—whether language shapes cognition ...",
+      "new_desc_preview": "Language and thought refers to the theoretical and empirical study of whether, a..."
+    },
+    {
+      "node_id": "ethnomusicology_concept",
+      "label": "Ethnomusicology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "Ethnomusicology is the systematic scholarly study of music as a social and cultu...",
+      "new_desc_preview": "Ethnomusicology is the systematic scholarly study of music as a living social an..."
+    },
+    {
+      "node_id": "theater_performance_concept",
+      "label": "Theater and Performance Studies",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "The study of live performance as a unique art form where meaning is created thro...",
+      "new_desc_preview": "Theater and Performance Studies is an interdisciplinary academic field that exam..."
+    },
+    {
+      "node_id": "differential_equations_concept",
+      "label": "Differential Equations",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "Differential equations are mathematical expressions that relate a quantity to it...",
+      "new_desc_preview": "Differential equations are mathematical equations that establish a relationship ..."
+    },
+    {
+      "node_id": "medical_anthropology_concept",
+      "label": "Medical Anthropology",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 23,
+      "score_delta": 3,
+      "old_desc_preview": "The study of how illness, healing, and the body are understood across different ...",
+      "new_desc_preview": "Medical Anthropology is an interdisciplinary field that examines how biological,..."
+    },
+    {
+      "node_id": "neuroplasticity_concept",
+      "label": "Neuroplasticity",
+      "status": "applied",
+      "before_score": 20,
+      "after_score": 22,
+      "score_delta": 2,
+      "old_desc_preview": "The brain's ability to reorganize its structure and function throughout life in ...",
+      "new_desc_preview": "Neuroplasticity refers to the brain's capacity to reorganize its synaptic connec..."
+    },
+    {
+      "node_id": "political_philosophy_concept",
+      "label": "Political Philosophy",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 25,
+      "score_delta": 4,
+      "old_desc_preview": "Political philosophy examines foundational questions about justice, authority, r...",
+      "new_desc_preview": "Political philosophy is the systematic philosophical inquiry into the fundamenta..."
+    },
+    {
+      "node_id": "sociolinguistics_concept",
+      "label": "Sociolinguistics",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Sociolinguistics studies how language varies and changes in social context: regi...",
+      "new_desc_preview": "Sociolinguistics is the scientific study of the relationship between language an..."
+    },
+    {
+      "node_id": "triage_concept",
+      "label": "Triage",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "A system for prioritizing patients based on urgency and likelihood of survival w...",
+      "new_desc_preview": "Triage is a systematic process for prioritizing patients or casualties according..."
+    },
+    {
+      "node_id": "photochemistry_concept",
+      "label": "Photochemistry",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "The study of chemical reactions initiated by light absorption — from photosynthe...",
+      "new_desc_preview": "Photochemistry is the branch of chemistry that studies chemical reactions and ph..."
+    },
+    {
+      "node_id": "historiography_concept",
+      "label": "Historiography",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "The study of how history itself is written — its methods, assumptions, biases, a...",
+      "new_desc_preview": "Historiography is the systematic study of how historical knowledge is produced, ..."
+    },
+    {
+      "node_id": "mathematical_music_concept",
+      "label": "Mathematics of Music",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 24,
+      "score_delta": 3,
+      "old_desc_preview": "The deep connections between mathematics and music — from Pythagorean ratios def...",
+      "new_desc_preview": "The mathematics of music refers to the systematic study of numerical and structu..."
+    },
+    {
+      "node_id": "symmetry_concept",
+      "label": "Symmetry",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Symmetry describes invariance under transformation and unifies vast domains of k...",
+      "new_desc_preview": "Symmetry refers to the property of invariance under transformation — when an obj..."
+    },
+    {
+      "node_id": "karl_marx_person",
+      "label": "Karl Marx",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "Karl Marx is the philosopher and economist who developed historical materialism ...",
+      "new_desc_preview": "Karl Marx (1818–1883) is a German philosopher, economist, and political theorist..."
+    },
+    {
+      "node_id": "randomized_controlled_trial_concept",
+      "label": "Randomized Controlled Trial",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "An experimental design where participants are randomly assigned to treatment or ...",
+      "new_desc_preview": "A randomized controlled trial (RCT) is a prospective experimental study design i..."
+    },
+    {
+      "node_id": "history_of_emotions_concept",
+      "label": "History of Emotions",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "The study of how emotions are experienced, expressed, and regulated differently ...",
+      "new_desc_preview": "The history of emotions is an interdisciplinary field that examines how human em..."
+    },
+    {
+      "node_id": "electrochemistry_applications_concept",
+      "label": "Electrochemistry Applications",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "The practical exploitation of electron transfer reactions at electrode surfaces ...",
+      "new_desc_preview": "Electrochemistry applications refers to the practical exploitation of electron t..."
+    },
+    {
+      "node_id": "colloid_chemistry_concept",
+      "label": "Colloid and Interface Science",
+      "status": "applied",
+      "before_score": 21,
+      "after_score": 23,
+      "score_delta": 2,
+      "old_desc_preview": "The study of systems where finely divided particles (1-1000nm) are dispersed in ...",
+      "new_desc_preview": "Colloid and Interface Science is the interdisciplinary field that investigates s..."
+    },
+    {
+      "node_id": "behavioral_genetics_concept",
+      "label": "Behavioral Genetics",
+      "status": "skipped",
+      "reason": "Minimal improvement (+1 points): requires manual review"
+    }
+  ]
+}

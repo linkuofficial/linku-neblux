@@ -1,0 +1,310 @@
+{
+  "generated_at": "2026-05-25T05:01:09.309743Z",
+  "apply_report": "D:\\LINKU\\Nexus\\data\\trial_enhancements_apply_report.json",
+  "backup_file": "D:\\LINKU\\Nexus\\data\\backups\\all_nodes.pre_enhancement_apply.20260525T045435Z.json",
+  "current_file": "D:\\LINKU\\Nexus\\data\\all_nodes.json",
+  "changed_nodes": {
+    "changed_count": 20,
+    "description_improved": 19,
+    "description_unchanged": 1,
+    "description_regressed": 0,
+    "description_improved_ratio": 0.95,
+    "avg_description_delta": 3.3,
+    "avg_total_delta": 3.45,
+    "top_description_gains": [
+      {
+        "node_id": "autonomous_vehicles_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 16,
+        "after_total_score": 21,
+        "total_delta": 5
+      },
+      {
+        "node_id": "comparative_mythology_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 15,
+        "after_total_score": 20,
+        "total_delta": 5
+      },
+      {
+        "node_id": "cybersecurity_engineering_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 16,
+        "after_total_score": 21,
+        "total_delta": 5
+      },
+      {
+        "node_id": "regenerative_medicine_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 15,
+        "after_total_score": 20,
+        "total_delta": 5
+      },
+      {
+        "node_id": "aesthetic_experience_concept",
+        "before_description_score": 5,
+        "after_description_score": 9,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 20,
+        "total_delta": 4
+      }
+    ],
+    "lowest_description_gains": [
+      {
+        "node_id": "publication_of_origin_of_species_event",
+        "before_description_score": 5,
+        "after_description_score": 5,
+        "description_delta": 0,
+        "before_total_score": 16,
+        "after_total_score": 16,
+        "total_delta": 0
+      },
+      {
+        "node_id": "nuclear_chemistry_applications_concept",
+        "before_description_score": 6,
+        "after_description_score": 7,
+        "description_delta": 1,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "ethnomusicology_concept",
+        "before_description_score": 5,
+        "after_description_score": 7,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "french_revolution_event",
+        "before_description_score": 5,
+        "after_description_score": 7,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "medicinal_chemistry_concept",
+        "before_description_score": 7,
+        "after_description_score": 9,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      }
+    ],
+    "per_node": [
+      {
+        "node_id": "publication_of_origin_of_species_event",
+        "before_description_score": 5,
+        "after_description_score": 5,
+        "description_delta": 0,
+        "before_total_score": 16,
+        "after_total_score": 16,
+        "total_delta": 0
+      },
+      {
+        "node_id": "nuclear_chemistry_applications_concept",
+        "before_description_score": 6,
+        "after_description_score": 7,
+        "description_delta": 1,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "ethnomusicology_concept",
+        "before_description_score": 5,
+        "after_description_score": 7,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "french_revolution_event",
+        "before_description_score": 5,
+        "after_description_score": 7,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "medicinal_chemistry_concept",
+        "before_description_score": 7,
+        "after_description_score": 9,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "street_art_concept",
+        "before_description_score": 5,
+        "after_description_score": 7,
+        "description_delta": 2,
+        "before_total_score": 16,
+        "after_total_score": 18,
+        "total_delta": 2
+      },
+      {
+        "node_id": "oncology_concept",
+        "before_description_score": 6,
+        "after_description_score": 9,
+        "description_delta": 3,
+        "before_total_score": 16,
+        "after_total_score": 19,
+        "total_delta": 3
+      },
+      {
+        "node_id": "solid_state_chemistry_concept",
+        "before_description_score": 6,
+        "after_description_score": 9,
+        "description_delta": 3,
+        "before_total_score": 16,
+        "after_total_score": 19,
+        "total_delta": 3
+      },
+      {
+        "node_id": "tissue_engineering_concept",
+        "before_description_score": 7,
+        "after_description_score": 10,
+        "description_delta": 3,
+        "before_total_score": 16,
+        "after_total_score": 19,
+        "total_delta": 3
+      },
+      {
+        "node_id": "aesthetic_experience_concept",
+        "before_description_score": 5,
+        "after_description_score": 9,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 20,
+        "total_delta": 4
+      },
+      {
+        "node_id": "colonialism_legacy_concept",
+        "before_description_score": 5,
+        "after_description_score": 9,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 20,
+        "total_delta": 4
+      },
+      {
+        "node_id": "documentary_tradition_concept",
+        "before_description_score": 6,
+        "after_description_score": 10,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 20,
+        "total_delta": 4
+      },
+      {
+        "node_id": "edge_computing_concept",
+        "before_description_score": 6,
+        "after_description_score": 10,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 21,
+        "total_delta": 5
+      },
+      {
+        "node_id": "finite_element_method_concept",
+        "before_description_score": 6,
+        "after_description_score": 10,
+        "description_delta": 4,
+        "before_total_score": 15,
+        "after_total_score": 19,
+        "total_delta": 4
+      },
+      {
+        "node_id": "materials_characterization_concept",
+        "before_description_score": 6,
+        "after_description_score": 10,
+        "description_delta": 4,
+        "before_total_score": 16,
+        "after_total_score": 20,
+        "total_delta": 4
+      },
+      {
+        "node_id": "natural_language_processing_applications_concept",
+        "before_description_score": 6,
+        "after_description_score": 10,
+        "description_delta": 4,
+        "before_total_score": 15,
+        "after_total_score": 20,
+        "total_delta": 5
+      },
+      {
+        "node_id": "autonomous_vehicles_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 16,
+        "after_total_score": 21,
+        "total_delta": 5
+      },
+      {
+        "node_id": "comparative_mythology_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 15,
+        "after_total_score": 20,
+        "total_delta": 5
+      },
+      {
+        "node_id": "cybersecurity_engineering_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 16,
+        "after_total_score": 21,
+        "total_delta": 5
+      },
+      {
+        "node_id": "regenerative_medicine_concept",
+        "before_description_score": 5,
+        "after_description_score": 10,
+        "description_delta": 5,
+        "before_total_score": 15,
+        "after_total_score": 20,
+        "total_delta": 5
+      }
+    ]
+  },
+  "whole_graph_after": {
+    "node_count": 627,
+    "avg_total_score": 20.046,
+    "avg_description_score": 7.394,
+    "grade_distribution": {
+      "A": 154,
+      "B": 425,
+      "C": 48,
+      "D": 0,
+      "F": 0
+    }
+  },
+  "validation_after": {
+    "nodes_with_errors": 0,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "top_errors": [],
+    "top_warnings": []
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "timestamp": "2026-05-25T07:08:28.643492+00:00",
+  "batch": {
+    "number": 1,
+    "start": 0,
+    "end": 20,
+    "size": 20
+  },
+  "candidates_source": "p1_candidates.json",
+  "total_candidates": 156,
+  "batch_results": [
+    {
+      "node_id": "stochastic_processes_concept",
+      "label": "Stochastic Processes",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Stochastic processes are mathematical models that describe the evolution of systems whose states change randomly over time, governed by probabilistic rules rather than deterministic laws. More precisely, a stochastic process is a collection of random variables indexed by time — discrete or continuous — representing how a quantity of interest fluctuates, transitions, or diffuses through possible states. Classic examples include Brownian motion, Markov chains, Poisson processes, and Wiener processes, each capturing distinct patterns of randomness and temporal dependence.\n\nThe significance of stochastic processes lies in their capacity to rigorously describe uncertainty as a structural feature of a system, not merely as noise to be eliminated. This shift in perspective proved transformative across science and engineering: rather than viewing randomness as a failure of knowledge, stochastic modeling treats it as an intrinsic and analyzable property of complex systems. The mathematical machinery developed around these processes — including martingale theory, stochastic differential equations, and the Itô calculus — constitutes one of the most powerful analytical frameworks in modern applied mathematics.\n\nStochastic processes serve as a unifying bridge across remarkably diverse disciplines. In **physics**, they underpin statistical mechanics and the modeling of diffusion, quantum fluctuations, and thermodynamic systems. In **biology**, they describe population dynamics, genetic drift, neural firing patterns, and the spread of infectious disease, where chance events at the",
+      "original_description": "Stochastic processes model systems evolving randomly over time, providing the mathematical framework..."
+    },
+    {
+      "node_id": "conservation_principles_concept",
+      "label": "Conservation Principles",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Conservation principles are fundamental laws of nature stating that certain measurable quantities — most notably energy, momentum, angular momentum, and electric charge — remain precisely constant within a closed system, regardless of the transformations or interactions occurring within it. Rather than describing how systems change, these principles identify what remains invariant through change, providing an anchor of predictability in an otherwise dynamic universe.\n\nThe significance of conservation principles extends far beyond their mathematical elegance. They represent some of the most rigorously tested and universally applicable statements in all of science. In classical mechanics, conservation of momentum explains collisions between billiard balls and the recoil of firearms alike. In thermodynamics, conservation of energy — the first law — constrains every heat engine ever built, setting absolute limits on efficiency. At the quantum scale, conservation of charge governs every particle interaction observed in accelerators. Crucially, the physicist Emmy Noether demonstrated in 1915 that each conservation law corresponds to a deep symmetry in nature: conservation of energy reflects time-translation symmetry, conservation of momentum reflects spatial symmetry. This insight transformed theoretical physics, revealing that the laws governing reality are not arbitrary but are rooted in geometric and structural invariances.\n\nThe reach of conservation principles extends well beyond physics into a remarkable range of disciplines. In chemistry, conservation of mass and atomic balance underpin stoichiometry, making quantitative reaction prediction possible. In engineering, energy conservation governs structural analysis",
+      "original_description": "Conservation principles state that certain quantities remain constant through change: energy, moment..."
+    },
+    {
+      "node_id": "genetic_regulation_concept",
+      "label": "Gene Regulation",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Gene regulation is the set of molecular mechanisms by which cells control the expression of their genes — determining when a gene is active, in which cell types, and at what level of output. At its core, gene regulation governs the transition from DNA sequence to functional protein, a multi-stage process spanning transcription, RNA processing, translation, and post-translational modification. Regulatory elements such as promoters, enhancers, and silencers serve as binding sites for transcription factors — proteins that activate or repress gene expression in response to developmental cues, environmental signals, or cellular context. Epigenetic mechanisms, including DNA methylation and histone modification, add further layers of control by altering chromatin structure without changing the underlying genetic sequence.\n\nThe significance of gene regulation cannot be overstated: it is the fundamental mechanism that explains how a single genome gives rise to hundreds of distinct cell types within one organism. Every stage of development — from embryonic differentiation to tissue maintenance in adulthood — depends on precise regulatory programs being executed in the correct sequence. Dysregulation of these programs underlies a broad spectrum of human diseases, including cancer, where oncogenes become inappropriately activated or tumor suppressors are silenced, and autoimmune disorders, where immune gene expression loses its careful calibration.\n\nGene regulation functions as a conceptual bridge across multiple disciplines. In medicine and pharmacology, understanding regulatory networks has enabled the development of targeted",
+      "original_description": "Gene regulation controls when, where, and how much protein each gene produces. Transcription factors..."
+    },
+    {
+      "node_id": "thought_experiments_concept",
+      "label": "Thought Experiments",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Thought experiments are structured imaginative exercises in which a thinker constructs a hypothetical scenario — one that may be impossible, idealized, or simply unrealized — in order to reason through the logical consequences of a principle, expose hidden assumptions, or test the limits of a theory. Unlike empirical experiments, they require no laboratory equipment or physical observation; their power lies entirely in rigorous reasoning applied to a carefully controlled mental scenario.\n\nThe significance of thought experiments in intellectual history is difficult to overstate. Galileo dismantled Aristotelian physics by imagining two objects of different masses tied together and dropped from a height, demonstrating through pure logic that heavier objects cannot fall faster. Einstein constructed his special theory of relativity partly by asking what it would mean to ride alongside a beam of light. Schrödinger's cat exposed fundamental paradoxes in quantum mechanics without a single physical observation. In moral philosophy, trolley problems — introduced by Philippa Foot and developed by Judith Jarvis Thomson — have become indispensable tools for isolating moral intuitions about harm, agency, and responsibility. These examples share a common feature: they force clarity where intuition and formal theory diverge, revealing precisely where our conceptual frameworks need revision or refinement.\n\nThought experiments bridge disciplines in ways few other intellectual tools can. In physics, they have driven theoretical breakthroughs that later became testable predictions. In philosophy",
+      "original_description": "Thought experiments use imagined scenarios to test intuitions, explore consequences of principles, a..."
+    },
+    {
+      "node_id": "oscillations_and_waves_concept",
+      "label": "Oscillations and Waves",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Oscillations and waves are two intimately related physical phenomena: oscillations refer to repetitive, periodic motion of a system about an equilibrium position, while waves describe the propagation of such disturbances through a medium or field. In oscillatory systems, a restoring force — proportional to displacement in the simplest case — drives the system back toward equilibrium, producing periodic motion characterized by amplitude, frequency, and phase. Waves arise when these oscillations propagate spatially, transferring energy without net transport of matter, and are classified by their nature (mechanical or electromagnetic), geometry (transverse or longitudinal), and behavior (standing or traveling).\n\nThe significance of this framework extends far beyond classical mechanics. Oscillatory and wave phenomena are among the most universal structures in all of science, appearing wherever energy interacts with a restoring mechanism or a continuous medium. The mathematical formalism developed to describe them — differential equations, Fourier analysis, superposition principles — constitutes one of the most powerful analytical toolkits in quantitative science. Phenomena as varied as the stability of engineered structures, the transmission of information through fiber optics, and the quantum mechanical description of particles all rest on these foundations. Understanding resonance, interference, diffraction, and dispersion has historically enabled landmark advances, from the discovery of the electromagnetic spectrum to the development of quantum mechanics, where wave-particle duality places oscillatory mathematics at the very heart of physical reality.",
+      "original_description": "Oscillations and waves describe repetitive motion and its spatial propagation, governed by restoring..."
+    },
+    {
+      "node_id": "quantum_computing_concept",
+      "label": "Quantum Computing",
+      "status": "completed",
+      "before": {
+        "description_score": 4,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE element missing — no cross-domain reference"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 6,
+        "description_delta": 6
+      },
+      "enhanced_description": "Quantum computing is a paradigm of information processing that harnesses the principles of quantum mechanics — superposition, entanglement, and interference — to perform computations fundamentally beyond the reach of classical computers. Unlike classical bits, which exist in binary states of 0 or 1, quantum bits (qubits) can occupy superpositions of both states simultaneously, enabling a quantum computer to explore vast solution spaces in parallel rather than sequentially. Entanglement further allows qubits to become correlated across distance, so that the state of one qubit instantaneously constrains its partners, enabling coordinated computation of remarkable efficiency. Interference is then exploited to amplify computational paths leading to correct answers while suppressing those leading to incorrect ones.\n\nThe significance of quantum computing extends well beyond a technical curiosity. For problems whose complexity scales exponentially with size — such as factoring large integers, simulating molecular dynamics, or optimizing high-dimensional systems — quantum algorithms offer proven or strongly expected polynomial speedups that would render tractable what classical hardware cannot solve in any practical timeframe. Shor's algorithm for integer factorization and Grover's algorithm for unstructured search stand as foundational demonstrations that quantum computation is not merely faster classical computation, but a qualitatively different model of reasoning about information.\n\nThe cross-domain implications are substantial and actively unfolding across multiple disciplines. In chemistry and materials science, quantum computers promise",
+      "original_description": "Quantum computing exploits superposition, entanglement, and interference to solve problems intractab..."
+    },
+    {
+      "node_id": "visualization_concept",
+      "label": "Visualization",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Visualization is the practice of transforming abstract data, complex relationships, and multidimensional information into visual representations that the human cognitive system can perceive, interpret, and reason about more effectively than through numerical or textual formats alone. At its core, visualization leverages the brain's remarkable capacity for spatial pattern recognition, translating otherwise opaque datasets into charts, diagrams, maps, networks, and rendered models that make structure, trends, and anomalies immediately apparent.\n\nThe significance of visualization extends far beyond aesthetic presentation. It functions as a cognitive amplifier, enabling researchers, practitioners, and learners to detect patterns that would remain invisible in raw data, formulate hypotheses, communicate findings across language barriers, and make time-sensitive decisions with greater confidence. The history of scientific discovery is punctuated by moments when a well-constructed visual representation changed the course of inquiry entirely — from John Snow's 1854 cholera map, which established the spatial basis of epidemiology, to modern functional brain imaging that reshaped neuroscience.\n\nVisualization operates as a genuine bridge across disciplines, with each field adapting its principles to domain-specific demands. In medicine and biology, anatomical renderings, medical imaging (MRI, CT, PET), and genomic heat maps allow clinicians and researchers to navigate biological complexity with precision. In mathematics and engineering, geometric visualization of functions, tensors, and structural stress distributions supports both theoretical insight and",
+      "original_description": "Visualization transforms abstract data and relationships into visual representations that exploit hu..."
+    },
+    {
+      "node_id": "biomedical_imaging_concept",
+      "label": "Biomedical Imaging",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Biomedical imaging is a collection of technologies and techniques that produce visual representations of the internal structures, tissues, and physiological processes of living organisms, primarily for medical diagnosis, treatment planning, and biomedical research. By translating physical signals — such as electromagnetic radiation, sound waves, magnetic fields, and radioactive tracers — into interpretable images, these methods allow clinicians and researchers to examine the body's interior without surgical intervention.\n\nThe field encompasses a diverse array of modalities, each exploiting distinct physical principles. X-ray radiography and computed tomography (CT) leverage differential tissue absorption of ionizing radiation to reveal skeletal and soft-tissue anatomy. Magnetic resonance imaging (MRI) exploits nuclear spin relaxation in strong magnetic fields to generate high-contrast images of soft tissues. Ultrasound imaging uses reflected acoustic waves to visualize dynamic processes such as cardiac function and fetal development. Nuclear medicine techniques — including PET and SPECT — detect gamma radiation emitted by radiotracers to map metabolic and molecular activity in real time. Emerging optical and photoacoustic methods extend imaging capabilities to cellular and subcellular scales.\n\nThe significance of biomedical imaging to modern medicine and science is difficult to overstate. It transformed clinical practice by enabling early and accurate disease detection — from cancer staging to neurological disorders — reducing the need for exploratory surgery and fundamentally altering patient outcomes. In research,",
+      "original_description": "Biomedical imaging visualizes internal body structures and functions non-invasively using physical p..."
+    },
+    {
+      "node_id": "renewable_energy_concept",
+      "label": "Renewable Energy",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Renewable energy refers to energy derived from naturally replenishing sources—solar radiation, wind, moving water, geothermal heat, and biological matter—that regenerate on human timescales and do not diminish through use. Unlike fossil fuels, which represent finite reserves accumulated over geological epochs, renewable sources are continuously restored by natural Earth processes, making them theoretically inexhaustible under responsible management.\n\nThe significance of renewable energy extends well beyond engineering: it represents one of the most consequential technological and policy challenges of the contemporary era. As global energy demand accelerates alongside mounting evidence of climate disruption caused by carbon emissions, the transition to renewable systems has become central to efforts in climate stabilization, energy security, and long-term economic sustainability. Renewable infrastructure—solar photovoltaic arrays, wind turbines, hydroelectric dams, and geothermal plants—now constitutes a rapidly growing share of global electricity generation, reshaping energy markets and national policy frameworks alike.\n\nFrom a physics perspective, renewable technologies involve fundamental principles of energy conversion: photovoltaic cells exploit the photoelectric effect, wind turbines apply aerodynamic and electromagnetic principles, and hydroelectric systems convert gravitational potential energy into electrical current. Chemistry contributes through materials science innovations in photovoltaic efficiency, electrolysis for hydrogen production, and battery storage technology. Engineering disciplines address grid integration, structural design, and systems optimization, while economics examines cost trajectories",
+      "original_description": "Renewable energy harnesses naturally replenishing sources—solar, wind, hydroelectric, geothermal, an..."
+    },
+    {
+      "node_id": "behavioral_economics_concept",
+      "label": "Behavioral Economics",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Behavioral economics is a field of study that systematically integrates psychological and cognitive research into economic theory, challenging the classical assumption that human beings act as fully rational, self-interested agents when making decisions. Rather than treating rationality as a given, behavioral economics investigates how cognitive biases, emotional influences, social pressures, and mental shortcuts — known as heuristics — predictably shape economic choices in ways that deviate from traditional models of optimization.\n\nThe field emerged prominently in the late twentieth century through the landmark work of psychologists Daniel Kahneman and Amos Tversky, whose Prospect Theory demonstrated that people evaluate gains and losses asymmetrically, weighting potential losses more heavily than equivalent gains. This single insight undermined foundational assumptions in finance, insurance, and public policy, earning Kahneman the Nobel Memorial Prize in Economic Sciences in 2002. Since then, behavioral economics has expanded to explain phenomena such as procrastination, overconfidence, status quo bias, and the influence of default options on individual choice.\n\nThe significance of behavioral economics extends well beyond academic economics. In public policy, it has enabled the development of \"nudge\" strategies — subtle environmental modifications that guide individuals toward better outcomes in areas such as retirement savings, organ donation, and public health, without restricting freedom of choice. In finance, it has produced behavioral finance as a distinct subfield explaining market anomalies, asset bubbles, and",
+      "original_description": "Behavioral economics integrates psychological insights about human judgment into economic models, re..."
+    },
+    {
+      "node_id": "rehabilitation_concept",
+      "label": "Rehabilitation Medicine",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Rehabilitation medicine is a medical specialty focused on diagnosing, evaluating, and treating individuals who have experienced functional impairments resulting from injury, illness, neurological conditions, or surgical intervention. Its core objective is to restore, maintain, or maximize physical, cognitive, and psychosocial functioning, enabling patients to achieve the greatest possible degree of independence and quality of life. Rather than targeting disease in isolation, rehabilitation medicine addresses the whole person within their environmental and social context, distinguishing it fundamentally from curative branches of medicine.\n\nThe significance of rehabilitation medicine lies in its capacity to bridge the gap between acute clinical treatment and meaningful long-term recovery. As global populations age and survival rates from previously fatal conditions — including stroke, traumatic brain injury, spinal cord damage, and cardiac events — continue to improve, rehabilitation has become an essential component of comprehensive healthcare systems. Without structured rehabilitative intervention, many patients who survive serious illness or injury face permanent disability, dependency, and diminished quality of life. The field therefore carries profound implications not only for individual patients but for public health infrastructure, healthcare economics, and social policy.\n\nRehabilitation medicine is inherently multidisciplinary, drawing on and contributing to a wide range of fields. From biology and neuroscience, it borrows principles of neuroplasticity — the brain's capacity to reorganize and form new neural connections — to design targeted therapies for motor and cognitive recovery. From biomechanics and engineering",
+      "original_description": "Rehabilitation medicine restores function after injury, illness, or surgery through structured exerc..."
+    },
+    {
+      "node_id": "mechatronics_concept",
+      "label": "Mechatronics",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Mechatronics is an interdisciplinary engineering field that systematically combines mechanical engineering, electronics, electrical engineering, computer science, and control theory into a unified design philosophy for creating intelligent, automated systems. Rather than treating these disciplines as separate concerns to be bolted together after the fact, mechatronics approaches complex system design synergistically, ensuring that mechanical, electronic, and computational components are conceived and optimized simultaneously from the outset.\n\nThe significance of mechatronics lies in its capacity to enable a generation of sophisticated machines and systems that no single traditional engineering discipline could produce alone. From industrial robots and CNC machine tools to autonomous vehicles, medical imaging equipment, consumer electronics, and aerospace guidance systems, mechatronic design underlies virtually every modern engineered product that senses its environment, processes information, and responds with precise physical action. This integrative approach dramatically improves system performance, reliability, and energy efficiency while reducing development time and cost — outcomes that have fundamentally reshaped manufacturing, healthcare, transportation, and defense industries.\n\nAt its technical core, mechatronics relies on feedback control theory to regulate dynamic behavior, embedded microprocessors and programmable logic to implement decision-making, sensors to acquire real-world data, and actuators to translate computational commands into physical motion or force. The interplay between these layers demands that practitioners develop fluency across traditionally siloed disciplines, making mechatronics as much a design methodology as it",
+      "original_description": "Mechatronics integrates mechanical engineering, electronics, computer science, and control theory to..."
+    },
+    {
+      "node_id": "world_systems_theory_concept",
+      "label": "World-Systems Theory",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "World-systems theory is a macro-sociological and historical framework, developed primarily by Immanuel Wallerstein in the 1970s, that conceptualizes the modern global economy as a single, integrated capitalist system structured around unequal exchange relationships between nations and regions. Rather than treating individual societies as independent units of analysis, the theory argues that meaningful social and economic change can only be understood by examining the world-system as a whole.\n\nAt the core of the framework is a tripartite geographic division: the **core** (technologically advanced, capital-intensive economies that extract wealth), the **periphery** (resource-rich but economically subordinate regions exploited for cheap labor and raw materials), and the **semi-periphery** (intermediate nations that absorb political pressures from both ends). This structural hierarchy is not incidental but is reproduced through the ongoing logic of capital accumulation, making underdevelopment an active consequence of global integration rather than a failure of modernization.\n\nThe theory's significance lies in its direct challenge to both liberal modernization theory and orthodox Marxism. Against modernization theorists, Wallerstein argued that \"development\" and \"underdevelopment\" are not sequential stages but simultaneous, structurally interdependent outcomes. Against conventional Marxism, he shifted the unit of analysis from the nation-state to the world-system itself, reframing class dynamics at",
+      "original_description": "World-systems theory (Wallerstein) analyzes global history as a single capitalist world-economy divi..."
+    },
+    {
+      "node_id": "neurodegenerative_disease_concept",
+      "label": "Neurodegenerative Disease",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 22,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Neurodegenerative disease refers to a broad class of progressive neurological disorders characterized by the selective, irreversible loss of neurons in the brain and spinal cord, leading to deteriorating cognitive, motor, or autonomic function over time. Prominent examples include Alzheimer's disease, Parkinson's disease, amyotrophic lateral sclerosis (ALS), and Huntington's disease, each defined by distinct patterns of neuronal vulnerability and clinical presentation.\n\nAt the biological level, these conditions share several converging pathological mechanisms: the misfolding and aggregation of specific proteins (such as amyloid-beta, tau, alpha-synuclein, and TDP-43), impaired proteostasis through dysfunction of the ubiquitin-proteasome system and autophagy pathways, mitochondrial dysfunction, chronic neuroinflammation mediated by glial cells, and ultimately activation of apoptotic cascades. The selective vulnerability of particular neuronal populations—dopaminergic neurons in the substantia nigra in Parkinson's, hippocampal and cortical neurons in Alzheimer's—remains an active area of investigation.\n\nThe significance of neurodegenerative diseases extends well beyond clinical neurology. With aging populations worldwide, these conditions represent a rapidly growing public health crisis, affecting tens of millions and placing enormous burdens on healthcare systems and caregiving infrastructure. Because",
+      "original_description": "Neurodegenerative diseases (Alzheimer's, Parkinson's, ALS) involve progressive loss of neurons throu..."
+    },
+    {
+      "node_id": "aerospace_engineering_concept",
+      "label": "Aerospace Engineering",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 5
+      },
+      "enhanced_description": "Aerospace engineering is the branch of engineering concerned with the design, development, analysis, testing, and production of vehicles and systems that operate within and beyond Earth's atmosphere, encompassing both aeronautical engineering (aircraft, helicopters, and drones) and astronautical engineering (rockets, satellites, and spacecraft). It applies principles from fluid dynamics, thermodynamics, structural mechanics, materials science, and control theory to solve some of the most technically demanding challenges in human history.\n\nThe significance of aerospace engineering extends far beyond transportation and exploration. It has fundamentally reshaped civilization by enabling global communication through satellite networks, advancing weather forecasting and climate monitoring, and making intercontinental travel routine. The Apollo program, the development of the jet engine, and the deployment of the International Space Station each represent engineering achievements that demanded simultaneous breakthroughs in multiple scientific disciplines, generating technologies — from GPS to memory foam to water filtration systems — that permeate everyday life. Aerospace engineering also drives national security capabilities and has historically been a primary engine of technological innovation, with spillover effects accelerating progress in electronics, computing, and materials science.\n\nAt its intellectual core, aerospace engineering sits at the intersection of multiple disciplines. Its reliance on computational fluid dynamics connects it to applied mathematics and high-performance computing. Structural analysis of aircraft and spacecraft draws directly on solid mechanics and materials science, particularly in the development of advanced composites and heat-resistant alloys.",
+      "original_description": "Aerospace engineering designs aircraft and spacecraft through integration of aerodynamics, propulsio..."
+    },
+    {
+      "node_id": "counterpoint_concept",
+      "label": "Counterpoint",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 22,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "Counterpoint is a compositional technique in which two or more melodically independent lines sound simultaneously, each maintaining its own rhythmic identity and contour while forming a coherent harmonic whole with the others. Rooted in the Latin *contrapunctus* (\"note against note\"), the practice governs how individual voices interact through carefully managed consonance, dissonance, and resolution, producing textures that are simultaneously unified and complex.\n\nCounterpoint stands as one of the most intellectually rigorous frameworks in Western music theory, reaching its apex in the polyphonic works of Johann Sebastian Bach, whose fugues and inventions remain definitive demonstrations of its expressive and structural possibilities. The discipline is typically taught through species counterpoint—a graduated system codified by Johann Joseph Fux in 1725—which trains composers and analysts to think precisely about interval relationships, voice leading, and melodic independence. Mastery of counterpoint underlies virtually all subsequent developments in Western art music, from Classical-era symphonic writing to twentieth-century serial and neo-tonal composition.\n\nBeyond music, counterpoint offers a productive conceptual model across disciplines. In mathematics, the structure of a fugue—where a single theme is transformed through inversion, augmentation, retrograde, and simultaneous layered entries—parallels the behavior of recursive systems and self-referential structures, a connection explored extensively by Douglas Hofstadter in *",
+      "original_description": "A compositional technique where two or more independent melodic lines sound simultaneously, followin..."
+    },
+    {
+      "node_id": "sublime_concept",
+      "label": "The Sublime",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 5
+      },
+      "enhanced_description": "The sublime is an aesthetic and philosophical category referring to experiences of overwhelming vastness, power, or magnitude that exceed ordinary beauty and produce a complex mixture of awe, terror, and exaltation in the perceiver. Unlike the merely beautiful, which offers pleasure through harmony and proportion, the sublime confronts the human subject with something that strains or surpasses the limits of comprehension — a towering mountain range, a violent storm, the infinite expanse of the night sky, or even the unbounded reach of mathematical reasoning.\n\nThe concept holds foundational significance in Western aesthetics and philosophy of mind. Edmund Burke's *A Philosophical Enquiry into the Origin of Our Ideas of the Sublime and Beautiful* (1757) established the sublime as a distinct psychological category rooted in fear and self-preservation, while Immanuel Kant's more rigorous treatment in the *Critique of Judgment* (1790) elevated it into a cornerstone of transcendental philosophy. For Kant, the sublime ultimately reveals the dignity of human reason: when nature overwhelms our senses and imagination, our capacity for rational and moral thought asserts itself as superior to the merely physical. This insight transformed the sublime from an aesthetic curiosity into a vehicle for exploring human consciousness, freedom, and finitude.\n\nThe concept bridges multiple disciplines in productive ways. In art history and literary criticism, it explains the ambitions of Romantic painting — Turner's chur",
+      "original_description": "An aesthetic experience of overwhelming vastness or power that transcends ordinary beauty — the feel..."
+    },
+    {
+      "node_id": "laser_concept",
+      "label": "Laser",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 22,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 4,
+        "description_delta": 4
+      },
+      "enhanced_description": "A laser (Light Amplification by Stimulated Emission of Radiation) is a device that generates an intense, highly focused beam of coherent, monochromatic light by exploiting the quantum mechanical process of stimulated emission. Unlike conventional light sources, which emit photons randomly across a broad spectrum, a laser produces photons that are identical in wavelength, phase, and direction — properties that arise when an energized gain medium (solid, liquid, gas, or semiconductor) is placed within an optical cavity and pumped to a population inversion state, causing incoming photons to trigger a cascade of synchronized emissions.\n\nThe significance of the laser extends well beyond its elegant physics. Since Theodore Maiman demonstrated the first operational laser in 1960, the technology has proven foundational across virtually every domain of modern science and engineering. It validated key predictions of quantum electrodynamics, provided experimentalists with an unprecedented tool for probing atomic and molecular structure, and enabled the development of entire subfields — including nonlinear optics, laser spectroscopy, and optical trapping, the last of which earned a Nobel Prize in Physics in 2018. The laser's capacity to concentrate energy with extraordinary spatial and temporal precision transformed it from a laboratory curiosity into one of the most versatile instruments of the twentieth and twenty-first centuries.\n\nIts cross-domain reach is unusually broad. In medicine, lasers enable minimally invasive surgical procedures —",
+      "original_description": "A device producing coherent, monochromatic light through stimulated emission of radiation — a quantu..."
+    },
+    {
+      "node_id": "computational_linguistics_concept",
+      "label": "Computational Linguistics",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 5,
+        "description_delta": 5
+      },
+      "enhanced_description": "Computational linguistics is an interdisciplinary field that applies computational methods, formal mathematical models, and algorithmic techniques to the systematic analysis, modeling, and processing of human language. It encompasses both the theoretical investigation of linguistic structure — including syntax, semantics, morphology, and phonology — and the practical development of systems capable of understanding, generating, and transforming natural language in meaningful ways.\n\nThe field occupies a foundational position in modern science and technology. By formalizing the rules and patterns underlying human communication, computational linguistics provides the theoretical backbone for natural language processing (NLP), enabling machines to parse sentences, infer meaning, resolve ambiguity, and produce coherent text. This work underlies technologies encountered daily: search engines, machine translation systems, voice assistants, sentiment analysis tools, and large language models all depend on principles developed within this discipline. The ability to computationally model language has, in practical terms, reshaped how humans interact with information and with machines.\n\nBeyond its technological applications, computational linguistics holds deep intellectual significance. It forces a rigorous confrontation with questions that have occupied philosophers and linguists for centuries — what constitutes grammatical structure, how meaning is compositionally derived, and whether formal systems can capture the full complexity of natural language. The field draws directly on formal logic and automata theory from mathematics and computer science, while simultaneously informing and being informed by theoretical linguistics, cognitive science, and philosophy of language.\n\nIts",
+      "original_description": "The scientific study of language from a computational perspective, developing formal models of gramm..."
+    },
+    {
+      "node_id": "drug_resistance_concept",
+      "label": "Antimicrobial Resistance",
+      "status": "completed",
+      "before": {
+        "description_score": 5,
+        "total_score": 18,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Antimicrobial resistance (AMR) is the phenomenon by which microorganisms — including bacteria, viruses, fungi, and parasites — evolve the capacity to survive and replicate in the presence of drugs specifically designed to eliminate them. This occurs through natural selection: when antimicrobial agents are applied, susceptible organisms die while those carrying resistance traits survive and reproduce, gradually rendering previously effective treatments ineffective. Resistance mechanisms include enzymatic drug degradation, target site modification, reduced cellular permeability, and active drug efflux — processes that can be encoded genetically and transmitted both vertically (to offspring) and horizontally (between unrelated organisms).\n\nThe significance of AMR extends well beyond clinical medicine. The World Health Organization identifies it as one of the greatest threats to global health, food security, and economic stability. Already responsible for an estimated 1.27 million deaths annually attributable directly to resistant infections, AMR threatens to reverse a century of medical progress: routine surgeries, cancer chemotherapy, and organ transplantation all depend on functioning antimicrobials to prevent infection. Projections suggest that without coordinated intervention, drug-resistant infections could claim tens of millions of lives per year by 2050, disproportionately affecting low- and middle-income countries.\n\nAMR operates as a genuinely multidisciplinary challenge, requiring integrated analysis across several fields. In **biology and microbiology",
+      "original_description": "The evolutionary process by which bacteria, viruses, and parasites develop resistance to drugs desig..."
+    }
+  ],
+  "summary": {
+    "total_processed": 20,
+    "completed": 20,
+    "errors": 0,
+    "avg_score_improvement": 4.95
+  }
+}

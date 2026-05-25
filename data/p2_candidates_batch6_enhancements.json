@@ -1,0 +1,489 @@
+{
+  "timestamp": "2026-05-25T12:28:31.116505+00:00",
+  "batch": {
+    "number": 6,
+    "start": 100,
+    "end": 120,
+    "size": 20
+  },
+  "candidates_source": "p2_candidates.json",
+  "total_candidates": 158,
+  "batch_results": [
+    {
+      "node_id": "materiality_in_art_concept",
+      "label": "Materiality in Art",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Materiality in art refers to the study and practice of how the physical properties of artistic media—the weight of stone, the viscosity of oil paint, the grain of wood, the tensile strength of steel—actively shape meaning, perception, and aesthetic experience. Rather than treating materials as neutral carriers of artistic intent, this concept holds that the substance of an artwork is itself a generator of meaning, inseparable from what the work communicates or evokes.\n\nThe significance of materiality as a critical and creative framework lies in its power to reorient how we understand artistic production and interpretation. When a sculptor chooses marble over bronze, or a painter works with encaustic rather than acrylic, those choices are not merely technical—they encode cultural values, historical contexts, economic conditions, and philosophical commitments. Materiality compels us to ask not only what an artwork represents, but what it *is* as a physical object existing in the world, subject to time, decay, and transformation. This shift from representation to presence has been foundational in movements ranging from Arte Povera to process art and contemporary installation practice.\n\nThe concept bridges multiple disciplines in consequential ways. In **chemistry and materials science**, understanding pigment composition, polymer behavior, and conservation chemistry directly informs both artistic creation and the preservation of cultural heritage. In **philosophy**, materiality connects to phenomenology—particularly the work of Merleau-Ponty on embod",
+      "original_description": "Materiality concerns how the physical properties of artistic media—stone's weight, oil paint's visco..."
+    },
+    {
+      "node_id": "social_stratification_concept",
+      "label": "Social Stratification",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Social stratification refers to the structured ranking of individuals and groups within a society into hierarchical layers based on differential access to resources, power, prestige, and opportunities. These layers — commonly understood through the lenses of class, caste, race, gender, and ethnicity — are not merely descriptive categories but systems that reproduce themselves across generations through institutions, norms, and cultural practices. Stratification is distinguished from simple inequality by its systemic and durable character: it is embedded in social structures rather than arising from individual circumstance alone.\n\nThe significance of social stratification as an analytical framework is difficult to overstate. It sits at the foundation of modern sociology, informing the work of foundational theorists including Karl Marx, who emphasized economic class and exploitation; Max Weber, who introduced the multidimensional analysis of class, status, and party; and Émile Durkheim, whose work on social cohesion implicitly addressed how division and hierarchy shape collective life. Understanding stratification has directly shaped debates around social mobility, meritocracy, and distributive justice — questions with immediate policy consequences in areas such as education, healthcare access, taxation, and labor markets. Research consistently demonstrates that one's position within a stratified system predicts life outcomes — from health and longevity to educational attainment and political participation — with remarkable precision.\n\nThe concept also functions as a powerful bridge across academic disciplines. In history, stratification illumin",
+      "original_description": "Social stratification studies how societies organize inequality through hierarchical layers of class..."
+    },
+    {
+      "node_id": "history_from_below_concept",
+      "label": "History from Below",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "WHAT element weak or missing in opening",
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "History from below is a historiographical approach that centers the lived experiences, agency, and perspectives of ordinary people—workers, peasants, women, enslaved persons, and other marginalized groups—rather than focusing exclusively on political elites, rulers, and institutions. Emerging prominently in the mid-twentieth century through the work of historians such as E.P. Thompson, Eric Hobsbawm, and the broader Annales School tradition, it fundamentally reoriented the discipline's understanding of who counts as a historical actor and what kinds of evidence constitute legitimate historical sources.\n\nThe significance of history from below lies in its transformative challenge to traditional historiography. By recovering the voices and actions of those previously rendered invisible in official archives and grand narratives, it demonstrated that historical change is shaped not only by powerful individuals and states but by collective movements, everyday resistance, and the cultural worlds of common people. Thompson's concept of \"moral economy,\" for instance, revealed how working-class communities operated according to shared expectations of fairness—insights that reshaped understandings of social conflict, protest, and political consciousness far beyond the discipline of history.\n\nThis approach carries profound methodological consequences. Historians practicing history from below developed innovative uses of non-traditional sources: court records, oral testimonies, folklore, material culture, and parish registers. These methods expanded what counts as evidence, influencing archival practices and interpretive frameworks across multiple fields.\n\nThe cross",
+      "original_description": "History from below recovers the experiences, agency, and perspectives of ordinary people—workers, pe..."
+    },
+    {
+      "node_id": "acoustics_concept",
+      "label": "Acoustics",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Acoustics is the branch of physics concerned with the production, propagation, and reception of mechanical waves through material media, including gases, liquids, and solids. At its core, acoustics investigates how pressure disturbances travel through a medium as longitudinal waves, characterized by frequency, amplitude, wavelength, and speed — properties that together determine how sound is generated, transmitted, absorbed, reflected, and perceived.\n\nThe significance of acoustics extends well beyond the physics laboratory. It is foundational to our understanding of how the natural world communicates information through vibration: from the rustling of wind through structures to the complex harmonic signatures of musical instruments. Historically, the mathematical formalization of acoustics by figures such as Helmholtz and Rayleigh laid critical groundwork for modern wave theory, influencing fields as diverse as electromagnetism and quantum mechanics. In applied contexts, acoustics underpins technologies that define contemporary life — sonar navigation, ultrasonic medical imaging, noise-cancellation systems, architectural design, and telecommunication signal processing all depend directly on acoustic principles.\n\nThe cross-disciplinary reach of acoustics is exceptional. In medicine, ultrasound techniques exploit acoustic wave behavior at tissue interfaces to produce diagnostic images without ionizing radiation, revolutionizing clinical practice. In engineering, structural acoustics and vibration analysis are essential for designing safer aircraft, quieter vehicles, and more resilient buildings. In the arts",
+      "original_description": "Acoustics studies the production, propagation, and reception of mechanical waves in media (air, wate..."
+    },
+    {
+      "node_id": "supramolecular_chemistry_concept",
+      "label": "Supramolecular Chemistry",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Supramolecular chemistry is the branch of chemistry concerned with the design, synthesis, and study of molecular assemblies held together by non-covalent interactions, including hydrogen bonding, van der Waals forces, metal coordination, hydrophobic effects, and π–π stacking. Often described as \"chemistry beyond the molecule,\" it focuses not on the covalent bonds that form individual molecules but on the weaker, reversible forces that govern how molecules recognize, associate, and organize themselves into larger functional architectures.\n\nThe significance of supramolecular chemistry lies in its capacity to explain and replicate the logic underlying biological self-organization. Living systems routinely exploit non-covalent interactions to perform extraordinarily precise tasks — enzymes recognizing substrates, DNA strands pairing with complementary sequences, proteins folding into functional three-dimensional structures. By formalizing these principles into a synthetic framework, supramolecular chemistry has made it possible to rationally engineer molecular machines, stimuli-responsive materials, and targeted drug delivery systems that mimic and extend biological function. The field earned formal recognition with the 1987 Nobel Prize in Chemistry, awarded to Donald Cram, Jean-Marie Lehn, and Charles Pedersen for their foundational work on host–guest chemistry and crown ethers, establishing molecular recognition as a central concept in modern chemical science.\n\nThe field serves as a powerful intellectual bridge",
+      "original_description": "Supramolecular chemistry studies non-covalent interactions (hydrogen bonds, van der Waals, metal coo..."
+    },
+    {
+      "node_id": "analytical_chemistry_concept",
+      "label": "Analytical Chemistry",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Analytical chemistry is the branch of chemistry dedicated to identifying the chemical composition of substances (qualitative analysis) and measuring the amounts or concentrations of those substances (quantitative analysis). It encompasses a systematic body of techniques — spanning spectroscopy, chromatography, electrochemistry, and mass spectrometry, among others — that allow scientists to extract precise, reliable chemical information from complex samples of virtually any origin.\n\nThe significance of analytical chemistry extends far beyond the laboratory bench. It serves as the evidentiary foundation for modern science: virtually every empirical claim about material composition — whether in a clinical trial, an environmental survey, or a manufacturing process — ultimately depends on analytical methods to validate it. The development of instruments such as the gas chromatograph, the atomic absorption spectrometer, and high-performance liquid chromatography (HPLC) transformed what was once painstaking manual titration into rapid, automated, and extraordinarily sensitive measurement, enabling detection of substances at concentrations in the parts-per-billion or even parts-per-trillion range. This sensitivity has been decisive in fields ranging from toxicology to climate science.\n\nAnalytically, the discipline bridges an exceptionally wide range of domains. In medicine and pharmacology, analytical techniques underpin drug development, therapeutic drug monitoring, and clinical diagnostics — identifying biomarkers that signal disease before symptoms emerge. In environmental science and public health, methods such as mass spectrometry and chr",
+      "original_description": "Analytical chemistry develops methods to determine what substances are present (qualitative) and how..."
+    },
+    {
+      "node_id": "social_movements_concept",
+      "label": "Social Movements",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Social movements are organized, sustained collective efforts by groups of people acting outside formal institutional channels to promote or resist fundamental social change. Unlike spontaneous crowd behavior or routine interest-group lobbying, social movements are characterized by shared grievances, a collective identity, strategic mobilization of resources, and deliberate challenge to existing power structures or cultural norms. They may take the form of civil rights campaigns, labor organizing, environmental advocacy, nationalist struggles, or counter-movements opposing change — yet all share the essential quality of coordinated popular agency directed toward transforming social arrangements.\n\nThe significance of social movements in human history is difficult to overstate. The abolition of slavery, universal suffrage, decolonization, labor protections, and civil rights legislation were not granted from above but were largely won through sustained collective action from below. Studying social movements therefore illuminates how structural change actually occurs — not only through elite decision-making or institutional reform, but through the organized pressure of ordinary people contesting the boundaries of what is politically possible. For scholars, movements serve as critical tests of theories about power, inequality, democracy, and human agency, revealing how grievances become mobilized, how coalitions form and fracture, and under what conditions protest succeeds or fails.\n\nSocial movements are inherently cross-disciplinary in nature. Within **sociology**, they are analyzed through frameworks such as resource mobilization theory, political process models, and new social movement theory, examining organizational structures and",
+      "original_description": "Social movements are organized collective efforts to promote or resist social change outside institu..."
+    },
+    {
+      "node_id": "identity_politics_concept",
+      "label": "Identity and Politics",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 24,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 3,
+        "description_delta": 3
+      },
+      "enhanced_description": "Identity politics refers to political and social movements in which individuals mobilize collectively on the basis of shared social identities — such as race, gender, sexuality, ethnicity, religion, or disability — to advance group-specific interests, secure recognition, and challenge systemic forms of oppression or marginalization. Rather than organizing around universal class interests or abstract civic principles alone, identity politics foregrounds the particular lived experiences of historically subordinated groups as legitimate and necessary foundations for political action.\n\nThe significance of identity politics lies in its profound reshaping of democratic theory, social movements, and public policy throughout the twentieth and twenty-first centuries. Emerging prominently from the civil rights movement, second-wave feminism, and LGBTQ+ activism, it established that political representation and social justice cannot be achieved without addressing the specific structural disadvantages faced by distinct groups. It fundamentally challenged liberal universalism's tendency to obscure inequality beneath claims of formal equality, forcing institutions — legal, educational, and governmental — to confront how race, gender, and other identity categories shape access to power and resources. Landmark developments such as intersectionality theory, introduced by Kimberlé Crenshaw, demonstrated that identity categories interact in complex, compounding ways, deepening both the analytical framework and its policy implications.\n\nAcross disciplines, identity politics operates as a powerful conceptual bridge. In sociology, it informs the study of group formation, social movements, and structural inequality",
+      "original_description": "Identity politics studies how social identities (race, gender, sexuality, ethnicity, religion) becom..."
+    },
+    {
+      "node_id": "adam_smith_person",
+      "label": "Adam Smith",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 22,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "Adam Smith (1723–1790) was a Scottish moral philosopher and political economist whose intellectual contributions fundamentally reshaped how Western civilization understands markets, human motivation, and the organization of productive society. Educated at Glasgow and Oxford, he held the Chair of Moral Philosophy at the University of Glasgow, a position that situates his economic thinking firmly within an ethical framework rather than purely technical analysis.\n\nHis two landmark works define his legacy. *The Theory of Moral Sentiments* (1759) argued that human moral judgment arises from empathy and the internalized perspective of an impartial spectator, establishing a rigorous psychological account of ethical behavior. *An Inquiry into the Nature and Causes of the Wealth of Nations* (1776) built on this foundation to articulate the mechanisms of market economies: the division of labor, price formation, capital accumulation, and the concept of the \"invisible hand\" by which individual self-interest, operating within competitive markets, can generate broad social prosperity without central coordination.\n\nThe significance of these contributions is difficult to overstate. Smith effectively founded classical economics as a systematic discipline, and his frameworks directly shaped Ricardo, Malthus, Mill, and eventually Marx—whose critique of capitalism presupposed Smith's categories. Modern economic policy, from free trade agreements to debates over taxation and labor regulation, continues to engage arguments Smith first formalized. His skepticism toward monopolies and mercantile",
+      "original_description": "Adam Smith is the moral philosopher and economist whose Wealth of Nations (1776) founded classical e..."
+    },
+    {
+      "node_id": "galileo_galilei_person",
+      "label": "Galileo Galilei",
+      "status": "completed",
+      "before": {
+        "description_score": 7,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger",
+          "BRIDGE implied but no specific domain mentioned"
+        ]
+      },
+      "after": {
+        "description_score": 8,
+        "total_score": 22,
+        "diagnostics": [
+          "WHAT element weak or missing in opening"
+        ]
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "Galileo Galilei (1564–1642) was an Italian physicist, astronomer, and mathematician whose systematic application of observation and experimentation fundamentally transformed the practice of natural philosophy into what we now recognize as modern empirical science. Born in Pisa, he made decisive contributions across mechanics, kinematics, and telescopic astronomy, establishing principles that defined scientific inquiry for centuries to come.\n\nHis significance lies not merely in individual discoveries but in the methodological revolution he initiated. By insisting that nature must be interrogated through controlled experiment and expressed in the language of mathematics, Galileo broke decisively with the Aristotelian tradition of reasoning from first principles alone. His studies of free fall and projectile motion dismantled long-held assumptions about motion and gravity, laying essential groundwork that Isaac Newton would later formalize in his laws of mechanics. His telescopic observations — including the moons of Jupiter, the phases of Venus, and sunspots — provided concrete observational evidence supporting the Copernican heliocentric model, placing him at the center of one of history's most consequential scientific controversies.\n\nGalileo's work bridges multiple intellectual domains in precise and important ways. In **physics and mathematics**, he demonstrated that physical phenomena could be described through quantitative relationships, effectively founding mathematical physics as a discipline. In **philosophy of science**, his confrontation with scholastic authority raised enduring questions about the relationship between empir",
+      "original_description": "Galileo Galilei is the physicist and astronomer who pioneered the experimental method in physics, ma..."
+    },
+    {
+      "node_id": "calculus_field",
+      "label": "Calculus",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Calculus is the branch of mathematics devoted to the rigorous study of continuous change and accumulation, built upon two complementary operations: differentiation, which measures instantaneous rates of change, and integration, which computes the accumulation of quantities over intervals. These two operations are unified by the Fundamental Theorem of Calculus, which establishes that differentiation and integration are inverse processes — a result that transformed fragmented geometric and algebraic techniques into a coherent, powerful framework.\n\nDeveloped independently in the late seventeenth century by Isaac Newton and Gottfried Wilhelm Leibniz, calculus represented one of the most consequential intellectual breakthroughs in the history of science. Newton applied it to formulate his laws of motion and universal gravitation, demonstrating that the same mathematical language could describe both a falling apple and the orbit of a planet. This unification of terrestrial and celestial mechanics fundamentally reshaped humanity's understanding of the natural world and established calculus as the indispensable language of theoretical science.\n\nThe significance of calculus extends far beyond pure mathematics. In physics, it underlies classical mechanics, electromagnetism, thermodynamics, and quantum theory. In engineering, differential equations derived from calculus govern the design of structures, circuits, control systems, and fluid dynamics. In biology and medicine, it models population growth, the spread of disease, pharmacokinetic drug absorption, and neural signaling.",
+      "original_description": "Calculus is the mathematical study of continuous change, divided into differential calculus — which ..."
+    },
+    {
+      "node_id": "ecology_field",
+      "label": "Ecology",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Ecology is the scientific discipline that investigates the relationships between living organisms and their environments, examining how individual species, populations, communities, and entire ecosystems interact with one another and with the physical world. It operates across multiple levels of biological organization — from the behavior of a single organism in its immediate habitat to the flow of energy and nutrients through global biomes — providing a unified framework for understanding life as an interconnected system rather than a collection of isolated parts.\n\nThe significance of ecology extends well beyond biology. As human activity increasingly reshapes the natural world, ecological science has become foundational to addressing climate change, biodiversity loss, habitat degradation, and the sustainability of food and water systems. Its conceptual tools — carrying capacity, trophic cascades, keystone species, ecological resilience — have transformed how scientists, policymakers, and engineers approach environmental challenges. The discipline gave rise to conservation biology, environmental science, and restoration ecology, and its core principles underpin international environmental policy, from biodiversity treaties to carbon sequestration strategies.\n\nEcology also serves as a critical bridge between the natural and social sciences. Economists draw on ecological models to develop frameworks for natural capital and ecosystem services, quantifying the material value that healthy ecosystems provide to human societies. Urban planners apply ecological principles to design cities that reduce heat islands and manage stormwater. Public health researchers use epidemiological models rooted in ecological theory to track disease transmission across host populations.",
+      "original_description": "Ecology studies the complex relationships between living organisms and their physical environments, ..."
+    },
+    {
+      "node_id": "quantum_mechanics_field",
+      "label": "Quantum Mechanics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Quantum mechanics is the fundamental branch of physics that governs the behavior of matter and energy at subatomic scales, where classical Newtonian descriptions break down entirely. It establishes that particles such as electrons and photons do not follow deterministic trajectories but instead exist in probabilistic states described by wave functions, which encode the likelihood of measurable outcomes upon observation. Core principles include wave-particle duality, the uncertainty principle formulated by Heisenberg, quantum superposition, and entanglement — phenomena that have no meaningful analogue in everyday classical experience.\n\nThe significance of quantum mechanics to modern science and technology is difficult to overstate. It represents one of the two foundational pillars of twentieth-century physics, alongside general relativity, and provides the theoretical basis for understanding atomic structure, chemical bonding, and the interaction of matter with electromagnetic radiation. Without quantum mechanics, the periodic table would remain an empirical curiosity rather than a derived consequence of physical law. Its predictive accuracy, confirmed across decades of experimentation to extraordinary precision, makes it arguably the most rigorously tested framework in the history of science.\n\nThe practical consequences have been equally transformative. Quantum mechanical principles underpin the operation of semiconductors and transistors, forming the theoretical backbone of all modern electronics, including computers and smartphones. Lasers, magnetic resonance imaging, and LED technology are further direct applications. Emerging fields such as quantum computing, quantum cryptography,",
+      "original_description": "Quantum mechanics describes the behavior of matter and energy at the smallest scales, where particle..."
+    },
+    {
+      "node_id": "linguistics_field",
+      "label": "Linguistics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Linguistics is the scientific study of language in all its dimensions — encompassing the structures of sounds, words, sentences, and meaning, as well as how language is acquired, used in social contexts, and changes across time and communities. As a discipline, it treats language not merely as a communication tool but as a complex, rule-governed cognitive and social system worthy of rigorous empirical investigation.\n\nThe significance of linguistics extends far beyond the academy. It provides the foundational frameworks through which humanity understands one of its most defining capacities: the ability to produce and interpret infinitely varied expressions from finite sets of rules. Foundational work in the field — from Ferdinand de Saussure's structural analysis of the linguistic sign to Noam Chomsky's generative grammar — fundamentally reshaped how scholars think about mind, cognition, and the nature of knowledge itself. The field has also driven practical breakthroughs in literacy education, language preservation, clinical diagnosis of speech and language disorders, and the development of effective language policy for multilingual societies.\n\nLinguistics is inherently cross-disciplinary, functioning as a bridge between the humanities, social sciences, cognitive sciences, and computer science. Its intersection with psychology and neuroscience — forming psycholinguistics and neurolinguistics — illuminates how the brain encodes, processes, and stores language, with direct implications for understanding disorders such as aphasia and dyslexia. Sociol",
+      "original_description": "Linguistics is the scientific study of language — its structure, acquisition, use, and change over t..."
+    },
+    {
+      "node_id": "ethics_field",
+      "label": "Ethics",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Ethics is the branch of philosophy that systematically investigates moral principles, examining questions of what is right and wrong, what constitutes a good life, and what obligations individuals and institutions bear toward one another. It encompasses three major theoretical traditions: consequentialism, which evaluates actions by their outcomes; deontology, which grounds morality in duties and rights independent of consequences; and virtue ethics, which centers on the cultivation of character and human flourishing. Applied ethics extends these frameworks to concrete moral problems, while metaethics interrogates the nature, foundations, and objectivity of moral claims themselves.\n\nThe significance of ethics extends far beyond academic philosophy. As the discipline that provides rigorous tools for reasoning about value and obligation, it underpins every serious attempt to organize human life justly — from personal decision-making to the design of legal systems, public policies, and institutional norms. Ethical reasoning shaped the abolition of slavery, the development of human rights frameworks, and ongoing debates about distributive justice and democratic legitimacy. Without ethical analysis, societies lack a principled basis for resolving conflicts, adjudicating competing interests, or holding power accountable.\n\nEthics serves as a critical bridge across virtually every domain of knowledge and practice. In medicine and bioethics, it governs questions of informed consent, end-of-life care, and the equitable distribution of health resources. In technology, ethical frameworks guide the governance of artificial intelligence, data privacy",
+      "original_description": "Ethics is the branch of philosophy that investigates moral principles — what is right, what is good,..."
+    },
+    {
+      "node_id": "natural_selection_concept",
+      "label": "Natural Selection",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Natural selection is the primary evolutionary mechanism by which heritable traits that enhance an organism's reproductive success become more prevalent in a population over successive generations, while disadvantageous traits diminish. First systematically articulated by Charles Darwin and Alfred Russel Wallace in 1858, the process operates through four essential conditions: variation exists among individuals in a population; that variation is heritable; individuals produce more offspring than the environment can support; and survival and reproduction are non-random, favoring individuals whose traits confer advantages in a given environment. Over time, this differential reproductive success reshapes the genetic composition of populations, driving adaptation and, ultimately, speciation.\n\nThe significance of natural selection extends far beyond biology. It stands as one of the most unifying explanatory frameworks in the history of science, offering a purely mechanistic account of biological complexity and diversity without invoking design or teleology. Darwin's formulation fundamentally restructured humanity's understanding of life, placing organisms—including humans—within a continuous, historically contingent natural process. This shift challenged prevailing theological and philosophical assumptions about purpose and hierarchy in nature, making natural selection as consequential intellectually as the Copernican Revolution.\n\nAcross disciplines, natural selection serves as a generative bridging concept. In **mathematics and statistics**, population genetics models use differential equations and probability theory to quantify selection pressures and predict allelic frequency changes, giving the theory precise formal expression. In **philosophy**, it",
+      "original_description": "Natural selection is the mechanism by which organisms with traits better suited to their environment..."
+    },
+    {
+      "node_id": "causation_in_history_concept",
+      "label": "Historical Causation",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Historical causation refers to the systematic analysis of why and how historical events occur — examining the forces, conditions, and decisions that produce particular outcomes in human affairs. Rather than simply describing what happened, historical causation asks the deeper question of *why*, distinguishing between immediate triggers (such as an assassination or a drought), underlying structural conditions (such as economic inequality or imperial rivalry), and enabling factors that made certain outcomes possible rather than inevitable. Scholars also debate whether causation in history is primarily driven by exceptional individuals, impersonal social and material forces, contingent circumstances, or some combination of all three.\n\nThe significance of historical causation extends well beyond academic historiography. How we explain the past directly shapes how we understand the present and anticipate the future. Attributing the rise of authoritarian regimes to economic collapse rather than individual ideology, for instance, yields profoundly different policy lessons. Causal reasoning in history thus informs political science, sociology, and public policy, providing frameworks for interpreting systemic patterns versus singular events. It also challenges simplistic narratives — complicating notions of inevitability, national destiny, or the idea that history follows a single, linear path.\n\nPhilosophically, historical causation raises fundamental questions addressed in the philosophy of history and the philosophy of science: Can complex social phenomena ever be reduced to identifiable causes? What distinguishes a necessary condition from a sufficient one? How do historians justify causal claims",
+      "original_description": "Historical causation examines how and why events happen — whether history is driven by great individ..."
+    },
+    {
+      "node_id": "emergence_concept",
+      "label": "Emergence",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE element weak or missing"
+        ]
+      },
+      "after": {
+        "description_score": 9,
+        "total_score": 22,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "improvement": {
+        "score_delta": 1,
+        "description_delta": 1
+      },
+      "enhanced_description": "Emergence is the phenomenon whereby complex, higher-order properties arise from the interactions of simpler components in a system — properties that are neither predictable from, nor reducible to, the behavior of those components in isolation. A canonical distinction separates *weak emergence*, where system-level patterns are in principle derivable from lower-level rules given sufficient computational power, from *strong emergence*, where the higher-level properties are genuinely irreducible and require entirely new explanatory frameworks.\n\nThe significance of emergence lies in its capacity to challenge reductionism as the default explanatory strategy across the sciences. Rather than assuming that understanding parts guarantees understanding wholes, emergence demonstrates that new organizational levels generate qualitatively distinct phenomena — consciousness arising from neural activity, market dynamics arising from individual transactions, or turbulence arising from fluid molecules. This insight has profound consequences: it establishes the legitimacy of higher-level sciences (biology, psychology, sociology) as autonomous disciplines that cannot simply be collapsed into physics or chemistry. It also provides a principled account of how genuine novelty enters the world without invoking supernatural or vitalist explanations.\n\nEmergence serves as one of the most productive conceptual bridges across modern disciplines. In **philosophy of mind**, it frames central debates about whether consciousness is reducible to physical substrate. In **biology**, it explains how cellular differentiation, immune responses, and ecosystem stability arise from molecular-level rules. In **physics**, it underp",
+      "original_description": "Emergence describes how complex system-level properties arise from simpler component interactions th..."
+    },
+    {
+      "node_id": "complex_systems_concept",
+      "label": "Complex Systems",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Complex systems is a scientific framework that studies entities composed of many interacting components whose collective behavior cannot be predicted or explained by analyzing individual parts in isolation. These systems are characterized by emergence — the appearance of higher-order properties arising from local interactions — as well as nonlinear dynamics, feedback loops, self-organization, and sensitivity to initial conditions. Canonical examples include ecosystems, financial markets, the brain, ant colonies, and the internet, all of which exhibit coordinated global patterns without centralized control.\n\nThe significance of complex systems science lies in its fundamental challenge to reductionism, the dominant scientific paradigm of the preceding centuries. By demonstrating that emergent phenomena require their own explanatory frameworks — ones that cannot simply be derived from lower-level descriptions — it has reshaped how researchers across virtually every discipline approach causation, prediction, and intervention. The discovery that vastly different systems obey shared mathematical principles, such as power laws, phase transitions, and network scaling, has revealed deep structural regularities underlying apparently unrelated phenomena, from the spread of epidemics to the collapse of financial institutions.\n\nComplex systems bridges an unusually wide range of disciplines with genuine conceptual depth. In **biology**, it provides tools for understanding genetic regulatory networks, evolutionary dynamics, and the emergence of multicellular organization. In **physics**, it connects to statistical mechanics and the study of phase transitions. In **economics and sociology**, it challenges equilibrium-based models by treating",
+      "original_description": "Complex systems science studies entities composed of many interacting components whose collective be..."
+    },
+    {
+      "node_id": "self_organization_concept",
+      "label": "Self-Organization",
+      "status": "completed",
+      "before": {
+        "description_score": 8,
+        "total_score": 21,
+        "diagnostics": [
+          "SIGNIFICANCE could be stronger"
+        ]
+      },
+      "after": {
+        "description_score": 10,
+        "total_score": 23,
+        "diagnostics": []
+      },
+      "improvement": {
+        "score_delta": 2,
+        "description_delta": 2
+      },
+      "enhanced_description": "Self-organization is the process by which ordered structures, patterns, and functional behaviors emerge spontaneously in a system through local interactions among its components, without any external directing agent or centralized control. The resulting order arises entirely from the internal dynamics of the system: individual elements follow relatively simple rules, yet their collective behavior produces complexity far exceeding what any single element could generate alone.\n\nThe significance of self-organization lies in its capacity to fundamentally reframe how we understand order and complexity in nature and society. Before this concept gained scientific traction in the mid-twentieth century, ordered systems were largely assumed to require a designer, a blueprint, or a top-down controller. Self-organization overturned this assumption, demonstrating that sophisticated global structure can arise bottom-up from local interactions. This insight has proven transformative: it reframes questions in evolutionary biology, offers explanations for the spontaneous formation of galaxies and weather systems in physics, and provides a theoretical foundation for understanding how market economies regulate themselves in the absence of central planning. It also informs our understanding of how consciousness might arise from neural activity, and how resilient infrastructure networks can be designed.\n\nThe concept bridges an exceptionally wide range of disciplines. In chemistry, the Belousov–Zhabotinsky reaction exemplifies how oscillating chemical patterns form in the absence of external instruction. In biology, flocking behavior in birds, the folding of proteins, and the development of",
+      "original_description": "Self-organization is the spontaneous emergence of ordered structures and patterns from local interac..."
+    }
+  ],
+  "summary": {
+    "total_processed": 20,
+    "completed": 20,
+    "errors": 0,
+    "avg_score_improvement": 2.2
+  }
+}

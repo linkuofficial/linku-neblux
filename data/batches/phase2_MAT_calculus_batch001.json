@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "phase": 2,
+    "domain": "MAT",
+    "subdomain": "calculus",
+    "batch_number": 1,
+    "timestamp": "2026-05-22T15:30:28.269924+00:00",
+    "count": 5
+  },
+  "nodes": [
+    {
+      "id": "limit_concept",
+      "label": "Limit",
+      "type": "concept",
+      "domain": [
+        "MAT",
+        "PHY"
+      ],
+      "display_tags": [
+        "calculus",
+        "foundational",
+        "real_analysis",
+        "17th_century",
+        "formal",
+        "mathematical_model"
+      ],
+      "description": "A limit describes the value that a mathematical function approaches as its input gets arbitrarily close to some target point — it is the formal language of 'getting infinitely near without necessarily arriving.' Limits are the rigorous foundation upon which all of calculus is built, solving centuries of philosophical confusion about infinity and infinitesimals. In physics, limits underpin the precise definition of instantaneous velocity and the mathematics of continuous change in quantum mechanics.",
+      "era": {
+        "start": 1820,
+        "end": null
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "Limits serve as the rigorous axiomatic foundation from which all of calculus — derivatives, integrals, and series — is formally constructed",
+          "directed": true,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "mathematics_field",
+          "relation_type": "logical",
+          "relation": "The epsilon-delta definition of a limit, developed in real analysis, represents a landmark achievement in mathematical rigor and formal proof",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "derivative_concept",
+          "relation_type": "logical",
+          "relation": "The derivative is formally defined as the limit of the difference quotient as the interval between two points approaches zero",
+          "directed": true,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": true
+        },
+        {
+          "target": "quantum_mechanics_field",
+          "relation_type": "applied",
+          "relation": "Limiting processes underpin the continuous wave functions and probability amplitude calculations central to quantum mechanical descriptions of particle behavior",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "derivative_concept",
+      "label": "Derivative",
+      "type": "concept",
+      "domain": [
+        "MAT",
+        "PHY",
+        "ENG"
+      ],
+      "display_tags": [
+        "calculus",
+        "17th_century",
+        "foundational",
+        "mathematical_model",
+        "differential_equations",
+        "applied"
+      ],
+      "description": "A derivative measures the instantaneous rate of change of a quantity — the mathematical answer to 'how fast is this changing right now?' Developed independently by Newton and Leibniz in the 17th century, it revolutionized science by providing the precise language needed to describe motion, force, and acceleration. In engineering, derivatives enable the design of control systems and signal processors, while in economics they model how output responds to marginal changes in input.",
+      "era": {
+        "start": 1666,
+        "end": 1696
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "limit_concept",
+          "relation_type": "logical",
+          "relation": "A derivative is rigorously defined as the limit of the difference quotient, making the limit concept a strict logical prerequisite for its definition",
+          "directed": true,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "The derivative is one of the two fundamental operations of calculus, forming half of the field's core subject matter alongside the integral",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Velocity and acceleration — the foundational quantities of classical mechanics — are defined as first and second derivatives of position with respect to time",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "economics_field",
+          "relation_type": "applied",
+          "relation": "Marginal cost, marginal revenue, and marginal utility in economics are all derivatives, used to find the optimal production or consumption levels",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "differential_equations_concept",
+          "relation_type": "logical",
+          "relation": "Differential equations are built from derivatives and express how changing quantities relate to one another, extending the derivative into dynamic system modeling",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": true
+        }
+      ]
+    },
+    {
+      "id": "integral_concept",
+      "label": "Integral",
+      "type": "concept",
+      "domain": [
+        "MAT",
+        "PHY",
+        "ENG"
+      ],
+      "display_tags": [
+        "calculus",
+        "17th_century",
+        "foundational",
+        "mathematical_model",
+        "applied",
+        "measure_theory"
+      ],
+      "description": "An integral is a mathematical tool that accumulates infinitely many infinitely small quantities to find totals — most visually, the area beneath a curve. Developed alongside the derivative in the 17th century, the integral transformed physics by enabling exact calculations of work, energy, and gravitational attraction across continuous distributions of matter. In engineering and medicine, integration is essential for computing quantities like fluid flow rates, radiation dosage, and signal energy over time.",
+      "era": {
+        "start": 1666,
+        "end": 1696
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "The integral is one of calculus's two core operations, fundamentally concerned with summation over continuous domains and the computation of areas and accumulated change",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "derivative_concept",
+          "relation_type": "logical",
+          "relation": "The Fundamental Theorem of Calculus establishes that integration and differentiation are inverse operations, tying the two core concepts of calculus into a unified framework",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Integrals compute physical quantities that require summing continuous contributions, including gravitational potential, electric flux, and total mechanical work done by a force",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "measure_theory_concept",
+          "relation_type": "logical",
+          "relation": "The modern Lebesgue integral, a generalization of classical integration, is built on measure theory and extends integration to a far broader class of functions",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": true
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Medical imaging techniques such as CT scanning use integration over many angular projections to reconstruct cross-sectional images of the human body",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "differential_equations_concept",
+      "label": "Differential Equations",
+      "type": "concept",
+      "domain": [
+        "MAT",
+        "PHY",
+        "BIO",
+        "ENG"
+      ],
+      "display_tags": [
+        "calculus",
+        "differential_equations",
+        "mathematical_model",
+        "applied",
+        "18th_century",
+        "foundational",
+        "interdisciplinary"
+      ],
+      "description": "Differential equations are mathematical expressions that relate a quantity to its own rates of change, describing how systems evolve through time or space. They are the primary language through which scientists model the physical world — from Newton's laws of motion to the spread of infectious diseases — enabling predictions about systems that are always in flux. Their reach extends from engineering design of bridges and circuits to biology, where they model population dynamics and the firing of neurons.",
+      "era": {
+        "start": 1700,
+        "end": null
+      },
+      "geo": null,
+      "has_subgraph": true,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "derivative_concept",
+          "relation_type": "logical",
+          "relation": "Differential equations are constructed from derivatives and cannot be defined without them, making the derivative a strict logical prerequisite for their formulation",
+          "directed": true,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "Differential equations are the primary applied expression of calculus, representing the dominant framework through which calculus is used to model real-world phenomena",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "Newton's second law, Maxwell's equations for electromagnetism, and Schrödinger's equation in quantum mechanics are all differential equations governing fundamental physical phenomena",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "biology_field",
+          "relation_type": "applied",
+          "relation": "Population growth, predator-prey dynamics, and the spread of epidemics are all modeled using differential equations that capture how living systems change over time",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "Structural analysis, fluid dynamics, heat transfer, and electrical circuit design all rely on differential equations to predict how engineered systems respond to forces and inputs",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    },
+    {
+      "id": "fundamental_theorem_of_calculus_concept",
+      "label": "Fundamental Theorem of Calculus",
+      "type": "concept",
+      "domain": [
+        "MAT",
+        "PHY"
+      ],
+      "display_tags": [
+        "calculus",
+        "theorem",
+        "17th_century",
+        "foundational",
+        "proof",
+        "real_analysis"
+      ],
+      "description": "The Fundamental Theorem of Calculus is the central unifying result of calculus, establishing that differentiation and integration — seemingly opposite operations — are exact inverses of each other. This discovery, formalized in the late 17th century, transformed mathematics by linking the computation of areas and accumulations directly to rates of change, vastly simplifying both. In physics, this theorem is why computing work done by a force (an integral) can be shortcut using potential energy functions (derivatives), underpinning the law of conservation of energy.",
+      "era": {
+        "start": 1668,
+        "end": 1696
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "derivative_concept",
+          "relation_type": "logical",
+          "relation": "The theorem formally proves that the derivative of the integral of a function returns the original function, establishing differentiation as the inverse of integration",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "integral_concept",
+          "relation_type": "logical",
+          "relation": "The theorem provides the primary computational tool for evaluating definite integrals, transforming integration from an infinite summation into an antiderivative evaluation",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "This theorem is the conceptual heart of calculus, unifying its two branches into a single coherent framework and enabling the field's enormous practical power",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "physics_field",
+          "relation_type": "applied",
+          "relation": "The theorem underpins the relationship between force and potential energy in mechanics, allowing physicists to derive conservation of energy from the inverse relationship between work integrals and potential derivatives",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ]
+    }
+  ]
+}
