@@ -5,4 +5,25 @@ data/learning_progress.json
 __pycache__/
 *.pyc
 .env
+.env.local
+.env.staging
+.env.production
 .vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Test & coverage artefacts
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+test-results/
+playwright-report/
+
+# Logs
+*.log

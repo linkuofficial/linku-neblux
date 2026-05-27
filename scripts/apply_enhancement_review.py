@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -146,8 +147,10 @@ def apply_updates(nodes_path: Path, accepted_ids: list[str], candidates: dict[st
             node["description"] = candidate
             changed.append(nid)
 
-    with open(nodes_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+    # Atomic write — crash-safe
+    _tmp = Path(str(nodes_path) + ".tmp")
+    _tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    os.replace(_tmp, nodes_path)
 
     return {
         "changed_count": len(changed),

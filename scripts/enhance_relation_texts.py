@@ -15,12 +15,10 @@ from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
+from nexus_utils import word_count
+
 BASE_DIR = Path(__file__).parent.parent
 NODES_FILE = BASE_DIR / "data" / "all_nodes.json"
-
-
-def word_count(text: str) -> int:
-    return len((text or "").strip().split())
 
 
 def relation_sentence(source_label: str, target_label: str, relation_type: str) -> str:

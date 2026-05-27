@@ -20,7 +20,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -76,8 +75,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def word_count(text: str) -> int:
-    return len(re.findall(r"\b\w+\b", text))
+from nexus_utils import word_count  # noqa: E402
 
 
 def build_selection_pool(nodes: list[dict[str, Any]], domain: str | None, max_desc_score: int, max_total_score: int) -> list[dict[str, Any]]:

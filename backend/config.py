@@ -30,6 +30,10 @@ class Settings(BaseSettings):
 
     # Admin
     admin_api_key: str = ""  # Set via ADMIN_API_KEY env var; empty = no auth (dev only)
+    admin_allowed_ips: str = ""  # Comma-separated IP/CIDR allowlist for /api/admin routes
+    admin_trust_forwarded_for: bool = False
+    admin_trusted_proxies: str = ""  # Comma-separated proxy IP/CIDR list allowed to supply X-Forwarded-For
+    admin_enable_generation_in_production: bool = False
     admin_max_tasks: int = 200
     admin_task_ttl_seconds: int = 24 * 60 * 60
     admin_trigger_window_seconds: int = 60
@@ -66,17 +70,21 @@ class Settings(BaseSettings):
     def is_production(self) -> bool:
         return self.app_env.lower() in {"production", "prod"}
 
+    @property
+    def is_public_env(self) -> bool:
+        return self.app_env.lower() in {"production", "prod", "staging", "stage"}
+
 
 def validate_startup_settings(settings: Settings) -> None:
-    """Fail fast for unsafe production configuration."""
-    if not settings.is_production:
+    """Fail fast for unsafe public-environment configuration."""
+    if not settings.is_public_env:
         return
 
     errors = []
     if not settings.admin_api_key.strip():
-        errors.append("ADMIN_API_KEY must be set in production")
+        errors.append("ADMIN_API_KEY must be set in staging/production")
     if settings.parsed_cors_origins == ["*"]:
-        errors.append("CORS_ORIGINS cannot be '*' in production")
+        errors.append("CORS_ORIGINS cannot be '*' in staging/production")
 
     if errors:
         raise RuntimeError("Invalid production configuration: " + "; ".join(errors))

@@ -3,13 +3,16 @@ Learning Path endpoints — progress tracking, recommendations, path computation
 """
 
 import json
+from collections import deque
 from pathlib import Path
 
 from fastapi import APIRouter, Query, HTTPException, Depends
+from filelock import FileLock
 from pydantic import BaseModel
 
-from backend.auth import require_admin_key
+from backend.auth import require_admin_access
 from backend.config import BASE_DIR
+from backend.services import json_service
 
 router = APIRouter()
 
@@ -20,37 +23,42 @@ class ProgressUpdate(BaseModel):
 
 # File-based persistence
 _PROGRESS_FILE = BASE_DIR / "data" / "learning_progress.json"
+_PROGRESS_LOCK = FileLock(str(_PROGRESS_FILE) + ".lock")
 
 
 def _load_progress() -> set[str]:
     """Load learning progress from file."""
-    if _PROGRESS_FILE.exists():
-        with open(_PROGRESS_FILE, encoding="utf-8") as f:
-            data = json.load(f)
-        return set(data.get("learned", []))
-    return set()
+    with _PROGRESS_LOCK:
+        if _PROGRESS_FILE.exists():
+            with open(_PROGRESS_FILE, encoding="utf-8") as f:
+                data = json.load(f)
+            return set(data.get("learned", []))
+        return set()
 
 
 def _save_progress(learned: set[str]) -> None:
-    """Save learning progress to file."""
+    """Save learning progress to file (atomic under lock)."""
     _PROGRESS_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with open(_PROGRESS_FILE, "w", encoding="utf-8") as f:
-        json.dump({"learned": sorted(learned)}, f, ensure_ascii=False, indent=2)
+    tmp = _PROGRESS_FILE.with_suffix(".json.tmp")
+    with _PROGRESS_LOCK:
+        tmp.write_text(
+            json.dumps({"learned": sorted(learned)}, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        tmp.replace(_PROGRESS_FILE)
 
 
-def _get_graph_service():
-    from backend.services import json_service
-    return json_service
+def _get_all_nodes() -> list:
+    return json_service._load_nodes()
 
 
 @router.get("/progress")
 async def get_progress():
     """Get current learning progress."""
-    service = _get_graph_service()
     learned = _load_progress()
 
     # Compute available nodes (nodes whose prerequisites are all learned)
-    all_nodes = service._load_nodes()
+    all_nodes = _get_all_nodes()
     available = set()
 
     # Build prerequisite map: node_id -> set of prerequisite node_ids
@@ -88,14 +96,14 @@ async def get_progress():
     }
 
 
-@router.put("/progress", dependencies=[Depends(require_admin_key)])
+@router.put("/progress", dependencies=[Depends(require_admin_access)])
 async def update_progress(body: ProgressUpdate):
     """Update learning progress (replace learned set)."""
     _save_progress(set(body.learned))
     return {"status": "ok", "total_learned": len(body.learned)}
 
 
-@router.post("/progress/toggle/{node_id}", dependencies=[Depends(require_admin_key)])
+@router.post("/progress/toggle/{node_id}", dependencies=[Depends(require_admin_access)])
 async def toggle_learned(node_id: str):
     """Toggle a single node's learned state."""
     learned = _load_progress()
@@ -118,8 +126,8 @@ async def recommend_path(
     Recommend a learning path to reach a goal node.
     Uses BFS on prerequisite edges to find ordered prerequisites.
     """
-    service = _get_graph_service()
-    all_nodes = service._load_nodes()
+    service = json_service
+    all_nodes = _get_all_nodes()
     learned = _load_progress()
 
     # Build adjacency: node_id -> list of prerequisites (incoming prerequisite edges)
@@ -137,10 +145,10 @@ async def recommend_path(
     # BFS backwards from goal
     path_nodes: list[str] = []
     visited = set()
-    queue = [goal]
+    queue: deque[str] = deque([goal])
 
     while queue and len(path_nodes) < max_steps:
-        current = queue.pop(0)
+        current = queue.popleft()
         if current in visited:
             continue
         visited.add(current)

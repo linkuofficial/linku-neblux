@@ -42,7 +42,7 @@ PROMPT_FILE = BASE_DIR / CONFIG["paths"]["prompt_file"]
 BATCH_DIR = BASE_DIR / CONFIG["paths"]["batch_dir"]
 LOG_FILE = BASE_DIR / CONFIG["paths"]["log_file"]
 
-VALID_DOMAINS = {"MAT","PHY","CHE","BIO","MED","ENG","TEC","SOC","HUM","PHI","ART","HIS"}
+from nexus_utils import VALID_DOMAINS
 
 # ── 載入現有節點 ───────────────────────────────────────
 def load_existing_nodes():

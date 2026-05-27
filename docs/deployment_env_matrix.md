@@ -19,7 +19,11 @@
 | PORT | 8000 | 8000 | 8000 | API 埠 |
 | DEBUG | true/false | false | false | production 禁用 |
 | CORS_ORIGINS | 可用 *（僅本機） | 明確網域清單 | 明確網域清單 | production 不可為 * |
-| ADMIN_API_KEY | 可空（僅本機） | 必填 | 必填 | production 必填 |
+| ADMIN_API_KEY | 可空（僅本機） | 必填 | 必填 | staging/production 必填 |
+| ADMIN_ALLOWED_IPS | 可空 | 建議設定 | 建議設定 | `/api/admin/*` 來源 IP/CIDR 白名單 |
+| ADMIN_TRUST_FORWARDED_FOR | false | 視代理配置 | 視代理配置 | 僅在受信任反向代理下啟用 |
+| ADMIN_TRUSTED_PROXIES | 可空 | 建議設定 | 建議設定 | 允許注入 `X-Forwarded-For` 的代理 IP/CIDR |
+| ADMIN_ENABLE_GENERATION_IN_PRODUCTION | true | false（建議） | false（預設） | 避免上線後誤觸發付費生成 |
 | NEO4J_URI | 必填 | 必填 | 必填 | 資料庫連線 |
 | NEO4J_USER | 必填 | 必填 | 必填 | 資料庫帳號 |
 | NEO4J_PASSWORD | 建議填 | 必填 | 必填 | secrets manager 管理 |
@@ -30,9 +34,13 @@
 
 ## 3. Production fail-fast 規則
 
-當 APP_ENV=production 時，啟動前強制檢查：
+當 APP_ENV=staging/production 時，啟動前強制檢查：
 - ADMIN_API_KEY 不能為空字串。
 - CORS_ORIGINS 不能解析為單一 *。
+
+執行期防護建議：
+- ADMIN_ALLOWED_IPS 限制管理端來源。
+- ADMIN_ENABLE_GENERATION_IN_PRODUCTION 預設維持 false，僅在必要維運時暫時開啟。
 
 任一條件不符合，服務應在啟動階段直接拒絕啟動。
 

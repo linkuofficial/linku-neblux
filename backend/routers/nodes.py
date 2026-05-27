@@ -3,6 +3,7 @@ Node CRUD endpoints.
 """
 
 from fastapi import APIRouter, Query, HTTPException
+from backend.services import json_service
 from backend.services.resolver import get_graph_service
 
 router = APIRouter()
@@ -16,7 +17,7 @@ async def list_nodes(
     type: str = Query(None, description="Filter by node type"),
 ):
     """Paginated node listing with optional filters."""
-    from backend.services import json_service
+    # list_nodes is a JSON-service-specific function; Neo4j equivalent not yet implemented
     return json_service.list_nodes(skip=skip, limit=limit, domain=domain, node_type=type)
 
 

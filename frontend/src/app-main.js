@@ -1,304 +1,9 @@
 // ===== I18N =====
-const I18N = {
-    en: {
-        title: 'Knowledge Graph',
-        loading: 'Loading graph...',
-        searchPlaceholder: 'Search nodes...',
-        searchNoResults: 'No matching nodes. Try broader terms like calculus, quantum, or evolution.',
-        searchTopHint: 'Press Enter to open top result',
-        searchResultsLabel: 'Search results',
-        learningPath: 'Learning Path',
-        addToLearningPath: 'Add to Learning Path',
-        removeFromLearningPath: 'Mark as Not Learned',
-        nextStepReady: 'Ready now',
-        nextStepLabel: 'Next step',
-        nextStepWillAppear: 'Next step will appear in Learning Path mode.',
-        nextStepLocked: 'Finish prerequisites to unlock a recommended next step.',
-        learningComplete: 'Great progress. No next prerequisite step from this node.',
-        searchOnGoogle: 'Search on Google \u2192',
-        prerequisites: '\u2191 Prerequisites',
-        unlocks: '\u2193 Unlocks',
-        allConnections: 'All Connections',
-        noneFoundational: 'None \u2014 foundational',
-        noneDetected: 'None detected',
-        pending: 'pending',
-        era: 'Era',
-        present: 'present',
-        bce: 'BCE',
-        nodes: 'nodes',
-        edges: 'edges',
-        prereqs: 'prereqs',
-        learned: 'learned',
-        available: 'available',
-        filterAll: 'ALL',
-        // Legend
-        logical: 'logical',
-        historical: 'historical',
-        applied: 'applied',
-        conceptual: 'conceptual',
-        causal: 'causal',
-        prerequisite: 'prerequisite',
-        // Node types
-        field: 'FIELD',
-        concept: 'CONCEPT',
-        person: 'PERSON',
-        event: 'EVENT'
-    },
-    zh: {
-        title: '\u77e5\u8b58\u5716\u8b5c',
-        loading: '\u8f09\u5165\u5716\u8b5c\u4e2d...',
-        searchPlaceholder: '\u641c\u5c0b\u7bc0\u9ede...',
-        searchNoResults: '\u627e\u4e0d\u5230\u76f8\u7b26\u7bc0\u9ede\u3002\u8acb\u5617\u8a66\u66f4\u5bec\u7684\u95dc\u9375\u8a5e\uff0c\u4f8b\u5982 calculus\u3001quantum\u3001evolution\u3002',
-        searchTopHint: '\u6309 Enter \u53ef\u76f4\u63a5\u958b\u555f\u7b2c\u4e00\u500b\u7d50\u679c',
-        searchResultsLabel: '\u641c\u5c0b\u7d50\u679c',
-        learningPath: '\u5b78\u7fd2\u8def\u5f91',
-        addToLearningPath: '\u52a0\u5165\u5b78\u7fd2\u8def\u5f91',
-        removeFromLearningPath: '\u6a19\u8a18\u70ba\u672a\u5b78\u7fd2',
-        nextStepReady: '\u73fe\u5728\u53ef\u5b78',
-        nextStepLabel: '\u4e0b\u4e00\u6b65',
-        nextStepWillAppear: '\u958b\u555f\u5b78\u7fd2\u8def\u5f91\u6a21\u5f0f\u5f8c\u6703\u986f\u793a\u4e0b\u4e00\u6b65\u5efa\u8b70\u3002',
-        nextStepLocked: '\u5148\u5b8c\u6210\u524d\u7f6e\u77e5\u8b58\uff0c\u5c31\u6703\u89e3\u9396\u4e0b\u4e00\u6b65\u5efa\u8b70\u3002',
-        learningComplete: '\u9032\u5ea6\u4e0d\u932f\u3002\u9019\u500b\u7bc0\u9ede\u7684\u5148\u4fee\u5ef6\u4f38\u5df2\u5168\u90e8\u5b8c\u6210\u3002',
-        searchOnGoogle: '\u5728 Google \u641c\u5c0b \u2192',
-        prerequisites: '\u2191 \u524d\u7f6e\u77e5\u8b58',
-        unlocks: '\u2193 \u89e3\u9396',
-        allConnections: '\u6240\u6709\u9023\u7d50',
-        noneFoundational: '\u7121 \u2014 \u57fa\u790e\u77e5\u8b58',
-        noneDetected: '\u672a\u5075\u6e2c\u5230',
-        pending: '\u5f85\u78ba\u8a8d',
-        era: '\u5e74\u4ee3',
-        present: '\u81f3\u4eca',
-        bce: '\u524d',
-        nodes: '\u7bc0\u9ede',
-        edges: '\u908a',
-        prereqs: '\u5148\u4fee',
-        learned: '\u5df2\u5b78',
-        available: '\u53ef\u5b78',
-        filterAll: '\u5168\u90e8',
-        // Legend
-        logical: '\u908f\u8f2f',
-        historical: '\u6b77\u53f2',
-        applied: '\u61c9\u7528',
-        conceptual: '\u6982\u5ff5',
-        causal: '\u56e0\u679c',
-        prerequisite: '\u5148\u4fee',
-        // Node types
-        field: '\u9818\u57df',
-        concept: '\u6982\u5ff5',
-        person: '\u4eba\u7269',
-        event: '\u4e8b\u4ef6'
-    },
-    ja: {
-        title: '\u30ca\u30ec\u30c3\u30b8\u30b0\u30e9\u30d5',
-        loading: '\u30b0\u30e9\u30d5\u3092\u8aad\u307f\u8fbc\u307f\u4e2d...',
-        searchPlaceholder: '\u30ce\u30fc\u30c9\u3092\u691c\u7d22...',
-        searchNoResults: '\u4e00\u81f4\u3059\u308b\u30ce\u30fc\u30c9\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3002calculus\u3001quantum\u3001evolution \u306a\u3069\u306e\u3088\u308a\u5e45\u5e83\u3044\u8a9e\u3067\u8a66\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
-        searchTopHint: 'Enter \u3067\u5148\u982d\u7d50\u679c\u3092\u958b\u304f',
-        searchResultsLabel: '\u691c\u7d22\u7d50\u679c',
-        learningPath: '\u5b66\u7fd2\u30d1\u30b9',
-        addToLearningPath: '\u5b66\u7fd2\u30d1\u30b9\u306b\u8ffd\u52a0',
-        removeFromLearningPath: '\u672a\u5b66\u7fd2\u306b\u623b\u3059',
-        nextStepReady: '\u4eca\u3059\u3050\u53ef\u80fd',
-        nextStepLabel: '\u6b21\u306e\u30b9\u30c6\u30c3\u30d7',
-        nextStepWillAppear: '\u5b66\u7fd2\u30d1\u30b9\u30e2\u30fc\u30c9\u3067\u6b21\u306e\u63a8\u5968\u30b9\u30c6\u30c3\u30d7\u304c\u8868\u793a\u3055\u308c\u307e\u3059\u3002',
-        nextStepLocked: '\u6b21\u3092\u89e3\u653e\u3059\u308b\u306b\u306f\u5148\u4fee\u3092\u5b8c\u4e86\u3057\u3066\u304f\u3060\u3055\u3044\u3002',
-        learningComplete: '\u826f\u3044\u9032\u6357\u3067\u3059\u3002\u3053\u306e\u30ce\u30fc\u30c9\u306b\u6b21\u306e\u5148\u4fee\u30b9\u30c6\u30c3\u30d7\u306f\u3042\u308a\u307e\u305b\u3093\u3002',
-        searchOnGoogle: 'Google \u3067\u691c\u7d22 \u2192',
-        prerequisites: '\u2191 \u5148\u4fee',
-        unlocks: '\u2193 \u89e3\u653e',
-        allConnections: '\u3059\u3079\u3066\u306e\u63a5\u7d9a',
-        noneFoundational: '\u306a\u3057 \u2014 \u57fa\u790e',
-        noneDetected: '\u691c\u51fa\u306a\u3057',
-        pending: '\u4fdd\u7559',
-        era: '\u6642\u4ee3',
-        present: '\u73fe\u4ee3',
-        bce: '\u7d00\u5143\u524d',
-        nodes: '\u30ce\u30fc\u30c9',
-        edges: '\u30a8\u30c3\u30b8',
-        prereqs: '\u5148\u4fee',
-        learned: '\u5b66\u7fd2\u6e08\u307f',
-        available: '\u5b66\u7fd2\u53ef\u80fd',
-        filterAll: '\u5168\u3066',
-        // Legend
-        logical: '\u8ad6\u7406',
-        historical: '\u6b74\u53f2',
-        applied: '\u5fdc\u7528',
-        conceptual: '\u6982\u5ff5',
-        causal: '\u56e0\u679c',
-        prerequisite: '\u5148\u4fee',
-        // Node types
-        field: '\u5206\u91ce',
-        concept: '\u6982\u5ff5',
-        person: '\u4eba\u7269',
-        event: '\u4e8b\u4ef6'
-    }
-};
-
-function isValidLang(lang) {
-    return typeof lang === 'string' && Object.prototype.hasOwnProperty.call(I18N, lang);
-}
-
-function getLang() {
-    const saved = localStorage.getItem('nexus-lang');
-    if (saved === 'zh-TW') return 'zh';
-    if (isValidLang(saved)) return saved;
-    const nav = (navigator.language || '').toLowerCase();
-    if (nav.startsWith('ja')) return 'ja';
-    if (nav.startsWith('zh')) return 'zh';
-    return 'en';
-}
+// All translation data lives in ./i18n.js (which re-exports ./i18n/{lang}.js).
+import { I18N, isValidLang, getLang, TAG_LABELS, TAG_TOKEN_ZH } from './i18n.js';
 
 let LANG = getLang();
 function t(key) { return I18N[LANG][key] || I18N['en'][key] || key; }
-
-const TAG_LABELS = {
-    zh: {
-        foundational: '基礎',
-        abstract: '抽象',
-        axiomatic: '公理化',
-        ancient: '古代',
-        experimental: '實驗',
-        natural_world: '自然世界',
-        molecular_scale: '分子尺度',
-        interdisciplinary: '跨領域',
-        field: '領域',
-        applied: '應用',
-        theoretical: '理論',
-        empirical: '實證',
-        modern: '現代',
-        contemporary: '當代',
-        historical_timescale: '歷史尺度',
-        historically_significant: '歷史重要',
-        unifying_concept: '統一概念',
-        well_established: '成熟理論',
-        currently_active_research: '目前活躍研究'
-    },
-    ja: {
-        foundational: '基礎',
-        abstract: '抽象',
-        axiomatic: '公理化',
-        ancient: '古代',
-        experimental: '実験',
-        natural_world: '自然界',
-        molecular_scale: '分子スケール',
-        interdisciplinary: '学際的',
-        field: '分野',
-        applied: '応用',
-        theoretical: '理論',
-        empirical: '実証',
-        modern: '近代',
-        contemporary: '現代',
-        historical_timescale: '歴史スケール',
-        historically_significant: '歴史的重要',
-        unifying_concept: '統一概念',
-        well_established: '確立された理論',
-        currently_active_research: '現在進行中の研究'
-    }
-};
-
-const TAG_TOKEN_ZH = {
-    age: '時代',
-    ancient: '古代',
-    modern: '現代',
-    contemporary: '當代',
-    early: '早期',
-    middle: '中期',
-    post: '後',
-    digital: '數位',
-    industrial: '工業',
-    cold: '冷',
-    war: '戰爭',
-    exploration: '探索',
-    revolution: '革命',
-    enlightenment: '啟蒙',
-    renaissance: '文藝復興',
-    ancient_greek: '古希臘',
-    islamic: '伊斯蘭',
-    golden: '黃金',
-    world: '世界',
-    history: '歷史',
-    historical: '歷史',
-    historiography: '史學方法',
-    studies: '研究',
-    science: '科學',
-    technology: '科技',
-    engineering: '工程',
-    application: '應用',
-    applied: '應用',
-    practical: '實務',
-    theoretical: '理論',
-    theory: '理論',
-    model: '模型',
-    methodology: '方法論',
-    framework: '框架',
-    concept: '概念',
-    foundational: '基礎',
-    abstract: '抽象',
-    axiomatic: '公理化',
-    empirical: '實證',
-    experimental: '實驗',
-    observational: '觀測',
-    analytical: '分析',
-    analysis: '分析',
-    quantitative: '量化',
-    qualitative: '質化',
-    logic: '邏輯',
-    algebra: '代數',
-    calculus: '微積分',
-    geometry: '幾何',
-    topology: '拓撲',
-    probability: '機率',
-    statistics: '統計',
-    differential: '微分',
-    equations: '方程',
-    number: '數論',
-    graph: '圖',
-    set: '集合',
-    field: '領域',
-    interdisciplinary: '跨領域',
-    cross: '跨',
-    domain: '領域',
-    molecular: '分子',
-    atomic: '原子',
-    cellular: '細胞',
-    ecological: '生態',
-    planetary: '行星',
-    cosmic: '宇宙',
-    scale: '尺度',
-    ethics: '倫理',
-    policy: '政策',
-    society: '社會',
-    social: '社會',
-    culture: '文化',
-    cultural: '文化',
-    cognitive: '認知',
-    medical: '醫學',
-    biomedical: '生醫',
-    chemistry: '化學',
-    physics: '物理',
-    biology: '生物',
-    linguistics: '語言學',
-    philosophy: '哲學',
-    art: '藝術',
-    music: '音樂',
-    design: '設計',
-    law: '法律',
-    cybersecurity: '資安',
-    machine: '機器',
-    learning: '學習',
-    network: '網路',
-    systems: '系統',
-    system: '系統',
-    computing: '計算',
-    computer: '電腦',
-    language: '語言',
-    processing: '處理',
-    public: '公共',
-    health: '健康',
-    significant: '重要',
-    established: '成熟',
-    unifying: '統一',
-};
 
 function localizeTag(tag) {
     const mapped = TAG_LABELS[LANG] && TAG_LABELS[LANG][tag];
@@ -352,29 +57,7 @@ function sectionLabel(kind) {
 function renderPanelDescription(node) {
     const raw = nodeDescription(node).trim();
     if (!raw) return '';
-
-    if (node.id !== 'machine_learning_concept') {
-        return `<p>${escHtml(raw)}</p>`;
-    }
-
-    const sentences = raw
-        .split(/(?<=[。！？.!?])\s*/)
-        .map((part) => part.trim())
-        .filter(Boolean);
-
-    const definition = sentences[0] || raw;
-    const applications = sentences[1] || '';
-    const theory = sentences.slice(2).join(' ') || '';
-
-    const blocks = [
-        { title: sectionLabel('definition'), body: definition },
-        { title: sectionLabel('applications'), body: applications },
-        { title: sectionLabel('theory'), body: theory },
-    ].filter((block) => block.body);
-
-    return blocks
-        .map((block) => `<p><strong>${escHtml(block.title)}:</strong> ${escHtml(block.body)}</p>`)
-        .join('');
+    return `<p>${escHtml(raw)}</p>`;
 }
 
 async function setLang(lang) {
@@ -459,6 +142,12 @@ function setLoadingState(message, isError = false, showRetry = false) {
 
 function hideLoadingState() {
     document.getElementById('loading').style.display = 'none';
+    // Show welcome overlay only if no node is pre-selected
+    const params = new URLSearchParams(window.location.search);
+    const welcomeEl = document.getElementById('welcome-overlay');
+    if (welcomeEl && (params.get('node') || params.get('search'))) {
+        welcomeEl.classList.add('hidden');
+    }
 }
 
 // ===== CONSTANTS =====
@@ -1051,6 +740,12 @@ function openPanel(d) {
     if (navHistory.length > 10) navHistory.shift();
     renderBreadcrumb();
 
+    // Hide welcome overlay on first interaction
+    const welcomeEl = document.getElementById('welcome-overlay');
+    if (welcomeEl && !welcomeEl.classList.contains('hidden')) {
+        welcomeEl.classList.add('hidden');
+    }
+
     document.getElementById('p-type').textContent = t(d.type);
     document.getElementById('p-type').style.color = nc(d);
     document.getElementById('p-label').textContent = nodeLabel(d);
@@ -1129,18 +824,6 @@ function connItem(node, rel, pending) {
 
 function renderBreadcrumb() {
     const el = document.getElementById('p-breadcrumb');
-    if (currentPanelNodeId === 'machine_learning_concept') {
-        const mlPath = [
-            { id: 'computer_science_field', label: 'Computer Science' },
-            { id: 'artificial_intelligence_concept', label: 'Artificial Intelligence' },
-            { id: 'machine_learning_concept', label: 'Machine Learning' },
-        ];
-        el.innerHTML = mlPath.map((item, i) => {
-            const sep = i < mlPath.length - 1 ? '<span class="bc-sep">\u203a</span>' : '';
-            return `<span class="bc-item" data-node-id="${escAttr(item.id)}">${escHtml(item.label)}</span>${sep}`;
-        }).join('');
-        return;
-    }
     const last5 = navHistory.slice(-5);
     el.innerHTML = last5.map((id, i) => {
         const n = nodeMap[id];
@@ -1209,6 +892,7 @@ function setupLPMode() {
         lpMode = !lpMode;
         btn.classList.toggle('active', lpMode);
         btn.setAttribute('aria-pressed', String(lpMode));
+        document.body.classList.toggle('lp-active', lpMode);
         document.getElementById('learned-info').style.display = lpMode ? 'block' : 'none';
         if (lpMode) {
             applyLPVisibility();

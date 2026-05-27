@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus — Explorer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <link rel="stylesheet" href="src/shared.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
 
@@ -36,6 +37,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
 
         body {
@@ -99,37 +105,12 @@
             cursor: grabbing;
         }
 
-        /* Links */
+        /* Links — colours defined in src/shared.css */
         .link {
             stroke-opacity: 0.016;
             stroke-width: 0.8px;
             fill: none;
             transition: stroke-opacity 0.3s;
-        }
-
-        .link.logical {
-            stroke: #5b9bd5;
-        }
-
-        .link.historical {
-            stroke: #c9a05a;
-        }
-
-        .link.applied {
-            stroke: #5bc97a;
-        }
-
-        .link.conceptual {
-            stroke: #9b7bc9;
-        }
-
-        .link.causal {
-            stroke: #c95b5b;
-        }
-
-        .link.pending {
-            stroke-dasharray: 4, 3;
-            stroke-opacity: 0.02;
         }
 
         .link.highlight {
@@ -516,12 +497,18 @@
 
         .lang-btn {
             position: relative;
-            padding: 0 7px;
+            padding: 10px 12px;
+            min-height: 44px;
+            min-width: 44px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             border: none;
             background: transparent;
             color: rgba(150, 169, 193, 0.62);
             cursor: pointer;
             transition: color 0.15s;
+            font-size: 13px;
         }
 
         .lang-btn+.lang-btn {
@@ -621,13 +608,13 @@
             position: absolute;
             top: 12px;
             right: 12px;
-            width: 30px;
-            height: 30px;
+            width: 44px;
+            height: 44px;
             background: rgba(148, 163, 184, 0.14);
             border: 1px solid rgba(148, 163, 184, 0.22);
             border-radius: 999px;
             color: var(--panel-soft);
-            font-size: 14px;
+            font-size: 18px;
             cursor: pointer;
             padding: 0;
             transition: all 0.2s ease;
@@ -640,7 +627,7 @@
 
         #p-type {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 10px;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 8px;
@@ -663,16 +650,7 @@
             margin-bottom: 20px;
         }
 
-        .d-badge {
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 9px;
-            padding: 3px 9px;
-            border-radius: 999px;
-            background: rgba(148, 163, 184, 0.12);
-            border: 1px solid rgba(148, 163, 184, 0.2);
-            letter-spacing: 1.1px;
-            font-weight: 600;
-        }
+        /* .d-badge — defined in src/shared.css */
 
         #p-desc {
             font-size: 13px;
@@ -878,7 +856,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            font-size: 10px;
+            font-size: 12px;
             color: #9db0c8;
             font-family: 'IBM Plex Mono', monospace;
         }
@@ -1127,8 +1105,9 @@
 
         .filter-btn {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 9px;
-            padding: 4px 9px;
+            font-size: 12px;
+            padding: 10px 14px;
+            min-height: 44px;
             border: 1px solid var(--line-subtle);
             background: var(--glass-1);
             color: #98abc2;

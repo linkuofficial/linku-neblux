@@ -12,13 +12,13 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import shutil
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 from quality_check import score_node
+from nexus_utils import word_count
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 NODES_PATH = BASE_DIR / "data" / "all_nodes.json"
@@ -50,9 +50,6 @@ def _load_nodes(path: Path) -> dict[str, Any]:
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
-
-def _word_count(text: str) -> int:
-    return len(re.findall(r"\b\w+\b", text or ""))
 
 
 def _normalize(text: str) -> str:
@@ -159,7 +156,7 @@ def _build_candidate_description(node: dict[str, Any], node_lookup: dict[str, di
     candidate = _join_sentences(sentences)
 
     # Keep within policy-aligned range while preserving existing content.
-    wc = _word_count(candidate)
+    wc = word_count(candidate)
     if wc < 120:
         candidate = _join_sentences(
             [

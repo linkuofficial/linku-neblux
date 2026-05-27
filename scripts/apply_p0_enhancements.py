@@ -1,17 +1,18 @@
-"""
+﻿"""
 apply_p0_enhancements.py
 ------------------------
 Apply approved enhancement wave descriptions to all_nodes.json.
 
-基於決策表，自動套用已批准的增強，並生成變更報告。
+?箸瘙箇?銵剁??芸?憟撌脫??憓撥嚗蒂??霈?勗???
 
-用法：
+?冽?嚗?
   python scripts/apply_p0_enhancements.py
   python scripts/apply_p0_enhancements.py --decisions data/p0_candidates_consolidated_decisions.json
   python scripts/apply_p0_enhancements.py --consolidated data/p0_candidates_consolidated.json --decisions data/p0_candidates_consolidated_decisions.json
 """
 
 import json
+import os
 import argparse
 import shutil
 from pathlib import Path
@@ -139,15 +140,15 @@ def main():
     # Load data
     print(f"Loading nodes from {args.nodes.name}...", end=" ")
     nodes_data = load_nodes(args.nodes)
-    print(f"✓ {len(nodes_data.get('nodes', []))} nodes")
+    print(f"??{len(nodes_data.get('nodes', []))} nodes")
     
     print(f"Loading decisions from {args.decisions.name}...", end=" ")
     decisions = load_decisions(args.decisions)
-    print(f"✓ {len(decisions)} decisions")
+    print(f"??{len(decisions)} decisions")
     
     print(f"Loading consolidated results from {args.consolidated.name}...", end=" ")
     consolidated_map = load_consolidated(args.consolidated)
-    print(f"✓ {len(consolidated_map)} results")
+    print(f"??{len(consolidated_map)} results")
     
     # Create backup
     backup_file = args.nodes.with_stem(
@@ -155,7 +156,7 @@ def main():
     )
     print(f"\nCreating backup: {backup_file.name}...", end=" ")
     shutil.copy2(args.nodes, backup_file)
-    print(f"✓")
+    print(f"??)
     
     # Apply enhancements
     print(f"\nApplying enhancements...")
@@ -169,11 +170,12 @@ def main():
     print(f"  Skipped: {skipped_count}")
     print(f"  Errors: {sum(1 for c in change_log if c['status'] == 'error')}")
     
-    # Save updated nodes
+    # Save updated nodes (atomic write — crash-safe)
     print(f"\nSaving updated nodes to {args.nodes.name}...", end=" ")
-    with open(args.nodes, "w", encoding="utf-8") as f:
-        json.dump(updated_data, f, indent=2, ensure_ascii=False)
-    print(f"✓")
+    _tmp = Path(str(args.nodes) + ".tmp")
+    _tmp.write_text(json.dumps(updated_data, indent=2, ensure_ascii=False), encoding="utf-8")
+    os.replace(_tmp, args.nodes)
+    print("✓")
     
     # Save change log
     log_file = args.nodes.parent / f"{wave_prefix}_enhancements_apply_log.json"
@@ -193,7 +195,7 @@ def main():
             },
             "change_log": change_log
         }, f, indent=2, ensure_ascii=False)
-    print(f"✓")
+    print(f"??)
     
     print(f"\n{'='*70}")
     print(f"{wave_label.upper()} ENHANCEMENTS APPLIED SUCCESSFULLY")
@@ -204,3 +206,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

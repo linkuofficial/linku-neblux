@@ -6,7 +6,7 @@ from fastapi import HTTPException
 from starlette.requests import Request
 from fastapi.testclient import TestClient
 
-from backend.auth import require_admin_key
+from backend.auth import require_admin_key, require_admin_origin
 from backend.config import validate_startup_settings
 from backend.main import app
 from backend.routers import admin as admin_router
@@ -42,7 +42,7 @@ def test_admin_auth_accepts_correct_key(monkeypatch):
 
 def test_validate_startup_settings_rejects_unsafe_production():
     settings = SimpleNamespace(
-        is_production=True,
+        is_public_env=True,
         admin_api_key="",
         parsed_cors_origins=["*"],
     )
@@ -57,12 +57,81 @@ def test_validate_startup_settings_rejects_unsafe_production():
 
 def test_validate_startup_settings_allows_safe_production():
     settings = SimpleNamespace(
-        is_production=True,
+        is_public_env=True,
         admin_api_key="topsecret",
         parsed_cors_origins=["https://nexus.example.com"],
     )
 
     validate_startup_settings(settings)
+
+
+def test_validate_startup_settings_rejects_unsafe_staging():
+    settings = SimpleNamespace(
+        is_public_env=True,
+        admin_api_key="",
+        parsed_cors_origins=["*"],
+    )
+
+    with pytest.raises(RuntimeError) as exc:
+        validate_startup_settings(settings)
+
+    message = str(exc.value)
+    assert "ADMIN_API_KEY" in message
+    assert "CORS_ORIGINS" in message
+
+
+def _make_request(client_ip: str, headers: list[tuple[bytes, bytes]] | None = None) -> Request:
+    async def _receive():
+        return {"type": "http.request", "body": b"", "more_body": False}
+
+    scope = {
+        "type": "http",
+        "method": "GET",
+        "path": "/api/admin/quality",
+        "headers": headers or [],
+        "query_string": b"",
+        "client": (client_ip, 12345),
+    }
+    return Request(scope, _receive)
+
+
+def test_admin_origin_trusts_xff_only_from_trusted_proxy(monkeypatch):
+    monkeypatch.setattr(
+        "backend.auth.get_settings",
+        lambda: SimpleNamespace(
+            admin_allowed_ips="198.51.100.25",
+            admin_trust_forwarded_for=True,
+            admin_trusted_proxies="10.0.0.0/8",
+        ),
+    )
+
+    request = _make_request(
+        "10.1.2.3",
+        headers=[(b"x-forwarded-for", b"198.51.100.25, 10.1.2.3")],
+    )
+
+    asyncio.run(require_admin_origin(request))
+
+
+def test_admin_origin_rejects_spoofed_xff_from_untrusted_proxy(monkeypatch):
+    monkeypatch.setattr(
+        "backend.auth.get_settings",
+        lambda: SimpleNamespace(
+            admin_allowed_ips="198.51.100.25",
+            admin_trust_forwarded_for=True,
+            admin_trusted_proxies="10.0.0.0/8",
+        ),
+    )
+
+    request = _make_request(
+        "203.0.113.12",
+        headers=[(b"x-forwarded-for", b"198.51.100.25")],
+    )
+
+    with pytest.raises(HTTPException) as exc:
+        asyncio.run(require_admin_origin(request))
+
+    assert exc.value.status_code == 403
 
 
 def test_metrics_endpoint_exports_prometheus_text():

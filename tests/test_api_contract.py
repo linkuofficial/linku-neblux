@@ -267,3 +267,64 @@ def test_admin_read_operation_is_audited():
     data = audit.json()
     assert isinstance(data.get("events"), list)
     assert any(event.get("detail", {}).get("endpoint") == "/quality" for event in data["events"])
+
+
+# ── Search edge-case tests (5.5) ─────────────────────────────────────────────
+
+@pytest.mark.contract
+@pytest.mark.parametrize("query,desc", [
+    ("", "empty string"),
+    ("   ", "whitespace only"),
+    ("<script>alert(1)</script>", "XSS payload"),
+    ("' OR '1'='1", "SQL-injection-style"),
+    ("量子力學", "CJK Unicode"),
+    ("a" * 300, "very long query"),
+])
+def test_search_edge_cases_return_valid_shape(query, desc):
+    """Search must never 500 regardless of the query content."""
+    res = client.get("/api/search", params={"q": query, "limit": 5})
+    assert res.status_code in (200, 400, 422), f"{desc}: unexpected {res.status_code}"
+    if res.status_code == 200:
+        data = res.json()
+        assert "results" in data
+        assert isinstance(data["results"], list)
+
+
+# ── Auth negative tests (5.4) ────────────────────────────────────────────────
+
+# ── Auth negative tests (5.4) ────────────────────────────────────────────────
+
+@pytest.fixture()
+def _admin_key_configured(monkeypatch):
+    """Temporarily inject a known admin key so auth enforcement is active."""
+    monkeypatch.setenv("ADMIN_API_KEY", "test-key-12345")
+    # Force settings cache to reload
+    from backend.config import get_settings
+    get_settings.cache_clear()
+    yield "test-key-12345"
+    get_settings.cache_clear()
+
+
+@pytest.mark.contract
+@pytest.mark.parametrize("endpoint", [
+    "/api/admin/quality",
+    "/api/admin/audit",
+    "/api/admin/dedup",
+])
+def test_admin_endpoints_require_auth_key(endpoint, _admin_key_configured):
+    """Admin endpoints must reject requests without X-Admin-Key when a key is configured."""
+    bare = TestClient(app, headers={})
+    res = bare.get(endpoint)
+    assert res.status_code in (401, 403), (
+        f"{endpoint} returned {res.status_code} without auth key — expected 401 or 403"
+    )
+
+
+@pytest.mark.contract
+def test_admin_endpoint_rejects_wrong_key(_admin_key_configured):
+    """Admin endpoints must reject requests with a wrong X-Admin-Key."""
+    bad_client = TestClient(app, headers={"X-Admin-Key": "definitely-wrong-key"})
+    res = bad_client.get("/api/admin/quality")
+    assert res.status_code in (401, 403)
+
+

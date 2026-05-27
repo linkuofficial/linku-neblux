@@ -11,8 +11,8 @@ if (cv) {
     const isNarrowViewport = window.innerWidth < 900;
     const cores = Number(window.navigator.hardwareConcurrency || 4);
     const lowPower = isNarrowViewport || cores <= 4;
-    const COUNT = lowPower ? 26 : 50;
-    const MAX_DIST = lowPower ? 82 : 110;
+    const COUNT = lowPower ? 18 : 35;
+    const MAX_DIST = lowPower ? 75 : 100;
     const MAX_DIST_SQ = MAX_DIST * MAX_DIST;
     const TARGET_FPS = 24;
     const FRAME_INTERVAL = 1000 / TARGET_FPS;

@@ -1,6 +1,8 @@
 """Merge a batch JSON file into all_nodes.json."""
 import json
+import os
 import sys
+from pathlib import Path
 
 batch_file = sys.argv[1] if len(sys.argv) > 1 else "data/batch_round1_1.json"
 
@@ -19,7 +21,8 @@ if collisions:
 data["nodes"].extend(new_nodes)
 data["meta"]["total"] = len(data["nodes"])
 
-with open("data/all_nodes.json", "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2, ensure_ascii=False)
+tmp = Path("data/all_nodes.json").with_suffix(".json.tmp")
+tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+os.replace(tmp, "data/all_nodes.json")
 
 print(f"Merged {len(new_nodes)} nodes. Total: {data['meta']['total']}")

@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,10 +42,6 @@ def _unwrap_descriptions(payload: Any) -> dict[str, str]:
     if "meta" in payload and "descriptions" not in payload:
         return {}
     return payload
-
-
-def _word_count(text: str) -> int:
-    return len(re.findall(r"\b\w+\b", text or ""))
 
 
 def _load_nodes() -> list[dict[str, Any]]:

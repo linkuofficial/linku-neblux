@@ -1,0 +1,71 @@
+/*
+ * shared.css — Graph-specific styles shared by app.html and explorer.html.
+ *
+ * Rules here must be identical in both HTML files. File-specific overrides
+ * (`:root` tokens, body backgrounds, page-level layout) stay in each HTML file.
+ * Load this before the per-page <style> block so per-page rules can override.
+ */
+
+/* ── Graph edge (link) type colours ─────────────────────────────────────── */
+/* These are the canonical semantic colours for the knowledge-graph edge types.
+ * Update here to retheme all views at once. */
+
+.link.logical {
+    stroke: #5b9bd5;
+}
+
+.link.historical {
+    stroke: #c9a05a;
+}
+
+.link.applied {
+    stroke: #5bc97a;
+}
+
+.link.conceptual {
+    stroke: #9b7bc9;
+}
+
+.link.causal {
+    stroke: #c95b5b;
+}
+
+/* Pending / animated edges */
+.link.pending {
+    stroke-dasharray: 4, 3;
+    stroke-opacity: 0.02;
+}
+
+/* ── Domain badge ────────────────────────────────────────────────────────── */
+.d-badge {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.12);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    letter-spacing: 1.1px;
+    font-weight: 600;
+}
+
+/* ── Connection item colour dot ──────────────────────────────────────────── */
+.cd {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* ── Connection label (relation type, right-aligned) ─────────────────────── */
+.cr {
+    font-size: 9px;
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    opacity: 0.78;
+}
+
+/* ── Pending connection (dimmed + italic) ────────────────────────────────── */
+.cp {
+    opacity: 0.75;
+    font-style: italic;
+}

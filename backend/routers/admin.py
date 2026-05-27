@@ -3,6 +3,7 @@ Admin endpoints — generation triggers, quality reports, dedup management.
 """
 
 import json
+import re
 import uuid
 import asyncio
 import sys
@@ -11,18 +12,47 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, Depends, Request, Query
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 from backend.config import BASE_DIR, get_settings
-from backend.auth import require_admin_key
+from backend.auth import require_admin_access
 from backend.services.notification_service import send_notification
 settings = get_settings()
 logger = logging.getLogger("nexus.admin")
 
-router = APIRouter(dependencies=[Depends(require_admin_key)])
+router = APIRouter(dependencies=[Depends(require_admin_access)])
 
-# ── Task queue (in-memory for now; swap with Redis/Celery in production) ──
-_tasks: dict[str, dict] = {}
+# ── Task queue (persisted to JSON file so restarts don't lose task history) ──
+_TASKS_FILE = BASE_DIR / "data" / "tasks.json"
+
+
+def _load_tasks() -> dict[str, dict]:
+    """Load persisted tasks; mark any 'running' task as 'interrupted' (process was killed)."""
+    if not _TASKS_FILE.exists():
+        return {}
+    try:
+        data: dict[str, dict] = json.loads(_TASKS_FILE.read_text(encoding="utf-8"))
+        for task in data.values():
+            if task.get("status") == "running":
+                task["status"] = "interrupted"
+                task["error"] = "Server restarted while task was running."
+        return data
+    except Exception:
+        logger.warning("tasks_file_corrupt_resetting")
+        return {}
+
+
+def _persist_tasks() -> None:
+    """Atomically write current _tasks to disk."""
+    try:
+        tmp = _TASKS_FILE.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(_tasks, indent=2, ensure_ascii=False), encoding="utf-8")
+        tmp.replace(_TASKS_FILE)
+    except Exception:
+        logger.warning("task_persist_failed")
+
+
+_tasks: dict[str, dict] = _load_tasks()
 _trigger_windows: dict[str, list[float]] = {}
 _trigger_events: list[float] = []
 
@@ -38,6 +68,23 @@ ADMIN_AUDIT_MAX_FILE_BYTES = max(1, settings.admin_audit_max_file_mb) * 1024 * 1
 ADMIN_AUDIT_MAX_ROTATED_FILES = max(1, settings.admin_audit_max_rotated_files)
 
 
+_VALID_DOMAINS = frozenset({"MAT", "PHY", "CHE", "BIO", "MED", "ENG", "TEC", "SOC", "HUM", "PHI", "ART", "HIS"})
+_SUBDOMAIN_RE = re.compile(r"^[A-Za-z0-9_-]{1,64}$")
+
+# Scoring weights / thresholds used by _score_description / _score_density / _get_grade
+_SCORING: dict = {
+    "min_words": 50,
+    "what_score": 3,
+    "significance_score": 3,
+    "significance_keywords": frozenset({"significant", "important", "fundamental", "essential", "revolutionized"}),
+    "bridge_score": 4,
+    "unique_ratio": 0.55,
+    "grade_A": 21,
+    "grade_B": 17,
+    "grade_C": 14,
+    "grade_D": 10,
+}
+
 class GenerateRequest(BaseModel):
     phase: int = 2
     domain: str = "MAT"
@@ -46,6 +93,13 @@ class GenerateRequest(BaseModel):
     batches: int = 1
     structured: bool = True
     critique: bool = True
+
+    @field_validator("subdomain")
+    @classmethod
+    def validate_subdomain(cls, v: str) -> str:
+        if not _SUBDOMAIN_RE.match(v):
+            raise ValueError("subdomain must be 1-64 alphanumeric/underscore/hyphen characters")
+        return v
 
 
 def _utc_now() -> datetime:
@@ -113,7 +167,7 @@ def _append_admin_audit_event(
             "status": status,
             "request_id": getattr(request.state, "request_id", None),
             "client_ip": request.client.host if request.client else "unknown",
-            "admin_key_prefix": raw_key[:8] if raw_key else "",
+            "admin_key_prefix": raw_key[:4] if raw_key else "",
             "detail": detail or {},
         }
         with open(ADMIN_AUDIT_LOG_FILE, "a", encoding="utf-8") as f:
@@ -277,6 +331,18 @@ def _enforce_trigger_rate_limit(request: Request) -> None:
 @router.post("/generate/trigger")
 async def trigger_generation(req: GenerateRequest, request: Request):
     """Trigger a background generation task."""
+    if settings.is_production and not settings.admin_enable_generation_in_production:
+        _append_admin_audit_event(
+            event_type="generate_trigger",
+            request=request,
+            status="blocked",
+            detail={"reason": "generation_disabled_in_production"},
+        )
+        raise HTTPException(
+            status_code=403,
+            detail="Admin generation is disabled in production. Set ADMIN_ENABLE_GENERATION_IN_PRODUCTION=true to enable.",
+        )
+
     _cleanup_task_store()
     try:
         _enforce_trigger_rate_limit(request)
@@ -290,8 +356,7 @@ async def trigger_generation(req: GenerateRequest, request: Request):
             )
         raise
 
-    valid_domains = {"MAT", "PHY", "CHE", "BIO", "MED", "ENG", "TEC", "SOC", "HUM", "PHI", "ART", "HIS"}
-    if req.domain not in valid_domains:
+    if req.domain not in _VALID_DOMAINS:
         _append_admin_audit_event(
             event_type="generate_trigger",
             request=request,
@@ -310,6 +375,7 @@ async def trigger_generation(req: GenerateRequest, request: Request):
         "result": None,
         "error": None,
     }
+    _persist_tasks()
 
     # Launch as subprocess (non-blocking)
     asyncio.create_task(_run_generation(task_id, req))
@@ -352,6 +418,15 @@ async def _run_generation(task_id: str, req: GenerateRequest):
         if proc.returncode == 0:
             _tasks[task_id]["status"] = "completed"
             _tasks[task_id]["result"] = stdout.decode("utf-8", errors="replace")[-4000:]
+            # Invalidate in-memory caches so next request reflects newly generated data
+            try:
+                from backend.services.json_service import invalidate_cache as _inv_json
+                from backend.routers.graph import invalidate_full_graph_cache, invalidate_descriptions_cache
+                _inv_json()
+                invalidate_full_graph_cache()
+                invalidate_descriptions_cache()
+            except Exception:
+                logger.warning("cache_invalidation_failed_after_generation")
         else:
             _tasks[task_id]["status"] = "failed"
             _tasks[task_id]["error"] = stderr.decode("utf-8", errors="replace")[-4000:]
@@ -362,6 +437,7 @@ async def _run_generation(task_id: str, req: GenerateRequest):
 
     _tasks[task_id]["progress"] = 100
     _tasks[task_id]["finished_at"] = _utc_now().isoformat()
+    _persist_tasks()
 
 
 @router.get("/generate/status/{task_id}")
@@ -467,62 +543,69 @@ async def quality_report(request: Request, domain: str = None):
     return response
 
 
-def _score_node(node: dict) -> int:
-    """Simplified node scoring (max 25)."""
-    score = 0
+def _score_description(node: dict) -> int:
+    """Score node description quality (0–10)."""
     desc = node.get("description", "")
-    connections = node.get("connections", [])
-
-    # Description (0-10)
     words = desc.split()
-    if len(words) >= 50:
-        score += 3  # WHAT
-    if any(w in desc.lower() for w in ["significant", "important", "fundamental", "essential", "revolutionized"]):
-        score += 3  # SIGNIFICANCE
-    # BRIDGE: cross-domain mention
+    score = 0
+    if len(words) >= _SCORING["min_words"]:
+        score += _SCORING["what_score"]
+    if any(w in desc.lower() for w in _SCORING["significance_keywords"]):
+        score += _SCORING["significance_score"]
     domain_keywords = {"mathematics", "physics", "chemistry", "biology", "engineering",
                        "philosophy", "history", "technology", "medicine", "sociology", "art"}
     node_domains = set(node.get("domain", []))
-    bridge_found = any(k in desc.lower() for k in domain_keywords
-                       if k[:3].upper() not in node_domains)
-    if bridge_found:
-        score += 4
-
-    # Connections (0-10)
-    if connections:
-        # Relation quality
-        generic = {"is related to", "has connection", "connects to"}
-        good_rels = sum(1 for c in connections if c.get("relation", "") not in generic and len(c.get("relation", "")) > 10)
-        score += min(4, good_rels)
-        # Domain diversity
-        conn_domains = set()
-        for c in connections:
-            # Approximate: relation_type variety
-            conn_domains.add(c.get("relation_type", ""))
-        score += min(3, len(conn_domains))
-        # Type diversity
-        score += min(3, len(set(c.get("relation_type") for c in connections)))
-
-    # Info density (0-5)
-    if len(words) > 0:
-        unique_ratio = len(set(w.lower() for w in words)) / len(words)
-        if unique_ratio >= 0.55:
-            score += 2
-    if len(node.get("display_tags", [])) >= 3:
-        score += 1
-    score += min(2, sum(1 for w in words if w[0].isupper() and len(w) > 1) // 2)
-
+    if any(k in desc.lower() for k in domain_keywords if k[:3].upper() not in node_domains):
+        score += _SCORING["bridge_score"]
     return score
 
 
+def _score_connections(node: dict) -> int:
+    """Score node connection richness (0–10)."""
+    connections = node.get("connections", [])
+    if not connections:
+        return 0
+    score = 0
+    generic = {"is related to", "has connection", "connects to"}
+    good_rels = sum(
+        1 for c in connections
+        if c.get("relation", "") not in generic and len(c.get("relation", "")) > 10
+    )
+    score += min(4, good_rels)
+    rel_types = {c.get("relation_type", "") for c in connections}
+    score += min(3, len(rel_types))
+    score += min(3, len(rel_types))  # type diversity (same axis; capped)
+    return min(10, score)
+
+
+def _score_density(node: dict) -> int:
+    """Score information density (0–5)."""
+    words = node.get("description", "").split()
+    if not words:
+        return 0
+    score = 0
+    unique_ratio = len({w.lower() for w in words}) / len(words)
+    if unique_ratio >= _SCORING["unique_ratio"]:
+        score += 2
+    if len(node.get("display_tags", [])) >= 3:
+        score += 1
+    score += min(2, sum(1 for w in words if w[0].isupper() and len(w) > 1) // 2)
+    return score
+
+
+def _score_node(node: dict) -> int:
+    """Composite node quality score (max 25)."""
+    return _score_description(node) + _score_connections(node) + _score_density(node)
+
+
 def _get_grade(score: int) -> str:
-    if score >= 21:
+    if score >= _SCORING["grade_A"]:
         return "A"
-    elif score >= 17:
+    elif score >= _SCORING["grade_B"]:
         return "B"
-    elif score >= 14:
+    elif score >= _SCORING["grade_C"]:
         return "C"
-    elif score >= 10:
+    elif score >= _SCORING["grade_D"]:
         return "D"
     return "F"
 

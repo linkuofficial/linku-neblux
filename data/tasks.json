@@ -1,0 +1,20 @@
+{
+  "4503f9c5-bc92-4948-bff4-64b51a1a94c9": {
+    "id": "4503f9c5-bc92-4948-bff4-64b51a1a94c9",
+    "status": "failed",
+    "started_at": "2026-05-27T09:49:00.739471+00:00",
+    "params": {
+      "phase": 2,
+      "domain": "MAT",
+      "subdomain": "calculus",
+      "batch_size": 1,
+      "batches": 1,
+      "structured": true,
+      "critique": true
+    },
+    "progress": 100,
+    "result": null,
+    "error": "",
+    "finished_at": "2026-05-27T09:49:00.741661+00:00"
+  }
+}

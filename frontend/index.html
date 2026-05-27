@@ -24,8 +24,8 @@
                         "surface-container-lowest": "#010f1f",
                         "error-container": "#93000a",
                         "surface-container-low": "#0d1c2d",
-                        "primary": "#c4c6ce",
-                        "surface-tint": "#c4c6ce",
+                        "primary": "#f0c050",
+                        "surface-tint": "#f0c050",
                         "primary-fixed": "#e0e2ea",
                         "on-error": "#690005",
                         "on-secondary-fixed-variant": "#42474f",
@@ -39,7 +39,7 @@
                         "surface-container": "#122131",
                         "secondary-container": "#42474f",
                         "on-secondary-fixed": "#171c23",
-                        "primary-fixed-dim": "#c4c6ce",
+                        "primary-fixed-dim": "#f0c050",
                         "outline": "#909095",
                         "surface-container-highest": "#273647",
                         "on-primary-fixed-variant": "#44474d",
@@ -567,24 +567,51 @@
                 return;
             }
 
-            searchResults.innerHTML = results.map((r, i) => {
-                const node = r.node;
-                const domainDots = (node.domain || []).map(d =>
-                    `<span class="domain-dot" style="background:${DOMAIN_COLORS[d] || '#888'}"></span>`
-                ).join(' ');
-                const typeColor = TYPE_COLORS[node.type] || TYPE_COLORS.concept;
+            searchResults.innerHTML = '';
 
-                return `<div class="search-result-item ${i === activeIndex ? 'active' : ''}" data-node-id="${node.id}" data-index="${i}">
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        ${domainDots}
-                        <span class="text-on-surface font-body-sm">${escapeHtml(getLabel(node))}</span>
-                    </div>
-                    <span class="type-badge" style="background:${typeColor}; color: rgba(212, 228, 250, 0.7);">${node.type}</span>
-                </div>
-                <div class="text-on-surface/40 text-[11px] mt-1 line-clamp-1 font-label-code">${escapeHtml((node.description || '').slice(0, 80))}${(node.description || '').length > 80 ? '…' : ''}</div>
-            </div>`;
-            }).join('');
+            results.forEach((r, i) => {
+                const node = r.node || {};
+                const item = document.createElement('div');
+                item.className = `search-result-item ${i === activeIndex ? 'active' : ''}`;
+                item.dataset.nodeId = String(node.id || '');
+                item.dataset.index = String(i);
+
+                const row = document.createElement('div');
+                row.className = 'flex items-center justify-between';
+
+                const left = document.createElement('div');
+                left.className = 'flex items-center gap-2';
+
+                for (const d of (node.domain || [])) {
+                    const dot = document.createElement('span');
+                    dot.className = 'domain-dot';
+                    dot.style.background = DOMAIN_COLORS[d] || '#888';
+                    left.appendChild(dot);
+                }
+
+                const labelEl = document.createElement('span');
+                labelEl.className = 'text-on-surface font-body-sm';
+                labelEl.textContent = getLabel(node);
+                left.appendChild(labelEl);
+
+                const typeEl = document.createElement('span');
+                typeEl.className = 'type-badge';
+                typeEl.style.background = TYPE_COLORS[node.type] || TYPE_COLORS.concept;
+                typeEl.style.color = 'rgba(212, 228, 250, 0.7)';
+                typeEl.textContent = String(node.type || 'concept');
+
+                row.appendChild(left);
+                row.appendChild(typeEl);
+
+                const descEl = document.createElement('div');
+                descEl.className = 'text-on-surface/40 text-[11px] mt-1 line-clamp-1 font-label-code';
+                const desc = String(node.description || '');
+                descEl.textContent = desc.length > 80 ? `${desc.slice(0, 80)}…` : desc;
+
+                item.appendChild(row);
+                item.appendChild(descEl);
+                searchResults.appendChild(item);
+            });
 
             searchResults.classList.remove('hidden');
         }
@@ -795,7 +822,7 @@
 
         let width, height;
         let particles = [];
-        const colors = ['#5b9bd5', '#f59e0b', '#10b981', '#c4c6ce'];
+        const colors = ['#5b9bd5', '#f59e0b', '#10b981', '#f0c050'];
 
         let mouse = { x: null, y: null, radius: 150 };
 

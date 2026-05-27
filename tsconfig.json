@@ -10,6 +10,8 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
+        "allowJs": true,
+        "checkJs": false,
         "lib": [
             "ES2020",
             "DOM",
@@ -17,7 +19,9 @@
         ]
     },
     "include": [
-        "vite.config.ts"
+        "vite.config.ts",
+        "frontend/**/*.ts",
+        "frontend/**/*.js"
     ],
     "exclude": [
         "node_modules"

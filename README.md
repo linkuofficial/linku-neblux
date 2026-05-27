@@ -34,6 +34,10 @@ cp .env.example .env
 生產環境至少確認：
 
 - `ADMIN_API_KEY` 已設定。
+- `ADMIN_ALLOWED_IPS` 已限制為你的固定管理來源（例如 office/VPN IP）。
+- 若有反向代理：`ADMIN_TRUST_FORWARDED_FOR=true` 並設定 `ADMIN_TRUSTED_PROXIES`。
+- 若無反向代理：`ADMIN_TRUST_FORWARDED_FOR=false`。
+- `ADMIN_ENABLE_GENERATION_IN_PRODUCTION=false`（需要時再短暫開啟）。
 - `CORS_ORIGINS` 不是 `*`。
 - `ADMIN_TRIGGER_MAX_REQUESTS` / `ADMIN_TRIGGER_WINDOW_SECONDS` 合理。
 - `ADMIN_ALERT_PER_MINUTE` / `ADMIN_ALERT_PER_DAY` 已依流量調整。
