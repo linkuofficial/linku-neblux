@@ -112,9 +112,14 @@ function applyI18n() {
     const legendItems = document.querySelectorAll('#legend .li');
     const legendKeys = ['logical', 'historical', 'applied', 'conceptual', 'causal', 'prerequisite'];
     legendItems.forEach((li, i) => { if (legendKeys[i]) li.lastChild.textContent = t(legendKeys[i]); });
-    // Filter bar "ALL" button
-    const allBtn = document.querySelector('.filter-btn');
-    if (allBtn) allBtn.textContent = t('filterAll');
+    // Filter bar — update ALL + domain labels
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        const d = btn.dataset.domain;
+        if (d) btn.textContent = domainLabel(d);
+    });
+    // Welcome text
+    const welcomeTextEl = document.getElementById('welcome-text');
+    if (welcomeTextEl) welcomeTextEl.textContent = t('welcomeText');
     // Stats
     if (allNodes.length) {
         document.getElementById('stats').textContent = `${allNodes.length} ${t('nodes')} \u00b7 ${allEdges.length} ${t('edges')} \u00b7 ${prereqEdges.length} ${t('prereqs')}`;
@@ -434,13 +439,18 @@ function buildPrereqGraph(raw) {
 }
 
 // ===== FILTERS =====
+function domainLabel(d) {
+    if (d === 'ALL') return t('filterAll');
+    return t('domain' + d) || d;
+}
+
 function buildFilters() {
     const bar = document.getElementById('filter-bar');
     const domains = ['ALL', 'MAT', 'PHY', 'CHE', 'BIO', 'MED', 'ENG', 'TEC', 'SOC', 'HUM', 'PHI', 'ART', 'HIS'];
     domains.forEach(d => {
         const btn = document.createElement('div');
         btn.className = 'filter-btn' + (d === 'ALL' ? ' active' : '');
-        btn.textContent = d === 'ALL' ? t('filterAll') : d;
+        btn.textContent = domainLabel(d);
         btn.style.color = d === 'ALL' ? '#c8d0dc' : (DC[d] || '#556');
         btn.dataset.domain = d;
         btn.onclick = () => {
