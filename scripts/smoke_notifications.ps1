@@ -53,18 +53,51 @@ $payload = @{
     critique = $true
 } | ConvertTo-Json
 
-$trigger = Invoke-WebRequest -UseBasicParsing -Method POST -Uri "$BaseUrl/api/admin/generate/trigger" -Headers $headers -ContentType "application/json" -Body $payload
-Assert-True ($trigger.StatusCode -eq 200) "Admin trigger failed: expected status 200, got $($trigger.StatusCode)"
+try {
+    $trigger = Invoke-WebRequest -UseBasicParsing -Method POST -Uri "$BaseUrl/api/admin/generate/trigger" -Headers $headers -ContentType "application/json" -Body $payload
+    Assert-True ($trigger.StatusCode -eq 200) "Admin trigger failed: expected status 200, got $($trigger.StatusCode)"
 
-$metricsAfter = Invoke-WebRequest -UseBasicParsing -Method GET -Uri "$BaseUrl/api/metrics"
-$minuteLine = ($metricsAfter.Content -split "`n" | Where-Object { $_ -match 'nexus_admin_trigger_events\{window="minute"\}' } | Select-Object -First 1)
-Assert-True (-not [string]::IsNullOrWhiteSpace($minuteLine)) "Missing minute admin trigger metric"
+    $metricsAfter = Invoke-WebRequest -UseBasicParsing -Method GET -Uri "$BaseUrl/api/metrics"
+    $minuteLine = ($metricsAfter.Content -split "`n" | Where-Object { $_ -match 'nexus_admin_trigger_events\{window="minute"\}' } | Select-Object -First 1)
+    Assert-True (-not [string]::IsNullOrWhiteSpace($minuteLine)) "Missing minute admin trigger metric"
 
-$minuteMatch = [regex]::Match($minuteLine, '(\d+)$')
-Assert-True ($minuteMatch.Success) "Could not parse minute admin trigger metric value"
-$minuteCount = [int]$minuteMatch.Groups[1].Value
-Assert-True ($minuteCount -ge 1) "Expected minute admin trigger count >= 1, got $minuteCount"
-Write-Output "[smoke] admin_trigger_metric_minute=$minuteCount"
+    $minuteMatch = [regex]::Match($minuteLine, '(\d+)$')
+    Assert-True ($minuteMatch.Success) "Could not parse minute admin trigger metric value"
+    $minuteCount = [int]$minuteMatch.Groups[1].Value
+    Assert-True ($minuteCount -ge 1) "Expected minute admin trigger count >= 1, got $minuteCount"
+    Write-Output "[smoke] admin_trigger_metric_minute=$minuteCount"
+}
+catch {
+    $response = $_.Exception.Response
+    if ($null -eq $response) {
+        throw
+    }
+
+    $statusCode = [int]$response.StatusCode
+    $bodyText = ""
+    if ($_.ErrorDetails -and -not [string]::IsNullOrWhiteSpace($_.ErrorDetails.Message)) {
+        $bodyText = $_.ErrorDetails.Message
+    }
+    try {
+        if ([string]::IsNullOrWhiteSpace($bodyText)) {
+            $reader = New-Object System.IO.StreamReader($response.GetResponseStream())
+            $bodyText = $reader.ReadToEnd()
+            $reader.Dispose()
+        }
+    }
+    catch {
+        if ([string]::IsNullOrWhiteSpace($bodyText)) {
+            $bodyText = ""
+        }
+    }
+
+    if ($statusCode -eq 403 -and $bodyText.Contains("Admin generation is disabled in production")) {
+        Write-Output "[smoke] admin_trigger_metric_minute=skipped (generation disabled in production)"
+    }
+    else {
+        throw
+    }
+}
 
 # 4) Optional webhook reachability check
 if (-not [string]::IsNullOrWhiteSpace($WebhookUrl)) {

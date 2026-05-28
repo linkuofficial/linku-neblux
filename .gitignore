@@ -27,3 +27,7 @@ playwright-report/
 
 # Logs
 *.log
+
+# Deploy artifacts
+docs/deploy/caddy/
+docs/deploy/.env.production

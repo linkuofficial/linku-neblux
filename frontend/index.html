@@ -3,103 +3,34 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nexus - Deep Field Survey</title>
-    <script src="/tailwind-standalone.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;700&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
+    <script src="/nexus-tokens.js"></script>
     <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface": "#051424",
-                        "error": "#ffb4ab",
-                        "on-tertiary-fixed-variant": "#4f453a",
-                        "secondary-fixed-dim": "#c2c7d0",
-                        "surface-container-lowest": "#010f1f",
-                        "error-container": "#93000a",
-                        "surface-container-low": "#0d1c2d",
-                        "primary": "#f0c050",
-                        "surface-tint": "#f0c050",
-                        "primary-fixed": "#e0e2ea",
-                        "on-error": "#690005",
-                        "on-secondary-fixed-variant": "#42474f",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-high": "#1c2b3c",
-                        "on-secondary": "#2c3138",
-                        "on-surface": "#d4e4fa",
-                        "tertiary-fixed-dim": "#d2c4b5",
-                        "on-tertiary-container": "#83786b",
-                        "secondary": "#c2c7d0",
-                        "surface-container": "#122131",
-                        "secondary-container": "#42474f",
-                        "on-secondary-fixed": "#171c23",
-                        "primary-fixed-dim": "#f0c050",
-                        "outline": "#909095",
-                        "surface-container-highest": "#273647",
-                        "on-primary-fixed-variant": "#44474d",
-                        "inverse-primary": "#5b5e65",
-                        "outline-variant": "#45474b",
-                        "surface-bright": "#2c3a4c",
-                        "secondary-fixed": "#dee2ec",
-                        "on-tertiary": "#372f25",
-                        "on-primary": "#2d3036",
-                        "on-tertiary-fixed": "#221a11",
-                        "on-background": "#d4e4fa",
-                        "tertiary": "#d2c4b5",
-                        "on-secondary-container": "#b1b5bf",
-                        "on-primary-fixed": "#181c21",
-                        "surface-variant": "#273647",
-                        "primary-container": "#070a0f",
-                        "on-surface-variant": "#c6c6cb",
-                        "inverse-on-surface": "#233143",
-                        "surface-dim": "#051424",
-                        "inverse-surface": "#d4e4fa",
-                        "background": "#051424",
-                        "tertiary-fixed": "#efe0d0",
-                        "on-primary-container": "#777980",
-                        "tertiary-container": "#0f0903"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "margin-mobile": "16px",
-                        "unit": "8px",
-                        "gutter": "24px",
-                        "container-max": "1440px",
-                        "margin-desktop": "64px"
-                    },
-                    "fontFamily": {
-                        "headline-md": ["Sora"],
-                        "label-caps": ["JetBrains Mono"],
-                        "body-base": ["Sora"],
-                        "display-lg-mobile": ["Sora"],
-                        "display-lg": ["Sora"],
-                        "body-sm": ["Sora"],
-                        "label-code": ["JetBrains Mono"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500" }],
-                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
-                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "body-sm": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "label-code": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }]
-                    }
-                }
+        (function () {
+            try {
+                let lang = localStorage.getItem('nexus-lang') || 'en';
+                if (lang === 'zh-TW') lang = 'zh';
+                document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : (lang === 'ja' ? 'ja' : 'en');
+            } catch (e) {
+                document.documentElement.lang = 'en';
             }
-        }
+        })();
     </script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Nexus helps you turn complex topics into clear, connected learning paths.">
+    <meta property="og:title" content="Nexus - Deep Field Survey">
+    <meta property="og:description"
+        content="Search concepts and jump into a connected knowledge graph with guided learning paths.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nexus - Deep Field Survey">
+    <meta name="twitter:description"
+        content="Search concepts and jump into a connected knowledge graph with guided learning paths.">
+    <meta name="twitter:image" content="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Nexus - Deep Field Survey</title>
+    <link rel="stylesheet" href="/nexus-theme.css">
+    <link rel="stylesheet" href="/src/index-tailwind.css">
     <style>
         body {
             font-family: 'Sora', sans-serif;
@@ -110,13 +41,33 @@
             background-color: rgba(26, 31, 38, 0.4);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 20px rgba(196, 198, 206, 0.05);
+            border: 1px solid var(--nexus-glass-border);
+            box-shadow: var(--nexus-glass-shadow);
         }
 
         .search-glow:focus-within {
             box-shadow: 0 0 20px rgba(196, 198, 206, 0.15), inset 0 0 10px rgba(196, 198, 206, 0.05);
             border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .search-cta-flash {
+            animation: searchCtaFlash 720ms var(--nexus-ease-ui);
+            border-color: rgba(240, 192, 80, 0.55) !important;
+            box-shadow: 0 0 0 2px rgba(240, 192, 80, 0.18), 0 0 24px rgba(240, 192, 80, 0.2);
+        }
+
+        @keyframes searchCtaFlash {
+            0% {
+                box-shadow: 0 0 0 0 rgba(240, 192, 80, 0), 0 0 0 rgba(240, 192, 80, 0);
+            }
+
+            35% {
+                box-shadow: 0 0 0 3px rgba(240, 192, 80, 0.2), 0 0 28px rgba(240, 192, 80, 0.28);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(240, 192, 80, 0), 0 0 0 rgba(240, 192, 80, 0);
+            }
         }
 
         .subtle-pulse {
@@ -221,6 +172,119 @@
             display: inline-block;
         }
 
+        .pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pill-label {
+            line-height: 1;
+        }
+
+        .pill-domain {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 32px;
+            min-height: 20px;
+            padding: 0 7px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            letter-spacing: 0.08em;
+            color: rgba(212, 228, 250, 0.78);
+        }
+
+        .pill-tooltip {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: min(280px, calc(100vw - 24px));
+            padding: 12px 14px;
+            border-radius: 16px;
+            border: 1px solid rgba(240, 192, 80, 0.24);
+            background: rgba(10, 14, 20, 0.94);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.34);
+            backdrop-filter: blur(18px);
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(8px) scale(0.985);
+            transform-origin: center bottom;
+            transition: opacity 0.2s var(--nexus-ease-ui), transform 0.2s var(--nexus-ease-ui);
+            z-index: 40;
+        }
+
+        .pill-tooltip.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .pill-tooltip[data-placement="below"] {
+            transform: translateY(-8px) scale(0.985);
+            transform-origin: center top;
+        }
+
+        .pill-tooltip::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: rgba(10, 14, 20, 0.94);
+            border-right: 1px solid rgba(240, 192, 80, 0.24);
+            border-bottom: 1px solid rgba(240, 192, 80, 0.24);
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        .pill-tooltip[data-placement="above"]::after {
+            bottom: -7px;
+        }
+
+        .pill-tooltip[data-placement="below"]::after {
+            top: -7px;
+            transform: translateX(-50%) rotate(225deg);
+        }
+
+        .pill-tooltip-domain {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            color: rgba(240, 192, 80, 0.9);
+            text-transform: uppercase;
+        }
+
+        .pill-tooltip-title {
+            margin-top: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px;
+            color: rgba(244, 248, 255, 0.96);
+        }
+
+        .pill-tooltip-body {
+            margin-top: 6px;
+            font-size: 13px;
+            line-height: 1.55;
+            color: rgba(212, 228, 250, 0.76);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pill-tooltip {
+                transition: opacity 0.01ms linear;
+                transform: none;
+            }
+
+            .pill-tooltip.visible,
+            .pill-tooltip[data-placement="below"] {
+                transform: none;
+            }
+        }
+
         /* Type badge */
         .type-badge {
             font-size: 10px;
@@ -254,8 +318,82 @@
             color: rgba(212, 228, 250, 0.86);
         }
 
+        .lang-btn {
+            transition: color 160ms ease, border-bottom 160ms ease;
+        }
+
         .lang-btn.active {
-            color: rgba(212, 228, 250, 1);
+            color: rgba(240, 192, 80, 0.95);
+            border-bottom: 1.5px solid rgba(240, 192, 80, 0.72);
+        }
+
+        #ctaExplore {
+            background: rgba(240, 192, 80, 0.9) !important;
+            color: #1a1208 !important;
+            border-color: transparent !important;
+            font-weight: 600;
+        }
+
+        #ctaExplore:hover {
+            background: rgba(240, 192, 80, 1) !important;
+        }
+
+        #ctaSearch {
+            background: transparent !important;
+            border: 1px solid rgba(240, 192, 80, 0.32) !important;
+            color: rgba(212, 228, 250, 0.65) !important;
+        }
+
+        #ctaSearch:hover {
+            border-color: rgba(240, 192, 80, 0.55) !important;
+            color: rgba(212, 228, 250, 0.9) !important;
+            background: rgba(240, 192, 80, 0.06) !important;
+        }
+
+        #nodeCount {
+            color: rgba(212, 228, 250, 0.48) !important;
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(18, 22, 30, 0.68);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+        }
+
+        .footer-nav a {
+            text-decoration: none;
+            color: rgba(212, 228, 250, 0.72);
+            padding: 8px 14px;
+            border-radius: 999px;
+            transition: color 160ms ease, background 160ms ease, opacity 160ms ease;
+        }
+
+        .footer-nav a:hover {
+            color: rgba(240, 192, 80, 0.96);
+            background: rgba(240, 192, 80, 0.08);
+        }
+
+        .footer-sep {
+            width: 1px;
+            height: 18px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        @media (max-width: 767px) {
+            .footer-nav {
+                gap: 8px;
+                padding: 8px 10px;
+            }
+
+            .footer-nav a {
+                padding: 8px 12px;
+            }
         }
 
         .lang-btn+.lang-btn::before {
@@ -280,10 +418,13 @@
     <!-- TopAppBar -->
     <header
         class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter mx-auto top-0 left-0 right-0">
-        <div
-            class="font-label-code text-label-code opacity-50 tracking-widest text-on-surface cursor-pointer hover:opacity-100 transition-opacity duration-300 ml-4 mt-2">
+        <a href="index.html"
+            class="font-label-code text-label-code opacity-70 tracking-widest text-on-surface hover:opacity-100 transition-opacity duration-300 ml-4 mt-2"
+            style="text-decoration:none;color:inherit;line-height:1.35" aria-label="Nexus home">
             NEXUS
-        </div>
+            <span style="display:block;font-size:8px;letter-spacing:0.18em;opacity:0.42;margin-top:2px">DEEP FIELD
+                SURVEY</span>
+        </a>
         <div id="langToggle"
             class="font-label-code text-label-code opacity-90 transition-opacity duration-300 mr-4 mt-2"
             aria-label="Language selector">
@@ -318,7 +459,7 @@
                     class="glass-pane rounded-full px-6 py-3 text-center font-label-code text-label-code text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
                     href="app.html">Start Exploring Graph</a>
                 <button id="ctaSearch"
-                    class="glass-pane rounded-full px-6 py-3 text-center font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
+                    class="glass-pane rounded-full px-6 py-3 text-center font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 transition-colors duration-300"
                     type="button">Search Directly</button>
             </div>
 
@@ -326,14 +467,12 @@
             <div class="relative w-full">
                 <div class="relative w-full glass-pane rounded-full overflow-hidden flex items-center p-2 search-glow transition-all duration-300"
                     id="searchContainer">
-                    <span class="material-symbols-outlined ml-4 text-on-surface opacity-50"
-                        style="font-variation-settings: 'wght' 200;">search</span>
+                    <span class="ml-4 text-on-surface opacity-50" aria-hidden="true">⌕</span>
                     <input id="searchInput"
                         class="w-full bg-transparent border-none text-on-surface placeholder-on-surface/30 focus:ring-0 focus:outline-none px-4 font-body-base h-12"
                         placeholder="Explore the infinite..." type="text" autocomplete="off" />
-                    <span id="searchSpinner"
-                        class="material-symbols-outlined mr-4 text-on-surface opacity-0 animate-spin transition-opacity"
-                        style="font-variation-settings: 'wght' 200;">progress_activity</span>
+                    <span id="searchSpinner" class="mr-4 text-on-surface opacity-0 animate-spin transition-opacity"
+                        aria-hidden="true">⟳</span>
                 </div>
                 <!-- Search Results Dropdown -->
                 <div id="searchResults" class="search-results glass-pane rounded-xl hidden"></div>
@@ -343,38 +482,49 @@
             <div id="suggestionPills" class="flex flex-wrap justify-center gap-3">
                 <button
                     class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
-                    data-query="black hole">
-                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-primary subtle-pulse"></span>
+                    data-query="black hole" data-domain="PHY" data-topic="blackHoles">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse" style="background:#c97a5b"></span>
                     <span class="pill-label">Black Holes</span>
+                    <span class="pill-domain">PHY</span>
                 </button>
                 <button
                     class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
-                    data-node="evolution_field">
-                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-tertiary subtle-pulse"
-                        style="animation-delay: 0.5s;"></span>
+                    data-node="evolution_field" data-domain="BIO" data-topic="evolution">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#5bc97a;animation-delay: 0.5s;"></span>
                     <span class="pill-label">Evolution</span>
+                    <span class="pill-domain">BIO</span>
                 </button>
                 <button
                     class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300 hidden sm:block"
-                    data-query="industrial revolution">
-                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-error subtle-pulse"
-                        style="animation-delay: 1s;"></span>
+                    data-query="industrial revolution" data-domain="HIS" data-topic="industrialRevolution">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#a07850;animation-delay: 1s;"></span>
                     <span class="pill-label">Industrial Revolution</span>
+                    <span class="pill-domain">HIS</span>
                 </button>
                 <button
                     class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300"
-                    data-query="neural network">
-                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-secondary subtle-pulse"
-                        style="animation-delay: 1.5s;"></span>
+                    data-query="neural network" data-domain="TEC" data-topic="neuralNetworks">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#c95b9b;animation-delay: 1.5s;"></span>
                     <span class="pill-label">Neural Networks</span>
+                    <span class="pill-domain">TEC</span>
                 </button>
                 <button
                     class="pill-btn px-4 py-2 glass-pane rounded-full font-label-code text-label-code text-on-surface-variant hover:text-on-surface hover:bg-surface-variant/50 transition-colors duration-300 hidden md:block"
-                    data-node="quantum_mechanics_field">
-                    <span class="w-2 h-2 rounded-full inline-block mr-2 bg-inverse-primary subtle-pulse"
-                        style="animation-delay: 2s;"></span>
+                    data-node="quantum_mechanics_field" data-domain="PHY" data-topic="quantumMechanics">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#c97a5b;animation-delay: 2s;"></span>
                     <span class="pill-label">Quantum Mechanics</span>
+                    <span class="pill-domain">PHY</span>
                 </button>
+            </div>
+
+            <div id="pillTooltip" class="pill-tooltip" role="tooltip" aria-hidden="true">
+                <div id="pillTooltipDomain" class="pill-tooltip-domain"></div>
+                <div id="pillTooltipTitle" class="pill-tooltip-title"></div>
+                <div id="pillTooltipBody" class="pill-tooltip-body"></div>
             </div>
 
             <!-- Node count indicator -->
@@ -388,24 +538,32 @@
     <!-- Footer -->
     <footer
         class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter bottom-0 left-0 right-0 pointer-events-none">
-        <div class="font-label-code text-label-code text-on-surface-variant opacity-40 mb-2 ml-4">
-            &copy; 2024 NEXUS. EXPLORE THE INFINITE.
+        <div id="footerCopy"
+            class="font-label-code text-label-code text-on-surface-variant opacity-40 mb-2 ml-4 hidden md:block">
+            &copy; <span id="copyright-year"></span> NEXUS. EXPLORE THE INFINITE.
         </div>
-        <div class="hidden md:flex gap-6 pointer-events-auto mb-2 mr-4">
-            <a class="font-label-code text-label-code text-on-surface-variant opacity-40 hover:text-primary hover:opacity-100 transition-colors duration-300"
-                href="app.html">Graph</a>
-            <a class="font-label-code text-label-code text-on-surface-variant opacity-40 hover:text-primary hover:opacity-100 transition-colors duration-300"
-                href="explorer.html">Explorer</a>
+        <div class="pointer-events-auto mb-2 mx-auto md:absolute md:left-1/2 md:-translate-x-1/2">
+            <nav class="footer-nav font-label-code text-label-code" aria-label="Primary page navigation">
+                <a id="footerGraphLink" href="app.html">Graph</a>
+                <span class="footer-sep" aria-hidden="true"></span>
+                <a id="footerExplorerLink" href="explorer.html">Explorer</a>
+            </nav>
         </div>
+        <div class="w-[132px] hidden md:block" aria-hidden="true"></div>
     </footer>
 
     <script>
+        const copyrightYearEl = document.getElementById('copyright-year');
+        if (copyrightYearEl) {
+            copyrightYearEl.textContent = String(new Date().getFullYear());
+        }
+
         // ─── Domain Colors ───────────────────────────────────────────────
-        const DOMAIN_COLORS = {
-            MAT: '#5b9bd5', PHY: '#7b68ee', CHE: '#e06c75',
-            BIO: '#10b981', MED: '#f06292', ENG: '#ffb74d',
-            TEC: '#4dd0e1', SOC: '#ce93d8', HUM: '#a1887f',
-            PHI: '#90a4ae', ART: '#ff8a65', HIS: '#f59e0b'
+        const DOMAIN_COLORS = window.NexusTokens?.DOMAIN_COLORS || {
+            MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b',
+            BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9',
+            TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9',
+            PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850'
         };
         const TYPE_COLORS = {
             field: 'rgba(91, 155, 213, 0.25)',
@@ -445,6 +603,61 @@
         const heroSubtitle = document.getElementById('heroSubtitle');
         const ctaExplore = document.getElementById('ctaExplore');
         const ctaSearch = document.getElementById('ctaSearch');
+        const searchContainer = document.getElementById('searchContainer');
+        const pillTooltip = document.getElementById('pillTooltip');
+        const pillTooltipDomain = document.getElementById('pillTooltipDomain');
+        const pillTooltipTitle = document.getElementById('pillTooltipTitle');
+        const pillTooltipBody = document.getElementById('pillTooltipBody');
+        const footerCopy = document.getElementById('footerCopy');
+        const footerGraphLink = document.getElementById('footerGraphLink');
+        const footerExplorerLink = document.getElementById('footerExplorerLink');
+        let activeTooltipButton = null;
+        let touchTooltipButton = null;
+
+        function prefersTouchTooltipMode() {
+            return window.__NEXUS_FORCE_TOUCH_TOOLTIP__ === true ||
+                window.matchMedia('(pointer: coarse)').matches ||
+                navigator.maxTouchPoints > 0;
+        }
+
+        function hidePillTooltip() {
+            activeTooltipButton?.removeAttribute('aria-describedby');
+            activeTooltipButton = null;
+            touchTooltipButton = null;
+            pillTooltip.classList.remove('visible');
+            pillTooltip.setAttribute('aria-hidden', 'true');
+        }
+
+        function positionPillTooltip(button) {
+            const rect = button.getBoundingClientRect();
+            const margin = 12;
+            const tooltipRect = pillTooltip.getBoundingClientRect();
+            const left = Math.min(
+                Math.max(margin, rect.left + rect.width / 2 - tooltipRect.width / 2),
+                window.innerWidth - tooltipRect.width - margin
+            );
+            const placeAbove = rect.top - tooltipRect.height - 14 >= margin;
+            const top = placeAbove ? rect.top - tooltipRect.height - 14 : rect.bottom + 14;
+            pillTooltip.dataset.placement = placeAbove ? 'above' : 'below';
+            pillTooltip.style.left = `${left}px`;
+            pillTooltip.style.top = `${top}px`;
+        }
+
+        function showPillTooltip(button) {
+            const domain = button.dataset.tooltipDomain || '';
+            const title = button.dataset.tooltipTitle || button.querySelector('.pill-label')?.textContent || '';
+            const body = button.dataset.tooltipBody || '';
+            if (!domain || !body) return;
+            activeTooltipButton?.removeAttribute('aria-describedby');
+            activeTooltipButton = button;
+            pillTooltipDomain.textContent = domain;
+            pillTooltipTitle.textContent = title;
+            pillTooltipBody.textContent = body;
+            pillTooltip.classList.add('visible');
+            pillTooltip.setAttribute('aria-hidden', 'false');
+            button.setAttribute('aria-describedby', 'pillTooltip');
+            positionPillTooltip(button);
+        }
 
         // ─── Data Loading ────────────────────────────────────────────────
         async function loadData() {
@@ -484,7 +697,7 @@
                     tags: (node.display_tags || []).map((t) => String(t).toLowerCase()),
                     desc: (node.description || '').toLowerCase(),
                 }));
-                nodeCountEl.textContent = `${allNodes.length} NODES · ${countEdges(data)} EDGES`;
+                nodeCountEl.textContent = `${allNodes.length} NODES · ${countEdges(data)} EDGES · 13 DOMAINS`;
                 nodeCountEl.style.opacity = '1';
             } catch (e) {
                 console.error('Failed to load nodes:', e);
@@ -688,11 +901,33 @@
                 searchResults.classList.add('hidden');
                 activeIndex = -1;
             }
+            if (!e.target.closest('.pill-btn') && !e.target.closest('#pillTooltip')) {
+                hidePillTooltip();
+            }
         });
 
         // Suggestion pills
         document.querySelectorAll('.pill-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('mouseenter', () => {
+                if (!prefersTouchTooltipMode()) showPillTooltip(btn);
+            });
+            btn.addEventListener('focus', () => {
+                if (!prefersTouchTooltipMode()) showPillTooltip(btn);
+            });
+            btn.addEventListener('mouseleave', () => {
+                if (!prefersTouchTooltipMode()) hidePillTooltip();
+            });
+            btn.addEventListener('blur', () => {
+                if (!prefersTouchTooltipMode() || touchTooltipButton !== btn) hidePillTooltip();
+            });
+            btn.addEventListener('click', (e) => {
+                if (prefersTouchTooltipMode() && (touchTooltipButton !== btn || !pillTooltip.classList.contains('visible'))) {
+                    e.preventDefault();
+                    showPillTooltip(btn);
+                    touchTooltipButton = btn;
+                    return;
+                }
+                touchTooltipButton = null;
                 const nodeId = btn.dataset.node;
                 const query = btn.dataset.query;
                 if (nodeId) {
@@ -702,6 +937,14 @@
                 }
             });
         });
+
+        window.addEventListener('resize', () => {
+            if (activeTooltipButton) positionPillTooltip(activeTooltipButton);
+        });
+
+        window.addEventListener('scroll', () => {
+            if (activeTooltipButton) positionPillTooltip(activeTooltipButton);
+        }, { passive: true });
 
         async function setLang(nextLang) {
             if (!SUPPORTED_LANGS.includes(nextLang) || nextLang === lang) return;
@@ -728,7 +971,13 @@
         });
 
         ctaSearch.addEventListener('click', () => {
-            searchInput.focus();
+            searchInput.focus({ preventScroll: true });
+            if (searchContainer) {
+                searchContainer.classList.remove('search-cta-flash');
+                void searchContainer.offsetWidth;
+                searchContainer.classList.add('search-cta-flash');
+                setTimeout(() => searchContainer.classList.remove('search-cta-flash'), 780);
+            }
             searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
@@ -741,6 +990,9 @@
                     ctaExplore: 'Start Exploring Graph',
                     ctaSearch: 'Search Directly',
                     placeholder: 'Explore the infinite...',
+                    footerCopy: `© ${new Date().getFullYear()} NEXUS. EXPLORE THE INFINITE.`,
+                    footerGraph: 'Graph',
+                    footerExplorer: 'Explorer',
                 },
                 zh: {
                     heroKicker: '快速掌握知識脈絡',
@@ -749,6 +1001,9 @@
                     ctaExplore: '開始探索圖譜',
                     ctaSearch: '直接搜尋',
                     placeholder: '探索無限知識…',
+                    footerCopy: `© ${new Date().getFullYear()} NEXUS．探索無限知識。`,
+                    footerGraph: '圖譜',
+                    footerExplorer: '探索器',
                 },
                 ja: {
                     heroKicker: '学習をもっと速く',
@@ -757,6 +1012,9 @@
                     ctaExplore: 'グラフ探索を開始',
                     ctaSearch: 'すぐ検索',
                     placeholder: '無限の知識を探索…',
+                    footerCopy: `© ${new Date().getFullYear()} NEXUS. 知のつながりを探索する。`,
+                    footerGraph: 'グラフ',
+                    footerExplorer: 'エクスプローラー',
                 }
             };
 
@@ -784,13 +1042,65 @@
                 }
             };
 
+            const pillTooltipMap = {
+                en: {
+                    domains: {
+                        PHY: 'PHY / Physics',
+                        BIO: 'BIO / Biology',
+                        HIS: 'HIS / History',
+                        TEC: 'TEC / Technology'
+                    },
+                    topics: {
+                        blackHoles: 'Start from gravity, stars, and spacetime to see how collapse creates black holes.',
+                        evolution: 'Follow heredity, variation, and natural selection to understand how species change.',
+                        industrialRevolution: 'Trace machines, factories, and labor shifts to see how industry reshaped society.',
+                        neuralNetworks: 'Connect linear algebra, optimization, and pattern recognition to modern AI models.',
+                        quantumMechanics: 'Move from atoms and waves to probability, uncertainty, and quantum behavior.'
+                    }
+                },
+                zh: {
+                    domains: {
+                        PHY: 'PHY / 物理',
+                        BIO: 'BIO / 生物',
+                        HIS: 'HIS / 歷史',
+                        TEC: 'TEC / 科技'
+                    },
+                    topics: {
+                        blackHoles: '從重力、恆星與時空開始，理解坍縮如何形成黑洞。',
+                        evolution: '沿著遺傳、變異與自然選擇的脈絡，理解物種如何改變。',
+                        industrialRevolution: '從機器、工廠到勞動轉變，看到工業如何重塑社會。',
+                        neuralNetworks: '把線性代數、最佳化與模式辨識串起來，理解現代 AI 模型。',
+                        quantumMechanics: '從原子與波動出發，走向機率、不確定性與量子行為。'
+                    }
+                },
+                ja: {
+                    domains: {
+                        PHY: 'PHY / 物理',
+                        BIO: 'BIO / 生物',
+                        HIS: 'HIS / 歴史',
+                        TEC: 'TEC / 技術'
+                    },
+                    topics: {
+                        blackHoles: '重力、恒星、時空から出発して、崩壊がどのようにブラックホールを生むかをたどります。',
+                        evolution: '遺伝、変異、自然選択をつなげて、種がどう変化するかを理解します。',
+                        industrialRevolution: '機械、工場、労働の変化を追って、産業化が社会をどう変えたかを見ます。',
+                        neuralNetworks: '線形代数、最適化、パターン認識を結びつけ、現代の AI モデルへつなげます。',
+                        quantumMechanics: '原子と波から始めて、確率、不確定性、量子のふるまいへ進みます。'
+                    }
+                }
+            };
+
             const langCopy = copy[lang] || copy.en;
+            const tooltipCopy = pillTooltipMap[lang] || pillTooltipMap.en;
             heroKicker.textContent = langCopy.heroKicker;
             heroTitle.innerHTML = langCopy.heroTitle;
             heroSubtitle.textContent = langCopy.heroSubtitle;
             ctaExplore.textContent = langCopy.ctaExplore;
             ctaSearch.textContent = langCopy.ctaSearch;
             searchInput.placeholder = langCopy.placeholder;
+            if (footerCopy) footerCopy.textContent = langCopy.footerCopy;
+            if (footerGraphLink) footerGraphLink.textContent = langCopy.footerGraph;
+            if (footerExplorerLink) footerExplorerLink.textContent = langCopy.footerExplorer;
             langToggle.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === lang);
             });
@@ -802,6 +1112,17 @@
                 const base = el.dataset.en;
                 el.textContent = (pillMap[lang] && pillMap[lang][base]) || base;
             });
+
+            document.querySelectorAll('.pill-btn').forEach(btn => {
+                const label = btn.querySelector('.pill-label');
+                const topic = btn.dataset.topic;
+                const domain = btn.dataset.domain;
+                btn.dataset.tooltipDomain = (tooltipCopy.domains && tooltipCopy.domains[domain]) || domain || '';
+                btn.dataset.tooltipTitle = label ? label.textContent : '';
+                btn.dataset.tooltipBody = (tooltipCopy.topics && tooltipCopy.topics[topic]) || '';
+            });
+
+            if (activeTooltipButton) showPillTooltip(activeTooltipButton);
 
             const query = searchInput.value.trim();
             if (query.length >= 2) {

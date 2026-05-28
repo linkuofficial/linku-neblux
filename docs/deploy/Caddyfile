@@ -1,0 +1,15 @@
+nexus.linku.tech {
+    encode zstd gzip
+
+    reverse_proxy localhost:8000
+
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options SAMEORIGIN
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+}
+
+www.nexus.linku.tech {
+    redir https://nexus.linku.tech{uri} permanent
+}

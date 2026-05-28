@@ -1,6 +1,6 @@
 // ===== I18N =====
 // All translation data lives in ./i18n.js (which re-exports ./i18n/{lang}.js).
-import { I18N, isValidLang, getLang, TAG_LABELS, TAG_TOKEN_ZH } from './i18n.js';
+import { I18N, isValidLang, getLang, TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from './i18n.js';
 
 let LANG = getLang();
 function t(key) { return I18N[LANG][key] || I18N['en'][key] || key; }
@@ -32,6 +32,19 @@ function localizeTag(tag) {
         return converted.join('');
     }
 
+    if (LANG === 'ja') {
+        const rangeMatch = tag.match(/^(\d+)bce_to_(\d+)ce$/);
+        if (rangeMatch) {
+            return `紀元前${rangeMatch[1]}年から紀元${rangeMatch[2]}年`;
+        }
+        const tokens = tag.split('_').filter(Boolean);
+        const converted = tokens.map((token) => TAG_TOKEN_JA[token] || token);
+        if (converted.every((value, idx) => value === tokens[idx])) {
+            return humanizeTag(tag);
+        }
+        return converted.join('');
+    }
+
     return humanizeTag(tag);
 }
 
@@ -57,7 +70,10 @@ function sectionLabel(kind) {
 function renderPanelDescription(node) {
     const raw = nodeDescription(node).trim();
     if (!raw) return '';
-    return `<p>${escHtml(raw)}</p>`;
+    const html = escHtml(raw)
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/_(.+?)_/g, '<em>$1</em>');
+    return `<p>${html}</p>`;
 }
 
 async function setLang(lang) {
@@ -82,6 +98,7 @@ async function setLang(lang) {
     } else {
         descriptionMap = {};
     }
+    rebuildSearchIndex();
     applyI18n();
     // Update graph node labels
     if (nodeEls) nodeEls.select('text').text(d => nodeLabel(d));
@@ -92,6 +109,8 @@ function applyI18n() {
     document.getElementById('search-input').placeholder = t('searchPlaceholder');
     document.getElementById('search-results').setAttribute('aria-label', t('searchResultsLabel'));
     document.getElementById('lp-btn').lastChild.textContent = t('learningPath');
+    const helpBtnLabel = document.getElementById('help-btn-label');
+    if (helpBtnLabel) helpBtnLabel.textContent = t('helpButton');
     document.getElementById('p-search').textContent = t('searchOnGoogle');
     const lpActionBtn = document.getElementById('p-lp-action');
     if (lpActionBtn) {
@@ -115,11 +134,44 @@ function applyI18n() {
     // Filter bar — update ALL + domain labels
     document.querySelectorAll('.filter-btn').forEach(btn => {
         const d = btn.dataset.domain;
-        if (d) btn.textContent = domainLabel(d);
+        if (d) {
+            btn.textContent = domainLabel(d);
+            if (d !== 'ALL') btn.title = t('domainFull' + d) || domainLabel(d);
+        }
     });
     // Welcome text
     const welcomeTextEl = document.getElementById('welcome-text');
     if (welcomeTextEl) welcomeTextEl.textContent = t('welcomeText');
+    const onboardStep = document.getElementById('app-onboard-step');
+    if (onboardStep) onboardStep.textContent = `${t('appGuideStepLabel')} ${guideStepIndex + 1}/${GUIDE_STEPS.length}`;
+    const onboardTitle = document.getElementById('app-onboard-title');
+    if (onboardTitle) onboardTitle.textContent = t('appGuideTitle');
+    const onboard1 = document.getElementById('app-onboard-item-1');
+    if (onboard1) onboard1.textContent = t('appGuideStep1');
+    const onboard2 = document.getElementById('app-onboard-item-2');
+    if (onboard2) onboard2.textContent = t('appGuideStep2');
+    const onboard3 = document.getElementById('app-onboard-item-3');
+    if (onboard3) onboard3.textContent = t('appGuideStep3');
+    const onboardDismiss = document.getElementById('app-onboard-dismiss');
+    if (onboardDismiss) onboardDismiss.textContent = t('appGuideDismiss');
+    const onboardNext = document.getElementById('app-onboard-next');
+    if (onboardNext) onboardNext.textContent = guideStepIndex === GUIDE_STEPS.length - 1 ? t('appGuidePrimary') : t('appGuideNext');
+    const shortcutsKicker = document.getElementById('shortcuts-kicker');
+    if (shortcutsKicker) shortcutsKicker.textContent = t('shortcutsKicker');
+    const shortcutsTitle = document.getElementById('shortcuts-title');
+    if (shortcutsTitle) shortcutsTitle.textContent = t('shortcutsTitle');
+    const shortcutsIntro = document.getElementById('shortcuts-intro');
+    if (shortcutsIntro) shortcutsIntro.textContent = t('shortcutsIntro');
+    const shortcutSearch = document.getElementById('shortcut-search-label');
+    if (shortcutSearch) shortcutSearch.textContent = t('shortcutSearch');
+    const shortcutHelp = document.getElementById('shortcut-help-label');
+    if (shortcutHelp) shortcutHelp.textContent = t('shortcutHelp');
+    const shortcutEscape = document.getElementById('shortcut-escape-label');
+    if (shortcutEscape) shortcutEscape.textContent = t('shortcutEscape');
+    const shortcutLp = document.getElementById('shortcut-lp-label');
+    if (shortcutLp) shortcutLp.textContent = t('shortcutLp');
+    const shortcutDismiss = document.getElementById('shortcuts-close');
+    if (shortcutDismiss) shortcutDismiss.textContent = t('shortcutDismiss');
     // Stats
     if (allNodes.length) {
         document.getElementById('stats').textContent = `${allNodes.length} ${t('nodes')} \u00b7 ${allEdges.length} ${t('edges')} \u00b7 ${prereqEdges.length} ${t('prereqs')}`;
@@ -151,17 +203,20 @@ function hideLoadingState() {
     const params = new URLSearchParams(window.location.search);
     const welcomeEl = document.getElementById('welcome-overlay');
     if (welcomeEl && (params.get('node') || params.get('search'))) {
-        welcomeEl.classList.add('hidden');
+        dismissWelcomeOverlay();
+    } else if (welcomeEl) {
+        // Auto-dismiss after 12 seconds
+        setTimeout(() => dismissWelcomeOverlay(), 12000);
     }
 }
 
 // ===== CONSTANTS =====
-const DC = { MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850' };
-const RC = { logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a', conceptual: '#9b7bc9', causal: '#c95b5b' };
+const DC = window.NexusTokens?.DOMAIN_COLORS || { MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850' };
+const RC = window.NexusTokens?.RELATION_COLORS || { logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a', conceptual: '#9b7bc9', causal: '#c95b5b' };
 const TYPE_SIZE = { field: 16, concept: 6, person: 9, event: 11 };
 
 let allNodes = [], allEdges = [], nodeMap = {}, sim, nodeEls, linkEls, g, svgEl, zoomBehavior;
-let focusCurveEls;
+let focusCurveEls, focusCurveG;
 let linkNodeRefs = [];
 let activeFilter = null;
 let lpMode = false;
@@ -181,6 +236,123 @@ const EDGE_CURVE_MIN_OFFSET = 10;
 const EDGE_CURVE_MAX_OFFSET = 42;
 const TOP_CHROME_EXPAND_DELAY = 90;
 const TOP_CHROME_COLLAPSE_DELAY = 260;
+const NAV_HISTORY_STORAGE_KEY = 'nexus-nav-history-v1';
+const APP_ONBOARD_STORAGE_KEY = 'nexus-app-onboard-seen-v1';
+let guideBindingsReady = false;
+let guideStepIndex = 0;
+
+const GUIDE_STEPS = [
+    { targetId: 'search-box' },
+    { targetId: 'canvas' },
+    { targetId: 'mode-toggle' },
+];
+
+function isTypingTarget(el) {
+    if (!el) return false;
+    const tag = el.tagName;
+    return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el.isContentEditable;
+}
+
+function dismissWelcomeOverlay() {
+    const welcomeEl = document.getElementById('welcome-overlay');
+    if (welcomeEl) welcomeEl.classList.add('hidden');
+}
+
+function setGuideVisibility(id, visible) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.toggle('visible', visible);
+    el.setAttribute('aria-hidden', String(!visible));
+}
+
+function closeAppOnboard(markSeen = true) {
+    setGuideVisibility('app-onboard', false);
+    document.querySelectorAll('.guide-target-highlight').forEach(el => el.classList.remove('guide-target-highlight'));
+    if (markSeen) localStorage.setItem(APP_ONBOARD_STORAGE_KEY, '1');
+}
+
+function applyGuideStep(index) {
+    guideStepIndex = Math.max(0, Math.min(GUIDE_STEPS.length - 1, index));
+    document.querySelectorAll('#app-onboard-list li').forEach((el, idx) => {
+        el.classList.toggle('is-active', idx === guideStepIndex);
+    });
+    document.querySelectorAll('.guide-target-highlight').forEach(el => el.classList.remove('guide-target-highlight'));
+    const step = GUIDE_STEPS[guideStepIndex];
+    const target = step ? document.getElementById(step.targetId) : null;
+    if (target) target.classList.add('guide-target-highlight');
+
+    const label = document.getElementById('app-onboard-step');
+    if (label) label.textContent = `${t('appGuideStepLabel')} ${guideStepIndex + 1}/${GUIDE_STEPS.length}`;
+
+    const nextBtn = document.getElementById('app-onboard-next');
+    if (nextBtn) nextBtn.textContent = guideStepIndex === GUIDE_STEPS.length - 1 ? t('appGuidePrimary') : t('appGuideNext');
+}
+
+function advanceGuideStep() {
+    if (guideStepIndex >= GUIDE_STEPS.length - 1) {
+        closeAppOnboard(true);
+        return;
+    }
+    applyGuideStep(guideStepIndex + 1);
+}
+
+function openShortcutsModal() {
+    closeAppOnboard(false);
+    setGuideVisibility('shortcuts-modal', true);
+}
+
+function closeShortcutsModal() {
+    setGuideVisibility('shortcuts-modal', false);
+}
+
+function setupGuides() {
+    const helpBtn = document.getElementById('help-btn');
+    const onboardDismiss = document.getElementById('app-onboard-dismiss');
+    const onboardNext = document.getElementById('app-onboard-next');
+    const shortcutsClose = document.getElementById('shortcuts-close');
+    const searchInput = document.getElementById('search-input');
+
+    if (!guideBindingsReady) {
+        helpBtn?.addEventListener('click', () => {
+            const modal = document.getElementById('shortcuts-modal');
+            if (modal && modal.classList.contains('visible')) closeShortcutsModal();
+            else openShortcutsModal();
+        });
+        onboardDismiss?.addEventListener('click', () => closeAppOnboard(true));
+        onboardNext?.addEventListener('click', () => advanceGuideStep());
+        shortcutsClose?.addEventListener('click', () => closeShortcutsModal());
+        document.addEventListener('keydown', (e) => {
+            const typing = isTypingTarget(document.activeElement);
+            if (!typing && !e.ctrlKey && !e.metaKey && !e.altKey && (e.key === '/' || e.key.toLowerCase() === 'f')) {
+                e.preventDefault();
+                searchInput?.focus();
+                searchInput?.select?.();
+                return;
+            }
+            if (!typing && !e.ctrlKey && !e.metaKey && !e.altKey && e.key === '?') {
+                e.preventDefault();
+                const modal = document.getElementById('shortcuts-modal');
+                if (modal && modal.classList.contains('visible')) closeShortcutsModal();
+                else openShortcutsModal();
+                return;
+            }
+            if (e.key === 'Escape') {
+                closeShortcutsModal();
+                closeAppOnboard(true);
+            }
+        });
+        guideBindingsReady = true;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const seen = localStorage.getItem(APP_ONBOARD_STORAGE_KEY) === '1';
+    if (!seen && !params.get('node') && !params.get('search')) {
+        dismissWelcomeOverlay();
+        setGuideVisibility('app-onboard', true);
+        applyGuideStep(0);
+    }
+}
+
 function isSafeNodeId(id) {
     return window.NexusState.isSafeNodeId(id);
 }
@@ -216,20 +388,56 @@ function nodeDescription(n) {
     return n.description || enDescriptionMap[n.id] || '';
 }
 
+function rebuildSearchIndex() {
+    _searchIndex = allNodes.map(n => ({
+        node: n,
+        label: nodeLabel(n).toLowerCase(),
+        fallbackLabel: (n.label || '').toLowerCase(),
+        id: (n.id || '').toLowerCase(),
+        tags: (n.display_tags || []).join(' ').toLowerCase(),
+        desc: nodeDescription(n).toLowerCase(),
+        domains: (n.domain || []).map(d => d.toLowerCase()),
+    }));
+}
+
+function edgeKey(source, target) {
+    return `${source}->${target}`;
+}
+
+function saveNavHistory() {
+    try {
+        sessionStorage.setItem(NAV_HISTORY_STORAGE_KEY, JSON.stringify(navHistory.slice(-10)));
+    } catch (e) {
+        // Ignore storage quota or unavailable storage errors.
+    }
+}
+
+function loadNavHistory() {
+    try {
+        const raw = sessionStorage.getItem(NAV_HISTORY_STORAGE_KEY);
+        if (!raw) {
+            navHistory = [];
+            return;
+        }
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed)) {
+            navHistory = [];
+            return;
+        }
+        navHistory = parsed
+            .filter((id) => typeof id === 'string' && isSafeNodeId(id) && !!nodeMap[id])
+            .slice(-10);
+    } catch (e) {
+        navHistory = [];
+    }
+}
+
 // ===== INIT =====
 async function init() {
     // Setup lang toggle
     document.getElementById('lang-toggle').addEventListener('click', e => {
         const btn = e.target.closest('.lang-btn');
         if (btn) setLang(btn.dataset.lang);
-    });
-    document.getElementById('lang-toggle').addEventListener('keydown', e => {
-        const btn = e.target.closest('.lang-btn');
-        if (!btn) return;
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            setLang(btn.dataset.lang);
-        }
     });
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === LANG));
     setLoadingState(t('loading'));
@@ -257,6 +465,7 @@ async function init() {
     // Load descriptions in parallel (non-blocking)
     let data;
     try {
+        setLoadingState(t('loadingGraph'));
         const [graphResult, descResult] = await Promise.all([
             loadGraphData(),
             window.NexusApi.fetchGraphDescriptions(),
@@ -274,14 +483,8 @@ async function init() {
     nodeMap = Object.fromEntries(allNodes.map(n => [n.id, n]));
 
     // Pre-build search index (lowercase once, avoid repeated .toLowerCase() per keystroke)
-    _searchIndex = allNodes.map(n => ({
-        node: n,
-        label: (n.label || '').toLowerCase(),
-        id: (n.id || '').toLowerCase(),
-        tags: (n.display_tags || []).join(' ').toLowerCase(),
-        desc: (enDescriptionMap[n.id] || n.description || '').toLowerCase(),
-        domains: (n.domain || []).map(d => d.toLowerCase()),
-    }));
+    setLoadingState(t('loadingIndex'));
+    rebuildSearchIndex();
 
     // Use API edges directly, or build from connections as fallback
     if (data.edges && data.edges.length > 0) {
@@ -315,9 +518,14 @@ async function init() {
     // Build prerequisite graph
     buildPrereqGraph(raw);
 
+    // Restore session breadcrumb history
+    loadNavHistory();
+    renderBreadcrumb();
+
     // Load learning progress
     await loadLearningProgress();
 
+    setLoadingState(t('loadingRender'));
     hideLoadingState();
     document.getElementById('stats').textContent = allNodes.length + ' ' + t('nodes') + ' \u00b7 ' + allEdges.length + ' ' + t('edges') + ' \u00b7 ' + prereqEdges.length + ' ' + t('prereqs');
 
@@ -327,6 +535,7 @@ async function init() {
     setupSearch();
     setupLPMode();
     applyI18n();
+    setupGuides();
 }
 
 function setupTopChrome() {
@@ -448,10 +657,12 @@ function buildFilters() {
     const bar = document.getElementById('filter-bar');
     const domains = ['ALL', 'MAT', 'PHY', 'CHE', 'BIO', 'MED', 'ENG', 'TEC', 'SOC', 'HUM', 'PHI', 'ART', 'HIS'];
     domains.forEach(d => {
-        const btn = document.createElement('div');
+        const btn = document.createElement('button');
+        btn.type = 'button';
         btn.className = 'filter-btn' + (d === 'ALL' ? ' active' : '');
         btn.textContent = domainLabel(d);
         btn.style.color = d === 'ALL' ? '#c8d0dc' : (DC[d] || '#556');
+        if (d !== 'ALL') btn.title = t('domainFull' + d) || domainLabel(d);
         btn.dataset.domain = d;
         btn.onclick = () => {
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -494,6 +705,12 @@ function curvedEdgePath(edge) {
     const sy = edge.source.y ?? 0;
     const tx = edge.target.x ?? 0;
     const ty = edge.target.y ?? 0;
+    // Cache: reuse last path string if positions haven't moved significantly
+    if (edge._cpCache &&
+        Math.abs(sx - edge._cpSx) < 0.5 && Math.abs(sy - edge._cpSy) < 0.5 &&
+        Math.abs(tx - edge._cpTx) < 0.5 && Math.abs(ty - edge._cpTy) < 0.5) {
+        return edge._cpCache;
+    }
     const dx = tx - sx;
     const dy = ty - sy;
     const dist = Math.hypot(dx, dy) || 1;
@@ -503,29 +720,34 @@ function curvedEdgePath(edge) {
     const dir = edgeCurveDirection(edge);
     const cx = (sx + tx) * 0.5 + nx * baseOffset * dir;
     const cy = (sy + ty) * 0.5 + ny * baseOffset * dir;
-    return `M${sx},${sy} Q${cx},${cy} ${tx},${ty}`;
+    const path = `M${sx},${sy} Q${cx},${cy} ${tx},${ty}`;
+    edge._cpCache = path; edge._cpSx = sx; edge._cpSy = sy; edge._cpTx = tx; edge._cpTy = ty;
+    return path;
 }
 
 function refreshFocusCurves() {
-    if (!focusCurveEls || !linkNodeRefs.length) return;
-    focusCurveEls
-        .classed('active', (d, i) => {
-            const baseLink = linkNodeRefs[i];
-            if (!baseLink) return false;
-            return baseLink.classList.contains('highlight') || baseLink.classList.contains('prereq-path');
+    if (!focusCurveG || !linkNodeRefs.length) return;
+    // Collect only edges that are highlighted or on prereq path
+    const activeEdges = [];
+    for (let i = 0; i < linkNodeRefs.length; i++) {
+        const el = linkNodeRefs[i];
+        if (el && (el.classList.contains('highlight') || el.classList.contains('prereq-path'))) {
+            activeEdges.push({ edge: allEdges[i], isPrereq: el.classList.contains('prereq-path') });
+        }
+    }
+    // Remove old curves and create fresh ones for active edges only
+    focusCurveG.selectAll('path').remove();
+    if (activeEdges.length === 0) { focusCurveEls = null; return; }
+    focusCurveEls = focusCurveG.selectAll('path').data(activeEdges.map(a => a.edge)).enter().append('path')
+        .attr('class', (d, i) => {
+            const a = activeEdges[i];
+            let cls = 'link focus-curve ' + d.relation_type + ' active';
+            if (a.isPrereq) cls += ' prereq-path';
+            else cls += ' highlight';
+            return cls;
         })
-        .classed('highlight', (d, i) => {
-            const baseLink = linkNodeRefs[i];
-            return !!baseLink && baseLink.classList.contains('highlight') && !baseLink.classList.contains('prereq-path');
-        })
-        .classed('prereq-path', (d, i) => {
-            const baseLink = linkNodeRefs[i];
-            return !!baseLink && baseLink.classList.contains('prereq-path');
-        })
-        .attr('marker-end', (d, i) => {
-            const baseLink = linkNodeRefs[i];
-            return baseLink && baseLink.classList.contains('prereq-path') ? 'url(#arrow)' : null;
-        });
+        .attr('marker-end', (d, i) => activeEdges[i].isPrereq ? 'url(#arrow)' : null)
+        .attr('d', d => curvedEdgePath(d));
 }
 
 function buildGraph() {
@@ -560,12 +782,6 @@ function buildGraph() {
     zoomBehavior = d3.zoom().scaleExtent([0.1, 6]).on('zoom', e => {
         g.attr('transform', e.transform);
         currentZoom = e.transform.k;
-        if (!_labelRaf) {
-            _labelRaf = requestAnimationFrame(() => {
-                updateLabelVisibility();
-                _labelRaf = 0;
-            });
-        }
     });
     svgEl.call(zoomBehavior);
 
@@ -584,15 +800,15 @@ function buildGraph() {
         .force('center', d3.forceCenter(W / 2, H / 2))
         .force('collision', d3.forceCollide(d => nr(d) + 4))
         .alphaDecay(0.03)
-        .alphaMin(0.005)
+        .alphaMin(0.008)
         .velocityDecay(0.4);
 
     linkEls = g.append('g').attr('class', 'links').selectAll('line').data(allEdges).enter().append('line')
         .attr('class', d => 'link ' + d.relation_type + (d.pending ? ' pending' : ''));
     linkNodeRefs = linkEls.nodes();
 
-    focusCurveEls = g.append('g').attr('class', 'focus-curves').selectAll('path').data(allEdges).enter().append('path')
-        .attr('class', d => 'link focus-curve ' + d.relation_type + (d.pending ? ' pending' : ''));
+    focusCurveG = g.append('g').attr('class', 'focus-curves');
+    focusCurveEls = null;
 
     nodeEls = g.append('g').attr('class', 'nodes').selectAll('.node').data(allNodes).enter().append('g')
         .attr('class', 'node')
@@ -601,6 +817,13 @@ function buildGraph() {
             .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y })
             .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null }))
         .on('click', (e, d) => { e.stopPropagation(); handleNodeClick(e, d); });
+
+    // Invisible hit-area for touch (min 22px radius = 44px target)
+    nodeEls.append('circle')
+        .attr('class', 'hit')
+        .attr('r', d => Math.max(22, nr(d) + 10))
+        .style('fill', 'transparent')
+        .style('pointer-events', 'all');
 
     nodeEls.append('circle')
         .attr('class', 'glow')
@@ -628,21 +851,166 @@ function buildGraph() {
         d3.select(e.currentTarget).select('text').style('opacity', shouldShowLabel(d) ? 0.88 : 0);
     });
 
+    const simHint = document.getElementById('sim-hint');
+    const simHintText = document.getElementById('sim-hint-text');
+    if (simHint && simHintText) {
+        simHintText.textContent = t('layoutStabilizing');
+        simHint.classList.add('visible');
+    }
+
+    // Warm-up: run 30 ticks without rendering to pre-settle node positions
+    sim.stop();
+    for (let i = 0; i < 30; i++) sim.tick();
+    // Apply settled positions to DOM once
+    linkEls.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+        .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+    nodeEls.attr('transform', d => `translate(${d.x},${d.y})`);
+
     let _tickFrame = null;
+    let _perfMode = false;
+    let _frameTimes = [];
+    let _lastTickTime = 0;
+    let _currentTransform = d3.zoomIdentity;
+    let _cullTimer = 0;
+    const _nodeElArr = nodeEls.nodes();
+    const _linkElArr = linkNodeRefs;
+
+    // Allow localStorage override: 'low' forces perf-mode, 'high' disables it
+    const _perfOverride = (() => { try { return localStorage.getItem('nexus-perf'); } catch { return null; } })();
+
+    // Viewport culling state
+    let _visibleNodes = new Uint8Array(allNodes.length); // 1 = visible
+    _visibleNodes.fill(1); // all visible initially
+
+    function getViewBounds() {
+        const t = _currentTransform;
+        const w = window.innerWidth, h = window.innerHeight;
+        const pad = 80; // padding in world coords
+        return {
+            x0: (-t.x / t.k) - pad,
+            y0: (-t.y / t.k) - pad,
+            x1: (w - t.x) / t.k + pad,
+            y1: (h - t.y) / t.k + pad
+        };
+    }
+
+    function updateCulling() {
+        const b = getViewBounds();
+        for (let i = 0; i < allNodes.length; i++) {
+            const d = allNodes[i];
+            const vis = d.x >= b.x0 && d.x <= b.x1 && d.y >= b.y0 && d.y <= b.y1 ? 1 : 0;
+            if (_visibleNodes[i] !== vis) {
+                _visibleNodes[i] = vis;
+                _nodeElArr[i].style.display = vis ? '' : 'none';
+            }
+        }
+        // Cull links: hide if both endpoints off-screen
+        for (let i = 0; i < allEdges.length; i++) {
+            const e = allEdges[i];
+            const sVis = e.source.x >= b.x0 && e.source.x <= b.x1 && e.source.y >= b.y0 && e.source.y <= b.y1;
+            const tVis = e.target.x >= b.x0 && e.target.x <= b.x1 && e.target.y >= b.y0 && e.target.y <= b.y1;
+            _linkElArr[i].style.display = (sVis || tVis) ? '' : 'none';
+        }
+    }
+
+    // Perf-mode: disable expensive visual effects on low-end devices
+    function setPerfMode(on) {
+        if (_perfMode === on) return;
+        _perfMode = on;
+        document.documentElement.classList.toggle('perf-mode', on);
+    }
+
+    function checkFrameBudget(dt) {
+        if (_perfOverride === 'low') { setPerfMode(true); return; }
+        if (_perfOverride === 'high') { setPerfMode(false); return; }
+        _frameTimes.push(dt);
+        if (_frameTimes.length > 10) _frameTimes.shift();
+        if (_frameTimes.length < 5) return;
+        const avg = _frameTimes.reduce((a, b) => a + b, 0) / _frameTimes.length;
+        if (!_perfMode && avg > 28) setPerfMode(true);
+        else if (_perfMode && avg < 14 && _frameTimes.length >= 10) setPerfMode(false);
+    }
+
+    // Override zoom handler to track transform for culling
+    zoomBehavior.on('zoom', e => {
+        g.attr('transform', e.transform);
+        currentZoom = e.transform.k;
+        _currentTransform = e.transform;
+        if (!_labelRaf) {
+            _labelRaf = requestAnimationFrame(() => {
+                updateLabelVisibility();
+                _labelRaf = 0;
+            });
+        }
+        // Throttled culling on zoom/pan
+        clearTimeout(_cullTimer);
+        _cullTimer = setTimeout(updateCulling, 60);
+    });
+
     sim.on('tick', () => {
         if (_tickFrame) return;
         _tickFrame = requestAnimationFrame(() => {
-            linkEls.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
-                .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+            const now = performance.now();
+            // Update only visible links
+            for (let i = 0; i < allEdges.length; i++) {
+                if (_linkElArr[i].style.display === 'none') continue;
+                const e = allEdges[i];
+                const el = _linkElArr[i];
+                el.setAttribute('x1', e.source.x);
+                el.setAttribute('y1', e.source.y);
+                el.setAttribute('x2', e.target.x);
+                el.setAttribute('y2', e.target.y);
+            }
             if (focusCurveEls) focusCurveEls.attr('d', d => curvedEdgePath(d));
-            nodeEls.attr('transform', d => `translate(${d.x},${d.y})`);
+            // Update only visible nodes
+            for (let i = 0; i < allNodes.length; i++) {
+                if (!_visibleNodes[i]) continue;
+                const d = allNodes[i];
+                _nodeElArr[i].setAttribute('transform', `translate(${d.x},${d.y})`);
+            }
+            // Frame budget check
+            if (_lastTickTime) checkFrameBudget(now - _lastTickTime);
+            _lastTickTime = now;
             _tickFrame = null;
         });
     });
 
+    sim.on('end', () => {
+        if (!simHint) return;
+        simHint.classList.add('fading');
+        setTimeout(() => simHint.classList.remove('visible', 'fading'), 520);
+        // Run culling once simulation stabilizes
+        updateCulling();
+    });
+
+    // Resume simulation after warm-up (tick handler now bound)
+    sim.restart();
+
     svgEl.on('click', () => {
         document.getElementById('panel').classList.remove('open');
         clearHighlights();
+    });
+
+    // Dismiss welcome overlay on first graph interaction
+    const _welcomeEl = document.getElementById('welcome-overlay');
+    if (_welcomeEl) {
+        const _dismissOnWheel = () => {
+            dismissWelcomeOverlay();
+            svgEl.on('wheel.welcome', null);
+        };
+        svgEl.on('wheel.welcome', _dismissOnWheel);
+    }
+
+    // Resize handler — update SVG dimensions and recenter simulation
+    let _resizeTimer = 0;
+    window.addEventListener('resize', () => {
+        clearTimeout(_resizeTimer);
+        _resizeTimer = setTimeout(() => {
+            const nw = window.innerWidth, nh = window.innerHeight;
+            svgEl.attr('width', nw).attr('height', nh);
+            sim.force('center', d3.forceCenter(nw / 2, nh / 2));
+            sim.alpha(0.1).restart();
+        }, 200);
     });
 }
 
@@ -746,15 +1114,15 @@ function centerViewOnNode(node, duration = 500) {
 // ===== PANEL =====
 function openPanel(d) {
     currentPanelNodeId = d.id;
-    navHistory.push(d.id);
+    if (navHistory[navHistory.length - 1] !== d.id) {
+        navHistory.push(d.id);
+    }
     if (navHistory.length > 10) navHistory.shift();
+    saveNavHistory();
     renderBreadcrumb();
 
     // Hide welcome overlay on first interaction
-    const welcomeEl = document.getElementById('welcome-overlay');
-    if (welcomeEl && !welcomeEl.classList.contains('hidden')) {
-        welcomeEl.classList.add('hidden');
-    }
+    dismissWelcomeOverlay();
 
     document.getElementById('p-type').textContent = t(d.type);
     document.getElementById('p-type').style.color = nc(d);
@@ -834,11 +1202,14 @@ function connItem(node, rel, pending) {
 
 function renderBreadcrumb() {
     const el = document.getElementById('p-breadcrumb');
-    const last5 = navHistory.slice(-5);
-    el.innerHTML = last5.map((id, i) => {
+    const MAX = 3;
+    const last = navHistory.slice(-MAX);
+    const hasMore = navHistory.length > MAX;
+    const prefix = hasMore ? '<span class="bc-sep" title="Earlier history">\u2026</span><span class="bc-sep">\u203a</span>' : '';
+    el.innerHTML = prefix + last.map((id, i) => {
         const n = nodeMap[id];
         if (!n) return '';
-        const sep = i < last5.length - 1 ? '<span class="bc-sep">\u203a</span>' : '';
+        const sep = i < last.length - 1 ? '<span class="bc-sep">\u203a</span>' : '';
         return `<span class="bc-item" data-node-id="${escAttr(id)}">${escHtml(nodeLabel(n))}</span>${sep}`;
     }).join('');
 }
@@ -927,9 +1298,12 @@ function setupLPMode() {
 
 function applyLPVisibility() {
     const prereqNodes = new Set();
+    const prereqEdgeSet = new Set();
     for (const e of prereqEdges) {
         prereqNodes.add(e.source);
         prereqNodes.add(e.target);
+        prereqEdgeSet.add(edgeKey(e.source, e.target));
+        prereqEdgeSet.add(edgeKey(e.target, e.source));
     }
 
     nodeEls.classed('dimmed', d => !prereqNodes.has(d.id) && !learnedSet.has(d.id));
@@ -939,10 +1313,7 @@ function applyLPVisibility() {
     linkEls.each(function (d) {
         const sId = d.source.id || d.source;
         const tId = d.target.id || d.target;
-        const isPrereq = prereqEdges.some(pe =>
-            (pe.source === sId && pe.target === tId) ||
-            (pe.source === tId && pe.target === sId)
-        );
+        const isPrereq = prereqEdgeSet.has(edgeKey(sId, tId));
         if (isPrereq) {
             d3.select(this).classed('dimmed-link', false).classed('prereq-path', true)
                 .attr('marker-end', 'url(#arrow)');
@@ -1045,15 +1416,19 @@ function highlightPrereqChain(id) {
     findDescendants(id);
 
     const onPath = new Set([...ancestors, ...descendants, id]);
+    const onPathPrereqEdgeSet = new Set();
+    for (const pe of prereqEdges) {
+        if (onPath.has(pe.source) && onPath.has(pe.target)) {
+            onPathPrereqEdgeSet.add(edgeKey(pe.source, pe.target));
+            onPathPrereqEdgeSet.add(edgeKey(pe.target, pe.source));
+        }
+    }
     nodeEls.classed('on-path', d => onPath.has(d.id));
 
     linkEls.each(function (d) {
         const sId = d.source.id || d.source;
         const tId = d.target.id || d.target;
-        const isOnChain = prereqEdges.some(pe =>
-            (onPath.has(pe.source) && onPath.has(pe.target)) &&
-            ((pe.source === sId && pe.target === tId) || (pe.source === tId && pe.target === sId))
-        );
+        const isOnChain = onPathPrereqEdgeSet.has(edgeKey(sId, tId));
         if (isOnChain) d3.select(this).classed('prereq-path', true);
     });
     refreshFocusCurves();
@@ -1070,6 +1445,7 @@ function clearHighlights() {
 
 // ===== SEARCH (fixed: event delegation, no XSS) =====
 function setupSearch() {
+    const form = document.getElementById('search-form');
     const input = document.getElementById('search-input');
     const results = document.getElementById('search-results');
     let latestMatches = [];
@@ -1080,13 +1456,11 @@ function setupSearch() {
         for (let i = 0; i < index.length; i++) {
             const entry = index[i];
             const n = entry.node;
-            // Also check localized label if available
-            const localLabel = (LANG !== 'en' && labelMap[n.id]) ? labelMap[n.id].toLowerCase() : '';
             let score = 0;
 
-            if (entry.label === q || entry.id === q || localLabel === q) score = 120;
-            else if (entry.label.startsWith(q) || entry.id.startsWith(q) || (localLabel && localLabel.startsWith(q))) score = 90;
-            else if (entry.label.includes(q) || entry.id.includes(q) || (localLabel && localLabel.includes(q))) score = 70;
+            if (entry.label === q || entry.id === q || entry.fallbackLabel === q) score = 120;
+            else if (entry.label.startsWith(q) || entry.id.startsWith(q) || entry.fallbackLabel.startsWith(q)) score = 90;
+            else if (entry.label.includes(q) || entry.id.includes(q) || entry.fallbackLabel.includes(q)) score = 70;
             else if (entry.tags.includes(q)) score = 55;
             else if (entry.desc.includes(q)) score = 35;
 
@@ -1129,6 +1503,19 @@ function setupSearch() {
     };
 
     let _searchTimer = 0;
+
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const top = latestMatches[0];
+            if (top) {
+                focusNode(top.id);
+                hideResults();
+                input.value = '';
+            }
+        });
+    }
+
     input.addEventListener('input', () => {
         clearTimeout(_searchTimer);
         const q = input.value.toLowerCase().trim();
@@ -1156,6 +1543,7 @@ function setupSearch() {
         }
         if (e.key === 'Escape') {
             hideResults();
+            input.value = '';
         }
     });
 
@@ -1209,6 +1597,40 @@ document.getElementById('close').onclick = () => {
 function escHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 function escAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;'); }
 
+function resolveSearchQueryNodeId(query) {
+    const q = String(query || '').toLowerCase().trim();
+    if (!q) return null;
+
+    const index = _searchIndex || [];
+    const exact = [];
+    const prefix = [];
+
+    for (let i = 0; i < index.length; i++) {
+        const entry = index[i];
+        const isExact = entry.label === q || entry.id === q || entry.fallbackLabel === q;
+        if (isExact) {
+            exact.push(entry.node);
+            continue;
+        }
+
+        const isPrefix = entry.label.startsWith(q) || entry.id.startsWith(q) || entry.fallbackLabel.startsWith(q);
+        if (isPrefix) {
+            prefix.push(entry.node);
+        }
+    }
+
+    const sortByLabel = (a, b) => nodeLabel(a).localeCompare(nodeLabel(b));
+    if (exact.length > 0) {
+        exact.sort(sortByLabel);
+        return exact[0].id;
+    }
+    if (prefix.length > 0) {
+        prefix.sort(sortByLabel);
+        return prefix[0].id;
+    }
+    return null;
+}
+
 // ===== URL PARAMS =====
 function handleUrlParams() {
     const params = new URLSearchParams(window.location.search);
@@ -1220,7 +1642,14 @@ function handleUrlParams() {
     } else if (searchQuery && searchQuery.length <= 120) {
         const input = document.getElementById('search-input');
         input.value = searchQuery;
-        input.dispatchEvent(new Event('input'));
+        input.focus();
+
+        const resolvedNodeId = resolveSearchQueryNodeId(searchQuery);
+        if (resolvedNodeId) {
+            setTimeout(() => focusNode(resolvedNodeId), 280);
+        } else {
+            input.dispatchEvent(new Event('input'));
+        }
     }
 }
 

@@ -4,9 +4,12 @@ dist/
 __pycache__/
 *.pyc
 .env
+.env.*
 .venv/
 .git/
 tests/
 scripts/
 docs/
+data/archive/
 *.log
+fly.toml

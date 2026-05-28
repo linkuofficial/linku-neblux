@@ -3,34 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                let lang = localStorage.getItem('nexus-lang') || 'en';
+                if (lang === 'zh-TW') lang = 'zh';
+                document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : (lang === 'ja' ? 'ja' : 'en');
+            } catch (e) {
+                document.documentElement.lang = 'en';
+            }
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore Nexus in progressive focus mode to discover concept connections step by step.">
+    <meta property="og:title" content="Nexus Explorer">
+    <meta property="og:description"
+        content="Navigate the knowledge graph with guided expansion, focus modes, and multilingual labels.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/favicon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nexus Explorer">
+    <meta name="twitter:description"
+        content="Navigate the knowledge graph with guided expansion, focus modes, and multilingual labels.">
+    <meta name="twitter:image" content="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preload" href="/vendor/d3.min.js" as="script">
+    <link rel="preload" href="/api/graph/full" as="fetch" crossorigin>
     <title>Nexus — Explorer</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="/vendor/d3.min.js"></script>
+    <link rel="stylesheet" href="/nexus-theme.css">
     <link rel="stylesheet" href="src/shared.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
-
         :root {
-            --bg-0: #030610;
-            --bg-1: #08102a;
-            --bg-2: #0d1630;
+            --bg-0: #07090f;
+            --bg-1: #0a0d16;
+            --bg-2: #101622;
             --ink-main: #dce6f4;
             --ink-soft: #94a8c4;
             --ink-faint: #5a6f8c;
             --line-subtle: rgba(255, 255, 255, 0.10);
-            --glass-1: rgba(6, 12, 26, 0.78);
-            --glass-2: rgba(8, 16, 34, 0.88);
+            --glass-1: rgba(8, 10, 18, 0.78);
+            --glass-2: rgba(10, 12, 22, 0.88);
             --panel-bg: rgba(236, 240, 248, 0.96);
             --panel-ink: #2d3d52;
             --panel-soft: #5a6d84;
             --panel-faint: #8a9bb2;
-            --accent: #f0c050;
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3);
-            --shadow-strong: 0 24px 56px rgba(2, 4, 10, 0.55);
-            --ease-ui: cubic-bezier(0.16, 1, 0.3, 1);
+            --accent: var(--nexus-accent);
+            --radius-sm: var(--nexus-radius-sm);
+            --radius-md: var(--nexus-radius-md);
+            --radius-lg: var(--nexus-radius-lg);
+            --shadow-soft: var(--nexus-shadow-soft);
+            --shadow-strong: var(--nexus-shadow-strong);
+            --ease-ui: var(--nexus-ease-ui);
         }
 
         * {
@@ -46,10 +71,10 @@
 
         body {
             background:
-                radial-gradient(1000px 700px at 18% 12%, rgba(90, 50, 180, 0.16), transparent 68%),
-                radial-gradient(800px 600px at 78% 82%, rgba(30, 60, 160, 0.14), transparent 62%),
-                radial-gradient(600px 500px at 50% 45%, rgba(120, 50, 160, 0.08), transparent 55%),
-                radial-gradient(500px 400px at 65% 30%, rgba(60, 30, 120, 0.10), transparent 60%),
+                radial-gradient(900px 700px at 20% 15%, rgba(52, 42, 112, 0.08), transparent 70%),
+                radial-gradient(700px 600px at 80% 75%, rgba(24, 52, 104, 0.07), transparent 70%),
+                radial-gradient(500px 400px at 60% 30%, rgba(66, 34, 100, 0.05), transparent 65%),
+                radial-gradient(600px 500px at 35% 80%, rgba(20, 40, 90, 0.05), transparent 68%),
                 linear-gradient(165deg, var(--bg-0) 0%, var(--bg-1) 50%, var(--bg-2) 100%);
             color: var(--ink-main);
             font-family: 'IBM Plex Sans', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
@@ -99,6 +124,11 @@
             cursor: grab;
             position: relative;
             z-index: 1;
+            touch-action: none
+        }
+
+        #canvas>g {
+            will-change: transform
         }
 
         #canvas:active {
@@ -193,11 +223,13 @@
 
             0%,
             100% {
-                filter: drop-shadow(0 0 2px currentColor);
+                opacity: 0.7;
+                transform: scale(1)
             }
 
             50% {
-                filter: drop-shadow(0 0 6px currentColor);
+                opacity: 1;
+                transform: scale(1.12)
             }
         }
 
@@ -344,7 +376,7 @@
             color: #dce8f6;
             font-family: 'IBM Plex Mono', monospace;
             font-size: 13px;
-            border-radius: var(--radius-lg);
+            border-radius: 14px;
             outline: none;
             backdrop-filter: blur(16px);
             box-shadow: var(--shadow-soft);
@@ -475,6 +507,36 @@
             color: var(--ink-faint);
         }
 
+        #hdr-nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        #hdr-nav a {
+            text-decoration: none;
+            color: var(--ink-soft);
+            font-size: 10px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.03);
+            transition: color 0.18s ease, background 0.18s ease, opacity 0.18s ease;
+            opacity: 0.78;
+        }
+
+        #hdr-nav a:hover {
+            color: rgba(240, 192, 80, 0.96);
+            background: rgba(240, 192, 80, 0.08);
+            opacity: 1;
+        }
+
+        .hdr-nav-sep {
+            color: rgba(255, 255, 255, 0.18);
+            font-size: 10px;
+        }
+
         #lang-toggle {
             position: fixed;
             right: 20px;
@@ -525,7 +587,10 @@
 
         .lang-btn.active {
             background: transparent;
-            color: #dbe7f6;
+            color: rgba(240, 192, 80, 0.96);
+            text-decoration: underline;
+            text-decoration-color: rgba(240, 192, 80, 0.72);
+            text-underline-offset: 4px;
         }
 
         .lang-btn:hover {
@@ -580,6 +645,42 @@
             font-size: 11px;
             color: var(--ink-faint);
             opacity: 0.6;
+        }
+
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 7;
+            display: none;
+        }
+
+        #loading-text {
+            display: block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 13px;
+            color: var(--ink-soft);
+            margin-bottom: 12px;
+        }
+
+        #loading-retry {
+            min-height: 44px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--line-subtle);
+            background: rgba(191, 212, 236, 0.08);
+            color: var(--ink-main);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            cursor: pointer;
+            display: none;
+            transition: background 0.15s;
+        }
+
+        #loading-retry:hover {
+            background: rgba(191, 212, 236, 0.14);
         }
 
         /* Detail Panel */
@@ -1344,6 +1445,13 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             color: var(--ink-faint);
+            margin-bottom: 8px;
+        }
+
+        #shortcuts-intro {
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--ink-soft);
             margin-bottom: 14px;
         }
 
@@ -1374,6 +1482,12 @@
             color: var(--ink-soft);
         }
 
+        #shortcuts-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 14px;
+        }
+
         /* Perf mode indicator */
         .perf-mode .node.frontier circle {
             animation: none !important;
@@ -1390,6 +1504,16 @@
 
         .perf-mode .link {
             transition: none !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .node.frontier circle.core {
+                animation: none;
+            }
+
+            .node circle.core {
+                transition: none;
+            }
         }
 
         /* Responsive */
@@ -1529,20 +1653,25 @@
     <div id="top-chrome-trigger" aria-hidden="true" aria-expanded="true"></div>
     <div id="top-chrome-hint" aria-hidden="true"></div>
     <div id="hdr">
+        <div id="hdr-nav">
+            <a id="hdr-home-link" href="index.html">Home</a>
+            <span class="hdr-nav-sep" aria-hidden="true">/</span>
+            <a id="hdr-graph-link" href="app.html">Graph</a>
+        </div>
         <h1 id="hdr-title">Nexus Explorer</h1>
         <p id="hdr-subtitle">Knowledge Graph</p>
     </div>
 
     <div id="lang-toggle" aria-label="Language selector">
-        <div class="lang-btn" data-lang="en" role="button" tabindex="0" aria-label="Switch language to English">EN</div>
-        <div class="lang-btn" data-lang="zh" role="button" tabindex="0" aria-label="Switch language to Chinese">中</div>
-        <div class="lang-btn" data-lang="ja" role="button" tabindex="0" aria-label="Switch language to Japanese">日</div>
+        <button class="lang-btn" data-lang="en" type="button" aria-label="Switch language to English">EN</button>
+        <button class="lang-btn" data-lang="zh" type="button" aria-label="Switch language to Chinese">中</button>
+        <button class="lang-btn" data-lang="ja" type="button" aria-label="Switch language to Japanese">日</button>
     </div>
 
     <div id="stats"></div>
 
     <div id="search-box">
-        <input id="search-input" type="text" placeholder="Search a concept to begin exploring..." autocomplete="off"
+        <input id="search-input" type="text" placeholder="Search a concept to start exploring..." autocomplete="off"
             spellcheck="false">
         <div id="search-results"></div>
     </div>
@@ -1550,8 +1679,13 @@
     <div id="filter-bar"></div>
 
     <div id="welcome">
-        <h2 id="welcome-title">Search a concept to begin exploring</h2>
+        <h2 id="welcome-title">Search a concept to start exploring</h2>
         <p id="welcome-subtitle">Type a topic, person, or event — then expand connections</p>
+    </div>
+
+    <div id="loading" role="status" aria-live="polite">
+        <span id="loading-text">Loading graph...</span>
+        <button id="loading-retry" type="button">Retry</button>
     </div>
 
     <div id="controls">
@@ -1559,6 +1693,7 @@
         <button class="ctrl-btn" id="btn-fit" title="Fit view to all visible nodes">⊡ Fit</button>
         <button class="ctrl-btn" id="btn-undo" title="Undo last expand (Ctrl+Z)" disabled>↶ Undo</button>
         <button class="ctrl-btn" id="btn-focus" title="Cycle focus depth: Off, 1-Hop, 2-Hop">◎ Focus Off</button>
+        <button class="ctrl-btn" id="btn-help" title="Open keyboard shortcuts and explorer help">⌘ Help</button>
         <button class="ctrl-btn" id="btn-tour" title="Replay quick guide">? Guide</button>
     </div>
 
@@ -1591,6 +1726,7 @@
     <div id="shortcuts">
         <div id="shortcuts-card">
             <h3 id="shortcuts-title">Keyboard Shortcuts</h3>
+            <p id="shortcuts-intro">Use a few keys to move through the explorer faster.</p>
             <div class="sc-row"><span class="sc-desc" id="sc-search">Search</span><span class="sc-key">Ctrl+K</span>
             </div>
             <div class="sc-row"><span class="sc-desc" id="sc-search-alt">Search (alt)</span><span
@@ -1606,6 +1742,9 @@
             </div>
             <div class="sc-row"><span class="sc-desc" id="sc-context">Context menu</span><span
                     class="sc-key">Right-click</span></div>
+            <div id="shortcuts-actions">
+                <button class="ob-btn" id="shortcuts-close" type="button">Close</button>
+            </div>
         </div>
     </div>
 
@@ -1663,35 +1802,40 @@
         </div>
     </div>
 
+    <script src="/nexus-tokens.js"></script>
     <script>
         // ===== CONSTANTS =====
-        const DC = {
+        const DC = window.NexusTokens?.DOMAIN_COLORS || {
             MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a',
             MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a',
             HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850'
         };
-        const RC = {
+        const RC = window.NexusTokens?.RELATION_COLORS || {
             logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a',
             conceptual: '#9b7bc9', causal: '#c95b5b'
         };
         const TYPE_SIZE = { field: 14, concept: 7, person: 10, event: 12 };
         const I18N = {
             en: {
+                navHome: 'Home',
+                navGraph: 'Graph',
                 hdrTitle: 'Nexus Explorer',
                 hdrSubtitle: 'Knowledge Graph',
                 all: 'ALL',
-                searchPlaceholder: 'Search a concept to begin exploring...',
-                welcomeTitle: 'Search a concept to begin exploring',
+                searchPlaceholder: 'Search a concept to start exploring...',
+                welcomeTitle: 'Search a concept to start exploring',
                 welcomeSubtitle: 'Type a topic, person, or event - then expand connections',
                 recommended: 'Suggested next',
                 btnReset: 'Reset',
                 btnFit: 'Fit',
                 btnUndo: 'Undo',
+                btnHelp: 'Help',
                 btnGuide: 'Guide',
                 btnResetTitle: 'Clear graph and start over',
                 btnFitTitle: 'Fit view to all visible nodes',
                 btnUndoTitle: 'Undo last expand (Ctrl+Z)',
                 btnFocusTitle: 'Cycle focus depth: Off, 1-Hop, 2-Hop',
+                btnHelpTitle: 'Open keyboard shortcuts and explorer help',
                 btnGuideTitle: 'Replay quick guide',
                 focusOff: 'Focus Off',
                 focus1: 'Focus 1-Hop',
@@ -1711,6 +1855,7 @@
                 ctxPath: 'Find path from selected',
                 ctxFocus: 'Focus on this',
                 shortcutsTitle: 'Keyboard Shortcuts',
+                shortcutsIntro: 'Use a few keys to move through the explorer faster.',
                 scSearch: 'Search',
                 scSearchAlt: 'Search (alt)',
                 scUndo: 'Undo',
@@ -1718,6 +1863,7 @@
                 scShow: 'Show shortcuts',
                 scExpand: 'Expand selected',
                 scContext: 'Context menu',
+                shortcutsClose: 'Close',
                 onboardingSkip: 'Skip',
                 onboardingNext: 'Next',
                 onboardingDone: 'Done',
@@ -1743,6 +1889,8 @@
                 eraPresent: 'present'
             },
             zh: {
+                navHome: '首頁',
+                navGraph: '圖譜',
                 hdrTitle: 'Nexus \u63a2\u7d22\u5668',
                 hdrSubtitle: '\u77e5\u8b58\u5716\u8b5c',
                 all: '\u5168\u90e8',
@@ -1753,11 +1901,13 @@
                 btnReset: '\u91cd\u7f6e',
                 btnFit: '\u9069\u914d',
                 btnUndo: '\u5fa9\u539f',
+                btnHelp: '\u8aaa\u660e',
                 btnGuide: '\u6307\u5f15',
                 btnResetTitle: '\u6e05\u9664\u5716\u5f62\u4e26\u5f9e\u982d\u958b\u59cb',
                 btnFitTitle: '\u5c07\u8996\u5716\u8abf\u6574\u81f3\u6240\u6709\u53ef\u898b\u7bc0\u9ede',
                 btnUndoTitle: '\u5fa9\u539f\u4e0a\u4e00\u6b21\u5c55\u958b (Ctrl+Z)',
                 btnFocusTitle: '\u5207\u63db\u805a\u7126\u5c64\u7d1a\uff1a\u95dc\u9589\u30011 \u8df3\u30012 \u8df3',
+                btnHelpTitle: '\u958b\u555f\u5feb\u6377\u9375\u8207 explorer \u8aaa\u660e',
                 btnGuideTitle: '\u91cd\u64ad\u5feb\u901f\u6307\u5f15',
                 focusOff: '\u7121\u805a\u7126',
                 focus1: '1 \u8df3\u805a\u7126',
@@ -1777,6 +1927,7 @@
                 ctxPath: '\u5c0b\u627e\u8207\u76ee\u524d\u9078\u53d6\u7bc0\u9ede\u7684\u8def\u5f91',
                 ctxFocus: '\u805a\u7126\u6b64\u7bc0\u9ede',
                 shortcutsTitle: '\u9375\u76e4\u5feb\u901f\u9375',
+                shortcutsIntro: '\u7528\u9019\u5e7e\u500b\u6309\u9375\uff0c\u53ef\u4ee5\u66f4\u5feb\u5730\u5c0e\u89bd explorer\u3002',
                 scSearch: '\u641c\u5c0b',
                 scSearchAlt: '\u641c\u5c0b\uff08\u5099\u7528\uff09',
                 scUndo: '\u5fa9\u539f',
@@ -1784,6 +1935,7 @@
                 scShow: '\u986f\u793a\u5feb\u901f\u9375',
                 scExpand: '\u5c55\u958b\u5df2\u9078\u7bc0\u9ede',
                 scContext: '\u53f3\u9375\u9078\u55ae',
+                shortcutsClose: '\u95dc\u9589',
                 onboardingSkip: '\u7565\u904e',
                 onboardingNext: '\u4e0b\u4e00\u6b65',
                 onboardingDone: '\u5b8c\u6210',
@@ -1809,6 +1961,8 @@
                 eraPresent: '\u81f3\u4eca'
             },
             ja: {
+                navHome: 'ホーム',
+                navGraph: 'グラフ',
                 hdrTitle: 'Nexus \u30a8\u30af\u30b9\u30d7\u30ed\u30fc\u30e9\u30fc',
                 hdrSubtitle: '\u77e5\u8b58\u30b0\u30e9\u30d5',
                 all: '\u3059\u3079\u3066',
@@ -1819,11 +1973,13 @@
                 btnReset: '\u30ea\u30bb\u30c3\u30c8',
                 btnFit: '\u5168\u4f53\u8868\u793a',
                 btnUndo: '\u5143\u306b\u623b\u3059',
+                btnHelp: '\u30d8\u30eb\u30d7',
                 btnGuide: '\u30ac\u30a4\u30c9',
                 btnResetTitle: '\u30b0\u30e9\u30d5\u3092\u30ea\u30bb\u30c3\u30c8\u3057\u3066\u6700\u521d\u304b\u3089\u3084\u308a\u76f4\u3059',
                 btnFitTitle: '\u53ef\u8996\u30ce\u30fc\u30c9\u5168\u4f53\u304c\u53ce\u307e\u308b\u3088\u3046\u306b\u8868\u793a\u3092\u8abf\u6574',
                 btnUndoTitle: '\u76f4\u524d\u306e\u5c55\u958b\u3092\u5143\u306b\u623b\u3059 (Ctrl+Z)',
                 btnFocusTitle: '\u30d5\u30a9\u30fc\u30ab\u30b9\u6df1\u5ea6\u3092\u5207\u66ff\uff1aOFF\u30fb1\u30db\u30c3\u30d7\u30fb2\u30db\u30c3\u30d7',
+                btnHelpTitle: '\u30ad\u30fc\u30dc\u30fc\u30c9\u30b7\u30e7\u30fc\u30c8\u30ab\u30c3\u30c8\u3068 explorer \u30d8\u30eb\u30d7\u3092\u958b\u304f',
                 btnGuideTitle: '\u30af\u30a4\u30c3\u30af\u30ac\u30a4\u30c9\u3092\u518d\u751f',
                 focusOff: '\u30d5\u30a9\u30fc\u30ab\u30b9OFF',
                 focus1: '\u30d5\u30a9\u30fc\u30ab\u30b91\u30db\u30c3\u30d7',
@@ -1843,6 +1999,7 @@
                 ctxPath: '\u9078\u629e\u4e2d\u30ce\u30fc\u30c9\u304b\u3089\u306e\u30d1\u30b9\u3092\u63a2\u3059',
                 ctxFocus: '\u3053\u306e\u30ce\u30fc\u30c9\u306b\u30d5\u30a9\u30fc\u30ab\u30b9',
                 shortcutsTitle: '\u30ad\u30fc\u30dc\u30fc\u30c9\u30b7\u30e7\u30fc\u30c8\u30ab\u30c3\u30c8',
+                shortcutsIntro: '\u3044\u304f\u3064\u304b\u306e\u30ad\u30fc\u3067 explorer \u3092\u3088\u308a\u65e9\u304f\u64cd\u4f5c\u3067\u304d\u307e\u3059\u3002',
                 scSearch: '\u691c\u7d22',
                 scSearchAlt: '\u691c\u7d22\uff08\u4ee3\u66ff\uff09',
                 scUndo: '\u5143\u306b\u623b\u3059',
@@ -1850,6 +2007,7 @@
                 scShow: '\u30b7\u30e7\u30fc\u30c8\u30ab\u30c3\u30c8\u3092\u8868\u793a',
                 scExpand: '\u9078\u629e\u30ce\u30fc\u30c9\u3092\u5c55\u958b',
                 scContext: '\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30e1\u30cb\u30e5\u30fc',
+                shortcutsClose: '\u9589\u3058\u308b',
                 onboardingSkip: '\u30b9\u30ad\u30c3\u30d7',
                 onboardingNext: '\u6b21\u3078',
                 onboardingDone: '\u5b8c\u4e86',
@@ -1904,6 +2062,7 @@
         let activeFilter = null;  // domain filter (null = show all)
         let focusDepth = 0;
         let tourIndex = 0;
+        let lastLoadError = null;
         const EDGE_CURVE_DISTANCE_FACTOR = 0.18;
         const EDGE_CURVE_MIN_OFFSET = 10;
         const EDGE_CURVE_MAX_OFFSET = 42;
@@ -1938,6 +2097,76 @@
         // ===== HELPERS =====
         function nc(n) { return DC[n.domain[0]] || '#888'; }
         function nr(n) { return TYPE_SIZE[n.type] || 7; }
+        function setLoadingState(message, isError = false, showRetry = false) {
+            const wrap = document.getElementById('loading');
+            const textEl = document.getElementById('loading-text');
+            const retryBtn = document.getElementById('loading-retry');
+            if (!wrap || !textEl || !retryBtn) return;
+            textEl.textContent = message;
+            textEl.style.color = isError ? '#fda4af' : '#94a7bf';
+            retryBtn.style.display = showRetry ? 'inline-flex' : 'none';
+            wrap.style.display = 'block';
+        }
+
+        function hideLoadingState() {
+            const wrap = document.getElementById('loading');
+            const retryBtn = document.getElementById('loading-retry');
+            if (retryBtn) {
+                retryBtn.disabled = false;
+            }
+            if (wrap) {
+                wrap.style.display = 'none';
+            }
+        }
+
+        async function fetchJsonWithTimeout(url, timeoutMs) {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), timeoutMs);
+            try {
+                const response = await fetch(url, { signal: controller.signal });
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+                return await response.json();
+            } finally {
+                clearTimeout(timer);
+            }
+        }
+
+        function normalizeGraphNodes(payload) {
+            if (Array.isArray(payload)) {
+                return payload;
+            }
+            if (payload && Array.isArray(payload.nodes)) {
+                return payload.nodes;
+            }
+            throw new Error('Invalid graph payload: missing nodes array.');
+        }
+
+        function hydrateGraphData(rawNodes) {
+            allNodesRaw = rawNodes;
+            nodeMap = {};
+            adjacency = {};
+
+            for (const n of allNodesRaw) {
+                nodeMap[n.id] = n;
+                if (!adjacency[n.id]) adjacency[n.id] = [];
+            }
+
+            // Build bidirectional adjacency
+            for (const n of allNodesRaw) {
+                for (const c of (n.connections || [])) {
+                    if (!nodeMap[c.target]) continue;
+                    adjacency[n.id].push({ target: c.target, relation_type: c.relation_type, pending: c.pending || false });
+                    // Add reverse
+                    if (!adjacency[c.target]) adjacency[c.target] = [];
+                    if (!adjacency[c.target].find(e => e.target === n.id && e.relation_type === c.relation_type)) {
+                        adjacency[c.target].push({ target: n.id, relation_type: c.relation_type, pending: c.pending || false });
+                    }
+                }
+            }
+        }
+
         function edgeKey(edge) {
             const s = edge.source.id || edge.source;
             const t = edge.target.id || edge.target;
@@ -2481,6 +2710,8 @@
         }
 
         function applyI18n() {
+            document.getElementById('hdr-home-link').textContent = t('navHome');
+            document.getElementById('hdr-graph-link').textContent = t('navGraph');
             document.getElementById('hdr-title').textContent = t('hdrTitle');
             document.getElementById('hdr-subtitle').textContent = t('hdrSubtitle');
             document.getElementById('search-input').placeholder = t('searchPlaceholder');
@@ -2491,11 +2722,13 @@
             document.getElementById('btn-reset').textContent = `↺ ${t('btnReset')}`;
             document.getElementById('btn-fit').textContent = `⊡ ${t('btnFit')}`;
             document.getElementById('btn-undo').textContent = `↶ ${t('btnUndo')}`;
+            document.getElementById('btn-help').textContent = `⌘ ${t('btnHelp')}`;
             document.getElementById('btn-tour').textContent = `? ${t('btnGuide')}`;
             document.getElementById('btn-reset').title = t('btnResetTitle');
             document.getElementById('btn-fit').title = t('btnFitTitle');
             document.getElementById('btn-undo').title = t('btnUndoTitle');
             document.getElementById('btn-focus').title = t('btnFocusTitle');
+            document.getElementById('btn-help').title = t('btnHelpTitle');
             document.getElementById('btn-tour').title = t('btnGuideTitle');
             document.getElementById('pa-expand').textContent = `⊕ ${t('expand')}`;
             document.getElementById('pa-collapse').textContent = `⊖ ${t('collapse')}`;
@@ -2507,6 +2740,7 @@
             document.getElementById('ctx-focus').textContent = t('ctxFocus');
 
             document.getElementById('shortcuts-title').textContent = t('shortcutsTitle');
+            document.getElementById('shortcuts-intro').textContent = t('shortcutsIntro');
             document.getElementById('sc-search').textContent = t('scSearch');
             document.getElementById('sc-search-alt').textContent = t('scSearchAlt');
             document.getElementById('sc-undo').textContent = t('scUndo');
@@ -2514,6 +2748,7 @@
             document.getElementById('sc-show').textContent = t('scShow');
             document.getElementById('sc-expand').textContent = t('scExpand');
             document.getElementById('sc-context').textContent = t('scContext');
+            document.getElementById('shortcuts-close').textContent = t('shortcutsClose');
 
             document.getElementById('onboard-skip').textContent = t('onboardingSkip');
 
@@ -2568,28 +2803,20 @@
 
         // ===== DATA LOADING =====
         async function loadData() {
-            const resp = await fetch('../data/all_nodes.json');
-            const data = await resp.json();
-            allNodesRaw = data.nodes;
-            nodeMap = {};
-            adjacency = {};
-
-            for (const n of allNodesRaw) {
-                nodeMap[n.id] = n;
-                if (!adjacency[n.id]) adjacency[n.id] = [];
+            let apiError = null;
+            try {
+                const apiPayload = await fetchJsonWithTimeout('/api/graph/full', 9000);
+                return normalizeGraphNodes(apiPayload);
+            } catch (err) {
+                apiError = err;
             }
 
-            // Build bidirectional adjacency
-            for (const n of allNodesRaw) {
-                for (const c of (n.connections || [])) {
-                    if (!nodeMap[c.target]) continue;
-                    adjacency[n.id].push({ target: c.target, relation_type: c.relation_type, pending: c.pending || false });
-                    // Add reverse
-                    if (!adjacency[c.target]) adjacency[c.target] = [];
-                    if (!adjacency[c.target].find(e => e.target === n.id && e.relation_type === c.relation_type)) {
-                        adjacency[c.target].push({ target: n.id, relation_type: c.relation_type, pending: c.pending || false });
-                    }
-                }
+            try {
+                const staticPayload = await fetchJsonWithTimeout('../data/all_nodes.json', 7000);
+                return normalizeGraphNodes(staticPayload);
+            } catch (err) {
+                const reason = apiError ? `${apiError.message}; ${err.message}` : err.message;
+                throw new Error(`Unable to load graph data (${reason}).`);
             }
         }
 
@@ -3441,8 +3668,18 @@
             }
         }
 
+        function openShortcuts() {
+            closeTour(false);
+            document.getElementById('shortcuts').classList.add('visible');
+        }
+
+        function closeShortcuts() {
+            document.getElementById('shortcuts').classList.remove('visible');
+        }
+
         function startTour(force = false) {
             if (!force && localStorage.getItem(TOUR_KEY) === 'done') return;
+            closeShortcuts();
             tourIndex = 0;
             document.getElementById('onboard').classList.add('visible');
             renderTourStep();
@@ -3470,10 +3707,18 @@
             let debounceTimer = null;
             let activeIndex = -1;
 
+            function hideResults(clearInput = false) {
+                results.style.display = 'none';
+                activeIndex = -1;
+                if (clearInput) {
+                    input.value = '';
+                }
+            }
+
             function renderResults(matches) {
                 activeIndex = -1;
                 if (matches.length === 0) {
-                    results.style.display = 'none';
+                    hideResults();
                     return;
                 }
 
@@ -3518,7 +3763,7 @@
                 debounceTimer = setTimeout(() => {
                     const q = input.value.trim().toLowerCase();
                     if (q.length < 1) {
-                        results.style.display = 'none';
+                        hideResults();
                         return;
                     }
                     const matches = allNodesRaw.filter(n => {
@@ -3554,7 +3799,8 @@
                         selectResult(items[0].dataset.id);
                     }
                 } else if (e.key === 'Escape') {
-                    results.style.display = 'none';
+                    hideResults(true);
+                    input.value = '';
                     input.blur();
                 }
             });
@@ -3562,12 +3808,18 @@
             // Close results on outside click
             document.addEventListener('click', (e) => {
                 if (!e.target.closest('#search-box')) {
-                    results.style.display = 'none';
+                    hideResults();
                 }
             });
 
             // Focus search on Ctrl+K or /
             document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && document.activeElement === input) {
+                    hideResults(true);
+                    input.value = '';
+                    input.blur();
+                    return;
+                }
                 if ((e.ctrlKey && e.key === 'k') || (e.key === '/' && document.activeElement !== input)) {
                     e.preventDefault();
                     input.focus();
@@ -3944,11 +4196,13 @@
                 updateFocusButton();
                 applyFocusMode();
             });
+            document.getElementById('btn-help').addEventListener('click', () => toggleShortcuts());
             document.getElementById('btn-tour').addEventListener('click', () => startTour(true));
             document.getElementById('close').addEventListener('click', () => {
                 closePanel();
                 clearHighlights();
             });
+            document.getElementById('shortcuts-close').addEventListener('click', () => closeShortcuts());
 
             // Keyboard shortcuts
             document.addEventListener('keydown', (e) => {
@@ -3990,7 +4244,9 @@
                 if (e.key === 'Escape') {
                     const sc = document.getElementById('shortcuts');
                     if (sc.classList.contains('visible')) {
-                        sc.classList.remove('visible');
+                        closeShortcuts();
+                    } else if (document.getElementById('onboard').classList.contains('visible')) {
+                        closeTour(true);
                     } else {
                         closePanel();
                         clearHighlights();
@@ -4002,13 +4258,15 @@
             // Click outside shortcuts to close
             document.getElementById('shortcuts').addEventListener('click', (e) => {
                 if (e.target.id === 'shortcuts') {
-                    e.target.classList.remove('visible');
+                    closeShortcuts();
                 }
             });
         }
 
         function toggleShortcuts() {
-            document.getElementById('shortcuts').classList.toggle('visible');
+            const el = document.getElementById('shortcuts');
+            if (el.classList.contains('visible')) closeShortcuts();
+            else openShortcuts();
         }
 
         // ===== ZOOM INDICATOR =====
@@ -4045,36 +4303,49 @@
 
         // ===== INIT =====
         async function init() {
-            LANG = getLang();
-            document.documentElement.lang = LANG === 'zh' ? 'zh-Hant' : LANG;
-            await loadData();
-            const maps = await loadLocaleMaps(LANG);
-            labelMap = maps.labels;
-            descriptionMap = maps.descriptions;
-            initGraph();
-            setupSearch();
-            setupFilters();
-            setupTopChrome();
-            setupControls();
-            setupOnboarding();
-            setupContextMenu();
-            document.getElementById('lang-toggle').addEventListener('click', async (e) => {
-                const btn = e.target.closest('.lang-btn');
-                if (!btn) return;
-                await setLang(btn.dataset.lang);
-            });
-            document.getElementById('lang-toggle').addEventListener('keydown', async (e) => {
-                const btn = e.target.closest('.lang-btn');
-                if (!btn) return;
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
+            try {
+                setLoadingState('Loading graph...');
+                LANG = getLang();
+                document.documentElement.lang = LANG === 'zh' ? 'zh-Hant' : LANG;
+
+                const rawNodes = await loadData();
+                hydrateGraphData(rawNodes);
+
+                setLoadingState('Loading labels...');
+                const maps = await loadLocaleMaps(LANG);
+                labelMap = maps.labels;
+                descriptionMap = maps.descriptions;
+
+                hideLoadingState();
+                initGraph();
+                setupSearch();
+                setupFilters();
+                setupTopChrome();
+                setupControls();
+                setupOnboarding();
+                setupContextMenu();
+                document.getElementById('lang-toggle').addEventListener('click', async (e) => {
+                    const btn = e.target.closest('.lang-btn');
+                    if (!btn) return;
                     await setLang(btn.dataset.lang);
+                });
+                applyI18n();
+                updateFocusButton();
+                restoreState();
+                setTimeout(() => startTour(false), 280);
+            } catch (error) {
+                lastLoadError = error;
+                const msg = error && error.message ? error.message : 'Unable to initialize explorer.';
+                setLoadingState(msg, true, true);
+                const retryBtn = document.getElementById('loading-retry');
+                if (retryBtn) {
+                    retryBtn.onclick = () => {
+                        retryBtn.disabled = true;
+                        setLoadingState('Retrying...', false, false);
+                        init();
+                    };
                 }
-            });
-            applyI18n();
-            updateFocusButton();
-            restoreState();
-            setTimeout(() => startTour(false), 280);
+            }
         }
 
         // ===== PERSISTENCE =====

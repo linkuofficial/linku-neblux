@@ -1,0 +1,35 @@
+services:
+  nexus:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    image: nexus:prod
+    container_name: nexus
+    env_file:
+      - ./.env.production
+    expose:
+      - "8000"
+    restart: unless-stopped
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')" ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  caddy:
+    image: caddy:2.8
+    container_name: nexus-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - nexus
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:

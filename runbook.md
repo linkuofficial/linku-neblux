@@ -80,3 +80,66 @@ npm run rollback -- --image nexus:2026-05-24-rc1 --container nexus --port 8000
 - 5xx spike + health OK + smoke fails: rollback now.
 - Neo4j fallback + user-facing search degraded: rollback if persists.
 - Admin burst only + user flow normal: monitor and tighten guardrails.
+
+---
+
+## Fly.io Production Deployment
+
+### Info
+
+- App: `nexus-linku`
+- Region: `nrt` (Tokyo)
+- URL: https://nexus.linku.tech (custom domain) / https://nexus-linku.fly.dev (fallback)
+- IPv4: `66.241.124.42` / IPv6: `2a09:8280:1::11c:a15:0`
+- VM: shared-cpu-1x, 512MB × 2 machines (HA)
+- Auto-stop on idle, auto-start on request
+
+### Deploy
+
+```bash
+fly deploy --app nexus-linku
+```
+
+### Rollback (Fly.io)
+
+```bash
+# List recent deployments
+fly releases --app nexus-linku
+
+# Rollback to previous image
+fly deploy --app nexus-linku --image registry.fly.io/nexus-linku:<previous-tag>
+```
+
+### Secrets
+
+```bash
+# View secret names
+fly secrets list --app nexus-linku
+
+# Set a secret
+fly secrets set KEY=VALUE --app nexus-linku
+```
+
+### Logs & Monitoring
+
+```bash
+fly logs --app nexus-linku
+fly status --app nexus-linku
+fly checks list --app nexus-linku
+```
+
+### Scale
+
+```bash
+# Scale memory (e.g. to 1024MB)
+fly scale memory 1024 --app nexus-linku
+
+# Scale machine count
+fly scale count 2 --app nexus-linku
+```
+
+### Custom Domain
+
+- DNS managed in Cloudflare (`linku.tech` zone)
+- A/AAAA records pointing to Fly IPs (DNS only, no proxy)
+- TLS certificate managed by Fly.io (`fly certs check nexus.linku.tech`)
