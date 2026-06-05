@@ -212,6 +212,19 @@
             opacity: 0.8;
         }
 
+        .node.dragging circle.glow {
+            filter: none !important;
+        }
+
+        .node.dragging circle.core {
+            transition: none !important;
+            filter: none !important;
+        }
+
+        .node.dragging:hover circle.core {
+            filter: none !important;
+        }
+
         .node.selected-node circle.glow {
             opacity: 0.96;
         }
@@ -1203,7 +1216,7 @@
         #shortcuts-modal {
             position: fixed;
             inset: 0;
-            z-index: 18;
+            z-index: 21;
             display: none;
             pointer-events: none;
             background: radial-gradient(circle at 50% 24%, rgba(4, 8, 18, 0.32), rgba(8, 17, 31, 0.7));
@@ -1212,6 +1225,7 @@
         #app-onboard.visible,
         #shortcuts-modal.visible {
             display: block;
+            pointer-events: auto;
         }
 
         #app-onboard-card,

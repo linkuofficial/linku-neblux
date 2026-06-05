@@ -843,9 +843,19 @@ function buildGraph() {
     nodeEls = g.append('g').attr('class', 'nodes').selectAll('.node').data(allNodes).enter().append('g')
         .attr('class', 'node')
         .call(d3.drag()
-            .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y })
+            .on('start', (e, d) => {
+                if (!e.active) sim.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+                d3.select(e.currentTarget).classed('dragging', true);
+            })
             .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y })
-            .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null }))
+            .on('end', (e, d) => {
+                if (!e.active) sim.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+                d3.select(e.currentTarget).classed('dragging', false);
+            }))
         .on('click', (e, d) => { e.stopPropagation(); handleNodeClick(e, d); });
 
     // Invisible hit-area for touch (min 22px radius = 44px target)

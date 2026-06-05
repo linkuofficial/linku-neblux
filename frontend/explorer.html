@@ -199,6 +199,20 @@
             opacity: 0.6;
         }
 
+        .node.dragging circle.glow {
+            filter: none !important;
+            opacity: 0.35;
+        }
+
+        .node.dragging circle.core {
+            transition: none !important;
+            filter: none !important;
+        }
+
+        .node.dragging:hover circle.core {
+            filter: none !important;
+        }
+
         .node text {
             pointer-events: none;
             text-anchor: middle;
@@ -3528,6 +3542,7 @@
             if (!e.active) sim.alphaTarget(0.3).restart();
             d.fx = d.x;
             d.fy = d.y;
+            d3.select(e.currentTarget).classed('dragging', true);
         }
 
         function dragging(e, d) {
@@ -3539,6 +3554,7 @@
             if (!e.active) sim.alphaTarget(0);
             d.fx = null;
             d.fy = null;
+            d3.select(e.currentTarget).classed('dragging', false);
         }
 
         // ===== PANEL =====
