@@ -721,6 +721,52 @@ function applyVisibility() {
 // ===== GRAPH =====
 function nc(n) { return DC[n.domain[0]] || '#888' }
 function nr(n) { return TYPE_SIZE[n.type] || 6 }
+
+// ── Star rendering (visual only — fully decoupled from physics) ──────────────
+// hex "#rrggbb" + alpha → "rgba(...)". Used to author the layered star gradients.
+function hexA(hex, a) {
+    const n = parseInt(String(hex).slice(1), 16);
+    return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+}
+
+// Per-node star metadata: tier (three magnitudes) + bloom radii for
+// core/glow/halo/corona, brightness, and stable twinkle timing.
+// Driven by node TYPE + graph DEGREE — this NEVER feeds the force sim
+// (collision still uses nr()), so it is safe to retune freely.
+let starMeta = {};
+function buildStarMeta() {
+    const deg = {};
+    for (const e of allEdges) {
+        const s = e.source.id ?? e.source, t = e.target.id ?? e.target;
+        deg[s] = (deg[s] || 0) + 1; deg[t] = (deg[t] || 0) + 1;
+    }
+    starMeta = {};
+    allNodes.forEach((n, i) => {
+        const d = deg[n.id] || 0;
+        const tier = n.type === 'field' ? 'primary' : (n.type === 'concept' ? 'secondary' : 'minor');
+        const degCap = Math.min(d, 8);
+        // Tight, real-star compact bloom: mostly darkness with bright pinpricks.
+        const size = tier === 'primary' ? {
+            core: 4.0 + degCap * 0.28, glow: 15 + degCap * 0.8,
+            halo: 30 + degCap * 1.4, corona: 60 + degCap * 2.2,
+        } : tier === 'secondary' ? {
+            core: 1.8 + degCap * 0.10, glow: 7.0 + degCap * 0.35,
+            halo: 15 + degCap * 0.7, corona: 30 + degCap * 1.0,
+        } : {
+            core: 1.1, glow: 3.4, halo: 7.5, corona: 16,
+        };
+        // Stable per-star jitter (-0.5…0.5) so brightness/twinkle desync.
+        const jitter = ((i * 9301 + 49297) % 233) / 233 - 0.5;
+        starMeta[n.id] = {
+            ...size, degree: d, tier, jitter,
+            baseOp: tier === 'primary' ? 1.0 : tier === 'secondary' ? 0.78 + jitter * 0.12 : 0.42 + jitter * 0.16,
+            glowAlpha: tier === 'primary' ? 1.0 : tier === 'secondary' ? 0.86 : 0.62,
+            twDur: (6.5 + (i % 7) * 0.9).toFixed(2),
+            twDelay: ((i * 0.53) % 6).toFixed(2),
+        };
+    });
+}
+function sm(n) { return starMeta[n.id] || { core: nr(n) * 0.3, glow: nr(n), halo: nr(n) * 2, corona: nr(n) * 4, glowAlpha: 0.6, baseOp: 0.8, twDur: '5', twDelay: '0' }; }
 function edgeCurveDirection(edge) {
     const s = String(edge.source.id || edge.source || '');
     const t = String(edge.target.id || edge.target || '');
@@ -765,19 +811,30 @@ function refreshFocusCurves() {
             activeEdges.push({ edge: allEdges[i], isPrereq: el.classList.contains('prereq-path') });
         }
     }
-    // Remove old curves and create fresh ones for active edges only
-    focusCurveG.selectAll('path').remove();
+    // Remove old curves and create fresh ones for active edges only.
+    // Each active edge = a coloured backbone path + a flowing PHOTON overlay,
+    // so the lit constellation reads as energy running between its stars.
+    focusCurveG.selectAll('*').remove();
     if (activeEdges.length === 0) { focusCurveEls = null; return; }
-    focusCurveEls = focusCurveG.selectAll('path').data(activeEdges.map(a => a.edge)).enter().append('path')
+    // Backbone — keeps the semantic relation colour (shared.css).
+    focusCurveG.selectAll('path.focus-curve').data(activeEdges.map(a => a.edge)).enter().append('path')
         .attr('class', (d, i) => {
             const a = activeEdges[i];
             let cls = 'link focus-curve ' + d.relation_type + ' active';
-            if (a.isPrereq) cls += ' prereq-path';
-            else cls += ' highlight';
+            cls += a.isPrereq ? ' prereq-path' : ' highlight';
             return cls;
         })
         .attr('marker-end', (d, i) => activeEdges[i].isPrereq ? 'url(#arrow)' : null)
+        .style('filter', 'url(#edge-glow)')   // faint fluorescent halo on the lit backbone
         .attr('d', d => curvedEdgePath(d));
+    // Photon — a single long luminous dash gliding the edge (CSS-animated).
+    focusCurveG.selectAll('path.photon').data(activeEdges.map(a => a.edge)).enter().append('path')
+        .attr('class', (d, i) => 'photon' + (activeEdges[i].isPrereq ? ' photon-gold' : ''))
+        .style('stroke', (d, i) => activeEdges[i].isPrereq ? '#f7d27d' : (RC[d.relation_type] || '#cfe0f5'))
+        .attr('d', d => curvedEdgePath(d));
+    // Both path sets carry the edge datum → the existing tick re-paths all of
+    // them via `focusCurveEls.attr('d', …)` with no extra per-tick work added.
+    focusCurveEls = focusCurveG.selectAll('path');
 }
 
 function buildGraph() {
@@ -787,18 +844,48 @@ function buildGraph() {
 
     // Defs: gradients + glow filter + arrow marker
     const defs = svgEl.append('defs');
-    // Radial gradients per domain color
+    // Radial gradients per domain color (legacy grad-XXX kept for compatibility)
     Object.entries(DC).forEach(([key, color]) => {
         const grad = defs.append('radialGradient').attr('id', 'grad-' + key);
         grad.append('stop').attr('offset', '0%').attr('stop-color', color).attr('stop-opacity', 0.9);
         grad.append('stop').attr('offset', '100%').attr('stop-color', color).attr('stop-opacity', 0.25);
     });
-    // Glow filter
+    // Layered STAR gradients per domain: core (white-hot body) → glow (tight
+    // colored bloom) → halo (mid atmosphere) → corona (faint breathing field).
+    function starStops(id, stops) {
+        const g = defs.append('radialGradient').attr('id', id).attr('cx', '50%').attr('cy', '50%').attr('r', '50%');
+        stops.forEach(([off, col, op]) => {
+            const s = g.append('stop').attr('offset', off).attr('stop-color', col);
+            if (op != null) s.attr('stop-opacity', op);
+        });
+    }
+    Object.entries(DC).forEach(([key, color]) => {
+        starStops('core-' + key, [
+            ['0%', '#ffffff', 1], ['22%', '#ffffff', 0.98], ['48%', '#ffffff', 0.78],
+            ['70%', hexA(color, 0.55)], ['88%', hexA(color, 0.22)], ['100%', hexA(color, 0)],
+        ]);
+        starStops('glow-' + key, [
+            ['0%', hexA(color, 0.92)], ['24%', hexA(color, 0.58)], ['55%', hexA(color, 0.18)], ['100%', hexA(color, 0)],
+        ]);
+        starStops('halo-' + key, [
+            ['0%', hexA(color, 0.32)], ['38%', hexA(color, 0.13)], ['78%', hexA(color, 0.035)], ['100%', hexA(color, 0)],
+        ]);
+        starStops('corona-' + key, [
+            ['0%', hexA(color, 0)], ['30%', hexA(color, 0.035)], ['65%', hexA(color, 0.012)], ['100%', hexA(color, 0)],
+        ]);
+    });
+    // Glow filter (node legacy)
     const glow = defs.append('filter').attr('id', 'node-glow').attr('x', '-50%').attr('y', '-50%').attr('width', '200%').attr('height', '200%');
     glow.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '3').attr('result', 'blur');
     const merge = glow.append('feMerge');
     merge.append('feMergeNode').attr('in', 'blur');
     merge.append('feMergeNode').attr('in', 'SourceGraphic');
+    // Edge glow filter — gives constellation lines their faint fluorescent halo.
+    const eglow = defs.append('filter').attr('id', 'edge-glow').attr('x', '-20%').attr('y', '-20%').attr('width', '140%').attr('height', '140%');
+    eglow.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '1.4').attr('result', 'eb');
+    const emerge = eglow.append('feMerge');
+    emerge.append('feMergeNode').attr('in', 'eb');
+    emerge.append('feMergeNode').attr('in', 'SourceGraphic');
     // Arrow marker
     defs.append('marker')
         .attr('id', 'arrow')
@@ -858,6 +945,9 @@ function buildGraph() {
             }))
         .on('click', (e, d) => { e.stopPropagation(); handleNodeClick(e, d); });
 
+    // Compute star bloom metadata (visual only — never touches the sim).
+    buildStarMeta();
+
     // Invisible hit-area for touch (min 22px radius = 44px target)
     nodeEls.append('circle')
         .attr('class', 'hit')
@@ -865,24 +955,57 @@ function buildGraph() {
         .style('fill', 'transparent')
         .style('pointer-events', 'all');
 
+    // STAR BODY — stacking outside-in: corona → halo → glow → core → core-hi.
+    // All circles centred at (0,0); the node <g> transform carries them, so the
+    // tick loop is untouched. The brightness IS the body — no solid disc.
+    nodeEls.append('circle')
+        .attr('class', 'corona twinkle')
+        .attr('r', d => sm(d).corona)
+        .style('fill', d => `url(#corona-${d.domain[0]})`)
+        .style('pointer-events', 'none')
+        .style('animation-duration', d => `${sm(d).twDur}s`)
+        .style('animation-delay', d => `${sm(d).twDelay}s`);
+
+    nodeEls.append('circle')
+        .attr('class', 'halo')
+        .attr('r', d => sm(d).halo)
+        .style('fill', d => `url(#halo-${d.domain[0]})`)
+        .style('pointer-events', 'none');
+
     nodeEls.append('circle')
         .attr('class', 'glow')
-        .attr('r', d => nr(d) + 3)
-        .style('fill', d => nc(d))
-        .style('filter', 'url(#node-glow)');
+        .attr('r', d => sm(d).glow)
+        .style('fill', d => `url(#glow-${d.domain[0]})`)
+        .style('opacity', d => sm(d).glowAlpha)
+        .style('pointer-events', 'none');
 
     nodeEls.append('circle')
         .attr('class', 'core')
-        .attr('r', d => nr(d))
-        .style('fill', d => `url(#grad-${d.domain[0]})`)
-        .style('stroke', d => nc(d));
+        .attr('r', d => sm(d).core)
+        .style('fill', d => `url(#core-${d.domain[0]})`)
+        .style('pointer-events', 'none');
+
+    // central highlight — guarantees even the smallest star reads as a point of light
+    nodeEls.append('circle')
+        .attr('class', 'core-hi')
+        .attr('r', d => Math.max(0.7, sm(d).core * 0.42))
+        .style('fill', '#ffffff')
+        .style('pointer-events', 'none');
+
+    // learned/available state mark — a tiny soft tick tucked just outside the core
+    nodeEls.append('circle')
+        .attr('class', 'state-mark')
+        .attr('r', 1.6)
+        .attr('cx', d => sm(d).glow * 0.6)
+        .attr('cy', d => -sm(d).glow * 0.6)
+        .style('pointer-events', 'none');
 
     nodeEls.append('text')
         .text(d => nodeLabel(d))
-        .attr('dy', d => nr(d) + 10)
-        .style('font-size', d => d.type === 'field' ? '10px' : '8px')
-        .style('fill', d => nc(d))
-        .style('opacity', d => d.type === 'field' ? 0.8 : 0);
+        .attr('dy', d => Math.max(sm(d).halo * 0.5, nr(d) + 12))
+        .style('font-size', d => d.type === 'field' ? '11px' : '10px')
+        .style('fill', '#d4e4fa')
+        .style('opacity', d => d.type === 'field' ? 0.7 : 0);
 
     // Hover labels
     nodeEls.on('mouseenter', (e, d) => {
@@ -912,6 +1035,15 @@ function buildGraph() {
     let _lastTickTime = 0;
     let _currentTransform = d3.zoomIdentity;
     let _cullTimer = 0;
+    // Stars carry a PERMANENT, fixed-size glow: each node group is counter-scaled
+    // by 1/k so the star + halo render at a constant apparent size at every zoom
+    // level (the bloom is an intrinsic part of the star, not something the zoom
+    // grows or shrinks). Pure visual — never affects the sim. Optimised: the
+    // per-node pass runs ONLY when the zoom factor k actually changes (panning
+    // leaves node sizes untouched, so it does zero per-node work).
+    let _nodeScale = 1;
+    let _scaleRaf = 0;
+    let _lastScaleK = 1;
     const _nodeElArr = nodeEls.nodes();
     const _linkElArr = linkNodeRefs;
 
@@ -925,7 +1057,10 @@ function buildGraph() {
     function getViewBounds() {
         const t = _currentTransform;
         const w = window.innerWidth, h = window.innerHeight;
-        const pad = 80; // padding in world coords
+        // Padding in world coords. Stars are a fixed SCREEN size, so their world
+        // footprint grows as 1/k when zoomed out — add a bloom margin (~120 screen
+        // px → 120/k world) so edge stars don't pop out while their glow shows.
+        const pad = 80 + Math.min(900, 120 / t.k);
         return {
             x0: (-t.x / t.k) - pad,
             y0: (-t.y / t.k) - pad,
@@ -941,7 +1076,12 @@ function buildGraph() {
             const vis = d.x >= b.x0 && d.x <= b.x1 && d.y >= b.y0 && d.y <= b.y1 ? 1 : 0;
             if (_visibleNodes[i] !== vis) {
                 _visibleNodes[i] = vis;
-                _nodeElArr[i].style.display = vis ? '' : 'none';
+                const el = _nodeElArr[i];
+                el.style.display = vis ? '' : 'none';
+                // Re-apply the current fixed-size scale on reveal — otherwise a
+                // node that was culled across a zoom keeps a stale scale and the
+                // star renders at the wrong (often tiny) size = "glow vanished".
+                if (vis) el.setAttribute('transform', `translate(${d.x},${d.y}) scale(${_nodeScale})`);
             }
         }
         // Cull links: hide if both endpoints off-screen
@@ -976,6 +1116,26 @@ function buildGraph() {
         g.attr('transform', e.transform);
         currentZoom = e.transform.k;
         _currentTransform = e.transform;
+        // Constant apparent size: counter-scale by 1/k (clamped for safety).
+        // Skip the per-node pass entirely on pan (k unchanged) — sizes are fixed.
+        const k = e.transform.k;
+        if (k !== _lastScaleK) {
+            _lastScaleK = k;
+            // 1/k → exact constant size; clamp covers the full [0.1, 6] zoom range.
+            _nodeScale = Math.min(12, Math.max(0.15, 1 / k));
+            if (!_scaleRaf) {
+                _scaleRaf = requestAnimationFrame(() => {
+                    const s = _nodeScale;
+                    // Update ALL nodes (incl. currently-culled) so a node revealed
+                    // later by panning already carries the correct fixed size.
+                    for (let i = 0; i < allNodes.length; i++) {
+                        const d = allNodes[i];
+                        _nodeElArr[i].setAttribute('transform', `translate(${d.x},${d.y}) scale(${s})`);
+                    }
+                    _scaleRaf = 0;
+                });
+            }
+        }
         if (!_labelRaf) {
             _labelRaf = requestAnimationFrame(() => {
                 updateLabelVisibility();
@@ -1006,7 +1166,19 @@ function buildGraph() {
             for (let i = 0; i < allNodes.length; i++) {
                 if (!_visibleNodes[i]) continue;
                 const d = allNodes[i];
-                _nodeElArr[i].setAttribute('transform', `translate(${d.x},${d.y})`);
+                _nodeElArr[i].setAttribute('transform', `translate(${d.x},${d.y}) scale(${_nodeScale})`);
+            }
+            // Ease-to-rest: as the layout nears its stopping point (alpha → alphaMin)
+            // ramp friction up so residual drift glides to a halt instead of freezing
+            // mid-motion. The STOP time is fixed by alphaDecay; this only damps the
+            // leftover velocity, so the final layout is unchanged. Auto-resets to the
+            // base friction whenever the sim is re-heated (drag / zoom / resize).
+            const _a = sim.alpha();
+            if (_a < 0.02) {
+                const tt = Math.min(1, (0.02 - _a) / (0.02 - 0.008));
+                sim.velocityDecay(0.4 + tt * 0.5);   // 0.4 → 0.9 over the last ~0.5s
+            } else if (sim.velocityDecay() !== 0.4) {
+                sim.velocityDecay(0.4);
             }
             // Frame budget check
             if (_lastTickTime) checkFrameBudget(now - _lastTickTime);
@@ -1230,6 +1402,7 @@ function openPanel(d) {
     // Highlight
     clearHighlights();
     nodeEls.classed('selected-node', n => n.id === d.id);
+    applyFocusRing(d);
     relatedLabelIds = getRelatedNodeIds(d.id);
     updateLabelVisibility();
     if (lpMode) {
@@ -1481,10 +1654,34 @@ function highlightPrereqChain(id) {
     refreshFocusCurves();
 }
 
+// Dual-concentric focus ring — a luminous white star-ring shown ONLY on the
+// selected node. Appended to that node's <g> so it rides the group transform
+// (no per-tick cost). Removed on deselect / reselect.
+function applyFocusRing(d) {
+    removeFocusRing();
+    const idx = allNodes.indexOf(d);
+    if (idx < 0 || !nodeEls) return;
+    const el = nodeEls.nodes()[idx];
+    if (!el) return;
+    const m = sm(d);
+    const ringR = Math.max(m.halo * 0.7, m.core * 5) + 6;
+    const g = d3.select(el).append('g').attr('class', 'focus-ring').attr('pointer-events', 'none');
+    // outer soft bloom
+    g.append('circle').attr('class', 'fr-bloom').attr('r', ringR + 3);
+    // bright glowing band
+    g.append('circle').attr('class', 'fr-band').attr('r', ringR);
+    // sharp inner hairline — the second concentric ring
+    g.append('circle').attr('class', 'fr-edge').attr('r', ringR - 4);
+}
+function removeFocusRing() {
+    if (nodeEls) nodeEls.selectAll('.focus-ring').remove();
+}
+
 function clearHighlights() {
     linkEls.classed('highlight', false);
     nodeEls.classed('selected-node', false);
     nodeEls.classed('on-path', false);
+    removeFocusRing();
     relatedLabelIds = new Set();
     updateLabelVisibility();
     if (!lpMode) linkEls.classed('prereq-path', false);
