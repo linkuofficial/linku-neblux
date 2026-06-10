@@ -1,3 +1,5 @@
+/* welcome — app.html only. Shared base: ../components/welcome.css. */
+
 #welcome-overlay {
     position: fixed;
     inset: 0;

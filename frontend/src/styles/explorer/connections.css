@@ -1,3 +1,5 @@
+/* connections — explorer.html only.  Shared base: ../components/connections.css. */
+
 .ci.in-graph {
     border-left: 3px solid rgba(80, 200, 120, 0.5);
 }

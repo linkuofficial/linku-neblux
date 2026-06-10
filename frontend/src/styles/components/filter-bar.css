@@ -1,4 +1,5 @@
-/* filter-bar — shared chrome (canonical: app). */
+/* filter-bar — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Filter bar */
 
 #filter-bar {
     position: fixed;

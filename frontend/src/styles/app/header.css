@@ -1,3 +1,5 @@
+/* header — app.html only. Shared base: ../components/header.css. */
+
 #home-link {
     display: inline-flex;
     align-items: center;

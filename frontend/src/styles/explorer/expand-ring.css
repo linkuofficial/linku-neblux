@@ -1,3 +1,6 @@
+/* expand-ring — explorer.html only. */
+/* Expand ring indicator */
+
 .expand-ring {
     fill: none;
     stroke: var(--accent);

@@ -1,4 +1,5 @@
-/* focus-ring — shared chrome (canonical: app). */
+/* focus-ring — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Dual-concentric focus ring — only on the selected star */
 
 .focus-ring {
     animation: nodusSelHalo 3.6s ease-in-out infinite;

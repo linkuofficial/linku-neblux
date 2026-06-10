@@ -1,6 +1,14 @@
-/* app.css — manifest. Shared chrome in ../components (canonical), app-only in ../app. */
+/* ════════════════════════════════════════════════════════════════════════
+   app.css — stylesheet manifest for app.html (linked from <head>).
 
-/* Component manifest — @imports load in cascade order. */
+   CSS architecture (Vite inlines @imports, in cascade order):
+     ../components/  shared chrome used by BOTH app.html + explorer.html.
+                     Canonical design = app. tokens.css (:root palette) +
+                     keyframes.css (animations) load first.
+     ../app/         app.html-only rules + app's responsive @media.
+   Global tokens (fonts, radii, shadow, accent) live in public/nodus-theme.css;
+   edge/badge colours in src/shared.css. Nothing is inlined in the HTML.
+   ════════════════════════════════════════════════════════════════════════ */
 @import "../components/tokens.css";
 @import "../components/keyframes.css";
 @import "../components/_base.css";

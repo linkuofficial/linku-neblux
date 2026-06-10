@@ -1,3 +1,8 @@
+/* nodes-perf — explorer.html only. */
+/* Perf: detail (minor) stars are tiny and the most numerous — skip their
+   idle twinkle/pulse so only the prominent field & concept stars animate.
+   Cuts per-frame gradient repaints without a visible loss. */
+
 .node.tier-minor circle.corona.twinkle,
 .node.tier-minor.frontier circle.glow {
     animation: none !important;

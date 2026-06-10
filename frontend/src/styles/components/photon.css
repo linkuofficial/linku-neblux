@@ -1,4 +1,6 @@
-/* photon — shared chrome (canonical: app). */
+/* photon — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Flowing photon — one long luminous dash glides the lit edge, vanishes,
+   returns. Heavy drop-shadow makes it read as a diffuse band of light. */
 
 .photon {
     fill: none;

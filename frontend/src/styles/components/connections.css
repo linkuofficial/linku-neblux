@@ -1,4 +1,5 @@
-/* connections — shared chrome (canonical: app). */
+/* connections — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Connections list */
 
 #p-conns h3 {
     font-family: 'IBM Plex Mono', monospace;

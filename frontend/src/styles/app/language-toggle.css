@@ -1,3 +1,5 @@
+/* language-toggle — app.html only. Shared base: ../components/language-toggle.css. */
+
 @media (min-width: 761px) {
     body.panel-open #lang-toggle {
         right: calc(var(--panel-desktop-width) + 16px);

@@ -1,6 +1,15 @@
-/* explorer.css — manifest. Shared chrome in ../components (canonical: app), explorer-only in ../explorer. */
+/* ════════════════════════════════════════════════════════════════════════
+   explorer.css — stylesheet manifest for explorer.html (linked from <head>).
 
-/* Component manifest — @imports load in cascade order. */
+   CSS architecture (Vite inlines @imports, in cascade order):
+     ../components/  shared chrome used by BOTH app.html + explorer.html.
+                     Canonical design = app, so explorer adopts app's chrome.
+                     tokens.css (:root palette) + keyframes.css load first.
+     ../explorer/    explorer.html-only rules (controls, context-menu, zoom,
+                     breadcrumb, recommendation, …) + explorer's responsive @media.
+   Global tokens live in public/nodus-theme.css; edge/badge colours in
+   src/shared.css. Nothing is inlined in the HTML.
+   ════════════════════════════════════════════════════════════════════════ */
 @import "../components/tokens.css";
 @import "../components/keyframes.css";
 @import "../components/_base.css";

@@ -1,3 +1,5 @@
+/* edges — app.html only. Shared base: ../components/edges.css. */
+
 .link.prereq-path {
     stroke-opacity: 0;
     stroke-width: 1.2px;

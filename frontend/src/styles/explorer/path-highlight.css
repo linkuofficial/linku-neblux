@@ -1,3 +1,6 @@
+/* path-highlight — explorer.html only. */
+/* Path highlight */
+
 .link.path-edge {
     stroke: var(--accent) !important;
     stroke-opacity: 0;

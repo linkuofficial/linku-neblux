@@ -1,3 +1,5 @@
+/* nodes — app.html only. Shared base: ../components/nodes.css. */
+
 .node circle.state-mark {
     pointer-events: none
 }

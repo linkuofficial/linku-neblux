@@ -1,6 +1,10 @@
-/* landing.css — extracted verbatim from index.html (de-inlined, cascade-preserved). */
+/* ════════════════════════════════════════════════════════════════════════
+   landing.css — stylesheet manifest for index.html (the marketing landing).
 
-/* Component manifest — @imports load in cascade order. */
+   De-inlined from index.html and split into ./landing/* component partials,
+   @imported below in cascade order (Vite inlines them). Tailwind utilities and
+   global tokens (public/nodus-theme.css, src/index-tailwind.css) load before this.
+   ════════════════════════════════════════════════════════════════════════ */
 @import "./landing/_base.css";
 @import "./landing/hairline.css";
 @import "./landing/ruler.css";

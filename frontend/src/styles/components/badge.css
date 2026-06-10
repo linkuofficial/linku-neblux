@@ -1,4 +1,5 @@
-/* badge — shared chrome (canonical: app). */
+/* badge — shared chrome for app.html + explorer.html · canonical design: app. */
+/* .d-badge — defined in src/shared.css */
 
 #p-desc {
     font-size: 12px;

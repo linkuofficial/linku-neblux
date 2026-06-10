@@ -1,3 +1,6 @@
+/* node-tooltip — explorer.html only. */
+/* Tooltip */
+
 #tooltip {
     position: fixed;
     pointer-events: none;

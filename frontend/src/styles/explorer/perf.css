@@ -1,3 +1,5 @@
+/* perf — explorer.html only.  Shared base: ../components/perf.css. */
+
 .perf-mode .node:not(.tier-primary) circle.corona,
 .perf-mode .node:not(.tier-primary) circle.halo {
     display: none !important;

@@ -1,4 +1,5 @@
-/* _base — shared chrome (canonical: app). */
+/* _base — shared chrome for app.html + explorer.html · canonical design: app. */
+/* app.css — extracted verbatim from app.html (de-inlined, cascade-preserved). */
 
 * {
     margin: 0;

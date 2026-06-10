@@ -1,4 +1,5 @@
-/* search — shared chrome (canonical: app). */
+/* search — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Search */
 
 #search-box {
     position: fixed;

@@ -1,3 +1,5 @@
+/* breadcrumb — explorer.html only.  Shared base: ../components/breadcrumb.css. */
+
 #breadcrumb {
     position: fixed;
     bottom: 20px;

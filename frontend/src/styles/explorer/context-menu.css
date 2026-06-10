@@ -1,3 +1,6 @@
+/* context-menu — explorer.html only. */
+/* Context menu */
+
 #ctx-menu {
     position: fixed;
     z-index: 20;

@@ -1,3 +1,5 @@
+/* header — explorer.html only.  Shared base: ../components/header.css. */
+
 #hdr-nav {
     display: flex;
     align-items: center;

@@ -1,3 +1,5 @@
+/* nodes — explorer.html only.  Shared base: ../components/nodes.css. */
+
 .node.frontier circle.glow {
     animation: frontier-glow 3s ease-in-out infinite;
 }

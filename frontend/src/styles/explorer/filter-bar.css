@@ -1,3 +1,5 @@
+/* filter-bar — explorer.html only.  Shared base: ../components/filter-bar.css. */
+
 #filter-bar.visible {
     display: flex;
 }

@@ -1,3 +1,5 @@
+/* breadcrumb — app.html only. Shared base: ../components/breadcrumb.css. */
+
 #p-breadcrumb {
     display: flex;
     flex-wrap: wrap;

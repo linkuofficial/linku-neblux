@@ -1,4 +1,5 @@
-/* language-toggle — shared chrome (canonical: app). */
+/* language-toggle — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Language toggle */
 
 #lang-toggle {
     position: fixed;

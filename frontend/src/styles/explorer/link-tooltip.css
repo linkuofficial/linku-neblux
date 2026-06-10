@@ -1,3 +1,6 @@
+/* link-tooltip — explorer.html only. */
+/* Link tooltip */
+
 #link-tooltip {
     position: fixed;
     pointer-events: none;

@@ -1,4 +1,6 @@
-/* nodes — shared chrome (canonical: app). */
+/* nodes — shared chrome for app.html + explorer.html · canonical design: app. */
+/* ── Stars (nodes) — brightness IS the body; hover/select BRIGHTEN, never
+   grow. corona/halo/glow/core/core-hi stack outside-in. */
 
 .node circle.hit {
     cursor: pointer

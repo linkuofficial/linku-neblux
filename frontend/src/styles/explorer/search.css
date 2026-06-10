@@ -1,3 +1,5 @@
+/* search — explorer.html only.  Shared base: ../components/search.css. */
+
 .sr:first-child {
     border-radius: var(--radius-md) var(--radius-md) 0 0;
 }

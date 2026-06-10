@@ -1,4 +1,8 @@
-/* edges — shared chrome (canonical: app). */
+/* edges — shared chrome for app.html + explorer.html · canonical design: app. */
+/* ── Constellation lines (edges) — colours defined in src/shared.css ──
+   At rest: faint semantic-coloured hairlines so the sky stays mostly
+   dark. The lit constellation (focus curves) gains the fluorescent
+   glow + a flowing photon. */
 
 .link {
     stroke-opacity: 0.10;

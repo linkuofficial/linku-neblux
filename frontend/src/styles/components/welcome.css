@@ -1,4 +1,5 @@
-/* welcome — shared chrome (canonical: app). */
+/* welcome — shared chrome for app.html + explorer.html · canonical design: app. */
+/* Welcome overlay */
 
 #shortcuts-card {
     position: absolute;

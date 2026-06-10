@@ -1,3 +1,5 @@
+/* panel — app.html only. Shared base: ../components/panel.css. */
+
 #panel::-webkit-scrollbar {
     width: 3px
 }
