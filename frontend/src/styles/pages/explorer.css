@@ -1,0 +1,58 @@
+/* ════════════════════════════════════════════════════════════════════════
+   explorer.css — stylesheet manifest for explorer.html (linked from <head>).
+
+   CSS architecture (Vite inlines @imports, in cascade order):
+     ../components/  shared chrome used by BOTH app.html + explorer.html.
+                     Canonical design = app, so explorer adopts app's chrome.
+                     tokens.css (:root palette) + keyframes.css load first.
+     ../explorer/    explorer.html-only rules (controls, context-menu, zoom,
+                     breadcrumb, recommendation, …) + explorer's responsive @media.
+   Global tokens live in public/nodus-theme.css; edge/badge colours in
+   src/shared.css. Nothing is inlined in the HTML.
+   ════════════════════════════════════════════════════════════════════════ */
+@import "../components/tokens.css";
+@import "../components/keyframes.css";
+@import "../components/_base.css";
+@import "../components/edges.css";
+@import "../components/photon.css";
+@import "../components/nodes.css";
+@import "../components/focus-ring.css";
+@import "../components/perf.css";
+@import "../components/panel.css";
+@import "../components/badge.css";
+@import "../components/connections.css";
+@import "../components/breadcrumb.css";
+@import "../components/legend.css";
+@import "../components/header.css";
+@import "../components/search.css";
+@import "../components/filter-bar.css";
+@import "../components/language-toggle.css";
+@import "../components/loading.css";
+@import "../components/welcome.css";
+@import "../explorer/particles.css";
+@import "../explorer/edges.css";
+@import "../explorer/nodes.css";
+@import "../explorer/nodes-perf.css";
+@import "../explorer/node-entrance.css";
+@import "../explorer/expand-ring.css";
+@import "../explorer/node-tooltip.css";
+@import "../explorer/neighbor-badge.css";
+@import "../explorer/search-result-active.css";
+@import "../explorer/search.css";
+@import "../explorer/header.css";
+@import "../explorer/stats.css";
+@import "../explorer/welcome.css";
+@import "../explorer/panel-actions.css";
+@import "../explorer/link-tooltip.css";
+@import "../explorer/connections.css";
+@import "../explorer/controls.css";
+@import "../explorer/breadcrumb.css";
+@import "../explorer/context-menu.css";
+@import "../explorer/filter-bar.css";
+@import "../explorer/path-highlight.css";
+@import "../explorer/recommendation.css";
+@import "../explorer/onboarding.css";
+@import "../explorer/zoom-indicator.css";
+@import "../explorer/shortcuts.css";
+@import "../explorer/perf.css";
+@import "../explorer/responsive.css";

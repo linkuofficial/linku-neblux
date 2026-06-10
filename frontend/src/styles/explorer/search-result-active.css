@@ -1,0 +1,6 @@
+/* search-result-active — explorer.html only. */
+/* Search result active state */
+
+.sr.active {
+    background: rgba(240, 192, 80, 0.12);
+}

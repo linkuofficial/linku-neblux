@@ -1,0 +1,12 @@
+/* filter-bar — app.html only. Shared base: ../components/filter-bar.css. */
+
+body.top-ui-collapsed #filter-bar {
+    transform: translateX(-50%) translateY(-44px);
+    opacity: 0;
+    pointer-events: none
+}
+
+.filter-btn:focus-visible {
+    outline: 2px solid rgba(240, 192, 80, 0.78);
+    outline-offset: 2px
+}

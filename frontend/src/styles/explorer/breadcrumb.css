@@ -1,0 +1,29 @@
+/* breadcrumb — explorer.html only.  Shared base: ../components/breadcrumb.css. */
+
+#breadcrumb {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 14px;
+    background: var(--glass-1);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(14px);
+    box-shadow: var(--shadow-soft);
+    max-width: 80vw;
+    overflow-x: auto;
+}
+
+#breadcrumb:empty {
+    display: none;
+}
+
+.bc-item.current {
+    background: rgba(240, 192, 80, 0.15);
+    color: var(--accent);
+}

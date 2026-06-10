@@ -1,0 +1,6 @@
+/* connection-extras — app.html only. (app-only component.) */
+
+.ci-prereq {
+    border-left: 2px solid #f0c050;
+    padding-left: 8px
+}

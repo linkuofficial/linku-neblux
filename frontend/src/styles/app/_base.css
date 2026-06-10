@@ -1,0 +1,21 @@
+/* _base — app.html only. Shared base: ../components/_base.css. */
+
+.skip-link {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    transform: translateY(-120%);
+    z-index: 30;
+    padding: 8px 12px;
+    background: #e2e8f0;
+    color: #0f172a;
+    border-radius: 8px;
+    border: 1px solid #94a3b8;
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
