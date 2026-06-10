@@ -14,8 +14,11 @@ function copyDataPlugin() {
             const i18nDest = resolve(destDir, 'i18n');
             if (existsSync(i18nSrc)) {
                 mkdirSync(i18nDest, { recursive: true });
+                // 只複製線上站實際載入的 i18n 檔；排除生成過程的中間/備份產物
+                // （*_backup_*、*_mini_reviewed 等），避免把垃圾打包進 production。
+                const isJunk = (name: string) => /backup|mini_reviewed/i.test(name);
                 for (const f of readdirSync(i18nSrc)) {
-                    if (f.endsWith('.json')) {
+                    if (f.endsWith('.json') && !isJunk(f)) {
                         copyFileSync(resolve(i18nSrc, f), resolve(i18nDest, f));
                     }
                 }
