@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import { hexA, curvedEdgePath } from "./engine/geometry.js";
 
         // ===== CONSTANTS =====
         const DC = window.NodusTokens?.DOMAIN_COLORS || {
@@ -266,9 +267,6 @@ import * as d3 from "d3";
         let focusDepth = 0;
         let tourIndex = 0;
         let lastLoadError = null;
-        const EDGE_CURVE_DISTANCE_FACTOR = 0.18;
-        const EDGE_CURVE_MIN_OFFSET = 10;
-        const EDGE_CURVE_MAX_OFFSET = 42;
         const TOP_CHROME_EXPAND_DELAY = 90;
         const TOP_CHROME_COLLAPSE_DELAY = 260;
 
@@ -302,10 +300,6 @@ import * as d3 from "d3";
         function nr(n) { return TYPE_SIZE[n.type] || 7; }
 
         // ── Star rendering (visual only — never feeds the sim/collision) ──────
-        function hexA(hex, a) {
-            const n = parseInt(String(hex).slice(1), 16);
-            return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
-        }
         // Bloom radii + twinkle by node TYPE tier (Field ▸ Concept ▸ Detail).
         function esm(n) {
             const tier = n.type === 'field' ? 'primary' : (n.type === 'concept' ? 'secondary' : 'minor');
@@ -397,30 +391,6 @@ import * as d3 from "d3";
             const s = edge.source.id || edge.source;
             const t = edge.target.id || edge.target;
             return [s, t].sort().join('|') + '|' + edge.relation_type;
-        }
-        function edgeCurveDirection(edge) {
-            const s = String(edge.source.id || edge.source || '');
-            const t = String(edge.target.id || edge.target || '');
-            const key = s < t ? s + '|' + t : t + '|' + s;
-            let hash = 0;
-            for (let i = 0; i < key.length; i++) hash = ((hash << 5) - hash + key.charCodeAt(i)) | 0;
-            return hash % 2 === 0 ? 1 : -1;
-        }
-        function curvedEdgePath(edge) {
-            const sx = edge.source.x ?? 0;
-            const sy = edge.source.y ?? 0;
-            const tx = edge.target.x ?? 0;
-            const ty = edge.target.y ?? 0;
-            const dx = tx - sx;
-            const dy = ty - sy;
-            const dist = Math.hypot(dx, dy) || 1;
-            const nx = -dy / dist;
-            const ny = dx / dist;
-            const baseOffset = Math.min(EDGE_CURVE_MAX_OFFSET, Math.max(EDGE_CURVE_MIN_OFFSET, dist * EDGE_CURVE_DISTANCE_FACTOR));
-            const dir = edgeCurveDirection(edge);
-            const cx = (sx + tx) * 0.5 + nx * baseOffset * dir;
-            const cy = (sy + ty) * 0.5 + ny * baseOffset * dir;
-            return `M${sx},${sy} Q${cx},${cy} ${tx},${ty}`;
         }
         function escHtml(s) { return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]); }
         function truncate(s, len) { return s && s.length > len ? s.slice(0, len) + '…' : (s || ''); }
