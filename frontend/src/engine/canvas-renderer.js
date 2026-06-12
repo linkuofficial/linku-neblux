@@ -25,11 +25,6 @@ import { edgeCurveDirection, EDGE_CURVE_DISTANCE_FACTOR, EDGE_CURVE_MIN_OFFSET, 
 
 const TWO_PI = Math.PI * 2;
 
-// CSS ease-in-out approximation for the photon sweep (@keyframes nodusFlow).
-function easeInOut(t) {
-    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-}
-
 // World-space control point of an edge's quadratic curve (same math as
 // geometry.curvedEdgePath, but returning the point for canvas quadraticCurveTo).
 function curveControl(edge) {
@@ -104,7 +99,9 @@ export function createCanvasRenderer(opts) {
         for (const e of edges) {
             const v = e.vis || {};
             if (v.highlight || v.prereqPath) continue;
-            const alpha = v.dimmed ? 0.03 : (e.pending ? 0.02 : 0.10);
+            // Resting constellation lines sit barely-there ("似有似無") so the sky
+            // stays mostly dark and lit edges own the attention.
+            const alpha = v.dimmed ? 0.016 : (e.pending ? 0.012 : 0.05);
             const key = e.relation_type + '|' + alpha + '|' + (e.pending ? 1 : 0);
             let b = buckets.get(key);
             if (!b) { b = { color: relationColor(e.relation_type) || '#888', alpha, pending: !!e.pending, list: [] }; buckets.set(key, b); }
@@ -153,33 +150,39 @@ export function createCanvasRenderer(opts) {
                 ctx.stroke();
             };
 
-            // Backbone (CSS .focus-curve.active; edge-glow filter ≈ halo pass).
+            // Backbone — a DIM coloured thread at rest: it only shows WHERE the
+            // connection runs. The bright element is the gliding photon, so the
+            // backbone sits low and lets the light read as the highlight. When
+            // motion is reduced (no photon glide) it's raised so edges stay legible.
+            const restA = reducedMotion ? (isPrereq ? 0.85 : 0.7) : (isPrereq ? 0.5 : 0.38);
             ctx.strokeStyle = stroke;
-            ctx.globalAlpha = (isPrereq ? 0.92 : 0.85) * 0.30;
-            ctx.lineWidth = 3.6;
+            ctx.globalAlpha = restA * 0.5;   // faint halo
+            ctx.lineWidth = 3.2;
             curve();
-            ctx.globalAlpha = isPrereq ? 0.92 : 0.85;
-            ctx.lineWidth = isPrereq ? 1.4 : 1.1;
+            ctx.globalAlpha = restA;         // hairline core
+            ctx.lineWidth = isPrereq ? 1.2 : 1.0;
             curve();
 
-            // Photon — one long luminous dash gliding the curve. Dash pattern is
-            // authored in world units (SVG dasharray scales with the zoomed <g>),
-            // so multiply by k. @keyframes nodusFlow(Gold): 360→-360 / 380→-380.
+            // Photon — one long luminous dash gliding the curve, vanishing and
+            // returning. LINEAR + seamless: the dash offset advances by exactly one
+            // dash period per cycle, so there is no ease deceleration and no wrap
+            // jump → smooth flow. Dash is in world units (×k), like the SVG dasharray.
             const photonColor = isPrereq ? '#f7d27d' : (relationColor(e.relation_type) || '#cfe0f5');
             const dur = isPrereq ? 4.4 : 3.6;
-            const span = isPrereq ? 380 : 360;
-            const phase = reducedMotion ? 0 : easeInOut((nowSec / dur) % 1);
+            const dash = isPrereq ? [54 * k, 680 * k] : [60 * k, 640 * k];
+            const period = isPrereq ? 734 : 700;   // dash + gap, world units
+            const flow = reducedMotion ? 0 : (nowSec / dur) % 1;
             ctx.save();
             ctx.globalCompositeOperation = 'lighter';
             ctx.strokeStyle = photonColor;
-            ctx.setLineDash(isPrereq ? [54 * k, 680 * k] : [60 * k, 640 * k]);
-            ctx.lineDashOffset = (span - phase * span * 2) * k;
+            ctx.setLineDash(dash);
+            ctx.lineDashOffset = -flow * period * k;
             // diffuse band (the old drop-shadow) under the bright dash core
-            ctx.globalAlpha = 0.22;
+            ctx.globalAlpha = 0.26;
             ctx.lineWidth = 4.2;
             curve();
-            ctx.globalAlpha = 0.95;
-            ctx.lineWidth = isPrereq ? 0.95 : 1.1;
+            ctx.globalAlpha = 1;
+            ctx.lineWidth = isPrereq ? 1.0 : 1.15;
             curve();
             ctx.restore();
 
