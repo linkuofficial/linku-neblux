@@ -134,6 +134,11 @@ export function createCanvasRenderer(opts) {
         }
         if (!active.length) return;
 
+        // NOTE: no shadowBlur anywhere on this path — per-stroke gaussian shadows
+        // collapse Chrome's raster pipeline to a few fps once a hub lights up
+        // dozens of curves. The soft glow is layered strokes instead: a wide
+        // low-alpha pass under the bright core reads the same at a fraction of
+        // the cost.
         for (const e of active) {
             const isPrereq = !!e.vis.prereqPath;
             const sxp = e.source.x * k + tx, syp = e.source.y * k + ty;
@@ -141,18 +146,21 @@ export function createCanvasRenderer(opts) {
             const cp = curveControl(e);
             const cxp = cp.cx * k + tx, cyp = cp.cy * k + ty;
             const stroke = isPrereq ? '#f0c050' : (relationColor(e.relation_type) || '#cfe0f5');
+            const curve = () => {
+                ctx.beginPath();
+                ctx.moveTo(sxp, syp);
+                ctx.quadraticCurveTo(cxp, cyp, txp, typ);
+                ctx.stroke();
+            };
 
-            // Backbone (CSS .focus-curve.active + edge-glow filter → shadowBlur).
+            // Backbone (CSS .focus-curve.active; edge-glow filter ≈ halo pass).
+            ctx.strokeStyle = stroke;
+            ctx.globalAlpha = (isPrereq ? 0.92 : 0.85) * 0.30;
+            ctx.lineWidth = 3.6;
+            curve();
             ctx.globalAlpha = isPrereq ? 0.92 : 0.85;
             ctx.lineWidth = isPrereq ? 1.4 : 1.1;
-            ctx.strokeStyle = stroke;
-            ctx.shadowColor = stroke;
-            ctx.shadowBlur = 3;
-            ctx.beginPath();
-            ctx.moveTo(sxp, syp);
-            ctx.quadraticCurveTo(cxp, cyp, txp, typ);
-            ctx.stroke();
-            ctx.shadowBlur = 0;
+            curve();
 
             // Photon — one long luminous dash gliding the curve. Dash pattern is
             // authored in world units (SVG dasharray scales with the zoomed <g>),
@@ -163,17 +171,16 @@ export function createCanvasRenderer(opts) {
             const phase = reducedMotion ? 0 : easeInOut((nowSec / dur) % 1);
             ctx.save();
             ctx.globalCompositeOperation = 'lighter';
-            ctx.globalAlpha = 1;
-            ctx.lineWidth = isPrereq ? 0.95 : 1.1;
             ctx.strokeStyle = photonColor;
-            ctx.shadowColor = isPrereq ? 'rgba(247,210,125,0.5)' : 'rgba(255,255,255,0.55)';
-            ctx.shadowBlur = 4;
             ctx.setLineDash(isPrereq ? [54 * k, 680 * k] : [60 * k, 640 * k]);
             ctx.lineDashOffset = (span - phase * span * 2) * k;
-            ctx.beginPath();
-            ctx.moveTo(sxp, syp);
-            ctx.quadraticCurveTo(cxp, cyp, txp, typ);
-            ctx.stroke();
+            // diffuse band (the old drop-shadow) under the bright dash core
+            ctx.globalAlpha = 0.22;
+            ctx.lineWidth = 4.2;
+            curve();
+            ctx.globalAlpha = 0.95;
+            ctx.lineWidth = isPrereq ? 0.95 : 1.1;
+            curve();
             ctx.restore();
 
             // Gold arrowhead on prerequisite edges (SVG marker-end #arrow,
@@ -200,19 +207,28 @@ export function createCanvasRenderer(opts) {
         ctx.save();
         ctx.globalCompositeOperation = 'lighter';
         const margin = 140; // stars are constant screen size; pad by max corona
+        // Far-zoom exposure control: hundreds of constant-screen-size stars
+        // overlap when zoomed way out, and additive compositing would sum their
+        // glows into a white blowout (SVG alpha-stacking saturated at the
+        // gradient colours instead). Ease footprint + alpha down as k shrinks.
+        const farZoom = Math.min(1, Math.max(0, (k - 0.18) / (0.6 - 0.18)));
+        const sizeMul = 0.55 + 0.45 * farZoom;
+        const exposure = 0.30 + 0.70 * farZoom;
         for (const n of nodes) {
             const sx = n.x * k + tx, sy = n.y * k + ty;
             if (sx < -margin || sx > width + margin || sy < -margin || sy > height + margin) continue;
             const v = n.vis || {};
             const meta = starMeta(n);
-            const baseAlpha = v.dimmed ? 0.12 : 1;
+            const baseAlpha = (v.dimmed ? 0.12 : 1) * exposure;
             const sp = sprites.get(domainColor(n), meta, dpr);
+            const cr = sp.coronaRadius * sizeMul;
+            const br = sp.bodyRadius * sizeMul;
 
             // corona (twinkles) then flattened body — same stack order as SVG.
             ctx.globalAlpha = baseAlpha * twinkleAlpha(meta, nowSec);
-            ctx.drawImage(sp.corona, sx - sp.coronaRadius, sy - sp.coronaRadius, sp.coronaRadius * 2, sp.coronaRadius * 2);
+            ctx.drawImage(sp.corona, sx - cr, sy - cr, cr * 2, cr * 2);
             ctx.globalAlpha = baseAlpha;
-            ctx.drawImage(sp.body, sx - sp.bodyRadius, sy - sp.bodyRadius, sp.bodyRadius * 2, sp.bodyRadius * 2);
+            ctx.drawImage(sp.body, sx - br, sy - br, br * 2, br * 2);
 
             // Brightness states (old CSS brightness() filters) — with additive
             // compositing, re-drawing the body at partial alpha IS a brightness
@@ -223,7 +239,7 @@ export function createCanvasRenderer(opts) {
             else if (v.onPath) boost = 0.25;
             if (boost > 0) {
                 ctx.globalAlpha = baseAlpha * boost;
-                ctx.drawImage(sp.body, sx - sp.bodyRadius, sy - sp.bodyRadius, sp.bodyRadius * 2, sp.bodyRadius * 2);
+                ctx.drawImage(sp.body, sx - br, sy - br, br * 2, br * 2);
             }
 
             // Learning-path state mark — tiny tick tucked outside the core.
@@ -251,21 +267,23 @@ export function createCanvasRenderer(opts) {
         const r = Math.max(m.halo * 0.7, m.core * 5) + 6;
         const sx = selectedNode.x * k + tx, sy = selectedNode.y * k + ty;
         // @keyframes nodusSelHalo: ring opacity 0.6 → 1 → 0.6 over 3.6s.
+        // Blurs are emulated with stacked strokes — see the no-shadowBlur note
+        // in drawEdges.
         const pulse = reducedMotion ? 1 : 0.8 - 0.2 * Math.cos(TWO_PI * ((nowSec / 3.6) % 1));
         ctx.save();
-        const ring = (radius, strokeStyle, lineWidth, blur) => {
-            ctx.globalAlpha = pulse;
+        const ring = (radius, strokeStyle, lineWidth, alphaScale = 1) => {
+            ctx.globalAlpha = pulse * alphaScale;
             ctx.strokeStyle = strokeStyle;
             ctx.lineWidth = lineWidth;
-            ctx.shadowColor = 'rgba(255,255,255,0.8)';
-            ctx.shadowBlur = blur;
             ctx.beginPath();
             ctx.arc(sx, sy, radius, 0, TWO_PI);
             ctx.stroke();
         };
-        ring(r + 3, 'rgba(255,255,255,0.26)', 5, 8);   // .fr-bloom (blur 4px)
-        ring(r, 'rgba(255,255,255,0.7)', 1.6, 2);      // .fr-band  (blur 1px)
-        ring(r - 4, 'rgba(255,255,255,0.92)', 0.5, 0); // .fr-edge
+        ring(r + 3, 'rgba(255,255,255,0.26)', 11, 0.35); // .fr-bloom outer haze
+        ring(r + 3, 'rgba(255,255,255,0.26)', 5);        // .fr-bloom (blur 4px)
+        ring(r, 'rgba(255,255,255,0.7)', 3, 0.4);        // .fr-band haze (blur 1px)
+        ring(r, 'rgba(255,255,255,0.7)', 1.6);           // .fr-band
+        ring(r - 4, 'rgba(255,255,255,0.92)', 0.5);      // .fr-edge
         ctx.restore();
     }
 
@@ -363,7 +381,7 @@ export function createCanvasRenderer(opts) {
             let active = 0, prereq = 0, dimmedNodes = 0;
             for (const e of edges) { const v = e.vis || {}; if (v.highlight || v.prereqPath) active++; if (v.prereqPath) prereq++; }
             for (const n of nodes) { if (n.vis && n.vis.dimmed) dimmedNodes++; }
-            return { activeEdges: active, prereqEdges: prereq, dimmedNodes, hasRing: !!selectedNode };
+            return { activeEdges: active, prereqEdges: prereq, dimmedNodes, hasRing: !!selectedNode, running, rafPending: !!rafId, dirty };
         },
     };
 }
