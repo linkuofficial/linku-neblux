@@ -92,12 +92,11 @@ test("explorer.html chrome computed styles", { tag: "@visual" }, async ({ page }
     await page.goto("/explorer.html");
     await page.waitForLoadState("networkidle");
     await freezeMotion(page);
-    await page.evaluate(() => {
-        // @ts-ignore — globals exposed by explorer page
-        if (typeof startExploration === "function") startExploration("calculus_field");
-    }).catch(() => {});
-    await page.waitForTimeout(600);
-    await page.locator("g.node circle.core").first().click({ force: true }).catch(() => {});
+    // Explorer graph is a canvas (no per-node DOM) — drive it via the engine hook.
+    await page.waitForFunction(() => !!(window as any).__nodusExplorer?.ready()).catch(() => {});
+    await page.evaluate(() => (window as any).__nodusExplorer?.startExploration("calculus_field")).catch(() => {});
+    await page.waitForTimeout(800);
+    await page.evaluate(() => (window as any).__nodusExplorer?.selectNode("calculus_field")).catch(() => {});
     await page.waitForTimeout(400);
     const sels = [
         "body", "#bgCanvas", "#canvas", "#hdr", "#hdr h1", "#hdr p",

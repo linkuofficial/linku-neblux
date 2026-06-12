@@ -53,13 +53,14 @@ export function ensureVis(obj) {
 export function createCanvasRenderer(opts) {
     const {
         canvas,
-        nodes,
-        edges,
         relationColor,     // (relation_type) => '#rrggbb'
         domainColor,       // (node) => '#rrggbb'
         starMeta,          // (node) => {core,glow,halo,corona,glowAlpha,baseOp,tier,twDur,twDelay}
         label,             // (node, hovered) => {text, dy, size, alpha, field} | null
     } = opts;
+    // Let (not const) so setData can swap the arrays when explorer expands.
+    let nodes = opts.nodes;
+    let edges = opts.edges;
 
     const ctx = canvas.getContext('2d');
     const sprites = createSpriteCache();
@@ -550,6 +551,19 @@ export function createCanvasRenderer(opts) {
             for (const e of edges) { const v = e.vis || {}; if (v.highlight || v.prereqPath) active++; if (v.prereqPath) prereq++; }
             for (const n of nodes) { if (n.vis && n.vis.dimmed) dimmedNodes++; }
             return { activeEdges: active, prereqEdges: prereq, dimmedNodes, hasRing: !!selectedNode, running, rafPending: !!rafId, dirty };
+        },
+        // Replace the node/edge arrays (explorer progressive expand).
+        // Prunes stale animation entries to avoid memory leaks.
+        setData(newNodes, newEdges) {
+            nodes = newNodes;
+            edges = newEdges;
+            const nodeSet = new Set(newNodes.map(n => n.id));
+            for (const id of anims.keys()) { if (!nodeSet.has(id)) anims.delete(id); }
+            const edgeSet = new Set(newEdges.map(edgeId));
+            for (const id of edgeLit.keys()) { if (!edgeSet.has(id)) edgeLit.delete(id); }
+            // Nebulae are domain-anchored — rebuild when the visible set changes.
+            nebulae = null;
+            notify();
         },
     };
 }

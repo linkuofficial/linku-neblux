@@ -89,12 +89,64 @@ test("app: clicking a node lights up its connections", async ({ page }) => {
 });
 
 test("explorer: clicking a node lights up its connections", async ({ page }) => {
+    // Canvas renderer: expand calculus_field, click the highest-degree node,
+    // then assert that (a) the engine marks active edges and (b) pixels are lit.
     await page.goto("/explorer.html");
-    await page.waitForLoadState("networkidle");
-    await page.evaluate(() => { (window as any).startExploration?.("calculus_field"); });
-    await page.waitForTimeout(1800);
-    const deg = await page.evaluate(CLICK_HUB);
-    expect(deg).toBeGreaterThan(0);
+
+    await expect.poll(async () =>
+        page.evaluate(() => !!(window as any).__nodusExplorer?.ready())
+    , { timeout: 15000 }).toBeTruthy();
+
+    await page.evaluate(() => {
+        (window as any).__nodusExplorer.startExploration("calculus_field");
+    });
+
+    await expect.poll(async () =>
+        page.evaluate(() => ((window as any).__nodusExplorer?.nodeIds() ?? []).length)
+    , { timeout: 8000 }).toBeGreaterThan(0);
+
+    // Let the layout settle.
+    await page.waitForTimeout(1500);
+
+    // Find the highest-degree visible node; select it programmatically to avoid
+    // canvas hit-test flakiness from in-flight simulation movement.
+    const targetId = await page.evaluate(() => {
+        const exp = (window as any).__nodusExplorer;
+        let best: string | null = null, bestDeg = -1;
+        for (const id of exp.nodeIds()) {
+            const deg = exp.degree(id);
+            if (deg > bestDeg) { bestDeg = deg; best = id; }
+        }
+        return best;
+    });
+    expect(targetId, "should find a visible node").toBeTruthy();
+
+    const targetDeg = await page.evaluate((id) => (window as any).__nodusExplorer.degree(id), targetId);
+    expect(targetDeg).toBeGreaterThan(0);
+
+    await page.evaluate((id) => (window as any).__nodusExplorer.selectNode(id), targetId);
     await page.waitForTimeout(600);
-    await assertGlow(page);
+
+    const debug = await page.evaluate(() => (window as any).__nodusExplorer.debug());
+    expect(debug.activeEdges ?? 0, "focus-curve edges should light up after click").toBeGreaterThan(0);
+
+    // Pixel proof: the selected star's neighbourhood must be visibly lit.
+    const litPixels = await page.evaluate((id) => {
+        const exp = (window as any).__nodusExplorer;
+        const p = exp.screenPos(id);
+        if (!p) return 0;
+        const c = document.getElementById("canvas") as HTMLCanvasElement;
+        const ctx = c.getContext("2d")!;
+        const dpr = c.width / innerWidth;
+        const size = Math.round(80 * dpr);
+        const x = Math.max(0, Math.round(p.x * dpr - size / 2));
+        const y = Math.max(0, Math.round(p.y * dpr - size / 2));
+        const img = ctx.getImageData(x, y, size, size).data;
+        let lit = 0;
+        for (let i = 0; i < img.length; i += 4) {
+            if (img[i] + img[i + 1] + img[i + 2] > 90) lit++;
+        }
+        return lit;
+    }, targetId);
+    expect(litPixels, "pixels around the selected explorer star should be lit").toBeGreaterThan(100);
 });

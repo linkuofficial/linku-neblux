@@ -21,16 +21,23 @@ test("app: node panel fills with streamed description", async ({ page }) => {
 });
 
 test("explorer: node panel fills with streamed description", async ({ page }) => {
+    // Canvas renderer: start exploration, wait for nodes, then click the seed node.
     await page.goto("/explorer.html");
-    await page.waitForLoadState("networkidle");
-    await page.evaluate(() => (window as any).startExploration?.("mathematics_field"));
-    await page.waitForTimeout(1500);
-    // Open the seed node's panel.
-    await page.evaluate(() => {
-        const n = document.querySelector("g.node") as any;
-        const target = n?.querySelector("circle.hit") || n?.querySelector("circle.core");
-        target?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
-    });
+
+    await expect.poll(async () =>
+        page.evaluate(() => !!(window as any).__nodusExplorer?.ready())
+    , { timeout: 15000 }).toBeTruthy();
+
+    await page.evaluate(() => (window as any).__nodusExplorer.startExploration("mathematics_field"));
+
+    await expect.poll(async () =>
+        page.evaluate(() => ((window as any).__nodusExplorer?.nodeIds() ?? []).length)
+    , { timeout: 8000 }).toBeGreaterThan(0);
+
+    // Let the layout settle, then open the seed node's panel directly.
+    await page.waitForTimeout(1200);
+    await page.evaluate(() => (window as any).__nodusExplorer.selectNode("mathematics_field"));
+
     await expect
         .poll(() => panelDescLen(page), { timeout: 15000 })
         .toBeGreaterThan(0);
