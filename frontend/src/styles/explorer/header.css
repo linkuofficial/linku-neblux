@@ -1,27 +1,51 @@
 /* header — explorer.html only.  Shared base: ../components/header.css. */
 
+/* Single horizontal row: [NODUS Explorer] │ [Home  Graph]. */
+#hdr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+}
+
+#hdr h1 {
+    margin-bottom: 0;
+}
+
 #hdr-nav {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 10px;
+    margin: 0;
+    padding-left: 11px;
+    border-left: 0.5px solid var(--rail-divider);
+}
+
+/* divider now lives between title and nav, not between the two links */
+.hdr-nav-sep {
+    display: none;
+}
+
+/* "Knowledge Graph" subtitle is redundant with the title + breadcrumb. */
+#hdr-subtitle {
+    display: none;
 }
 
 #hdr-nav a {
     text-decoration: none;
     color: var(--ink-soft);
     font-size: 10px;
-    padding: 4px 8px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    background: rgba(255, 255, 255, 0.03);
-    transition: color 0.18s ease, background 0.18s ease, opacity 0.18s ease;
-    opacity: 0.78;
+    padding: 3px 7px;
+    border-radius: var(--radius-sm);
+    border: 0;
+    background: transparent;
+    transition: color 0.18s ease, background 0.18s ease;
+    opacity: 0.85;
 }
 
 #hdr-nav a:hover {
-    color: rgba(240, 192, 80, 0.96);
-    background: rgba(240, 192, 80, 0.08);
+    color: var(--accent);
+    background: var(--seg-hover);
     opacity: 1;
 }
 

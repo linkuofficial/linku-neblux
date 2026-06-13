@@ -28,21 +28,24 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    width: 44px;
-    height: 44px;
-    background: rgba(148, 163, 184, 0.14);
-    border: 1px solid rgba(148, 163, 184, 0.22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0;
     border-radius: 999px;
-    color: var(--panel-soft);
-    font-size: 18px;
+    color: var(--panel-faint);
+    font-size: 16px;
     cursor: pointer;
     padding: 0;
-    transition: all 0.2s ease
+    transition: background 0.2s ease, color 0.2s ease
 }
 
 #close:hover {
     color: var(--panel-ink);
-    background: rgba(148, 163, 184, 0.2)
+    background: var(--seg-hover-light)
 }
 
 #p-type {

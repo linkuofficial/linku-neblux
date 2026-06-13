@@ -6,7 +6,7 @@
     right: 20px;
     top: 20px;
     z-index: 6;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 10px;
     display: flex;
     align-items: center;

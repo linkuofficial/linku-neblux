@@ -1,26 +1,50 @@
 /* header — app.html only. Shared base: ../components/header.css. */
 
+/* Single horizontal row (unify with explorer): [Knowledge Graph] │ [← NODUS]. */
+#hdr {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+}
+
+#hdr h1 {
+    order: 1;
+    margin-bottom: 0;
+}
+
+/* node-count readout removed (matches explorer) */
+#stats {
+    display: none !important;
+}
+
 #home-link {
+    order: 2;
     display: inline-flex;
     align-items: center;
     gap: 4px;
     font-size: 11px;
     color: var(--ink-soft);
     text-decoration: none;
-    opacity: 0.62;
-    padding: 5px 10px;
-    margin-bottom: 8px;
-    border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    background: rgba(255, 255, 255, 0.03);
+    opacity: 0.85;
+    margin: 0;
+    padding-left: 11px;
+    border: 0;
+    border-left: 0.5px solid var(--rail-divider);
+    border-radius: 0;
+    background: transparent;
     letter-spacing: 0.05em;
-    transition: opacity 0.2s, background 0.2s;
-    font-family: 'IBM Plex Mono', monospace;
+    transition: opacity 0.2s, color 0.2s;
+    font-family: var(--font-label);
 }
 
 #home-link:hover {
     opacity: 1;
-    background: rgba(255, 255, 255, 0.07);
+    color: var(--accent);
+}
+
+#sim-hint {
+    order: 3;
 }
 
 #sim-hint {

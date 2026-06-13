@@ -12,15 +12,17 @@
    讓手機版的 RWD 精簡失效。內部對齊改由 utilities 的 inline-flex 提供。 */
 .pill-btn {
     align-items: center;
-    gap: 8px;
-    border-color: transparent;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: var(--nodus-radius-control);
+    gap: 7px;
+    padding: 7px 13px;
+    font-family: var(--font-label);
+    border: 0.5px solid var(--rail-border);
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: var(--nodus-radius-md);
     transition: background-color 160ms ease, color 160ms ease;
 }
 
 .pill-btn:hover {
-    background-color: rgba(255, 255, 255, 0.09);
+    background-color: var(--seg-hover);
 }
 
 .pill-label {
@@ -32,11 +34,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    min-height: 20px;
-    padding: 0 7px;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    min-width: 30px;
+    min-height: 18px;
+    padding: 0 6px;
+    border-radius: var(--nodus-radius-sm);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.04);
     font-family: 'JetBrains Mono', monospace;
     font-size: 9px;

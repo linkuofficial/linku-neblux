@@ -11,6 +11,20 @@
     --nodus-glass-border: rgba(255, 255, 255, 0.08);
     --nodus-glass-shadow: 0 0 20px rgba(196, 198, 206, 0.05);
 
+    /* ── Button system (B segmented rail + C ghost) — shared by app + explorer ──
+       One container holds the glass/blur; inner buttons are borderless segments.
+       active text = --nodus-accent. Dark = graph chrome, light = detail panel. */
+    --rail-bg:            rgba(12, 14, 22, 0.55);
+    --rail-border:        rgba(255, 255, 255, 0.09);
+    --rail-divider:       rgba(255, 255, 255, 0.06);
+    --seg-hover:          rgba(255, 255, 255, 0.05);
+    --seg-active:         rgba(240, 192, 80, 0.18);
+    --rail-bg-light:      rgba(148, 163, 184, 0.08);
+    --rail-border-light:  rgba(148, 163, 184, 0.22);
+    --rail-divider-light: rgba(148, 163, 184, 0.22);
+    --seg-hover-light:    rgba(148, 163, 184, 0.14);
+    --seg-active-light:   rgba(240, 192, 80, 0.22);
+
     /* ── Type families ─────────────────────────────────────────────────────
        Oxanium now drives display + headlines (was Sora); Sora stays for body.
        Space Grotesk dropped — node/tooltip titles use Oxanium. */

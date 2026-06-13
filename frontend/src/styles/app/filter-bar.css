@@ -1,7 +1,28 @@
 /* filter-bar — app.html only. Shared base: ../components/filter-bar.css. */
 
+/* Merged search+filter card (unify with explorer): flush under the search
+   input, same 520px width, rounded bottom, hairline divider from the input. */
+#filter-bar {
+    top: 66px;
+    width: 460px;
+    max-width: 94vw;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: var(--rail-bg);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-top: 0.5px solid var(--rail-divider);
+    box-shadow: var(--shadow-soft);
+}
+
+#filter-bar .filter-btn {
+    font-size: 10px;
+    padding: 5px 6px;
+    letter-spacing: 0.02em;
+}
+
 body.top-ui-collapsed #filter-bar {
-    transform: translateX(-50%) translateY(-44px);
+    /* same translate as #search-box (-34) so the merged card collapses as one unit */
+    transform: translateX(-50%) translateY(-34px);
     opacity: 0;
     pointer-events: none
 }

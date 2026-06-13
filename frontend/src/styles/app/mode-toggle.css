@@ -1,41 +1,38 @@
 /* mode-toggle — app.html only. (app-only component.) */
 
+/* Recipe C — ghost (no container chrome; light buttons that recede). */
 #mode-toggle {
     position: fixed;
     left: 20px;
-    top: 118px;
+    top: 74px;
     z-index: 6;
     display: flex;
-    gap: 12px;
-    align-items: flex-start
+    gap: 4px;
+    align-items: center
 }
 
 .mode-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 13px;
-    padding: 13px 20px;
-    min-height: 48px;
-    border: 1px solid var(--line-subtle);
-    background: var(--glass-1);
-    color: #9db0c8;
-    cursor: pointer;
-    border-radius: 999px;
-    transition: all 0.2s;
     display: flex;
     align-items: center;
-    gap: 8px;
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-soft)
+    gap: 7px;
+    font-family: var(--font-label);
+    font-size: 12px;
+    padding: 7px 12px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease
 }
 
 .mode-btn:hover {
-    background: rgba(190, 207, 226, 0.12)
+    background: var(--seg-hover);
+    color: var(--ink-main)
 }
 
 .mode-btn.active {
-    background: rgba(240, 192, 80, 0.16);
-    border-color: rgba(240, 192, 80, 0.62);
-    color: #f6c86a
+    color: var(--accent)
 }
 
 .mode-indicator {
@@ -46,5 +43,5 @@
 }
 
 #help-btn {
-    padding-inline: 18px;
+    padding-inline: 12px;
 }

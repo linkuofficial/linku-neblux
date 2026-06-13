@@ -691,11 +691,12 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             document.getElementById('welcome-subtitle').textContent = t('welcomeSubtitle');
             document.getElementById('recommend-title').textContent = t('recommended');
             document.getElementById('search-input').placeholder = t('searchPlaceholder');
-            document.getElementById('btn-reset').innerHTML = `↺ ${t('btnReset')}`;
-            document.getElementById('btn-fit').innerHTML = `⊡ ${t('btnFit')}`;
-            document.getElementById('btn-undo').innerHTML = `↶ ${t('btnUndo')}`;
-            document.getElementById('btn-help').innerHTML = `⌘ ${t('btnHelp')}`;
-            document.getElementById('btn-tour').innerHTML = `? ${t('btnGuide')}`;
+            // Labels only — the leading <svg class="btn-ico"> stays untouched.
+            document.querySelector('#btn-reset .btn-label').textContent = t('btnReset');
+            document.querySelector('#btn-fit .btn-label').textContent = t('btnFit');
+            document.querySelector('#btn-undo .btn-label').textContent = t('btnUndo');
+            document.querySelector('#btn-help .btn-label').textContent = t('btnHelp');
+            document.querySelector('#btn-tour .btn-label').textContent = t('btnGuide');
             document.getElementById('btn-reset').title = t('btnResetTitle');
             document.getElementById('btn-fit').title = t('btnFitTitle');
             document.getElementById('btn-undo').title = t('btnUndoTitle');
@@ -1149,9 +1150,8 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
         // ===== ZOOM / PAN =====
         function updateFocusButton() {
             const btn = document.getElementById('btn-focus');
-            if (focusDepth === 0) btn.textContent = `◎ ${t('focusOff')}`;
-            else if (focusDepth === 1) btn.textContent = `◎ ${t('focus1')}`;
-            else btn.textContent = `◎ ${t('focus2')}`;
+            const label = focusDepth === 0 ? t('focusOff') : focusDepth === 1 ? t('focus1') : t('focus2');
+            btn.querySelector('.btn-label').textContent = label;
             btn.classList.toggle('active', focusDepth > 0);
         }
 
@@ -1316,14 +1316,10 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 
             expandNode(id);
 
-            setTimeout(() => {
-                const node = sim.nodes().find(n => n.id === id);
-                if (node) {
-                    const W = window.innerWidth, H = window.innerHeight;
-                    const transform = d3.zoomIdentity.translate(W / 2, H / 2).scale(1.2).translate(-node.x, -node.y);
-                    canvasSel.transition().duration(600).call(zoomBehavior.transform, transform);
-                }
-            }, 800);
+            // Fit the whole freshly-expanded cluster into view (same logic as the
+            // Fit button) once the force layout has settled — centering on the lone
+            // source node left it pinned to a viewport edge.
+            setTimeout(fitView, 800);
         }
 
         function resetGraph() {
@@ -1528,6 +1524,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 
             function hideResults(clearInput = false) {
                 results.style.display = 'none';
+                document.body.classList.remove('search-open');
                 activeIndex = -1;
                 if (clearInput) input.value = '';
             }
@@ -1545,10 +1542,13 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                     </div>`;
                 }).join('');
                 results.style.display = 'block';
+                document.body.classList.add('search-open');
                 results.querySelectorAll('.sr').forEach(el => el.addEventListener('click', () => selectResult(el.dataset.id)));
             }
             function selectResult(id) {
                 hideResults(true);
+                const node = nodeMap[id];
+                if (node) input.value = nodeLabel(node);
                 input.blur();
                 startExploration(id);
             }
@@ -1794,7 +1794,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 const btn = document.createElement('div');
                 btn.className = 'filter-btn' + (d === 'ALL' ? ' active' : '');
                 btn.textContent = d;
-                btn.style.color = d === 'ALL' ? '#c8d0dc' : (DC[d] || '#556');
+                btn.style.color = d === 'ALL' ? '' : (DC[d] || '');
                 btn.dataset.domain = d;
                 btn.onclick = () => {
                     bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));

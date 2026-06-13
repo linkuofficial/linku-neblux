@@ -29,12 +29,12 @@
     <div id="top-chrome-trigger" aria-hidden="true" aria-expanded="true"></div>
     <div id="top-chrome-hint" aria-hidden="true"></div>
     <div id="hdr">
+        <h1 id="hdr-title">Nodus Explorer</h1>
         <div id="hdr-nav">
             <a id="hdr-home-link" href="index.html">Home</a>
             <span class="hdr-nav-sep" aria-hidden="true">/</span>
             <a id="hdr-graph-link" href="app.html">Graph</a>
         </div>
-        <h1 id="hdr-title">Nodus Explorer</h1>
         <p id="hdr-subtitle">Knowledge Graph</p>
     </div>
 
@@ -47,6 +47,7 @@
     <div id="stats"></div>
 
     <div id="search-box">
+        <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.34-4.34"/></svg>
         <input id="search-input" type="text" placeholder="Search a concept to start exploring..." autocomplete="off"
             spellcheck="false">
         <div id="search-results"></div>
@@ -65,12 +66,12 @@
     </div>
 
     <div id="controls">
-        <button class="ctrl-btn" id="btn-reset" title="Clear graph and start over">↺ Reset</button>
-        <button class="ctrl-btn" id="btn-fit" title="Fit view to all visible nodes">⊡ Fit</button>
-        <button class="ctrl-btn" id="btn-undo" title="Undo last expand (Ctrl+Z)" disabled>↶ Undo</button>
-        <button class="ctrl-btn" id="btn-focus" title="Cycle focus depth: Off, 1-Hop, 2-Hop">◎ Focus Off</button>
-        <button class="ctrl-btn" id="btn-help" title="Open keyboard shortcuts and explorer help">⌘ Help</button>
-        <button class="ctrl-btn" id="btn-tour" title="Replay quick guide">? Guide</button>
+        <button class="ctrl-btn" id="btn-reset" title="Clear graph and start over"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg><span class="btn-label">Reset</span></button>
+        <button class="ctrl-btn" id="btn-fit" title="Fit view to all visible nodes"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg><span class="btn-label">Fit</span></button>
+        <button class="ctrl-btn" id="btn-undo" title="Undo last expand (Ctrl+Z)" disabled><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg><span class="btn-label">Undo</span></button>
+        <button class="ctrl-btn" id="btn-focus" title="Cycle focus depth: Off, 1-Hop, 2-Hop"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><span class="btn-label">Focus Off</span></button>
+        <button class="ctrl-btn" id="btn-help" title="Open keyboard shortcuts and explorer help"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg><span class="btn-label">Help</span></button>
+        <button class="ctrl-btn" id="btn-tour" title="Replay quick guide"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span class="btn-label">Guide</span></button>
     </div>
 
     <div id="breadcrumb"></div>
@@ -141,7 +142,7 @@
     <canvas id="explorer-overlay" style="position:fixed;inset:0;pointer-events:none;z-index:1"></canvas>
 
     <div id="panel">
-        <button id="close">&#x2715;</button>
+        <button id="close" aria-label="Close panel"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
         <div id="p-type"></div>
         <div id="p-label"></div>
         <div id="p-domains"></div>
@@ -154,11 +155,9 @@
             <button id="p-conn-more" class="p-conn-toggle" style="display:none">Show all</button>
         </div>
         <div id="p-actions">
-            <button class="p-act-btn" id="pa-expand" title="Expand connections">⊕ Expand</button>
-            <button class="p-act-btn" id="pa-collapse" title="Collapse this node" style="display:none">⊖
-                Collapse</button>
-            <button class="p-act-btn" id="pa-path" title="Find path from last selected" style="display:none">⤳
-                Path</button>
+            <button class="p-act-btn" id="pa-expand" title="Expand connections"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg><span class="btn-label">Expand</span></button>
+            <button class="p-act-btn" id="pa-collapse" title="Collapse this node" style="display:none"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/></svg><span class="btn-label">Collapse</span></button>
+            <button class="p-act-btn" id="pa-path" title="Find path from last selected" style="display:none"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><span class="btn-label">Path</span></button>
         </div>
     </div>
 

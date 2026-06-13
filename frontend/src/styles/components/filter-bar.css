@@ -1,16 +1,24 @@
 /* filter-bar — shared chrome for app.html + explorer.html · canonical design: app. */
 /* Filter bar */
 
+/* Recipe B — segmented filter rail (one glass container, borderless segments). */
 #filter-bar {
     position: fixed;
     top: 74px;
     left: 50%;
     transform: translateX(-50%) translateY(0);
     display: flex;
-    gap: 6px;
+    gap: 0;
     flex-wrap: wrap;
-    z-index: 6;
+    /* above #top-chrome-trigger (z9) — it's a transparent hover zone that was
+       eating filter-chip clicks; hover still fires on the bar itself. */
+    z-index: 10;
     justify-content: center;
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--rail-border);
+    background: var(--rail-bg);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
     opacity: 1;
     transition: transform 0.28s var(--ease-ui), opacity 0.22s ease
 }
@@ -23,6 +31,9 @@
     width: min(760px, 95vw);
     height: 154px;
     z-index: 9;
+    /* must not eat clicks on the chrome beneath it (filter chips); the
+       expand-on-approach still fires via mouseenter on the chrome elements. */
+    pointer-events: none;
     background: transparent
 }
 
@@ -63,27 +74,38 @@ body.top-ui-collapsed #top-chrome-hint {
 }
 
 .filter-btn {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 12px;
-    padding: 10px 14px;
-    min-height: 44px;
-    border: 1px solid var(--line-subtle);
-    background: var(--glass-1);
-    color: #b7c8dc;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-label);
+    font-size: 11px;
+    padding: 8px 12px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
     cursor: pointer;
-    border-radius: 999px;
-    letter-spacing: 1px;
-    transition: all 0.15s;
-    backdrop-filter: blur(10px)
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    transition: background 0.15s ease, color 0.15s ease
+}
+
+.filter-btn + .filter-btn {
+    border-left: 0.5px solid var(--rail-divider)
+}
+
+.fb-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0
 }
 
 .filter-btn.active {
-    background: rgba(240, 192, 80, 0.25);
-    border-color: rgba(240, 192, 80, 0.75);
-    color: #f7db95 !important;
-    box-shadow: 0 0 0 1px rgba(240, 192, 80, 0.32), 0 8px 22px rgba(240, 192, 80, 0.2)
+    background: var(--seg-active);
+    color: var(--accent) !important
 }
 
 .filter-btn:hover {
-    background: rgba(190, 207, 226, 0.18)
+    background: var(--seg-hover);
+    color: var(--ink-main)
 }

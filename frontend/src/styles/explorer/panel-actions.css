@@ -13,20 +13,23 @@
 
 .p-act-btn {
     flex: 1;
-    padding: 9px 10px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    border: 1px solid rgba(148, 163, 184, 0.24);
-    border-radius: 999px;
-    background: rgba(148, 163, 184, 0.08);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 10px;
+    font-family: var(--font-label);
+    font-size: 11px;
+    border: 0.5px solid var(--rail-border-light);
+    border-radius: var(--radius-sm);
+    background: var(--rail-bg-light);
     color: var(--panel-soft);
     cursor: pointer;
-    transition: all 0.15s;
-    text-align: center;
+    transition: background 0.15s, color 0.15s;
 }
 
 .p-act-btn:hover {
-    background: rgba(148, 163, 184, 0.16);
+    background: var(--seg-hover-light);
     color: var(--panel-ink);
 }
 
@@ -34,20 +37,20 @@
     display: block;
     width: 100%;
     padding: 8px;
-    margin-top: 6px;
-    font-family: 'IBM Plex Mono', monospace;
+    margin-top: 4px;
+    font-family: var(--font-label);
     font-size: 10px;
     color: var(--panel-faint);
     background: none;
-    border: 1px dashed rgba(148, 163, 184, 0.22);
+    border: 0;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    transition: all 0.15s;
+    transition: color 0.15s, background 0.15s;
 }
 
 .p-conn-toggle:hover {
     color: var(--panel-soft);
-    border-color: rgba(148, 163, 184, 0.4);
+    background: var(--seg-hover-light);
 }
 
 #p-conn-count {

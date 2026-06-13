@@ -68,20 +68,30 @@
 }
 
 .ob-btn {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 10px;
-    padding: 7px 12px;
-    border-radius: 999px;
-    border: 1px solid var(--line-subtle);
-    background: rgba(191, 212, 236, 0.08);
-    color: #dce8f6;
+    padding: 7px 14px;
+    border-radius: var(--radius-md);
+    border: 0.5px solid var(--rail-border);
+    background: transparent;
+    color: var(--ink-main);
     cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.ob-btn:hover {
+    background: var(--seg-hover);
 }
 
 .ob-btn.primary {
-    background: rgba(240, 192, 80, 0.16);
-    border-color: rgba(240, 192, 80, 0.48);
-    color: #f7d27d;
+    background: rgba(240, 192, 80, 0.92);
+    border-color: transparent;
+    color: #1a1208;
+    font-weight: 600;
+}
+
+.ob-btn.primary:hover {
+    background: rgba(240, 192, 80, 1);
 }
 
 .tour-target {

@@ -3,3 +3,30 @@
 #search-form {
     margin: 0;
 }
+
+/* Merged search+filter card (unify with explorer): wider input, leading
+   magnifier, squared bottom so the filter strip below reads as one card. */
+#search-input,
+#search-results {
+    width: 460px;
+}
+
+#search-input {
+    padding-left: 42px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    /* one card, one divider (see explorer/search.css) */
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.search-ico {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    color: var(--ink-faint);
+    pointer-events: none;
+    z-index: 1;
+}

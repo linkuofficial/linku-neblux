@@ -1,5 +1,36 @@
 /* search — explorer.html only.  Shared base: ../components/search.css. */
 
+/* Merged search+filter card: match the filter width, leading magnifier icon,
+   and (once the filter strip shows below) square the input's bottom so they
+   read as one card. */
+#search-input,
+#search-results {
+    width: 460px;
+}
+
+/* The filter strip is always present below the search in explorer, so square the
+   input's bottom + drop its border/shadow UNCONDITIONALLY (not via :has — the
+   filter doesn't carry .visible on the welcome screen, which left the card split).
+   One card, one divider (the filter's border-top); card shadow from the filter. */
+#search-input {
+    padding-left: 42px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 0;
+    box-shadow: none;
+}
+
+.search-ico {
+    position: absolute;
+    left: 16px;
+    top: 15px;
+    width: 16px;
+    height: 16px;
+    color: var(--ink-faint);
+    pointer-events: none;
+    z-index: 1;
+}
+
 .sr:first-child {
     border-radius: var(--radius-md) var(--radius-md) 0 0;
 }

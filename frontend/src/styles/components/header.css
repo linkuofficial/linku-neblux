@@ -5,25 +5,25 @@
     position: fixed;
     left: 20px;
     top: 20px;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     z-index: 6;
-    padding: 14px 18px;
+    padding: 11px 15px;
     border-radius: var(--radius-md);
-    background: var(--glass-1);
-    border: 1px solid var(--line-subtle);
-    backdrop-filter: blur(14px);
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
+    backdrop-filter: blur(12px);
     box-shadow: var(--shadow-soft)
 }
 
 #hdr h1 {
-    font-size: 18px;
+    font-size: 15px;
     color: #d7e3f0;
-    letter-spacing: 2.4px;
+    letter-spacing: 1.8px;
     text-transform: uppercase;
-    margin-bottom: 6px
+    margin-bottom: 3px
 }
 
 #hdr p {
-    font-size: 12px;
-    color: #9db0c8
+    font-size: 11px;
+    color: #aebfd4
 }

@@ -39,10 +39,28 @@
 }
 
 @media (max-width: 760px) {
+    /* Collapse the header to just the ← NODUS back link (mirrors explorer's
+       mobile declutter): drop the glass box, hide title/stats/sim-hint so the
+       full-width search below it has a clear row. */
     #hdr {
         top: 12px;
         left: 12px;
-        padding: 8px 10px
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    #hdr h1,
+    #stats,
+    #sim-hint {
+        display: none;
+    }
+
+    #home-link {
+        margin-bottom: 0;
     }
 
     #search-box {
@@ -53,15 +71,25 @@
 
     #search-input,
     #search-results {
-        width: min(66vw, 260px)
+        width: calc(100vw - 24px)
     }
 
     #filter-bar {
-        top: 112px;
+        top: 108px;
         left: 12px;
         transform: none;
-        max-width: 72vw;
-        justify-content: flex-start
+        width: calc(100vw - 24px);
+        max-width: none;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        overflow: visible;
+        border-radius: 0 0 var(--radius-md) var(--radius-md)
+    }
+
+    .filter-btn {
+        min-height: 30px;
+        padding: 5px 8px;
+        font-size: 10px
     }
 
     #top-chrome-trigger,
@@ -115,8 +143,9 @@
     }
 
     #mode-toggle {
-        top: 82px;
-        gap: 8px;
+        top: auto;
+        bottom: 82px;
+        gap: 0;
     }
 
     .mode-btn {

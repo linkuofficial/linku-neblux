@@ -7,7 +7,7 @@
     background: rgba(148, 163, 184, 0.08);
     border: 1px solid rgba(148, 163, 184, 0.25);
     color: #475569;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 11px;
     cursor: pointer;
     text-align: center;
@@ -29,7 +29,7 @@
     background: rgba(240, 192, 80, 0.12);
     border: 1px solid rgba(240, 192, 80, 0.45);
     color: #8a5e12;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 12px;
     letter-spacing: 0.6px;
     cursor: pointer;

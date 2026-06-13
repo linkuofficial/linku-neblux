@@ -15,7 +15,8 @@
 
     #search-input,
     #search-results {
-        width: calc(100vw - 24px);
+        /* leave a 140px slot at the top-right for #lang-toggle (M1) */
+        width: calc(100vw - 24px - 140px);
     }
 
     #search-results {
@@ -48,9 +49,9 @@
     }
 
     #stats {
-        right: 12px;
-        top: 66px;
-        max-width: 210px;
+        /* M2: declutter on mobile (matches hidden hdr/legend/recommend). JS shows
+           it via inline display:block, so !important is required to override. */
+        display: none !important;
     }
 
     #lang-toggle {
@@ -62,35 +63,50 @@
         left: 12px;
         right: 12px;
         top: auto;
-        bottom: 12px;
+        bottom: 14px;
+        transform: none;
         width: auto;
-        padding: 6px;
+        padding: 0;
         flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+        justify-content: space-around;
         opacity: 0.96;
     }
 
-    #controls::-webkit-scrollbar {
+    /* icon-only on mobile so all six controls fit with no horizontal scroll */
+    #controls .btn-label {
         display: none;
     }
 
+    /* T1: 44px touch target on the icon controls (mobile only). */
+    .ctrl-btn {
+        min-height: 44px;
+    }
+
+    /* Bottom toolbar removed — breadcrumb sits at the bottom. */
+    #breadcrumb {
+        bottom: 16px;
+    }
+
+    /* Keep the merged card connected on mobile: flush under the search input
+       (top 12 + 46 = 58), same narrowed width, rounded bottom only. Chips wrap
+       within that width on very narrow screens. */
     #filter-bar {
-        top: 70px;
+        top: 58px;
         left: 12px;
         transform: none;
-        width: calc(100vw - 24px);
+        width: calc(100vw - 24px - 140px);
         max-width: none;
         justify-content: flex-start;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 4px 2px;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        border-radius: var(--radius-md);
+        flex-wrap: wrap;
+        overflow: visible;
+        padding: 3px 4px;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+
+    .filter-btn {
+        min-height: 30px;
+        padding: 5px 8px;
+        font-size: 10px;
     }
 
     #top-chrome-trigger,

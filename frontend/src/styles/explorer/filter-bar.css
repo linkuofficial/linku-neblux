@@ -4,13 +4,44 @@
     display: flex;
 }
 
+/* Merged search+filter card: the filter is the bottom half of the card, flush
+   under the search input (top 20 + ~46 input height = 66), same 440px width,
+   rounded bottom only, a hairline divider from the input above. Compact codes
+   fit all 14 on one row. */
+#filter-bar {
+    top: 66px;
+    width: 460px;
+    max-width: 94vw;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: var(--rail-bg);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    border-top: 0.5px solid var(--rail-divider);
+    box-shadow: var(--shadow-soft);
+}
+
+#filter-bar .filter-btn {
+    font-size: 10px;
+    padding: 5px 6px;
+    letter-spacing: 0.02em;
+}
+
+/* While the search dropdown is open it overlays the chip row; fade the chips
+   out (consistent with top-ui-collapsed) so they aren't trapped under it. */
+body.search-open #filter-bar.visible {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-8px);
+}
+
 body.top-ui-collapsed #stats {
     transform: translateY(-18px);
     opacity: 0.2;
 }
 
 body.top-ui-collapsed #filter-bar.visible {
-    transform: translateX(-50%) translateY(-44px);
+    /* same translate as #search-box (-34) so the merged card collapses as one unit */
+    transform: translateX(-50%) translateY(-34px);
     opacity: 0;
     pointer-events: none;
 }

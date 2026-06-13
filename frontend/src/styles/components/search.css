@@ -3,7 +3,7 @@
 
 #search-box {
     position: fixed;
-    top: 24px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%) translateY(0);
     z-index: 10;
@@ -13,16 +13,16 @@
 
 #search-input {
     width: 400px;
-    min-height: 48px;
-    padding: 14px 18px;
-    background: var(--glass-2);
-    border: 1px solid var(--line-subtle);
+    min-height: 46px;
+    padding: 13px 18px;
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
     color: #d4dfed;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 13px;
     border-radius: var(--radius-md);
     outline: none;
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
     box-shadow: var(--shadow-soft);
     transition: border-color 0.2s ease, background 0.2s ease
 }
@@ -52,10 +52,13 @@
 }
 
 .sr {
-    padding: 11px 14px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 14px;
     font-size: 12px;
     cursor: pointer;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     transition: background 0.15s ease
 }
 

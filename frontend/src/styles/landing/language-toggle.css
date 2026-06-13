@@ -31,9 +31,11 @@
 }
 
 #ctaExplore {
-    letter-spacing: 0.02em;
-    border-radius: var(--nodus-radius-control);
-    background: rgba(240, 192, 80, 0.9) !important;
+    letter-spacing: 0.04em;
+    padding: 10px 22px;
+    font-family: var(--font-label);
+    border-radius: var(--nodus-radius-md);
+    background: rgba(240, 192, 80, 0.92) !important;
     color: #1a1208 !important;
     border-color: transparent !important;
     font-weight: 600;
@@ -44,48 +46,44 @@
 }
 
 #nodeCount {
-    color: rgba(212, 228, 250, 0.6) !important;
+    display: none !important;
 }
 
+/* Recipe C — ghost (no container chrome; two text links + faint divider). */
 .footer-nav {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(18, 22, 30, 0.68);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+    gap: 2px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    backdrop-filter: none;
+    box-shadow: none;
 }
 
 .footer-nav a {
     text-decoration: none;
-    color: rgba(212, 228, 250, 0.72);
-    padding: 8px 14px;
-    border-radius: 999px;
-    transition: color 160ms ease, background 160ms ease, opacity 160ms ease;
+    color: var(--ink-soft);
+    padding: 7px 13px;
+    border-radius: var(--nodus-radius-sm);
+    transition: color 160ms ease, background 160ms ease;
 }
 
 .footer-nav a:hover {
-    color: rgba(240, 192, 80, 0.96);
-    background: rgba(240, 192, 80, 0.08);
+    color: var(--accent);
+    background: var(--seg-hover);
 }
 
 .footer-sep {
-    width: 1px;
-    height: 18px;
-    background: rgba(255, 255, 255, 0.08);
+    width: 0.5px;
+    height: 14px;
+    background: var(--rail-divider);
 }
 
 @media (max-width: 767px) {
-    .footer-nav {
-        gap: 8px;
-        padding: 8px 10px;
-    }
-
     .footer-nav a {
-        padding: 8px 12px;
+        padding: 10px 16px;
     }
 
     /* 手機加大語言鍵的觸控區（垂直 padding），維持 ≥40px 點擊高度 */

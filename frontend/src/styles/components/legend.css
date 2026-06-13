@@ -7,13 +7,13 @@
     bottom: 20px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     z-index: 6;
-    padding: 10px 12px;
-    background: var(--glass-1);
-    border: 1px solid var(--line-subtle);
+    padding: 11px 13px;
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
     border-radius: var(--radius-md);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(12px);
     box-shadow: var(--shadow-soft)
 }
 
