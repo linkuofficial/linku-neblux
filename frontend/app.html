@@ -5,20 +5,30 @@
     <meta charset="UTF-8">
     <script src="/lang-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Explore the Nodus knowledge graph with prerequisites, connections, and multilingual learning paths.">
-    <meta property="og:title" content="Nodus Knowledge Graph">
-    <meta property="og:description"
-        content="Explore connected concepts, people, and events with guided learning paths.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/favicon.svg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nodus Knowledge Graph">
-    <meta name="twitter:description"
-        content="Explore connected concepts, people, and events with guided learning paths.">
-    <meta name="twitter:image" content="/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#0a0e27">
     <title>Knowledge Graph — Nodus</title>
+    <meta name="description"
+        content="Explore the Nodus knowledge graph: search any concept and trace what it builds on, where it leads, and how every field connects.">
+    <link rel="canonical" href="https://nodus.linku.tech/app.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Nodus">
+    <meta property="og:url" content="https://nodus.linku.tech/app.html">
+    <meta property="og:title" content="Knowledge Graph — Nodus">
+    <meta property="og:description"
+        content="Search any concept and trace how ideas, people, and events connect across every field.">
+    <meta property="og:image" content="https://nodus.linku.tech/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Knowledge Graph — Nodus">
+    <meta name="twitter:description"
+        content="Search any concept and trace how ideas, people, and events connect across every field.">
+    <meta name="twitter:image" content="https://nodus.linku.tech/og-image.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="stylesheet" href="/nodus-fonts.css">
     <link rel="stylesheet" href="/nodus-theme.css">
     <link rel="stylesheet" href="src/shared.css">
@@ -35,16 +45,16 @@
         <button id="loading-retry" type="button">Retry</button>
     </div>
     <div id="welcome-overlay" aria-label="Welcome">
-        <p id="welcome-text">Search a concept to start exploring</p>
+        <p id="welcome-text">Search any concept, and follow where it connects.</p>
     </div>
     <div id="app-onboard" aria-hidden="true">
         <div id="app-onboard-card" role="dialog" aria-modal="true" aria-labelledby="app-onboard-title">
-            <div id="app-onboard-step">FIRST VISIT</div>
-            <h2 id="app-onboard-title">How to use the graph</h2>
+            <div id="app-onboard-step">FIRST LIGHT</div>
+            <h2 id="app-onboard-title">How to explore the field</h2>
             <ul id="app-onboard-list">
-                <li id="app-onboard-item-1" class="is-active">Click any node to open details and center the graph.</li>
-                <li id="app-onboard-item-2">Drag the canvas to move. Use the mouse wheel or trackpad to zoom.</li>
-                <li id="app-onboard-item-3">Use subject filters or Learning Path mode to narrow what to study next.</li>
+                <li id="app-onboard-item-1" class="is-active">Open any star to read it and bring it to the center.</li>
+                <li id="app-onboard-item-2">Drag to move through the field. Scroll or pinch to zoom.</li>
+                <li id="app-onboard-item-3">Use subject filters or Learning Path to chart what to explore next.</li>
             </ul>
             <div id="app-onboard-actions">
                 <button id="app-onboard-dismiss" class="guide-btn" type="button">Skip</button>
@@ -56,7 +66,7 @@
         <div id="shortcuts-card" role="dialog" aria-modal="true" aria-labelledby="shortcuts-title">
             <div id="shortcuts-kicker">KEYBOARD</div>
             <h2 id="shortcuts-title">Keyboard shortcuts</h2>
-            <p id="shortcuts-intro">A few keys make the graph faster to navigate.</p>
+            <p id="shortcuts-intro">A few keys to move through the field faster.</p>
             <div id="shortcut-list">
                 <div class="shortcut-row">
                     <div class="shortcut-keys"><kbd>/</kbd><kbd>F</kbd></div>
@@ -92,7 +102,7 @@
     <div id="search-box">
         <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.34-4.34"/></svg>
         <form id="search-form" role="search" aria-label="Knowledge graph search">
-            <input id="search-input" type="text" placeholder="Search nodes..." autocomplete="off"
+            <input id="search-input" type="text" placeholder="Search any concept…" autocomplete="off"
                 aria-label="Search nodes" aria-expanded="false" aria-controls="search-results">
             <div id="search-results" role="listbox" aria-label="Search results" aria-live="polite" aria-hidden="true">
             </div>
@@ -130,11 +140,11 @@
         <button id="p-lp-action" type="button">Add to Learning Path</button>
         <div id="p-next-step">Next step will appear in Learning Path mode.</div>
         <div id="p-prereqs">
-            <h4>&#x2191; Prerequisites</h4>
+            <h4>&#x2191; What it builds on</h4>
             <div id="p-prereq-list"></div>
         </div>
         <div id="p-unlocks">
-            <h4>&#x2193; Unlocks</h4>
+            <h4>&#x2193; Where it leads</h4>
             <div id="p-unlock-list"></div>
         </div>
         <div id="p-conns">

@@ -5,20 +5,30 @@
     <meta charset="UTF-8">
     <script src="/lang-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e27">
+    <title>Explorer — Nodus</title>
     <meta name="description"
-        content="Explore Nodus in progressive focus mode to discover concept connections step by step.">
-    <meta property="og:title" content="Nodus Explorer">
-    <meta property="og:description"
-        content="Navigate the knowledge graph with guided expansion, focus modes, and multilingual labels.">
+        content="Explore Nodus step by step: start with one concept and pull in its connections, one at a time.">
+    <link rel="canonical" href="https://nodus.linku.tech/explorer.html">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/favicon.svg">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Nodus Explorer">
+    <meta property="og:site_name" content="Nodus">
+    <meta property="og:url" content="https://nodus.linku.tech/explorer.html">
+    <meta property="og:title" content="Explorer — Nodus">
+    <meta property="og:description"
+        content="Start with one concept and open up the knowledge graph connection by connection.">
+    <meta property="og:image" content="https://nodus.linku.tech/og-image.svg">
+    <meta property="og:image:type" content="image/svg+xml">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explorer — Nodus">
     <meta name="twitter:description"
-        content="Navigate the knowledge graph with guided expansion, focus modes, and multilingual labels.">
-    <meta name="twitter:image" content="/favicon.svg">
+        content="Start with one concept and open up the knowledge graph connection by connection.">
+    <meta name="twitter:image" content="https://nodus.linku.tech/og-image.svg">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <title>Nodus — Explorer</title>
     <link rel="stylesheet" href="/nodus-fonts.css">
     <link rel="stylesheet" href="/nodus-theme.css">
     <link rel="stylesheet" href="src/shared.css">
@@ -48,7 +58,7 @@
 
     <div id="search-box">
         <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.34-4.34"/></svg>
-        <input id="search-input" type="text" placeholder="Search a concept to start exploring..." autocomplete="off"
+        <input id="search-input" type="text" placeholder="Search a concept to begin…" autocomplete="off"
             spellcheck="false">
         <div id="search-results"></div>
     </div>
@@ -56,8 +66,8 @@
     <div id="filter-bar"></div>
 
     <div id="welcome">
-        <h2 id="welcome-title">Search a concept to start exploring</h2>
-        <p id="welcome-subtitle">Type a topic, person, or event — then expand connections</p>
+        <h2 id="welcome-title">Start with one concept — and let it pull in the rest.</h2>
+        <p id="welcome-subtitle">Name a topic, person, or event, then open it up connection by connection.</p>
     </div>
 
     <div id="loading" role="status" aria-live="polite">
@@ -78,7 +88,7 @@
 
     <div id="recommend">
         <div id="recommend-inner">
-            <h4 id="recommend-title">Suggested next</h4>
+            <h4 id="recommend-title">Where to next</h4>
             <div id="rec-list"></div>
         </div>
     </div>
@@ -103,7 +113,7 @@
     <div id="shortcuts">
         <div id="shortcuts-card">
             <h3 id="shortcuts-title">Keyboard Shortcuts</h3>
-            <p id="shortcuts-intro">Use a few keys to move through the explorer faster.</p>
+            <p id="shortcuts-intro">A few keys to move through the field faster.</p>
             <div class="sc-row"><span class="sc-desc" id="sc-search">Search</span><span class="sc-key">Ctrl+K</span>
             </div>
             <div class="sc-row"><span class="sc-desc" id="sc-search-alt">Search (alt)</span><span

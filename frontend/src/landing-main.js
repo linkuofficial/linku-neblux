@@ -417,8 +417,8 @@
             const copy = {
                 en: {
                     heroKicker: 'BEGIN ANYWHERE',
-                    heroTitle: 'It\'s all <span class="text-primary">connected</span>',
-                    heroSubtitle: 'Follow one spark of curiosity wherever it leads.',
+                    heroTitle: 'Everything touches <span class="text-primary">everything</span>',
+                    heroSubtitle: 'Follow one spark of curiosity into the deep field of everything we know.',
                     ctaExplore: 'Start Exploring',
                     placeholder: 'Explore the infinite...',
                     footerCopy: `© ${new Date().getFullYear()} NODUS. EXPLORE THE INFINITE.`,
@@ -427,8 +427,8 @@
                 },
                 zh: {
                     heroKicker: '從任一點開始',
-                    heroTitle: '一切皆<span class="text-primary">相連</span>',
-                    heroSubtitle: '順著一絲好奇，看它通向何方。',
+                    heroTitle: '萬物彼此<span class="text-primary">相連</span>',
+                    heroSubtitle: '順著一絲好奇，潛入人類所知的浩瀚星海。',
                     ctaExplore: '開始探索',
                     placeholder: '探索無限知識…',
                     footerCopy: `© ${new Date().getFullYear()} NODUS．探索無限知識。`,
@@ -437,8 +437,8 @@
                 },
                 ja: {
                     heroKicker: 'どこからでも',
-                    heroTitle: 'すべては<span class="text-primary">つながる</span>',
-                    heroSubtitle: 'ひとつの好奇心を、どこまでも。',
+                    heroTitle: 'すべては、すべてに<span class="text-primary">つながる</span>',
+                    heroSubtitle: 'ひとつの好奇心を追って、知の深宇宙へ。',
                     ctaExplore: '探索する',
                     placeholder: '無限の知識を探索…',
                     footerCopy: `© ${new Date().getFullYear()} NODUS. 知のつながりを探索する。`,
