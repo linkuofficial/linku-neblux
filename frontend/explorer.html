@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <canvas id="bgCanvas"></canvas>
     <div id="top-chrome-trigger" aria-hidden="true" aria-expanded="true"></div>
     <div id="top-chrome-hint" aria-hidden="true"></div>
     <div id="hdr">
@@ -138,7 +137,8 @@
         </div>
     </div>
 
-    <svg id="canvas"></svg>
+    <canvas id="canvas" style="position:fixed;inset:0;width:100%;height:100%"></canvas>
+    <canvas id="explorer-overlay" style="position:fixed;inset:0;pointer-events:none;z-index:1"></canvas>
 
     <div id="panel">
         <button id="close">&#x2715;</button>

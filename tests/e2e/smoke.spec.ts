@@ -85,38 +85,46 @@ test("explorer page loads", async ({ page }) => {
 });
 
 test("explorer node can be dragged after starting exploration", async ({ page }) => {
+    // Canvas renderer: drag goes through real mouse events at the node's screen
+    // position; assertion reads world position from window.__nodusExplorer hook.
     await page.goto("/explorer.html");
 
-    await expect.poll(async () => {
-        return await page.evaluate(() => {
-            return typeof startExploration === "function" && typeof g !== "undefined" && !!g;
-        });
-    }).toBeTruthy();
+    await expect.poll(async () =>
+        page.evaluate(() => !!(window as any).__nodusExplorer?.ready())
+    , { timeout: 15000 }).toBeTruthy();
 
     await page.evaluate(() => {
-        startExploration("calculus_field");
+        (window as any).__nodusExplorer.startExploration("calculus_field");
     });
 
-    await expect.poll(async () => page.locator("g.node").count()).toBeGreaterThan(0);
-    const firstNode = page.locator("g.node").first();
-    const firstCore = page.locator("g.node circle.core").first();
-    await expect(firstCore).toBeVisible();
+    // Wait for nodes to appear and settle a bit.
+    await expect.poll(async () =>
+        page.evaluate(() => ((window as any).__nodusExplorer?.nodeIds() ?? []).length)
+    , { timeout: 8000 }).toBeGreaterThan(0);
+    await page.waitForTimeout(800);
 
-    const initialTransform = await firstNode.getAttribute("transform");
-    const box = await firstCore.boundingBox();
-    if (!box) {
-        throw new Error("Unable to resolve explorer node position for drag test");
-    }
+    // Pick a node comfortably inside the viewport.
+    const id = await page.evaluate(() => {
+        const exp = (window as any).__nodusExplorer;
+        for (const nid of exp.nodeIds()) {
+            const p = exp.screenPos(nid);
+            if (p && p.x > 120 && p.x < innerWidth - 120 && p.y > 120 && p.y < innerHeight - 120) return nid;
+        }
+        return exp.nodeIds()[0];
+    });
 
-    const startX = box.x + box.width / 2;
-    const startY = box.y + box.height / 2;
+    const before = await page.evaluate((nid) => (window as any).__nodusExplorer.worldPos(nid), id);
+    const pos = await page.evaluate((nid) => (window as any).__nodusExplorer.screenPos(nid), id);
 
-    await page.mouse.move(startX, startY);
+    await page.mouse.move(pos.x, pos.y);
     await page.mouse.down();
-    await page.mouse.move(startX + 50, startY + 30, { steps: 8 });
+    await page.mouse.move(pos.x + 50, pos.y + 30, { steps: 8 });
     await page.mouse.up();
 
-    await expect.poll(async () => firstNode.getAttribute("transform")).not.toBe(initialTransform);
+    await expect.poll(async () => {
+        const after = await page.evaluate((nid) => (window as any).__nodusExplorer.worldPos(nid), id);
+        return Math.hypot(after.x - before.x, after.y - before.y);
+    }, { timeout: 4000 }).toBeGreaterThan(5);
 });
 
 test("static data file is accessible", async ({ page }) => {

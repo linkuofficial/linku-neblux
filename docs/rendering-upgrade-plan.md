@@ -1,8 +1,14 @@
 # Nodus 渲染升級計畫（P2：SVG → Canvas）
 
-> 狀態（2026-06-12 更新）：**app 頁已完成 Canvas 化**（分支 `feat/p2-canvas-renderer`，
-> 步驟 1–6 全數執行完畢，11 E2E + 3 視覺 oracle 通過，真實 GPU ~100fps）。
-> 剩餘：步驟 7（explorer 套用同一 renderer）——explorer 目前仍為 SVG，正常運作。
+> 狀態（2026-06-13 更新）：**全部完成。app 與 explorer 皆已 Canvas 化**，共用
+> `engine/canvas-renderer.js`（Deep Field）。SVG 時代的圖視覺 CSS（components/explorer
+> 的 nodes/edges/photon/focus-ring/perf 等 14 檔）已隨遷移移除；兩頁的圖斷言走
+> `window.__nodusApp` / `window.__nodusExplorer` hook + 真實滑鼠 + 像素取樣。
+> explorer 移植時踩到並修掉：d3.zoom 內建 dblclick 搶走展開手勢、雙擊命中需錨定
+> 第一下游標位置（選取會把節點移開）、hook 型測試的盲點（補真實滑鼠測試）。
+>
+> 歷史（分階段）：app 頁步驟 1–6（分支 `feat/p2-canvas-renderer`）→ Deep Field 美術
+> （`feat/deep-field`）→ explorer 步驟 7（`feat/explorer-canvas`）。
 >
 > 實作落點：`src/engine/star-sprites.js`（離屏星體 sprite）+
 > `src/engine/canvas-renderer.js`（場景繪製器，已含 Deep Field：層級/焦點調暗/
