@@ -172,9 +172,9 @@ function structLabel(kind, type) {
             ja: person ? '影響と遺産' : event ? 'その後の影響' : '変えたもの',
         },
         works: {
-            en: person ? 'Notable works & ideas' : event ? 'Key milestones' : 'Key examples',
-            zh: person ? '代表著作與貢獻' : event ? '關鍵里程碑' : '代表案例',
-            ja: person ? '代表的な著作・業績' : event ? '主な節目' : '代表例',
+            en: person ? 'Notable works & ideas' : event ? 'Key moments' : 'Key examples',
+            zh: person ? '代表著作與貢獻' : event ? '經過與關鍵時刻' : '代表案例',
+            ja: person ? '代表的な著作・業績' : event ? '経過と主な出来事' : '代表例',
         },
         links: { en: 'Connections across fields', zh: '跨領域連結', ja: '分野とのつながり' },
     };
