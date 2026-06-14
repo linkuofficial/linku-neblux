@@ -14,10 +14,13 @@ __pycache__/
 # Data files copied to public at build time (derived from data/)
 frontend/public/data/
 
-# Description-upgrade scratch: scores, worklists, batch rewrites, applier backups
-data/_*.json
+# Content-pipeline scratch: scores, worklists, batch rewrites, specs, temp dumps
+data/_*
 data/all_nodes_backup_*.json
 scripts/_*.py
+scripts/_*.cjs
+# Mangled-path dumps from botched shell redirects (e.g. "D:LINKUNodus...txt")
+/*_source.txt
 
 # IDE
 .vscode/
