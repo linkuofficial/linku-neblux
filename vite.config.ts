@@ -20,13 +20,23 @@ function copyDataPlugin() {
             const raw = JSON.parse(readFileSync(resolve(srcDir, 'all_nodes.json'), 'utf8'));
             const nodes = (Array.isArray(raw) ? raw : raw.nodes) as any[];
             const descriptions: Record<string, string> = {};
+            // Structured English sections (type-aware collapsibles). Split out like
+            // descriptions and stripped from the slim topology so the first parse
+            // stays small; streamed in at runtime (see api.fetchGraphSections).
+            const sections: Record<string, any> = {};
             const slimNodes = nodes.map((n: any) => {
-                if (n && typeof n.description === 'string' && n.description) {
-                    descriptions[n.id] = n.description;
-                    const { description, ...rest } = n;
+                let node = n;
+                if (node && node.sections && typeof node.sections === 'object') {
+                    sections[node.id] = node.sections;
+                    const { sections: _drop, ...restNode } = node;
+                    node = restNode;
+                }
+                if (node && typeof node.description === 'string' && node.description) {
+                    descriptions[node.id] = node.description;
+                    const { description, ...rest } = node;
                     return rest;
                 }
-                return n;
+                return node;
             });
             // Pre-bake the force layout: run the canonical simulation (shared with
             // the runtime via engine/layout.js) to rest and stamp x/y onto every
@@ -50,6 +60,7 @@ function copyDataPlugin() {
             const slim = Array.isArray(raw) ? slimNodes : { ...raw, nodes: slimNodes };
             writeFileSync(resolve(destDir, 'all_nodes.json'), JSON.stringify(slim));
             writeFileSync(resolve(destDir, 'descriptions.json'), JSON.stringify(descriptions));
+            writeFileSync(resolve(destDir, 'sections.json'), JSON.stringify(sections));
 
             const i18nSrc = resolve(srcDir, 'i18n');
             const i18nDest = resolve(destDir, 'i18n');

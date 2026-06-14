@@ -141,6 +141,21 @@
         });
     }
 
+    async function fetchGraphSections() {
+        // Structured English sections (type-aware collapsibles) are split out of
+        // all_nodes.json at build time into a separate payload and streamed in like
+        // descriptions. Returns a { [nodeId]: { lead, core?, impact?, links } } map;
+        // an empty map on failure keeps panels on the flat-text fallback.
+        return dedupedCachedFetch("sections", CACHE_TTL_MS.descriptions, async () => {
+            try {
+                const map = await fetchJsonWithRetry("/data/sections.json", 1);
+                return map && typeof map === "object" ? map : {};
+            } catch (error) {
+                return {};
+            }
+        });
+    }
+
     async function fetchLocaleLabels(locale) {
         const targetLocale = locale || "en";
         return dedupedCachedFetch(`labels:${targetLocale}`, CACHE_TTL_MS.localeLabels, async () => {
@@ -196,6 +211,7 @@
         fetchJsonWithRetry,
         loadGraphData,
         fetchGraphDescriptions,
+        fetchGraphSections,
         fetchLocaleLabels,
         fetchLocaleDescriptions,
         fetchLearningProgress,

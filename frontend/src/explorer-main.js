@@ -239,6 +239,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
         let labelMap = {};
         let descriptionMap = {};
         let enDescriptionMap = {};
+        let enSectionsMap = {};
         let localeLoadSeq = 0;
         const localeMapsCache = { en: { labels: {}, descriptions: {} } };
         let allNodesRaw = [];
@@ -656,7 +657,40 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             return html;
         }
 
+        const DOMAIN_NAME = {
+            en: { MAT: 'Mathematics', PHY: 'Physics', CHE: 'Chemistry', BIO: 'Biology', MED: 'Medicine', ENG: 'Engineering', TEC: 'Technology', SOC: 'Social science', HUM: 'Humanities', PHI: 'Philosophy', ART: 'Arts', HIS: 'History' },
+            zh: { MAT: '數學', PHY: '物理', CHE: '化學', BIO: '生物', MED: '醫學', ENG: '工程', TEC: '科技', SOC: '社會', HUM: '人文', PHI: '哲學', ART: '藝術', HIS: '歷史' },
+            ja: { MAT: '数学', PHY: '物理', CHE: '化学', BIO: '生物', MED: '医学', ENG: '工学', TEC: '技術', SOC: '社会', HUM: '人文', PHI: '哲学', ART: '芸術', HIS: '歴史' },
+        };
+        function domainName(code) { return (DOMAIN_NAME[LANG] || DOMAIN_NAME.en)[code] || code; }
+        function structLabel(kind, type) {
+            const person = type === 'person', event = type === 'event';
+            const L = {
+                core: { en: person ? 'Key contributions' : event ? 'What led to it' : 'The core idea', zh: person ? '主要貢獻' : event ? '背景與起因' : '核心概念', ja: person ? '主な業績' : event ? '背景と原因' : '核心概念' },
+                impact: { en: person ? 'Legacy' : event ? 'Aftermath' : 'What it changed', zh: person ? '影響與遺產' : event ? '後續影響' : '改變了什麼', ja: person ? '影響と遺産' : event ? 'その後の影響' : '変えたもの' },
+                links: { en: 'Connections across fields', zh: '跨領域連結', ja: '分野とのつながり' },
+            };
+            const set = L[kind] || L.links;
+            return set[LANG] || set.en;
+        }
+        function descBlock(title, inner) {
+            return `<details class="pd-sec"><summary>${escHtml(title)}</summary><div class="pd-sec-body">${inner}</div></details>`;
+        }
+        function renderStructuredSections(node, sec) {
+            const type = node.type;
+            let html = `<p class="pd-lead">${descInlineMarkup(sec.lead || '')}</p>`;
+            if (sec.core) html += descBlock(structLabel('core', type), `<p>${descInlineMarkup(sec.core)}</p>`);
+            if (sec.impact) html += descBlock(structLabel('impact', type), `<p>${descInlineMarkup(sec.impact)}</p>`);
+            if (sec.links && sec.links.length) {
+                const items = sec.links.map((l) =>
+                    `<li><span class="pd-domain" style="color:${DC[l.d] || 'var(--panel-ink)'}">${escHtml(domainName(l.d))}</span> ${descInlineMarkup(l.t)}</li>`
+                ).join('');
+                html += descBlock(structLabel('links', type), `<ul class="pd-bridges">${items}</ul>`);
+            }
+            return html;
+        }
         function renderPanelDescription(node) {
+            if (LANG === 'en' && enSectionsMap[node.id]) return renderStructuredSections(node, enSectionsMap[node.id]);
             const raw = nodeDescription(node).trim();
             if (!raw) return '';
             return descSectioned(raw) || `<p>${descInlineMarkup(raw)}</p>`;
@@ -2023,6 +2057,13 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 fetchJsonWithTimeout('../data/descriptions.json', 7000)
                     .then(map => {
                         enDescriptionMap = (map && typeof map === 'object') ? map : {};
+                        if (selectedNodeId && nodeMap[selectedNodeId]) openPanel(nodeMap[selectedNodeId]);
+                    })
+                    .catch(() => {});
+
+                fetchJsonWithTimeout('../data/sections.json', 7000)
+                    .then(map => {
+                        enSectionsMap = (map && typeof map === 'object') ? map : {};
                         if (selectedNodeId && nodeMap[selectedNodeId]) openPanel(nodeMap[selectedNodeId]);
                     })
                     .catch(() => {});

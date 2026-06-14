@@ -31,7 +31,7 @@ quality:
 
 validation:
   min_description_words: 50
-  max_description_words: 250
+  max_description_words: 360   # raised from 250: descriptions now render collapsed (structured sections / descSectioned), so length no longer creates a wall
   min_connections: 3
   min_connection_domains: 2
   max_display_tags: 8
