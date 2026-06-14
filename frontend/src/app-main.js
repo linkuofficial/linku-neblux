@@ -171,6 +171,11 @@ function structLabel(kind, type) {
             zh: person ? '影響與遺產' : event ? '後續影響' : '改變了什麼',
             ja: person ? '影響と遺産' : event ? 'その後の影響' : '変えたもの',
         },
+        works: {
+            en: person ? 'Notable works & ideas' : event ? 'Key milestones' : 'Key examples',
+            zh: person ? '代表著作與貢獻' : event ? '關鍵里程碑' : '代表案例',
+            ja: person ? '代表的な著作・業績' : event ? '主な節目' : '代表例',
+        },
         links: { en: 'Connections across fields', zh: '跨領域連結', ja: '分野とのつながり' },
     };
     const set = L[kind] || L.links;
@@ -185,6 +190,10 @@ function renderStructuredSections(node, sec) {
     const type = node.type;
     let html = `<p class="pd-lead">${descInlineMarkup(sec.lead || '')}</p>`;
     if (sec.core) html += descBlock(structLabel('core', type), `<p>${descInlineMarkup(sec.core)}</p>`);
+    if (sec.works && sec.works.length) {
+        const items = sec.works.map((w) => `<li>${descInlineMarkup(w)}</li>`).join('');
+        html += descBlock(structLabel('works', type), `<ul class="pd-works">${items}</ul>`);
+    }
     if (sec.impact) html += descBlock(structLabel('impact', type), `<p>${descInlineMarkup(sec.impact)}</p>`);
     if (sec.links && sec.links.length) {
         const items = sec.links.map((l) =>

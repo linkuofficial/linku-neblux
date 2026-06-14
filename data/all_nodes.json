@@ -25974,7 +25974,7 @@
         "well_established",
         "historically_significant"
       ],
-      "description": "Karl Marx (1818–1883) is a German philosopher, economist, and political theorist whose critique of capitalism and theory of historical materialism reshaped how societies understand themselves. Trained in Hegelian philosophy, Marx argued that economic relations — especially ownership of the means of production — form the foundational structure driving historical change, class conflict, and ideology. His work became the intellectual foundation of socialism and communism, transformed sociology, economics, and political thought, and shaped the political history of the twentieth century. In social science, his analysis of class, labor, and capital remains foundational to sociology and political economy. In philosophy, historical materialism and the critique of ideology reshaped modern philosophy. In history, his materialist theory of history reframed how revolution and social change are explained. In the arts, Marxist criticism became a major framework for interpreting literature and culture.",
+      "description": "Karl Marx (1818–1883) is a German philosopher, economist, and political theorist whose critique of capitalism and theory of historical materialism reshaped how societies understand themselves. His work became the intellectual foundation of socialism and communism, transformed sociology, economics, and political thought, and profoundly shaped the political history of the twentieth century. The Communist Manifesto (1848, with Friedrich Engels). Das Kapital, Volume I (1867) — his critique of political economy. Economic and Philosophic Manuscripts (1844). The theory of historical materialism. Concepts of class struggle, surplus value, and alienation. In social science, his analysis of class, labor, and capital remains foundational to sociology and political economy. In philosophy, historical materialism and the critique of ideology reshaped modern philosophy. In history, his materialist theory of history reframed how revolution and social change are explained. In the arts, Marxist criticism became a major framework for interpreting literature and culture.",
       "era": {
         "start": 1818,
         "end": 1883
@@ -26044,8 +26044,14 @@
       ],
       "sections": {
         "lead": "Karl Marx (1818–1883) is a German philosopher, economist, and political theorist whose critique of capitalism and theory of historical materialism reshaped how societies understand themselves.",
-        "core": "Trained in Hegelian philosophy, Marx argued that economic relations — especially ownership of the means of production — form the foundational structure driving historical change, class conflict, and ideology.",
-        "impact": "His work became the intellectual foundation of socialism and communism, transformed sociology, economics, and political thought, and shaped the political history of the twentieth century.",
+        "works": [
+          "The Communist Manifesto (1848, with Friedrich Engels)",
+          "Das Kapital, Volume I (1867) — his critique of political economy",
+          "Economic and Philosophic Manuscripts (1844)",
+          "The theory of historical materialism",
+          "Concepts of class struggle, surplus value, and alienation"
+        ],
+        "impact": "His work became the intellectual foundation of socialism and communism, transformed sociology, economics, and political thought, and profoundly shaped the political history of the twentieth century.",
         "links": [
           {
             "d": "SOC",
@@ -26394,7 +26400,7 @@
         "interdisciplinary",
         "human_experience"
       ],
-      "description": "Leonardo da Vinci (1452–1519) is an Italian Renaissance polymath widely regarded as one of the most diversely talented individuals in recorded history, whose integrated approach to art, science, and engineering anticipated intellectual methodologies that would not become standard practice for centuries.\n\nAs a painter, da Vinci produced works of unmatched technical and psychological depth. The *Mona Lisa* and *The Last Supper* remain canonical masterpieces, distinguished by his pioneering use of sfumato — a technique of imperceptible tonal gradation — and his systematic study of human anatomy, emotion, and perspective. These paintings were not merely aesthetic achievements; they were applied demonstrations of empirical observation and natural philosophy rendered in pigment.\n\nHis significance extends far beyond the canvas. Da Vinci filled approximately 7,000 surviving notebook pages with anatomical dissections, hydrodynamic studies, mechanical designs, and geological observations. His anatomical drawings, produced through the direct dissection of human cadavers, achieved a scientific accuracy that rivaled — and in some cases exceeded — contemporary medical knowledge, directly informing the development of biological illustration as a discipline. His conceptual designs for flying machines, armored vehicles, and hydraulic systems demonstrated an engineering imagination that preceded functional equivalents by four hundred years.\n\nWhat makes da Vinci uniquely significant across disciplines is the philosophical unity underlying his work: he treated observation as the",
+      "description": "Leonardo da Vinci (1452–1519) is an Italian Renaissance polymath whose integrated mastery of art, science, and engineering made him one of the most diversely accomplished individuals in recorded history. His fusion of careful observation, drawing, and invention anticipated the modern scientific method by centuries, leaving an enduring influence on art and engineering alike. Mona Lisa (c. 1503) and The Last Supper (c. 1498) — landmark paintings. Vitruvian Man — his study of human proportion. Thousands of notebook pages on anatomy, flight, hydraulics, and optics. Pioneering use of sfumato and atmospheric perspective. Designs for flying machines, war engines, and mechanical devices. In mathematics, he grounded composition and design in geometry, proportion, and perspective. In medicine, his anatomical dissections produced some of the most accurate studies of the human body of his era. In technology, his mechanical designs anticipated devices that would not be built for centuries. In history, he became the defining symbol of the Italian Renaissance and its union of art and science.",
       "era": {
         "start": 1452,
         "end": 1519
@@ -26461,7 +26467,36 @@
           "parallel_development": false,
           "pending": false
         }
-      ]
+      ],
+      "sections": {
+        "lead": "Leonardo da Vinci (1452–1519) is an Italian Renaissance polymath whose integrated mastery of art, science, and engineering made him one of the most diversely accomplished individuals in recorded history.",
+        "works": [
+          "Mona Lisa (c. 1503) and The Last Supper (c. 1498) — landmark paintings",
+          "Vitruvian Man — his study of human proportion",
+          "Thousands of notebook pages on anatomy, flight, hydraulics, and optics",
+          "Pioneering use of sfumato and atmospheric perspective",
+          "Designs for flying machines, war engines, and mechanical devices"
+        ],
+        "impact": "His fusion of careful observation, drawing, and invention anticipated the modern scientific method by centuries, leaving an enduring influence on art and engineering alike.",
+        "links": [
+          {
+            "d": "MAT",
+            "t": "he grounded composition and design in geometry, proportion, and perspective."
+          },
+          {
+            "d": "MED",
+            "t": "his anatomical dissections produced some of the most accurate studies of the human body of his era."
+          },
+          {
+            "d": "TEC",
+            "t": "his mechanical designs anticipated devices that would not be built for centuries."
+          },
+          {
+            "d": "HIS",
+            "t": "he became the defining symbol of the Italian Renaissance and its union of art and science."
+          }
+        ]
+      }
     },
     {
       "id": "johann_sebastian_bach_person",
@@ -26635,7 +26670,7 @@
         "historically_significant",
         "methodology"
       ],
-      "description": "Max Weber is a foundational scholar in social science and philosophy that organizes key principles, methods, and evidence into a coherent framework. Widely regarded as one of the founding figures of modern sociology, Weber developed an interpretive approach to social analysis that distinguished the study of human society from the natural sciences by emphasizing the role of meaning, intention, and subjective understanding — a method he termed *Verstehen* (interpretive understanding). Weber's conceptual toolkit remains indispensable to social analysis. His theory of **ideal types** provides analytical models — deliberately abstracted constructs such as \"bureaucracy\" or \"capitalism\" — that scholars use as interpretive benchmarks rather than empirical descriptions. His account of **rationalization** traces how modern Western societies increasingly organize social life according to calculable, rule-bound procedures, displacing tradition and charismatic authority. His tripartite framework of **legitimate domination** — traditional, charismatic, and rational-legal authority — remains a foundational framework for understanding political power and institutional legitimacy. Weber's significance extends well beyond sociology. His *Protestant Ethic and the Spirit of Capitalism* (1905) argued that Calvinist religious ethics catalyzed the cultural preconditions for modern capitalism, forging a lasting bridge between religious history, economic sociology, and cultural analysis. His work on bureaucracy directly in",
+      "description": "Max Weber (1864–1920) is a German sociologist, historian, and political economist regarded as one of the principal founders of modern social science. His interpretive method and analyses of authority, rationalization, and religion fundamentally shaped sociology, political science, and the study of modern institutions, and remain essential to social theory today. The Protestant Ethic and the Spirit of Capitalism (1905). Economy and Society (published posthumously, 1922). The concept of Verstehen (interpretive understanding). His theory of bureaucracy and rational-legal authority. The 'disenchantment of the world' thesis. In social science, his comparative sociology of religion, economy, and authority anchors modern social science. In philosophy, his philosophy of social science distinguished interpretive understanding from natural-science explanation. In the humanities, his method of Verstehen drew on hermeneutics and the interpretation of meaning and texts. In technology, his analysis of bureaucratic rationalization anticipated debates about modern organizations and algorithmic governance.",
       "era": {
         "start": 1864,
         "end": 1920
@@ -26693,7 +26728,36 @@
           "parallel_development": false,
           "pending": false
         }
-      ]
+      ],
+      "sections": {
+        "lead": "Max Weber (1864–1920) is a German sociologist, historian, and political economist regarded as one of the principal founders of modern social science.",
+        "works": [
+          "The Protestant Ethic and the Spirit of Capitalism (1905)",
+          "Economy and Society (published posthumously, 1922)",
+          "The concept of Verstehen (interpretive understanding)",
+          "His theory of bureaucracy and rational-legal authority",
+          "The 'disenchantment of the world' thesis"
+        ],
+        "impact": "His interpretive method and analyses of authority, rationalization, and religion fundamentally shaped sociology, political science, and the study of modern institutions, and remain essential to social theory today.",
+        "links": [
+          {
+            "d": "SOC",
+            "t": "his comparative sociology of religion, economy, and authority anchors modern social science."
+          },
+          {
+            "d": "PHI",
+            "t": "his philosophy of social science distinguished interpretive understanding from natural-science explanation."
+          },
+          {
+            "d": "HUM",
+            "t": "his method of Verstehen drew on hermeneutics and the interpretation of meaning and texts."
+          },
+          {
+            "d": "TEC",
+            "t": "his analysis of bureaucratic rationalization anticipated debates about modern organizations and algorithmic governance."
+          }
+        ]
+      }
     },
     {
       "id": "plato_person",

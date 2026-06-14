@@ -33,6 +33,10 @@ def reconstruct(sec):
         parts.append(sec["core"].strip())
     if sec.get("impact"):
         parts.append(sec["impact"].strip())
+    for w in sec.get("works", []):
+        w = w.strip()
+        if w:
+            parts.append(w if w.endswith((".", "!", "?")) else w + ".")
     for l in sec.get("links", []):
         name = EN_NAME.get(l["d"], l["d"])
         # Capitalize the leader to start a clean sentence: "In technology, ..."

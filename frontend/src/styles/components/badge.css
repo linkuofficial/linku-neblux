@@ -72,6 +72,32 @@
     color: var(--panel-ink)
 }
 
+#p-desc .pd-works {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+#p-desc .pd-works li {
+    position: relative;
+    padding-left: 13px;
+    color: var(--panel-ink)
+}
+
+#p-desc .pd-works li::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent)
+}
+
 #p-tags {
     display: flex;
     gap: 8px;
