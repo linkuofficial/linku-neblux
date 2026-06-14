@@ -595,24 +595,62 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 
         function sectionLabel(kind) {
             const labels = {
-                en: { definition: 'Definition', applications: 'Applications', theory: 'Theory' },
-                zh: { definition: '定義', applications: '應用', theory: '理論' },
-                ja: { definition: '定義', applications: '応用', theory: '理論' },
+                en: { definition: 'Definition', applications: 'Applications', theory: 'Theory', context: 'Why it matters', connections: 'Across fields' },
+                zh: { definition: '定義', applications: '應用', theory: '理論', context: '為什麼重要', connections: '跨領域連結' },
+                ja: { definition: '定義', applications: '応用', theory: '理論', context: 'なぜ重要か', connections: '分野とのつながり' },
             };
             return (labels[LANG] || labels.en)[kind] || kind;
+        }
+
+        // Domain stems marking a cross-domain "bridge" sentence in the English
+        // copy. See app-main.js for the canonical notes.
+        const BRIDGE_RE = /\b(?:biolog|physic|chemi|medic|engineer|mathemat|technolog|philosoph|econom|soci|cognit|public health|comput|neuro|psycholog|statistic|optic|ecolog|linguistic|architect|astronom|art|histor|geophysic|biochem)/;
+
+        function descInlineMarkup(s) {
+            return escHtml(s)
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/_(.+?)_/g, '<em>$1</em>');
+        }
+        function descSplitSentences(text) {
+            return text.split(/(?<=[.!?]['"‘’“”)\]]?)\s+(?=[A-Z(])/).map((s) => s.trim()).filter(Boolean);
+        }
+        function descBridgeMatch(s) {
+            const m = /^In ([^,]+),/.exec(s);
+            if (!m) return null;
+            return BRIDGE_RE.test(m[1].toLowerCase()) ? m[1] : null;
+        }
+        function descSectioned(raw) {
+            const sentences = descSplitSentences(raw);
+            const firstBridge = sentences.findIndex((s) => descBridgeMatch(s));
+            if (firstBridge < 1) return null;
+            const definition = sentences[0];
+            const significance = sentences.slice(1, firstBridge).join(' ').trim();
+            const groups = [];
+            for (let i = firstBridge; i < sentences.length; i++) {
+                const s = sentences[i];
+                if (descBridgeMatch(s) || groups.length === 0) groups.push(s);
+                else groups[groups.length - 1] += ' ' + s;
+            }
+            const items = groups.map((g) => {
+                const domain = (descBridgeMatch(g) || '').replace(/\*\*/g, '').replace(/_/g, '').trim();
+                const rest = g.replace(/^In [^,]+,\s*/, '');
+                const title = domain ? domain.charAt(0).toUpperCase() + domain.slice(1) : '';
+                return `<li><span class="pd-domain">${escHtml(title)}</span> ${descInlineMarkup(rest)}</li>`;
+            }).join('');
+            let html = `<p class="pd-lead">${descInlineMarkup(definition)}</p>`;
+            if (significance) {
+                html += `<details class="pd-sec"><summary>${escHtml(sectionLabel('context'))}</summary>`
+                    + `<div class="pd-sec-body"><p>${descInlineMarkup(significance)}</p></div></details>`;
+            }
+            html += `<details class="pd-sec"><summary>${escHtml(sectionLabel('connections'))}</summary>`
+                + `<div class="pd-sec-body"><ul class="pd-bridges">${items}</ul></div></details>`;
+            return html;
         }
 
         function renderPanelDescription(node) {
             const raw = nodeDescription(node).trim();
             if (!raw) return '';
-            if (node.id !== 'machine_learning_concept') return `<p>${escHtml(raw)}</p>`;
-            const sentences = raw.split(/(?<=[。！？.!?])\s*/).map(p => p.trim()).filter(Boolean);
-            const blocks = [
-                { title: sectionLabel('definition'), body: sentences[0] || raw },
-                { title: sectionLabel('applications'), body: sentences[1] || '' },
-                { title: sectionLabel('theory'), body: sentences.slice(2).join(' ') || '' },
-            ].filter(b => b.body);
-            return blocks.map(b => `<p><strong>${escHtml(b.title)}:</strong> ${escHtml(b.body)}</p>`).join('');
+            return descSectioned(raw) || `<p>${descInlineMarkup(raw)}</p>`;
         }
 
         function relationLabel(relationType) {
