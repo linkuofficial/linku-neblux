@@ -205,7 +205,8 @@ function renderStructuredSections(node, sec) {
 }
 
 function renderPanelDescription(node) {
-    if (LANG === 'en' && enSectionsMap[node.id]) return renderStructuredSections(node, enSectionsMap[node.id]);
+    const sec = LANG === 'en' ? enSectionsMap[node.id] : localeSectionsMap[node.id];
+    if (sec) return renderStructuredSections(node, sec);
     const raw = nodeDescription(node).trim();
     if (!raw) return '';
     return descSectioned(raw) || `<p>${descInlineMarkup(raw)}</p>`;
@@ -230,8 +231,14 @@ async function setLang(lang) {
         } catch (e) {
             descriptionMap = {};
         }
+        try {
+            localeSectionsMap = await window.NodusApi.fetchLocaleSections(lang);
+        } catch (e) {
+            localeSectionsMap = {};
+        }
     } else {
         descriptionMap = {};
+        localeSectionsMap = {};
     }
     rebuildSearchIndex();
     applyI18n();
@@ -366,6 +373,7 @@ let labelMap = {};
 let descriptionMap = {};
 let enDescriptionMap = {}; // English descriptions loaded from /api/graph/descriptions
 let enSectionsMap = {}; // Structured en sections loaded from /data/sections.json
+let localeSectionsMap = {}; // Structured zh/ja sections for the active non-en locale
 let _searchIndex = null; // Pre-built lowercase index for fast search
 let currentPanelNodeId = null;
 let relatedLabelIds = new Set();
@@ -593,6 +601,11 @@ async function init() {
             descriptionMap = await window.NodusApi.fetchLocaleDescriptions(LANG);
         } catch (e) {
             descriptionMap = {};
+        }
+        try {
+            localeSectionsMap = await window.NodusApi.fetchLocaleSections(LANG);
+        } catch (e) {
+            localeSectionsMap = {};
         }
     }
 

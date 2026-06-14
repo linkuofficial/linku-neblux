@@ -156,6 +156,29 @@
         });
     }
 
+    async function fetchLocaleSections(locale) {
+        // Structured zh/ja sections (translated + localized from the English
+        // sections). Stored per-locale in /data/i18n/{locale}_sections.json and
+        // streamed in like locale descriptions. Returns a { [nodeId]: { lead,
+        // core?, impact?, works?, links:[{d,t}] } } map; an empty map on failure
+        // keeps non-English panels on the flat-text fallback. Domain codes in
+        // links[].d stay canonical (MAT/PHY/...) and localize at render time.
+        if (!locale || locale === "en") {
+            return {};
+        }
+        return dedupedCachedFetch(`sections:${locale}`, CACHE_TTL_MS.localeDescriptions, async () => {
+            try {
+                const map = await fetchJsonWithRetry(
+                    `/data/i18n/${encodeURIComponent(locale)}_sections.json`,
+                    1
+                );
+                return map && typeof map === "object" ? map : {};
+            } catch (error) {
+                return {};
+            }
+        });
+    }
+
     async function fetchLocaleLabels(locale) {
         const targetLocale = locale || "en";
         return dedupedCachedFetch(`labels:${targetLocale}`, CACHE_TTL_MS.localeLabels, async () => {
@@ -214,6 +237,7 @@
         fetchGraphSections,
         fetchLocaleLabels,
         fetchLocaleDescriptions,
+        fetchLocaleSections,
         fetchLearningProgress,
         postLearningToggle,
     };

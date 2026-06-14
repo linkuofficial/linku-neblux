@@ -240,8 +240,9 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
         let descriptionMap = {};
         let enDescriptionMap = {};
         let enSectionsMap = {};
+        let localeSectionsMap = {}; // Structured zh/ja sections for the active non-en locale
         let localeLoadSeq = 0;
-        const localeMapsCache = { en: { labels: {}, descriptions: {} } };
+        const localeMapsCache = { en: { labels: {}, descriptions: {}, sections: {} } };
         let allNodesRaw = [];
         let nodeMap = {};
         let adjacency = {};
@@ -695,7 +696,8 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             return html;
         }
         function renderPanelDescription(node) {
-            if (LANG === 'en' && enSectionsMap[node.id]) return renderStructuredSections(node, enSectionsMap[node.id]);
+            const sec = LANG === 'en' ? enSectionsMap[node.id] : localeSectionsMap[node.id];
+            if (sec) return renderStructuredSections(node, sec);
             const raw = nodeDescription(node).trim();
             if (!raw) return '';
             return descSectioned(raw) || `<p>${descInlineMarkup(raw)}</p>`;
@@ -756,13 +758,29 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             return {};
         }
 
+        async function fetchLocaleSections(locale) {
+            if (!locale || locale === 'en') return {};
+            for (const path of [
+                `../data/i18n/${encodeURIComponent(locale)}_sections.json`
+            ]) {
+                try {
+                    const r = await fetch(path);
+                    if (!r.ok) continue;
+                    const p = await r.json();
+                    if (p && typeof p === 'object') return p;
+                } catch (_) {}
+            }
+            return {};
+        }
+
         async function loadLocaleMaps(locale) {
-            if (!locale || locale === 'en') return { labels: {}, descriptions: {} };
+            if (!locale || locale === 'en') return { labels: {}, descriptions: {}, sections: {} };
             if (localeMapsCache[locale]) return localeMapsCache[locale];
-            const [lr, dr] = await Promise.allSettled([fetchLocaleLabels(locale), fetchLocaleDescriptions(locale)]);
+            const [lr, dr, sr] = await Promise.allSettled([fetchLocaleLabels(locale), fetchLocaleDescriptions(locale), fetchLocaleSections(locale)]);
             const maps = {
                 labels: lr.status === 'fulfilled' ? lr.value : {},
                 descriptions: dr.status === 'fulfilled' ? dr.value : {},
+                sections: sr.status === 'fulfilled' ? sr.value : {},
             };
             localeMapsCache[locale] = maps;
             return maps;
@@ -836,6 +854,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             if (requestSeq !== localeLoadSeq) return;
             labelMap = maps.labels;
             descriptionMap = maps.descriptions;
+            localeSectionsMap = maps.sections || {};
             applyI18n();
         }
 
@@ -2038,6 +2057,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 const maps = await loadLocaleMaps(LANG);
                 labelMap = maps.labels;
                 descriptionMap = maps.descriptions;
+                localeSectionsMap = maps.sections || {};
 
                 hideLoadingState();
                 initGraph();
