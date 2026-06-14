@@ -63,9 +63,9 @@ function humanizeTag(tag) {
 
 function sectionLabel(kind) {
     const labels = {
-        en: { definition: 'Definition', applications: 'Applications', theory: 'Theory', context: 'Why it matters', connections: 'Across fields' },
-        zh: { definition: '定義', applications: '應用', theory: '理論', context: '為什麼重要', connections: '跨領域連結' },
-        ja: { definition: '定義', applications: '応用', theory: '理論', context: 'なぜ重要か', connections: '分野とのつながり' },
+        en: { definition: 'Definition', applications: 'Applications', theory: 'Theory', context: 'Why it matters', connections: 'Across fields', more: 'Read more' },
+        zh: { definition: '定義', applications: '應用', theory: '理論', context: '為什麼重要', connections: '跨領域連結', more: '繼續閱讀' },
+        ja: { definition: '定義', applications: '応用', theory: '理論', context: 'なぜ重要か', connections: '分野とのつながり', more: '続きを読む' },
     };
     const set = labels[LANG] || labels.en;
     return set[kind] || kind;
@@ -97,12 +97,26 @@ function descBridgeMatch(s) {
     return BRIDGE_RE.test(m[1].toLowerCase()) ? m[1] : null;
 }
 
-// Build the collapsible-section markup. Returns null when the copy has no
-// detectable bridge structure, so the caller can fall back to a single <p>.
+// Fallback for long English copy that has no "In <domain>," bridge structure
+// (legacy narrative descriptions): keep the first sentence visible and tuck the
+// rest behind one "Read more" section. Short copy (incl. CJK, which has no
+// spaces so word count stays ~1) returns null → caller renders a single <p>.
+function descLongFallback(raw, sentences) {
+    const words = raw.split(/\s+/).filter(Boolean).length;
+    if (sentences.length < 3 || words < 55) return null;
+    const tail = sentences.slice(1).join(' ').trim();
+    if (!tail) return null;
+    return `<p class="pd-lead">${descInlineMarkup(sentences[0])}</p>`
+        + `<details class="pd-sec"><summary>${escHtml(sectionLabel('more'))}</summary>`
+        + `<div class="pd-sec-body"><p>${descInlineMarkup(tail)}</p></div></details>`;
+}
+
+// Build the collapsible-section markup. Returns null when the copy is short and
+// unstructured, so the caller can fall back to a single <p>.
 function descSectioned(raw) {
     const sentences = descSplitSentences(raw);
     const firstBridge = sentences.findIndex((s) => descBridgeMatch(s));
-    if (firstBridge < 1) return null;
+    if (firstBridge < 1) return descLongFallback(raw, sentences);
 
     const definition = sentences[0];
     const significance = sentences.slice(1, firstBridge).join(' ').trim();

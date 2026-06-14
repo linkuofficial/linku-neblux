@@ -595,9 +595,9 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 
         function sectionLabel(kind) {
             const labels = {
-                en: { definition: 'Definition', applications: 'Applications', theory: 'Theory', context: 'Why it matters', connections: 'Across fields' },
-                zh: { definition: '定義', applications: '應用', theory: '理論', context: '為什麼重要', connections: '跨領域連結' },
-                ja: { definition: '定義', applications: '応用', theory: '理論', context: 'なぜ重要か', connections: '分野とのつながり' },
+                en: { definition: 'Definition', applications: 'Applications', theory: 'Theory', context: 'Why it matters', connections: 'Across fields', more: 'Read more' },
+                zh: { definition: '定義', applications: '應用', theory: '理論', context: '為什麼重要', connections: '跨領域連結', more: '繼續閱讀' },
+                ja: { definition: '定義', applications: '応用', theory: '理論', context: 'なぜ重要か', connections: '分野とのつながり', more: '続きを読む' },
             };
             return (labels[LANG] || labels.en)[kind] || kind;
         }
@@ -619,10 +619,19 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             if (!m) return null;
             return BRIDGE_RE.test(m[1].toLowerCase()) ? m[1] : null;
         }
+        function descLongFallback(raw, sentences) {
+            const words = raw.split(/\s+/).filter(Boolean).length;
+            if (sentences.length < 3 || words < 55) return null;
+            const tail = sentences.slice(1).join(' ').trim();
+            if (!tail) return null;
+            return `<p class="pd-lead">${descInlineMarkup(sentences[0])}</p>`
+                + `<details class="pd-sec"><summary>${escHtml(sectionLabel('more'))}</summary>`
+                + `<div class="pd-sec-body"><p>${descInlineMarkup(tail)}</p></div></details>`;
+        }
         function descSectioned(raw) {
             const sentences = descSplitSentences(raw);
             const firstBridge = sentences.findIndex((s) => descBridgeMatch(s));
-            if (firstBridge < 1) return null;
+            if (firstBridge < 1) return descLongFallback(raw, sentences);
             const definition = sentences[0];
             const significance = sentences.slice(1, firstBridge).join(' ').trim();
             const groups = [];
