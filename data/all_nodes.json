@@ -31410,15 +31410,6 @@
           "pending": false
         },
         {
-          "target": "structuralism_concept",
-          "relation_type": "historical",
-          "relation": "Levi-Strauss's structural anthropology sought universal cognitive structures (binary oppositions) underlying diverse cultural systems of myth, kinship, and classification",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "postcolonial_theory_concept",
           "relation_type": "conceptual",
           "relation": "Postcolonial critique transformed anthropology by interrogating colonial power relations embedded in ethnographic representation and knowledge production",
@@ -31627,7 +31618,7 @@
           "pending": false
         },
         {
-          "target": "neuroscience_concept",
+          "target": "neuroscience_field",
           "relation_type": "applied",
           "relation": "Brain maturation processes—myelination, synaptic pruning, prefrontal cortex development—provide neural substrates for cognitive developmental trajectories",
           "directed": false,
@@ -31714,7 +31705,7 @@
           "pending": false
         },
         {
-          "target": "neuroscience_concept",
+          "target": "neuroscience_field",
           "relation_type": "applied",
           "relation": "Neuroimaging reveals how musical processing engages distributed brain networks spanning auditory, motor, emotional, and memory systems",
           "directed": false,
@@ -31732,7 +31723,7 @@
           "pending": false
         },
         {
-          "target": "information_theory_concept",
+          "target": "information_theory_field",
           "relation_type": "applied",
           "relation": "Information-theoretic models of music explain aesthetic pleasure through optimal balance of predictability and surprise in melodic and harmonic sequences",
           "directed": false,
@@ -31801,7 +31792,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "ecology_concept",
+          "target": "ecology_field",
           "relation_type": "applied",
           "relation": "Ecological landscape design restores native plant communities, manages stormwater naturally, and creates connected habitat corridors in urban environments",
           "directed": false,
@@ -31895,15 +31886,6 @@
       "schema_version": 1,
       "suggest_subgraph": false,
       "connections": [
-        {
-          "target": "classical_mechanics_concept",
-          "relation_type": "conceptual",
-          "relation": "Fluid mechanics extends Newtonian mechanics to continuous media through continuum approximation and conservation laws for mass, momentum, and energy",
-          "directed": false,
-          "learning_prerequisite": true,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "differential_equations_concept",
           "relation_type": "applied",
@@ -32287,24 +32269,6 @@
           "pending": false
         },
         {
-          "target": "plate_tectonics_concept",
-          "relation_type": "applied",
-          "relation": "Tectonic processes create the topographic framework that surface processes then modify: mountain building sets the stage for erosional sculpting",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "climate_science_concept",
-          "relation_type": "applied",
-          "relation": "Climate controls geomorphic process rates (glaciation, weathering intensity, river discharge) while landforms influence climate through orographic effects",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "nonlinear_dynamics_concept",
           "relation_type": "applied",
           "relation": "Landscape evolution involves nonlinear feedbacks between erosion, sediment transport, and topography producing complex emergent landform patterns",
@@ -32373,15 +32337,6 @@
       "schema_version": 1,
       "suggest_subgraph": false,
       "connections": [
-        {
-          "target": "classical_mechanics_concept",
-          "relation_type": "applied",
-          "relation": "Biomechanics applies Newton's laws, stress analysis, and continuum mechanics to biological tissues with complex material properties",
-          "directed": false,
-          "learning_prerequisite": true,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "fluid_mechanics_concept",
           "relation_type": "applied",
@@ -32687,16 +32642,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "classical_mechanics_concept",
-          "relation_type": "causal",
-          "relation": "Newton's three laws of motion and law of universal gravitation established classical mechanics as a complete mathematical system",
-          "directed": true,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "calculus_concept",
+          "target": "calculus_field",
           "relation_type": "causal",
           "relation": "Newton independently invented the method of fluxions (calculus) as a tool for solving problems in mechanics and orbital motion",
           "directed": true,
@@ -32815,7 +32761,7 @@
           "pending": false
         },
         {
-          "target": "evolution_concept",
+          "target": "evolution_field",
           "relation_type": "causal",
           "relation": "Darwin provided the first comprehensive theory explaining evolution through a naturalistic mechanism, replacing earlier teleological explanations",
           "directed": true,
@@ -33025,16 +32971,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "axiomatic_system_concept",
-          "relation_type": "causal",
-          "relation": "Euclid's Elements established the axiomatic method as the gold standard for mathematical proof, deriving all theorems from explicit assumptions",
-          "directed": true,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "geometry_concept",
+          "target": "geometry_field",
           "relation_type": "causal",
           "relation": "Euclid systematized existing geometric knowledge into a unified deductive framework that defined the field for two thousand years",
           "directed": true,
@@ -33050,15 +32987,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "non_euclidean_geometry_concept",
-          "relation_type": "historical",
-          "relation": "Attempts to prove Euclid's fifth postulate from the others led to discovery of non-Euclidean geometries in the 19th century",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "mathematics_field",
@@ -33382,7 +33310,7 @@
           "pending": false
         },
         {
-          "target": "calculus_concept",
+          "target": "calculus_field",
           "relation_type": "historical",
           "relation": "Euler systematized and extended Newton and Leibniz's calculus, introducing modern notation and developing analysis into a rigorous unified framework",
           "directed": false,
@@ -33593,15 +33521,6 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "electromagnetic_theory_concept",
-          "relation_type": "causal",
-          "relation": "Maxwell's four equations unified all electromagnetic phenomena into a single mathematical framework predicting electromagnetic wave propagation",
-          "directed": true,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "statistical_mechanics_concept",
           "relation_type": "causal",
           "relation": "Maxwell's velocity distribution for gas molecules co-founded statistical mechanics, connecting microscopic particle behavior to macroscopic thermodynamics",
@@ -33620,7 +33539,7 @@
           "pending": false
         },
         {
-          "target": "information_theory_concept",
+          "target": "information_theory_field",
           "relation_type": "historical",
           "relation": "Maxwell's demon thought experiment anticipated information theory by connecting thermodynamic entropy to information and measurement",
           "directed": false,
@@ -33730,15 +33649,6 @@
           "pending": false
         },
         {
-          "target": "non_euclidean_geometry_concept",
-          "relation_type": "historical",
-          "relation": "Gauss privately explored non-Euclidean geometry decades before publication, recognizing the logical independence of Euclid's parallel postulate",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "mathematics_field",
           "relation_type": "logical",
           "relation": "Carl Friedrich Gauss provides conceptual grounding that helps explain Mathematics in this knowledge graph.",
@@ -33812,7 +33722,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "genetics_concept",
+          "target": "genetics_field",
           "relation_type": "causal",
           "relation": "Mendel discovered the particulate nature of inheritance and its mathematical laws, founding genetics as a quantitative science",
           "directed": true,
@@ -33921,15 +33831,6 @@
       "schema_version": 1,
       "suggest_subgraph": false,
       "connections": [
-        {
-          "target": "electromagnetic_theory_concept",
-          "relation_type": "applied",
-          "relation": "Tesla applied electromagnetic theory to invent the AC induction motor, rotating magnetic field systems, and polyphase power distribution",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "power_systems_concept",
           "relation_type": "causal",
@@ -34142,7 +34043,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "information_theory_concept",
+          "target": "information_theory_field",
           "relation_type": "causal",
           "relation": "Shannon single-handedly created information theory by defining information entropy, channel capacity, and proving the noisy channel coding theorem",
           "directed": true,
@@ -34270,15 +34171,6 @@
           "pending": false
         },
         {
-          "target": "immunology_concept",
-          "relation_type": "historical",
-          "relation": "Pasteur developed attenuated vaccines for rabies and anthrax, establishing the scientific basis for immunization programs that saved millions",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "microbiology_concept",
           "relation_type": "causal",
           "relation": "Pasteur's experiments disproving spontaneous generation and demonstrating microbial causation of disease established microbiology as a discipline",
@@ -34286,15 +34178,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "stereochemistry_concept",
-          "relation_type": "historical",
-          "relation": "Pasteur discovered molecular chirality through tartrate crystal separation, connecting chemistry's spatial structure to biological activity",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "biology_field",
@@ -34389,24 +34272,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "taxonomy_concept",
-          "relation_type": "historical",
-          "relation": "Aristotle's biological works classified over 500 animal species through empirical observation, pioneering systematic taxonomy in natural history",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "democracy_concept",
-          "relation_type": "historical",
-          "relation": "Aristotle's Politics systematically analyzed constitutions and argued for mixed government, shaping political theory through comparative empirical method",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "philosophy_field",
@@ -35296,15 +35161,6 @@
           "pending": false
         },
         {
-          "target": "recursion_concept",
-          "relation_type": "conceptual",
-          "relation": "Bach's canons and fugues exhibit recursive self-reference—themes generating variations that comment on themselves, inspiring Hofstadter's formal analysis",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "arts_field",
           "relation_type": "logical",
           "relation": "Johann Sebastian Bach provides conceptual grounding that helps explain Arts in this knowledge graph.",
@@ -35711,15 +35567,6 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "consciousness_concept",
-          "relation_type": "historical",
-          "relation": "Freud's model of unconscious mental processes challenged the assumption that mind equals consciousness, reshaping philosophy of mind",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "narrative_theory_concept",
           "relation_type": "applied",
           "relation": "Psychoanalytic literary criticism interprets texts as expressions of unconscious desire, establishing influential methods of narrative interpretation",
@@ -36050,7 +35897,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "calculus_concept",
+          "target": "calculus_field",
           "relation_type": "causal",
           "relation": "Leibniz independently invented calculus with the notation (dy/dx, integral sign) that became standard due to its superior clarity and generalizability",
           "directed": true,
@@ -36683,15 +36530,6 @@
           "pending": false
         },
         {
-          "target": "systems_thinking_concept",
-          "relation_type": "historical",
-          "relation": "Humboldt's vision of nature as interconnected whole (Naturgemalde) established systems thinking in natural science before the term existed",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "geomorphology_concept",
           "relation_type": "historical",
           "relation": "Humboldt's measurements of elevation, temperature, and vegetation across continents founded quantitative physical geography and geomorphology",
@@ -36904,7 +36742,7 @@
           "pending": false
         },
         {
-          "target": "geometry_concept",
+          "target": "geometry_field",
           "relation_type": "historical",
           "relation": "Archimedes proved rigorous results on spheres, cylinders, and parabolas using geometric methods of exceptional sophistication and originality",
           "directed": false,
@@ -36996,7 +36834,7 @@
       "suggest_subgraph": false,
       "connections": [
         {
-          "target": "algebra_concept",
+          "target": "algebra_field",
           "relation_type": "causal",
           "relation": "Al-Khwarizmi's treatise founded algebra as a systematic discipline for solving equations through algorithmic procedures",
           "directed": true,
@@ -37236,7 +37074,7 @@
           "pending": false
         },
         {
-          "target": "paradigm_shift_concept",
+          "target": "paradigm_shifts_concept",
           "relation_type": "historical",
           "relation": "Galileo's challenge to Aristotelian physics and Ptolemaic astronomy is the paradigmatic case of scientific revolution through empirical evidence",
           "directed": false,
@@ -37333,15 +37171,6 @@
           "pending": false
         },
         {
-          "target": "stereochemistry_concept",
-          "relation_type": "applied",
-          "relation": "Hodgkin's structures revealed precise three-dimensional arrangements of atoms in biological molecules, advancing stereochemistry's biological applications",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "rosalind_franklin_person",
           "relation_type": "historical",
           "relation": "Hodgkin and Franklin were contemporaries applying X-ray crystallography to biological structures, advancing structural biology through complementary molecular targets",
@@ -37420,15 +37249,6 @@
       "schema_version": 1,
       "suggest_subgraph": false,
       "connections": [
-        {
-          "target": "systems_thinking_concept",
-          "relation_type": "causal",
-          "relation": "Luhmann developed the most comprehensive sociological systems theory, applying autopoiesis and functional differentiation to analyze modern society",
-          "directed": true,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "self_organization_concept",
           "relation_type": "applied",
@@ -46379,15 +46199,6 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "numerical_analysis_concept",
-          "relation_type": "logical",
-          "relation": "Finite Element Method provides conceptual grounding that helps explain numerical_analysis_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "differential_equations_concept",
           "relation_type": "applied",
           "relation": "Finite Element Method is applied through practical methods that strengthen real-world work in Differential Equations.",
@@ -46473,15 +46284,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "cell_biology_concept",
-          "relation_type": "applied",
-          "relation": "Tissue Engineering is applied through practical methods that strengthen real-world work in cell_biology_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "engineering_field",
@@ -46649,7 +46451,7 @@
           "pending": false
         },
         {
-          "target": "statistics_concept",
+          "target": "statistics_field",
           "relation_type": "applied",
           "relation": "Geographic Information Systems is applied through practical methods that strengthen real-world work in statistics_concept.",
           "directed": false,
@@ -46726,24 +46528,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "genetic_engineering_concept",
-          "relation_type": "logical",
-          "relation": "Synthetic Biology provides conceptual grounding that helps explain genetic_engineering_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "systems_biology_concept",
-          "relation_type": "logical",
-          "relation": "Synthetic Biology provides conceptual grounding that helps explain systems_biology_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "biology_field",
           "relation_type": "applied",
@@ -46916,15 +46700,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "deep_learning_concept",
-          "relation_type": "applied",
-          "relation": "Natural Language Processing Applications is applied through practical methods that strengthen real-world work in deep_learning_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "computational_linguistics_concept",
@@ -47198,15 +46973,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "distributed_systems_concept",
-          "relation_type": "logical",
-          "relation": "Edge Computing provides conceptual grounding that helps explain distributed_systems_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         }
       ],
       "sections": {
@@ -47263,15 +47029,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "genetic_engineering_concept",
-          "relation_type": "logical",
-          "relation": "CRISPR Gene Editing provides conceptual grounding that helps explain genetic_engineering_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "dna_concept",
           "relation_type": "applied",
@@ -47463,15 +47220,6 @@
           "pending": false
         },
         {
-          "target": "genomics_concept",
-          "relation_type": "applied",
-          "relation": "Microbiome is applied through practical methods that strengthen real-world work in genomics_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "biology_field",
           "relation_type": "logical",
           "relation": "Microbiome provides conceptual grounding that helps explain Biology in this knowledge graph.",
@@ -47539,15 +47287,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "gene_expression_concept",
-          "relation_type": "logical",
-          "relation": "Epigenetics provides conceptual grounding that helps explain gene_expression_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "dna_concept",
           "relation_type": "applied",
@@ -47750,15 +47489,6 @@
           "pending": false
         },
         {
-          "target": "genomics_concept",
-          "relation_type": "logical",
-          "relation": "Proteomics provides conceptual grounding that helps explain genomics_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "biology_field",
           "relation_type": "logical",
           "relation": "Proteomics provides conceptual grounding that helps explain Biology in this knowledge graph.",
@@ -47846,15 +47576,6 @@
           "pending": false
         },
         {
-          "target": "sociology_field",
-          "relation_type": "logical",
-          "relation": "Social Network Theory provides conceptual grounding that helps explain sociology_field in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "digital_sociology_concept",
           "relation_type": "applied",
           "relation": "Social Network Theory is applied through practical methods that strengthen real-world work in Digital Sociology.",
@@ -47936,15 +47657,6 @@
           "pending": false
         },
         {
-          "target": "sociology_field",
-          "relation_type": "logical",
-          "relation": "Digital Sociology provides conceptual grounding that helps explain sociology_field in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "development_of_internet_event",
           "relation_type": "historical",
           "relation": "Digital Sociology historically shaped the development and interpretation of Development of the Internet across contexts.",
@@ -48013,7 +47725,7 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "cognitive_biases_concept",
+          "target": "cognitive_bias_concept",
           "relation_type": "applied",
           "relation": "Political Polarization is applied through practical methods that strengthen real-world work in cognitive_biases_concept.",
           "directed": false,
@@ -48040,7 +47752,7 @@
           "pending": false
         },
         {
-          "target": "political_philosophy_field",
+          "target": "political_philosophy_concept",
           "relation_type": "applied",
           "relation": "Political Polarization is applied through practical methods that strengthen real-world work in political_philosophy_field.",
           "directed": false,
@@ -48099,24 +47811,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "genomics_concept",
-          "relation_type": "applied",
-          "relation": "Behavioral Genetics is applied through practical methods that strengthen real-world work in genomics_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
-          "target": "nature_vs_nurture_concept",
-          "relation_type": "logical",
-          "relation": "Behavioral Genetics provides conceptual grounding that helps explain nature_vs_nurture_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "epigenetics_concept",
           "relation_type": "logical",
@@ -48392,7 +48086,7 @@
           "pending": false
         },
         {
-          "target": "the_sublime_concept",
+          "target": "sublime_concept",
           "relation_type": "conceptual",
           "relation": "Modernism in Art offers a conceptual lens that clarifies assumptions and reasoning within the_sublime_concept.",
           "directed": false,
@@ -48564,15 +48258,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "decolonization_of_history_concept",
-          "relation_type": "logical",
-          "relation": "Postcolonial Literature provides conceptual grounding that helps explain decolonization_of_history_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "allegory_concept",
@@ -49016,15 +48701,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "learning_theory_concept",
-          "relation_type": "applied",
-          "relation": "Neuroplasticity is applied through practical methods that strengthen real-world work in learning_theory_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         }
       ],
       "sections": {
@@ -49432,15 +49108,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "decolonization_of_history_concept",
-          "relation_type": "logical",
-          "relation": "Connected/Global History provides conceptual grounding that helps explain decolonization_of_history_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "ibn_khaldun_person",
@@ -50620,15 +50287,6 @@
           "pending": false
         },
         {
-          "target": "organic_chemistry_concept",
-          "relation_type": "applied",
-          "relation": "Chemical Ecology is applied through practical methods that strengthen real-world work in organic_chemistry_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "chemistry_field",
           "relation_type": "logical",
           "relation": "Chemical Ecology provides conceptual grounding that helps explain Chemistry in this knowledge graph.",
@@ -51704,15 +51362,6 @@
           "pending": false
         },
         {
-          "target": "narratology_concept",
-          "relation_type": "applied",
-          "relation": "Film Language and Montage is applied through practical methods that strengthen real-world work in narratology_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "composition_concept",
           "relation_type": "applied",
           "relation": "Film Language and Montage is applied through practical methods that strengthen real-world work in Composition.",
@@ -52160,7 +51809,7 @@
           "pending": false
         },
         {
-          "target": "philosophy_of_science_concept",
+          "target": "philosophy_of_science_field",
           "relation_type": "conceptual",
           "relation": "Historiography offers a conceptual lens that clarifies assumptions and reasoning within philosophy_of_science_concept.",
           "directed": false,
@@ -52853,15 +52502,6 @@
           "pending": false
         },
         {
-          "target": "religion_concept",
-          "relation_type": "logical",
-          "relation": "Mythology and Mythic Thinking provides conceptual grounding that helps explain religion_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "humanities_field",
           "relation_type": "logical",
           "relation": "Mythology and Mythic Thinking provides conceptual grounding that helps explain Humanities in this knowledge graph.",
@@ -53047,15 +52687,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "religion_concept",
-          "relation_type": "logical",
-          "relation": "Comparative Religion provides conceptual grounding that helps explain religion_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "cross_cultural_exchange_concept",
@@ -53359,15 +52990,6 @@
           "pending": false
         },
         {
-          "target": "confucianism_concept",
-          "relation_type": "logical",
-          "relation": "Ancient Chinese Civilization provides conceptual grounding that helps explain confucianism_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "calligraphy_concept",
           "relation_type": "historical",
           "relation": "Ancient Chinese Civilization historically shaped the development and interpretation of Calligraphy across contexts.",
@@ -53440,15 +53062,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "anatomy_concept",
-          "relation_type": "logical",
-          "relation": "Surgery provides conceptual grounding that helps explain anatomy_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "medical_imaging_concept",
           "relation_type": "applied",
@@ -53632,15 +53245,6 @@
       "verified": false,
       "schema_version": 1,
       "connections": [
-        {
-          "target": "stem_cell_biology_concept",
-          "relation_type": "logical",
-          "relation": "Regenerative Medicine provides conceptual grounding that helps explain stem_cell_biology_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
         {
           "target": "biomedical_engineering_concept",
           "relation_type": "applied",
@@ -56169,15 +55773,6 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "anatomy_concept",
-          "relation_type": "logical",
-          "relation": "Pathology provides conceptual grounding that helps explain anatomy_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "microbiology_concept",
           "relation_type": "logical",
           "relation": "Pathology provides conceptual grounding that helps explain Microbiology in this knowledge graph.",
@@ -56741,15 +56336,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "anatomy_concept",
-          "relation_type": "applied",
-          "relation": "Bioarchaeology is applied through practical methods that strengthen real-world work in anatomy_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "material_culture_concept",
@@ -58815,15 +58401,6 @@
           "pending": false
         },
         {
-          "target": "creativity_concept",
-          "relation_type": "applied",
-          "relation": "Art Education is applied through practical methods that strengthen real-world work in creativity_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "spatial_reasoning_concept",
           "relation_type": "applied",
           "relation": "Art Education is applied through practical methods that strengthen real-world work in Spatial Reasoning.",
@@ -59241,15 +58818,6 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "organic_chemistry_concept",
-          "relation_type": "logical",
-          "relation": "Petrochemistry provides conceptual grounding that helps explain organic_chemistry_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "polymer_science_concept",
           "relation_type": "applied",
           "relation": "Petrochemistry is applied through practical methods that strengthen real-world work in Polymer Science.",
@@ -59430,15 +58998,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "semiconductor_physics_concept",
-          "relation_type": "applied",
-          "relation": "Solid-State Chemistry is applied through practical methods that strengthen real-world work in semiconductor_physics_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "materials_science_field",
@@ -59970,15 +59529,6 @@
           "pending": false
         },
         {
-          "target": "civil_engineering_concept",
-          "relation_type": "logical",
-          "relation": "Hydraulic Engineering provides conceptual grounding that helps explain civil_engineering_concept in this knowledge graph.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "engineering_field",
           "relation_type": "logical",
           "relation": "Hydraulic Engineering provides conceptual grounding that helps explain Engineering in this knowledge graph.",
@@ -60307,15 +59857,6 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "nuclear_fission_concept",
-          "relation_type": "applied",
-          "relation": "Nuclear Engineering is applied through practical methods that strengthen real-world work in nuclear_fission_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
-        },
-        {
           "target": "manhattan_project_event",
           "relation_type": "historical",
           "relation": "Nuclear Engineering historically shaped the development and interpretation of Manhattan Project across contexts.",
@@ -60414,15 +59955,6 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
-        },
-        {
-          "target": "automation_concept",
-          "relation_type": "applied",
-          "relation": "Robotics Engineering is applied through practical methods that strengthen real-world work in automation_concept.",
-          "directed": false,
-          "learning_prerequisite": false,
-          "parallel_development": false,
-          "pending": true
         },
         {
           "target": "engineering_field",
@@ -60576,7 +60108,7 @@
       "schema_version": 1,
       "connections": [
         {
-          "target": "information_theory_concept",
+          "target": "information_theory_field",
           "relation_type": "logical",
           "relation": "Telecommunications Engineering provides conceptual grounding that helps explain information_theory_concept in this knowledge graph.",
           "directed": false,
