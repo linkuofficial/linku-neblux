@@ -1,0 +1,15 @@
+{
+  "name": "Nodus — Deep Field Survey",
+  "short_name": "Nodus",
+  "description": "A connected map of human knowledge — search any concept and follow where it connects.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#05070d",
+  "theme_color": "#0a0e27",
+  "lang": "en",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
