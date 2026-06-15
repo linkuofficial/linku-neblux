@@ -756,6 +756,16 @@ function setupTopChrome() {
         }, TOP_CHROME_COLLAPSE_DELAY);
     };
 
+    // Reveal when the pointer approaches the top edge anywhere across the width.
+    // The dedicated #top-chrome-trigger zone is pointer-events:none (so it never
+    // eats filter-chip clicks), which left the only working reveal targets the
+    // header (top-left) and lang toggle (top-right) — the top-centre, where the
+    // collapsed search sits, couldn't bring it back. This closes that gap.
+    const onPointerNearTop = (e) => {
+        if (e.clientY > 64) return;
+        if (document.body.classList.contains('top-ui-collapsed')) { clearTimers(); setCollapsed(false); }
+    };
+
     const bindHandlers = () => {
         if (handlersBound) return;
         interactiveAreas.forEach((el) => {
@@ -764,6 +774,7 @@ function setupTopChrome() {
         });
         searchInput.addEventListener('focus', scheduleExpand);
         searchInput.addEventListener('blur', () => setTimeout(scheduleCollapse, 120));
+        document.addEventListener('pointermove', onPointerNearTop, { passive: true });
         handlersBound = true;
     };
 
@@ -774,6 +785,7 @@ function setupTopChrome() {
             el.removeEventListener('pointerleave', scheduleCollapse);
         });
         searchInput.removeEventListener('focus', scheduleExpand);
+        document.removeEventListener('pointermove', onPointerNearTop);
         handlersBound = false;
     };
 

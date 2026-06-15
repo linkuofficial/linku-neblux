@@ -1956,6 +1956,16 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 }, TOP_CHROME_COLLAPSE_DELAY);
             }
 
+            // Reveal when the pointer nears the top edge anywhere across the width.
+            // The #top-chrome-trigger zone is pointer-events:none (so it can't eat
+            // filter-chip clicks), so the only working reveal targets were the
+            // header (top-left) and lang toggle (top-right) — approaching the
+            // top-centre, where the collapsed search lives, couldn't bring it back.
+            const onPointerNearTop = (e) => {
+                if (e.clientY > 64 || expandTimer) return;
+                if (searchBox.classList.contains('chrome-collapsed')) expandChrome();
+            };
+
             function bindProximityHandlers() {
                 if (handlersBound) return;
                 handlersBound = true;
@@ -1969,6 +1979,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 searchInput.addEventListener('blur', e => {
                     if (!e.relatedTarget || !e.relatedTarget.closest('#search-box')) collapseChrome();
                 });
+                document.addEventListener('pointermove', onPointerNearTop, { passive: true });
             }
 
             function unbindProximityHandlers() {
@@ -1978,6 +1989,7 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                     el.removeEventListener('mouseenter', expandChrome);
                     el.removeEventListener('mouseleave', collapseChrome);
                 });
+                document.removeEventListener('pointermove', onPointerNearTop);
             }
 
             function handleMediaChange() {
