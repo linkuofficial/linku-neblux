@@ -179,6 +179,21 @@ npm run build && npm run test:e2e           # build green, E2E 13/13
 - 部署：分支驗 **E2E + integrity** 後即可 merge → master（使用者授權「信 E2E+integrity、事後再看」，覆寫 [[feedback-deploy-safety]] 的視覺核可步驟）。
 - 需先做：把 `data/_phase0_apply.py` 一般化成 `scripts/apply_new_nodes.py`（吃 bundle 格式）。
 
-## 11. 進度
-- 任務追蹤見 task list（#1 完成、#2 完成、#3–#7）。
-- 完成後更新 auto-memory：新增 `project-node-expansion`。
+## 11. Phase 1 — 已完成並驗證（2026-06-15，分支 `feat/node-expansion-p1`）
+
+**淨增 34 節點**（建 38、移除 4 個隱性重複），全圖 629 → **663**。內容由 5 個 Sonnet 子代理依 `_new_nodes_spec.md` 產出（5 波，BIO/MED·PHY-CHE-地科·MAT-TEC·心智-哲·社會-人文），Opus 逐節點查核事實 + 跑確定性 apply（`scripts/apply_new_nodes.py`）/ QA。
+
+**11 變體案例：全為 no-op** — 來源節點本就已連正確的 `_field`，被丟棄的 `_concept` 邊只是冗餘（9e50803 丟得對）。
+
+**Opus 事實查核修正 2 處**：genomics（ENCODE「基因組大部分有功能」爭議主張→軟化）、nuclear_fission（1938 實驗 vs 1939 理論詮釋的歸屬→修正），三語同步。
+
+**dedup 抓出並移除 4 個隱性重複**（stem 比對因前綴/單複數 id 漏抓，dedup exact+similar 補網）：`the_sublime`→既有 `sublime_concept`、`decolonization_of_history`→`decolonization_historiography_concept`、`paradigm_shift`→`paradigm_shifts_concept`、`cognitive_biases`→`cognitive_bias_concept`。邊 remap/drop 到既有等價節點。**教訓：stem 比對需含單複數/前綴正規化，或一律先過 dedup 再 apply。**
+
+**QA 全綠**：validate 0 error、integrity 0/0、quality 34/34 grade A（desc 10/10）、check_simplified 0 ERROR、locale_sections zh/ja 0 problems、dedup exact 回到既有 2、護欄 0 既有節點 label/type/domain 變更、build green、**E2E 13/13**（注意：8-worker 並行下 663 節點初始化較重，曾 timeout flaky；單 worker + 機器空閒時穩過）。
+
+**既有 bug 修復**：`behavioral_genetics_concept` 隨 genomics + nature_vs_nurture 建立恢復連線，回到 4 連線（task #7 完成）。
+
+## 12. 進度
+- 任務：#1 #2 #7 完成；#3（Phase 1）完成；#5 QA 每波完成；#6 部署（信 E2E+integrity）。
+- Phase 2（薄領域補強）= 可選，待重新評估。
+- auto-memory：`project-node-expansion` 持續更新。

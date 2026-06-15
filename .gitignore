@@ -46,3 +46,7 @@ docs/deploy/.env.production
 
 # Local preview tooling
 .claude/launch.json
+
+# pipeline scratch backups
+data/i18n/*.bak_*
+data/dedup_report.json
