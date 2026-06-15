@@ -193,7 +193,24 @@ npm run build && npm run test:e2e           # build green, E2E 13/13
 
 **既有 bug 修復**：`behavioral_genetics_concept` 隨 genomics + nature_vs_nurture 建立恢復連線，回到 4 連線（task #7 完成）。
 
-## 12. 進度
-- 任務：#1 #2 #7 完成；#3（Phase 1）完成；#5 QA 每波完成；#6 部署（信 E2E+integrity）。
-- Phase 2（薄領域補強）= 可選，待重新評估。
-- auto-memory：`project-node-expansion` 持續更新。
+## 12. Phase 2 — 已完成並驗證（2026-06-15，分支 `feat/node-expansion-p2`）
+
+使用者於 Phase 1 後指示「p2執行」。**淨增 24 節點**（663 → **687**），補強較薄/重要領域的公認缺口：
+- PHI(5): Utilitarianism, Empiricism, Rationalism, Free Will, Virtue Ethics
+- SOC(5): Capitalism, Socialism, Nationalism, Bureaucracy, Modernization Theory
+- HUM(4): Syntax, Semantics, Pragmatics, Poetics
+- TEC(4): Operating Systems, Database Systems, Computer Networks, Data Structures
+- BIO/MED/PHY(6): Botany, Zoology, Physiology, Virology, Endocrinology, Quantum Field Theory
+
+**前置 dedup（Phase 1 教訓落地）**：候選清單先對既有 663 label 做模糊比對（threshold 0.78）+ id stem 檢查，再授權 Sonnet。4 個 flagged 經審視皆假陽性（Pragmatics≠Pragmatism、Zoology≠Topology、Physiology≠Philology、Virology≠Biology）。apply 後 dedup exact 仍 2，**零隱性重複**（成功避開 Phase 1 的坑）。
+
+**Phase 2 為純 breadth、無真實 inbound 錨點 → 只用 outbound 連線**（不讓 Sonnet 猜既有節點該連誰，避免捏造）。
+
+**Opus 事實查核 24/24 全部正確**（Bentham 1789、Descartes 1637、Codd 1970、Banting-Best 1921、QED Dirac/Feynman… 無捏造）；修了 1 個 user-facing TODO-樣 tag（nationalism）、1 個簡體洩漏（endocrinology「胜肽」→「肽」，`胜` 非白名單）、1 個 validate 字數超標（data_structures，`\b\w+\b` 計法比 `.split()` 多算連字詞 → 再刪一 link）。
+
+**QA 全綠**：validate 0、integrity 0/0、quality 24/24 grade A、check_simplified 0 ERROR、locale_sections zh/ja 0、dedup exact 2（無新增）、護欄 0 既有節點變更、build green、E2E 13/13（2 workers；8 workers 因 687 節點 init 變重會 timeout flaky，非資料 bug）。
+
+## 13. 進度（擴充全部完成）
+- 全程：627 → **687**（淨增 60：Phase 0 兩個 + Phase 1 三十四個 + Phase 2 二十四個）。
+- 任務 #1–#7 全部完成。三階段皆已 merge master 並部署（Cloudflare auto-deploy）。
+- 後續若要再擴充：沿用 `data/_new_nodes_spec.md` + `scripts/apply_new_nodes.py`，**務必先跑 dedup 前置檢查**，並 Opus 逐節點查核事實。
