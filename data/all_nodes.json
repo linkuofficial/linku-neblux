@@ -31930,6 +31930,15 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
+        },
+        {
+          "target": "classical_mechanics_concept",
+          "relation_type": "conceptual",
+          "relation": "Fluid mechanics extends Newtonian mechanics to continuous media through continuum approximation and conservation laws for mass, momentum, and energy",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
         }
       ],
       "sections": {
@@ -32381,6 +32390,15 @@
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
+        },
+        {
+          "target": "classical_mechanics_concept",
+          "relation_type": "applied",
+          "relation": "Biomechanics applies Newton's laws, stress analysis, and continuum mechanics to biological tissues with complex material properties",
+          "directed": false,
+          "learning_prerequisite": true,
+          "parallel_development": false,
+          "pending": false
         }
       ],
       "sections": {
@@ -32682,6 +32700,15 @@
           "relation_type": "historical",
           "relation": "Isaac Newton historically shaped the development and interpretation of Publication of Principia Mathematica across contexts.",
           "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "classical_mechanics_concept",
+          "relation_type": "causal",
+          "relation": "Newton's three laws of motion and law of universal gravitation established classical mechanics as a complete mathematical system",
+          "directed": true,
           "learning_prerequisite": false,
           "parallel_development": false,
           "pending": false
@@ -46298,6 +46325,15 @@
           "target": "medicine_field",
           "relation_type": "applied",
           "relation": "Tissue Engineering is applied through practical methods that strengthen real-world work in Medicine.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "cell_biology_concept",
+          "relation_type": "applied",
+          "relation": "Tissue engineering grows and repairs living tissues by culturing cells on scaffolds, applying the structural and signaling principles of cell biology.",
           "directed": false,
           "learning_prerequisite": false,
           "parallel_development": false,
@@ -60255,6 +60291,217 @@
           {
             "d": "SOC",
             "t": "Byzantine diplomacy, including strategic intermarriage, the granting of trading privileges, and the creation of client states, constituted a sophisticated system of international relations that influenced medieval European statecraft."
+          }
+        ]
+      }
+    },
+    {
+      "id": "classical_mechanics_concept",
+      "label": "Classical Mechanics",
+      "type": "concept",
+      "domain": [
+        "PHY",
+        "MAT"
+      ],
+      "display_tags": [
+        "classical_mechanics",
+        "force",
+        "foundational",
+        "17th_century",
+        "mathematical_model",
+        "experimental"
+      ],
+      "description": "The branch of physics that describes how macroscopic objects move under the action of forces is classical mechanics, founded on Newton's three laws of motion. It models physical reality as particles and rigid bodies whose trajectories are fully determined by their initial conditions, expressed through differential equations and the conservation of energy and momentum. For more than two centuries it served as the fundamental framework of physical science, and it transformed engineering, astronomy, and navigation before quantum and relativistic physics revealed its limits at the smallest and fastest scales. In engineering, the analysis of forces, stresses, and motion underlies mechanical and civil engineering design In technology, the physics engines in computer simulation, games, and robotics compute motion from these same equations In philosophy, the deterministic, clockwork picture of nature it implied shaped lasting debates about free will and causation In mathematics, formulating motion as continuous rates of change drove the parallel invention of the calculus",
+      "era": {
+        "start": 1687,
+        "end": null
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "physics_field",
+          "relation_type": "logical",
+          "relation": "Classical mechanics forms the foundational branch of physics describing the motion of macroscopic bodies under applied forces.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "isaac_newton_person",
+          "relation_type": "historical",
+          "relation": "Isaac Newton unified terrestrial and celestial motion in his 1687 Principia, formulating the three laws of motion.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "calculus_field",
+          "relation_type": "logical",
+          "relation": "Expressing motion as continuous rates of change required and propelled the development of the calculus.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "astronomy_field",
+          "relation_type": "applied",
+          "relation": "Newtonian gravitation accurately predicts planetary orbits, the return of comets, and the ocean tides.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "engineering_field",
+          "relation_type": "applied",
+          "relation": "Statics and dynamics derived from classical mechanics underpin the design of machines, structures, and vehicles.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "thermodynamics_field",
+          "relation_type": "conceptual",
+          "relation": "Statistical mechanics reinterprets heat and temperature as the aggregate motion of countless microscopic particles.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ],
+      "sections": {
+        "lead": "The branch of physics that describes how macroscopic objects move under the action of forces is classical mechanics, founded on Newton's three laws of motion.",
+        "core": "It models physical reality as particles and rigid bodies whose trajectories are fully determined by their initial conditions, expressed through differential equations and the conservation of energy and momentum.",
+        "impact": "For more than two centuries it served as the fundamental framework of physical science, and it transformed engineering, astronomy, and navigation before quantum and relativistic physics revealed its limits at the smallest and fastest scales.",
+        "links": [
+          {
+            "d": "ENG",
+            "t": "the analysis of forces, stresses, and motion underlies mechanical and civil engineering design"
+          },
+          {
+            "d": "TEC",
+            "t": "the physics engines in computer simulation, games, and robotics compute motion from these same equations"
+          },
+          {
+            "d": "PHI",
+            "t": "the deterministic, clockwork picture of nature it implied shaped lasting debates about free will and causation"
+          },
+          {
+            "d": "MAT",
+            "t": "formulating motion as continuous rates of change drove the parallel invention of the calculus"
+          }
+        ]
+      }
+    },
+    {
+      "id": "cell_biology_concept",
+      "label": "Cell Biology",
+      "type": "concept",
+      "domain": [
+        "BIO"
+      ],
+      "display_tags": [
+        "cell_biology",
+        "molecular_biology",
+        "foundational",
+        "19th_century",
+        "experimental",
+        "model"
+      ],
+      "description": "The study of the cell as the basic structural and functional unit of all living organisms is cell biology, also known as cytology. It examines how cells are organized into membrane-bound compartments, how they divide and communicate, and how molecular machines carry out metabolism, replication, and the synthesis of proteins. Cell theory transformed biology and medicine by establishing that all life shares a common cellular basis, a fundamental insight that enabled microbiology, cancer research, and modern biotechnology. In medicine, the behaviour of malignant cells, immune responses, and stem cells grounds much of modern medicine In chemistry, membranes, enzymes, and signalling molecules are studied as problems in biochemistry and organic chemistry In technology, fluorescence microscopy, gene editing, and automated imaging let researchers watch living cells directly In biology, genetics, developmental biology, and evolutionary theory all build upon cellular foundations",
+      "era": {
+        "start": 1839,
+        "end": null
+      },
+      "geo": null,
+      "has_subgraph": false,
+      "verified": false,
+      "schema_version": 1,
+      "suggest_subgraph": false,
+      "connections": [
+        {
+          "target": "biology_field",
+          "relation_type": "logical",
+          "relation": "Cell biology forms a core branch of biology devoted to the structure, function, and behavior of cells.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "dna_concept",
+          "relation_type": "logical",
+          "relation": "The genetic instructions stored in DNA are housed, replicated, and expressed within the cell and its compartments.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "genetics_field",
+          "relation_type": "conceptual",
+          "relation": "Heredity operates through cellular division and the segregation of chromosomes studied jointly with genetics.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "medicine_field",
+          "relation_type": "applied",
+          "relation": "Cellular malfunction underlies cancer, autoimmune disease, and much of modern drug development in medicine.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "metabolism_concept",
+          "relation_type": "logical",
+          "relation": "Cells sustain themselves through metabolism, converting nutrients into usable energy via enzyme-catalyzed chemical reactions.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        },
+        {
+          "target": "chemistry_field",
+          "relation_type": "conceptual",
+          "relation": "The molecular machinery of life depends on the chemistry of proteins, lipids, and nucleic acids.",
+          "directed": false,
+          "learning_prerequisite": false,
+          "parallel_development": false,
+          "pending": false
+        }
+      ],
+      "sections": {
+        "lead": "The study of the cell as the basic structural and functional unit of all living organisms is cell biology, also known as cytology.",
+        "core": "It examines how cells are organized into membrane-bound compartments, how they divide and communicate, and how molecular machines carry out metabolism, replication, and the synthesis of proteins.",
+        "impact": "Cell theory transformed biology and medicine by establishing that all life shares a common cellular basis, a fundamental insight that enabled microbiology, cancer research, and modern biotechnology.",
+        "links": [
+          {
+            "d": "MED",
+            "t": "the behaviour of malignant cells, immune responses, and stem cells grounds much of modern medicine"
+          },
+          {
+            "d": "CHE",
+            "t": "membranes, enzymes, and signalling molecules are studied as problems in biochemistry and organic chemistry"
+          },
+          {
+            "d": "TEC",
+            "t": "fluorescence microscopy, gene editing, and automated imaging let researchers watch living cells directly"
+          },
+          {
+            "d": "BIO",
+            "t": "genetics, developmental biology, and evolutionary theory all build upon cellular foundations"
           }
         ]
       }
