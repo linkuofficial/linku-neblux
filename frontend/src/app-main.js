@@ -13,7 +13,7 @@ function localizeTag(tag) {
     const mapped = TAG_LABELS[LANG] && TAG_LABELS[LANG][tag];
     if (mapped) return mapped;
 
-    const centuryMatch = tag.match(/^(\d{1,2})th_century$/);
+    const centuryMatch = tag.match(/^(\d{1,2})(?:st|nd|rd|th)_century$/);
     if (centuryMatch) {
         if (LANG === 'zh') return `${centuryMatch[1]}世紀`;
         if (LANG === 'ja') return `${centuryMatch[1]}世紀`;
@@ -24,9 +24,10 @@ function localizeTag(tag) {
     }
 
     if (LANG === 'zh') {
-        const rangeMatch = tag.match(/^(\d+)bce_to_(\d+)ce$/);
+        const rangeMatch = tag.match(/^(\d+)(bce|ce)_to_(\d+)(bce|ce)$/);
         if (rangeMatch) {
-            return `${rangeMatch[1]}公元前至${rangeMatch[2]}公元`;
+            const era = (n, e) => e === 'bce' ? `${n}公元前` : `${n}公元`;
+            return `${era(rangeMatch[1], rangeMatch[2])}至${era(rangeMatch[3], rangeMatch[4])}`;
         }
         const tokens = tag.split('_').filter(Boolean);
         const converted = tokens.map((token) => TAG_TOKEN_ZH[token] || token);
@@ -37,9 +38,10 @@ function localizeTag(tag) {
     }
 
     if (LANG === 'ja') {
-        const rangeMatch = tag.match(/^(\d+)bce_to_(\d+)ce$/);
+        const rangeMatch = tag.match(/^(\d+)(bce|ce)_to_(\d+)(bce|ce)$/);
         if (rangeMatch) {
-            return `紀元前${rangeMatch[1]}年から紀元${rangeMatch[2]}年`;
+            const era = (n, e) => e === 'bce' ? `紀元前${n}年` : `紀元${n}年`;
+            return `${era(rangeMatch[1], rangeMatch[2])}から${era(rangeMatch[3], rangeMatch[4])}`;
         }
         const tokens = tag.split('_').filter(Boolean);
         const converted = tokens.map((token) => TAG_TOKEN_JA[token] || token);
@@ -1085,6 +1087,16 @@ function buildGraph() {
             clearHighlights();
         }
     });
+
+    // Don't let a pointer press steal keyboard focus onto the canvas. The canvas
+    // is tabindex=0 (keyboard a11y + "Skip to graph" skip-link target), so a
+    // mousedown on it focuses it by default. When the top chrome is mid-collapse
+    // the search box is briefly pointer-events:none, so a click aimed at it falls
+    // through to this full-screen canvas and the focus lands here — swallowing the
+    // query the visitor then types. Capture phase runs before d3-zoom's
+    // stopImmediatePropagation; preventDefault suppresses focus-on-press only and
+    // leaves d3 pan/drag (own window listeners) and node clicks (click event) intact.
+    canvas.addEventListener('mousedown', (e) => e.preventDefault(), true);
 
     const simHint = document.getElementById('sim-hint');
     const simHintText = document.getElementById('sim-hint-text');

@@ -30,7 +30,7 @@ export function getLang() {
 /** Display-tag label translations for zh / ja. */
 export const TAG_LABELS = {
     zh: {
-        foundational: '\u57fa\u7879',
+        foundational: '\u57fa\u790e',
         abstract: '\u62bd\u8c61',
         axiomatic: '\u516c\u7406\u5316',
         philosophical: '\u54f2\u5b78\u7684',
@@ -120,7 +120,7 @@ export const TAG_TOKEN_ZH = {
     application: '\u61c9\u7528', applied: '\u61c9\u7528', practical: '\u5be6\u52d9',
     theoretical: '\u7406\u8ad6', theory: '\u7406\u8ad6', model: '\u6a21\u578b',
     methodology: '\u65b9\u6cd5\u8ad6', framework: '\u6846\u67b6', concept: '\u6982\u5ff5',
-    foundational: '\u57fa\u7879', abstract: '\u62bd\u8c61', axiomatic: '\u516c\u7406\u5316',
+    foundational: '\u57fa\u790e', abstract: '\u62bd\u8c61', axiomatic: '\u516c\u7406\u5316',
     empirical: '\u5be6\u8b49', experimental: '\u5be6\u9a57',
     observational: '\u89c0\u6e2c', analytical: '\u5206\u6790', analysis: '\u5206\u6790',
     quantitative: '\u91cf\u5316', qualitative: '\u8cea\u5316', logic: '\u908f\u8f2f',
