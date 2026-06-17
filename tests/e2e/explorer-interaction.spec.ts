@@ -33,13 +33,20 @@ test("explorer: real click selects, real double-click expands", async ({ page })
     await page.mouse.click(a.x, a.y);
     await expect(page.locator("#panel")).toHaveClass(/open/);
 
+    // Opening the panel re-heats the force layout; let it settle so the hub's
+    // screen position is stable and the double-click lands on it (otherwise the
+    // node drifts between the coord read and the dblclick and the gesture misses).
+    await page.waitForTimeout(900);
+
     // Real double-click on a hub field → its neighbours reveal (graph grows).
     const before = await page.evaluate(() => (window as any).__nodusExplorer.nodeIds().length);
     const b = await hub();
     await page.mouse.dblclick(b.x, b.y);
+    // Generous budget: under parallel load the heavy canvas pages contend for CPU
+    // and the async neighbour reveal can take a few seconds.
     await expect.poll(() =>
         page.evaluate(() => (window as any).__nodusExplorer.nodeIds().length)
-    ).toBeGreaterThan(before);
+    , { timeout: 12000 }).toBeGreaterThan(before);
 
     expect(errors, errors.join("\n")).toHaveLength(0);
 });

@@ -1,5 +1,6 @@
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
+import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from "./i18n.js";
 
         // ===== CONSTANTS =====
         const DC = window.NodusTokens?.DOMAIN_COLORS || {
@@ -524,55 +525,10 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
             return (I18N[LANG] && I18N[LANG][key]) || (I18N.en && I18N.en[key]) || key;
         }
 
-        const TAG_LABELS = {
-            zh: {
-                foundational: '基礎', abstract: '抽象', axiomatic: '公理化', ancient: '古代',
-                experimental: '實驗', natural_world: '自然世界', molecular_scale: '分子尺度',
-                interdisciplinary: '跨領域', field: '領域', applied: '應用', theoretical: '理論',
-                empirical: '實證', modern: '現代', contemporary: '當代',
-                historical_timescale: '歷史尺度', historically_significant: '歷史重要',
-                unifying_concept: '統一概念', well_established: '成熟理論',
-                currently_active_research: '目前活躍研究'
-            },
-            ja: {
-                foundational: '基礎', abstract: '抽象', axiomatic: '公理化', ancient: '古代',
-                experimental: '実験', natural_world: '自然界', molecular_scale: '分子スケール',
-                interdisciplinary: '学際的', field: '分野', applied: '応用', theoretical: '理論',
-                empirical: '実証', modern: '近代', contemporary: '現代',
-                historical_timescale: '歴史スケール', historically_significant: '歴史的重要',
-                unifying_concept: '統一概念', well_established: '確立された理論',
-                currently_active_research: '現在進行中の研究'
-            }
-        };
 
-        const TAG_TOKEN_ZH = {
-            age: '時代', ancient: '古代', modern: '現代', contemporary: '當代', early: '早期',
-            middle: '中期', post: '後', digital: '數位', industrial: '工業', cold: '冷',
-            war: '戰爭', exploration: '探索', revolution: '革命', enlightenment: '啟蒙',
-            renaissance: '文藝復興', ancient_greek: '古希臘', islamic: '伊斯蘭',
-            golden: '黃金', world: '世界', history: '歷史', historical: '歷史',
-            historiography: '史學方法', studies: '研究', science: '科學', technology: '科技',
-            engineering: '工程', application: '應用', applied: '應用', practical: '實務',
-            theoretical: '理論', theory: '理論', model: '模型', methodology: '方法論',
-            framework: '框架', concept: '概念', foundational: '基礎', abstract: '抽象',
-            axiomatic: '公理化', empirical: '實證', experimental: '實驗', observational: '觀測',
-            analytical: '分析', analysis: '分析', quantitative: '量化', qualitative: '質化',
-            logic: '邏輯', algebra: '代數', calculus: '微積分', geometry: '幾何',
-            topology: '拓撲', probability: '機率', statistics: '統計', differential: '微分',
-            equations: '方程', number: '數論', graph: '圖', set: '集合', field: '領域',
-            interdisciplinary: '跨領域', cross: '跨', domain: '領域', molecular: '分子',
-            atomic: '原子', cellular: '細胞', ecological: '生態', planetary: '行星',
-            cosmic: '宇宙', scale: '尺度', ethics: '倫理', policy: '政策', society: '社會',
-            social: '社會', culture: '文化', cultural: '文化', cognitive: '認知',
-            medical: '醫學', biomedical: '生醫', chemistry: '化學', physics: '物理',
-            biology: '生物', linguistics: '語言學', philosophy: '哲學', art: '藝術',
-            music: '音樂', design: '設計', law: '法律', cybersecurity: '資安',
-            machine: '機器', learning: '學習', network: '網路', systems: '系統',
-            system: '系統', computing: '計算', computer: '電腦', language: '語言',
-            processing: '處理', public: '公共', health: '健康', significant: '重要',
-            established: '成熟', unifying: '統一',
-        };
 
+        // TAG_LABELS / TAG_TOKEN_ZH / TAG_TOKEN_JA imported from ./i18n.js
+        // (single source of truth; inline copies had drifted to a stale subset).
         function localizeTag(tag) {
             const mapped = TAG_LABELS[LANG] && TAG_LABELS[LANG][tag];
             if (mapped) return mapped;
@@ -587,6 +543,17 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
                 }
                 const tokens = tag.split('_').filter(Boolean);
                 const converted = tokens.map(tok => TAG_TOKEN_ZH[tok] || tok);
+                if (converted.every((v, i) => v === tokens[i])) return humanizeTag(tag);
+                return converted.join('');
+            }
+            if (LANG === 'ja') {
+                const rangeMatch = tag.match(/^(\d+)(bce|ce)_to_(\d+)(bce|ce)$/);
+                if (rangeMatch) {
+                    const era = (n, e) => e === 'bce' ? `紀元前${n}年` : `紀元${n}年`;
+                    return `${era(rangeMatch[1], rangeMatch[2])}から${era(rangeMatch[3], rangeMatch[4])}`;
+                }
+                const tokens = tag.split('_').filter(Boolean);
+                const converted = tokens.map(tok => TAG_TOKEN_JA[tok] || tok);
                 if (converted.every((v, i) => v === tokens[i])) return humanizeTag(tag);
                 return converted.join('');
             }

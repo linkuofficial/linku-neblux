@@ -195,6 +195,16 @@ export const TAG_TOKEN_ZH = {
     thinking: '\u601d\u7dad', thought: '\u601d\u60f3', timescale: '\u6642\u9593\u5c3a\u5ea6', tool: '\u5de5\u5177', transforms: '\u8f49\u5316',
     turning: '\u8f49\u6369', typography: '\u5b57\u9ad4\u6392\u5370', unification: '\u7d71\u4e00', unsolved: '\u672a\u89e3', vision: '\u8996\u89ba',
     visual: '\u8996\u89ba', wave: '\u6ce2', well: '\u5b8c\u5584',
+    // — node-expansion tag coverage (2026-06-17) —
+    complexity: '\u8907\u96dc\u5ea6', organizational: '\u7d44\u7e54', synthetic: '\u5408\u6210',
+    geological: '\u5730\u8cea', educational: '\u6559\u80b2', chinese: '\u4e2d\u570b',
+    operating: '\u4f5c\u696d', data: '\u8cc7\u6599', structures: '\u7d50\u69cb',
+    international: '\u570b\u969b', relations: '\u95dc\u4fc2', taxonomy: '\u5206\u985e\u5b78',
+    rationalism: '\u7406\u6027\u4e3b\u7fa9', meaning: '\u610f\u7fa9', anatomy: '\u89e3\u5256\u5b78',
+    geophysics: '\u5730\u7403\u7269\u7406\u5b78', mathematician: '\u6578\u5b78\u5bb6', recursive: '\u905e\u8ff4',
+    emergence: '\u6e67\u73fe', belief: '\u4fe1\u5ff5', confucianism: '\u5112\u5bb6',
+    identity: '\u8eab\u5206', databases: '\u8cc7\u6599\u5eab', botany: '\u690d\u7269\u5b78',
+    zoology: '\u52d5\u7269\u5b78', virology: '\u75c5\u6bd2\u5b78', endocrinology: '\u5167\u5206\u6ccc\u5b78',
 };
 
 /** Token-to-Japanese mapping used by localizeTag() for ja compound fallback labels. */
@@ -287,4 +297,14 @@ export const TAG_TOKEN_JA = {
     thinking: '\u601d\u8003', thought: '\u601d\u60f3', timescale: '\u6642\u9593\u30b9\u30b1\u30fc\u30eb', tool: '\u30c4\u30fc\u30eb', transforms: '\u5909\u9769',
     turning: '\u8ee2\u63db', typography: '\u30bf\u30a4\u30dd\u30b0\u30e9\u30d5\u30a3', unification: '\u7d71\u4e00', unsolved: '\u672a\u89e3\u6c7a', vision: '\u8996\u899a',
     visual: '\u8996\u899a', wave: '\u6ce2', well: '\u5341\u5206',
+    // — node-expansion tag coverage (2026-06-17) —
+    complexity: '\u8907\u96d1\u6027', organizational: '\u7d44\u7e54', synthetic: '\u5408\u6210',
+    geological: '\u5730\u8cea', educational: '\u6559\u80b2', chinese: '\u4e2d\u56fd',
+    operating: '\u30aa\u30da\u30ec\u30fc\u30c6\u30a3\u30f3\u30b0', data: '\u30c7\u30fc\u30bf', structures: '\u69cb\u9020',
+    international: '\u56fd\u969b', relations: '\u95a2\u4fc2', taxonomy: '\u5206\u985e\u5b66',
+    rationalism: '\u5408\u7406\u4e3b\u7fa9', meaning: '\u610f\u5473', anatomy: '\u89e3\u5256\u5b66',
+    geophysics: '\u5730\u7403\u7269\u7406\u5b66', mathematician: '\u6570\u5b66\u8005', recursive: '\u518d\u5e30',
+    emergence: '\u5275\u767a', belief: '\u4fe1\u5ff5', confucianism: '\u5112\u6559',
+    identity: '\u30a2\u30a4\u30c7\u30f3\u30c6\u30a3\u30c6\u30a3', databases: '\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9', botany: '\u690d\u7269\u5b66',
+    zoology: '\u52d5\u7269\u5b66', virology: '\u30a6\u30a4\u30eb\u30b9\u5b66', endocrinology: '\u5185\u5206\u6ccc\u5b66',
 };
