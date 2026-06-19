@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
-import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from "./i18n.js";
+import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.js";
 
         // ===== CONSTANTS =====
         const DC = window.NodusTokens?.DOMAIN_COLORS || {
@@ -805,6 +805,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from "./i18n.js";
             document.querySelector('.lang-btn[data-lang="zh"]')?.setAttribute('aria-label', 'Switch language to Chinese');
             document.querySelector('.lang-btn[data-lang="ja"]')?.setAttribute('aria-label', 'Switch language to Japanese');
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.toggle('active', btn.dataset.lang === LANG));
+            localizeFilterChips();
             updateFocusButton();
             if (renderer) renderer.notify();
             renderBreadcrumb();
@@ -1861,6 +1862,28 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from "./i18n.js";
             });
         }
 
+        // Domain-filter labels are pulled from the shared app dictionary (i18n.js)
+        // so the chips localize exactly like the graph page instead of showing raw
+        // English codes (ALL/MAT/…). Short label on the chip, full name on hover.
+        function domainLabel(d) {
+            const dict = APP_UI[LANG] || APP_UI.en;
+            return d === 'ALL' ? (dict.filterAll || 'All') : (dict['domain' + d] || d);
+        }
+        function domainFullLabel(d) {
+            const dict = APP_UI[LANG] || APP_UI.en;
+            return d === 'ALL' ? (dict.filterAll || 'All') : (dict['domainFull' + d] || domainLabel(d));
+        }
+        function localizeFilterChips() {
+            document.querySelectorAll('#filter-bar .filter-btn').forEach(btn => {
+                const d = btn.dataset.domain;
+                if (!d) return;
+                btn.textContent = domainLabel(d);
+                const full = domainFullLabel(d);
+                btn.title = full;
+                btn.setAttribute('aria-label', full);
+            });
+        }
+
         // ===== DOMAIN FILTER =====
         function setupFilters() {
             const bar = document.getElementById('filter-bar');
@@ -1868,9 +1891,11 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA } from "./i18n.js";
             domains.forEach(d => {
                 const btn = document.createElement('div');
                 btn.className = 'filter-btn' + (d === 'ALL' ? ' active' : '');
-                btn.textContent = d;
-                btn.style.color = d === 'ALL' ? '' : (DC[d] || '');
                 btn.dataset.domain = d;
+                btn.textContent = domainLabel(d);
+                btn.title = domainFullLabel(d);
+                btn.setAttribute('aria-label', domainFullLabel(d));
+                btn.style.color = d === 'ALL' ? '' : (DC[d] || '');
                 btn.onclick = () => {
                     bar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');

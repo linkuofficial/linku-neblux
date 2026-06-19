@@ -713,12 +713,12 @@ function setupTopChrome() {
     const pointerSupportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     const hoverNoneQuery = window.matchMedia('(hover: none)');
     const desktopQuery = window.matchMedia('(min-width: 761px)');
-    const proximityEnabled = () => {
-        if (!desktopQuery.matches) return false;
-        if (pointerSupportsHover) return true;
-        // Fallback for browsers that report hover capability conservatively on desktop.
-        return !hoverNoneQuery.matches;
-    };
+    // Always-on top chrome: the graph search bar (and the rest of the top chrome)
+    // now stays put instead of auto-collapsing, unifying it with the explorer
+    // (whose chrome never actually collapses). Keeping it expanded also closes the
+    // collapse↔reveal transition window that could drop a click meant for the
+    // search box onto the canvas behind it.
+    const proximityEnabled = () => false;
 
     const interactiveAreas = [trigger, searchBox, filterBar, hdr, langToggle];
     let handlersBound = false;
