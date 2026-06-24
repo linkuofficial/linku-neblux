@@ -1,9 +1,9 @@
 """
-Shared utilities for Nodus Knowledge Graph scripts.
+Shared utilities for Neblux Knowledge Graph scripts.
 
 Usage:
-    from nodus_utils import load_nodes, save_nodes, backup_file, VALID_DOMAINS
-    from nodus_utils import neo4j_driver  # requires: pip install neo4j
+    from neblux_utils import load_nodes, save_nodes, backup_file, VALID_DOMAINS
+    from neblux_utils import neo4j_driver  # requires: pip install neo4j
 """
 
 import json

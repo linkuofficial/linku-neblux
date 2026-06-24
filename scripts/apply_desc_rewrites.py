@@ -11,14 +11,14 @@ Safety:
   applied) and reported, so validate_nodes.py stays green.
 - Unknown node ids are reported and cause a non-zero exit (nothing is half-applied
   silently — the backup lets you roll back).
-- Writes via nodus_utils.save_nodes (atomic, indent=2, ensure_ascii=False —
+- Writes via neblux_utils.save_nodes (atomic, indent=2, ensure_ascii=False —
   matches the existing file format, so the diff is value-only).
 """
 import json
 import sys
 from pathlib import Path
 
-from nodus_utils import (
+from neblux_utils import (
     DEFAULT_NODES_FILE,
     backup_file,
     build_node_lookup,

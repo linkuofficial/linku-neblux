@@ -149,7 +149,7 @@ def main() -> None:
         print("\nRe-run without --dry-run to execute.")
         return
 
-    from nodus_utils import neo4j_driver  # type: ignore
+    from neblux_utils import neo4j_driver  # type: ignore
 
     try:
         driver = neo4j_driver()
