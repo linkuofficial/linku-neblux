@@ -17,7 +17,7 @@ npm run build    # 輸出至 dist/
 ## 專案結構
 
 ```text
-Nodus/
+Neblux/
 ├── frontend/               # 三個 HTML 入口（index / app / explorer）
 │   ├── src/                # JS 邏輯
 │   └── public/             # 靜態資源（_headers、圖示、主題）
@@ -56,4 +56,4 @@ npm run test:e2e:install  # 首次安裝 Chromium
 ## 網址
 
 - 正式：<https://neblux.linku.tech>
-- GitHub：<https://github.com/linkuofficial/linku-nodus>
+- GitHub：<https://github.com/linkuofficial/linku-neblux>
