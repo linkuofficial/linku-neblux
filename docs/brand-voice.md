@@ -1,6 +1,6 @@
-# Nodus — Brand Voice & Copy Guide
+# Neblux — Brand Voice & Copy Guide
 
-The single reference for *how Nodus speaks*. Every user-facing string — landing, app,
+The single reference for *how Neblux speaks*. Every user-facing string — landing, app,
 explorer, meta tags, node labels, and machine-generated translations — should pass the
 checklist at the bottom. This guide governs **words and tone**, not typography: casing,
 fonts, and color are owned by the design system shipped in the chrome redesign (`91c1a0e`).
@@ -47,7 +47,7 @@ When the two collide, usability wins.
 
 ## The Deep Field metaphor
 
-Nodus is a *survey of the deep field of knowledge*. Use it as the spine of the voice:
+Neblux is a *survey of the deep field of knowledge*. Use it as the spine of the voice:
 
 - Concepts are **points / stars** scattered across a **field**; the user is the observer
   charting them.
@@ -60,7 +60,7 @@ Nodus is a *survey of the deep field of knowledge*. Use it as the spine of the v
 
 ---
 
-## The Nodus word-world
+## The Neblux word-world
 
 **Reach for:** explore, discover, connect / connection, path, field, constellation,
 spark, curiosity, wander, begin, anywhere, infinite, map, trace, follow, unfold, reveal.
@@ -75,7 +75,7 @@ spark, curiosity, wander, begin, anywhere, infinite, map, trace, follow, unfold,
 - *Gamification:* level up, points, XP, streak, badge, achievement, reward, "unlock"
   *as a prize*. (See the note on existing terms below.)
 - *Institutional / school:* course, lesson, curriculum, quiz, enroll, master.
-  Nodus is not a course — it's a place to wander.
+  Neblux is not a course — it's a place to wander.
 - *Hype punctuation:* exclamation marks (calm wonder, not excitement) and emoji.
 
 **Existing domain terms — keep, but frame carefully:**
@@ -145,7 +145,7 @@ English is canonical. Chinese and Japanese are *localizations*, not literal tran
   (教育部 / 學界慣用譯名).
 - **ja** → standard Japanese; loanwords in katakana; established academic terms where
   they exist.
-- **Brand words stay constant:** "Nodus" and the "Deep Field Survey" wordmark remain in
+- **Brand words stay constant:** "Neblux" and the "Deep Field Survey" wordmark remain in
   English in every locale (it reads as the name of the instrument / survey program).
   The *human* taglines and UI strings are fully localized.
 - **People's names** use the established local rendering / transliteration standard.

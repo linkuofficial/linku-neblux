@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 760px) {
-    /* Collapse the header to just the ← NODUS back link (mirrors explorer's
+    /* Collapse the header to just the ← NEBLUX back link (mirrors explorer's
        mobile declutter): drop the glass box, hide title/stats/sim-hint so the
        full-width search below it has a clear row. */
     #hdr {

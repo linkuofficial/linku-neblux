@@ -3,7 +3,7 @@
 // CSP can forbid inline script entirely (script-src 'self', no 'unsafe-inline').
 (function () {
     try {
-        let lang = localStorage.getItem('nodus-lang') || 'en';
+        let lang = localStorage.getItem('neblux-lang') || 'en';
         if (lang === 'zh-TW') lang = 'zh';
         document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : (lang === 'ja' ? 'ja' : 'en');
     } catch (e) {

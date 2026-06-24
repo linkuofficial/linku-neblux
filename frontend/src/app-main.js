@@ -217,24 +217,24 @@ function renderPanelDescription(node) {
 async function setLang(lang) {
     if (!isValidLang(lang)) return;
     LANG = lang;
-    localStorage.setItem('nodus-lang', lang);
+    localStorage.setItem('neblux-lang', lang);
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : lang;
     // Load/clear label translations
     if (lang !== 'en') {
         try {
-            labelMap = await window.NodusApi.fetchLocaleLabels(lang);
+            labelMap = await window.NebluxApi.fetchLocaleLabels(lang);
         } catch (e) { labelMap = {}; }
     } else {
         labelMap = {};
     }
     if (lang !== 'en') {
         try {
-            descriptionMap = await window.NodusApi.fetchLocaleDescriptions(lang);
+            descriptionMap = await window.NebluxApi.fetchLocaleDescriptions(lang);
         } catch (e) {
             descriptionMap = {};
         }
         try {
-            localeSectionsMap = await window.NodusApi.fetchLocaleSections(lang);
+            localeSectionsMap = await window.NebluxApi.fetchLocaleSections(lang);
         } catch (e) {
             localeSectionsMap = {};
         }
@@ -357,8 +357,8 @@ function hideLoadingState() {
 }
 
 // ===== CONSTANTS =====
-const DC = window.NodusTokens?.DOMAIN_COLORS || { MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850' };
-const RC = window.NodusTokens?.RELATION_COLORS || { logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a', conceptual: '#9b7bc9', causal: '#c95b5b' };
+const DC = window.NebluxTokens?.DOMAIN_COLORS || { MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850' };
+const RC = window.NebluxTokens?.RELATION_COLORS || { logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a', conceptual: '#9b7bc9', causal: '#c95b5b' };
 
 let allNodes = [], allEdges = [], nodeMap = {}, sim, zoomBehavior;
 let renderer = null;          // canvas scene painter (engine/canvas-renderer.js)
@@ -381,8 +381,8 @@ let currentPanelNodeId = null;
 let relatedLabelIds = new Set();
 const TOP_CHROME_EXPAND_DELAY = 90;
 const TOP_CHROME_COLLAPSE_DELAY = 260;
-const NAV_HISTORY_STORAGE_KEY = 'nodus-nav-history-v1';
-const APP_ONBOARD_STORAGE_KEY = 'nodus-app-onboard-seen-v1';
+const NAV_HISTORY_STORAGE_KEY = 'neblux-nav-history-v1';
+const APP_ONBOARD_STORAGE_KEY = 'neblux-app-onboard-seen-v1';
 let guideBindingsReady = false;
 let guideStepIndex = 0;
 
@@ -499,27 +499,27 @@ function setupGuides() {
 }
 
 function isSafeNodeId(id) {
-    return window.NodusState.isSafeNodeId(id);
+    return window.NebluxState.isSafeNodeId(id);
 }
 
 function parseLearnedSet(rawValue) {
-    return window.NodusState.parseLearnedSet(rawValue, nodeMap);
+    return window.NebluxState.parseLearnedSet(rawValue, nodeMap);
 }
 
 function normalizeGraphData(data) {
-    return window.NodusApi.normalizeGraphData(data);
+    return window.NebluxApi.normalizeGraphData(data);
 }
 
 function sleep(ms) {
-    return window.NodusApi.sleep(ms);
+    return window.NebluxApi.sleep(ms);
 }
 
 async function fetchJsonWithRetry(url, retries = 2) {
-    return window.NodusApi.fetchJsonWithRetry(url, retries);
+    return window.NebluxApi.fetchJsonWithRetry(url, retries);
 }
 
 async function loadGraphData() {
-    return window.NodusApi.loadGraphData();
+    return window.NebluxApi.loadGraphData();
 }
 
 function nodeLabel(n) {
@@ -595,17 +595,17 @@ async function init() {
     // Load translations if not English
     if (LANG !== 'en') {
         try {
-            labelMap = await window.NodusApi.fetchLocaleLabels(LANG);
+            labelMap = await window.NebluxApi.fetchLocaleLabels(LANG);
         } catch (e) { /* fallback to English labels */ }
     }
     if (LANG !== 'en') {
         try {
-            descriptionMap = await window.NodusApi.fetchLocaleDescriptions(LANG);
+            descriptionMap = await window.NebluxApi.fetchLocaleDescriptions(LANG);
         } catch (e) {
             descriptionMap = {};
         }
         try {
-            localeSectionsMap = await window.NodusApi.fetchLocaleSections(LANG);
+            localeSectionsMap = await window.NebluxApi.fetchLocaleSections(LANG);
         } catch (e) {
             localeSectionsMap = {};
         }
@@ -686,7 +686,7 @@ async function init() {
     // Stream English descriptions in after the graph is interactive. Until they
     // land, label/id/tag/domain search all work; once they arrive we re-index so
     // full-text search lights up and refresh any panel that's already open.
-    window.NodusApi.fetchGraphDescriptions().then((map) => {
+    window.NebluxApi.fetchGraphDescriptions().then((map) => {
         enDescriptionMap = map || {};
         rebuildSearchIndex();
         if (currentPanelNodeId && nodeMap[currentPanelNodeId]) openPanel(nodeMap[currentPanelNodeId]);
@@ -694,7 +694,7 @@ async function init() {
 
     // Structured English sections (type-aware collapsibles). Non-critical: until
     // they land, panels fall back to the heuristic sectioning of flat text.
-    window.NodusApi.fetchGraphSections().then((map) => {
+    window.NebluxApi.fetchGraphSections().then((map) => {
         enSectionsMap = map || {};
         if (currentPanelNodeId && nodeMap[currentPanelNodeId]) openPanel(nodeMap[currentPanelNodeId]);
     }).catch(() => { /* sections are non-critical */ });
@@ -816,7 +816,7 @@ function setupTopChrome() {
 }
 
 function buildPrereqGraph(raw) {
-    const built = window.NodusGraph.buildPrerequisiteGraph(raw, nodeMap);
+    const built = window.NebluxGraph.buildPrerequisiteGraph(raw, nodeMap);
     prereqEdges = built.prereqEdges;
     prereqGraph = built.prereqGraph;
 }
@@ -1171,7 +1171,7 @@ function buildGraph() {
 
     // E2E/diagnostic hooks — the canvas has no per-node DOM to assert against,
     // so the regression tests read engine state and screen positions instead.
-    window.__nodusApp = {
+    window.__nebluxApp = {
         ready: () => allNodes.length > 0,
         nodeIds: () => allNodes.map(n => n.id),
         hubId: () => {
@@ -1582,17 +1582,17 @@ function toggleLearned(id) {
 // --- Learning Progress Persistence ---
 async function loadLearningProgress() {
     // Prefer local state as baseline, then merge server state when available.
-    const localLearned = window.NodusState.loadStoredLearned('nodus-learned', nodeMap);
+    const localLearned = window.NebluxState.loadStoredLearned('neblux-learned', nodeMap);
     learnedSet = new Set(localLearned);
 
     try {
-        const data = await window.NodusApi.fetchLearningProgress();
+        const data = await window.NebluxApi.fetchLearningProgress();
         if (data) {
             const serverLearned = (data.learned || []).filter(id => isSafeNodeId(id) && nodeMap[id]);
             for (const id of serverLearned) {
                 learnedSet.add(id);
             }
-            window.NodusState.saveStoredLearned('nodus-learned', learnedSet);
+            window.NebluxState.saveStoredLearned('neblux-learned', learnedSet);
             return;
         }
     } catch (e) { /* API unavailable */ }
@@ -1601,10 +1601,10 @@ async function loadLearningProgress() {
 function saveLearningProgress(toggledId) {
     // Save to localStorage immediately
     try {
-        window.NodusState.saveStoredLearned('nodus-learned', learnedSet);
+        window.NebluxState.saveStoredLearned('neblux-learned', learnedSet);
     } catch (e) { }
     // Sync to backend (fire-and-forget)
-    window.NodusApi.postLearningToggle(toggledId).catch(() => { });
+    window.NebluxApi.postLearningToggle(toggledId).catch(() => { });
 }
 
 function isAvailable(id) {

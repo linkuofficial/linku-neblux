@@ -1,5 +1,5 @@
-(function initNodusApi(globalObj) {
-    const CACHE_PREFIX = "nodus:api:";
+(function initNebluxApi(globalObj) {
+    const CACHE_PREFIX = "neblux:api:";
     const CACHE_TTL_MS = {
         graphFull: 5 * 60 * 1000,
         descriptions: 5 * 60 * 1000,
@@ -228,7 +228,7 @@
         return Promise.resolve();
     }
 
-    globalObj.NodusApi = {
+    globalObj.NebluxApi = {
         sleep,
         normalizeGraphData,
         fetchJsonWithRetry,

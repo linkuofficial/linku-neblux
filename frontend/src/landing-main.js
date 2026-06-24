@@ -4,7 +4,7 @@
         }
 
         // ─── Domain Colors ───────────────────────────────────────────────
-        const DOMAIN_COLORS = window.NodusTokens?.DOMAIN_COLORS || {
+        const DOMAIN_COLORS = window.NebluxTokens?.DOMAIN_COLORS || {
             MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b',
             BIO: '#5bc97a', MED: '#5bc9b8', ENG: '#9b7bc9',
             TEC: '#c95b9b', SOC: '#c9a05a', HUM: '#7ba5c9',
@@ -22,7 +22,7 @@
         let allNodes = [];
         let searchIndex = [];
         let i18n = null;
-        let lang = normalizeLang(localStorage.getItem('nodus-lang'));
+        let lang = normalizeLang(localStorage.getItem('neblux-lang'));
         let activeIndex = -1;
 
         function normalizeLang(value) {
@@ -58,7 +58,7 @@
         let touchTooltipButton = null;
 
         function prefersTouchTooltipMode() {
-            return window.__NODUS_FORCE_TOUCH_TOOLTIP__ === true ||
+            return window.__NEBLUX_FORCE_TOUCH_TOOLTIP__ === true ||
                 window.matchMedia('(pointer: coarse)').matches ||
                 navigator.maxTouchPoints > 0;
         }
@@ -106,7 +106,7 @@
         async function loadData() {
             try {
                 let data;
-                const cacheKey = 'nodus:index:graph:v1';
+                const cacheKey = 'neblux:index:graph:v1';
                 try {
                     const cachedRaw = sessionStorage.getItem(cacheKey);
                     if (cachedRaw) {
@@ -392,7 +392,7 @@
         async function setLang(nextLang) {
             if (!SUPPORTED_LANGS.includes(nextLang) || nextLang === lang) return;
             lang = nextLang;
-            localStorage.setItem('nodus-lang', lang);
+            localStorage.setItem('neblux-lang', lang);
             document.documentElement.lang = htmlLang(lang);
             await loadI18n(lang);
             applyLang();
@@ -421,7 +421,7 @@
                     heroSubtitle: 'Follow one spark of curiosity into the deep field of everything we know.',
                     ctaExplore: 'Start Exploring',
                     placeholder: 'Explore the infinite...',
-                    footerCopy: `© ${new Date().getFullYear()} NODUS. EXPLORE THE INFINITE.`,
+                    footerCopy: `© ${new Date().getFullYear()} NEBLUX. EXPLORE THE INFINITE.`,
                     footerGraph: 'Graph',
                     footerExplorer: 'Explorer',
                 },
@@ -431,7 +431,7 @@
                     heroSubtitle: '順著一絲好奇，潛入人類所知的浩瀚星海。',
                     ctaExplore: '開始探索',
                     placeholder: '探索無限知識…',
-                    footerCopy: `© ${new Date().getFullYear()} NODUS．探索無限知識。`,
+                    footerCopy: `© ${new Date().getFullYear()} NEBLUX．探索無限知識。`,
                     footerGraph: '圖譜',
                     footerExplorer: '探索器',
                 },
@@ -441,7 +441,7 @@
                     heroSubtitle: 'ひとつの好奇心を追って、知の深宇宙へ。',
                     ctaExplore: '探索する',
                     placeholder: '無限の知識を探索…',
-                    footerCopy: `© ${new Date().getFullYear()} NODUS. 知のつながりを探索する。`,
+                    footerCopy: `© ${new Date().getFullYear()} NEBLUX. 知のつながりを探索する。`,
                     footerGraph: 'グラフ',
                     footerExplorer: 'エクスプローラー',
                 }
@@ -560,7 +560,7 @@
 
         // ─── Init ────────────────────────────────────────────────────────
         document.documentElement.lang = htmlLang(lang);
-        localStorage.setItem('nodus-lang', lang);
+        localStorage.setItem('neblux-lang', lang);
         Promise.all([loadData(), loadI18n(lang)]).then(() => {
             applyLang();
         });

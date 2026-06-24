@@ -1,6 +1,6 @@
 /* header — app.html only. Shared base: ../components/header.css. */
 
-/* Single horizontal row (unify with explorer): [Knowledge Graph] │ [← NODUS]. */
+/* Single horizontal row (unify with explorer): [Knowledge Graph] │ [← NEBLUX]. */
 #hdr {
     display: flex;
     flex-direction: row;

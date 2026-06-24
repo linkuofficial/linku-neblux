@@ -11,17 +11,17 @@ import { test, expect } from "@playwright/test";
 // focus-on-press while leaving d3 pan/drag and node clicks intact.
 
 test("pressing the graph canvas does not steal keyboard focus", async ({ page }) => {
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html");
 
     await expect
-        .poll(async () => page.evaluate(() => !!(window as any).__nodusApp?.ready()))
+        .poll(async () => page.evaluate(() => !!(window as any).__nebluxApp?.ready()))
         .toBeTruthy();
     await page.waitForTimeout(400); // let the layout settle
 
     // A point clear of any node so the press lands on empty graph space.
     const empty = await page.evaluate(() => {
-        const app = (window as any).__nodusApp;
+        const app = (window as any).__nebluxApp;
         const pts = app
             .nodeIds()
             .map((id: string) => app.screenPos(id))
@@ -46,11 +46,11 @@ test("pressing the graph canvas does not steal keyboard focus", async ({ page })
 });
 
 test("search box accepts a click then keystrokes", async ({ page }) => {
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html");
 
     await expect
-        .poll(async () => page.evaluate(() => !!(window as any).__nodusApp?.ready()))
+        .poll(async () => page.evaluate(() => !!(window as any).__nebluxApp?.ready()))
         .toBeTruthy();
 
     // The top chrome starts collapsed on desktop; nudge the pointer to the top edge

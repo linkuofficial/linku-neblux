@@ -6,7 +6,7 @@
  * Load this before the per-page <style> block so per-page rules can override.
  */
 
-/* Edge (link) colours moved to nodus-tokens.js (RELATION_COLORS) — both graphs
+/* Edge (link) colours moved to neblux-tokens.js (RELATION_COLORS) — both graphs
  * render to <canvas> now and read those tokens directly; the old SVG .link.*
  * stroke rules are gone. */
 

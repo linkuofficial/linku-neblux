@@ -1,19 +1,19 @@
 :root {
-    --nodus-accent: #f0c050;
-    --nodus-radius-sm: 6px;
-    --nodus-radius-md: 12px;
-    --nodus-radius-lg: 20px;
-    --nodus-radius-control: 999px;   /* 互動控件統一圓角（膠囊）：搜尋框 / 按鈕 / 標籤 */
-    --nodus-radius-panel: 16px;      /* 浮層面板統一圓角：下拉結果 / tooltip */
-    --nodus-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.38);
-    --nodus-shadow-strong: 0 24px 56px rgba(0, 0, 0, 0.58);
-    --nodus-ease-ui: cubic-bezier(0.16, 1, 0.3, 1);
-    --nodus-glass-border: rgba(255, 255, 255, 0.08);
-    --nodus-glass-shadow: 0 0 20px rgba(196, 198, 206, 0.05);
+    --neblux-accent: #f0c050;
+    --neblux-radius-sm: 6px;
+    --neblux-radius-md: 12px;
+    --neblux-radius-lg: 20px;
+    --neblux-radius-control: 999px;   /* 互動控件統一圓角（膠囊）：搜尋框 / 按鈕 / 標籤 */
+    --neblux-radius-panel: 16px;      /* 浮層面板統一圓角：下拉結果 / tooltip */
+    --neblux-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.38);
+    --neblux-shadow-strong: 0 24px 56px rgba(0, 0, 0, 0.58);
+    --neblux-ease-ui: cubic-bezier(0.16, 1, 0.3, 1);
+    --neblux-glass-border: rgba(255, 255, 255, 0.08);
+    --neblux-glass-shadow: 0 0 20px rgba(196, 198, 206, 0.05);
 
     /* ── Button system (B segmented rail + C ghost) — shared by app + explorer ──
        One container holds the glass/blur; inner buttons are borderless segments.
-       active text = --nodus-accent. Dark = graph chrome, light = detail panel. */
+       active text = --neblux-accent. Dark = graph chrome, light = detail panel. */
     --rail-bg:            rgba(12, 14, 22, 0.55);
     --rail-border:        rgba(255, 255, 255, 0.09);
     --rail-divider:       rgba(255, 255, 255, 0.06);

@@ -79,7 +79,7 @@ module.exports = {
                 'label-code': ['JetBrains Mono']
             },
             fontSize: {
-                // Sizes resolve to the fluid clamp() tokens in nodus-theme.css so the
+                // Sizes resolve to the fluid clamp() tokens in neblux-theme.css so the
                 // existing index.html utility classes scale 375px→1440px with no markup change.
                 'headline-md': ['var(--text-lg)', { lineHeight: '1.3', fontWeight: '600' }],
                 'label-caps': ['var(--text-xs)', { lineHeight: '1', letterSpacing: '0.1em', fontWeight: '500' }],

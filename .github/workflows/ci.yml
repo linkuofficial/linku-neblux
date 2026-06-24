@@ -1,4 +1,4 @@
-name: Nodus CI
+name: Neblux CI
 
 on:
   push:

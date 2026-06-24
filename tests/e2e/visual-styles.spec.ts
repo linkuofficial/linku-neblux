@@ -67,7 +67,7 @@ test("index.html chrome computed styles", { tag: "@visual" }, async ({ page }) =
 });
 
 test("app.html chrome computed styles", { tag: "@visual" }, async ({ page }) => {
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html");
     await page.waitForLoadState("networkidle");
     await freezeMotion(page);
@@ -75,7 +75,7 @@ test("app.html chrome computed styles", { tag: "@visual" }, async ({ page }) => 
     // (no per-node DOM), so select through the engine hook — nodeIds()[0] is
     // the same node the old "first g.node" click resolved to.
     await page.evaluate(() => {
-        const app = (window as any).__nodusApp;
+        const app = (window as any).__nebluxApp;
         if (app?.selectNode) app.selectNode(app.nodeIds()[0]);
     });
     await page.waitForTimeout(400);
@@ -93,10 +93,10 @@ test("explorer.html chrome computed styles", { tag: "@visual" }, async ({ page }
     await page.waitForLoadState("networkidle");
     await freezeMotion(page);
     // Explorer graph is a canvas (no per-node DOM) — drive it via the engine hook.
-    await page.waitForFunction(() => !!(window as any).__nodusExplorer?.ready()).catch(() => {});
-    await page.evaluate(() => (window as any).__nodusExplorer?.startExploration("calculus_field")).catch(() => {});
+    await page.waitForFunction(() => !!(window as any).__nebluxExplorer?.ready()).catch(() => {});
+    await page.evaluate(() => (window as any).__nebluxExplorer?.startExploration("calculus_field")).catch(() => {});
     await page.waitForTimeout(800);
-    await page.evaluate(() => (window as any).__nodusExplorer?.selectNode("calculus_field")).catch(() => {});
+    await page.evaluate(() => (window as any).__nebluxExplorer?.selectNode("calculus_field")).catch(() => {});
     await page.waitForTimeout(400);
     const sels = [
         "body", "#bgCanvas", "#canvas", "#hdr", "#hdr h1", "#hdr p",

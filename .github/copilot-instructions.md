@@ -1,4 +1,4 @@
-## Nodus — AI Agent Instructions
+## Neblux — AI Agent Instructions
 
 This is an educational knowledge graph tool for linku.tech. Target users include children (age 8+).
 

@@ -17,7 +17,7 @@
     font-family: var(--font-label);
     border: 0.5px solid var(--rail-border);
     background-color: rgba(255, 255, 255, 0.03);
-    border-radius: var(--nodus-radius-md);
+    border-radius: var(--neblux-radius-md);
     transition: background-color 160ms ease, color 160ms ease;
 }
 
@@ -37,7 +37,7 @@
     min-width: 30px;
     min-height: 18px;
     padding: 0 6px;
-    border-radius: var(--nodus-radius-sm);
+    border-radius: var(--neblux-radius-sm);
     border: 0.5px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.04);
     font-family: 'JetBrains Mono', monospace;
@@ -61,7 +61,7 @@
     opacity: 0;
     transform: translateY(8px) scale(0.985);
     transform-origin: center bottom;
-    transition: opacity 0.2s var(--nodus-ease-ui), transform 0.2s var(--nodus-ease-ui);
+    transition: opacity 0.2s var(--neblux-ease-ui), transform 0.2s var(--neblux-ease-ui);
     z-index: 40;
 }
 

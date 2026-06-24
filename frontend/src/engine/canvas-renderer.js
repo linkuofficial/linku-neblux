@@ -182,7 +182,7 @@ export function createCanvasRenderer(opts) {
         const dur = Number(meta.twDur) || 5;
         const delay = Number(meta.twDelay) || 0;
         const phase = ((nowSec - delay) / dur) % 1;
-        // @keyframes nodusTwinkle: 0.85 → 1 → 0.85, ease-in-out ≈ sinusoid.
+        // @keyframes nebluxTwinkle: 0.85 → 1 → 0.85, ease-in-out ≈ sinusoid.
         return 0.925 - 0.075 * Math.cos(TWO_PI * phase);
     }
 
@@ -408,7 +408,7 @@ export function createCanvasRenderer(opts) {
         const fade = animOf(selectedNode.id, 1).mix.c; // rides the colour ease-in
         const r = Math.max(m.halo * 0.7, m.core * 5) + 6;
         const sx = selectedNode.x * k + tx, sy = selectedNode.y * k + ty;
-        // @keyframes nodusSelHalo: ring opacity 0.6 → 1 → 0.6 over 3.6s.
+        // @keyframes nebluxSelHalo: ring opacity 0.6 → 1 → 0.6 over 3.6s.
         const pulse = (reducedMotion ? 1 : 0.8 - 0.2 * Math.cos(TWO_PI * ((nowSec / 3.6) % 1))) * fade;
         ctx.save();
         const ring = (radius, strokeStyle, lineWidth, alphaScale = 1) => {

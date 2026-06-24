@@ -14,12 +14,12 @@
     --panel-ink: #334155;
     --panel-soft: #64748b;
     --panel-faint: #94a3b8;
-    --accent: var(--nodus-accent);
-    --radius-sm: var(--nodus-radius-sm);
-    --radius-md: var(--nodus-radius-md);
-    --radius-lg: var(--nodus-radius-lg);
-    --shadow-soft: var(--nodus-shadow-soft);
-    --shadow-strong: var(--nodus-shadow-strong);
-    --ease-ui: var(--nodus-ease-ui);
+    --accent: var(--neblux-accent);
+    --radius-sm: var(--neblux-radius-sm);
+    --radius-md: var(--neblux-radius-md);
+    --radius-lg: var(--neblux-radius-lg);
+    --shadow-soft: var(--neblux-shadow-soft);
+    --shadow-strong: var(--neblux-shadow-strong);
+    --ease-ui: var(--neblux-ease-ui);
     --panel-desktop-width: 332px;
 }

@@ -1,7 +1,7 @@
 param(
   [string]$ComposeFile = "docker-compose.prod.yml",
   [string]$EnvFile = ".env.production",
-  [string]$HealthUrl = "https://nodus.linku.tech/api/health",
+  [string]$HealthUrl = "https://neblux.linku.tech/api/health",
   [int]$HealthRetries = 20,
   [int]$HealthRetryDelaySeconds = 3
 )

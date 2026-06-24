@@ -6,7 +6,7 @@
                      Canonical design = app. tokens.css (:root palette) +
                      keyframes.css (animations) load first.
      ../app/         app.html-only rules + app's responsive @media.
-   Global tokens (fonts, radii, shadow, accent) live in public/nodus-theme.css;
+   Global tokens (fonts, radii, shadow, accent) live in public/neblux-theme.css;
    edge/badge colours in src/shared.css. Nothing is inlined in the HTML.
    ════════════════════════════════════════════════════════════════════════ */
 /* NOTE (canvas renderer): app.html's graph is painted to <canvas> by

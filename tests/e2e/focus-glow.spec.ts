@@ -43,15 +43,15 @@ test("app: clicking a node lights up its connections", async ({ page }) => {
     // Canvas renderer: click the highest-degree on-screen node with a REAL
     // mouse click, then assert (a) the engine lit its focus curves + ring and
     // (b) actual pixels around the node got painted bright — the glow exists.
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html");
     await expect.poll(async () =>
-        page.evaluate(() => !!(window as any).__nodusApp?.ready())
+        page.evaluate(() => !!(window as any).__nebluxApp?.ready())
     ).toBeTruthy();
     await page.waitForTimeout(800);
 
     const target = await page.evaluate(() => {
-        const app = (window as any).__nodusApp;
+        const app = (window as any).__nebluxApp;
         let best: any = null, bestDeg = -1;
         for (const id of app.nodeIds()) {
             const p = app.screenPos(id);
@@ -66,13 +66,13 @@ test("app: clicking a node lights up its connections", async ({ page }) => {
     await page.mouse.click(target.x, target.y);
     await page.waitForTimeout(600);
 
-    const debug = await page.evaluate(() => (window as any).__nodusApp.debug());
+    const debug = await page.evaluate(() => (window as any).__nebluxApp.debug());
     expect(debug.activeEdges, "focus-curve edges should light up").toBeGreaterThan(0);
     expect(debug.hasRing, "selected node should get a focus-ring").toBeTruthy();
 
     // Pixel proof: the selected star's neighbourhood must be visibly lit.
     const litPixels = await page.evaluate((id) => {
-        const app = (window as any).__nodusApp;
+        const app = (window as any).__nebluxApp;
         const p = app.screenPos(id); // the click re-centers the view — re-read
         const c = document.getElementById("canvas") as HTMLCanvasElement;
         const ctx = c.getContext("2d")!;
@@ -94,15 +94,15 @@ test("explorer: clicking a node lights up its connections", async ({ page }) => 
     await page.goto("/explorer.html");
 
     await expect.poll(async () =>
-        page.evaluate(() => !!(window as any).__nodusExplorer?.ready())
+        page.evaluate(() => !!(window as any).__nebluxExplorer?.ready())
     , { timeout: 15000 }).toBeTruthy();
 
     await page.evaluate(() => {
-        (window as any).__nodusExplorer.startExploration("calculus_field");
+        (window as any).__nebluxExplorer.startExploration("calculus_field");
     });
 
     await expect.poll(async () =>
-        page.evaluate(() => ((window as any).__nodusExplorer?.nodeIds() ?? []).length)
+        page.evaluate(() => ((window as any).__nebluxExplorer?.nodeIds() ?? []).length)
     , { timeout: 8000 }).toBeGreaterThan(0);
 
     // Let the layout settle.
@@ -111,7 +111,7 @@ test("explorer: clicking a node lights up its connections", async ({ page }) => 
     // Find the highest-degree visible node; select it programmatically to avoid
     // canvas hit-test flakiness from in-flight simulation movement.
     const targetId = await page.evaluate(() => {
-        const exp = (window as any).__nodusExplorer;
+        const exp = (window as any).__nebluxExplorer;
         let best: string | null = null, bestDeg = -1;
         for (const id of exp.nodeIds()) {
             const deg = exp.degree(id);
@@ -121,18 +121,18 @@ test("explorer: clicking a node lights up its connections", async ({ page }) => 
     });
     expect(targetId, "should find a visible node").toBeTruthy();
 
-    const targetDeg = await page.evaluate((id) => (window as any).__nodusExplorer.degree(id), targetId);
+    const targetDeg = await page.evaluate((id) => (window as any).__nebluxExplorer.degree(id), targetId);
     expect(targetDeg).toBeGreaterThan(0);
 
-    await page.evaluate((id) => (window as any).__nodusExplorer.selectNode(id), targetId);
+    await page.evaluate((id) => (window as any).__nebluxExplorer.selectNode(id), targetId);
     await page.waitForTimeout(600);
 
-    const debug = await page.evaluate(() => (window as any).__nodusExplorer.debug());
+    const debug = await page.evaluate(() => (window as any).__nebluxExplorer.debug());
     expect(debug.activeEdges ?? 0, "focus-curve edges should light up after click").toBeGreaterThan(0);
 
     // Pixel proof: the selected star's neighbourhood must be visibly lit.
     const litPixels = await page.evaluate((id) => {
-        const exp = (window as any).__nodusExplorer;
+        const exp = (window as any).__nebluxExplorer;
         const p = exp.screenPos(id);
         if (!p) return 0;
         const c = document.getElementById("canvas") as HTMLCanvasElement;

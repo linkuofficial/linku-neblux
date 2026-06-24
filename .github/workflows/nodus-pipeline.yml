@@ -1,4 +1,4 @@
-name: Nodus Data Pipeline
+name: Neblux Data Pipeline
 
 # 手動觸發：在 GitHub Actions UI 點 "Run workflow"
 # 用途：對已提交的 data/all_nodes.json 執行完整驗證與品質 gate 檢查

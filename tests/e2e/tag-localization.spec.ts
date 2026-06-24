@@ -7,12 +7,12 @@ import { test, expect } from "@playwright/test";
 // asserts the tag chip localizes.
 test("zh: ordinal-century tag localizes to 世紀, not English (B1)", async ({ page }) => {
     await page.addInitScript(() => {
-        localStorage.setItem("nodus-app-onboard-seen-v1", "1");
-        localStorage.setItem("nodus-lang", "zh");
+        localStorage.setItem("neblux-app-onboard-seen-v1", "1");
+        localStorage.setItem("neblux-lang", "zh");
     });
     await page.goto("/app.html");
     await expect
-        .poll(() => page.evaluate(() => !!(window as any).__nodusApp?.ready()))
+        .poll(() => page.evaluate(() => !!(window as any).__nebluxApp?.ready()))
         .toBeTruthy();
 
     const id = await page.evaluate(async () => {
@@ -22,7 +22,7 @@ test("zh: ordinal-century tag localizes to 世紀, not English (B1)", async ({ p
     });
     expect(id, "expected a node tagged 21st_century in the dataset").toBeTruthy();
 
-    await page.evaluate((nid) => (window as any).__nodusApp.selectNode(nid), id);
+    await page.evaluate((nid) => (window as any).__nebluxApp.selectNode(nid), id);
     const tags = page.locator("#p-tags");
     await expect(tags).toContainText("世紀");
     await expect(tags).not.toContainText("21st");

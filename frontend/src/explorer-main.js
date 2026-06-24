@@ -3,12 +3,12 @@ import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.js";
 
         // ===== CONSTANTS =====
-        const DC = window.NodusTokens?.DOMAIN_COLORS || {
+        const DC = window.NebluxTokens?.DOMAIN_COLORS || {
             MAT: '#5b9bd5', PHY: '#c97a5b', CHE: '#c9c05b', BIO: '#5bc97a',
             MED: '#5bc9b8', ENG: '#9b7bc9', TEC: '#c95b9b', SOC: '#c9a05a',
             HUM: '#7ba5c9', PHI: '#9bc95b', ART: '#c95b5b', HIS: '#a07850'
         };
-        const RC = window.NodusTokens?.RELATION_COLORS || {
+        const RC = window.NebluxTokens?.RELATION_COLORS || {
             logical: '#5b9bd5', historical: '#c9a05a', applied: '#5bc97a',
             conceptual: '#9b7bc9', causal: '#c95b5b'
         };
@@ -17,7 +17,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
             en: {
                 navHome: 'Home',
                 navGraph: 'Graph',
-                hdrTitle: 'Nodus Explorer',
+                hdrTitle: 'Neblux Explorer',
                 hdrSubtitle: 'Knowledge Graph',
                 all: 'ALL',
                 searchPlaceholder: 'Search a concept to begin…',
@@ -90,7 +90,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
             zh: {
                 navHome: '首頁',
                 navGraph: '圖譜',
-                hdrTitle: 'Nodus 探索器',
+                hdrTitle: 'Neblux 探索器',
                 hdrSubtitle: '知識圖譜',
                 all: '全部',
                 searchPlaceholder: '搜尋一個概念開始…',
@@ -163,7 +163,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
             ja: {
                 navHome: 'ホーム',
                 navGraph: 'グラフ',
-                hdrTitle: 'Nodus エクスプローラー',
+                hdrTitle: 'Neblux エクスプローラー',
                 hdrSubtitle: '知識グラフ',
                 all: 'すべて',
                 searchPlaceholder: '探索を始める概念を検索…',
@@ -272,7 +272,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         let lastLoadError = null;
         const TOP_CHROME_EXPAND_DELAY = 90;
         const TOP_CHROME_COLLAPSE_DELAY = 260;
-        const TOUR_KEY = 'nodus-explorer-tour-v1';
+        const TOUR_KEY = 'neblux-explorer-tour-v1';
 
         function getTourSteps() {
             return [
@@ -511,7 +511,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         }
 
         function getLang() {
-            const saved = localStorage.getItem('nodus-lang');
+            const saved = localStorage.getItem('neblux-lang');
             if (saved === 'zh-TW') return 'zh';
             if (saved && saved.toLowerCase() === 'ja-jp') return 'ja';
             if (isValidLang(saved)) return saved;
@@ -818,7 +818,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         async function setLang(lang) {
             if (!isValidLang(lang)) return;
             LANG = lang;
-            localStorage.setItem('nodus-lang', lang);
+            localStorage.setItem('neblux-lang', lang);
             document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : lang;
             const requestSeq = ++localeLoadSeq;
             const maps = await loadLocaleMaps(LANG);
@@ -994,7 +994,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
             });
 
             // E2E / diagnostic hook.
-            window.__nodusExplorer = {
+            window.__nebluxExplorer = {
                 ready: () => allNodesRaw.length > 0,
                 nodeIds: () => visibleNodes.map(n => n.id),
                 screenPos: id => {
@@ -2115,7 +2115,7 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         }
 
         // ===== PERSISTENCE =====
-        const STORAGE_KEY = 'nodus-explorer-state';
+        const STORAGE_KEY = 'neblux-explorer-state';
 
         function saveState() {
             try {

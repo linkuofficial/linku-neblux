@@ -1,4 +1,4 @@
-(function initNodusGraph(globalObj) {
+(function initNebluxGraph(globalObj) {
     function isPrerequisiteConnection(connection) {
         return Boolean(
             connection.learning_prerequisite ||
@@ -43,7 +43,7 @@
         return { prereqEdges, prereqGraph: graph };
     }
 
-    globalObj.NodusGraph = {
+    globalObj.NebluxGraph = {
         isPrerequisiteConnection,
         buildPrerequisiteGraph,
     };

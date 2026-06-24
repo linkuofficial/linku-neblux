@@ -12,7 +12,7 @@ const panelDescLen = async (page) =>
     ((await page.locator("#p-desc").textContent()) || "").trim().length;
 
 test("app: node panel fills with streamed description", async ({ page }) => {
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html?node=mathematics_field");
     await page.waitForLoadState("networkidle");
     await expect
@@ -25,18 +25,18 @@ test("explorer: node panel fills with streamed description", async ({ page }) =>
     await page.goto("/explorer.html");
 
     await expect.poll(async () =>
-        page.evaluate(() => !!(window as any).__nodusExplorer?.ready())
+        page.evaluate(() => !!(window as any).__nebluxExplorer?.ready())
     , { timeout: 15000 }).toBeTruthy();
 
-    await page.evaluate(() => (window as any).__nodusExplorer.startExploration("mathematics_field"));
+    await page.evaluate(() => (window as any).__nebluxExplorer.startExploration("mathematics_field"));
 
     await expect.poll(async () =>
-        page.evaluate(() => ((window as any).__nodusExplorer?.nodeIds() ?? []).length)
+        page.evaluate(() => ((window as any).__nebluxExplorer?.nodeIds() ?? []).length)
     , { timeout: 8000 }).toBeGreaterThan(0);
 
     // Let the layout settle, then open the seed node's panel directly.
     await page.waitForTimeout(1200);
-    await page.evaluate(() => (window as any).__nodusExplorer.selectNode("mathematics_field"));
+    await page.evaluate(() => (window as any).__nebluxExplorer.selectNode("mathematics_field"));
 
     await expect
         .poll(() => panelDescLen(page), { timeout: 15000 })

@@ -3,7 +3,7 @@
 
    De-inlined from index.html and split into ./landing/* component partials,
    @imported below in cascade order (Vite inlines them). Tailwind utilities and
-   global tokens (public/nodus-theme.css, src/index-tailwind.css) load before this.
+   global tokens (public/neblux-theme.css, src/index-tailwind.css) load before this.
    ════════════════════════════════════════════════════════════════════════ */
 @import "./landing/_base.css";
 @import "./landing/hero.css";

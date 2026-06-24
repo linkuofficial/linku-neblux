@@ -1,5 +1,5 @@
 /* ───────────────────────────────────────────────────────────────────────────
-   Nodus — Self-hosted font loader (@font-face)
+   Neblux — Self-hosted font loader (@font-face)
 
    Oxanium        — display / headlines (futuristic, geometric)
    Sora           — body text, paragraphs
@@ -10,7 +10,7 @@
    woff2 self-hosted under /fonts/ (latin + latin-ext subsets).
    CJK (zh/ja) glyphs are NOT bundled — pages fall back to system
    'Noto Sans TC' / 'Microsoft JhengHei'. Space Grotesk intentionally dropped.
-   Load order: this file -> nodus-theme.css.
+   Load order: this file -> neblux-theme.css.
    ─────────────────────────────────────────────────────────────────────────── */
 
 @font-face {

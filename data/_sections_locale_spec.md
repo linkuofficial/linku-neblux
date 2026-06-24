@@ -1,6 +1,6 @@
 # Locale sections spec — translate + localize English sections into zh / ja
 
-You translate Nodus's already-finished, fact-checked **English** structured
+You translate Neblux's already-finished, fact-checked **English** structured
 sections into a target language. Your TARGET LANGUAGE is given in your task prompt
 (`zh` = Traditional Chinese 繁體中文, zh-Hant; `ja` = Japanese 日本語). **Facts are
 sacred — you are translating, not researching.**

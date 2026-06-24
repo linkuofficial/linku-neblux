@@ -1,4 +1,4 @@
-nodus.linku.tech {
+neblux.linku.tech {
     encode zstd gzip
 
     reverse_proxy localhost:8000
@@ -10,6 +10,6 @@ nodus.linku.tech {
     }
 }
 
-www.nodus.linku.tech {
-    redir https://nodus.linku.tech{uri} permanent
+www.neblux.linku.tech {
+    redir https://neblux.linku.tech{uri} permanent
 }

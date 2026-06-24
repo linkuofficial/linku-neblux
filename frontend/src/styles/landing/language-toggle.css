@@ -34,7 +34,7 @@
     letter-spacing: 0.04em;
     padding: 10px 22px;
     font-family: var(--font-label);
-    border-radius: var(--nodus-radius-md);
+    border-radius: var(--neblux-radius-md);
     background: rgba(240, 192, 80, 0.92) !important;
     color: #1a1208 !important;
     border-color: transparent !important;
@@ -66,7 +66,7 @@
     text-decoration: none;
     color: var(--ink-soft);
     padding: 7px 13px;
-    border-radius: var(--nodus-radius-sm);
+    border-radius: var(--neblux-radius-sm);
     transition: color 160ms ease, background 160ms ease;
 }
 

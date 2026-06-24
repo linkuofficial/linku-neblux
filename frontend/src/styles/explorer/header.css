@@ -1,6 +1,6 @@
 /* header — explorer.html only.  Shared base: ../components/header.css. */
 
-/* Single horizontal row: [NODUS Explorer] │ [Home  Graph]. */
+/* Single horizontal row: [NEBLUX Explorer] │ [Home  Graph]. */
 #hdr {
     display: flex;
     flex-direction: row;

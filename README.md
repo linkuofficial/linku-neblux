@@ -1,6 +1,6 @@
-﻿# Nodus
+﻿# Neblux
 
-跨領域知識圖譜探索平台，部署於 [nodus.linku.tech](https://nodus.linku.tech)。
+跨領域知識圖譜探索平台，部署於 [neblux.linku.tech](https://neblux.linku.tech)。
 
 **靜態前端，零後端。** Vanilla JS + D3.js，部署至 Cloudflare Pages。
 
@@ -55,5 +55,5 @@ npm run test:e2e:install  # 首次安裝 Chromium
 
 ## 網址
 
-- 正式：<https://nodus.linku.tech>
+- 正式：<https://neblux.linku.tech>
 - GitHub：<https://github.com/linkuofficial/linku-nodus>

@@ -22,7 +22,7 @@
     }
 }
 
-@keyframes nodusFlow {
+@keyframes nebluxFlow {
     0% {
         stroke-dashoffset: 360
     }
@@ -32,7 +32,7 @@
     }
 }
 
-@keyframes nodusFlowGold {
+@keyframes nebluxFlowGold {
     0% {
         stroke-dashoffset: 380
     }
@@ -42,7 +42,7 @@
     }
 }
 
-@keyframes nodusSelHalo {
+@keyframes nebluxSelHalo {
 
     0%,
     100% {
@@ -54,7 +54,7 @@
     }
 }
 
-@keyframes nodusTwinkle {
+@keyframes nebluxTwinkle {
 
     0%,
     100% {

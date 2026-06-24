@@ -9,8 +9,8 @@ body {
     background-color: rgba(26, 31, 38, 0.4);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--nodus-glass-border);
-    box-shadow: var(--nodus-glass-shadow);
+    border: 1px solid var(--neblux-glass-border);
+    box-shadow: var(--neblux-glass-shadow);
 }
 
 .search-glow:focus-within {

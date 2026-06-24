@@ -10,14 +10,14 @@ test("mobile: canvas app is tap-usable with a clean console", async ({ page }) =
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(String(e)));
     page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
-    await page.addInitScript(() => localStorage.setItem("nodus-app-onboard-seen-v1", "1"));
+    await page.addInitScript(() => localStorage.setItem("neblux-app-onboard-seen-v1", "1"));
     await page.goto("/app.html");
-    await page.waitForFunction(() => !!(window as any).__nodusApp?.ready());
+    await page.waitForFunction(() => !!(window as any).__nebluxApp?.ready());
     await page.waitForTimeout(800);
 
     // Tap a high-degree node near the centre; the panel should open.
     const target = await page.evaluate(() => {
-        const app = (window as any).__nodusApp;
+        const app = (window as any).__nebluxApp;
         let best: any = null, bd = -1;
         for (const id of app.nodeIds()) {
             const p = app.screenPos(id);

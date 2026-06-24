@@ -1,4 +1,4 @@
-window.NodusTokens = {
+window.NebluxTokens = {
     DOMAIN_COLORS: {
         MAT: '#5b9bd5',
         PHY: '#c97a5b',

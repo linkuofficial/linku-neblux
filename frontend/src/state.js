@@ -1,4 +1,4 @@
-(function initNodusState(globalObj) {
+(function initNebluxState(globalObj) {
     const SAFE_NODE_ID_RE = /^[A-Za-z0-9._:-]{1,120}$/;
 
     function isSafeNodeId(id) {
@@ -29,7 +29,7 @@
         localStorage.setItem(storageKey, JSON.stringify([...valuesSet]));
     }
 
-    globalObj.NodusState = {
+    globalObj.NebluxState = {
         isSafeNodeId,
         parseLearnedSet,
         loadStoredLearned,
