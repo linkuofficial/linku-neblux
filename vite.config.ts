@@ -75,6 +75,19 @@ function copyDataPlugin() {
                     }
                 }
             }
+
+            // Wonders (curated curiosity tours) — small hand-authored JSON, copied
+            // verbatim (no split/bake). The runtime reads /data/wonders/<id>.json.
+            const wondersSrc = resolve(srcDir, 'wonders');
+            const wondersDest = resolve(destDir, 'wonders');
+            if (existsSync(wondersSrc)) {
+                mkdirSync(wondersDest, { recursive: true });
+                for (const f of readdirSync(wondersSrc)) {
+                    if (f.endsWith('.json')) {
+                        copyFileSync(resolve(wondersSrc, f), resolve(wondersDest, f));
+                    }
+                }
+            }
         },
     };
 }
@@ -98,6 +111,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'frontend/index.html'),
                 app: resolve(__dirname, 'frontend/app.html'),
                 explorer: resolve(__dirname, 'frontend/explorer.html'),
+                wonders: resolve(__dirname, 'frontend/wonders.html'),
             },
         },
     },

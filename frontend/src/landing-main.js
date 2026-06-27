@@ -47,6 +47,7 @@
         const heroTitle = document.getElementById('heroTitle');
         const heroSubtitle = document.getElementById('heroSubtitle');
         const ctaExplore = document.getElementById('ctaExplore');
+        const ctaWonders = document.getElementById('ctaWonders');
         const pillTooltip = document.getElementById('pillTooltip');
         const pillTooltipDomain = document.getElementById('pillTooltipDomain');
         const pillTooltipTitle = document.getElementById('pillTooltipTitle');
@@ -420,30 +421,33 @@
                     heroTitle: 'Everything touches <span class="text-primary">everything</span>',
                     heroSubtitle: 'Follow one spark of curiosity into the deep field of everything we know.',
                     ctaExplore: 'Start Exploring',
+                    ctaWonders: 'Take a guided tour',
                     placeholder: 'Explore the infinite...',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX. EXPLORE THE INFINITE.`,
                     footerGraph: 'Graph',
-                    footerExplorer: 'Explorer',
+                    footerExplorer: 'Wonders',
                 },
                 zh: {
                     heroKicker: '從任一點開始',
                     heroTitle: '萬物彼此<span class="text-primary">相連</span>',
                     heroSubtitle: '順著一絲好奇，潛入人類所知的浩瀚星海。',
                     ctaExplore: '開始探索',
+                    ctaWonders: '來趟驚奇之旅',
                     placeholder: '探索無限知識…',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX．探索無限知識。`,
                     footerGraph: '圖譜',
-                    footerExplorer: '探索器',
+                    footerExplorer: '驚奇之旅',
                 },
                 ja: {
                     heroKicker: 'どこからでも',
                     heroTitle: 'すべては、すべてに<span class="text-primary">つながる</span>',
                     heroSubtitle: 'ひとつの好奇心を追って、知の深宇宙へ。',
                     ctaExplore: '探索する',
+                    ctaWonders: 'ガイドツアーへ',
                     placeholder: '無限の知識を探索…',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX. 知のつながりを探索する。`,
                     footerGraph: 'グラフ',
-                    footerExplorer: 'エクスプローラー',
+                    footerExplorer: 'ワンダー',
                 }
             };
 
@@ -525,6 +529,7 @@
             heroTitle.innerHTML = langCopy.heroTitle;
             heroSubtitle.textContent = langCopy.heroSubtitle;
             ctaExplore.textContent = langCopy.ctaExplore;
+            if (ctaWonders) ctaWonders.textContent = langCopy.ctaWonders;
             searchInput.placeholder = langCopy.placeholder;
             if (footerCopy) footerCopy.textContent = langCopy.footerCopy;
             if (footerGraphLink) footerGraphLink.textContent = langCopy.footerGraph;

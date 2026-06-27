@@ -1,0 +1,221 @@
+{
+  "id": "black-holes",
+  "accent": "PHY",
+  "title": { "en": "Black Holes & Spacetime", "zh": "黑洞與時空", "ja": "ブラックホールと時空" },
+  "intro": {
+    "en": "Gravity, time, light — black holes take everything you trust about reality and bend it past breaking. In seven steps, fall toward the strangest objects in the universe, where space and time themselves come undone.",
+    "zh": "重力、時間、光——黑洞把你信賴的一切現實彎折到極限。跟著七步，墜向宇宙中最奇異的天體，在那裡，空間與時間本身都會瓦解。",
+    "ja": "重力、時間、光——ブラックホールは、あなたが信じている現実のすべてを限界の先まで歪めます。7 つのステップで、宇宙でもっとも奇妙な天体へと落ちていきましょう。そこでは、空間と時間そのものがほどけていきます。"
+  },
+  "steps": [
+    {
+      "ref": "gravitational_force_concept",
+      "hook": {
+        "en": "Drop an apple and it falls. The Moon, somehow, keeps circling instead of falling. What if those are the very same thing?",
+        "zh": "丟下一顆蘋果，它會落地。月亮卻不知怎地一直繞著轉、不掉下來。如果這兩件事其實是同一回事呢？",
+        "ja": "リンゴを落とせば地面に落ちる。月はなぜか落ちずに回り続ける。もしこの二つが、まったく同じことだとしたら？"
+      },
+      "reveal": {
+        "en": "That was Newton's leap: the apple and the Moon obey one law. Every mass pulls every other mass, with a force that fades with distance. The Moon IS falling — it just moves sideways fast enough to keep missing the Earth. One equation governs a dropped apple, an orbiting moon, and a whole galaxy's spin.",
+        "zh": "這正是牛頓的躍進：蘋果與月亮服從同一條定律。每一個質量都吸引彼此，力量隨距離衰減。月亮其實一直在「掉」——只是它橫向移動得夠快，剛好一直錯過地球。一條方程式，同時管著落下的蘋果、繞行的月亮，以及整個星系的旋轉。",
+        "ja": "それがニュートンの飛躍でした。リンゴも月も、同じ一つの法則に従う。すべての質量はたがいに引き合い、その力は距離とともに弱まる。月は実は「落ち」続けている——ただ横へ十分速く動くから、地球をかすめ続けるだけ。落ちるリンゴ、回る月、銀河全体の回転まで、たった一つの式が支配しているのです。"
+      },
+      "example": {
+        "en": "The same math that drops your coffee cup also lets us fling a probe past Jupiter using its gravity as a slingshot — aiming decades ahead with meter precision.",
+        "zh": "讓你的咖啡杯落地的同一套數學，也讓我們能用木星的重力當彈弓，把探測器甩過木星——提前數十年瞄準，精確到公尺。",
+        "ja": "あなたのコーヒーカップを落とすのと同じ数学が、木星の重力をパチンコのように使って探査機を投げ飛ばすことも可能にします——数十年先を、メートル単位の精度で狙って。"
+      },
+      "surprise": {
+        "en": "Here's the twist: gravity is by far the weakest of nature's four forces. A cheap fridge magnet lifts a paperclip against the pull of the entire Earth. Yet because gravity only ever adds up — never cancels — it quietly wins at cosmic scale and shapes the whole universe.",
+        "zh": "意外的是：重力是大自然四種力裡最弱的一個。一塊便宜的冰箱磁鐵，就能對抗整個地球的拉力，把迴紋針吸起來。但因為重力只會累加、從不抵消，它在宇宙尺度上悄悄勝出，塑造了整個宇宙。",
+        "ja": "意外なことに、重力は自然界の四つの力のなかで群を抜いて弱いのです。安物の冷蔵庫マグネットが、地球全体の引力に逆らってクリップを持ち上げてしまう。それでも重力は足し合わさるだけで——決して打ち消し合わない——だから宇宙の尺度では静かに勝ち、宇宙全体を形づくるのです。"
+      },
+      "thread": {
+        "en": "But Newton could describe gravity without ever saying what it actually is. To answer that, Einstein first had to upend space and time themselves.",
+        "zh": "但牛頓能描述重力，卻始終說不出它到底「是」什麼。為了回答這個問題，愛因斯坦得先把空間與時間本身整個顛覆。",
+        "ja": "けれどニュートンは、重力を記述できても、それが何で「ある」のかは言えませんでした。それに答えるため、アインシュタインはまず空間と時間そのものをひっくり返さねばなりませんでした。"
+      }
+    },
+    {
+      "ref": "special_relativity_concept",
+      "hook": {
+        "en": "We all feel time ticks the same everywhere — one universal 'now.' What if that's simply not true?",
+        "zh": "我們都覺得時間在哪裡都一樣快——有一個全宇宙共通的「現在」。如果這根本不是真的呢？",
+        "ja": "時間はどこでも同じように刻む——宇宙共通の「いま」がある。私たちはそう感じています。でも、それがそもそも真実でないとしたら？"
+      },
+      "reveal": {
+        "en": "Einstein started from one stubborn fact: light always travels at the same speed, no matter how fast you chase it. Chase a beam at 99% of light speed and it still races away from you at full speed. To make that work, space and time must stretch and shrink. Moving clocks run slow; moving rulers contract. Time is not a fixed backdrop — it bends to keep light's speed sacred.",
+        "zh": "愛因斯坦從一個頑固的事實出發：光的速度永遠一樣，不管你追得多快。你以 99% 光速去追一束光，它依然以全速從你身邊逃走。為了讓這成立，空間與時間就必須伸縮。運動中的時鐘走得慢，運動中的尺會縮短。時間不是固定的背景——它彎折，只為了守住光速這條神聖的界線。",
+        "ja": "アインシュタインは一つの頑固な事実から出発しました——光はどれだけ追いかけても、つねに同じ速さで進む。光速の 99% で光を追っても、光はやはり全速力で逃げていく。それを成り立たせるには、空間と時間が伸び縮みするしかない。動く時計は遅れ、動く物差しは縮む。時間は固定された背景ではなく——光の速さを守るために、みずから歪むのです。"
+      },
+      "example": {
+        "en": "It's not just theory: GPS satellites move fast enough that their clocks visibly drift from ours. Without correcting for relativity, your phone's map would be off by kilometers within a day.",
+        "zh": "這不只是理論：GPS 衛星跑得夠快，它們的時鐘會明顯與我們的偏掉。要是不修正相對論效應，你手機上的地圖一天之內就會偏差好幾公里。",
+        "ja": "ただの理論ではありません。GPS 衛星は十分に速く動くため、その時計は私たちのものと目に見えてずれていきます。相対論を補正しなければ、スマホの地図は一日のうちに数キロもずれてしまうのです。"
+      },
+      "surprise": {
+        "en": "The deepest shock: there is no universal 'now.' Two people moving past each other can genuinely disagree about whether two distant events happened at the same time — and both are right. The present moment you feel is yours alone; the cosmos keeps no shared clock.",
+        "zh": "最深的震撼是：根本沒有全宇宙共通的「現在」。兩個彼此擦身而過的人，可以真的對「兩件遠方的事是否同時發生」各執一詞——而且兩個人都對。你所感受到的此刻，只屬於你自己；宇宙並沒有一個共用的時鐘。",
+        "ja": "もっとも深い衝撃はこれです——宇宙共通の「いま」は存在しない。すれ違う二人が、遠く離れた二つの出来事が同時に起きたかどうかで本気で食い違い——しかも二人とも正しい。あなたが感じる「この瞬間」はあなただけのもの。宇宙には、共有された時計などないのです。"
+      },
+      "thread": {
+        "en": "If time and space already bend just from motion, what happens when you add gravity back in?",
+        "zh": "如果光是運動就能讓時間與空間彎折，那把重力再加回來，會發生什麼事？",
+        "ja": "動くだけで時間も空間も曲がるなら、そこに重力を戻したら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "relativity_general_concept",
+      "hook": {
+        "en": "If gravity isn't a force reaching across empty space to tug you, then why does anything fall at all?",
+        "zh": "如果重力不是一股穿過虛空、把你拉過去的力，那東西到底為什麼會掉下來？",
+        "ja": "重力が、空っぽの空間を越えてあなたを引っぱる「力」でないのなら——そもそも、なぜ物は落ちるのでしょう？"
+      },
+      "reveal": {
+        "en": "Einstein's answer: mass bends spacetime, and things fall because they follow the straightest possible path through that curved geometry. The Earth doesn't pull the apple; the Earth dents spacetime, and the apple rolls down the dent. As physicist John Wheeler put it: matter tells spacetime how to curve, and curved spacetime tells matter how to move.",
+        "zh": "愛因斯坦的答案是：質量會彎曲時空，而東西之所以會掉，是因為它在那彎曲的幾何裡，沿著最直的路徑前進。地球並沒有「拉」蘋果；地球把時空壓出一個凹陷，蘋果只是順著凹陷滾下去。物理學家惠勒說得好：物質告訴時空如何彎曲，彎曲的時空告訴物質如何運動。",
+        "ja": "アインシュタインの答えはこうです——質量は時空を曲げ、物が落ちるのは、その曲がった幾何のなかで「もっともまっすぐな道」をたどるからだ。地球はリンゴを引っぱっていない。地球が時空をへこませ、リンゴはそのへこみを転がり落ちているだけ。物理学者ホイーラーの言葉どおり——物質は時空にどう曲がるかを教え、曲がった時空は物質にどう動くかを教えるのです。"
+      },
+      "example": {
+        "en": "Picture a bowling ball on a stretched trampoline: roll a marble nearby and it spirals inward — not pulled by the ball, but rolling along the dip the ball makes. Planets orbit the Sun for exactly that reason, on a vastly grander sheet.",
+        "zh": "想像一顆保齡球壓在繃緊的彈翻床上：在旁邊滾一顆彈珠，它會向內盤旋——不是被保齡球拉，而是順著它壓出的凹陷在滾。行星繞著太陽轉，正是同樣的道理，只是在一張大得多的「布」上。",
+        "ja": "ぴんと張ったトランポリンの上のボウリング球を思い浮かべてください。そばでビー玉を転がすと、内へと渦を巻いていく——球に引かれてではなく、球がつくったくぼみに沿って転がるのです。惑星が太陽を回るのもまったく同じ理由——はるかに大きな「布」の上で。"
+      },
+      "surprise": {
+        "en": "And gravity bends time, not just space. A clock on the floor runs measurably slower than one on a shelf — your head ages a hair faster than your feet. Stronger gravity, slower time. This isn't a quirk; it's the key that unlocks the black hole.",
+        "zh": "而且重力彎折的不只是空間，還有時間。地板上的時鐘，會比書架上的時鐘走得慢一點點——你的頭，比你的腳老得稍微快一些。重力越強，時間越慢。這不是小花招，而是打開黑洞的那把鑰匙。",
+        "ja": "しかも重力は空間だけでなく、時間も曲げます。床に置いた時計は、棚の上の時計よりわずかに遅れて進む——あなたの頭は、足よりほんの少し速く老いていくのです。重力が強いほど、時間は遅くなる。これは小細工ではなく、ブラックホールを解き明かす鍵なのです。"
+      },
+      "thread": {
+        "en": "So what happens if you curve spacetime so steeply that even light can't climb back out?",
+        "zh": "那麼，如果你把時空彎得太陡，陡到連光都爬不出來，會發生什麼事？",
+        "ja": "では、時空をあまりに急に曲げて、光さえ這い上がれなくなったら——何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "black_hole_concept",
+      "hook": {
+        "en": "Throw a ball up and it comes back. Throw it at 11 km/s and it leaves Earth forever. What if gravity were so strong that not even light — the fastest thing there is — could ever escape?",
+        "zh": "把球往上丟，它會掉回來。用每秒 11 公里丟，它就永遠脫離地球。如果重力強到連光——這宇宙中最快的東西——都永遠逃不出去呢？",
+        "ja": "ボールを上に投げれば戻ってくる。秒速 11 キロで投げれば、地球を永遠に離れる。では、重力があまりに強くて、宇宙でいちばん速い光さえ二度と出られないとしたら？"
+      },
+      "reveal": {
+        "en": "That's a black hole: spacetime curved so steeply that the speed needed to escape exceeds light's speed — so nothing escapes. Its edge, the event horizon, is a one-way door: cross it and every path forward leads deeper in. A black hole isn't really an 'object' made of stuff; it's a region of spacetime folded shut. Collapse a star a few times heavier than our Sun, and one is born.",
+        "zh": "那就是黑洞：時空彎得太陡，逃離所需的速度超過了光速——於是什麼都逃不掉。它的邊界，事件視界，是一道單向門：跨過去，所有「向前」的路都通往更深處。黑洞其實不是由「物質」構成的「物體」；它是一塊被摺疊封死的時空。讓一顆比太陽重幾倍的恆星塌縮，就誕生一個黑洞。",
+        "ja": "それがブラックホールです——時空があまりに急に曲がり、脱出に必要な速さが光速を超えてしまう。だから何も出られない。その縁、事象の地平面は一方通行の扉——越えれば、「前へ」進むすべての道が、より深い内側へと通じる。ブラックホールは「物質でできた物体」ではなく、閉じるように折りたたまれた時空の領域なのです。太陽の数倍重い星が崩壊すると、一つ生まれます。"
+      },
+      "example": {
+        "en": "At the heart of our own galaxy sits Sagittarius A*, a black hole four million times the Sun's mass — and in 2019, humanity took its first real photograph of one: a ring of light around a circle of pure dark.",
+        "zh": "在我們銀河系的中心，坐著人馬座 A*，一個四百萬倍太陽質量的黑洞——而在 2019 年，人類拍下了第一張黑洞的真實照片：一圈光，環繞著一個純粹漆黑的圓。",
+        "ja": "私たちの銀河の中心には、太陽の四百万倍の質量をもつブラックホール「いて座 A*」が鎮座しています——そして 2019 年、人類は初めてブラックホールの実際の写真を撮りました。真っ黒な円を取り囲む、一筋の光の輪を。"
+      },
+      "surprise": {
+        "en": "The eeriest part: if you watched a friend fall in, you'd never see them cross. Because gravity freezes time, their image would slow, redden, and hang at the horizon — dimming forever but never quite gone. From the outside, falling into a black hole takes literally all of time.",
+        "zh": "最詭異的地方是：如果你看著朋友掉進去，你永遠不會看到他「跨過去」。因為重力讓時間凍結，他的影像會變慢、變紅，懸停在視界邊緣——永遠變暗，卻又始終不曾真正消失。從外面看，掉進黑洞，要花掉整整一個「永遠」。",
+        "ja": "もっとも不気味なのはここです——友人が落ちていくのを見ても、その人が境界を「越える」瞬間は決して見えない。重力が時間を凍らせるため、その姿は遅くなり、赤くなり、地平面のふちで宙づりになる——永遠に暗くなりながら、決して完全には消えない。外から見れば、ブラックホールへ落ちるのに、文字どおり「すべての時間」がかかるのです。"
+      },
+      "thread": {
+        "en": "Cross the horizon and head for the center — and our most trusted physics simply stops making sense. What's down there?",
+        "zh": "跨過視界、朝中心前進——而我們最信賴的物理，會就此徹底失去意義。那底下，到底有什麼？",
+        "ja": "地平面を越え、中心へ向かう——すると、私たちがもっとも信頼する物理が、ただ意味をなさなくなる。その底に、いったい何があるのでしょう？"
+      }
+    },
+    {
+      "ref": "quantum_mechanics_field",
+      "hook": {
+        "en": "Every successful theory has a domain. But what happens where the two most successful theories in all of physics flatly contradict each other — and that place is the center of a black hole?",
+        "zh": "每個成功的理論都有它的適用範圍。但如果物理學中最成功的兩個理論，在某個地方徹底互相矛盾——而那個地方，正是黑洞的中心呢？",
+        "ja": "成功した理論にはそれぞれ守備範囲があります。では、物理学でもっとも成功した二つの理論が真っ向から矛盾する場所が——よりによってブラックホールの中心だったとしたら？"
+      },
+      "reveal": {
+        "en": "At the center, general relativity predicts a singularity: a point where matter is crushed to infinite density and the equations spit out infinity — math's way of saying 'I give up.' Quantum mechanics, which rules the tiny, forbids infinite-and-exact. Both theories pass every experiment we throw at them, yet here they collide head-on. Nobody has reconciled them. The black hole's heart is the biggest open problem in physics.",
+        "zh": "在中心，廣義相對論預言一個奇異點：物質被壓成無限密度、方程式吐出無限大——那是數學在說「我投降了」。而主宰微觀世界的量子力學，卻禁止「又無限又精確」。這兩個理論通過了我們丟給它們的每一個實驗，卻在這裡正面對撞。沒有人能調和它們。黑洞的核心，是物理學最大的未解之謎。",
+        "ja": "中心では、一般相対論が特異点を予言します——物質が無限の密度に押しつぶされ、方程式が無限大を吐き出す。それは数学の「お手上げ」の合図です。一方、極微の世界を支配する量子力学は、「無限かつ厳密」を禁じる。どちらの理論も、私たちが投げかけるあらゆる実験に合格しているのに、ここで正面衝突する。誰もまだ和解させられていない。ブラックホールの心臓部は、物理学最大の未解決問題なのです。"
+      },
+      "example": {
+        "en": "This is why physicists chase 'quantum gravity' — string theory, loop quantum gravity, and more. A black hole is the only place in the universe extreme enough to force the question: a natural laboratory for the rules we don't yet have.",
+        "zh": "這正是物理學家追尋「量子重力」的原因——弦論、迴圈量子重力，以及更多。黑洞是宇宙中唯一極端到足以逼出這個問題的地方，是我們尚未擁有的那套規則的天然實驗室。",
+        "ja": "だからこそ物理学者は「量子重力」を追い求めます——超弦理論、ループ量子重力、そのほか数々。ブラックホールは、その問いを突きつけるほど極端な、宇宙で唯一の場所——私たちがまだ手にしていない法則の、天然の実験室なのです。"
+      },
+      "surprise": {
+        "en": "It gets stranger. Stephen Hawking showed that when you do bring quantum mechanics to the horizon, the black hole isn't perfectly black at all — it faintly glows, and over unimaginable ages, it slowly evaporates away.",
+        "zh": "而且還更怪。霍金證明了：當你真的把量子力學帶到視界邊緣，黑洞根本不是完全黑的——它會微微發光，並在難以想像的漫長歲月裡，慢慢蒸發殆盡。",
+        "ja": "話はさらに奇妙になります。ホーキングは、量子力学を地平面に持ち込むと、ブラックホールは完全に黒くなどない——かすかに光り、想像を絶する歳月をかけて、ゆっくりと蒸発して消えていくことを示しました。"
+      },
+      "thread": {
+        "en": "A black hole that glows and dies? That faint leak of light hides one of the most mind-bending ideas in all of science.",
+        "zh": "一個會發光、會死亡的黑洞？那一絲微弱漏出的光，藏著科學中最顛覆想像的概念之一。",
+        "ja": "光り、そして死んでいくブラックホール？そのかすかに漏れる光のなかに、科学でもっとも想像を覆す考えの一つが隠れています。"
+      }
+    },
+    {
+      "ref": "entropy_concept",
+      "hook": {
+        "en": "How much 'disorder' can you hide inside a black hole? The answer rewrote what physicists think reality might be made of.",
+        "zh": "你能在一個黑洞裡藏進多少「亂度」？這個問題的答案，改寫了物理學家對「現實由什麼構成」的看法。",
+        "ja": "ブラックホールの中に、どれだけの「乱れ」を隠せるのか？その答えは、現実が何でできているのかについての物理学者の考えを書き換えました。"
+      },
+      "reveal": {
+        "en": "Every system has entropy — a measure of how many hidden arrangements it could secretly be in. Hawking and Bekenstein found a black hole's entropy is enormous, and bizarrely, it's proportional to the AREA of its horizon, not the volume inside. As a black hole swallows matter and grows, its surface — not its bulk — keeps the books on everything that ever fell in.",
+        "zh": "每個系統都有熵——衡量它私底下可能處於多少種隱藏排列的尺度。霍金與貝肯斯坦發現，黑洞的熵大得驚人，而且詭異的是，它正比於視界的「面積」，而不是內部的體積。當黑洞吞噬物質、不斷長大，記下「曾經掉進去的一切」的帳本，是它的表面——而不是它的內裡。",
+        "ja": "あらゆる系にはエントロピー——それがひそかに取りうる隠れた配置の数を測る量——があります。ホーキングとベケンシュタインは、ブラックホールのエントロピーが途方もなく大きく、しかも奇妙なことに、内部の体積ではなく地平面の「面積」に比例することを見いだしました。ブラックホールが物質を呑み込んで成長するとき、これまで落ちたすべてを記録する帳簿は、その中身ではなく——表面なのです。"
+      },
+      "example": {
+        "en": "Information stored on a surface, not in a volume — like a 3D scene captured on a flat hologram. The amount of stuff a region can hold turns out to be set by the area around it, not the space within.",
+        "zh": "資訊儲存在「面」上，而不是「體」裡——就像一個 3D 場景被記錄在一張平面的全像片上。一塊區域能裝下多少東西，竟是由包住它的「面積」決定的，而不是它內部的空間。",
+        "ja": "情報が体積ではなく表面に蓄えられる——3D の光景が平らなホログラムに記録されるように。ある領域がどれだけのものを収められるかは、内部の空間ではなく、それを囲む「面積」で決まるのです。"
+      },
+      "surprise": {
+        "en": "Taken seriously, this is the holographic principle: the full 3D contents of a region might be entirely encoded on its 2D boundary. Some physicists suspect the space you're sitting in — maybe the whole universe — could be a kind of projection from information written on a distant surface. Black holes hinted that reality itself might be a hologram.",
+        "zh": "認真看待這件事，就是全像原理：一塊區域完整的 3D 內容，可能完全被編碼在它的 2D 邊界上。有些物理學家懷疑，你此刻所在的空間——也許整個宇宙——可能是某種投影，源自寫在遙遠表面上的資訊。黑洞暗示了：現實本身，或許是一張全像圖。",
+        "ja": "これを真剣に受け取ると、ホログラフィック原理になります——ある領域の 3D の中身がすべて、その 2D の境界に符号化されているかもしれない。あなたがいま座っている空間——おそらく宇宙全体——が、遠い表面に書かれた情報からの一種の投影ではないか、と疑う物理学者もいます。ブラックホールは、現実そのものがホログラムかもしれないと示唆したのです。"
+      },
+      "thread": {
+        "en": "Frozen time, broken physics, holographic edges — what does the universe gain from objects this extreme?",
+        "zh": "凍結的時間、崩潰的物理、全像的邊界——這麼極端的天體，到底為宇宙、為我們帶來了什麼？",
+        "ja": "凍りついた時間、崩れる物理、ホログラフィックな縁——これほど極端な天体から、宇宙は、そして私たちは、何を得るのでしょう？"
+      }
+    },
+    {
+      "ref": "cosmology_concept",
+      "hook": {
+        "en": "Black holes sound like cosmic freak shows. Why should anyone but a physicist care?",
+        "zh": "黑洞聽起來像宇宙的怪奇秀。除了物理學家，為什麼有人該在乎？",
+        "ja": "ブラックホールは宇宙の見世物のように聞こえます。物理学者以外の誰が、気にかける必要があるのでしょう？"
+      },
+      "reveal": {
+        "en": "Because the extremes are where the rules reveal themselves. Nearly every galaxy, including ours, is anchored by a supermassive black hole at its core — helping shape how galaxies live and grow. When two of them collided a billion light-years away, the crash rang spacetime like a bell, and in 2015 we heard it: gravitational waves, confirming Einstein a century on. And the Big Bang itself looks like a singularity run in reverse. To understand everything, we study where everything breaks.",
+        "zh": "因為極端之處，正是規則現身的地方。幾乎每個星系——包括我們的——核心都被一個超大質量黑洞錨定，參與塑造星系的生與長。當其中兩個在十億光年外相撞，那場撞擊像敲鐘一樣讓時空震盪，而在 2015 年，我們聽見了：重力波，在一個世紀後印證了愛因斯坦。而大霹靂本身，看起來就像一個倒著跑的奇異點。為了理解一切，我們研究一切崩潰的地方。",
+        "ja": "極端こそ、法則がその姿を現す場所だからです。私たちのものを含むほぼすべての銀河は、中心の超大質量ブラックホールにつなぎ留められ——銀河の生と成長を形づくる一翼を担っています。その二つが十億光年かなたで衝突したとき、その激突は時空を鐘のように鳴らし、2015 年、私たちはそれを聴きました——重力波。一世紀を経てアインシュタインを裏づけたのです。そしてビッグバンそのものが、逆回しの特異点のように見える。すべてを理解するために、私たちはすべてが壊れる場所を研究するのです。"
+      },
+      "example": {
+        "en": "Those detected ripples were shifts smaller than a thousandth the width of a proton, measured across a four-kilometer instrument. We built machines delicate enough to feel two black holes merge across the universe.",
+        "zh": "那些被偵測到的漣漪，是比質子寬度的千分之一還小的位移，跨越一台四公里長的儀器被量到。我們造出了精密到能「感覺到」宇宙另一端兩個黑洞合併的機器。",
+        "ja": "検出されたそのさざ波は、陽子の幅の千分の一よりも小さなずれを、四キロメートルの装置で測ったものでした。私たちは、宇宙の彼方で二つのブラックホールが合体するのを「感じ取れる」ほど繊細な機械をつくり上げたのです。"
+      },
+      "surprise": {
+        "en": "Here's the quiet wonder: every atom in your body was forged inside stars, and the galaxies that made those stars were shaped by black holes. The strangest objects in the universe aren't a sideshow — they're part of why you're here to be curious about them at all.",
+        "zh": "這裡藏著一個安靜的驚奇：你身體裡的每一個原子，都是在恆星內部鍛造出來的，而鍛造那些恆星的星系，是被黑洞塑形的。宇宙中最奇異的天體，並不是配角——它們，正是「你之所以在這裡、能對它們感到好奇」的原因之一。",
+        "ja": "ここに静かな驚きがあります——あなたの体のすべての原子は星の内部で鍛えられ、その星々を生んだ銀河は、ブラックホールに形づくられた。宇宙でもっとも奇妙な天体は、脇役ではありません——それらは、あなたがここにいて、そもそもそれらに好奇心を抱けることの理由の一つなのです。"
+      },
+      "thread": {
+        "en": "You've fallen all the way through space, time, and back out again — but the sky is still wide open. Wander wherever a star pulls you.",
+        "zh": "你已經一路墜過了空間、時間，又重新回到外面——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは空間と時間を抜け、また外へと落ち切りました——でも空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "gravitational_force_concept", "target": "special_relativity_concept", "relation_type": "conceptual" },
+    { "source": "special_relativity_concept", "target": "relativity_general_concept", "relation_type": "logical" },
+    { "source": "relativity_general_concept", "target": "black_hole_concept", "relation_type": "causal" },
+    { "source": "black_hole_concept", "target": "quantum_mechanics_field", "relation_type": "conceptual" },
+    { "source": "quantum_mechanics_field", "target": "entropy_concept", "relation_type": "conceptual" },
+    { "source": "entropy_concept", "target": "cosmology_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up Einstein's 'happiest thought' (the equivalence principle), watch how the 2019 black-hole image was assembled, or read about LIGO actually hearing two black holes merge — and the strangeness here becomes real, observed science.",
+    "zh": "想再往下墜一點？去查查愛因斯坦「最快樂的念頭」（等效原理）、看一段 2019 年黑洞影像如何被拼出來的影片，或讀讀 LIGO 如何真的「聽見」兩個黑洞合併——這裡的奇異，就會變成真實、被觀測到的科學。",
+    "ja": "もっと落ちてみたいですか？アインシュタインの「人生で最も幸福な考え」（等価原理）を調べ、2019 年のブラックホール画像がどう組み立てられたかを見て、LIGO が二つのブラックホールの合体を実際に「聴いた」話を読んでみてください——ここでの奇妙さが、現実の、観測された科学に変わります。"
+  }
+}

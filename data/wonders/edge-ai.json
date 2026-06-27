@@ -1,0 +1,226 @@
+{
+  "id": "edge-ai",
+  "accent": "TEC",
+  "title": { "en": "Edge AI", "zh": "邊緣 AI", "ja": "エッジ AI" },
+  "intro": {
+    "en": "AI doesn't have to live in a distant cloud. In seven steps, watch it walk into a machine right in front of you — one that sees, reacts, and moves.",
+    "zh": "AI 不一定住在遙遠的雲端。跟著七步，看它如何走進一台就在你眼前、會看、會反應、會動的機器。",
+    "ja": "AI は遠いクラウドに住むとはかぎりません。7 つのステップで、目の前の機械——見て、反応し、動く機械——へ AI が降りてくる様子を追いましょう。"
+  },
+  "steps": [
+    {
+      "ref": "edge_computing_concept",
+      "hook": {
+        "en": "AI lives in giant cloud data centers — so why don't self-driving cars just stream everything up and let the cloud think?",
+        "zh": "AI 明明住在雲端的巨大機房裡，為什麼自駕車、機械臂不把畫面傳上去算就好？",
+        "ja": "AI は巨大なクラウドのデータセンターに住んでいる——なら自動運転車は、映像を全部クラウドへ送って考えさせればいいのでは？"
+      },
+      "reveal": {
+        "en": "Because the physical world won't wait. Sending one image up to the cloud and getting an answer back can take tens to hundreds of milliseconds — and a fast-moving car travels several meters in that blink. So the clever move is the opposite: bring the computing to where the data is born, right on the device. That's edge computing.",
+        "zh": "因為物理世界不等人。光是把一張影像送到雲端、算完再回來，就要幾十到上百毫秒——對高速行駛的車，那段時間車已經往前衝了好幾公尺。於是聰明的做法反過來：把運算搬到資料出生的地方，就在裝置上即時算。這就是邊緣運算。",
+        "ja": "物理世界は待ってくれないからです。1 枚の画像をクラウドへ送り、答えが返るまでに数十〜数百ミリ秒。高速で走る車はそのまばたきの間に数メートル進んでしまう。だから賢い手はその逆——計算をデータが生まれる場所、つまり端末そのものへ持ってくる。これがエッジコンピューティングです。"
+      },
+      "example": {
+        "en": "Picture a smart doorbell that decides 'person or cat?' on its own tiny chip — no need to upload every frame of your porch to someone else's server. Faster, and more private.",
+        "zh": "想像門口的智慧門鈴：它在自己的小晶片上就認出『這是人還是貓』，不必把你家門口的每一幀都上傳到別人的伺服器——更快，也更隱私。",
+        "ja": "玄関のスマートドアベルを思い浮かべてください。「人か猫か」を自分の小さなチップ上で判断する——玄関の映像を一コマ残らず他人のサーバーへ送る必要はありません。速く、そしてプライバシーも守られます。"
+      },
+      "surprise": {
+        "en": "Here's the twist: your body figured this out long ago. When you yank your hand off something hot, your spinal cord reacts — your brain never gets 'consulted.' Edge computing is giving machines a reflex arc.",
+        "zh": "有趣的是，這跟你的身體早就會的事一樣：你縮手躲開燙的東西，靠的是脊髓的反射，根本沒讓大腦『上雲端』參與。邊緣運算，等於給機器裝上反射神經。",
+        "ja": "意外なことに、あなたの体はとっくにこれを知っています。熱いものから手を引っ込めるとき、反応しているのは脊髄で、脳は「相談」すら受けません。エッジコンピューティングとは、機械に反射神経を与えることなのです。"
+      },
+      "thread": {
+        "en": "But what exactly is the 'intelligence' we moved onto the device?",
+        "zh": "但搬到裝置上的『智慧』到底是什麼東西？",
+        "ja": "では、端末へ移したその「知能」とは、そもそも何なのでしょう？"
+      }
+    },
+    {
+      "ref": "machine_learning_concept",
+      "hook": {
+        "en": "Is this 'intelligence' just someone hand-writing every rule? If the world throws infinite situations at it, how could anyone finish writing them all?",
+        "zh": "這份『智慧』是有人把每條規則寫死進去的嗎？如果世界上有無限種狀況，怎麼寫得完？",
+        "ja": "この「知能」は、誰かがルールを一つ一つ書き込んだものなのでしょうか？世界が無限の状況を投げてくるなら、どうやって書ききれるのでしょう？"
+      },
+      "reveal": {
+        "en": "You can't finish — so you don't. Machine learning flips the game: show the machine many examples and let it infer the patterns itself. You never define 'cat'; you show it ten thousand cat photos and it extracts the 'cat-ness' on its own. It grows judgment from experience instead of being told rule by rule.",
+        "zh": "寫不完——所以不寫。機器學習換個玩法：給機器看大量例子，讓它自己從資料裡『歸納』出規律。你不告訴它貓的定義，你給它一萬張貓的照片，它自己抓出『貓味』。它從經驗裡長出判斷，而不是被逐條教。",
+        "ja": "書ききれない——だから書きません。機械学習は発想を変えます。大量の例を見せ、データから規則を自分で「帰納」させるのです。猫の定義は教えず、猫の写真を一万枚見せる。すると機械は自力で「猫らしさ」をつかみ取る。一条ずつ教わるのではなく、経験から判断を育てるのです。"
+      },
+      "example": {
+        "en": "Your spam filter was never handed a list of 'all spam words' — it read millions of emails and learned what scam smells like. Every time you hit 'mark as spam,' it takes another lesson.",
+        "zh": "垃圾郵件過濾器沒人列出『所有垃圾關鍵字』——它讀過幾百萬封信，自己學會哪種味道像詐騙。你按下『這是垃圾』，它就又學了一課。",
+        "ja": "迷惑メールフィルターは「迷惑キーワード一覧」を渡されたわけではありません。何百万通ものメールを読み、どんな匂いが詐欺かを自分で学びました。あなたが「迷惑」を押すたび、また一つ学んでいます。"
+      },
+      "surprise": {
+        "en": "The surprise: this idea of 'growing intuition from examples' was sparked by neuroscience — mimicking how the brain's neural connections strengthen or fade with experience. Machine learning has one foot in math and, secretly, the other in biology.",
+        "zh": "驚奇的是，這個『從例子長出直覺』的點子，最早的靈感來自神經科學——模仿大腦神經元連結的強弱會隨經驗改變。機器學習一隻腳踩在數學裡，另一隻腳其實踩在生物學。",
+        "ja": "意外なことに、この「例から直感を育てる」という発想の源は神経科学でした——脳の神経のつながりが経験で強まったり弱まったりする仕組みを真似たのです。機械学習は片足を数学に、もう片足をこっそり生物学に置いています。"
+      },
+      "thread": {
+        "en": "But these models are often huge and power-hungry — how do you cram one into a doorbell's tiny chip?",
+        "zh": "可是這種模型常常很大、很吃算力——怎麼塞進門鈴那種小晶片？",
+        "ja": "でも、そういうモデルはたいてい巨大で電力を食う——どうやってドアベルの小さなチップに収めるのでしょう？"
+      }
+    },
+    {
+      "local": {
+        "id": "edge_model_compression",
+        "label": { "en": "Model Compression", "zh": "模型壓縮・量化", "ja": "モデル圧縮・量子化" },
+        "type": "concept",
+        "domain": ["TEC"]
+      },
+      "hook": {
+        "en": "A powerful AI model can have billions of parameters and needs a beefy GPU. So is the tiny edge chip just out of luck?",
+        "zh": "一個厲害的 AI 模型可能有幾十億個參數，要大顯卡才跑得動。難道邊緣的小晶片就無緣了嗎？",
+        "ja": "優れた AI モデルは何十億ものパラメータを持ち、強力な GPU がないと動きません。では、エッジの小さなチップには縁がないのでしょうか？"
+      },
+      "reveal": {
+        "en": "It isn't. Model compression puts the model on a diet: quantization (swapping high-precision numbers for low — like shrinking a photo to 'good enough'), pruning (cutting connections that barely fire), distillation (training a small model to imitate a big one). The slimmed model can be ten times smaller with almost no loss in accuracy — just small enough to run in real time on cheap, off-the-shelf silicon.",
+        "zh": "不必。模型壓縮就是替模型『瘦身』：量化（把高精度數字換成低精度，像把照片縮到夠用就好）、剪枝（剪掉幾乎沒在出力的連結）、蒸餾（讓小模型去模仿大模型的判斷）。瘦完的模型可能小十倍，準度卻幾乎不掉——剛好能在便宜的現成晶片上即時跑。",
+        "ja": "そんなことはありません。モデル圧縮はモデルを「ダイエット」させます。量子化（高精度の数値を低精度へ——写真を「十分なところまで」縮めるように）、枝刈り（ほとんど働いていないつながりを切る）、蒸留（小さなモデルに大きなモデルの判断を真似させる）。痩せたモデルは精度をほとんど落とさず十分の一の大きさになり——安価な市販チップ上でリアルタイムに動くのです。"
+      },
+      "example": {
+        "en": "On-phone live translation and offline voice assistants run on exactly this trick — squeezing a cloud-sized model down until it works on its own, in your pocket.",
+        "zh": "手機上的即時翻譯、離線語音助理，靠的就是這種瘦身術——把原本要連雲端的大模型，壓到能在你口袋裡獨立運作。",
+        "ja": "スマホ上のリアルタイム翻訳やオフライン音声アシスタントは、まさにこの技です——クラウド級の大きなモデルを、ポケットの中で単独で動くまで圧縮しているのです。"
+      },
+      "surprise": {
+        "en": "Hidden here is a counterintuitive engineering philosophy: instead of buying pricier hardware, use smarter software to make up for cheap hardware's limits. A machine built from inexpensive parts plus a well-tuned model can beat a rival with costlier hardware and no optimization. Software and hardware are designed together.",
+        "zh": "這裡藏著一個違反直覺的工程哲學：與其追求更貴的硬體，不如用更聰明的軟體去補硬體的不足。一台用便宜零件＋好模型的機器，整體表現可以贏過硬體更貴卻沒優化的對手。軟體與硬體，是一起設計的。",
+        "ja": "ここには直感に反する工学哲学が潜んでいます——より高価なハードを追うより、より賢いソフトでハードの不足を補う。安い部品＋よく調整されたモデルの機械は、高価なハードでも最適化されていない相手に総合性能で勝てる。ソフトとハードは、一緒に設計されるのです。"
+      },
+      "thread": {
+        "en": "Slimmed down and loaded onto the chip — so when it opens its eyes, what's the first thing it wants to do?",
+        "zh": "瘦身成功、塞進晶片了——那它睜開眼，第一件想做的事是什麼？",
+        "ja": "痩せてチップに収まった——では目を開けて、まずやりたいことは何でしょう？"
+      }
+    },
+    {
+      "ref": "computer_vision_concept",
+      "hook": {
+        "en": "You glance and instantly know 'that's a cat, on the sofa.' To a machine, an image is just a grid of numbers — how does it 'see' anything in there?",
+        "zh": "人一眼就看出『那是一隻貓、它在沙發上』。對機器來說，畫面只是一堆數字——它要怎麼從數字裡『看見』東西？",
+        "ja": "人はひと目で「あれは猫、ソファの上だ」とわかります。機械にとって画像はただの数字の格子——そこからどうやって「見る」のでしょう？"
+      },
+      "reveal": {
+        "en": "Computer vision turns pixels into meaning: first edges and textures, then shapes, then objects, until it can say 'that's a cat.' On an edge device, a compressed vision model can recognize people, cars, and obstacles in a live feed in real time — without sending the image anywhere.",
+        "zh": "電腦視覺讓機器把像素變成意義：先找邊緣、找紋理，再層層組合成形狀、物件，最後說出『這是貓』。在邊緣裝置上，一個壓縮過的視覺模型可以即時辨識畫面裡的人、車、障礙物——不必把影像送走。",
+        "ja": "コンピュータビジョンはピクセルを意味に変えます。まず輪郭と質感、次に形、そして物体——ついには「これは猫だ」と言える。エッジ端末では、圧縮された視覚モデルが映像の中の人・車・障害物をリアルタイムに認識します——画像をどこにも送らずに。"
+      },
+      "example": {
+        "en": "A self-driving car's camera tells 'plastic bag or child?' in milliseconds — and it has to decide on the spot, with no time to wait.",
+        "zh": "自駕車的鏡頭就是這樣在毫秒間分辨『前面是塑膠袋還是小孩』——而且必須當場決定，不能等。",
+        "ja": "自動運転車のカメラは、こうしてミリ秒の間に「前にあるのはレジ袋か、子どもか」を見分けます——しかもその場で決めねばならず、待つ時間はありません。"
+      },
+      "surprise": {
+        "en": "The surprise: the most effective vision models are shaped by a cat's visual cortex. Scientists found neurons in a cat's brain that fire only at edges of a certain angle — and that insight directly inspired convolutional neural networks. The machine's eye was designed by copying an animal's.",
+        "zh": "意外的是，最有效的視覺模型，結構上是受貓的視覺皮層啟發的：科學家發現貓腦中有些神經元專門對『某個角度的邊緣』反應，這直接催生了卷積神經網路。機器的眼睛，是照著動物的眼睛設計的。",
+        "ja": "意外なことに、最も効果的な視覚モデルは猫の視覚野に着想を得ています。猫の脳に「特定の角度の輪郭」だけに反応する神経細胞が見つかり、それが畳み込みニューラルネットワークを直接生み出しました。機械の目は、動物の目を写して設計されたのです。"
+      },
+      "thread": {
+        "en": "Seeing is just one kind of sensing. Look deeper and every 'sense' turns out to be the same thing underneath — what is it?",
+        "zh": "看見只是其中一種感知。如果再往底層看，所有的『感覺』其實是同一回事——是什麼？",
+        "ja": "見ることは知覚の一種にすぎません。もっと根っこを覗くと、あらゆる「感覚」は同じ一つのこと——それは何でしょう？"
+      }
+    },
+    {
+      "ref": "signal_processing_concept",
+      "hook": {
+        "en": "Sight, sound, vibration, temperature… how does a machine turn such wildly different things into data it can actually compute?",
+        "zh": "視覺、聲音、震動、溫度……機器要怎麼把這麼不同的東西，都變成它能算的資料？",
+        "ja": "視覚、音、振動、温度……機械はこんなにも違うものを、どうやって計算できるデータに変えるのでしょう？"
+      },
+      "reveal": {
+        "en": "Through signal processing. Anything that varies over time or space — light, sound waves, electric current — can be sampled into a stream of numbers, then de-noised and distilled into useful features. It's the 'translation layer' of perception: turning the physical world into math the machine can understand.",
+        "zh": "靠訊號處理。任何隨時間或空間變化的量——光、聲波、電流——都能被取樣成一串數字，再濾掉雜訊、抽出有用的特徵。它是感知的『翻譯層』：把物理世界翻成數學，機器才聽得懂。",
+        "ja": "信号処理によってです。時間や空間で変化するもの——光、音波、電流——はすべて数値の列にサンプリングでき、ノイズを取り除いて有用な特徴を抽出できる。これは知覚の「翻訳層」——物理世界を、機械が理解できる数学へと訳すのです。"
+      },
+      "example": {
+        "en": "Noise-canceling headphones are real-time signal processing: they hear the ambient roar, compute an 'opposite' wave, and cancel it — thousands of times a second, all on a tiny chip by your ear.",
+        "zh": "降噪耳機就是即時訊號處理：它聽見環境噪音，算出一段『相反的聲波』疊上去抵消——每秒上萬次，全在你耳邊的小晶片上完成。",
+        "ja": "ノイズキャンセリングイヤホンはリアルタイムの信号処理そのものです。周囲の騒音を聞き取り、「逆位相の音波」を計算して打ち消す——毎秒何万回も、耳元の小さなチップの上で。"
+      },
+      "surprise": {
+        "en": "The surprise: your inner ear already does Fourier analysis. The cochlea splits sound into its frequencies — the very thing engineers do with math. Nature invented signal processing a few hundred million years before the textbook did.",
+        "zh": "驚奇的是：你的耳蝸早就在做傅立葉分析。它把聲音拆成不同頻率，正是工程師用數學做的同一件事。大自然比教科書早了幾億年發明訊號處理。",
+        "ja": "意外なことに、あなたの内耳はとっくにフーリエ解析をしています。蝸牛は音を周波数ごとに分解する——技術者が数学でやるのとまったく同じことを。自然は教科書より数億年も早く信号処理を発明していたのです。"
+      },
+      "thread": {
+        "en": "Now the machine can sense. But sensing must lead to acting — steadily, and in real time. That needs a theory of its own.",
+        "zh": "機器能感知了。但『感知到』之後要『做出反應』，而且要穩、要即時——這需要一套理論。",
+        "ja": "機械は知覚できるようになりました。でも「感じた」あとに「反応する」、しかも安定して、即座に——そのためには一つの理論が要ります。"
+      }
+    },
+    {
+      "ref": "control_theory_concept",
+      "hook": {
+        "en": "How does an air conditioner know exactly how hard to blow so it settles right at your target temperature — instead of overshooting hot and cold forever?",
+        "zh": "冷氣怎麼知道要吹多強，才剛好停在你設定的溫度，而不是忽冷忽熱抖個不停？",
+        "ja": "エアコンはどうやって、強すぎず弱すぎず、ちょうど設定温度で止まるのを知るのでしょう——暑い寒いを行き来して震え続けるのではなく？"
+      },
+      "reveal": {
+        "en": "Control theory: keep measuring 'how far am I from the target?' and feed that back to adjust the output — a closed loop of sense → decide → act → sense again. Its math tells you whether the loop will settle smoothly or spiral out of control. It's the discipline that keeps a machine from shaking itself apart.",
+        "zh": "靠控制理論：持續量測『現在差目標多少』，再回過頭調整輸出，形成一個感測→決策→致動→再感測的閉迴路。它的數學能告訴你迴路會穩定收斂、還是會發散到失控。這就是讓機器『不抖、不暴衝』的學問。",
+        "ja": "制御理論によってです。「いま目標とどれだけ差があるか」を測り続け、それを戻して出力を調整する——感知→決定→駆動→再び感知という閉ループ。その数学は、ループが滑らかに収束するか、暴走して発散するかを教えてくれる。機械が「自分で震えて壊れない」ための学問です。"
+      },
+      "example": {
+        "en": "A drone hovering in gusty wind nudges its four motors a thousand times a second — that's the control loop at work. Without it, the drone would have flipped long ago.",
+        "zh": "無人機懸停在風裡，每秒上千次微調四顆馬達——這就是控制迴路在工作。少了它，它早就翻了。",
+        "ja": "風の中でホバリングするドローンは、毎秒千回も四つのモーターを微調整します——これが制御ループの仕事です。これがなければ、とっくにひっくり返っているでしょう。"
+      },
+      "surprise": {
+        "en": "Now look back at step one: why must this loop run locally? Because adding even the small delay of a cloud round-trip can, mathematically, tip the loop from stable to divergent — the machine starts oscillating, then loses control. Latency isn't just slow; latency can make the whole system collapse. That's the hard reason edge computing has to exist.",
+        "zh": "現在回頭看第一步：這個閉迴路為什麼非得在『本地』跑？因為迴路裡只要多了雲端往返那一點延遲，數學上就足以讓它從穩定變成發散——機器會開始震盪、然後失控。延遲不只是慢，延遲會讓整個系統垮掉。這就是邊緣運算非存在不可的硬道理。",
+        "ja": "ここで第一歩を振り返りましょう。この閉ループは、なぜ「ローカル」で動かねばならないのか？ループにクラウド往復のわずかな遅延が加わるだけで、数学的に安定から発散へ傾きうるからです——機械は振動し始め、やがて制御を失う。遅延はただ遅いのではない、遅延はシステム全体を崩壊させうる。これがエッジコンピューティングが存在せねばならない、揺るがぬ理由です。"
+      },
+      "thread": {
+        "en": "Wire sensing, deciding, acting, and stability into a body that can move — and what do you get?",
+        "zh": "把感知、決策、致動、穩定全接起來，裝進一個能動的身體——你會得到什麼？",
+        "ja": "感知・決定・駆動・安定をすべてつなぎ、動ける体に収めると——何が得られるでしょう？"
+      }
+    },
+    {
+      "ref": "robotics_concept",
+      "hook": {
+        "en": "By now — edge computing, machine learning, vision, signals, control… put them together and what have we actually built?",
+        "zh": "到這裡，邊緣運算、機器學習、視覺、訊號、控制……這些拼起來，到底拼出了什麼？",
+        "ja": "ここまで来て——エッジコンピューティング、機械学習、視覚、信号、制御……これらを組み合わせると、いったい何が出来上がるのでしょう？"
+      },
+      "reveal": {
+        "en": "Robotics. A robot is this whole chain brought together: it senses the world (signals, vision), judges locally and in real time with a compressed model (edge + machine learning), then drives its motors through control loops to act. It isn't any single technology — it's the moment intelligence steps into the physical world and gets hands.",
+        "zh": "機器人學。一台機器人就是這整條鏈的集大成：用感測器感知世界（訊號、視覺），用壓縮過的模型在本地即時判斷（邊緣＋機器學習），再用控制迴路驅動馬達去行動。它不是某個單一技術，而是讓『智慧』走進物理世界、能動手的那一刻。",
+        "ja": "ロボット工学です。一台のロボットは、この鎖すべての集大成です。センサーで世界を感知し（信号・視覚）、圧縮したモデルでローカルかつリアルタイムに判断し（エッジ＋機械学習）、制御ループでモーターを駆動して行動する。単一の技術ではなく——「知能」が物理世界へ踏み出し、手を持つその瞬間なのです。"
+      },
+      "example": {
+        "en": "An autonomous robot weaving through a warehouse, a surgical arm steadier than any human hand — every motion they make is all seven of these steps running at once.",
+        "zh": "倉庫裡穿梭搬貨的自主機器人、手術房裡比人手更穩的機械臂——它們的每一個動作，都是這七步同時在運轉。",
+        "ja": "倉庫を縫うように荷を運ぶ自律ロボット、人の手より安定した手術アーム——その一つひとつの動きは、この七つのステップが同時に走っている姿です。"
+      },
+      "surprise": {
+        "en": "One last surprise: the path you just walked is the whole picture of 'integrating AI with the physical world' — and every piece of it can be built from cheap, off-the-shelf parts plus software clever enough. The most advanced robot isn't necessarily the most expensive one; it's the one whose hardware and software were designed best, together.",
+        "zh": "最後一個驚奇：你剛剛走過的這條路，正是『以 AI 整合物理世界』的全貌——而它的每一塊，都能用便宜、現成的零件＋夠聰明的軟體拼成。最前沿的機器人，未必是最貴的；而是軟硬體被一起設計得最好的那一個。",
+        "ja": "最後の意外：あなたがいま歩いてきたこの道こそ、「AI で物理世界を統合する」という全体像です——そしてその一つひとつが、安価で市販の部品＋十分に賢いソフトで組み上げられる。最先端のロボットは、必ずしも最も高価なものではない。ハードとソフトが、いちばんうまく一緒に設計されたものなのです。"
+      },
+      "thread": {
+        "en": "You've reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "edge_computing_concept", "target": "machine_learning_concept", "relation_type": "applied" },
+    { "source": "machine_learning_concept", "target": "edge_model_compression", "relation_type": "applied" },
+    { "source": "edge_model_compression", "target": "computer_vision_concept", "relation_type": "applied" },
+    { "source": "computer_vision_concept", "target": "signal_processing_concept", "relation_type": "conceptual" },
+    { "source": "signal_processing_concept", "target": "control_theory_concept", "relation_type": "applied" },
+    { "source": "control_theory_concept", "target": "robotics_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Hooked? To actually get your hands dirty: grab a Raspberry Pi or ESP32, run a TinyML example, and write a PID controller that holds a motor steady at a target angle — and you'll touch every step above yourself.",
+    "zh": "被勾住了嗎？想真的動手：找一塊 Raspberry Pi 或 ESP32、跑一個 TinyML 範例、寫一支 PID 控制器讓馬達穩穩停在目標角度——你會親手碰到上面每一步。",
+    "ja": "心をつかまれましたか？本気で手を動かすなら——Raspberry Pi か ESP32 を手に入れ、TinyML のサンプルを動かし、モーターを目標角度でぴたりと保つ PID コントローラを書いてみる。すると、上のすべてのステップに自分の手で触れることになります。"
+  }
+}

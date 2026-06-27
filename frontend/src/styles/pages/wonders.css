@@ -1,0 +1,479 @@
+/*
+ * wonders.css — page styles for the curated curiosity tours (wonders.html).
+ *
+ * Reuses the canonical chrome (header / language-toggle / loading / palette /
+ * body backdrop) shared by app + explorer, then adds the narrative-panel
+ * specifics on top — all on the design tokens (Oxanium / Sora / JetBrains Mono,
+ * gold --accent). Nothing bespoke that drifts from the rest of the site.
+ */
+@import "../components/tokens.css";
+@import "../components/keyframes.css";
+@import "../components/_base.css";
+@import "../components/header.css";
+@import "../components/language-toggle.css";
+@import "../components/loading.css";
+
+/* The renderer clears to transparent, so the shared body backdrop shows
+   through; keep the canvas itself unpainted. */
+#canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    cursor: grab;
+    background: transparent;
+}
+#canvas:active { cursor: grabbing; }
+
+/* Header nav (home / graph) sits under the wordmark. */
+#hdr-nav {
+    margin-top: 4px;
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+}
+#hdr-nav a { color: var(--ink-faint); text-decoration: none; transition: color 0.18s; }
+#hdr-nav a:hover { color: var(--ink-main); }
+.hdr-nav-sep { opacity: 0.4; margin: 0 5px; }
+
+/* Language toggle floats above the narrative panel (panel is z-12). */
+#lang-toggle { z-index: 16; }
+
+/* Loading retry button. */
+#loading-retry {
+    margin-left: 12px;
+    background: var(--rail-bg);
+    color: var(--ink-main);
+    border: 0.5px solid var(--rail-border);
+    border-radius: var(--radius-sm);
+    padding: 6px 14px;
+    cursor: pointer;
+    font-family: var(--font-label);
+    font-size: 12px;
+}
+
+/* ── Intro card ─────────────────────────────────────────────────────────── */
+#wonder-intro {
+    position: fixed;
+    inset: 0;
+    z-index: 18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: radial-gradient(120% 80% at 50% 50%, rgba(8, 8, 12, 0.3), rgba(8, 8, 12, 0.78));
+}
+#wonder-intro[hidden] { display: none; }
+#wi-card {
+    max-width: 540px;
+    text-align: center;
+    background: var(--glass-2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 0.5px solid var(--rail-border);
+    border-radius: var(--radius-lg);
+    padding: 44px 40px;
+    box-shadow: var(--shadow-strong);
+}
+#wi-kicker {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+}
+#wi-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.015em;
+    color: var(--ink-main);
+    margin-bottom: 18px;
+}
+#wi-text {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-loose);
+    color: var(--ink-soft);
+    margin-bottom: 30px;
+}
+#wi-start {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    letter-spacing: 0.04em;
+    color: var(--ink-main);
+    background: rgba(240, 192, 80, 0.14);
+    border: 0.5px solid rgba(240, 192, 80, 0.5);
+    border-radius: var(--radius-control);
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background 0.2s var(--ease-ui), transform 0.15s var(--ease-ui);
+}
+#wi-start:hover { background: rgba(240, 192, 80, 0.22); transform: translateY(-1px); }
+
+/* ── Picker (choose a wonder) ───────────────────────────────────────────── */
+#wonder-picker {
+    position: fixed;
+    inset: 0;
+    z-index: 14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 32px 24px;
+    overflow-y: auto;
+    pointer-events: none; /* let header/lang underneath stay clickable; re-enable on cards */
+}
+#wonder-picker[hidden] { display: none; }
+#wpk-head, .wpk-card { pointer-events: auto; }
+#wpk-head { text-align: center; max-width: 560px; }
+#wpk-kicker {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+#wpk-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--ink-main);
+    margin-bottom: 12px;
+}
+#wpk-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-soft);
+}
+#wpk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    gap: 18px;
+    justify-content: center;
+    width: 100%;
+    max-width: 720px;
+}
+.wpk-card {
+    text-align: left;
+    background: var(--glass-2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 0.5px solid var(--rail-border);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px;
+    cursor: pointer;
+    color: var(--ink-main);
+    transition: transform 0.18s var(--ease-ui), border-color 0.2s, background 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.wpk-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(240, 192, 80, 0.4);
+    background: var(--glass-1);
+}
+.wpk-card-top { display: flex; align-items: center; gap: 9px; }
+.wpk-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.wpk-card-eyebrow {
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+.wpk-card-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    color: var(--ink-main);
+}
+.wpk-card-intro {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-soft);
+}
+.wpk-card-dots { display: flex; gap: 4px; margin-top: 2px; }
+.wpk-card-dot {
+    width: 14px; height: 3px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.28);
+}
+.wpk-card:hover .wpk-card-dot { background: rgba(240, 192, 80, 0.45); }
+.wpk-card-go {
+    margin-top: 4px;
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    color: var(--accent);
+}
+
+/* ── Narrative panel ────────────────────────────────────────────────────── */
+#wonder-panel {
+    position: fixed;
+    top: 0; right: 0;
+    z-index: 12;
+    width: min(440px, 42vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--glass-2);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-left: 0.5px solid var(--line-subtle);
+    box-shadow: var(--shadow-strong);
+    color: var(--ink-main);
+}
+#wonder-panel[hidden] { display: none; }
+
+#wp-head {
+    padding: 26px 26px 16px;
+    padding-right: 156px; /* leave the top-right corner for the floating lang toggle */
+    border-bottom: 0.5px solid var(--line-subtle);
+}
+#wp-kicker {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+#wp-title {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    letter-spacing: -0.01em;
+    color: var(--ink-main);
+    margin-bottom: 16px;
+}
+#wp-progress { display: flex; gap: 7px; flex-wrap: wrap; }
+.wp-dot {
+    width: 22px; height: 4px;
+    border: none; padding: 0;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.22);
+    cursor: pointer;
+    transition: background 0.25s var(--ease-ui), transform 0.2s var(--ease-ui);
+}
+.wp-dot.is-past { background: rgba(240, 192, 80, 0.42); }
+.wp-dot.is-active { background: var(--accent); transform: scaleY(1.5); }
+
+#wp-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.18) transparent;
+}
+@keyframes wpFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.wp-block { animation: wpFade 0.4s var(--ease-ui) both; }
+.wp-block p { margin: 6px 0 0; }
+.wp-tag {
+    display: inline-block;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+.wp-hook p {
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    line-height: var(--leading-snug);
+    font-weight: 600;
+    color: var(--ink-main);
+}
+.wp-reveal p {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-loose);
+    color: var(--ink-main);
+}
+.wp-example {
+    border-left: 2px solid var(--line-subtle);
+    padding-left: 14px;
+}
+.wp-example p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-soft);
+}
+.wp-surprise {
+    background: rgba(240, 192, 80, 0.07);
+    border: 0.5px solid rgba(240, 192, 80, 0.24);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+}
+.wp-surprise .wp-tag { color: var(--accent); }
+.wp-surprise p {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-loose);
+    color: #efe7d4;
+}
+
+#wp-foot {
+    padding: 16px 26px 22px;
+    border-top: 0.5px solid var(--line-subtle);
+}
+#wp-thread {
+    display: block;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-snug);
+    color: var(--ink-main);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 0.5px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    transition: background 0.2s var(--ease-ui), border-color 0.2s, color 0.2s;
+}
+#wp-thread::before {
+    content: attr(data-cue);
+    display: block;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+#wp-thread::after { content: ' →'; color: var(--accent); }
+#wp-thread:hover {
+    color: var(--ink-main);
+    background: rgba(240, 192, 80, 0.1);
+    border-color: rgba(240, 192, 80, 0.35);
+}
+#wp-thread.is-outward {
+    cursor: default;
+    color: var(--ink-soft);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    background: rgba(255, 255, 255, 0.04);
+    border: 0.5px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+}
+#wp-thread.is-outward::after { content: ''; }
+
+#wp-nav {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+#wp-nav button {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    background: var(--rail-bg);
+    color: var(--ink-main);
+    border: 0.5px solid var(--rail-border);
+    border-radius: var(--radius-sm);
+    padding: 9px 16px;
+    cursor: pointer;
+    transition: background 0.2s var(--ease-ui), opacity 0.2s ease;
+}
+#wp-nav button:hover:not(:disabled) { background: var(--seg-active); }
+#wp-nav button:disabled { opacity: 0.32; cursor: default; }
+#wp-next.is-wander {
+    flex: 1;
+    background: rgba(240, 192, 80, 0.14);
+    border-color: rgba(240, 192, 80, 0.4);
+    color: var(--ink-main);
+}
+#wp-count {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    color: var(--ink-faint);
+    margin-left: auto;
+}
+#wp-alt {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 6px 0;
+    background: transparent;
+    border: none;
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    cursor: pointer;
+    text-align: center;
+    transition: color 0.2s;
+}
+#wp-alt[hidden] { display: none; }
+#wp-alt::after { content: ' →'; }
+#wp-alt:hover { color: var(--accent); }
+
+/* ── First-run hint (starfield is interactive) ──────────────────────────── */
+#wonder-hint {
+    position: fixed;
+    left: 50%;
+    bottom: 38px;
+    transform: translateX(-50%);
+    z-index: 13;
+    pointer-events: none;
+    background: var(--glass-2);
+    border: 0.5px solid rgba(240, 192, 80, 0.32);
+    border-radius: var(--radius-control);
+    padding: 9px 18px;
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.02em;
+    color: var(--ink-soft);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    white-space: nowrap;
+    animation: hintIn 0.4s var(--ease-ui) both;
+}
+#wonder-hint[hidden] { display: none; }
+#wonder-hint.is-out { animation: hintOut 0.4s var(--ease-ui) both; }
+@keyframes hintIn { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes hintOut { from { opacity: 1; } to { opacity: 0; transform: translate(-50%, 8px); } }
+
+/* ── Mobile: panel becomes a bottom sheet ───────────────────────────────── */
+@media (max-width: 768px) {
+    /* free area is the top on mobile (sheet covers the bottom) */
+    #wonder-hint { bottom: auto; top: 68px; }
+    #wonder-panel {
+        top: auto; bottom: 0;
+        width: 100%;
+        height: auto;
+        max-height: 64vh;
+        border-left: none;
+        border-top: 0.5px solid var(--line-subtle);
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        box-shadow: 0 -16px 60px rgba(0, 0, 0, 0.5);
+    }
+    #wp-head { padding: 16px 20px 10px; }
+    #wp-body { padding: 16px 20px; gap: 14px; }
+    #wp-foot { padding: 12px 20px 18px; }
+    #wi-card { padding: 32px 24px; }
+    #hdr { top: 12px; left: 12px; }
+    #lang-toggle { right: 12px; top: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wp-block, #wi-start, #wonder-hint { animation: none; transition: none; }
+}

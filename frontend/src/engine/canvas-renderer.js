@@ -473,6 +473,9 @@ export function createCanvasRenderer(opts) {
 
     let lastDrawMs = 0;
     function draw(nowMs) {
+        // Nothing to paint into yet — skip rather than throw on a 0-size canvas
+        // (can happen if the first paint races a not-yet-laid-out / hidden tab).
+        if (width <= 0 || height <= 0) { dirty = false; return; }
         const t0 = performance.now();
         const nowSec = nowMs / 1000;
         const dtSec = lastDrawMs ? Math.min(0.1, (nowMs - lastDrawMs) / 1000) : 0.016;
