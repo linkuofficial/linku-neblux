@@ -1,0 +1,192 @@
+{
+  "id": "symmetry",
+  "accent": "PHY",
+  "title": { "en": "Symmetry", "zh": "對稱", "ja": "対称性" },
+  "intro": {
+    "en": "Why is nature so fond of balance? Because, astonishingly, every symmetry IS a law. In six steps, watch the universe's deepest rules turn out to be nothing more than reflections.",
+    "zh": "為什麼大自然這麼偏愛平衡？因為令人驚訝的是，每一種對稱，其實都是一條定律。跟著六步，看宇宙最深的規則，如何原來只是一道道倒影。",
+    "ja": "なぜ自然はこれほど均整を好むのでしょう？驚くべきことに、あらゆる対称性は、それ自体が一つの法則だからです。6 つのステップで、宇宙のもっとも深い規則が、じつは映し返しにすぎないことを見ていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "symmetry_concept",
+      "hook": {
+        "en": "Turn a snowflake by a sixth of a circle and it looks untouched. Flip your face left-to-right and it's still you. What exactly are we noticing when we call something 'symmetric'?",
+        "zh": "把一片雪花轉六分之一圈，它看起來毫無變化。把你的臉左右翻過來，它還是你。當我們說一個東西「對稱」時，我們到底注意到了什麼？",
+        "ja": "雪の結晶を六分の一回転させても、何も変わっていないように見える。顔を左右に反転させても、やはりあなたのまま。何かを「対称」と呼ぶとき、私たちはいったい何に気づいているのでしょう？"
+      },
+      "reveal": {
+        "en": "A symmetry is any change that leaves something looking the same — a flip, a rotation, a slide. That's the whole idea: you do something to an object, and you can't tell that you did. The deep move is to stop staring at the object and start listing the moves it allows. A circle survives every rotation; a square survives only turns of a quarter. Symmetry isn't a property of the shape so much as a list of what you're allowed to do to it.",
+        "zh": "對稱，就是任何讓東西看起來不變的改變——翻轉、旋轉、平移。整個概念就這麼簡單：你對一個東西做了某件事，卻看不出你做過。真正深刻的一步，是別再盯著那個東西看，而開始列出它「容許」的動作。圓在任何旋轉下都不變；正方形只在轉四分之一圈時不變。對稱與其說是形狀的性質，不如說是一張「你被允許做什麼」的清單。",
+        "ja": "対称性とは、何かを見かけ上そのままに保つあらゆる変換——反転、回転、平行移動——のことです。考え方そのものは単純で、対象に何かをしても、したことが見分けられない。深いのは、対象を見つめるのをやめ、それが「許す」変換を書き出し始めることです。円はどんな回転でも変わらず、正方形は四分の一回転のときだけ変わらない。対称性は形の性質というより、「何をしてよいか」の一覧表なのです。"
+      },
+      "example": {
+        "en": "A perfectly round dinner plate looks the same no matter how you spin it on the table — infinitely many turns leave it unchanged. A square plate gives you only four positions that match. The plate hasn't changed; the list of allowed moves has.",
+        "zh": "一只完美的圓盤子，不管你在桌上怎麼轉，看起來都一樣——有無限多種轉法都讓它不變。一只方盤子，卻只有四個位置能對得上。盤子沒有變，變的是那張「容許動作」的清單。",
+        "ja": "完璧に丸い皿は、テーブルの上でどう回しても同じに見えます——無限に多くの回転が、それを変えずに残す。四角い皿なら、重なる向きは四つだけ。皿は変わっていません。変わったのは、許される変換の一覧表なのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: this isn't just about pretty things. A snowflake, a human face, a sphere each hide a precise rulebook of exactly which moves leave them unchanged — no more, no fewer. 'Beauty' turns out to be a feeling we get when we sense a hidden set of rules. Symmetry quietly converts something we admire into something we can count.",
+        "zh": "意外的是：這不只關乎漂亮的東西。一片雪花、一張人臉、一顆球，各自都藏著一本精確的規則手冊，寫明「正好哪些動作」會讓它們不變——不多，也不少。原來「美」是我們察覺到一組隱藏規則時，心裡升起的感覺。對稱，悄悄把我們欣賞的東西，變成我們能數算的東西。",
+        "ja": "意外なことに、これは美しいものだけの話ではありません。雪の結晶、人の顔、球——どれもが、「ちょうどどの変換」が自分を変えずに残すかを定めた、精密な規則集を隠しています。多くも少なくもなく。「美しさ」とは、隠れた規則の集まりを感じ取ったときに湧く感覚だったのです。対称性は、私たちが愛でるものを、そっと数えられるものへと変えてしまいます。"
+      },
+      "thread": {
+        "en": "If every symmetric thing carries a list of allowed moves, those lists must have a structure of their own. What are the rules of the rules?",
+        "zh": "如果每個對稱的東西都帶著一張「容許動作」清單，那這些清單本身一定也有結構。規則的規則，又是什麼？",
+        "ja": "対称な物がそれぞれ「許される変換」の一覧を持つなら、その一覧自体にも構造があるはずです。規則の規則とは、何でしょう？"
+      }
+    },
+    {
+      "ref": "group_theory_concept",
+      "hook": {
+        "en": "Do two of those allowed moves, one after another, and you land on a third allowed move. Undo any move and you're back where you started. Is there a hidden arithmetic to symmetry itself?",
+        "zh": "把兩個容許的動作接連做完，你會落在第三個同樣容許的動作上。任何動作都能反過來做，回到原點。對稱本身，是不是藏著一套算術？",
+        "ja": "許される変換を二つ続けて行うと、三つ目の許される変換にたどり着く。どの変換も元に戻せて、出発点へ帰れる。対称性そのものに、隠れた算術があるのではないでしょうか？"
+      },
+      "reveal": {
+        "en": "There is, and it has a name: a group. A group is just the set of all the moves that keep something unchanged, with one simple promise — chain any two and you get another move in the same set, every move can be undone, and doing nothing counts as a move too. That short list of conditions captures the entire mathematics of symmetry. Once you see the group, you've stopped studying the snowflake and started studying symmetry in the abstract.",
+        "zh": "有的，而且它有個名字：群。所謂群，就是「讓某物不變的所有動作」的集合，外加一個簡單的承諾——任意接連兩個動作，會得到同一集合裡的另一個動作；每個動作都能被還原；而「什麼都不做」也算一個動作。這幾條短短的條件，就裝下了整套對稱的數學。一旦你看見了群，你就不再研究那片雪花，而開始研究抽象的對稱本身。",
+        "ja": "あります。そしてそれには名前があります——群（ぐん）。群とは、何かを変えずに保つすべての変換の集まりに、一つの簡単な約束を添えたものです——どの二つをつないでも同じ集まりの中の別の変換になり、どの変換も元に戻せて、「何もしない」ことも一つの変換に数える。この短い条件の並びが、対称性の数学のすべてを包み込みます。群が見えた瞬間、あなたは雪の結晶ではなく、抽象的な対称性そのものを調べ始めているのです。"
+      },
+      "example": {
+        "en": "The twists of a Rubik's cube form a group: any two scrambles combine into a third, and every scramble can be reversed. So do the ways a molecule can be rotated onto itself, and the ways you can shuffle a deck of cards back into the same order.",
+        "zh": "魔術方塊的所有轉法構成一個群：任兩次打亂可以合成第三種，而每一種打亂都能被還原。一個分子能轉回自身的所有方式也是一個群，把一副牌洗回同一順序的所有方式同樣是。",
+        "ja": "ルービックキューブのひねりは群をなします——どの二つの混ぜ方も第三の混ぜ方に合わさり、どの混ぜ方も元に戻せる。分子を自分自身に重ねる回し方も、トランプを同じ並びに戻すシャッフルの仕方も、同じく群です。"
+      },
+      "surprise": {
+        "en": "The surprise is how far this one idea reaches. The same group can describe a Rubik's cube, the shape of a molecule, and the ways to shuffle a deck — three things that share nothing on the surface. Mathematicians can prove a fact about one and get the others for free. One small piece of mathematics turns out to underlie all symmetry, everywhere it appears.",
+        "zh": "驚奇的是，這一個點子能伸得多遠。同一個群，可以同時描述魔術方塊、一個分子的形狀，以及洗牌的方式——這三件事表面上毫無共通。數學家證明了其中一件，另外兩件就免費奉送。原來一小塊數學，撐起了對稱出現的每一個角落。",
+        "ja": "意外なのは、この一つの考えがどこまで届くかです。同じ群が、ルービックキューブと、分子の形と、トランプのシャッフルを同時に語れる——表面上は何の共通点もない三つを。数学者は一つについて証明すれば、残り二つをただで手に入れる。小さな数学のひとかけらが、対称性の現れるあらゆる場所を、ひそかに支えているのです。"
+      },
+      "thread": {
+        "en": "So far symmetry has been about shapes you can hold. But what if you applied the same idea not to an object — to the laws of physics themselves?",
+        "zh": "到目前為止，對稱講的都是你拿得起來的形狀。但如果把同樣的點子，不用在物體上——而用在物理定律本身呢？",
+        "ja": "ここまで対称性は、手に取れる形の話でした。でも、同じ考えを物体にではなく——物理法則そのものに当てはめたら、どうなるでしょう？"
+      }
+    },
+    {
+      "ref": "emmy_noether_person",
+      "hook": {
+        "en": "An experiment works the same in Tokyo or in Berlin, today or next year. Those are symmetries too — of the laws themselves. Could such an abstract balance possibly have a physical consequence?",
+        "zh": "一個實驗在東京做或在柏林做、今天做或明年做，結果都一樣。這些也是對稱——是「定律本身」的對稱。這麼抽象的一種平衡，真的會有實際的物理後果嗎？",
+        "ja": "実験は東京でもベルリンでも、今日でも来年でも、同じように働く。これらもまた対称性です——法則そのものの。こんなにも抽象的な均整に、物理的な帰結などありうるのでしょうか？"
+      },
+      "reveal": {
+        "en": "Emmy Noether proved that it does, and the result is breathtaking: every continuous symmetry of nature produces a conservation law — some quantity that can never change. The link is exact and goes both ways. Because the laws of physics don't shift from one moment to the next, energy can be neither created nor destroyed. 'The rules stay the same through time' literally creates 'energy is conserved.' One of the most useful facts in all of science was, underneath, a statement about symmetry.",
+        "zh": "艾米·諾特證明了它真的會，而結果美得令人屏息：大自然每一種「連續對稱」，都會生出一條守恆律——某個永遠不變的量。這個連結是精確的，而且雙向成立。正因為物理定律從這一刻到下一刻都不改變，能量才既不能被創造、也不能被消滅。「規則隨時間保持不變」這句話，字面上就「創造」了「能量守恆」。科學裡最有用的事實之一，骨子裡竟是一句關於對稱的陳述。",
+        "ja": "エミー・ネーターは、それが本当に起きることを証明しました。そして結果は息をのむほどです——自然のあらゆる連続的な対称性は、保存則を生み出す。決して変わらない、ある量を。この結びつきは厳密で、しかも双方向に成り立ちます。物理法則が一瞬から次の一瞬へとずれないからこそ、エネルギーは創られも消されもしない。「規則は時間を通じて同じ」という言葉が、文字どおり「エネルギーは保存される」を生む。科学でもっとも役立つ事実の一つが、その底では対称性についての言明だったのです。"
+      },
+      "example": {
+        "en": "Why is momentum conserved? Because the laws of physics are the same here as one meter to the left — a symmetry of space. Why is electric charge conserved? Another symmetry, hidden in the equations of electromagnetism. Each unbreakable bookkeeping rule traces back to one balance that nature respects.",
+        "zh": "為什麼動量守恆？因為物理定律在這裡，和往左一公尺處完全一樣——那是空間的一種對稱。為什麼電荷守恆？是另一種對稱，藏在電磁學的方程式裡。每一條不可違反的記帳規則，都能回溯到一個大自然所遵守的平衡。",
+        "ja": "なぜ運動量は保存されるのか？物理法則が、ここでも一メートル左でも同じだから——空間の対称性です。なぜ電荷は保存されるのか？電磁気の方程式に隠れた、もう一つの対称性。破れることのない一つひとつの帳簿規則は、自然が守る一つの均整へとさかのぼるのです。"
+      },
+      "surprise": {
+        "en": "The human story stings as much as the physics dazzles. Noether worked out this theorem while barred from a paid professorship simply for being a woman; for years she lectured under a male colleague's name. The single deepest reason your energy bills add up was proven by someone her own university refused to officially employ.",
+        "zh": "這段人間故事，刺痛得不亞於物理的耀眼。諾特推導出這條定理時，僅僅因為身為女性，就被擋在有薪教授職位之外；有好幾年，她得掛在一位男同事的名下講課。讓你的能源帳單算得通的那個最深層的理由，是由一位連自己任教的大學都拒絕正式聘用的人證明的。",
+        "ja": "この人間の物語は、物理の輝きに劣らず胸を刺します。ネーターがこの定理を導いたとき、彼女はただ女性であるという理由だけで、有給の教授職から締め出されていました。何年もの間、男性の同僚の名義で講義したのです。あなたの電気料金の帳尻が合う、そのもっとも深い理由を証明したのは——自分の大学が正式な雇用を拒んだ人でした。"
+      },
+      "thread": {
+        "en": "If energy, momentum, and charge are each the shadow of a symmetry, then those famous conservation laws deserve a second look. What are they, really?",
+        "zh": "如果能量、動量、電荷各自都是某個對稱的影子，那這些著名的守恆律就值得重新看一眼。它們，到底是什麼？",
+        "ja": "エネルギー、運動量、電荷がそれぞれ対称性の影だとすれば、あの有名な保存則を見直す価値があります。それらは、本当のところ何なのでしょう？"
+      }
+    },
+    {
+      "ref": "conservation_laws_concept",
+      "hook": {
+        "en": "Energy in equals energy out. Momentum before equals momentum after. Charge never appears from nowhere. Why does the universe keep such perfect books — and never, ever cheat?",
+        "zh": "進去多少能量，就出來多少能量。碰撞前的動量，等於碰撞後的動量。電荷從不憑空冒出。為什麼宇宙把帳記得這麼準——而且從不、絕不作弊？",
+        "ja": "入るエネルギーは出るエネルギーに等しい。衝突前の運動量は衝突後に等しい。電荷はどこからともなく現れない。なぜ宇宙はこれほど完璧に帳簿をつけ——決して、決してごまかさないのでしょう？"
+      },
+      "reveal": {
+        "en": "Conservation laws are the bookkeeping the universe never breaks: energy, momentum, electric charge, and a few more, each a running total that stays fixed no matter what happens inside the system. Whatever collides, burns, or transforms, the books still balance to the last digit. And after Noether, we know why — each of these totals is locked in place by an underlying symmetry. Conservation isn't a coincidence the universe happens to honor; it's a guarantee that follows from balance.",
+        "zh": "守恆律，是宇宙從不違反的記帳：能量、動量、電荷，再加上少數幾個，每一個都是一筆「不管系統內部發生什麼都保持不變」的累計總額。無論什麼東西碰撞、燃燒、變形，帳本最後一位數都還是平的。而在諾特之後，我們知道了原因——這每一筆總額，都被一個底層的對稱牢牢鎖住。守恆不是宇宙碰巧願意遵守的巧合，而是從「平衡」必然推出的保證。",
+        "ja": "保存則とは、宇宙が決して破らない帳簿づけです——エネルギー、運動量、電荷、そしてもう少し。どれも、系の内部で何が起きても変わらない累計です。何が衝突し、燃え、姿を変えようと、帳簿は最後の桁まで釣り合う。そしてネーター以後、私たちはその理由を知っています——これらの累計はどれも、底に潜む対称性によって固定されている。保存は宇宙がたまたま守る偶然ではなく、均整から必然的に従う保証なのです。"
+      },
+      "example": {
+        "en": "Why does a spinning ice skater speed up the instant she pulls her arms in? Nothing pushes her — angular momentum is conserved, so as her shape tucks tighter, her spin must climb to keep the total fixed. The same law steadies a satellite and a spinning planet.",
+        "zh": "為什麼旋轉中的花式溜冰選手，把手臂一收回來，就立刻轉得更快？沒有任何東西在推她——是角動量守恆：當她的身形收得更緊，旋轉就必須加快，才能讓總量維持不變。同一條定律，也穩住了一顆衛星和一顆自轉的行星。",
+        "ja": "回転しているフィギュアスケーターは、なぜ腕を引き込んだ瞬間に速くなるのでしょう？誰も押していません——角運動量が保存されるからです。体が小さくまとまるほど、総量を一定に保つために回転は速くならねばならない。同じ法則が、人工衛星も自転する惑星も安定させています。"
+      },
+      "surprise": {
+        "en": "The surprise lifts a burden off your shoulders: these aren't separate facts to memorize. Energy, momentum, charge — each is the shadow of an underlying symmetry, exactly as Noether showed. What looked like a long list of unrelated rules collapses into a single sentence: the universe is balanced, so its books are balanced. Learn the symmetry and the conservation law comes free.",
+        "zh": "這個驚奇，替你卸下了一個重擔：這些並不是一條條要背的獨立事實。能量、動量、電荷——每一個都是某個底層對稱的影子，正如諾特所揭示的。看似一長串互不相干的規則，塌縮成了一句話：宇宙是平衡的，所以它的帳本是平的。學會那個對稱，守恆律就免費奉送。",
+        "ja": "この意外は、あなたの肩から重荷を下ろします——これらは、別々に暗記すべき事実ではありません。エネルギー、運動量、電荷——どれもが底に潜む対称性の影であり、まさにネーターが示したとおり。互いに無関係に見えた規則の長い一覧は、一つの文に崩れ落ちます——宇宙は均整がとれている、だから帳簿も釣り合う。対称性を学べば、保存則はただで手に入るのです。"
+      },
+      "thread": {
+        "en": "If symmetry rules the everyday world of skaters and satellites, what happens when we shrink all the way down to the particles everything is made of?",
+        "zh": "如果對稱統治著溜冰選手與衛星的日常世界，那當我們一路縮小，直到構成萬物的基本粒子，又會如何？",
+        "ja": "対称性がスケーターや衛星の日常を支配するなら、すべてを形づくる粒子の世界までずっと縮んでいったら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "particle_physics_concept",
+      "hook": {
+        "en": "Zoom past atoms, past their nuclei, down to the tiniest specks of matter. Down here, who decides which particles are allowed to exist — and how they're allowed to touch?",
+        "zh": "穿過原子，穿過原子核，一路縮到物質最微小的點。在這最底層，是誰決定了「哪些粒子可以存在」——以及它們「可以怎麼互相作用」？",
+        "ja": "原子を越え、その原子核を越え、物質の最も小さな粒まで縮んでいく。この底の底で、どの粒子が存在を許されるか——そしてどう触れ合うことを許されるかを、誰が決めているのでしょう？"
+      },
+      "reveal": {
+        "en": "Symmetry does. In particle physics, the rulebook of which particles exist and how they interact is written almost entirely in the language of groups. Demand that the laws stay unchanged under a certain abstract symmetry, and the math forces specific particles and forces into being to make it possible. The forces of nature aren't put in by hand — they're the price the universe pays to keep a symmetry intact.",
+        "zh": "是對稱決定的。在粒子物理裡，「哪些粒子存在、它們如何作用」這本規則手冊，幾乎完全是用群的語言寫成的。你只要要求「定律在某個抽象對稱下保持不變」，數學就會逼出特定的粒子與作用力，好讓這件事成真。大自然的各種力，不是被人手動填進去的——它們是宇宙為了維持一個對稱，所付出的代價。",
+        "ja": "対称性です。素粒子物理では、どの粒子が存在し、どう相互作用するかという規則集は、ほとんど丸ごと群の言葉で書かれています。ある抽象的な対称性のもとで法則が変わらないことを要求すると、数学はそれを可能にする特定の粒子と力を、存在へと押し出す。自然界の力は手で入れられたのではなく——一つの対称性を保つために宇宙が払う代価なのです。"
+      },
+      "example": {
+        "en": "When physicists sorted the known particles into a symmetric pattern in the 1960s, one slot in the pattern sat empty. The symmetry insisted a particle belonged there, with its mass and charge spelled out in advance. They went looking — and found the omega-minus, right where the pattern said it must be.",
+        "zh": "1960 年代，當物理學家把已知粒子排進一個對稱的圖樣時，圖樣裡有一格是空的。對稱堅持那裡該有一個粒子，連它的質量與電荷都事先寫好了。他們去找——然後找到了 Ω⁻ 粒子，就在圖樣指定它「必須在」的那個位置。",
+        "ja": "1960 年代、物理学者が既知の粒子を対称的な模様に並べたとき、模様の中の一つの枠が空いていました。対称性は、そこに粒子があるはずだと言い張り、その質量も電荷も前もって書き出していた。彼らは探しに行き——オメガマイナス粒子を、模様が「必ずある」と告げた、まさにその場所に見つけたのです。"
+      },
+      "surprise": {
+        "en": "Sit with how strange that is. Physicists predicted unseen particles purely because a symmetry demanded them — and then went and found them, sometimes years later, exactly as written. A piece of pure mathematics reached out and told experimenters what nature was hiding. Symmetry had become not just a description of reality, but a way of discovering it before you've seen it.",
+        "zh": "好好咀嚼這件事有多奇怪。物理學家純粹因為「一個對稱要求它存在」，就預言了從未見過的粒子——然後真的去找到它們，有時是好幾年後，分毫不差地照著預言。一段純粹的數學，伸出手來告訴實驗者：大自然藏了什麼。對稱，已不只是對現實的描述，而成了一種「在你看見之前就先發現它」的方法。",
+        "ja": "それがどれほど奇妙か、じっくり味わってください。物理学者は、ある対称性が要求するというだけの理由で、まだ見ぬ粒子を予言し——そして実際に探し出した。ときに何年も後に、書かれたとおり寸分たがわず。純粋な数学のひとかけらが手を伸ばし、自然が何を隠しているかを実験者に告げた。対称性はもはや現実の記述にとどまらず、見る前にそれを発見する方法になっていたのです。"
+      },
+      "thread": {
+        "en": "If a handful of symmetries can conjure particles and forces, could you build an entire theory of matter out of nothing but symmetries?",
+        "zh": "如果區區幾個對稱，就能召喚出粒子與作用力，那有沒有可能，光用對稱，就蓋出一整套關於物質的理論？",
+        "ja": "ひと握りの対称性が粒子と力を呼び出せるなら、対称性だけで、物質についての理論まるごとを組み上げることもできるのでしょうか？"
+      }
+    },
+    {
+      "ref": "standard_model_concept",
+      "hook": {
+        "en": "Our best theory of nearly everything — every particle and every force except gravity — fits on a coffee mug. What holds such a sweeping theory together at its core?",
+        "zh": "我們關於「幾乎一切」的最佳理論——除了重力以外，每一種粒子、每一種力——可以印在一個馬克杯上。是什麼東西，從核心把這麼包山包海的理論撐在一起？",
+        "ja": "ほとんどすべて——重力を除くあらゆる粒子と力——についての私たちの最良の理論は、マグカップ一つに収まります。これほど広大な理論を、その芯で束ねているものは何でしょう？"
+      },
+      "reveal": {
+        "en": "The Standard Model, and at its heart it is essentially a catalog of symmetries. Each force is paired with a group; the particles fall into patterns those groups allow; the whole structure is chosen because it stays unchanged under a precise set of abstract rotations. It is the most thoroughly tested theory humans have ever written, and its foundation is symmetry from top to bottom. Somewhere along the way, beauty had quietly become a research method.",
+        "zh": "那就是標準模型，而它的核心，本質上是一份對稱的目錄。每一種力，都配上一個群；粒子們落進那些群所容許的圖樣裡；整個結構之所以這樣選，是因為它在一組精確的抽象旋轉下保持不變。它是人類寫過最徹底通過檢驗的理論，而它的地基，從上到下都是對稱。不知不覺間，「美」已經悄悄變成了一種研究方法。",
+        "ja": "それが標準模型であり、その核心は本質的に対称性の目録です。それぞれの力に群が一つ対応し、粒子はそれらの群が許す模様に収まる。構造全体は、精密な抽象的回転の集まりのもとで変わらないからこそ選ばれている。人類が書いたなかで最も徹底的に検証された理論であり、その土台は上から下まで対称性です。いつのまにか、美しさが静かに研究の方法になっていたのです。"
+      },
+      "example": {
+        "en": "For decades one slot in the Standard Model stayed stubbornly empty: a particle a symmetry argument insisted had to exist, to explain why other particles have mass at all. In 2012, after building the largest machine in history to look, physicists found the Higgs particle — the last missing piece, sitting just where the symmetry said.",
+        "zh": "幾十年來，標準模型裡有一格頑固地空著：一個由「對稱論證」堅持必須存在的粒子，用來解釋其他粒子究竟為什麼會有質量。2012 年，在蓋出史上最大的機器去尋找之後，物理學家找到了希格斯粒子——最後一塊缺失的拼圖，就坐在對稱所指定的位置上。",
+        "ja": "何十年もの間、標準模型の一つの枠は頑として空いていました——対称性の議論が、ほかの粒子がそもそもなぜ質量を持つのかを説明するために、存在せねばならないと言い張った粒子。2012 年、それを探すために史上最大の機械を造り上げた末、物理学者はヒッグス粒子を見つけました——最後の欠けたかけらが、対称性の告げたまさにその場所に座っていたのです。"
+      },
+      "surprise": {
+        "en": "And so the trail closes where it began. The flip of a snowflake and the discovery of the Higgs are the same idea, followed to its end: a change that leaves something the same, taken utterly seriously. Every law you trust — energy, charge, the particles in your fingertips — turned out to be a reflection. You've arrived. The deepest rules of the universe were balance all along, and the field of what symmetry still hides is wide open.",
+        "zh": "於是，這趟旅程在它出發的地方收尾。一片雪花的翻轉，和希格斯的發現，是同一個點子被一路追到底的結果：一個讓東西保持不變的改變，被徹底認真地對待。你所信賴的每一條定律——能量、電荷、你指尖裡的粒子——原來都是一道倒影。你抵達了。宇宙最深的規則，從頭到尾都是平衡；而對稱仍藏著什麼，那片天地，依然全然敞開。",
+        "ja": "こうして旅は、始まった場所で閉じます。雪の結晶の反転とヒッグスの発見は、同じ一つの考えを最後まで追ったもの——何かを変えずに残す変換を、とことん真剣に受け取ること。あなたが信じるあらゆる法則——エネルギー、電荷、指先の粒子——は、映し返しだったのです。あなたは、たどり着きました。宇宙のもっとも深い規則は、はじめから均整でした。そして対称性がなお隠すものの原野は、大きく開いています。"
+      },
+      "thread": {
+        "en": "You've reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "symmetry_concept", "target": "group_theory_concept", "relation_type": "conceptual" },
+    { "source": "group_theory_concept", "target": "emmy_noether_person", "relation_type": "logical" },
+    { "source": "emmy_noether_person", "target": "conservation_laws_concept", "relation_type": "causal" },
+    { "source": "conservation_laws_concept", "target": "particle_physics_concept", "relation_type": "conceptual" },
+    { "source": "particle_physics_concept", "target": "standard_model_concept", "relation_type": "logical" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up Noether's theorem explained simply, watch why a spinning skater speeds up when she pulls her arms in (angular momentum), or follow the decades-long hunt for the Higgs particle — and this idea, that every symmetry is a law, becomes real, observed science you can trace yourself.",
+    "zh": "想再往下墜一點？去查查用最簡單方式講解的諾特定理、看一段「為什麼花式溜冰選手收手臂就轉得更快」的影片（角動量），或追一追長達數十年的希格斯粒子獵尋——這個「每一種對稱都是一條定律」的想法，就會變成你能親手追蹤、真實被觀測到的科學。",
+    "ja": "もっと落ちてみたいですか？やさしく説明されたネーターの定理を調べ、フィギュアスケーターが腕を引き込むとなぜ速く回るのか（角運動量）を見て、何十年にもおよぶヒッグス粒子の探索をたどってみてください——「あらゆる対称性は法則である」というこの考えが、自分の手で追える、現実に観測された科学に変わります。"
+  }
+}

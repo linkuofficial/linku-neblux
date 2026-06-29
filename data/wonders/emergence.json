@@ -1,0 +1,192 @@
+{
+  "id": "emergence",
+  "accent": "PHI",
+  "title": { "en": "Emergence", "zh": "湧現", "ja": "創発" },
+  "intro": {
+    "en": "How do mindless parts, each obeying a few dumb local rules, build ant cities, living cells, and minds? More is different — and it may be the deepest pattern of all. In six steps, watch the whole become more than the sum of its parts.",
+    "zh": "一群沒有腦袋的零件，各自只服從幾條簡單的在地規則，怎麼蓋出蟻城、活細胞，甚至心智？「多，就是不一樣」——這也許是所有規律裡最深的一條。跟著六步，看「整體」如何長成大於各部分之和的存在。",
+    "ja": "頭を持たない部品が、それぞれ数個の単純な局所ルールに従うだけで、どうやって蟻の都市や生きた細胞、そして心をつくり上げるのでしょう？「多は異なる」——これはすべての規則のなかでもっとも深いものかもしれません。6 つのステップで、全体が部分の総和を超えていく様子を追いましょう。"
+  },
+  "steps": [
+    {
+      "ref": "complex_systems_concept",
+      "hook": {
+        "en": "A single ant can barely do anything on its own. So who is in charge of the colony — the one that farms, builds highways, and goes to war?",
+        "zh": "一隻螞蟻，單獨幾乎什麼都做不了。那麼，是誰在指揮整個蟻群——那個會種菇、修高速公路、發動戰爭的蟻群？",
+        "ja": "一匹の蟻は、単独ではほとんど何もできません。では、菌を育て、高速道路を築き、戦争まで起こすこの群れを——いったい誰が指揮しているのでしょう？"
+      },
+      "reveal": {
+        "en": "No one. A colony is a complex system: many simple parts interacting, where the interesting behavior lives in the connections, not the pieces. Each ant follows a handful of local rules — drop a scent here, turn toward that smell, carry what is in front of you. Out of millions of these tiny exchanges, a colony emerges that can do things no ant could ever plan. The cleverness is in the web between them, not inside any one of them.",
+        "zh": "沒有人。蟻群是一個複雜系統：許多簡單的零件彼此互動，而有趣的行為藏在「連結」裡，不在零件裡。每隻螞蟻只服從寥寥幾條在地規則——在這裡留下氣味、朝那股味道轉、搬起眼前的東西。幾百萬次這樣微小的交換累積起來，便湧現出一個能做出任何單隻螞蟻都無法計畫之事的群體。聰明之處在牠們之間的網，而不在其中任何一隻裡。",
+        "ja": "誰でもありません。群れは複雑系です——多くの単純な部品が互いに作用し合い、面白い振る舞いは部品ではなく「つながり」のなかに宿る。一匹一匹はほんの数個の局所ルールに従うだけ——ここに匂いを置く、あの匂いのほうへ曲がる、目の前のものを運ぶ。何百万というこの小さなやり取りから、どの蟻にも計画できないことをやってのける群れが立ち現れる。賢さは、一匹の内側ではなく、蟻たちのあいだの網にあるのです。"
+      },
+      "example": {
+        "en": "When ants find food, the path that gets the most footsteps gets the most scent, which draws still more ants — and a near-perfect shortest route appears, though no ant ever measured a thing.",
+        "zh": "當螞蟻找到食物，被踩得最多的那條路會留下最多氣味，於是吸引更多螞蟻——一條近乎完美的最短路徑就此浮現，儘管沒有任何一隻螞蟻量過半點距離。",
+        "ja": "蟻が餌を見つけると、もっとも多く踏まれた道にもっとも多くの匂いが残り、それがさらに多くの蟻を呼ぶ——こうして、どの蟻も距離など測っていないのに、ほぼ完璧な最短経路が現れます。"
+      },
+      "surprise": {
+        "en": "Here is the twist: a lone ant is nearly mindless, yet a colony farms fungus, builds living bridges from its own bodies, wages war, and buries its dead — with no leader giving a single order. The queen does not command; she only lays eggs. The colony thinks without anything in it doing the thinking.",
+        "zh": "意外的是：一隻螞蟻幾乎沒有心智，但一整群螞蟻會栽培真菌、用自己的身體搭出活生生的橋、發動戰爭、埋葬死者——卻沒有任何首領下過一道命令。蟻后並不指揮，她只負責產卵。整個蟻群會「思考」，而其中沒有任何一個成員在思考。",
+        "ja": "意外なのはここです——一匹の蟻はほぼ無心なのに、群れは菌を栽培し、自分たちの体で生きた橋を架け、戦争を起こし、死者を葬る——しかも誰一人として命令を下していない。女王は指揮しません。ただ卵を産むだけ。群れは思考します。そのなかの誰も思考していないのに。"
+      },
+      "thread": {
+        "en": "But where does that order come from, if no one designs it? Look closer, and you find it builds itself.",
+        "zh": "可是，如果沒有人設計，那份秩序到底從哪裡來？再湊近看，你會發現——它是自己長出來的。",
+        "ja": "では、誰も設計していないなら、その秩序はどこから来るのでしょう？もっと近づいて見ると——それは、自分でつくり上がっているのです。"
+      }
+    },
+    {
+      "ref": "self_organization_concept",
+      "hook": {
+        "en": "We expect order to need an architect — a plan, a hand, a designer. What if order can simply appear for free?",
+        "zh": "我們總以為秩序需要一位建築師——一張藍圖、一隻手、一個設計者。但如果秩序可以「免費」自己出現呢？",
+        "ja": "秩序には設計者が要る——図面、手、つくり手。私たちはそう思いがちです。でも、もし秩序がただ「ただで」現れるとしたら？"
+      },
+      "reveal": {
+        "en": "It can. Self-organization is order arising on its own, with no designer at all. The recipe is surprisingly short: simple local rules, repeated many times, plus feedback — where what happens next depends on what just happened. Push such a system and it does not stay smooth; it spontaneously snaps into pattern. Nobody draws the pattern. The rules and the feedback draw it themselves.",
+        "zh": "可以。自組織，就是秩序在沒有任何設計者的情況下自己冒出來。配方短得驚人：簡單的在地規則、重複很多次，再加上回饋——也就是「接下來會怎樣」取決於「剛剛發生了什麼」。推一推這樣的系統，它不會保持平滑，而是自發地「啪」地凝結成花樣。沒有人去畫那個花樣。是規則與回饋，自己把它畫了出來。",
+        "ja": "できます。自己組織化とは、設計者がまったくいないまま秩序がひとりでに生まれることです。レシピは驚くほど短い——単純な局所ルールを何度も繰り返し、そこにフィードバック（次に起こることが、たった今起きたことで決まる仕組み）を加える。こうした系を押すと、なめらかなままではいられず、自発的にパターンへと「カチッ」とはまる。誰もパターンを描きません。ルールとフィードバックが、みずから描くのです。"
+      },
+      "example": {
+        "en": "Boil water in a shallow pan and the smooth liquid suddenly organizes into a tidy grid of churning cells — a honeycomb of motion no one stirred in, formed only because warm water rises and cool water sinks, over and over.",
+        "zh": "在淺鍋裡煮水，平滑的液體會突然組織成一格一格整齊翻滾的對流胞——一張沒有人攪出來的「運動蜂巢」，純粹因為熱水往上、冷水往下，一遍又一遍。",
+        "ja": "浅い鍋で水を沸かすと、なめらかな液体が突然、整然と渦巻くセルの格子へと組み上がります——誰もかき混ぜていない「運動のハニカム」が、温かい水は上り、冷たい水は沈む、それを繰り返すだけで現れるのです。"
+      },
+      "surprise": {
+        "en": "The same trick is everywhere. The hexagons in a honeycomb, the stripes on a fish, the branching of a river, the spiral arms of a galaxy — none were drawn by a designer. Each assembles itself from simple interactions repeated at scale. Nature rarely paints a pattern; far more often, it lets the pattern paint itself.",
+        "zh": "同樣的把戲無所不在。蜂巢的六角形、魚身上的條紋、河流的分岔、星系的螺旋臂——沒有一個是設計師畫出來的。每一個，都是由簡單的互動大量重複，自己拼裝起來的。大自然很少親手畫一個花樣；它更常做的，是讓花樣自己把自己畫出來。",
+        "ja": "同じ仕掛けはいたるところにあります。蜂の巣の六角形、魚の縞、川の枝分かれ、銀河の渦状腕——どれも設計者が描いたものではありません。それぞれが、単純な相互作用を大規模に繰り返して、自分で組み上がる。自然がパターンを描くことはまれで、はるかに多くの場合、パターンに自分自身を描かせているのです。"
+      },
+      "thread": {
+        "en": "Order builds itself, layer by layer. But something stranger happens each time a new layer appears — it brings laws the layer below never had.",
+        "zh": "秩序一層一層地自己堆起來。但每當新的一層出現，都會發生更怪的事——它帶來了下面那層從來沒有的規律。",
+        "ja": "秩序は一層また一層と自分でつくり上がっていく。けれど新しい層が現れるたび、もっと奇妙なことが起きます——下の層が決して持たなかった法則を、その層が連れてくるのです。"
+      }
+    },
+    {
+      "ref": "emergence_concept",
+      "hook": {
+        "en": "If you knew everything about every atom, could you predict everything? Or does each new level of the world hide laws you could never have guessed from below?",
+        "zh": "如果你知道每一顆原子的一切，你就能預測一切嗎？還是說，世界的每一個新層級，都藏著你從下層永遠猜不到的規律？",
+        "ja": "すべての原子についてすべてを知っていたら、すべてを予測できるのでしょうか？それとも、世界の新しい層はそれぞれ、下からは決して推測できない法則を隠しているのでしょうか？"
+      },
+      "reveal": {
+        "en": "Each level hides new laws. This is emergence: when many parts come together, genuinely new behavior appears that none of the parts possess and that you could not have read off from the rules below. Chemistry is not just physics; life is not just chemistry; a mind is not just cells. At every jump, fresh laws switch on — true, reliable, and belonging only to the higher level. The physicist Philip Anderson named it: more is different.",
+        "zh": "每一層都藏著新的規律。這就是湧現：當許多零件聚在一起，會出現真正全新的行為，那是任何單一零件都不具備、也是你無法從下層規則直接讀出的。化學不只是物理；生命不只是化學；心智不只是細胞。在每一次躍遷，全新的規律會「打開」——真實、可靠，而且只屬於那個更高的層級。物理學家安德森為它命名：多，就是不一樣。",
+        "ja": "どの層も新しい法則を隠しています。これが創発です——多くの部品が集まると、どの部品も持たず、下の層のルールからは読み取れない、本当に新しい振る舞いが現れる。化学は物理だけではなく、生命は化学だけではなく、心は細胞だけではない。一段上がるたびに、新たな法則が立ち上がる——確かで、信頼でき、その高い層だけに属する法則が。物理学者フィリップ・アンダーソンはこう名づけました——「多は異なる」。"
+      },
+      "example": {
+        "en": "Water is wet — yet no single H2O molecule is 'wet.' Wetness is not stored in any molecule; it exists only when trillions of them slide past one another at once. Look for it in one molecule and it is simply not there.",
+        "zh": "水是濕的——但沒有任何單一個 H2O 分子是「濕」的。濕並不存在於任何一個分子裡；它只在數以兆計的分子同時互相滑動時，才存在。你去單一分子裡找濕，它根本不在那裡。",
+        "ja": "水は濡れている——けれど、たった一個の H2O 分子は「濡れて」いません。濡れはどの分子にも蓄えられていない。それは、何兆もの分子が一斉に滑り合うときにだけ存在する。一個の分子のなかに探しても、それはそこには無いのです。"
+      },
+      "surprise": {
+        "en": "So the whole genuinely exceeds the sum of its parts — and this is no figure of speech. Temperature, pressure, and life itself are real things that simply do not exist for a single particle. They are not hidden inside the parts waiting to be added up; they are born only from the parts acting together. The universe keeps inventing properties out of nowhere but togetherness.",
+        "zh": "所以「整體」真的大於各部分之和——而這不是一句修辭。溫度、壓力、乃至生命本身，都是對單一粒子根本不存在的真實事物。它們並非藏在零件裡、等著被加總；它們只在零件一起行動時才誕生。宇宙不斷無中生有地發明新性質，而那個「無」，其實就是「在一起」。",
+        "ja": "だから全体は、本当に部分の総和を超える——これは言葉のあやではありません。温度も、圧力も、生命そのものも、一個の粒子には存在しない実在です。それらは部品のなかに隠れて足し合わされるのを待っているのではない。部品が共に働くときにだけ生まれる。宇宙は「ともにあること」だけを元手に、新しい性質を次々と無から発明し続けているのです。"
+      },
+      "thread": {
+        "en": "If new laws appear at every level, you might expect each one to be unique. Instead, wildly different systems keep arriving at the very same patterns.",
+        "zh": "如果每一層都冒出新規律，你或許會以為每個系統都獨一無二。然而，天差地別的系統卻一再走到一模一樣的花樣上。",
+        "ja": "どの層にも新しい法則が現れるなら、それぞれが唯一無二だと思うかもしれません。ところが、まったく異なる系が、何度も同じパターンへとたどり着くのです。"
+      }
+    },
+    {
+      "ref": "universality_concept",
+      "hook": {
+        "en": "Magnets, traffic jams, flocking birds, spreading opinions — what could a lump of iron possibly have in common with a crowd?",
+        "zh": "磁鐵、塞車、成群飛鳥、蔓延的輿論——一塊鐵，跟一群人，到底能有什麼共通點？",
+        "ja": "磁石、渋滞、群れて飛ぶ鳥、広がる世論——鉄のかたまりと、人の群れに、いったい何の共通点があるのでしょう？"
+      },
+      "reveal": {
+        "en": "More than you would believe. Right at a tipping point — the knife-edge where a system flips from one state to another — utterly different systems behave in exactly the same way. Iron becoming a magnet, water beginning to boil, neurons firing in step: at the critical edge, the same numbers describe them all. Physicists call this universality. Nature does not invent a new rulebook for each system; it reuses a small set of deep templates.",
+        "zh": "比你以為的多得多。就在臨界點上——系統從一種狀態翻轉到另一種狀態的那道刀鋒——天差地別的系統，行為竟一模一樣。鐵變成磁鐵、水開始沸騰、神經元齊步發放：在臨界邊緣，同一組數字就能描述它們全部。物理學家把這叫做普適性。大自然不為每個系統發明一套新規則手冊；它重複使用一小撮深刻的範本。",
+        "ja": "思っている以上に、です。転換点——系がある状態から別の状態へ反転する、ナイフの刃のような境目——のまさにそこで、まったく異なる系がそっくり同じ振る舞いをする。鉄が磁石になる、水が沸き始める、神経細胞がそろって発火する。臨界の縁では、同じ数値がそれらすべてを記述する。物理学者はこれを普遍性と呼びます。自然は系ごとに新しい規則集を発明しはしない——ごく少数の深いひな型を、使い回しているのです。"
+      },
+      "example": {
+        "en": "The very math that describes water as it boils also describes a calm crowd that, all at once, tips into panic — and a steady market that suddenly crashes. The same shape of equation, surfacing in a kettle, a stadium, and a stock exchange.",
+        "zh": "描述水沸騰的那套數學，同樣能描述一群原本平靜的人，怎麼在一瞬間翻覆成恐慌——以及一個穩定的市場如何突然崩盤。同一個形狀的方程式，在水壺裡、體育場裡、證券交易所裡同時浮現。",
+        "ja": "水が沸くさまを描くまさにその数学が、落ち着いていた群衆が一斉にパニックへ傾く様子も——安定していた市場が突然暴落する様子も描きます。同じ形をした方程式が、やかんの中にも、競技場にも、証券取引所にも顔を出すのです。"
+      },
+      "surprise": {
+        "en": "This is why a physicist can study magnets and end up explaining how rumors spread, or how a forest fire jumps. The details — iron, gossip, trees — turn out not to matter at the tipping point. Only the shape of the connections does. A handful of templates, hiding under the whole roaring variety of the world.",
+        "zh": "這就是為什麼一位研究磁鐵的物理學家，最後竟能解釋謠言怎麼擴散、森林大火怎麼跳躍。在臨界點上，細節——鐵、八卦、樹木——竟然都不重要。重要的，只有「連結的形狀」。寥寥幾個範本，藏在這個喧囂萬變的世界底下。",
+        "ja": "だからこそ、磁石を研究する物理学者が、噂がどう広がるか、山火事がどう飛び火するかを説明できてしまう。転換点では、細部——鉄、うわさ、木——はどれも問題にならないと判明する。効いてくるのは「つながりの形」だけ。世界のとどろくような多様さの下に、ほんの一握りのひな型が潜んでいるのです。"
+      },
+      "thread": {
+        "en": "If a few simple templates underlie everything, perhaps you really could understand the world just by breaking it into parts. Or could you?",
+        "zh": "如果寥寥幾個簡單範本就撐起了一切，那或許你真的只要把世界拆成零件，就能理解它。真的可以嗎？",
+        "ja": "ほんの数個の単純なひな型がすべてを支えているなら、世界を部品に分解するだけで理解できるのかもしれません。本当にそうでしょうか？"
+      }
+    },
+    {
+      "ref": "reductionism_vs_holism_concept",
+      "hook": {
+        "en": "Take anything apart far enough and you reach its smallest pieces. Once you know every piece, have you understood the whole — or have you lost it?",
+        "zh": "把任何東西拆得夠細，你終會抵達它最小的零件。一旦你認識了每一個零件，你是理解了整體——還是把它弄丟了？",
+        "ja": "何でも十分に分解すれば、最小の部品にたどり着きます。すべての部品を知ったとき、あなたは全体を理解したのでしょうか——それとも、取りこぼしたのでしょうか？"
+      },
+      "reveal": {
+        "en": "Here two old instincts collide. Reductionism says: explain the whole by its parts, and physics has won spectacularly doing exactly that. Holism says: some truths live only in the whole. Emergence settles the quarrel with a careful answer — taking things apart is necessary, but it is not sufficient. You need the parts and you need the laws that switch on only when they act together. Neither view alone is enough.",
+        "zh": "在這裡，兩種古老的直覺相撞了。化約論說：用零件解釋整體——而物理學正是這麼做、並大獲全勝的。整體論說：有些真相只存在於整體之中。湧現替這場爭執給出一個審慎的答案——拆解是「必要的」，卻「不足夠」。你既需要零件，也需要那些只在零件一起行動時才打開的規律。任何一方單獨，都不夠用。",
+        "ja": "ここで二つの古い直感がぶつかります。還元主義はこう言う——全体は部品で説明せよ。物理学はまさにそれで華々しく勝ってきた。全体論はこう言う——いくつかの真理は全体のなかにしか宿らない。創発はこの争いに慎重な答えを出します——分解は「必要」だが「十分」ではない。部品も要るし、部品が共に働くときにだけ立ち上がる法則も要る。どちらか一方だけでは足りないのです。"
+      },
+      "example": {
+        "en": "Take a film apart frame by frame and you will find every still picture — but never the motion, never the story. The plot is real, yet it lives nowhere in any single frame; it exists only in how the frames run together.",
+        "zh": "把一部電影一格一格拆開，你會找到每一張靜止的畫面——卻永遠找不到那份動態，找不到那個故事。劇情是真實的，卻不存在於任何單一格裡；它只存在於「畫面如何接連流動」之中。",
+        "ja": "映画を一コマずつ分解すれば、止まった絵はすべて見つかります——けれど動きは、物語は、決して見つからない。筋書きは実在するのに、どの一コマのなかにも宿らない。それは「コマがどうつながって流れるか」のなかにだけ存在するのです。"
+      },
+      "surprise": {
+        "en": "Push this to the limit: you could map every neuron in a brain perfectly — every cell, every connection, every spark — and still never find 'joy' anywhere in the wiring. The feeling is real, but it is not located in any neuron. Some truths simply do not exist at the lower level; they wait, fully real, only one level up.",
+        "zh": "把這推到極限：你可以把一顆大腦裡的每一個神經元都完美地畫出來——每個細胞、每條連結、每一次放電——卻依然在那張線路圖裡，哪兒都找不到「喜悅」。那份感受是真實的，但它不座落在任何一個神經元裡。有些真相，就是不存在於下層；它們完全真實地，只在上一層等著你。",
+        "ja": "これを極限まで押し進めましょう——脳のすべての神経細胞を完璧に描き出せたとして、どの細胞も、どのつながりも、どの火花も——それでも、その配線のどこにも「喜び」は見つからない。その感情は実在するのに、どの神経細胞にも位置を持たない。いくつかの真理は、ただ下の層には存在しない。それらは完全に実在しながら、ちょうど一段上でだけ、あなたを待っているのです。"
+      },
+      "thread": {
+        "en": "If joy hides one level above its neurons, then what about the one who feels it? Your own mind may be the boldest leap of all.",
+        "zh": "如果「喜悅」藏在它的神經元之上一層，那麼，「感受到它的那個人」呢？你自己的心智，也許正是最大膽的那一次躍遷。",
+        "ja": "喜びが神経細胞の一段上に隠れているなら、では「それを感じている当人」はどうでしょう？あなた自身の心こそ、もっとも大胆な飛躍なのかもしれません。"
+      }
+    },
+    {
+      "ref": "consciousness_concept",
+      "hook": {
+        "en": "Right now, something is reading these words and feeling like someone. Where, among your cells, does that 'someone' actually sit?",
+        "zh": "此刻，有某個東西正在讀這些字，並且「感覺自己是個誰」。在你的眾多細胞之中，那個「誰」，究竟坐落在哪裡？",
+        "ja": "いまこの瞬間、何かがこの文字を読み、「誰かである」と感じています。あなたの無数の細胞のなかで、その「誰か」は、いったいどこに座っているのでしょう？"
+      },
+      "reveal": {
+        "en": "Perhaps nowhere in particular — and that may be the point. Your mind looks like the universe's grandest emergence: experience arising from roughly 86 billion brain cells trading signals, yet present in not one of them alone. No single neuron is afraid, or in love, or aware. 'You' are what those billions do together — a pattern, lit up across the whole, owned by no part of it. The same move that turns ants into a colony may turn neurons into a self.",
+        "zh": "也許不在任何特定一處——而這也許正是重點。你的心智，看來是宇宙最壯麗的一次湧現：經驗，從大約 860 億個彼此交換訊號的腦細胞中升起，卻不單獨存在於其中任何一個裡。沒有任何一個神經元會害怕、會戀愛、會察覺。「你」，是那幾百億個細胞「一起做的事」——一個跨越整體被點亮的圖樣，不歸屬於它的任何一部分。把螞蟻變成蟻群的同一招，也許正把神經元變成了一個「自我」。",
+        "ja": "おそらく、どこか特定の場所ではない——そして、それこそが核心なのかもしれません。あなたの心は、宇宙でもっとも壮大な創発に見えます——経験が、信号をやり取りするおよそ 860 億の脳細胞から立ち上がりながら、そのどれ一つのなかにも単独では存在しない。どの神経細胞も、恐れも、恋も、気づきも持たない。「あなた」とは、その何百億もが「ともに行うこと」——全体にわたって灯る一つのパターンであり、どの部分のものでもない。蟻を群れに変えるその同じ一手が、神経細胞を一つの「自己」に変えているのかもしれません。"
+      },
+      "example": {
+        "en": "A single bird only watches its neighbors and matches their turns, yet a thousand of them become one shimmering flock that wheels across the sky as if it were a single creature with a single mind. The flock has no flock-brain — and neither, in the same way, do you.",
+        "zh": "一隻鳥只是盯著鄰居、跟著牠們一起轉，但一千隻鳥卻成了一整片閃爍的鳥群，像一隻有著單一心智的生物那樣，劃過天空盤旋。鳥群並沒有一顆「鳥群腦」——而以同樣的方式，你也沒有。",
+        "ja": "一羽の鳥はただ隣を見て、その向きに合わせるだけ。それなのに千羽が、まるで一つの心を持つ一個の生き物のように、空をうねって旋回する一つのきらめく群れになる。群れに「群れの脳」はありません——そして同じ意味で、あなたにも無いのです。"
+      },
+      "surprise": {
+        "en": "And here the trail opens into the dark. The very same principle that builds a colony from ants may build a 'you' from neurons — which is either the long-sought answer to consciousness, or a far sharper way of stating its mystery. Either way, you have just watched the universe, through one of its own emergent minds, turn around and wonder how it manages to wonder at all. The field opens wide.",
+        "zh": "而就在這裡，路徑通向了黑暗。把螞蟻組成蟻群的同一個原理，也許正把神經元組成了一個「你」——這要嘛是人們苦尋已久的意識解答，要嘛是把那謎團說得更加鋒利的一種方式。無論是哪一種，你都剛剛目睹了宇宙——透過它自己其中一顆湧現出來的心智——回過頭來，驚奇於自己究竟如何能夠驚奇。整片原野，就此敞開。",
+        "ja": "そしてここで、道は闇へと開けていきます。蟻から群れを築くその同じ原理が、神経細胞から「あなた」を築いているのかもしれない——それは長く探されてきた意識の答えか、あるいはその謎をはるかに鋭く言い直したものか、どちらかです。いずれにせよあなたは今、宇宙が——みずから創発させた一つの心を通して——振り返り、そもそもどうして驚けるのかと驚く様子を見たのです。原野は、大きく開けています。"
+      },
+      "thread": {
+        "en": "You have reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "complex_systems_concept", "target": "self_organization_concept", "relation_type": "conceptual" },
+    { "source": "self_organization_concept", "target": "emergence_concept", "relation_type": "conceptual" },
+    { "source": "emergence_concept", "target": "universality_concept", "relation_type": "conceptual" },
+    { "source": "universality_concept", "target": "reductionism_vs_holism_concept", "relation_type": "conceptual" },
+    { "source": "reductionism_vs_holism_concept", "target": "consciousness_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Open Conway's Game of Life and watch gliders crawl out of four tiny rules; code the three flocking rules of 'boids' and grow a flock on your screen; then read Philip Anderson's short essay 'More Is Different' — and emergence turns from a story into something you can run with your own hands.",
+    "zh": "想再往下墜一點？打開康威的「生命遊戲」，看滑翔機從四條小小的規則裡爬出來；寫出群聚演算法「boids」的三條規則，在你的螢幕上養出一群鳥；再讀一讀安德森那篇短文〈多，就是不一樣〉（More Is Different）——湧現，就會從一個故事，變成你能親手跑起來的東西。",
+    "ja": "もっと落ちてみたいですか？コンウェイの「ライフゲーム」を開き、たった四つのルールからグライダーが這い出すのを眺め、群れアルゴリズム「boids」の三つのルールを書いて画面上に群れを育て、それからフィリップ・アンダーソンの短い論文「More Is Different（多は異なる）」を読んでみてください——創発が、物語から、自分の手で動かせるものへと変わります。"
+  }
+}

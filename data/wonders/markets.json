@@ -1,0 +1,192 @@
+{
+  "id": "markets",
+  "accent": "SOC",
+  "title": { "en": "Markets", "zh": "市場", "ja": "市場" },
+  "intro": {
+    "en": "No one is in charge of the price of bread — yet it's roughly right, everywhere, every day. In six steps, follow a crowd with no boss as it coordinates itself, and find out when that crowd goes mad.",
+    "zh": "沒有人在管麵包的價格——它卻在每個地方、每一天都大致正確。跟著六步，看一群沒有老闆的人如何自己協調起來，又是在什麼時候，這群人會發了瘋。",
+    "ja": "パンの値段を取り仕切る人は誰もいない——なのにその値段は、どこでも、毎日、だいたい正しい。6 つのステップで、上司のいない群衆が自分で足並みをそろえていく様子を追い、その群衆がいつ狂うのかを見つけましょう。"
+  },
+  "steps": [
+    {
+      "ref": "supply_and_demand_concept",
+      "hook": {
+        "en": "A bakery never calls a meeting to set the price of bread. So how does the price land, on its own, somewhere close to right?",
+        "zh": "麵包店從不開會決定麵包賣多少。那價格究竟是怎麼自己落在差不多剛好的地方？",
+        "ja": "パン屋がパンの値段を決める会議を開くことはありません。では、その値段はどうやって自力で、ちょうどよいあたりに落ち着くのでしょう？"
+      },
+      "reveal": {
+        "en": "A price is a signal, not a command. When something is scarce and many people want it, the price rises — which cools demand and coaxes more supply. When it's plentiful, the price falls, until the two sides meet. Nobody steers this. The number drifts, almost on its own, to the point where what people want to buy matches what others want to sell.",
+        "zh": "價格是一種訊號，不是命令。當某樣東西稀少、又很多人想要，價格就上漲——這會澆熄需求，也誘出更多供給。當它充裕，價格就下跌，直到買賣兩方相遇。沒有人在操舵。那個數字幾乎是自己漂移，漂到「人們想買的」剛好對上「別人想賣的」那一點。",
+        "ja": "値段は命令ではなく、信号です。あるものが乏しく、多くの人が欲しがれば、値段は上がる——すると需要は冷め、供給はもっと引き出される。豊富なら値段は下がり、買い手と売り手の二つが出会うところまで動く。誰も舵を取っていません。その数字はほとんど独りでに、人々が買いたい量と、ほかの人が売りたい量がぴたりと合う点へと漂っていくのです。"
+      },
+      "example": {
+        "en": "A cold snap freezes the orange groves, and within a week orange juice costs more at every shop — without any committee deciding it. The shortage simply pushes the number up, and shoppers ease off on their own.",
+        "zh": "一場寒流凍壞了柑橘園，不到一週，每家店的柳橙汁都變貴了——沒有任何委員會決定這件事。短缺就只是把數字往上推，而顧客自己就放慢了購買。",
+        "ja": "寒波がオレンジ畑を凍らせると、一週間のうちにどの店でもオレンジジュースが高くなります——どこかの委員会が決めたわけではありません。不足がただ数字を押し上げ、買い手は自分から控えるのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: a single price quietly carries more information than any survey could ever gather. Hidden inside that one number are millions of private wants and costs — what each grower paid, what each drinker is willing to give up — summed into a figure no one person could ever compute. The price knows things nobody knows.",
+        "zh": "意外的是：單單一個價格，悄悄載著的資訊，比任何問卷調查蒐集到的都還多。藏在那一個數字裡的，是幾百萬份私人的渴望與成本——每個果農付了多少、每個喝的人願意割捨多少——全被加總成一個沒有任何一個人算得出來的數。價格知道沒有人知道的事。",
+        "ja": "意外なことに、たった一つの値段が、どんな調査でも集めきれないほどの情報を静かに運んでいます。その一つの数字の中には、何百万もの私的な欲求とコストが隠れている——どの生産者がいくら払い、どの飲み手が何をあきらめてもよいと思うか——それらが、誰一人として計算しきれない一つの数にまとめ上げられている。値段は、誰も知らないことを知っているのです。"
+      },
+      "thread": {
+        "en": "If no one steers the price and yet it works, who first noticed this strange, leaderless order — and what did they call it?",
+        "zh": "如果沒有人在操舵、價格卻運作得好，那是誰最先注意到這種奇異、無人領導的秩序——又給它取了什麼名字？",
+        "ja": "誰も舵を取らないのに値段は機能する——では、この奇妙で指導者のない秩序に最初に気づいたのは誰で、何と名づけたのでしょう？"
+      }
+    },
+    {
+      "ref": "adam_smith_person",
+      "hook": {
+        "en": "The baker bakes for profit, not to feed you. The farmer farms for money, not for your dinner. So why does the city wake up fed?",
+        "zh": "麵包師傅烤麵包是為了賺錢，不是為了餵飽你。農夫種田是為了錢，不是為了你的晚餐。那為什麼整座城市醒來時都有得吃？",
+        "ja": "パン職人がパンを焼くのは儲けのためで、あなたを養うためではない。農家が耕すのはお金のためで、あなたの夕食のためではない。なのに、なぜ街は目覚めると食べ物にありついているのでしょう？"
+      },
+      "reveal": {
+        "en": "Adam Smith, writing in 1776, gave this its famous name: the invisible hand. Each person chasing their own gain ends up, without intending to, serving everyone else. The baker wants your coin, so he must make bread you'll buy. Pursue your own interest under competition, Smith saw, and you are led — as if by an unseen hand — to organize a whole economy you never meant to organize.",
+        "zh": "亞當·斯密在 1776 年寫下了那個著名的名字：看不見的手。每個人追逐自己的利益，最後竟在無意之間，服務了其他所有人。麵包師傅想要你的錢，於是他必須做出你會買的麵包。斯密看出：在競爭之中追求自己的利益，你會被引導——彷彿被一隻看不見的手——去組織起一整個你從沒打算組織的經濟。",
+        "ja": "アダム・スミスは 1776 年、これに有名な名を与えました——見えざる手。各人が自分の利益を追うことで、意図せずして、ほかの皆に尽くすことになる。パン職人はあなたのお金が欲しい、だからあなたが買うパンを作らねばならない。競争のもとで自分の利益を追えば、人はまるで見えない手に導かれるように——自分が組織するつもりのなかった経済全体を、組織してしまう。スミスはそう見抜いたのです。"
+      },
+      "example": {
+        "en": "Think of the thousands of strangers behind your morning coffee — the grower, the shipper, the roaster, the cup-maker. None of them knows you exist, yet together they hand you a hot cup for small change, every single day.",
+        "zh": "想想你早晨那杯咖啡背後成千上萬的陌生人——種咖啡的、運送的、烘焙的、做杯子的。他們沒有一個人知道你存在，卻一起把一杯熱咖啡，用零錢的價格，每天遞到你手上。",
+        "ja": "朝のコーヒーの背後にいる何千もの見知らぬ人々を思い浮かべてください——栽培する人、運ぶ人、焙煎する人、カップを作る人。誰一人あなたの存在を知らないのに、皆が力を合わせて、わずかな小銭で熱い一杯を、毎日あなたの手に渡してくれるのです。"
+      },
+      "surprise": {
+        "en": "The twist most people miss: the same Smith wrote an entire earlier book about human sympathy and morals. He never believed selfishness alone was enough. He thought markets only work because they sit inside a society held together by fellow-feeling, trust, and restraint. The patron saint of the free market was, first, a teacher of conscience.",
+        "zh": "多數人錯過的轉折是：同一個斯密，更早之前還寫了一整本關於人類同情心與道德的書。他從不認為光靠自私就足夠。他認為市場之所以能運作，是因為它坐落在一個由同理、信任與克制所維繫的社會之中。這位自由市場的守護聖徒，首先是一位談良知的老師。",
+        "ja": "多くの人が見落とす逆転はこれです——同じスミスが、もっと前に、人間の共感と道徳についての本を一冊まるごと書いていた。彼は利己心だけで十分だとは決して考えませんでした。市場が機能するのは、それが共感・信頼・自制によってまとまった社会の中にあるからこそだ、と考えたのです。自由市場の守護聖人は、まず何より、良心を説く教師でした。"
+      },
+      "thread": {
+        "en": "But what happens when your best move depends entirely on what a stranger across the table decides to do?",
+        "zh": "但如果你最好的一步，完全取決於桌子對面那個陌生人決定怎麼做，會發生什麼事？",
+        "ja": "では、あなたの最善の一手が、テーブルの向こうの見知らぬ相手の決断に完全に左右されるとしたら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "game_theory_concept",
+      "hook": {
+        "en": "When your smartest choice depends on someone else's choice — and theirs depends on yours — how does anyone decide anything at all?",
+        "zh": "當你最聰明的選擇，取決於別人的選擇——而別人的選擇，又取決於你——那到底還有誰能決定得了任何事？",
+        "ja": "あなたの最も賢い選択が相手の選択に左右され——相手の選択もまたあなたに左右されるとき——いったい誰が何を決められるのでしょう？"
+      },
+      "reveal": {
+        "en": "That tangle is a game, and game theory is the math of it. The moment your payoff depends on what others do, you're no longer solving a puzzle alone — you're reading minds that are reading yours. And here is the unsettling result: perfectly rational players, each making the smartest move available, can all end up worse off than if they'd simply trusted one another.",
+        "zh": "那團糾結，就是一場「賽局」，而賽局理論就是它的數學。當你的收益取決於別人怎麼做的那一刻，你就不再是獨自解一道題——你在讀別人的心，而那些人也在讀你的心。而結果令人不安：完全理性的玩家，每個人都走出眼前最聰明的一步，最後卻可能比彼此單純信任時更糟。",
+        "ja": "そのもつれが「ゲーム」であり、ゲーム理論はその数学です。あなたの利得が相手の行動に左右された瞬間、もう一人でパズルを解いているのではない——あなたの心を読む相手の、その心を読んでいるのです。そして落ち着かない結末がある——完全に理性的なプレイヤーが、めいめい目の前で最も賢い一手を打つと、ただ互いを信じたときよりも、全員が悪い結果になりうるのです。"
+      },
+      "example": {
+        "en": "Two rival shops sit side by side. Each could keep prices fair, but each fears the other will undercut — so both slash prices until neither makes a profit. Acting cautiously, step by step, they walk straight into a price war that ruins them both.",
+        "zh": "兩家對手商店並排開著。兩家其實都可以維持公道的價格，但每一家都怕對方削價——於是兩家都狂砍價格，直到誰都賺不到錢。一步一步小心行事，他們卻直直走進一場兩敗俱傷的價格戰。",
+        "ja": "二つのライバル店が並んでいます。どちらも公正な値段を保てるのに、相手が値下げするのを恐れる——だから両方が値を切り下げ、ついにはどちらも儲からなくなる。一歩ずつ慎重に動いたつもりが、両者を破滅させる値下げ戦争へまっすぐ歩み込むのです。"
+      },
+      "surprise": {
+        "en": "The sharpest version is the Prisoner's Dilemma. Two captured partners are questioned apart; each is tempted to betray the other for a lighter sentence. Cold logic says betray — yet if both follow that logic, both serve longer than if they'd stayed silent together. The maddening twist: everyone acting smartly produces the worst result for all. Cooperation can be irrational and essential at the very same time.",
+        "zh": "最鋒利的版本，是「囚徒困境」。兩名被捕的同夥被分開審問；每個人都被誘惑去出賣對方，換取較輕的刑罰。冷酷的邏輯說：出賣——可是如果兩人都照這邏輯走，兩人都會比一起保持沉默時關得更久。那令人抓狂的轉折是：人人都聰明行事，卻產出對所有人最糟的結果。合作，可以同時既不理性、又不可或缺。",
+        "ja": "もっとも鋭い形が「囚人のジレンマ」です。捕まった二人の仲間が別々に取り調べられ、それぞれ相手を裏切れば刑が軽くなると誘惑される。冷たい論理は「裏切れ」と言う——だが二人ともその論理に従えば、二人とも黙っていたときより長く服役する。気を狂わせるような逆転——皆が賢く動くことが、全員にとって最悪の結果を生む。協力とは、まさに同時に、不合理でありながら不可欠でもありうるのです。"
+      },
+      "thread": {
+        "en": "Game theory assumes players are coldly rational. But real people aren't — so what happens when you put actual humans into the picture?",
+        "zh": "賽局理論假設玩家是冷靜理性的。但真實的人並非如此——那麼，把活生生的人放進這幅圖裡，會發生什麼事？",
+        "ja": "ゲーム理論はプレイヤーが冷徹に理性的だと仮定します。でも本物の人間はそうではない——では、生身の人間をこの絵に置いたら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "behavioral_economics_concept",
+      "hook": {
+        "en": "Classic economics pictures people as cool, flawless calculators. Have you ever met one? Have you ever been one?",
+        "zh": "傳統經濟學把人想像成冷靜、不會出錯的計算機。你見過這種人嗎？你自己當過這種人嗎？",
+        "ja": "古典的な経済学は、人間を冷静で完璧な計算機として描きます。そんな人に会ったことがありますか？あなた自身が、そうだったことは？"
+      },
+      "reveal": {
+        "en": "Behavioral economics answers honestly: no. Real humans are not the icy calculators the old theory assumed. We are swayed by how a choice is framed, by what we already own, by what the people around us are doing. And the crucial point is that we go wrong not randomly but in patterns — the same way, again and again. We are predictably irrational.",
+        "zh": "行為經濟學誠實地回答：沒有。真實的人，並不是舊理論假設的那種冷冰冰的計算機。我們會被一個選擇被「怎麼描述」左右、被自己已經擁有的東西左右、被身邊人正在做的事左右。而關鍵在於：我們犯錯不是隨機的，而是有模式的——一次又一次，用同樣的方式出錯。我們是「可預測地不理性」。",
+        "ja": "行動経済学は正直に答えます——いいえ、と。本物の人間は、古い理論が仮定した氷のような計算機ではありません。私たちは、選択がどう見せられるか、すでに何を持っているか、まわりの人が何をしているかに揺さぶられる。そして肝心なのは、私たちの誤りがでたらめではなく、パターンを持つことです——何度も、同じやり方で。私たちは「予測可能なほど不合理」なのです。"
+      },
+      "example": {
+        "en": "Sell the same yogurt as '90% fat-free' and it flies off the shelf; label it '10% fat' and it sits there. Identical fact, opposite feeling. The wording, not the yogurt, changed your mind.",
+        "zh": "同一盒優格，標成「90% 無脂」就賣到缺貨；標成「含脂 10%」就乏人問津。一模一樣的事實，相反的感受。改變你心意的，是那行字，不是那盒優格。",
+        "ja": "同じヨーグルトを「無脂肪 90%」と売れば棚から飛ぶように売れ、「脂肪 10%」と表示すれば売れ残る。まったく同じ事実なのに、正反対の感じ方。あなたの心を変えたのは、ヨーグルトではなく、その文言だったのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist that exposed us. People will happily drive across town to save five dollars on a fifteen-dollar gadget — but won't make the same trip to save five dollars on a five-hundred-dollar television. It's the exact same five dollars, the exact same drive. We don't judge money by what it's worth; we judge it against the price beside it. The same gain feels big or small depending purely on its neighbor.",
+        "zh": "這裡有個揭穿我們的轉折。為了一個十五美元的小玩意省下五美元，人們會樂意開車穿過整座城；但同樣這趟路，去替一台五百美元的電視省五美元，卻沒人要去。明明是一模一樣的五美元、一模一樣的車程。我們不是用金錢「值多少」來判斷它，而是拿它去跟旁邊那個價格比。同樣一筆好處，感覺是大是小，純粹取決於它的鄰居。",
+        "ja": "ここに、私たちの正体を暴く逆転があります。十五ドルの小物で五ドル節約するためなら、人は喜んで街を横切って車を走らせる——けれど五百ドルのテレビで同じ五ドルを節約するために、同じ道を走ろうとはしない。まったく同じ五ドル、まったく同じ道のりなのに。私たちはお金をその価値で測らず、隣にある値段と比べて測る。同じ得が大きく感じるか小さく感じるかは、ひとえに、その隣しだいなのです。"
+      },
+      "thread": {
+        "en": "If we misjudge in such tidy patterns, those patterns must come from somewhere. What are the hidden gears in the mind that bend our choices?",
+        "zh": "如果我們的誤判有這麼整齊的模式，那這些模式一定來自某個地方。腦袋裡，到底有哪些看不見的齒輪，在彎折我們的選擇？",
+        "ja": "私たちの誤りがこれほど整ったパターンを描くなら、そのパターンはどこかから来ているはず。私たちの選択を曲げる、心の中の見えない歯車とは何でしょう？"
+      }
+    },
+    {
+      "ref": "cognitive_bias_concept",
+      "hook": {
+        "en": "Your mind makes a thousand snap judgments a day without breaking a sweat. What if the very shortcuts that make it fast also make it wrong — in the same way every time?",
+        "zh": "你的腦袋一天做出上千個瞬間判斷，連汗都不流。如果讓它變快的那些捷徑，同時也讓它出錯——而且每次都用同一種方式出錯呢？",
+        "ja": "あなたの心は一日に千もの即断を、汗ひとつかかずに下します。それを速くしているまさにその近道が、同時にそれを誤らせている——しかも毎回同じやり方で——としたら？"
+      },
+      "reveal": {
+        "en": "The mind runs on mental shortcuts, and they misfire in systematic, repeatable ways called cognitive biases. We grab the first number we hear and judge everything against it — that's anchoring. We follow the crowd because surely they can't all be wrong — that's herding. And we dread losing far more than we enjoy winning — that's loss aversion. These aren't personal failings. They are wired into nearly everyone.",
+        "zh": "心智運轉靠的是各種思考捷徑，而它們會以系統化、可重複的方式失靈，這就叫「認知偏誤」。我們抓住聽到的第一個數字，拿它去衡量一切——這是「定錨效應」。我們跟著人群走，因為這麼多人總不會都錯吧——這是「從眾」。而我們害怕失去，遠遠超過享受得到——這是「損失趨避」。這些不是個人的缺陷，而是幾乎刻在每個人身上的線路。",
+        "ja": "心は心理的な近道で動いており、それらは「認知バイアス」と呼ばれる、体系的で再現可能なやり方で誤作動します。最初に聞いた数字をつかみ、すべてをそれと比べて判断する——これがアンカリング。群衆についていく、これだけの人が皆まちがうはずがないと——これが同調（ハーディング）。そして得る喜びよりも、失う恐れをはるかに強く感じる——これが損失回避。これらは個人の欠点ではなく、ほぼ全員に配線された仕組みなのです。"
+      },
+      "example": {
+        "en": "A jacket marked 'was $200, now $120' feels like a steal — even if it was never really worth $200. That crossed-out price is an anchor, dropped on purpose, and your sense of 'a good deal' quietly hangs from it.",
+        "zh": "一件外套標著「原價 200 美元，現在 120 美元」，感覺賺到了——即使它根本從不值 200 美元。那個被劃掉的價格是一個錨，被故意拋下，而你對「划算」的感覺，就悄悄掛在它上面。",
+        "ja": "「もとは 200 ドル、いまは 120 ドル」と表示された上着は、お買い得に感じます——たとえ本当は 200 ドルの価値などなかったとしても。あの取り消し線の値段は、わざと落とされた錨で、あなたの「お得」という感覚は、それに静かにぶら下がっているのです。"
+      },
+      "surprise": {
+        "en": "Measure it and the asymmetry is stark: we feel a loss about twice as hard as we feel an equal gain. Losing a hundred dollars stings roughly as much as finding two hundred delights us. That one lopsided feeling is the engine behind market panics, behind bubbles, and behind why you cling to a losing stock long after you should sell — letting go would mean admitting the loss is real.",
+        "zh": "量一量，這份不對稱令人吃驚：我們感受一筆損失的痛，大約是感受同等收穫之樂的兩倍。失去一百美元的刺痛，差不多等於撿到兩百美元的喜悅。就是這份偏斜的感覺，成了市場恐慌的引擎、泡沫的引擎，也是你明明早該賣掉，卻死抱著一支賠錢股票的原因——放手，就等於承認損失是真的。",
+        "ja": "測ってみると、その非対称は際立っています——私たちは、同じ大きさの得よりも、損を約二倍強く感じる。百ドルを失う痛みは、二百ドルを拾う喜びとほぼ釣り合う。その一つの偏った感情こそ、市場のパニックの、バブルの、そして売るべきときをとうに過ぎても負けた株にしがみつく理由の——エンジンなのです。手放すことは、損が本物だと認めることになるから。"
+      },
+      "thread": {
+        "en": "So far the trouble has been inside one head. But what breaks when two heads in a deal simply don't know the same things?",
+        "zh": "到目前為止，麻煩都在一顆腦袋裡。但如果一筆交易裡的兩顆腦袋，根本知道的東西不一樣，又會壞掉什麼？",
+        "ja": "ここまで、厄介ごとは一つの頭の中にありました。でも、取引をする二つの頭が、そもそも同じことを知らないとしたら——何が壊れるのでしょう？"
+      }
+    },
+    {
+      "ref": "information_asymmetry_concept",
+      "hook": {
+        "en": "When you buy a used car, the seller knows every rattle and flaw — and you know almost nothing. Can a fair price even exist across a gap that wide?",
+        "zh": "當你買一台二手車，賣家清楚每一處異響、每一個毛病——而你幾乎一無所知。在這麼寬的落差之間，公道的價格還可能存在嗎？",
+        "ja": "中古車を買うとき、売り手はあらゆる異音や欠陥を知っていて——あなたはほとんど何も知らない。これほど大きな隔たりをまたいで、公正な値段など成り立つのでしょうか？"
+      },
+      "reveal": {
+        "en": "This is information asymmetry: one side of a deal knows far more than the other, and that imbalance can quietly break a market. Buyers, unable to tell good from bad, will only offer a cautious middling price. But that low price drives the honest sellers — the ones with genuinely good goods — out of the market, leaving mostly the bad. This is the hidden architecture under every deal you make.",
+        "zh": "這就是「資訊不對稱」：交易的一方知道的，遠多於另一方，而這種失衡，能悄悄地把一個市場弄壞。買家分不出好壞，於是只願出一個謹慎的、中間的價格。但那個偏低的價格，會把誠實的賣家——那些真正有好貨的人——逼出市場，留下的大多是爛貨。這，就是你做的每一筆交易底下，那層看不見的結構。",
+        "ja": "これが「情報の非対称性」です——取引の一方が他方よりはるかに多くを知っており、その不均衡が市場を静かに壊しうる。買い手は良し悪しを見分けられず、用心して中くらいの値しか出さない。だがその低い値段が、誠実な売り手——本当に良い品を持つ人——を市場から追い出し、残るのはほとんど粗悪品になる。これが、あなたが結ぶすべての取引の下にある、隠れた骨組みなのです。"
+      },
+      "example": {
+        "en": "Health insurance feels this every day: the people most eager to buy are often the ones who already know they're sick. The insurer can't see who's who, so prices climb to cover the risk — and the healthy, now overcharged, quietly walk away.",
+        "zh": "健康保險每天都在感受這件事：最急著想買的人，往往正是那些已經知道自己生病的人。保險公司分不出誰是誰，於是價格往上爬以覆蓋風險——而健康的人，如今被收得太貴，就悄悄離開了。",
+        "ja": "健康保険は毎日これを味わっています——いちばん買いたがる人は、しばしばすでに自分が病気だと知っている人。保険会社は誰が誰だか見分けられず、リスクを賄うために値段が上がる——そして健康な人は、いまや高く取られすぎて、静かに去っていくのです。"
+      },
+      "surprise": {
+        "en": "Economist George Akerlof called this the market for lemons, and showed it can collapse a perfectly good market entirely — not from greed, but from plain hidden knowledge. The surprising cure is rarely more competition. It is trust and honest signals: a warranty, a brand's reputation, an independent inspection — small bridges of credibility that let a good deal survive the gap. No one runs the price of bread, and yet, held up by signals like these, the crowd coordinates anyway. You've arrived: the field is open.",
+        "zh": "經濟學家喬治·阿克洛夫把這叫做「檸檬市場」，並證明了它能讓一個原本好端端的市場徹底崩潰——不是出於貪婪，而是僅僅因為藏起來的資訊。而令人意外的解方，很少是「更多競爭」。它是信任與誠實的訊號：一份保固、一個品牌的聲譽、一次獨立的檢驗——一座座小小的信用之橋，讓好交易得以跨過落差存活下來。沒有人在管麵包的價格，然而，被這樣的訊號撐住，這群人終究還是協調了起來。你抵達了：這片原野，是敞開的。",
+        "ja": "経済学者ジョージ・アカロフはこれを「レモン市場」と呼び、それが申し分のない市場をまるごと崩壊させうることを示しました——貪欲からではなく、ただ隠された知識から。意外な処方は、たいてい「もっと競争を」ではありません。信頼と正直な信号です——保証、ブランドの評判、独立した検査——良い取引が隔たりを越えて生き延びるための、小さな信用の橋。パンの値段を取り仕切る人はいない、それでも、こうした信号に支えられて、群衆はやはり足並みをそろえる。あなたは辿り着きました——この原野は、開かれています。"
+      },
+      "thread": {
+        "en": "You've reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "supply_and_demand_concept", "target": "adam_smith_person", "relation_type": "historical" },
+    { "source": "adam_smith_person", "target": "game_theory_concept", "relation_type": "conceptual" },
+    { "source": "game_theory_concept", "target": "behavioral_economics_concept", "relation_type": "conceptual" },
+    { "source": "behavioral_economics_concept", "target": "cognitive_bias_concept", "relation_type": "causal" },
+    { "source": "cognitive_bias_concept", "target": "information_asymmetry_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Play a few rounds of the Prisoner's Dilemma against a friend and watch trust break and rebuild; read Daniel Kahneman's 'Thinking, Fast and Slow' to meet your own biases face to face; or look up Akerlof's 'market for lemons' to see how a single hidden fact can sink a whole market — and these ideas stop being theory and start explaining your own days.",
+    "zh": "想再往下走一點？找個朋友玩幾局囚徒困境，看著信任如何崩解、又如何重建；讀讀康納曼的《快思慢想》，與你自己的偏誤面對面；或去查查阿克洛夫的「檸檬市場」，看看一個藏起來的事實如何能擊沉整個市場——這些想法，就會從理論變成在解釋你自己的每一天。",
+    "ja": "もっと先へ進みたいですか？友人と囚人のジレンマを何回か対戦し、信頼が壊れては築き直される様子を見てみる。カーネマンの『ファスト＆スロー』を読んで、自分自身のバイアスと面と向かう。あるいはアカロフの「レモン市場」を調べ、たった一つの隠れた事実が市場全体を沈めうることを見てみる——すると、これらの考えは理論であることをやめ、あなた自身の日々を説明し始めます。"
+  }
+}

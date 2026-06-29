@@ -1,0 +1,221 @@
+{
+  "id": "language",
+  "accent": "HUM",
+  "title": { "en": "Language", "zh": "語言", "ja": "言語" },
+  "intro": {
+    "en": "You ran the most complex software on Earth before you could tie your shoes — and no one taught you the rules. In seven steps, walk into the machinery hidden inside every sentence you speak, and meet the deepest unsolved puzzle about your own mind.",
+    "zh": "在你會綁鞋帶之前，你就已經在運行地球上最複雜的軟體——而且沒有人教過你規則。跟著七步，走進你說出的每一句話背後那台隱藏的機器，遇見關於你自己心智、最深也最未解的謎。",
+    "ja": "靴ひもを結べるようになる前に、あなたは地球上で最も複雑なソフトウェアを動かしていました——しかも、誰もそのルールを教えてはくれなかった。7 つのステップで、あなたが話すどの文の奥にも隠れた仕掛けの中へ入り、自分自身の心についての最も深い未解決の謎に出会いましょう。"
+  },
+  "steps": [
+    {
+      "ref": "language_and_thought_concept",
+      "hook": {
+        "en": "We tend to think first, then find words for the thought. But what if the words you happen to own quietly decide what thoughts you can have at all?",
+        "zh": "我們總以為是先有想法，再替想法找字。但如果你剛好擁有的那些字，悄悄決定了你根本能想到什麼呢？",
+        "ja": "ふつう私たちは、まず考え、それから言葉を当てはめると思っています。でも、たまたま手にしている言葉のほうが、あなたにどんな考えが持てるかを、ひそかに決めているとしたら？"
+      },
+      "reveal": {
+        "en": "Here is the unsettling idea: language may not be a set of labels we stick onto ready-made thoughts. It may shape the thoughts themselves — what you notice, what you can hold in mind, what feels obvious. Give a mind different words, and the world it builds can come out a different shape. Thinking and speaking turn out to be tangled together, not stacked one on top of the other.",
+        "zh": "這是個令人不安的念頭：語言或許不是我們貼到「現成想法」上的一組標籤。它可能塑造了想法本身——你會注意到什麼、能在腦中握住什麼、覺得什麼是理所當然。給一顆心智不同的字詞，它建構出的世界，形狀就可能不一樣。思考與說話，原來是糾纏在一起的，而不是上下疊著的兩層。",
+        "ja": "これは落ち着かない考えです——言語は、できあがった思考に貼りつけるラベルの集まりではないかもしれない。思考そのものを形づくっているのかもしれません。何に気づき、何を心にとどめられ、何を当たり前と感じるか。心に違う言葉を与えれば、それが築く世界の形まで変わりうる。考えることと話すことは、上下に積み重なっているのではなく、もつれ合っていたのです。"
+      },
+      "example": {
+        "en": "Speakers of one Australian Aboriginal language, Guugu Yimithirr, never say 'left' or 'right' — only north, south, east, west. To speak it at all, they must track the compass at every moment, even in a dark room, and they do.",
+        "zh": "澳洲原住民語言之一的 Guugu Yimithirr，使用者從不說「左」或「右」——只說東南西北。光是要把這語言講出來，他們就必須時時刻刻追蹤方位，連在暗房裡也一樣——而他們真的做得到。",
+        "ja": "オーストラリア先住民の言語の一つ、グーグ・イミディル語の話者は「左」「右」と言わず、東西南北だけを使います。この言語を話すには、暗い部屋の中でさえ、つねに方位を追い続けねばならない——そして実際、彼らはそうしているのです。"
+      },
+      "surprise": {
+        "en": "It runs deeper than words for directions. Some languages slice the rainbow into more color words than others — and their speakers can spot a difference between two shades faster, because their language taught their eyes to draw a line right there. The grammar you grew up in may quietly bend how you see, remember, and pay attention.",
+        "zh": "這比「方位詞」還要深。有些語言把彩虹切成比別人更多的顏色詞——而它們的使用者能更快分辨兩個色階的差別，因為他們的語言教會了他們的眼睛，正好在那裡畫下一條界線。你從小長進去的文法，或許正悄悄彎折著你如何看、如何記、如何留意。",
+        "ja": "話は方位の語よりさらに深いところへ届きます。ある言語は虹を、他の言語より多くの色名に切り分けます——その話者は二つの色合いの違いをより速く見分けられる。言語が、ちょうどそこに境界線を引くよう、目を仕込んだからです。育った文法は、あなたの見方・記憶・注意の向け方を、そっと曲げているのかもしれません。"
+      },
+      "thread": {
+        "en": "If language can shape thought, what is language actually made of underneath — what hidden machinery lets it work at all?",
+        "zh": "如果語言能塑造思考，那語言底下到底是由什麼構成的——是什麼隱藏的機器，讓它運轉起來？",
+        "ja": "言語が思考を形づくれるのなら、言語そのものは奥で何でできているのか——いったいどんな隠れた仕掛けが、それを動かしているのでしょう？"
+      }
+    },
+    {
+      "ref": "syntax_concept",
+      "hook": {
+        "en": "You can read a sentence you have never seen before and understand it instantly. Where does that endless supply of brand-new, never-heard sentences come from?",
+        "zh": "你能讀懂一句你從沒見過的句子，而且瞬間就懂。這源源不絕、從沒聽過的全新句子，到底是從哪裡冒出來的？",
+        "ja": "あなたは一度も見たことのない文を読んで、瞬時に理解できます。その尽きることのない、聞いたこともない真新しい文は、いったいどこから湧いてくるのでしょう？"
+      },
+      "reveal": {
+        "en": "Beneath every sentence sits an invisible structure: syntax. Words are not lined up like beads on a string — they nest inside one another, phrases tucked into phrases, following a small set of rules. Because the rules can be reused and folded into themselves, a handful of them generate an endless supply of new sentences. You are not remembering sentences; you are running a system that builds them on the spot.",
+        "zh": "每一句話底下，都坐著一個看不見的結構：句法。詞並不是像串珠那樣排成一條線——它們彼此「巢套」，片語藏在片語裡，遵循一小組規則。因為這些規則能反覆使用、能套進自己，少少幾條就能生出無窮無盡的新句子。你不是在「記住」句子；你是在運行一套當場把句子蓋出來的系統。",
+        "ja": "どの文の奥にも、目に見えない構造——統語（シンタックス）が座っています。語は数珠のように一列に並んでいるのではなく、たがいに入れ子になり、句が句の中に収まり、わずかな規則に従う。規則は何度でも使え、自分自身の中に折り込めるので、ほんの一握りの規則が無限の新しい文を生み出します。あなたは文を覚えているのではなく、その場で文を組み立てる仕組みを動かしているのです。"
+      },
+      "example": {
+        "en": "Take 'the cat the dog chased ran': clumsy, but you can untangle who chased whom, because you feel the hidden brackets nesting one clause inside another — rules no one ever wrote down for you.",
+        "zh": "看「那隻被狗追的貓跑了」：有點繞，但你能理清誰追誰，因為你感覺得到那些隱藏的括號，把一個子句巢套進另一個——這些規則從沒有人寫下來給你。",
+        "ja": "「犬が追いかけた猫が走った」を見てください。少しややこしいけれど、誰が誰を追ったかをほどける。一つの節をもう一つの節に入れ子にする、隠れた括弧を感じ取れるからです——誰もあなたのために書き出したことのない規則を。"
+      },
+      "surprise": {
+        "en": "Here is the wonder: a child masters this grammar by about age five, with no lessons and no corrections that stick — and from speech that is messy, broken off, full of errors. Out of that mess, every healthy child reliably builds the same intricate rule system. No teaching method ever invented can fully explain how.",
+        "zh": "驚奇在這裡：孩子大約五歲就掌握了這套文法，沒有上課、沒有真正記住的糾正——而且他們聽到的話是凌亂的、講到一半斷掉的、滿是錯誤的。從那團混亂裡，每個健康的孩子都可靠地建起同一套精密的規則系統。人類發明過的任何教學法，都無法完整解釋這是怎麼做到的。",
+        "ja": "驚きはここです——子どもは五歳ごろまでに、授業もなく、身につく訂正もなく、この文法を習得する。しかも耳にする言葉は乱れ、途中で切れ、誤りだらけです。そんな混沌の中から、どの健康な子も同じ精緻な規則体系を確実に築き上げる。人類が考え出したどんな教授法も、その仕組みを十分には説明できません。"
+      },
+      "thread": {
+        "en": "If thousands of children build the same hidden rules with no teacher, maybe the blueprint was there before the first lesson. Who first dared to say that out loud?",
+        "zh": "如果成千上萬的孩子在沒有老師的情況下，都建起同一套隱藏規則，也許那張藍圖在第一堂課之前就在了。是誰，第一個敢把這句話說出口？",
+        "ja": "何千人もの子どもが、教師もなしに同じ隠れた規則を築くのなら、その設計図は最初の授業より前からそこにあったのかもしれない。それを最初に声に出して言ったのは、誰だったのでしょう？"
+      }
+    },
+    {
+      "ref": "noam_chomsky_person",
+      "hook": {
+        "en": "Thousands of languages on Earth sound nothing alike. Could they secretly all be running the same program?",
+        "zh": "地球上有數千種語言，聽起來毫不相像。它們有沒有可能，私底下全都在跑同一支程式？",
+        "ja": "地球上の何千もの言語は、互いにまるで似ていません。それらが裏では、同じ一つのプログラムを動かしているとしたら？"
+      },
+      "reveal": {
+        "en": "This was Noam Chomsky's bold claim. He argued that beneath their wildly different sounds, all human languages share a deep common design — a universal grammar — and that we are born with the scaffolding for it already in place. A child does not learn language from scratch; the child fills in the local details on a frame the brain came with. That is why grammar arrives so fast, on so little.",
+        "zh": "這正是諾姆·杭士基的大膽主張。他認為，在那些千差萬別的聲音底下，所有人類語言共享一個深層的共同設計——一套普世文法——而我們生下來時，這套架構就已經就位。孩子不是從零學語言；孩子是在大腦自帶的框架上，把在地的細節填進去。這正是為什麼文法來得那麼快、靠的線索那麼少。",
+        "ja": "これがノーム・チョムスキーの大胆な主張でした。彼は、まるで異なる音の奥で、すべての人類言語が深い共通の設計——普遍文法——を分かち合い、私たちは生まれつきその足場をすでに備えている、と論じました。子どもは言語を一から学ぶのではない。脳に最初から備わった枠組みに、その土地ごとの細部を埋めていくのです。だからこそ文法は、わずかな手がかりから、これほど速く現れる。"
+      },
+      "example": {
+        "en": "Listen to Turkish, Swahili, and Korean side by side: different sounds, different word orders, yet each has nouns and verbs, ways to ask, to negate, to nest a clause inside a clause. The surface costumes change; the deep skeleton keeps showing through.",
+        "zh": "把土耳其語、史瓦希里語、韓語並排聽：聲音不同、語序不同，但每一種都有名詞和動詞，都有提問、否定、把子句巢套進子句的辦法。表面的戲服在換，深處的骨架卻一再透出來。",
+        "ja": "トルコ語、スワヒリ語、韓国語を並べて聞いてみてください。音も語順も違うのに、どれにも名詞と動詞があり、問い、否定し、節を節に入れ子にする手立てがある。表面の衣装は変わっても、奥の骨格は何度でも透けて見えるのです。"
+      },
+      "surprise": {
+        "en": "The startling part: if Chomsky is right, the capacity for grammar is wired into the human brain itself, like the instinct to walk upright — something our species grew, not something any culture invented. A newborn in any country could learn any of the world's languages with equal ease, because the same blueprint is waiting inside every human skull.",
+        "zh": "令人吃驚的是：如果杭士基是對的，那麼文法的能力是內建在人腦本身的，就像直立行走的本能——是我們這個物種長出來的，而不是任何文化發明的。任何國家出生的嬰兒，都能同樣輕鬆地學會世上任何一種語言，因為同一張藍圖，正等在每一顆人類顱骨裡。",
+        "ja": "驚かされるのはここです——もしチョムスキーが正しければ、文法の能力は、二足歩行の本能のように、人間の脳そのものに組み込まれている。どの文化が発明したものでもなく、私たちという種が育てたものなのです。どの国に生まれた赤ん坊も、世界のどの言語も等しくたやすく学べる。同じ設計図が、あらゆる人間の頭蓋の中で待っているからです。"
+      },
+      "thread": {
+        "en": "Grammar can build a perfect sentence that means absolutely nothing. So where does meaning come from — and is it a different puzzle entirely?",
+        "zh": "文法能造出一個完美卻毫無意義的句子。那麼「意義」是從哪裡來的——它是不是一個完全不同的謎？",
+        "ja": "文法は、完璧なのに何も意味しない文を組み立てられます。では「意味」はどこから来るのか——それはまったく別の謎なのでしょうか？"
+      }
+    },
+    {
+      "ref": "semantics_concept",
+      "hook": {
+        "en": "A sentence can be flawless in its grammar and still mean nothing at all. So what is meaning — how do bare sounds and marks ever come to be ABOUT things in the world?",
+        "zh": "一個句子可以文法完美無瑕，卻什麼也不表示。那麼「意義」是什麼——光禿禿的聲音與筆畫，怎麼會變成「關於」世界上某些東西？",
+        "ja": "文は文法上まったく非の打ちどころがなくても、何も意味しないことがあります。では意味とは何か——むき出しの音と記号が、どうやって世界の物事「について」のものになるのでしょう？"
+      },
+      "reveal": {
+        "en": "This is semantics: the study of meaning itself. Structure tells you how words fit together; meaning asks what they point at. And meaning turns out not to live neatly inside each word. The same sentence shifts with who says it, to whom, when, and why. Words are arrows — but where an arrow lands depends on the whole situation it is fired into.",
+        "zh": "這就是語意學：對「意義」本身的研究。結構告訴你詞怎麼拼在一起；意義則問它們指向什麼。而意義，原來並不乖乖待在每個詞裡面。同一個句子，會隨著誰說、對誰說、何時說、為何說而改變。詞是箭——但箭落在哪裡，取決於它被射進去的整個情境。",
+        "ja": "これが意味論——意味そのものの研究です。構造は語がどう組み合わさるかを教え、意味はそれが何を指すのかを問う。そして意味は、一つひとつの語の中にきちんと収まってはいませんでした。同じ文でも、誰が、誰に、いつ、なぜ言うかで揺れ動く。語は矢です——けれど矢がどこに落ちるかは、それが射込まれた状況全体しだいなのです。"
+      },
+      "example": {
+        "en": "Picture someone watching you trip over your own feet and saying, dryly, 'you're a real genius.' Every word means its dictionary self — yet the whole sentence means its exact opposite, and you understand that instantly.",
+        "zh": "想像有人看著你被自己的腳絆倒，淡淡地說：「你真是個天才。」每個字都是字典裡的意思——但整句話的意思，卻是它的正反面，而你瞬間就懂了。",
+        "ja": "自分の足につまずいたあなたを見て、誰かが冷ややかに「君は本物の天才だね」と言う場面を思い浮かべてください。どの語も辞書どおりの意味のまま——なのに文全体は正反対を意味し、あなたはそれを一瞬で理解する。"
+      },
+      "surprise": {
+        "en": "The twist: meaning does not sit inside words like jam in a jar — it lives between people. The same five words can be praise or insult depending on a shared glance, a tone, a history two speakers carry. To mean something, you are always quietly modeling another mind reading you back. Meaning is a two-person act wearing the costume of a one-word thing.",
+        "zh": "意外的是：意義不像果醬裝在罐子裡那樣待在詞裡面——它活在人與人之間。同樣五個字，可以是稱讚也可以是侮辱，全看一個交換的眼神、一種語氣、兩個說話者共有的一段過往。要表達意義，你總是在悄悄地揣摩「另一顆心智正怎麼讀回你」。意義是一場兩個人的演出，卻穿著「單一詞語」的戲服。",
+        "ja": "意外なのはここです——意味は、瓶の中のジャムのように語の内側に座ってはいない。人と人のあいだに生きています。同じ五つの語が、交わした視線、口調、二人が背負ってきた歴史しだいで、賛辞にも侮辱にもなる。何かを意味するとき、あなたはいつも「もう一つの心が自分をどう読み返しているか」をひそかに思い描いている。意味は、一語のものという衣装をまとった、二人がかりの行為なのです。"
+      },
+      "thread": {
+        "en": "If meaning lives between people, then words can't be the only things that carry it. What else is quietly speaking to you all day?",
+        "zh": "如果意義活在人與人之間，那承載意義的，就不可能只有詞。還有什麼，整天都在悄悄對你說話？",
+        "ja": "意味が人と人のあいだに生きているなら、それを運ぶのは語だけではないはず。ほかに何が、一日じゅうそっとあなたに語りかけているのでしょう？"
+      }
+    },
+    {
+      "ref": "semiotics_concept",
+      "hook": {
+        "en": "You stop at a red light, read a frown, recognize a logo in a flash. None of those are words. So is language just one corner of something far larger?",
+        "zh": "你看到紅燈就停下、讀懂一個皺眉、一瞬間認出一個商標。這些都不是詞。那麼，語言會不會只是某個大得多的東西的一角？",
+        "ja": "赤信号で止まり、しかめ面を読み取り、ロゴをひと目で見分ける。どれも言葉ではありません。では言語は、はるかに大きな何かの片隅にすぎないのでしょうか？"
+      },
+      "reveal": {
+        "en": "Yes — and that larger thing is semiotics, the study of signs. A sign is anything that stands for something else: a word, sure, but also a traffic light, a wedding ring, a school uniform, a skull on a bottle. Once you see it, signs are everywhere — clothes, gestures, logos, the color of a passport. Language is just the most powerful member of a vast family of things that mean.",
+        "zh": "會的——而那個更大的東西，就是符號學，對「符號」的研究。符號就是任何「代表別的東西」的東西：詞當然算，但紅綠燈、婚戒、學校制服、瓶子上的骷髏頭，也都算。你一旦看見它，符號便無所不在——衣著、手勢、商標、護照的顏色。語言，只是一個龐大「會表意」家族裡，最強而有力的那位成員。",
+        "ja": "そうです——その大きな何かが、記号論、すなわち記号の研究です。記号とは、何か別のものの代わりに立つもの。語はもちろん、信号、結婚指輪、学校の制服、瓶に描かれたどくろもそう。いったん気づくと、記号はどこにでもある——服装、身ぶり、ロゴ、パスポートの色。言語は、意味を持つものたちの広大な一族の中で、最も力強い一員にすぎないのです。"
+      },
+      "example": {
+        "en": "A red rose says 'love' to a sweetheart, 'socialism' on a party banner, 'England' on a rugby shirt. Same flower, three messages — none of them written into the petals. Everything around you is quietly captioned.",
+        "zh": "一朵紅玫瑰，對情人說的是「愛」，印在政黨旗幟上是「社會主義」，繡在橄欖球衫上是「英格蘭」。同一朵花，三種訊息——沒有一種是寫在花瓣裡的。你周圍的一切，都被悄悄加上了字幕。",
+        "ja": "一輪の赤いバラは、恋人には「愛」、党の旗の上では「社会主義」、ラグビーシャツの上では「イングランド」を語ります。同じ花、三つのメッセージ——どれも花びらに書き込まれてはいない。あなたの周りのすべてに、そっと字幕がついているのです。"
+      },
+      "surprise": {
+        "en": "Here is the deep twist: the link between a sign and what it means is almost always arbitrary. Nothing about the sound 'dog' is dog-like — French says 'chien,' Japanese 'inu,' and each works perfectly. Whole cultures rest on millions of people silently agreeing to pretend a sound means a thing. Language is the largest game of make-believe our species ever played, and we forget we are playing it.",
+        "zh": "深層的意外在這裡：符號與它所表示之物之間的連結，幾乎總是任意的。「dog」這個聲音，沒有任何一處像狗——法文說「chien」，日文說「inu」，每一個都運作得好好的。整個文化，建立在數以百萬計的人默默同意「假裝某個聲音代表某個東西」之上。語言，是我們這個物種玩過最大的一場「假裝遊戲」，而我們已經忘了自己正在玩。",
+        "ja": "深い意外はここにあります——記号と、それが意味するものとのつながりは、ほとんどつねに恣意的です。「dog」という音に、犬らしいところは一つもない。フランス語は「chien」、日本語は「inu」、どれも完璧に通じる。文化まるごとが、何百万もの人が「ある音がある物を意味するふりをする」ことに黙って同意することの上に立っている。言語は、私たちの種が演じてきた最大のごっこ遊びであり、私たちはそれを演じていることを忘れているのです。"
+      },
+      "thread": {
+        "en": "If every language is its own arbitrary game, what happens when you try to carry a meaning from one game into another?",
+        "zh": "如果每一種語言都是它自己那場任意的遊戲，那當你想把一個意義，從一場遊戲搬進另一場時，會發生什麼事？",
+        "ja": "どの言語も、それぞれ恣意的なゲームだとしたら——ある意味を、一つのゲームから別のゲームへ運ぼうとすると、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "translation_studies_concept",
+      "hook": {
+        "en": "Surely translation is just swapping each word for its match in another language. Why does that turn out to be nearly impossible to do well?",
+        "zh": "翻譯，照理說不就是把每個詞換成另一種語言裡對應的詞嗎？為什麼要做得好，竟然幾乎不可能？",
+        "ja": "翻訳とは、各語を別の言語の対応する語に置き換えるだけのはず。なのに、なぜそれをうまくやるのは、ほとんど不可能なのでしょう？"
+      },
+      "reveal": {
+        "en": "Because no two languages map onto each other cleanly. Each carves the world along its own joints, so some ideas simply have no twin on the other side — they must be rebuilt, not swapped. Translation studies is the craft of carrying meaning across that gap: deciding what to keep, what to let go, what to quietly reinvent so a sentence lands the same way in a different mind.",
+        "zh": "因為沒有任何兩種語言能乾乾淨淨地對映彼此。每一種都沿著自己的關節去切分世界，於是有些想法，在另一邊根本沒有雙胞胎——它們必須被「重建」，而不是被「替換」。翻譯研究，就是把意義跨過那道縫隙搬運過去的工夫：決定什麼要留、什麼要放、什麼要悄悄重新發明，好讓一句話在另一顆心智裡，落下同樣的分量。",
+        "ja": "どの二つの言語も、きれいには重なり合わないからです。それぞれが世界を自分の関節に沿って切り分けるので、ある考えには向こう側に双子がいない——置き換えるのではなく、組み直すしかない。翻訳研究とは、その隙間を越えて意味を運ぶ技です。何を残し、何を手放し、何をそっと作り直せば、その文が別の心の中で同じように着地するか——それを見定めるのです。"
+      },
+      "example": {
+        "en": "The Japanese 'mottainai' folds together waste, regret, and a kind of reverence for things — no single English word holds all three at once, so a translator has to choose which thread to keep and which to gently drop.",
+        "zh": "日文的「もったいない」把浪費、惋惜，與一種對物的敬意揉在一起——英文沒有任何單一詞能同時裝下這三者，於是譯者只好選擇：保住哪一條線、輕輕放掉哪一條。",
+        "ja": "日本語の「もったいない」は、無駄、惜しむ気持ち、そして物への一種の敬意を一つに織り合わせています——英語の単語一つでこの三つを同時に抱えられるものはなく、訳者はどの糸を残し、どの糸をそっと手放すかを選ばねばなりません。"
+      },
+      "surprise": {
+        "en": "The twist: because a perfect mapping never exists, every translation is a quiet act of interpretation. The translator must understand, then decide, then partly rewrite — which makes them an invisible co-author of every foreign book you have ever loved. The words you fell for were chosen by someone whose name you may never have read.",
+        "zh": "意外的是：正因為完美的對映從不存在，每一次翻譯，都是一次安靜的詮釋。譯者必須先理解、再決定、再部分重寫——這使他們成為你曾經愛過的每一本外國書的、隱形的共同作者。那些讓你傾心的句子，是某個你也許從沒讀過名字的人，替你挑選的。",
+        "ja": "意外なのはここです——完璧な対応がけっして存在しないからこそ、どの翻訳も、静かな解釈の行為です。訳者はまず理解し、判断し、一部を書き直す——だから訳者は、あなたが愛してきたあらゆる外国の本の、目に見えない共著者なのです。あなたが心を奪われた言葉は、名前すら読んだことのない誰かが、あなたのために選んだものでした。"
+      },
+      "thread": {
+        "en": "Humans have wrestled with all of this for millennia. Now we have handed the job to machines — and they do it without understanding a single word. How?",
+        "zh": "這一切，人類已經角力了數千年。如今我們把這份工作交給了機器——而它們做這件事時，連一個字都不理解。怎麼辦到的？",
+        "ja": "人間はこのすべてと、数千年も格闘してきました。いま私たちはその仕事を機械に手渡した——しかも機械は、一語も理解せずにそれをやってのける。どうやって？"
+      }
+    },
+    {
+      "ref": "natural_language_processing_concept",
+      "hook": {
+        "en": "A machine can now write an essay, translate a poem, hold a conversation. But no one sat down and taught it grammar rules. So how does it speak at all?",
+        "zh": "機器如今能寫一篇文章、翻譯一首詩、跟你對話。但沒有人坐下來教它文法規則。那它到底是怎麼會說話的？",
+        "ja": "機械はいま、文章を書き、詩を訳し、会話を交わせます。でも、誰かが座って文法規則を教えたわけではない。では、そもそもどうやって話しているのでしょう？"
+      },
+      "reveal": {
+        "en": "This is natural language processing. Instead of being taught rules, the machine reads oceans of human text and learns, statistically, which words tend to follow which — what usually comes next. From nothing but those patterns it reconstructs grammar, style, even a convincing voice. It never learned the rules Chomsky chased; it absorbed the shape they leave behind in billions of real sentences.",
+        "zh": "這就是自然語言處理。機器不是被教規則，而是讀進海量的人類文本，從統計上學會「哪些詞傾向接在哪些詞後面」——接下來通常是什麼。光憑這些規律，它就重建出了文法、文風，甚至一種令人信服的語氣。它從沒學過杭士基苦苦追尋的那些規則；它吸收的，是那些規則在數十億真實句子裡留下的形狀。",
+        "ja": "これが自然言語処理です。機械は規則を教わるのではなく、人間の書いた膨大な文章を読み、どの語の後にどの語が来やすいか——次に何が来るのが普通か——を統計的に学びます。そのパターンだけから、文法も文体も、説得力ある語り口さえ組み立て直す。チョムスキーが追い求めた規則を学んだことはない。何十億もの実際の文が残した、その規則の「形」を吸い込んだのです。"
+      },
+      "example": {
+        "en": "When your phone finishes your sentence, or a chatbot answers fluently, you are watching this at work: a system that has read more text than any human could in a thousand lifetimes, guessing the next word so well it feels like thought.",
+        "zh": "當你的手機替你把句子補完，或一個聊天機器人流暢地回答你，你看到的正是這件事在運作：一套讀過的文本，比任何人一千輩子都多的系統，把「下一個詞」猜得好到讓人覺得，那簡直就是在思考。",
+        "ja": "スマホがあなたの文を補い、チャットボットが流暢に答えるとき、あなたが見ているのはまさにこれです——どんな人間が千回生きても読みきれないほどの文章を読み、次の語をあまりに巧みに当てるので、まるで考えているように感じられる仕組みを。"
+      },
+      "surprise": {
+        "en": "Here is the final twist. These models write and translate beautifully while having no idea what the words MEAN — they mastered the form Chomsky studied without any of the understanding a human brings. So the oldest question only sharpens: if fluency can run on pure pattern, with the meaning hollowed out, then what exactly is the extra thing we do when we understand? Language hands you back your own mind as a mystery, larger than when you started.",
+        "zh": "最後一個意外在這裡。這些模型寫得、譯得漂亮極了，卻完全不知道那些字「是什麼意思」——它們掌握了杭士基所研究的「形式」，卻沒有人類所帶來的那一份「理解」。於是那個最古老的問題反而更尖銳了：如果光靠純粹的模式，把意義整個掏空，流暢依然能運轉——那麼當我們「理解」時，我們多做的那件事，到底是什麼？語言把你自己的心智還給你，成了一個謎，比你出發時還要大。",
+        "ja": "最後の意外はここです。これらのモデルは、語が何を意味するのかをまったく知らないまま、見事に書き、訳す——チョムスキーが研究した「形式」を、人間が持ち込む理解なしに使いこなしている。だから最も古い問いは、かえって鋭くなる。意味をすっかりくり抜いても、純粋なパターンだけで流暢さが成り立つなら——私たちが「理解する」とき、よけいにやっているそのことは、いったい何なのか。言語は、あなた自身の心を、出発したときより大きな謎にして、あなたへ返してくるのです。"
+      },
+      "thread": {
+        "en": "You have walked from your first words to the edge of an open question — and the map only gets richer from here. Wander wherever a star pulls you.",
+        "zh": "你已經從你最初的幾個字，走到了一個開放問題的邊緣——而這張地圖，從這裡開始只會越來越豐富。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは最初のひと言から、開かれた問いのふちまで歩いてきました——地図はここから、ますます豊かになるばかりです。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "language_and_thought_concept", "target": "syntax_concept", "relation_type": "conceptual" },
+    { "source": "syntax_concept", "target": "noam_chomsky_person", "relation_type": "logical" },
+    { "source": "noam_chomsky_person", "target": "semantics_concept", "relation_type": "conceptual" },
+    { "source": "semantics_concept", "target": "semiotics_concept", "relation_type": "conceptual" },
+    { "source": "semiotics_concept", "target": "translation_studies_concept", "relation_type": "applied" },
+    { "source": "translation_studies_concept", "target": "natural_language_processing_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up the Sapir-Whorf debate over whether language shapes thought, watch how young children quietly crack grammar with no one teaching them, or dig into what large language models are really doing when they 'speak' — and the puzzle of your own first words turns into living science.",
+    "zh": "想再往下走一點？去查查「薩丕爾－沃爾夫假說」關於語言是否塑造思考的辯論、看看幼兒如何在沒人教的情況下悄悄破解文法，或鑽進大型語言模型「說話」時究竟在做什麼——你自己最初那幾個字的謎，就會變成一門活生生的科學。",
+    "ja": "もっと先へ進みたいですか？言語が思考を形づくるかをめぐる「サピア＝ウォーフ仮説」の論争を調べ、幼い子が誰にも教わらず文法をそっと解き明かす様子を見て、大規模言語モデルが「話す」とき本当は何をしているのかを掘り下げてみてください——あなた自身の最初のひと言の謎が、生きた科学に変わります。"
+  }
+}

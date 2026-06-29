@@ -1,0 +1,192 @@
+{
+  "id": "music",
+  "accent": "ART",
+  "title": { "en": "Music", "zh": "音樂", "ja": "音楽" },
+  "intro": {
+    "en": "Why can a pattern of air pressure give you chills, or bring you to tears? In six steps, follow music down to where it really lives — the exact place physics, mathematics, and the brain all meet.",
+    "zh": "為什麼一段氣壓的起伏，能讓你起雞皮疙瘩、甚至落淚？跟著六步，順著音樂往下走，走到它真正棲身的地方——物理、數學與大腦正好交會的那一點。",
+    "ja": "なぜ空気の圧力のパターンが、あなたを震わせ、涙を誘うのでしょう？6 つのステップで、音楽が本当に宿る場所——物理と数学と脳がちょうど出会うその一点——へと下りていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "acoustics_concept",
+      "hook": {
+        "en": "Sing a steady note and something in the air is moving. But what, exactly — and why does one note sound 'higher' than another?",
+        "zh": "你唱出一個穩定的音，空氣裡有東西正在動。但動的到底是什麼——又為什麼有的音聽起來比較「高」？",
+        "ja": "まっすぐな音を一つ歌うと、空気の中で何かが動いています。でも、動いているのはいったい何で——なぜある音は別の音より「高く」聞こえるのでしょう？"
+      },
+      "reveal": {
+        "en": "A musical note is just air vibrating at a steady rate. Push the air faster and you hear a higher pitch; push it slower, a lower one. Make the wave bigger and it sounds louder; smaller, softer. That's all a note is underneath: how fast (pitch) and how big (loudness) the air is trembling against your eardrum.",
+        "zh": "一個樂音，其實就是空氣以固定的頻率在振動。讓空氣振得快，你聽到較高的音；振得慢，就是較低的音。讓波動變大，聲音就變響；變小，就變輕。一個音，骨子裡就只是這樣：空氣拍打你耳膜時，振得多快（音高）、振得多大（音量）。",
+        "ja": "楽音とは、空気が一定の速さで振動しているだけのものです。空気を速く震わせれば高い音が、ゆっくり震わせれば低い音が聞こえる。波を大きくすれば音は大きく、小さくすれば静かになる。音の正体はそれだけ——鼓膜を叩く空気が、どれだけ速く（音の高さ）、どれだけ大きく（音の大きさ）震えているか、なのです。"
+      },
+      "example": {
+        "en": "Pluck a guitar string and watch it blur: a thick, slack string trembles slowly for a low note, a thin, tight one races for a high note — the very same physics your vocal cords use when you hum.",
+        "zh": "撥一下吉他弦，看它糊成一片：粗而鬆的弦振得慢，發出低音；細而緊的弦振得飛快，發出高音——這跟你哼歌時聲帶用的，是同一套物理。",
+        "ja": "ギターの弦をはじいて、ぼやけて見えるのを眺めてください。太くてゆるい弦はゆっくり震えて低い音を、細くて張った弦は猛烈に震えて高い音を出す——あなたが鼻歌を歌うとき声帯が使うのと、まったく同じ物理です。"
+      },
+      "surprise": {
+        "en": "Here's the hidden part: a single flute note is never truly single. Stacked faintly above it sits a whole tower of higher tones — the harmonics — ringing at two, three, four times the base rate. You hear 'one note,' but your ear is secretly being handed a quiet chord. That tower is exactly why a flute and a violin playing the same note still sound nothing alike.",
+        "zh": "藏起來的部分是這樣：一個長笛的音，從來不是真的「單一」一個音。在它之上，淡淡地疊著一整座更高音的塔——泛音——以兩倍、三倍、四倍的頻率一起響著。你聽到「一個音」，但你的耳朵其實悄悄收下了一個安靜的和弦。正是這座塔，讓長笛和小提琴吹奏同一個音時，聽起來還是完全不一樣。",
+        "ja": "隠れた部分はこうです——一本のフルートの音は、決して本当に「一つ」ではありません。その上には、より高い音の塔がまるごと、かすかに積み重なっている——倍音です。基準の二倍、三倍、四倍の速さで一緒に鳴っている。あなたは「一つの音」を聞いていますが、耳はこっそり静かな和音を受け取っているのです。この塔こそ、フルートとバイオリンが同じ音を出してもまるで違って聞こえる理由です。"
+      },
+      "thread": {
+        "en": "If every note hides a tower of others, then putting two notes together must stir up something. When does that something sound beautiful — and when does it grate?",
+        "zh": "如果每個音都藏著一整座別的音，那把兩個音放在一起，一定會攪動出什麼。什麼時候那「什麼」聽起來很美——什麼時候又刺耳？",
+        "ja": "どの音も別の音の塔を隠しているなら、二つの音を重ねれば必ず何かがざわめくはずです。その何かが美しく響くのはいつで——耳障りになるのはいつでしょう？"
+      }
+    },
+    {
+      "ref": "harmony_concept",
+      "hook": {
+        "en": "Some pairs of notes melt together and feel 'right.' Others clash and set your teeth on edge. What decides which is which?",
+        "zh": "有些音搭在一起會融合，感覺「對」；有些卻互相打架，讓你渾身不對勁。是什麼在決定哪個是哪個？",
+        "ja": "ある音の組み合わせは溶け合って「しっくり」くる。別の組み合わせはぶつかり合って、ぞわっとさせる。その違いを決めているのは何でしょう？"
+      },
+      "reveal": {
+        "en": "Numbers decide it. Two notes sound good together — consonant — when their vibration rates form a simple whole-number ratio. Double the rate and you get the octave (2:1), the most blended sound of all. Three-to-two gives the fifth, the warm, open sound under a thousand folk songs. The simpler the ratio, the smoother the blend; messy ratios are what your ear hears as tension and clash.",
+        "zh": "是數字在決定。兩個音搭在一起好聽——也就是「協和」——是因為它們的振動頻率成一個簡單的整數比。把頻率變成兩倍，你得到八度（2:1），最融合的聲音。三比二，得到五度，那種溫暖、開闊、墊在上千首民謠底下的聲音。比例越簡單，融合得越順；亂七八糟的比例，正是你耳朵聽成「緊張、衝突」的東西。",
+        "ja": "決めているのは数です。二つの音が一緒に良く響く——協和する——のは、その振動の速さが単純な整数比をなすときです。速さを二倍にすれば、もっとも溶け合う音、オクターブ（2:1）になる。三対二なら五度——何千もの民謡の土台にある、温かく開けた響きです。比が単純なほど混ざりは滑らかになり、入り組んだ比こそ、耳が「緊張」や「衝突」と聞くものなのです。"
+      },
+      "example": {
+        "en": "Press a key on a piano, then the key eight white notes up. They sound almost like the same note in two sizes — that 'sameness' is the 2:1 octave, your ear catching a clean ratio in the air.",
+        "zh": "在鋼琴上按一個鍵，再按往上數第八個白鍵。它們聽起來幾乎像同一個音的大小兩號——那份「相同感」，就是 2:1 的八度，是你的耳朵在空氣裡抓到了一個乾淨的比例。",
+        "ja": "ピアノの鍵盤を一つ押し、そこから白鍵で八つ上の鍵を押してみてください。まるで同じ音の大小二サイズのように聞こえる——その「同じさ」が 2:1 のオクターブ、耳が空気の中のきれいな比をつかまえた瞬間です。"
+      },
+      "surprise": {
+        "en": "The startling part: this means beauty here is arithmetic. The most pleasing combinations of sound are literally the simplest fractions. Legend says Pythagoras heard those whole-number ratios ringing in the clang of a blacksmith's hammers some 2,500 years ago — and realized the same numbers that rule a triangle also rule a chord. Harmony was the first hint that the world might be written in math.",
+        "zh": "令人吃驚的是：這意味著「美」在這裡是算術。最悅耳的聲音組合，字面上就是最簡單的分數。傳說畢達哥拉斯在約兩千五百年前，從鐵匠鎚子的鏗鏘聲裡聽見了這些整數比——並領悟到，支配三角形的那些數，同樣支配著一個和弦。和聲，是「世界或許是用數學寫成的」最早的一絲線索。",
+        "ja": "驚くべきはここです——つまり、ここでの美は算術なのです。もっとも心地よい音の組み合わせは、文字どおりもっとも単純な分数。伝説では、ピタゴラスは約二千五百年前、鍛冶屋の鎚の響きの中にこの整数比を聞き取り——三角形を支配する数が、和音をも支配すると悟ったといいます。和声は、世界が数学で書かれているかもしれないという、最初の手がかりだったのです。"
+      },
+      "thread": {
+        "en": "If notes are ratios, then a whole scale is a set of fractions chosen on purpose. But which fractions — and can you ever fit them all onto one keyboard?",
+        "zh": "如果音是比例，那一整個音階，就是一組刻意挑出來的分數。但要挑哪些分數——又有沒有辦法，把它們全部塞進同一台鍵盤裡？",
+        "ja": "音が比なら、一つの音階まるごとが、わざと選ばれた分数の集まりということになります。でも、どの分数を——そしてそれらを全部、一つの鍵盤に収めることはできるのでしょうか？"
+      }
+    },
+    {
+      "ref": "mathematical_music_concept",
+      "hook": {
+        "en": "Scales, rhythms, tunings — they all feel like art. But underneath, are they really just number systems in disguise?",
+        "zh": "音階、節奏、調音——它們聽起來都像藝術。但在底層，它們其實只是換了裝的數字系統嗎？",
+        "ja": "音階、リズム、調律——どれも芸術に感じられます。でもその底では、それらは姿を変えた数の体系にすぎないのでしょうか？"
+      },
+      "reveal": {
+        "en": "Underneath, they are. A scale is a chosen sequence of ratios. A rhythm is a way of dividing time into counted parts. A tuning is an attempt to make all those ratios live together on fixed keys. Build a keyboard and you are really solving an equation: line up the octave, the fifth, and all the notes in between so they agree. The trouble is, the equation has no perfect answer.",
+        "zh": "在底層，它們確實是。一個音階，是一串被挑選出來的比例。一段節奏，是把時間切成可數的份。一套調音，是試圖讓所有那些比例，在固定的琴鍵上共存。造一台鍵盤，其實就是在解一道方程式：把八度、五度、以及中間所有的音排好，讓它們彼此相合。麻煩在於，這道方程式沒有完美的解。",
+        "ja": "底では、確かにそうです。音階とは選ばれた比の並び。リズムとは時間を数えられる単位に分けること。調律とは、それらの比すべてを固定された鍵の上で共存させようとする試み。鍵盤を作るとは、実は一つの方程式を解くことです——オクターブと五度、そしてその間のすべての音を、たがいに合うように並べる。困ったことに、この方程式に完璧な解はないのです。"
+      },
+      "example": {
+        "en": "Stack twelve perfect fifths and you should land back on the note you started from, seven octaves up. You don't — you overshoot by a tiny, stubborn gap. The math simply refuses to close.",
+        "zh": "把十二個純五度一個接一個疊上去，照理你應該回到出發的那個音，剛好高了七個八度。但你不會——你會超出一點點，一個微小卻頑固的縫隙。這道數學，就是不肯閉合。",
+        "ja": "純正な五度を十二個積み重ねれば、本来は出発した音に、七オクターブ上でぴたりと戻るはずです。ところが戻らない——ほんのわずか、しつこい隙間だけ行き過ぎてしまう。数学が、どうしても閉じてくれないのです。"
+      },
+      "surprise": {
+        "en": "So here is a fact that sounds impossible: you cannot tune a piano perfectly. Because the numbers refuse to line up, every piano you have ever heard is a clever compromise called equal temperament — the tiny error spread out evenly, a hair of wrongness hidden in every key so that none sounds badly out of tune. Every piano in the world is, very precisely, slightly wrong.",
+        "zh": "於是有了一個聽起來不可能的事實：你沒辦法把一台鋼琴調到完美。因為那些數字拒絕對齊，你這輩子聽過的每一台鋼琴，都是一種聰明的妥協，叫做「平均律」——把那個微小的誤差均勻地攤開，在每個鍵裡藏進一絲絲的「不準」，好讓沒有任何一個音聽起來嚴重走音。世界上每一台鋼琴，都精確地、輕微地，錯著。",
+        "ja": "そこで、不可能に聞こえる事実が現れます——ピアノを完璧に調律することはできません。数が並ぶのを拒むため、あなたが聞いてきたすべてのピアノは「平均律」という巧妙な妥協です——あの小さな誤差を均等にばらまき、どの鍵にもほんのわずかな「ずれ」を隠すことで、どの音もひどく外れて聞こえないようにしている。世界中のどのピアノも、きわめて正確に、わずかに間違っているのです。"
+      },
+      "thread": {
+        "en": "Once the keys are tamed by an equation, you can build with them. And one composer built with strictness so deep it reads almost like mathematics. Who?",
+        "zh": "一旦琴鍵被一道方程式馴服了，你就能用它們來蓋東西。而有一位作曲家，用一種深到幾乎像數學的嚴謹來蓋——是誰？",
+        "ja": "鍵が方程式によって飼いならされると、それらで何かを築けます。そして、ほとんど数学のように読める深い厳格さで築いた作曲家がいました——誰でしょう？"
+      }
+    },
+    {
+      "ref": "johann_sebastian_bach_person",
+      "hook": {
+        "en": "Can you build something that moves people to tears entirely out of strict rules — voices forced to chase one another by near-mathematical law?",
+        "zh": "你能不能完全用嚴格的規則，蓋出讓人感動落淚的東西——讓一條條旋律，依著近乎數學的法則彼此追逐？",
+        "ja": "厳格な規則だけで、人を涙させるものを築けるでしょうか——声部が、ほとんど数学の法則に従ってたがいを追いかけるような？"
+      },
+      "reveal": {
+        "en": "Johann Sebastian Bach did exactly that. He worked in counterpoint: several independent melodies woven at once, each obeying strict laws about which notes may sound together. It feels less like writing a tune and more like solving a moving puzzle in four voices, all at the same time. From those rigid rules he built vast, glowing cathedrals of sound — order so dense it becomes overwhelming beauty.",
+        "zh": "巴赫做的正是這件事。他用對位法工作：好幾條獨立的旋律同時交織，每一條都服從嚴格的法則，規定哪些音可以同時響。那感覺不太像在寫一段曲調，更像在同一時間，解一道四個聲部一起移動的活的謎題。從那些剛硬的規則裡，他蓋出了巨大、發光的聲音大教堂——密到極致的秩序，化成了壓倒性的美。",
+        "ja": "ヨハン・ゼバスティアン・バッハは、まさにそれをやってのけました。彼は対位法で仕事をした——複数の独立した旋律を同時に織り合わせ、どの音を一緒に鳴らせるかについて、それぞれが厳格な法則に従う。曲を書くというより、四つの声部が同時に動く生きたパズルを解くようなものです。その硬い規則から、彼は巨大で輝く音の大聖堂を築き上げた——極限まで密な秩序が、圧倒的な美に変わったのです。"
+      },
+      "example": {
+        "en": "In a Bach fugue, one short tune is announced, then a second voice enters singing the very same tune while the first keeps going — like a round such as 'Row, Row, Row Your Boat,' but layered three or four deep and never colliding.",
+        "zh": "在巴赫的賦格裡，一段短短的曲調先被宣告出來，接著第二個聲部進來，唱著一模一樣的曲調，而第一個聲部還在繼續——就像《划船歌》那種輪唱，但疊到三、四層深，而且永遠不相撞。",
+        "ja": "バッハのフーガでは、短い旋律がまず提示され、次に第二の声部がまったく同じ旋律を歌いながら入ってくる——その間も第一声部は続いている。「かえるの合唱」のような輪唱を、三層も四層も重ね、それでいて決してぶつからないようなものです。"
+      },
+      "surprise": {
+        "en": "The astonishing part: some of his pieces still work when you play them backwards, or flip them upside-down so every rising step becomes a falling one. He hid symmetries inside the music — the kind a mathematician would recognize on sight — and yet a listener who knows none of this still feels the rightness of it. The structure is invisible, and you feel it anyway.",
+        "zh": "驚人的地方是：他有些曲子，你把它倒著彈、或上下翻轉過來——讓每個上行的音變成下行——依然成立。他在音樂裡藏進了對稱——那種數學家一眼就認得的對稱——然而一個對這些一無所知的聽眾，照樣感覺得到它的「對」。那結構是看不見的，你卻照樣感覺到了。",
+        "ja": "驚くべきはここです——彼の作品のいくつかは、逆向きに弾いても、あるいは上下を反転させて上がる音をすべて下がる音にしても、なお成り立つのです。彼は音楽の中に対称性を隠した——数学者がひと目で見抜くような対称性を——それでいて、何も知らない聞き手もその「正しさ」を感じ取る。構造は目に見えないのに、それでもあなたは感じてしまうのです。"
+      },
+      "thread": {
+        "en": "But how can you feel a hidden symmetry you can't even see? The answer isn't in the music — it's inside your own head.",
+        "zh": "但你怎麼可能「感覺到」一個你根本看不見的隱藏對稱？答案不在音樂裡——而在你自己的腦袋裡。",
+        "ja": "でも、目にすら見えない隠れた対称性を、どうして感じ取れるのでしょう？その答えは音楽の中にはありません——あなた自身の頭の中にあるのです。"
+      }
+    },
+    {
+      "ref": "music_cognition_concept",
+      "hook": {
+        "en": "When a song reaches the moment you've been waiting for, you feel it land before the note even sounds. How does your brain already know what's coming?",
+        "zh": "當一首歌走到你一直在等的那個瞬間，那個音還沒響，你就已經感覺到它「落下來」了。你的大腦，怎麼會早就知道接下來是什麼？",
+        "ja": "曲があなたの待っていた瞬間に達するとき、その音が鳴る前から、あなたはそれが「降りてくる」のを感じます。あなたの脳は、次に何が来るかをどうしてもう知っているのでしょう？"
+      },
+      "reveal": {
+        "en": "Because your brain doesn't just hear music — it predicts it. With every passing note it is quietly guessing the next one, building expectations from every song you've ever heard. When the music gives you what you expected, you feel resolved and calm. When it holds the note back, or bends somewhere you didn't foresee, you feel tension — a pleasurable ache of waiting. Listening is an act of constant, unconscious forecasting.",
+        "zh": "因為你的大腦不只是在聽音樂——它在預測音樂。每經過一個音，它都悄悄在猜下一個是什麼，從你這輩子聽過的每一首歌裡，建起一套期待。當音樂給了你所預期的，你感覺塵埃落定、平靜。當它把那個音拖住、或轉到你沒料到的地方，你就感覺到緊張——一種等待的、甜美的痠。聽，是一場不停歇、無意識的預報。",
+        "ja": "あなたの脳は、ただ音楽を聞いているのではなく——予測しているからです。一音過ぎるごとに、次の音をひそかに当てようとし、これまで聞いたすべての曲から期待を組み立てている。音楽が期待どおりを返せば、解決して落ち着きを感じる。その音を引き延ばしたり、思いがけない方へ曲げたりすれば、緊張を感じる——待つことの、甘い疼きです。聞くとは、絶え間ない無意識の予報なのです。"
+      },
+      "example": {
+        "en": "Think of a song that pauses one beat too long right before the chorus drops. That held breath, that lean-forward feeling — that is your prediction stretched taut, waiting to be paid off.",
+        "zh": "想想某首歌，在副歌落下之前，故意多停了一拍。那一口屏住的氣、那種身體微微前傾的感覺——那就是你的預測被拉到緊繃，等著被兌現。",
+        "ja": "サビが落ちる直前に、わざと一拍長く止まる曲を思い浮かべてください。あの息を詰める感じ、前のめりになる感覚——それはあなたの予測がぴんと張りつめ、報われるのを待っている姿です。"
+      },
+      "surprise": {
+        "en": "Here's what that chill down your spine really is: your prediction being broken, and then resolved. The music sets up an expectation, denies it just long enough to matter, then delivers — and the shiver is your brain being handed a surprise it can still make sense of. Too predictable and you're bored; too random and you're lost. The thrill lives in the narrow band between, where you're surprised but not defeated.",
+        "zh": "你脊椎竄上的那股顫慄，其實是這個：你的預測被打破，然後又被化解。音樂先架起一個期待，再恰到好處地拖延否定它，然後兌現——而那陣顫抖，是你的大腦收到一個它仍能想通的驚奇。太好猜，你會無聊；太隨機，你會迷路。快感住在中間那條窄窄的帶裡：你被嚇了一跳，但沒被打敗。",
+        "ja": "背筋を駆け上がるあの戦慄の正体はこれです——あなたの予測が破られ、そして解決されること。音楽は期待を立て、ちょうど効くだけ否定し、それから応える——その震えは、脳がまだ理解できる驚きを手渡された証です。予測しやすすぎれば退屈し、でたらめすぎれば迷う。快感は、その間の細い帯——驚かされても打ち負かされない場所——に住んでいるのです。"
+      },
+      "thread": {
+        "en": "So music hijacks the brain's prediction machine. But why should being right, or pleasantly wrong, feel so deeply good — good enough to matter?",
+        "zh": "所以音樂劫持了大腦的預測機器。但「猜對」、或「美妙地猜錯」，為什麼會讓人感覺如此深刻地好——好到足以重要起來？",
+        "ja": "音楽は脳の予測装置を乗っ取るわけです。でも、当たること、あるいは心地よく外れることが、なぜこれほど深く気持ちよく——重要と感じるほどに——なるのでしょう？"
+      }
+    },
+    {
+      "ref": "neuroaesthetics_concept",
+      "hook": {
+        "en": "A meal, a hug, a windfall of money — your brain has a reward system for the things you need to survive. Why does a sequence of sounds, which feeds and protects you nothing, set off the very same fireworks?",
+        "zh": "一頓飯、一個擁抱、一筆意外之財——你的大腦有一套獎賞系統，獎勵那些攸關生存的事。那為什麼一串聲音，既不能餵飽你、也不能保護你，卻能點燃一模一樣的煙火？",
+        "ja": "食事、抱擁、思いがけない大金——あなたの脳には、生き延びるために必要なものへの報酬系があります。では、あなたを養いも守りもしない音の連なりが、なぜまったく同じ花火を打ち上げるのでしょう？"
+      },
+      "reveal": {
+        "en": "This is the question neuroaesthetics asks: why do we find anything beautiful, in the brain's own terms? And music lights up the reward system — the same deep circuitry stirred by food, by love, by money. At the peak of a song you love, your brain releases the very chemical it uses for hunger and desire. The pleasure is not a metaphor. It is the same machinery that keeps you alive, fired by pure pattern.",
+        "zh": "這正是神經美學要問的問題：用大腦自己的語言來說，我們究竟為什麼會覺得任何東西「美」？而音樂會點亮獎賞系統——那套被食物、被愛、被金錢攪動的同一條深層迴路。在你最愛的歌的高潮，你的大腦釋放出它用來處理飢餓與慾望的同一種化學物質。那愉悅不是比喻。它就是維持你活著的同一套機器，被純粹的模式所點燃。",
+        "ja": "これこそ神経美学が問うことです——脳自身の言葉で言えば、私たちはそもそもなぜ何かを「美しい」と感じるのか。そして音楽は報酬系を灯す——食事や、愛や、金銭によって動かされるのと同じ深い回路を。大好きな曲の頂点で、脳は空腹や欲望に使うのと同じ化学物質を放出します。その快感は比喩ではない。あなたを生かしている同じ機械が、純粋なパターンによって点火されているのです。"
+      },
+      "example": {
+        "en": "Steady rhythm reaches places almost nothing else can. A pulsing beat can help someone with Parkinson's disease, whose steps have frozen, walk smoothly again; a melody can help a stroke patient who has lost speech find words by singing them first. Music is quietly becoming medicine.",
+        "zh": "穩定的節奏，能抵達幾乎沒有別的東西到得了的地方。一段律動的拍子，能幫腳步凍結的帕金森氏症患者，重新走得平順；一段旋律，能讓失去語言能力的中風病人，先用「唱」的把字找回來。音樂，正悄悄變成一種醫藥。",
+        "ja": "安定したリズムは、ほかのほとんど何ものも届かない場所に届きます。脈打つビートは、歩みが凍りついたパーキンソン病の人を再び滑らかに歩かせ、言葉を失った脳卒中の患者が、まず歌うことで言葉を取り戻す助けにもなる。音楽は、静かに医薬になりつつあるのです。"
+      },
+      "surprise": {
+        "en": "And here the trail opens onto something no one has answered. We can map which circuits music fires, but not why sound should move a creature this deeply in the first place — why a pattern of air pressure, meaning nothing in itself, should reach all the way down to where we feel most alive. Physics, mathematics, and the brain meet inside a single note, and right at that meeting point sits a wonder still wide open.",
+        "zh": "而就在這裡，這條小徑通向一個還沒有人回答得了的問題。我們能畫出音樂點燃了哪些迴路，卻說不出——聲音究竟為什麼能把一個生物打動得這麼深；為什麼一段本身毫無意義的氣壓起伏，竟能一路探到我們感覺自己最活著的地方。物理、數學與大腦，在一個音裡交會，而就在那交會點上，坐著一個至今仍然敞開的奇問。",
+        "ja": "そしてここで、この道は誰も答えていないものへと開けます。私たちは音楽がどの回路を灯すかを地図にできても、なぜそもそも音が生き物をこれほど深く動かすのか——それ自体は何の意味もない空気の圧力のパターンが、なぜ私たちのもっとも生き生きと感じる場所まで届くのか——は言えません。物理と数学と脳が一つの音の中で出会い、まさにその出会いの一点に、いまだ大きく開いたままの不思議が座っているのです。"
+      },
+      "thread": {
+        "en": "You've followed music all the way down to where it touches the brain — and found the deepest question still unanswered. The trail ends here, but the field stays wide open.",
+        "zh": "你已經一路順著音樂，走到它觸碰大腦的最深處——卻發現最深的那個問題仍未有解。小徑到此為止，但這片天地依然敞開。",
+        "ja": "あなたは音楽をたどり、それが脳に触れるもっとも深い場所まで下りてきました——そして、もっとも深い問いがいまだ答えのないことを見つけました。道はここで終わりますが、この野はなお大きく開いたままです。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "acoustics_concept", "target": "harmony_concept", "relation_type": "causal" },
+    { "source": "harmony_concept", "target": "mathematical_music_concept", "relation_type": "conceptual" },
+    { "source": "mathematical_music_concept", "target": "johann_sebastian_bach_person", "relation_type": "applied" },
+    { "source": "johann_sebastian_bach_person", "target": "music_cognition_concept", "relation_type": "conceptual" },
+    { "source": "music_cognition_concept", "target": "neuroaesthetics_concept", "relation_type": "causal" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up the harmonic series and hear the hidden tower inside one note, find out why pianos are tuned to equal temperament and what it quietly sacrifices, or read about the 'chills' response — the neuroscience of why your favorite song raises the hair on your arms.",
+    "zh": "想再往下走一點？去查查「泛音列」，親耳聽見一個音裡藏著的那座塔；查查鋼琴為什麼採用「平均律」、又默默犧牲了什麼；或讀讀關於「起雞皮疙瘩」的研究——你最愛的那首歌，為什麼能讓你手臂上的汗毛豎起來，背後的神經科學。",
+    "ja": "もっと下りてみたいですか？「倍音列」を調べて一つの音に隠れた塔を耳で聞き、ピアノがなぜ「平均律」で調律され、何を静かに犠牲にしているのかを知り、あるいは「鳥肌（チル）」反応——大好きな曲がなぜ腕の毛を逆立てるのか、その神経科学——を読んでみてください。"
+  }
+}

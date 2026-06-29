@@ -1,0 +1,221 @@
+{
+  "id": "germs",
+  "accent": "MED",
+  "title": { "en": "Germs", "zh": "病菌", "ja": "病原菌" },
+  "intro": {
+    "en": "For most of history, disease was a mystery, a curse, or just 'bad air.' In seven steps, follow the idea that tiny living things cause sickness — one of the discoveries that most changed how long you'll live.",
+    "zh": "在歷史的大半時間裡，疾病是個謎、是詛咒，或只是「壞空氣」。跟著七步，追尋一個觀念：微小的生物會讓人生病——這是改變了「你能活多久」最深的發現之一。",
+    "ja": "歴史の大半において、病気は謎であり、呪いであり、あるいはただの「悪い空気」でした。7 つのステップで、ちっぽけな生き物が病を起こすという考え——あなたの寿命を最も大きく変えた発見の一つ——をたどっていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "infectious_disease_concept",
+      "hook": {
+        "en": "A plague sweeps a city and empties whole streets. Nothing visible passes from one person to the next — so what is actually moving between them?",
+        "zh": "瘟疫橫掃一座城，整條街都空了。看不見任何東西在人與人之間傳遞——那麼，真正在他們之間移動的，到底是什麼？",
+        "ja": "疫病が街をのみ込み、通りはまるごと空になる。人から人へ、目に見えるものは何も渡らない——では、彼らのあいだを本当に行き来しているものは、いったい何でしょう？"
+      },
+      "reveal": {
+        "en": "The answer is alive. Many diseases are caused by tiny living organisms that invade the body, multiply inside it, and spread from person to person. You don't catch a sickness the way you catch a cold wind — you catch a creature, too small to see, that treats your body as a place to breed.",
+        "zh": "答案是「活的」。許多疾病，是由微小的生物造成的：它們侵入身體、在裡面繁殖，再從一個人傳給另一個人。你生病，不是像吹到一陣冷風那樣——而是接到了一個小到看不見的生物，它把你的身體當成繁衍的場所。",
+        "ja": "答えは「生きている」のです。多くの病気は、ちっぽけな生き物によって起こされます。それは体に侵入し、なかで増え、人から人へ広がる。風邪の冷たい風を浴びるように病をもらうのではない——目に見えないほど小さな生き物を受け取り、その生き物はあなたの体を繁殖の場として使うのです。"
+      },
+      "example": {
+        "en": "A single cough sprays thousands of invisible droplets across a room; breathe one in and a colony can take root in your lungs by morning.",
+        "zh": "一聲咳嗽，把成千上萬看不見的飛沫噴滿整個房間；吸進其中一顆，到了早上，一整群微生物就可能在你的肺裡落腳。",
+        "ja": "たった一回の咳が、目に見えない飛沫を何千も部屋じゅうにまき散らす。その一つを吸い込めば、朝までにあなたの肺で一つの群れが根を張りはじめるのです。"
+      },
+      "surprise": {
+        "en": "Here's the unsettling part: for thousands of years, no one knew this. Plagues were blamed on bad smells, on sin, or on the positions of the stars. Doctors would move straight from cutting open a corpse to delivering a baby — without ever washing their hands, and without the faintest idea they were carrying death between rooms.",
+        "zh": "令人不安的是：在好幾千年裡，沒有人知道這件事。瘟疫被歸咎於惡臭、罪孽，或星辰的位置。醫生會剛解剖完一具屍體，就直接去替產婦接生——從不洗手，也絲毫沒想到，自己正把死亡，從一個房間帶到另一個房間。",
+        "ja": "落ち着かないのはここです——何千年ものあいだ、誰もこれを知りませんでした。疫病は、悪臭のせい、罪のせい、あるいは星の位置のせいにされた。医者は遺体を切り開いたその手で、そのまま赤ん坊を取り上げにいく——手を洗いもせず、自分が死を部屋から部屋へ運んでいるとは、露ほども思わずに。"
+      },
+      "thread": {
+        "en": "So if living things cause disease, who first dared to say so out loud — and what did it cost them?",
+        "zh": "那麼，如果是活的生物造成疾病，是誰第一個敢把這句話說出口——而這又讓他付出了什麼代價？",
+        "ja": "では、生き物が病を起こすのなら、それを最初に口に出して言い切ったのは誰で——その人は何を払わされたのでしょう？"
+      }
+    },
+    {
+      "ref": "germ_theory_concept",
+      "hook": {
+        "en": "If 'bad air' really caused fever, then two patients breathing the same air should fall sick the same way. They don't. What else could be doing it?",
+        "zh": "如果真的是「壞空氣」造成發燒，那麼呼吸同一片空氣的兩個病人，理應以同樣的方式病倒。但他們並沒有。那還會是什麼在作怪？",
+        "ja": "もし本当に「悪い空気」が熱を起こすなら、同じ空気を吸う二人の患者は、同じように倒れるはずです。でも、そうはならない。ほかに何が起きているのでしょう？"
+      },
+      "reveal": {
+        "en": "Germ theory: the once-radical claim that invisible microbes — not bad air — cause specific diseases, each illness traceable to its own particular organism. It sounds obvious now. At the time it overturned centuries of belief, and replaced a vague cloud of 'miasma' with a precise, testable cause you could one day hunt down and kill.",
+        "zh": "細菌學說（germ theory）：一個曾經激進到嚇人的主張——是看不見的微生物、而非壞空氣，造成了一種種特定的疾病，每一種病都能追溯到它專屬的那種生物。如今聽來理所當然。但在當年，它推翻了數百年的信念，把一團模糊的「瘴氣」，換成了一個精確、可檢驗、有朝一日能被追捕並消滅的病因。",
+        "ja": "細菌説（germ theory）——目に見えない微生物が、悪い空気ではなく、それぞれ特定の病気を起こし、どの病にもそれ専用の生き物がたどれる、というかつては過激すぎる主張です。いまでは当たり前に聞こえます。けれど当時、それは数百年の信念をくつがえし、漠然とした「瘴気（しょうき）」の雲を、いつか追いつめて殺せる、精密で検証可能な原因へと置き換えたのです。"
+      },
+      "example": {
+        "en": "It's why a surgeon today scrubs in, sterilizes every blade, and wears gloves — a whole ritual built on the belief that a wound goes bad because something living got into it.",
+        "zh": "這就是為什麼今天的外科醫生會刷手消毒、把每一把刀都滅菌、戴上手套——這整套儀式，都建立在一個信念上：傷口會惡化，是因為有活的東西進去了。",
+        "ja": "だからこそ今日の外科医は、手を入念に洗い、刃の一本一本を滅菌し、手袋をはめる——傷が悪化するのは、何か生きたものが入り込んだからだ、という信念の上に築かれた一連の儀式です。"
+      },
+      "surprise": {
+        "en": "But the idea arrived too early for comfort. When one doctor showed that simple hand-washing slashed the deaths of new mothers in his ward, his colleagues were so offended by the suggestion that gentlemen's hands were dirty that they rejected him outright. He died disgraced, in an asylum, years before he was proven right. His name was Semmelweis.",
+        "zh": "但這個想法，來得早得讓人難以接受。當一位醫生證明，光是洗手就能讓他病房裡產婦的死亡率大幅下降，他的同僚卻被「紳士的手居然是髒的」這個暗示冒犯得不得了，於是徹底否定他。他在屈辱中死去，死在瘋人院裡，比他被證明是對的，早了好幾年。他的名字，叫塞麥爾維斯（Semmelweis）。",
+        "ja": "けれどこの考えは、受け入れるには早すぎました。ある医者が、ただ手を洗うだけで自分の病棟の産婦の死を激減させてみせたとき、同僚たちは「紳士の手が汚れている」という示唆にひどく気分を害し、彼を真っ向から拒みました。彼は不名誉のうちに、精神病院で世を去る——正しさが証明される、何年も前に。その名はゼンメルワイス（Semmelweis）。"
+      },
+      "thread": {
+        "en": "A theory rejected needs proof no one can wave away. Who finally pinned the germs to the table and showed they were real?",
+        "zh": "一個被否定的學說，需要無人能揮手帶過的證據。是誰，終於把這些病菌按在桌上，證明了它們真的存在？",
+        "ja": "拒まれた説には、誰も手で払いのけられない証拠が要ります。最後に病原菌を机の上に押さえつけ、それが本物だと示したのは誰でしょう？"
+      }
+    },
+    {
+      "ref": "louis_pasteur_person",
+      "hook": {
+        "en": "Leave broth in an open jar and it turns cloudy with life within days. For ages people assumed the life simply appeared from nothing. Does it?",
+        "zh": "把肉湯放在敞開的罐子裡，幾天內就會混濁、長出生命。長久以來，人們以為這些生命是憑空冒出來的。真的是這樣嗎？",
+        "ja": "肉のスープを口の開いた瓶に置いておくと、数日で濁り、生命がわいてくる。長いあいだ人々は、その生命が無から現れると思い込んでいました。本当にそうでしょうか？"
+      },
+      "reveal": {
+        "en": "Louis Pasteur proved it doesn't. With a clever swan-necked flask that let air in but trapped dust, he showed broth stays clear forever — until you let the floating microbes reach it. Life comes from life. And if microbes can be kept out, they can also be killed: gentle heat sterilizes without ruining the food. We still call it pasteurization.",
+        "zh": "路易・巴斯德（Louis Pasteur）證明了：不是。他用一個巧妙的鵝頸瓶，讓空氣能進、卻把灰塵擋在外面，證明了肉湯能永遠保持清澈——除非你讓飄浮的微生物碰到它。生命來自生命。而既然微生物能被擋在外面，它們也就能被殺死：溫和的加熱能滅菌，又不毀掉食物。我們至今仍把它叫做「巴氏滅菌法（pasteurization）」。",
+        "ja": "ルイ・パスツール（Louis Pasteur）は、そうではないと証明しました。空気は通すが塵は閉じ込める、巧妙な白鳥の首のフラスコを使い、スープは永遠に澄んだまま——漂う微生物がそこへ届かないかぎりは——と示したのです。生命は生命から生まれる。そして微生物を締め出せるなら、殺すこともできる。穏やかな加熱は、食べ物を損なわずに滅菌する。私たちはいまもそれを「低温殺菌（パスツリゼーション）」と呼びます。"
+      },
+      "example": {
+        "en": "Every carton of milk you've ever poured was briefly heated this way — warm enough to kill the germs, cool enough to keep the taste.",
+        "zh": "你倒過的每一盒牛奶，都曾這樣被短暫加熱過——熱到足以殺死病菌，又涼到足以留住味道。",
+        "ja": "あなたが注いだことのある牛乳は、どの一パックも、こうして一瞬だけ温められています——病原菌を殺すには十分に熱く、味を残すには十分にぬるく。"
+      },
+      "surprise": {
+        "en": "The same insight that made milk safe also made surgery survivable: if germs cause wound infection, sterilize the instruments and they can't. And Pasteur went further still. He took a deadly germ, deliberately weakened it, and used it to teach the body to fight the real thing — building one of the first true vaccines.",
+        "zh": "讓牛奶變安全的同一個洞見，也讓手術變得能活下來：既然病菌會造成傷口感染，那就把器械滅菌，它們就無從下手。而巴斯德走得更遠。他拿來一種致命的病菌，刻意把它削弱，再用它教身體去對抗真正的病原——做出了最早的真正疫苗之一。",
+        "ja": "牛乳を安全にしたのと同じ洞察が、手術を生き延びられるものにもしました——病原菌が傷の感染を起こすなら、器具を滅菌すれば、菌は手出しできない。そしてパスツールはさらに先へ進みます。致命的な菌をわざと弱らせ、それを使って本物と闘う術を体に教えた——最初の真のワクチンの一つを作り上げたのです。"
+      },
+      "thread": {
+        "en": "He taught the body to fight back — but what is the body's own army, and how does it know friend from foe?",
+        "zh": "他教身體反擊——但身體自己的那支軍隊，究竟是什麼？它又怎麼分辨敵我？",
+        "ja": "彼は体に反撃のしかたを教えました——でも、体そのものの軍隊とは何で、それはどうやって味方と敵を見分けるのでしょう？"
+      }
+    },
+    {
+      "ref": "immune_system_concept",
+      "hook": {
+        "en": "Cut your finger and within hours it's red and sore, then it heals. No doctor stepped in. Who fought that battle for you?",
+        "zh": "割傷手指，幾小時內就會發紅、刺痛，接著痊癒。沒有醫生介入。是誰，替你打了那一仗？",
+        "ja": "指を切ると、数時間で赤く腫れて痛み、やがて治る。医者は手を出していません。あなたの代わりに、その戦いを戦ったのは誰でしょう？"
+      },
+      "reveal": {
+        "en": "Your immune system: a vast internal defense, billions of cells patrolling your blood and tissue, trained to recognize what is 'you' and attack what isn't. It surrounds invaders, swallows them, poisons them, and learns their shape as it goes — so the next encounter is faster and fiercer. You are never not at war; you just rarely notice winning.",
+        "zh": "你的免疫系統：一支龐大的內在防衛軍，數十億個細胞在你的血液與組織裡巡邏，被訓練去辨認什麼是「你」、並攻擊不是你的東西。它包圍入侵者、把它們吞掉、毒死它們，並一邊作戰一邊記住它們的長相——好讓下一次交手更快、更猛。你無時無刻不在打仗；只是很少察覺自己正在勝利。",
+        "ja": "あなたの免疫系——体内の巨大な防衛軍で、何十億もの細胞が血液と組織を巡回し、何が「自分」で何がそうでないかを見分けて攻撃するよう訓練されています。侵入者を取り囲み、のみ込み、毒で倒し、戦いながらその姿を覚えていく——次の出会いがより速く、より激しくなるように。あなたは戦っていない瞬間がない。ただ、勝っていることに気づくことが、めったにないだけです。"
+      },
+      "example": {
+        "en": "The swelling and warmth around a splinter is the battle made visible — extra blood and immune cells rushing to the breach to corner whatever got in.",
+        "zh": "卡進一根刺，周圍的腫脹與發熱，就是這場戰役被「看見」的樣子——額外的血液與免疫細胞，正衝向那個破口，把闖進來的東西團團圍住。",
+        "ja": "とげの周りの腫れと熱は、戦いが目に見える形になったものです——余分な血液と免疫細胞が、破れ目へ駆けつけ、入り込んだ何かを追いつめているのです。"
+      },
+      "surprise": {
+        "en": "The strangest part: your immune system keeps a kind of 'most wanted' file of every germ you've ever met. Special memory cells linger for decades, holding the mugshot of an old enemy. That is exactly why you catch chickenpox only once — the second time the germ shows up, your body recognizes it instantly and crushes it before you ever feel ill.",
+        "zh": "最奇妙的是：你的免疫系統，會替你遇過的每一種病菌，保留一份類似「通緝犯」的檔案。特殊的記憶細胞會逗留數十年，握著一個老敵人的大頭照。這正是為什麼水痘你只會得一次——第二次那病菌一出現，你的身體立刻認出它，在你還沒覺得不舒服之前，就把它碾碎了。",
+        "ja": "もっとも奇妙なのはここです——あなたの免疫系は、これまで出会ったすべての病原菌の、いわば「指名手配」ファイルを保管しています。特別な記憶細胞が何十年も居残り、古い敵の顔写真を握っている。だからこそ、水ぼうそうは一度しかかからない——二度目にその菌が現れた瞬間、体はそれを即座に見抜き、具合が悪くなる前に叩きつぶすのです。"
+      },
+      "thread": {
+        "en": "If the body remembers an enemy it has met — could we introduce one safely, on purpose, before the real fight?",
+        "zh": "如果身體會記住它見過的敵人——那我們能不能刻意、又安全地，在真正的戰鬥之前，先「介紹」一個給它認識？",
+        "ja": "体が出会った敵を覚えているのなら——本当の戦いの前に、わざと、しかも安全に、敵を一つ「紹介」できるのではないでしょうか？"
+      }
+    },
+    {
+      "ref": "vaccination_science_concept",
+      "hook": {
+        "en": "What if you could let your body practise against a deadly germ — without ever risking the disease itself?",
+        "zh": "如果你能讓身體先對一種致命的病菌「演練」一遍——卻完全不必冒上得病的風險，那會怎樣？",
+        "ja": "もし、病気そのものの危険を一切おかさずに、致命的な病原菌を相手に体を「予行演習」させられるとしたら、どうでしょう？"
+      },
+      "reveal": {
+        "en": "That is vaccination: show the immune system a harmless preview of a germ — a weakened, dead, or partial copy — so it builds its memory file in advance. When the real, dangerous version arrives, the body is already armed and waiting, and the fight is over before it begins. You gain the protection of having survived a disease, without having to suffer it.",
+        "zh": "這就是疫苗接種：給免疫系統看一個無害的「病菌預告片」——一份被削弱、被殺死、或只剩一部分的副本——讓它預先建好記憶檔案。等真正危險的版本來臨，身體早已武裝待命，戰鬥還沒開始就結束了。你得到「彷彿撐過一場病」的保護，卻不必真的去受那場罪。",
+        "ja": "それがワクチン接種です。免疫系に、害のない病原菌の「予告編」——弱められ、殺され、あるいは一部だけの複製——を見せ、記憶ファイルを前もって作らせる。本物の危険な版が来たとき、体はすでに武装して待ち構えており、戦いは始まる前に終わっている。病を生き延びたのと同じ守りを、その苦しみを味わわずに手に入れるのです。"
+      },
+      "example": {
+        "en": "The small jab in your arm as a child was a rehearsal — a few harmless fragments that let your body practise, so a real measles or polio germ never gets a foothold.",
+        "zh": "你小時候手臂上挨的那一小針，就是一場彩排——幾片無害的碎片，讓你的身體先練過一次，好讓真正的麻疹或小兒麻痺病菌，永遠站不住腳。",
+        "ja": "子どものころ腕に打った小さな一本は、リハーサルでした——害のない断片をいくつか入れ、体に練習させておく。だから本物のはしかやポリオの菌は、けっして足場を得られないのです。"
+      },
+      "surprise": {
+        "en": "It began with a country doctor noticing something odd: milkmaids who had caught mild cowpox never seemed to catch deadly smallpox. He took that folk observation and tested it — scratching cowpox into a healthy boy, who then shrugged off smallpox entirely. From that single hunch grew the tool that, two centuries on, erased smallpox from the entire planet. A disease that killed hundreds of millions now exists nowhere in the wild.",
+        "zh": "這一切，始於一位鄉村醫生注意到的怪事：得過輕微「牛痘」的擠奶女工，似乎從不會得上致命的天花。他把這個民間觀察拿來檢驗——把牛痘劃進一個健康男孩的皮膚裡，那孩子後來竟對天花完全免疫。從這一個直覺，長出了一樣工具：兩個世紀後，它把天花從整個地球上抹去。一種曾經奪走數億人性命的疾病，如今在野外已無處可尋。",
+        "ja": "すべては、ある田舎医者が気づいた奇妙な事実から始まりました——軽い「牛痘」にかかった乳しぼりの女性は、致命的な天然痘にかからないらしい。彼はその民間の観察を試した——健康な少年に牛痘を植えつけると、その子は天然痘をまったく寄せつけなくなった。たった一つのひらめきから、二世紀ののち、地球上から天然痘を消し去る道具が育ったのです。かつて数億人を死なせた病が、いまや自然界のどこにも存在しません。"
+      },
+      "thread": {
+        "en": "We can train the body and arm it in advance. But the germs are alive — and living things adapt. What happens when they fight back?",
+        "zh": "我們能訓練身體、預先武裝它。但病菌是活的——而活的東西，會適應。當它們開始反擊，會發生什麼事？",
+        "ja": "私たちは体を鍛え、前もって武装させられます。でも病原菌は生きている——そして生き物は適応する。彼らが反撃してきたら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "antibiotic_resistance_concept",
+      "hook": {
+        "en": "We have drugs that wipe out bacteria almost completely. So why are the diseases they once cured starting to come back?",
+        "zh": "我們有藥，幾乎能把細菌徹底掃光。那為什麼，那些它們曾經治好的疾病，正開始捲土重來？",
+        "ja": "私たちには、細菌をほぼ完全に一掃する薬があります。では、その薬がかつて治した病気が、なぜ戻りはじめているのでしょう？"
+      },
+      "reveal": {
+        "en": "Antibiotics kill bacteria — but never quite all of them. A handful of cells happen to carry a quirk that lets them survive, and those are the ones that breed the next generation. Dose after dose, the vulnerable die and the tough remain, until the whole population descends from survivors and the drug stops working. This is antibiotic resistance: our best weapons slowly going blunt.",
+        "zh": "抗生素會殺死細菌——但從來殺不光。總有少數幾個細胞，剛好帶著某種特性、得以存活，而正是這些，繁衍出了下一代。一劑又一劑，脆弱的死去、強韌的留下，直到整個族群都是倖存者的後代，藥也就失效了。這就是抗生素抗藥性：我們最好的武器，正慢慢變鈍。",
+        "ja": "抗生物質は細菌を殺す——けれど、決して一匹残らずとはいかない。たまたま生き延びられる性質を持った少数の細胞があり、次の世代を生むのは、まさにそれらです。一服また一服と、弱いものは死に、しぶといものが残り、ついには群れ全体が生き残りの子孫となって、薬は効かなくなる。これが抗生物質耐性——私たちの最良の武器が、じわじわと刃こぼれしていくのです。"
+      },
+      "example": {
+        "en": "It's why a doctor tells you to finish every pill, even after you feel fine — stop early and you leave the toughest bacteria alive to multiply, breeding a strain the next dose can't touch.",
+        "zh": "這就是為什麼醫生會叮囑你「藥要吃完」，就算你已經覺得好了——太早停藥，等於留下最強韌的細菌活著繁殖，培養出一支連下一劑都奈何不了的菌種。",
+        "ja": "だから医者は、もう良くなったと感じても薬を最後まで飲みきれと言うのです——途中でやめれば、いちばんしぶとい細菌を生かして増やし、次の一服でも手に負えない系統を育ててしまうから。"
+      },
+      "surprise": {
+        "en": "Look closely and this is natural selection happening in real time — the same evolution that shaped every living thing, but compressed into mere months, right in front of us. The very act that made germs treatable is also teaching them to fight back: every dose is a sieve, and we keep handing the survivors the world. The arms race that began with Pasteur never ended.",
+        "zh": "仔細看，這正是「天擇」在即時上演——塑造了一切生命的同一套演化，只是被壓縮進短短幾個月，就在我們眼前發生。讓病菌變得「可治」的這個動作本身，也在教它們反擊：每一劑藥都是一道篩子，而我們不斷把整個世界，交到倖存者手上。那場從巴斯德開始的軍備競賽，從來沒有結束。",
+        "ja": "よく見れば、これは「自然選択」がリアルタイムで起きている姿です——あらゆる生命を形づくったのと同じ進化が、わずか数か月に圧縮され、目の前で進む。病原菌を治せるようにしたその行為そのものが、彼らに反撃を教えている。一服ごとが一つのふるいであり、私たちは生き残りに世界を渡し続けている。パスツールに始まった軍拡競争は、ついぞ終わっていないのです。"
+      },
+      "thread": {
+        "en": "Fighting germs one patient at a time isn't enough, then. What if we zoom all the way out — to whole populations at once?",
+        "zh": "看來，一次只對付一個病人，是不夠的。那如果我們把鏡頭一路拉遠——遠到一次看見「整個族群」呢？",
+        "ja": "では、患者を一人ずつ相手にするだけでは足りません。もしカメラをぐっと引いて——一度に「集団まるごと」を見たら、どうでしょう？"
+      }
+    },
+    {
+      "ref": "epidemiology_concept",
+      "hook": {
+        "en": "Stand beside one sick patient and a disease looks like rotten luck. Step back and watch thousands — and something else appears. What?",
+        "zh": "站在一個病人身旁，疾病看起來像是倒楣。但退後一步，看著成千上萬人——某種別的東西就浮現了。是什麼？",
+        "ja": "病人一人のかたわらに立つと、病気はただの不運に見えます。一歩下がって何千人を眺めると——別の何かが現れる。それは何でしょう？"
+      },
+      "reveal": {
+        "en": "A pattern. Epidemiology zooms out from the single patient to whole populations, and disease spread stops being random — it becomes something you can count, map, model, and break. Where do cases cluster? What do the sick share that the healthy don't? Find the thread connecting them, cut it, and an outbreak can be stopped without curing a single person directly.",
+        "zh": "一種「模式」。流行病學把鏡頭從單一病人，拉遠到整個族群，於是疾病的傳播不再是隨機的——它變成了你能計數、能繪圖、能建模、也能切斷的東西。病例聚在哪裡？生病的人共有、而健康的人沒有的，是什麼？找出串起他們的那條線，剪斷它，一場疫情就可能被止住——而不必直接治好任何一個人。",
+        "ja": "「パターン」です。疫学（えきがく）は、一人の患者から集団全体へとカメラを引き、病気の広がりはもう偶然ではなくなる——数え、地図に描き、モデル化し、断ち切れるものになる。どこに患者が固まっているか。病んだ人が共有し、健康な人が持たないものは何か。彼らをつなぐ糸を見つけて切れば、誰一人直接治さずとも、流行を止められるのです。"
+      },
+      "example": {
+        "en": "A modern outbreak team works the same way — plotting every case on a map, hunting for the shared restaurant, the same water source, the one party everyone attended.",
+        "zh": "現代的疫調團隊也是這樣做的——把每一個病例標在地圖上，搜尋那家共同去過的餐廳、同一處水源、每個人都參加過的那場聚會。",
+        "ja": "現代の集団感染対策チームも同じように動きます——一例ずつ地図に落とし、共通の店、同じ水源、全員が出たあのパーティーを探し当てるのです。"
+      },
+      "surprise": {
+        "en": "It started with one doctor and a cholera outbreak. While others blamed bad air, he mapped every death — and the dots clustered tight around a single public water pump. He had the pump's handle removed, and the dying stopped. No microscope, no cure: just counting and a map saved that street. The same arithmetic of outbreaks now tracks epidemics across the whole world.",
+        "zh": "這一切，始於一位醫生與一場霍亂疫情。當其他人還在怪罪壞空氣，他把每一起死亡都標在地圖上——而那些點，緊緊聚集在一座公共水泵的周圍。他讓人拆掉了水泵的把手，死亡便停止了。沒有顯微鏡，沒有解藥：只靠計數與一張地圖，就救了那條街。同一套「疫情的算術」，如今正追蹤著遍及全世界的流行病。",
+        "ja": "すべては、一人の医者とコレラの流行から始まりました。ほかの者が悪い空気を責めるなか、彼はすべての死を地図に落とした——すると点は、一つの公共の井戸ポンプの周りにぴたりと固まっていた。彼はそのポンプの取っ手を外させ、死は止まった。顕微鏡もなく、治療薬もなく——ただ数えることと一枚の地図が、その通りを救ったのです。同じ「流行の算術」が、いまや世界じゅうの疫病を追っています。"
+      },
+      "thread": {
+        "en": "You've followed germs from a single cough all the way to the math that guards the planet — and the trail opens out here. The field is wide. Wander wherever a star pulls you.",
+        "zh": "你已經一路追隨病菌，從一聲咳嗽，走到守護整個星球的數學——而旅程，在這裡向外敞開。這片領域很廣。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは病原菌を、たった一回の咳から、地球を守る数学にいたるまで追ってきました——そして道は、ここで外へと開けます。この分野は広い。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "infectious_disease_concept", "target": "germ_theory_concept", "relation_type": "historical" },
+    { "source": "germ_theory_concept", "target": "louis_pasteur_person", "relation_type": "historical" },
+    { "source": "louis_pasteur_person", "target": "immune_system_concept", "relation_type": "conceptual" },
+    { "source": "immune_system_concept", "target": "vaccination_science_concept", "relation_type": "applied" },
+    { "source": "vaccination_science_concept", "target": "antibiotic_resistance_concept", "relation_type": "causal" },
+    { "source": "antibiotic_resistance_concept", "target": "epidemiology_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Read how Ignaz Semmelweis fought to make doctors wash their hands, follow John Snow tracing cholera to the Broad Street pump in 1854, or look up how a vaccine actually trains your immune cells — and this whole story turns into real, observed science you can dig into yourself.",
+    "zh": "想再往下追一點？讀讀伊格納茲・塞麥爾維斯如何奮力讓醫生們願意洗手、跟著約翰・斯諾在 1854 年把霍亂追到布羅德街那座水泵，或查查疫苗究竟是怎麼訓練你的免疫細胞——這整個故事，就會變成你能親手深入的、真實而被觀測過的科學。",
+    "ja": "もっと追ってみたいですか？イグナーツ・ゼンメルワイスが医者たちに手洗いをさせようと闘った話を読み、ジョン・スノーが 1854 年にコレラをブロードストリートの井戸ポンプまで追いつめた跡をたどり、ワクチンが実際にどうやって免疫細胞を鍛えるのかを調べてみてください——この物語ぜんぶが、あなた自身が掘り下げられる、現実の、観測された科学に変わります。"
+  }
+}

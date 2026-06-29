@@ -1,0 +1,192 @@
+{
+  "id": "the-mind",
+  "accent": "BIO",
+  "title": { "en": "The Mind", "zh": "心智", "ja": "心" },
+  "intro": {
+    "en": "Three pounds of electrified jelly, folded inside your skull, somehow becomes a 'you' that feels and chooses. In six steps, fall toward the deepest mystery science has — how matter wakes up and knows that it exists.",
+    "zh": "顱骨裡那團約莫一公斤半、帶著電流的膠狀物，竟然成了一個會感受、會抉擇的「你」。跟著六步，墜向科學手上最深的謎——物質如何醒來，並知道自己存在。",
+    "ja": "頭蓋骨の中に折りたたまれた、電気を帯びた約一・五キロのゼリー。それがなぜか、感じ、選ぶ「あなた」になる。6 つのステップで、科学が抱える最も深い謎へと落ちていきましょう——物質はいかにして目覚め、自分が存在すると知るのか。"
+  },
+  "steps": [
+    {
+      "ref": "sensory_systems_concept",
+      "hook": {
+        "en": "Right now you feel the world directly — the warm cup, the red apple, the birdsong outside. But what if you have never once touched the world at all?",
+        "zh": "此刻你彷彿直接感受著世界——溫熱的杯子、紅色的蘋果、窗外的鳥鳴。但如果你其實從來不曾真正碰觸過這個世界呢？",
+        "ja": "いまあなたは世界をじかに感じています——温かいカップ、赤いリンゴ、外の鳥のさえずり。でも、もしあなたが一度も世界に触れたことがないとしたら？"
+      },
+      "reveal": {
+        "en": "You never touch the world directly. Your eyes, ears and skin only turn light, vibration and pressure into tiny electrical signals, and those signals are all your brain ever receives. Sealed in its dark, silent skull, the brain takes that stream of pulses and builds a full, vivid world from it. What you experience is not the world itself — it is your brain's best running guess about what is out there.",
+        "zh": "你從未直接碰觸世界。你的眼、耳、皮膚只是把光、振動與壓力轉成微小的電訊號，而你的大腦收到的，永遠只有這些訊號。封在漆黑、寂靜的顱骨裡，大腦拿著這串脈衝，從中搭建出一個完整、鮮活的世界。你所體驗到的，並不是世界本身——而是大腦對「外面有什麼」所做的、最好的即時猜測。",
+        "ja": "あなたは世界にじかに触れてはいません。目も耳も皮膚も、光・振動・圧力をごく小さな電気信号に変えるだけで、脳が受け取るのはその信号だけです。暗く静かな頭蓋骨に封じられた脳は、そのパルスの流れから、ありありとした一つの世界を組み立てる。あなたが体験しているのは世界そのものではなく——「外に何があるか」についての、脳の最良の推測なのです。"
+      },
+      "example": {
+        "en": "A rainbow has no colors in it. Sunlight is just waves of different lengths; 'red' and 'violet' are labels your brain paints on, so two people can stare at the same sky and privately see different shades.",
+        "zh": "彩虹裡其實沒有顏色。陽光不過是不同長度的波；「紅」與「紫」是你的大腦塗上去的標籤，所以兩個人盯著同一片天空，私底下看見的色調可以不一樣。",
+        "ja": "虹そのものに色はありません。太陽光は長さの違う波にすぎず、「赤」や「紫」はあなたの脳が塗りつける名札です。だから二人が同じ空を見つめても、それぞれ別の色合いを見ているかもしれないのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: the world outside is dark, silent and odorless. There is no color, no sound, no smell anywhere until a brain renders one. A struck bell sends out only pressure waves in the air; the 'ring' you hear exists nowhere but inside a listening head. Reality, raw, is a flood of energy with no qualities at all — every quality is something a mind adds.",
+        "zh": "意外的是：外面的世界本是漆黑、寂靜、無味的。在任何一個大腦把它演算出來之前，哪裡都沒有顏色、沒有聲音、沒有氣味。一口被敲響的鐘，送出的只是空氣中的壓力波；你聽見的那聲「噹」，只存在於一顆正在聆聽的頭顱裡。最原始的現實，是一片沒有任何「質地」的能量洪流——每一種質地，都是心智添上去的。",
+        "ja": "意外なことに、外の世界はもともと暗く、静かで、匂いもありません。どこかの脳がそれを描き出すまで、色も音も匂いもどこにも存在しない。打たれた鐘が送り出すのは空気中の圧力波だけ。あなたが聞く「ゴーン」という響きは、聴いている頭の中にしかありません。むき出しの現実は、何の質感もないエネルギーの奔流——あらゆる質感は、心が付け加えたものなのです。"
+      },
+      "thread": {
+        "en": "So the brain builds your whole world out of signals. But what are these signals, and how does one brain cell whisper to the next?",
+        "zh": "所以大腦用訊號搭出了你的整個世界。但這些訊號到底是什麼，一個腦細胞又是怎麼對下一個低語的？",
+        "ja": "つまり脳は信号からあなたの世界をまるごと組み立てる。では、その信号とは何で、一つの脳細胞は隣にどうやってささやきかけるのでしょう？"
+      }
+    },
+    {
+      "ref": "neurotransmission_concept",
+      "hook": {
+        "en": "Eighty-six billion brain cells, and none of them quite touch. Across every gap there is a sliver of empty space. So how does a thought ever cross?",
+        "zh": "八百六十億個腦細胞，彼此卻都沒有真正相連。每一道縫隙之間，都隔著一小段空白。那麼，一個念頭究竟是怎麼跨過去的？",
+        "ja": "八百六十億個の脳細胞は、どれもぴたりとは触れ合っていません。あらゆるすき間に、ほんのわずかな空白がある。では、一つの思考はどうやってそこを渡るのでしょう？"
+      },
+      "reveal": {
+        "en": "Thought runs on tiny electro-chemical pulses leaping those gaps. A signal races down one neuron as a wave of electricity; at the gap it cannot jump, so the cell squirts out chemical messengers called neurotransmitters. They drift across, dock onto the next cell, and spark it into firing — or hush it. Billions of these sparks, crossing trillions of gaps every second, are what thinking is made of.",
+        "zh": "思考，靠的是微小的電化學脈衝在那些縫隙間跳躍。訊號以一道電波奔過一顆神經元；到了縫隙它跳不過去，於是細胞噴出名為「神經傳導物質」的化學信使。它們飄過縫隙、停靠在下一顆細胞上，把它點燃發射——或讓它安靜下來。每秒鐘，數十億道這樣的火花跨越數兆道縫隙，這就是思考的材料。",
+        "ja": "思考は、そのすき間を飛び越える小さな電気化学パルスで動きます。信号は電気の波として一つのニューロンを駆け下りる。すき間は飛び越えられないので、細胞は神経伝達物質と呼ばれる化学の使者を噴き出す。それらが漂って渡り、次の細胞に取りつき、発火させる——あるいは黙らせる。毎秒、数十億ものこの火花が数兆のすき間を渡る。それが思考の材料です。"
+      },
+      "example": {
+        "en": "When you touch a hot stove, that whole relay fires in well under a second: skin to spinal cord to muscle, spark after chemical spark, and your hand is already pulling back before you have even named the pain.",
+        "zh": "當你碰到滾燙的爐子，整段接力在不到一秒內就跑完：從皮膚到脊髓再到肌肉，一道電火花接著一道化學火花，你的手早已縮回，你卻還來不及替那陣痛取名。",
+        "ja": "熱いコンロに触れた瞬間、この中継ぎは一秒もかからず走り抜けます。皮膚から脊髄、そして筋肉へ。電気の火花に化学の火花が続き、その痛みに名前をつける前に、あなたの手はもう引っ込んでいるのです。"
+      },
+      "surprise": {
+        "en": "Every feeling, memory and decision is, underneath, a pattern of these chemical sparks — and that is exactly why they can be nudged. Caffeine works by blocking a chemical that tells your brain to feel tired. Falling in love floods the same circuits with messengers like dopamine. Most medicines for mood do nothing but tilt this chemical traffic a little one way or another. Your inner life and a tablet from the pharmacy speak the same language.",
+        "zh": "每一種感受、記憶與決定，底層都是這些化學火花的某種圖樣——而這正是它們可以被輕輕撥動的原因。咖啡因的作用，是擋住一種會叫你的大腦覺得累的化學物質。墜入愛河，會讓多巴胺之類的信使湧入同一批迴路。大多數調節情緒的藥物，所做的也不過是把這股化學車流，往某個方向稍微傾斜一點。你的內在世界，和藥房裡的一顆藥錠，說的是同一種語言。",
+        "ja": "あらゆる感情も記憶も決断も、その底ではこれらの化学の火花の模様であり——だからこそ少し押し動かせるのです。カフェインは、脳に疲れを感じさせる化学物質をふさいで働く。恋に落ちれば、ドーパミンのような使者が同じ回路にあふれる。気分の薬の多くも、この化学の往来をどちらかへわずかに傾けているだけ。あなたの内面と、薬局の一錠は、同じ言葉を話しているのです。"
+      },
+      "thread": {
+        "en": "These sparks fire across fixed wiring — or so it seems. But the wiring itself turns out to move. Use the brain, and it rebuilds.",
+        "zh": "這些火花在固定的線路上奔馳——看起來是這樣。但那線路本身，竟會移動。用它，它就改建自己。",
+        "ja": "これらの火花は固定された配線を走る——そう見えます。でもその配線そのものが動くのです。脳を使えば、脳は組み替わる。"
+      }
+    },
+    {
+      "ref": "neuroplasticity_concept",
+      "hook": {
+        "en": "You were taught that brains are like wiring you are born with — fixed, and only able to wear out. What if, instead, your brain is reshaping itself every single day?",
+        "zh": "你被教導大腦像是出生就配好的線路——固定，只會逐漸耗損。但如果事實是，你的大腦其實每一天都在重塑自己呢？",
+        "ja": "脳は生まれつきの配線のようなもの——決まっていて、すり減っていくだけ。そう教わってきたはずです。でも、もし脳が毎日のように自分を作り変えているとしたら？"
+      },
+      "reveal": {
+        "en": "The brain physically rewires itself with use. Every time you practice something, the connections you fire grow stronger and thicker, while ones you never use quietly fade. This is neuroplasticity: the brain is not fixed hardware but living tissue that sculpts itself to whatever you do. Learning is not just storing a fact — it is changing the actual shape of the thing inside your head.",
+        "zh": "大腦會隨著使用，在物理上重新接線。每當你練習一件事，你所觸發的連結就長得更強、更粗，而那些你從不使用的，便悄悄淡去。這就是神經可塑性：大腦不是固定的硬體，而是會依你的所為來雕塑自己的活組織。學習不只是存下一個事實——而是改變你腦袋裡那團東西實際的形狀。",
+        "ja": "脳は、使うことで物理的に配線をつなぎ直します。何かを練習するたび、発火させたつながりはより強く太くなり、使わないものはひそかに薄れていく。これが神経可塑性です。脳は固定されたハードウェアではなく、あなたのすることに合わせて自分を彫り上げる生きた組織。学習とは事実をしまうことだけではなく——頭の中のそのものの形を変えることなのです。"
+      },
+      "example": {
+        "en": "Learn a musical instrument and the brain regions that move your fingers measurably thicken. Stop practicing, and they slim back down. Your skills are written into the brain as physical bulk.",
+        "zh": "學一樣樂器，負責你手指動作的腦區會明顯變厚；一旦停練，它們又會瘦回去。你的技藝，是以物理的「厚度」被寫進大腦的。",
+        "ja": "楽器を習えば、指を動かす脳の領域が目に見えて厚くなります。練習をやめれば、また薄くなる。あなたの技能は、物理的な「かさ」として脳に書き込まれているのです。"
+      },
+      "surprise": {
+        "en": "London taxi drivers must memorize the city's tangle of streets, and scientists found the navigation region of their brains is measurably larger than other people's — and grows the longer they drive. The brain that has learned is, quite literally, a different shape than the one that began. You are, in solid tissue, the sum of what you have practiced.",
+        "zh": "倫敦的計程車司機必須背下整座城市錯綜的街道，而科學家發現，他們大腦中負責導航的區域，明顯比一般人來得大——而且開得越久就長得越大。一顆學習過的大腦，幾乎是字面意義上，與它最初的模樣形狀不同。在實實在在的組織上，你就是你所練習過的一切的總和。",
+        "ja": "ロンドンのタクシー運転手は街の入り組んだ道を覚えねばならず、科学者は彼らの脳のうち道案内をつかさどる領域が、ほかの人より明らかに大きく——運転歴が長いほど大きくなることを見いだしました。学んだ脳は、文字どおり、始まりの脳とは違う形をしている。確かな組織として、あなたは練習してきたことの総和なのです。"
+      },
+      "thread": {
+        "en": "Signals, sparks, a self-sculpting net of cells. Yet somewhere in all that firing, something extraordinary appears — the simple fact that it feels like something to be you.",
+        "zh": "訊號、火花、一張會自我雕塑的細胞之網。然而在這一切的放電之中，竟浮現出某種非凡的東西——「身為你，是有感受的」這個再單純不過的事實。",
+        "ja": "信号、火花、自らを彫る細胞の網。それでもそのすべての発火のどこかに、並外れた何かが立ち現れる——あなたであることには「感じ」がある、というただそれだけの事実が。"
+      }
+    },
+    {
+      "ref": "consciousness_concept",
+      "hook": {
+        "en": "A camera detects light, a thermostat senses heat — and feels nothing. So why does it feel like anything at all to be the lump of cells reading this sentence?",
+        "zh": "相機偵測光線、溫控器感測熱度——卻什麼都感覺不到。那麼，為什麼「身為這團正在讀這句話的細胞」，竟然會有感覺？",
+        "ja": "カメラは光を感知し、サーモスタットは熱を感じ取る——でも何も「感じ」ません。では、なぜこの一文を読んでいる細胞のかたまりであることには、そもそも「感じ」があるのでしょう？"
+      },
+      "reveal": {
+        "en": "Somehow all that firing produces an inner experience — a felt sense of being you, watching from behind your eyes. There is something it is like to taste coffee, to ache, to remember rain. This is consciousness: not just processing information, but having a private, first-person view of the world lit up from the inside. It is the one thing you are most certain of, and the one thing hardest to explain.",
+        "zh": "不知怎地，這一切的放電竟產生了一種內在經驗——一種「身為你、從你的眼睛後面向外看」的感受。嚐咖啡、感到痛、想起雨——這些都「有某種感覺起來像什麼」。這就是意識：不只是處理資訊，而是擁有一個私密的、第一人稱的世界，從內部被點亮。它是你最確定的一件事，也是最難解釋的一件事。",
+        "ja": "どういうわけか、そのすべての発火が内なる体験を生み出す——あなたであり、目の奥から眺めているという「感じ」を。コーヒーを味わうこと、痛むこと、雨を思い出すことには、それ「らしい感じ」がある。これが意識です。情報を処理するだけでなく、内側から灯された私的で一人称の世界を持つこと。あなたが最も確信していることであり、最も説明しがたいことでもあります。"
+      },
+      "example": {
+        "en": "Picture explaining the color red to someone blind from birth. You can give them every wavelength and every brain scan — and still never hand over the actual redness of red. That gap, between the physical facts and the felt experience, is the whole puzzle.",
+        "zh": "想像向一個天生失明的人解釋「紅色」。你可以給他所有的波長、所有的腦部掃描——卻永遠遞不出那個「紅之為紅」的實際感受。那道介於物理事實與被感受到的經驗之間的鴻溝，正是整個謎題所在。",
+        "ja": "生まれつき目の見えない人に「赤」を説明する場面を思い浮かべてください。あらゆる波長も、あらゆる脳の画像も渡せる——それでも、赤が赤である実際の「赤さ」だけは決して手渡せない。物理的な事実と、感じられる体験との間のこの隔たりこそ、謎のすべてです。"
+      },
+      "surprise": {
+        "en": "Here is the unsettling part: nobody can explain why any physical process should feel like anything at all. We can map which neurons fire when you see red, but not why that firing is accompanied by an experience instead of happening in the dark, like the workings of a calculator. Philosophers call this the 'hard problem,' and after centuries it remains wide open. The thing you know best is the thing science cannot yet touch.",
+        "zh": "令人不安的地方在於：沒有人能解釋，為什麼任何一個物理過程「應該」會有任何感覺。我們能標出你看見紅色時是哪些神經元在放電，卻說不出為什麼那場放電會「伴隨著一種經驗」，而不是像計算機運作那樣在黑暗中默默發生。哲學家稱之為「困難問題」，歷經數個世紀，它依然全然敞開。你最熟悉的那件事，正是科學至今碰不到的那件事。",
+        "ja": "落ち着かないのはここです——いかなる物理過程に、なぜそもそも「感じ」が伴うのか、誰も説明できない。赤を見たときどのニューロンが発火するかは描けても、なぜその発火が、電卓の働きのように暗闇で起きるのではなく、体験を伴うのかは言えない。哲学者はこれを「ハードプロブレム（難しい問題）」と呼び、何世紀を経てもなお全く未解決のままです。あなたが最もよく知ることが、科学がまだ触れられないことなのです。"
+      },
+      "thread": {
+        "en": "If experience is this mysterious, a harder question follows: is this inner 'you' just the brain at work, or is it something more?",
+        "zh": "如果經驗如此神祕，緊接著就有一個更難的問題：這個內在的「你」，只是大腦在運作，還是另有他物？",
+        "ja": "体験がこれほど不可解なら、さらに難しい問いが続きます——この内なる「あなた」は、ただ脳が働いているだけなのか、それとも何かそれ以上なのか？"
+      }
+    },
+    {
+      "ref": "philosophy_of_mind_concept",
+      "hook": {
+        "en": "Is your mind just the brain — every thought a flicker of cells and nothing else? Or is there a 'you' that the wet machinery alone can never fully account for?",
+        "zh": "你的心智，只是大腦而已嗎——每個念頭都不過是細胞的一閃、別無其他？還是有一個「你」，是那團濕潤的機器本身永遠無法完全交代的？",
+        "ja": "あなたの心はただの脳なのか——どの思考も細胞のまたたきにすぎず、それ以外の何ものでもないのか？それとも、その湿った機械だけでは決して説明しきれない「あなた」がいるのか？"
+      },
+      "reveal": {
+        "en": "This is the question philosophy of mind has chewed on for centuries. One camp says the mind simply is the brain: thoughts are brain states, full stop, and 'you' reduce to neurons. Another insists experience is something extra that no list of physical facts captures. The argument is sharp because both sides have real force — we know the mind depends utterly on the brain, yet describing every atom of a brain still seems to leave the felt 'inside' unexplained.",
+        "zh": "這正是心智哲學咀嚼了數個世紀的問題。一派說，心智「就是」大腦：念頭即是腦的狀態，如此而已，「你」可以化約成神經元。另一派則堅持，經驗是某種多出來的東西，任何一張物理事實的清單都捕捉不到。這場爭論之所以尖銳，是因為雙方都握有真實的份量——我們知道心智徹底依賴大腦，然而把一顆大腦的每一個原子都描述完，那被感受到的「內在」，似乎依舊沒被解釋。",
+        "ja": "これこそ、心の哲学が何世紀も噛みしめてきた問いです。ある陣営は、心は脳そのものだと言う——思考とは脳の状態であり、それ以上でも以下でもなく、「あなた」はニューロンに還元される。別の陣営は、体験はどんな物理的事実の一覧にも収まらない「余分な何か」だと譲らない。この論争が鋭いのは、双方に本物の重みがあるからです——心が脳に全面的に依存することは分かっていても、脳の原子をすべて描き尽くしてなお、感じられる「内側」は説明されずに残るように見えるのです。"
+      },
+      "example": {
+        "en": "It surfaces in everyday talk too. When someone says 'I changed my mind,' did a self steer the brain — or did the brain simply shift states and then narrate a 'self' deciding? Both descriptions fit the same moment, and choosing between them is the whole debate in miniature.",
+        "zh": "它也浮現在日常的話語裡。當有人說「我改變了心意」，是一個「自我」操縱了大腦——還是大腦只是換了狀態，事後再敘述出一個正在「決定」的「自我」？兩種描述都吻合同一個瞬間，而要在兩者之間做選擇，正是整場辯論的縮影。",
+        "ja": "これは日常の言葉にも顔を出します。誰かが「考えを変えた」と言うとき、ある自己が脳を操ったのか——それとも脳がただ状態を移し、あとから「決めている自己」を語っただけなのか？どちらの描写も同じ瞬間に当てはまり、その間で選ぶことが、論争そのものの縮図なのです。"
+      },
+      "surprise": {
+        "en": "Push it to the edge: imagine a perfect copy of your brain, every connection mapped and run on a chip. Would that copy be you, awake and afraid — or a convincing stranger that only acts like you while the real you stays here? If the mind is just the brain's pattern, the copy should be you. If it isn't, two of you now exist. No one has a settled answer, and the question may decide what 'a person' even means.",
+        "zh": "把它推到極限：想像一個你大腦的完美副本，每一道連結都被測繪出來、在一塊晶片上運行。那個副本會是「你」嗎——醒著、會害怕——還是一個惟妙惟肖、只是「表現得像你」的陌生人，而真正的你仍留在這裡？如果心智只是大腦的圖樣，那副本就應該是你。如果不是，那現在就有兩個你了。沒有人有定論，而這個問題，或許將決定「一個人」究竟是什麼意思。",
+        "ja": "極限まで押してみましょう——あなたの脳の完璧な複製を想像してください。あらゆるつながりが写し取られ、チップ上で動いている。その複製は、目覚め怯える「あなた」なのか——それとも、あなたのように振る舞うだけの、よくできた他人で、本当のあなたはここに残るのか？心が脳の模様にすぎないなら、複製はあなたのはず。そうでないなら、いまあなたは二人いることになる。誰も定まった答えを持たず、この問いは「人とは何か」そのものを決めるのかもしれません。"
+      },
+      "thread": {
+        "en": "And if you really are your brain obeying physics, one last unease creeps in — when you decide, in what sense do you choose at all?",
+        "zh": "而如果你真的就是那顆服從物理的大腦，最後一絲不安便悄悄爬上來——當你做決定時，你究竟在什麼意義上「選擇」了？",
+        "ja": "そして、もしあなたが本当に物理に従う脳そのものなら、最後の不安が忍び寄ります——あなたが決めるとき、いったいどんな意味で「選んで」いるのでしょう？"
+      }
+    },
+    {
+      "ref": "free_will_concept",
+      "hook": {
+        "en": "You feel free. You could raise your left hand or your right, and it seems entirely up to you. But every neuron behind that choice is just obeying physics — so where, exactly, does your freedom fit in?",
+        "zh": "你覺得自己是自由的。你可以舉左手或舉右手，看起來全憑你決定。但那個選擇背後的每一顆神經元，都只是在服從物理——那麼，你的自由究竟安放在哪裡？",
+        "ja": "あなたは自由だと感じます。左手を上げることも右手を上げることもでき、すべて自分次第に思える。でも、その選択の背後にあるどのニューロンも、ただ物理に従っているだけ——では、あなたの自由は、いったいどこに収まるのでしょう？"
+      },
+      "reveal": {
+        "en": "If every thought is neurons obeying physics, then in what sense do you choose? The whole brain is matter following the same fixed laws as falling rain — and laws do not deliberate. Yet you plainly feel yourself weighing options and picking one. Free will is the knot where our deepest sense of being an author of our acts runs straight into a universe that may already be running on rails.",
+        "zh": "如果每個念頭都是神經元在服從物理，那你又是在什麼意義上「選擇」？整顆大腦都是物質，遵循著與落雨相同的固定定律——而定律並不會「斟酌」。然而你分明感覺到自己在權衡各種選項、挑出其一。自由意志，就是那個打結之處：我們「自己是行為作者」的最深感受，在這裡一頭撞上一個或許早已沿著軌道運行的宇宙。",
+        "ja": "もしどの思考もニューロンが物理に従っているだけなら、あなたはどんな意味で「選ぶ」のでしょう？脳全体は物質であり、落ちる雨と同じ決まった法則に従う——そして法則は「熟考」しません。それでもあなたは確かに、選択肢を量り、一つを選んでいると感じる。自由意志とは、その結び目です——「自分が行いの作者だ」という最も深い感覚が、すでにレールの上を走っているのかもしれない宇宙に、真正面からぶつかる場所なのです。"
+      },
+      "example": {
+        "en": "Think of the last time you 'chose' a flavor of ice cream. The pull toward chocolate arrived in your mind fully formed — you did not assemble it. You felt the wanting, then acted on it. But where did that wanting itself come from, if not from machinery you never set in motion?",
+        "zh": "想想你上一次「選」冰淇淋口味的時候。那股對巧克力的偏好，是完整成形地出現在你心裡的——不是你拼裝出來的。你感受到那份渴望，然後依著它行動。但那份渴望本身，又是從哪裡來的，如果不是來自一台你從未啟動過的機器？",
+        "ja": "前回アイスクリームの味を「選んだ」ときを思い出してください。チョコへの引かれは、すっかり形になってあなたの心に現れた——あなたが組み立てたのではない。その欲しさを感じ、それに従って動いた。でもその欲しさ自体は、あなたが一度も動かしたことのない仕掛けから来たのでなければ、どこから来たのでしょう？"
+      },
+      "surprise": {
+        "en": "Experiments deepen the unease. Brain scans can show the signal for some simple actions building up a fraction of a second before you feel yourself decide — as if the choice were already underway while 'you' were still making up your mind. The findings are fiercely argued over and far from the last word, yet they crack the door on the largest questions there are: who is really steering, and whether the captain is even on the bridge.",
+        "zh": "實驗讓這份不安更深。腦部掃描顯示，某些簡單動作的訊號，會在你「感覺到自己決定」的前一瞬間就開始累積——彷彿那個選擇早已在進行，而「你」還在拿主意。這些發現備受激烈爭辯、遠非定論，卻替最龐大的那些問題撬開了一道門縫：究竟是誰在掌舵，而那位船長，是不是根本不在艦橋上。",
+        "ja": "実験は不安をさらに深めます。脳の計測は、ある単純な行為の信号が、あなたが「決めた」と感じる一瞬前から立ち上がっていることを示す——まるで「あなた」がまだ迷っている間に、選択はすでに進行しているかのように。この結果は激しく論争され、決着には程遠いものの、最も大きな問いへの扉をわずかに開きます——本当に舵を取っているのは誰か、そしてその船長は、そもそも艦橋にいるのか。"
+      },
+      "thread": {
+        "en": "You have fallen from a single nerve signal all the way to the question of who you are. The trail ends here — but the field is wide open, and the deepest questions remain unanswered. Wander wherever a star pulls you.",
+        "zh": "你已經從單一道神經訊號，一路墜到了「你是誰」這個問題。這條路在此告終——但整片原野依然敞開，那些最深的問題仍懸而未決。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは一本の神経信号から、「あなたは誰か」という問いまで落ちてきました。道はここで終わります——でも野はまだ大きく開き、最も深い問いは答えのないまま残っています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "sensory_systems_concept", "target": "neurotransmission_concept", "relation_type": "conceptual" },
+    { "source": "neurotransmission_concept", "target": "neuroplasticity_concept", "relation_type": "causal" },
+    { "source": "neuroplasticity_concept", "target": "consciousness_concept", "relation_type": "conceptual" },
+    { "source": "consciousness_concept", "target": "philosophy_of_mind_concept", "relation_type": "conceptual" },
+    { "source": "philosophy_of_mind_concept", "target": "free_will_concept", "relation_type": "logical" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Read about the 'hard problem of consciousness' and why it splits philosophers, look up Libet's free-will experiments and the storm of debate around them, or read about split-brain patients — people whose two hemispheres were surgically separated and who seem, unsettlingly, to harbor two minds in one skull. The deepest mystery science has is still wide open, and you are welcome inside it.",
+    "zh": "想再往下墜一點？讀讀「意識的困難問題」、看看它為何讓哲學家們分裂兩派，查查利貝特（Libet）的自由意志實驗以及圍繞它的爭論風暴，或讀讀「裂腦」病人——那些左右半腦被手術分開的人，似乎令人不安地，在一顆顱骨裡藏著兩個心智。科學手上最深的謎，至今依然全然敞開，而你，受邀走進其中。",
+    "ja": "もっと落ちてみたいですか？「意識のハードプロブレム」と、それが哲学者をなぜ二分するのかを読み、リベット（Libet）の自由意志実験と、それを取り巻く論争の嵐を調べ、分離脳の患者について読んでみてください——左右の半球を手術で切り離され、一つの頭蓋に二つの心を宿しているかに見える人々です。科学が抱える最も深い謎は、いまなお大きく開かれており、あなたはその中へ招かれています。"
+  }
+}

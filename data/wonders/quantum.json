@@ -1,0 +1,192 @@
+{
+  "id": "quantum",
+  "accent": "PHY",
+  "title": { "en": "Quantum Reality", "zh": "量子真實", "ja": "量子の世界" },
+  "intro": {
+    "en": "At the smallest scale, reality stops behaving. Things sit in two states at once, link across empty space, and stay undecided until you look. In six steps, fall into the strangest rules in nature — and the best-tested science we have.",
+    "zh": "在最小的尺度上，現實開始不守規矩。東西可以同時處在兩種狀態、隔著虛空相連，並且在你看它之前都懸而未定。跟著六步，墜入大自然中最奇異的規則——也是我們手上驗證得最徹底的科學。",
+    "ja": "もっとも小さな尺度では、現実がふるまうのをやめます。物は二つの状態に同時にあり、空っぽの空間を越えて結びつき、見るまで決まらない。6 つのステップで、自然のなかでもっとも奇妙な規則——そして、私たちが手にするもっとも厳しく検証された科学——へと落ちていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "wave_particle_duality_concept",
+      "hook": {
+        "en": "A wave spreads out and ripples; a particle is a tiny dot in one spot. Light, and even an electron, somehow act like both. How can one thing be a smeared-out wave and a hard little ball at the same time?",
+        "zh": "波會散開、起伏；粒子是一個小點，待在一個位置上。可是光，甚至電子，竟然兩種樣子都有。一個東西怎麼能同時是攤開的波，又是一顆硬硬的小球？",
+        "ja": "波は広がって揺れ、粒子は一点にある小さな点。なのに光も、そして電子さえも、なぜかその両方のようにふるまいます。一つのものが、にじんだ波であると同時に、硬い小さな球でもあるなど、どうしてあり得るのでしょう？"
+      },
+      "reveal": {
+        "en": "The answer is that it is neither, and both. An electron or a photon acts like a spread-out wave or like a tiny particle depending only on how you choose to measure it. There is no hidden 'true' form underneath waiting to be caught. The wave tells you where the particle is likely to turn up; the particle is what you actually find when you look.",
+        "zh": "答案是：它兩者都不是，又兩者都是。電子或光子會表現得像攤開的波，或像微小的粒子，只取決於你選擇怎麼去量它。底下並沒有一個藏起來、等著被抓到的「真正」面貌。波告訴你粒子可能在哪裡現身；粒子，則是你真去看時所實際找到的東西。",
+        "ja": "答えは、どちらでもなく、どちらでもある、です。電子や光子は、あなたがどう測ると選ぶかだけで、広がった波のように、あるいは小さな粒子のようにふるまう。その下に、捕まるのを待つ「本当の」姿が隠れているわけではありません。波はその粒子がどこに現れそうかを教え、粒子は実際に見たときに見つかるものなのです。"
+      },
+      "example": {
+        "en": "Fire single particles one at a time through two narrow slits in a screen. Each lands as one dot, as a particle should. But let thousands pile up, and the dots quietly arrange themselves into stripes — an interference pattern, the signature of a wave.",
+        "zh": "讓粒子一顆一顆，穿過屏幕上兩道細縫。每一顆都落成一個點，就像粒子該有的樣子。但讓上千顆累積起來，那些點竟自己悄悄排成條紋——干涉條紋，正是波的招牌。",
+        "ja": "粒子を一つずつ、衝立にあけた二本の細いすき間に通してみます。どれも一つの点として着地する——粒子ならそうあるべきです。ところが何千個も積もると、点はひとりでに縞模様へと並んでいく——干渉縞、これは波の証なのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist that broke physicists' nerve. The particles go through one at a time, with nothing else around to bump into — yet the stripes still form. Each particle behaves as if it passed through both slits at once and met itself on the far side. A single, lonely electron interferes with itself.",
+        "zh": "這裡有個讓物理學家神經崩潰的轉折。粒子是一顆一顆過去的，周圍沒有別的東西可以碰撞——可是條紋還是出現了。每一顆粒子的行為，就像它同時穿過了兩道縫，並在另一邊與自己相遇。一顆孤單的電子，竟和它自己發生了干涉。",
+        "ja": "ここに、物理学者の神経をすり減らした逆転があります。粒子は一つずつ通っていて、周りにぶつかる相手もいない——なのに縞はやはり現れる。一つひとつの粒子が、まるで二本のすき間を同時に通り抜け、向こう側で自分自身と出会ったかのようにふるまうのです。たった一個の孤独な電子が、自分自身と干渉する。"
+      },
+      "thread": {
+        "en": "If a particle can be in two places at once until you look, what kind of theory could possibly describe a world like that?",
+        "zh": "如果一顆粒子在你看它之前，可以同時在兩個地方，那到底要什麼樣的理論，才能描述這樣的世界？",
+        "ja": "見るまで一つの粒子が二か所に同時にあり得るなら、そんな世界を描けるのは、いったいどんな理論なのでしょう？"
+      }
+    },
+    {
+      "ref": "quantum_mechanics_field",
+      "hook": {
+        "en": "Drop a ball and you can say exactly where it will land. So why can no one say exactly where a single electron will be — not because our tools are clumsy, but as a matter of principle?",
+        "zh": "丟一顆球，你能準確說出它會落在哪裡。那為什麼沒有人能準確說出單個電子會在哪裡——而且不是因為我們的工具笨拙，而是原則上就辦不到？",
+        "ja": "ボールを落とせば、どこに落ちるかを正確に言えます。なのになぜ、たった一つの電子がどこにあるかは誰も正確に言えないのでしょう——道具が粗いからではなく、原理として？"
+      },
+      "reveal": {
+        "en": "Quantum mechanics replaces 'where is it' with a wave of probabilities. The theory does not tell you the outcome; it tells you the odds — this much chance here, that much chance there. Send the same electron through the same setup a thousand times and it lands in different spots, yet the spread of those spots follows the wave with perfect precision. You can predict the pattern flawlessly, and never the single result.",
+        "zh": "量子力學把「它在哪裡」換成一片機率的波。這個理論不告訴你結果，它告訴你機率——這裡有這麼多機會，那裡有那麼多機會。讓同一個電子，穿過同樣的裝置一千次，它會落在不同的位置，但這些位置的分布，會完美精準地依循那片波。你能毫無瑕疵地預測整體圖樣，卻永遠算不出單一的那一次。",
+        "ja": "量子力学は「それはどこにあるか」を、確率の波に置き換えます。理論は結果を教えず、見込みを教える——ここにこれだけの可能性、あそこにあれだけの可能性、と。同じ電子を同じ装置に千回通すと、落ちる場所はそのつど違う。けれどその散らばり方は、波に寸分たがわず従う。全体の模様は完璧に予言でき、たった一回の結果は決して言えないのです。"
+      },
+      "example": {
+        "en": "It is like a perfectly fair die. You cannot call the next roll, yet you know the long run cold: each face one time in six. Quantum mechanics is the science of a universe that rolls dice — but rolls them with iron-clad statistics.",
+        "zh": "這就像一顆完全公正的骰子。你叫不出下一把是幾點，卻對長期結果瞭若指掌：每一面平均六次出現一次。量子力學，就是一門研究「會擲骰子的宇宙」的科學——只是它擲出的統計，鐵一般精準。",
+        "ja": "完全に公平なサイコロのようなものです。次の一振りは言い当てられないのに、長い目で見た結果は完璧にわかる——どの目も六回に一度。量子力学とは、サイコロを振る宇宙の科学です——ただし、その統計は鉄のように厳密なのです。"
+      },
+      "surprise": {
+        "en": "Here is the part that unsettles everyone: this randomness is not ignorance we could someday clear up with a better experiment. As far as we can tell, it is baked into reality itself — the universe genuinely does not decide until the moment of measurement. Einstein hated this with his whole heart. 'God does not play dice,' he wrote — and on this, the evidence has not gone his way.",
+        "zh": "這裡有件讓所有人不安的事：這份隨機，並不是某種我們將來能用更好的實驗釐清的「無知」。就我們所知，它就嵌在現實本身裡——宇宙是真的，在量測那一刻之前都還沒決定。愛因斯坦打從心底厭惡這一點。「上帝不擲骰子，」他寫道——而在這件事上，證據並沒有站在他那邊。",
+        "ja": "ここに、誰もを落ち着かなくさせる点があります。この偶然性は、いつかより良い実験で晴らせる「無知」ではありません。わかるかぎり、それは現実そのものに織り込まれている——宇宙は本当に、測定の瞬間まで決めていないのです。アインシュタインはこれを心から嫌いました。「神はサイコロを振らない」と彼は書きました——けれどこの点で、証拠は彼の味方をしませんでした。"
+      },
+      "thread": {
+        "en": "If the universe truly hasn't decided, then before you measure — where was the particle really? One man gave a famously unsettling answer.",
+        "zh": "如果宇宙真的還沒決定，那在你量測之前——粒子到底「真的」在哪裡？有一個人，給了一個著名而令人不安的答案。",
+        "ja": "宇宙が本当にまだ決めていないなら、測る前——粒子は「実際に」どこにあったのか？一人の人物が、有名で落ち着かない答えを出しました。"
+      }
+    },
+    {
+      "ref": "niels_bohr_person",
+      "hook": {
+        "en": "Surely the electron was somewhere before you looked, even if you couldn't know where. That feels like plain common sense. What if even that is wrong?",
+        "zh": "電子在你看它之前，總該「在某個地方」吧，就算你不知道是哪裡。這聽起來再合理不過了。但如果連這個都是錯的呢？",
+        "ja": "見る前でも、電子はどこかにあったはず——たとえどこかは知れなくても。それはごく当たり前に思えます。でも、もしそれすら間違いだとしたら？"
+      },
+      "reveal": {
+        "en": "Niels Bohr, the quiet Danish physicist, gave the boldest answer of the age: before it is measured, a particle simply has no definite value. Not unknown — undefined. Asking 'but where was it really?' is, in Bohr's view, asking a question with no answer, like asking what is north of the North Pole. The measurement does not reveal a position. The measurement is what brings one into being.",
+        "zh": "尼爾斯・波耳，那位沉靜的丹麥物理學家，給出了那個時代最大膽的答案：在被量測之前，粒子根本沒有確定的數值。不是「未知」——是「未定義」。在波耳看來，問「但它到底真的在哪裡」，等於問一個沒有答案的問題，就像問「北極的北邊是什麼」。量測並不是揭露一個位置。量測，才是讓位置誕生的那件事。",
+        "ja": "物静かなデンマークの物理学者ニールス・ボーアは、その時代でもっとも大胆な答えを出しました——測られる前、粒子にはそもそも確定した値がない。未知ではなく、未定義なのだ、と。「では実際どこにあったのか」と問うのは、ボーアに言わせれば答えのない問い——北極の北には何があるか、と尋ねるようなものです。測定は位置を暴くのではない。測定こそが、位置を生み出すのです。"
+      },
+      "example": {
+        "en": "Think of a spinning coin in the air. While it spins, it is not secretly already heads or tails — it is genuinely neither, a blur of both. Only when it slaps down on the table does it become one. Bohr said the quantum world is like the spin, not the landed coin: the answer doesn't exist until the table arrives.",
+        "zh": "想像一枚在空中旋轉的硬幣。當它旋轉時，它並不是私底下已經是正面或反面——它是真的兩者皆非，一團混在一起的模糊。只有當它「啪」地落到桌上，才變成其中一面。波耳說，量子世界像那旋轉，而不像落定的硬幣：在桌子出現之前，答案並不存在。",
+        "ja": "空中で回るコインを思い浮かべてください。回っている間、それはこっそり表か裏に決まっているのではなく——本当にどちらでもない、両方が混じったぼやけです。テーブルにぴしゃりと落ちて初めて、片方になる。ボーアは、量子の世界は落ちたコインではなく回転のほうだと言いました——テーブルが来るまで、答えは存在しないのです。"
+      },
+      "surprise": {
+        "en": "Bohr and Einstein argued this for the better part of three decades — two of the greatest minds in history, circling the same question across a lifetime. Einstein kept inventing clever thought experiments to prove the haze must hide a real, definite world; Bohr kept answering them. The quiet Dane mostly turned out right. And as later work would show, reality is stranger still than even Bohr dared to claim.",
+        "zh": "波耳與愛因斯坦為此爭論了將近三十年——歷史上最偉大的兩個頭腦，繞著同一個問題，糾纏了一輩子。愛因斯坦不斷設計巧妙的思想實驗，想證明那片模糊底下必定藏著一個真實、確定的世界；波耳則一次次回應他。最後，那位沉靜的丹麥人大致勝出。而後來的研究會顯示：現實，比連波耳都敢宣稱的，還要更加奇異。",
+        "ja": "ボーアとアインシュタインは、これを三十年近くにわたって論じ合いました——歴史上もっとも偉大な二つの頭脳が、生涯をかけて同じ問いの周りを回り続けたのです。アインシュタインは、ぼやけの下には実在する確定した世界が隠れているはずだと示そうと、巧妙な思考実験を次々編み出し、ボーアはそのたびに答えた。物静かなデンマーク人が、おおむね正しかった。そして後の研究が示すように、現実は、ボーアが言いきった以上になお奇妙だったのです。"
+      },
+      "thread": {
+        "en": "One of Einstein's cleverest objections involved a pair of particles linked across a great distance. He meant it as a trap for the theory. It turned out to be its weirdest feature of all.",
+        "zh": "愛因斯坦最巧妙的反駁之一，牽涉到一對隔著遙遠距離相連的粒子。他本意是要替這理論設下陷阱。結果，那卻成了它最詭異的一項特徵。",
+        "ja": "アインシュタインのもっとも巧妙な反論の一つは、遠く離れて結びついた一対の粒子をめぐるものでした。彼は理論への罠のつもりだった。それが、この理論でもっとも奇妙な特徴になったのです。"
+      }
+    },
+    {
+      "ref": "quantum_entanglement_concept",
+      "hook": {
+        "en": "Take two coins and seal each in a box, one box sent to the Moon. Open yours and see heads — and somehow you instantly know the far one is tails. Ordinary boxes were settled long before they parted. But what if the quantum coins were undecided until the very instant you peeked?",
+        "zh": "拿兩枚硬幣，各封進一個盒子，其中一個送上月球。打開你這邊、看到正面——你竟瞬間就知道遠方那個是反面。普通的盒子，早在分開之前就定下來了。但如果這兩枚量子硬幣，是在你偷看的那一瞬間才決定的呢？",
+        "ja": "二枚のコインをそれぞれ箱に封じ、一方を月へ送ります。あなたの箱を開けて表が出る——するとなぜか、遠くの一枚が裏だと即座にわかる。ふつうの箱は、離れるずっと前に決まっていました。でも、この量子のコインが、あなたが覗いたまさにその瞬間まで決まっていなかったとしたら？"
+      },
+      "reveal": {
+        "en": "That is quantum entanglement. Two particles can be born so deeply linked that they share a single, undecided state. Measure one and it picks an outcome — and in that same instant, its partner is fixed to match, whether it sits in the next room or on the far side of a galaxy. Neither had a value before. The choice made here pins down the answer there, faster than any signal could cross the gap.",
+        "zh": "那就是量子糾纏。兩顆粒子可以在誕生時就深深相連，共享同一個、尚未決定的狀態。量測其中一個，它選定一個結果——而就在同一瞬間，它的夥伴被固定成相對應的值，不管它在隔壁房間，還是在銀河的另一端。兩者先前都沒有確定的值。在這裡所做的選擇，就此釘死了那裡的答案，比任何訊號能跨越那段距離都還要快。",
+        "ja": "それが量子もつれです。二つの粒子は、たった一つの未決定の状態を分かち合うほど深く結びついて生まれることがあります。片方を測ると、それは結果を一つ選ぶ——そして同じ瞬間に、相手はそれに対応する値へと定まる。隣の部屋にいようと、銀河の反対側にいようと。どちらも前もって値を持っていなかった。ここでなされた選択が、向こうの答えを釘づけにする——どんな信号がその隔たりを越えるよりも速く。"
+      },
+      "example": {
+        "en": "This is not a story prop. Labs make entangled pairs of photons every day, send them down separate fibers to detectors kilometers apart, and watch the results lock together exactly as the theory demands — over and over, with no exception.",
+        "zh": "這不是故事裡的道具。實驗室每天製造成對糾纏的光子，把它們沿著各自的光纖送到相隔數公里的偵測器，然後看著結果完全照理論所要求的那樣鎖在一起——一次又一次，毫無例外。",
+        "ja": "これは物語の小道具ではありません。研究室では毎日もつれた光子の対をつくり、別々の光ファイバーで数キロ離れた検出器へ送り、結果が理論の要求どおりぴたりと連動するのを見ています——何度も何度も、例外なく。"
+      },
+      "surprise": {
+        "en": "Einstein mocked this as 'spooky action at a distance' and was sure it exposed a flaw — proof, he thought, that the particles must have carried hidden answers all along. Decades later the physicist John Bell found a way to actually test it: count the correlations, and hidden answers leave a different fingerprint than true entanglement. The experiments came back, again and again, on the side of the spookiness. It is real. The work won the Nobel Prize in Physics in 2022.",
+        "zh": "愛因斯坦嘲笑這是「鬼魅般的超距作用」，並深信它暴露了理論的破綻——他以為，這證明了粒子一路上必定攜帶著藏起來的答案。數十年後，物理學家約翰・貝爾找到了一個真正能檢驗它的方法：去數那些關聯，藏起來的答案會留下和真正糾纏不同的指紋。實驗的結果，一次又一次，站在「鬼魅」這一邊。它是真的。這項研究獲得了 2022 年的諾貝爾物理獎。",
+        "ja": "アインシュタインはこれを「不気味な遠隔作用」とあざけり、欠陥を暴いたと確信していました——粒子は最初から隠れた答えを携えていたはずだ、という証拠だと思ったのです。数十年後、物理学者ジョン・ベルが、それを実際に検証する方法を見つけました——相関を数えると、隠れた答えは真のもつれとは違う指紋を残す。実験は、何度も何度も、不気味さの側に返ってきました。これは本物です。その研究は、2022 年のノーベル物理学賞を受けました。"
+      },
+      "thread": {
+        "en": "Each step keeps circling one act: the moment you measure. That single act seems to force reality to choose. What on earth is going on at that instant?",
+        "zh": "每一步，都繞著同一個動作打轉：你量測的那一刻。那個動作，似乎逼著現實去做出選擇。在那一瞬間，到底發生了什麼事？",
+        "ja": "どのステップも、たった一つの行為の周りを回り続けています——測るその瞬間。その一挙動が、現実に選択を迫るように見える。その一瞬に、いったい何が起きているのでしょう？"
+      }
+    },
+    {
+      "ref": "measurement_concept",
+      "hook": {
+        "en": "Before you look, a particle is a haze of maybes. After you look, it is one solid fact. What is it about the act of measuring that turns a fog of possibilities into a single, definite answer?",
+        "zh": "在你看它之前，粒子是一團「可能」的迷霧。在你看它之後，它是一個結結實實的事實。量測這個動作，到底有什麼本事，能把一團可能性的霧，變成一個確定、唯一的答案？",
+        "ja": "見る前、粒子は「かもしれない」のもや。見たあと、それは一つの確かな事実。測るという行為のどこに、可能性の霧を、たった一つの確定した答えへ変える力があるのでしょう？"
+      },
+      "reveal": {
+        "en": "This is the measurement problem, and it sits unsolved at the very center of physics. The math describes a particle as a spread of possibilities that grows and flows smoothly — right up until someone measures it. At that moment the spread vanishes and one outcome stands alone. Nothing in the equations says why, or how, or what counts as a 'measurement.' The most successful theory we have goes quiet exactly where reality makes up its mind.",
+        "zh": "這就是量測問題，它至今未解，端坐在物理學最核心的位置。數學把粒子描述成一片可能性的散布，平順地擴張、流動——一直到有人去量它的那一刻為止。在那一刻，散布消失，只剩一個結果孤零零地站著。方程式裡沒有任何地方說明，為什麼、怎麼樣，或者什麼才算一次「量測」。我們手上最成功的理論，偏偏就在現實做出決定的那個地方，沉默了下來。",
+        "ja": "これが測定問題であり、物理学のまさに中心に未解決のまま座っています。数学は粒子を、なめらかに広がり流れていく可能性の散らばりとして描く——誰かがそれを測るその瞬間までは。その瞬間、散らばりは消え、一つの結果だけが残る。なぜか、どうしてか、何を「測定」と数えるのか——方程式のどこにも書かれていない。私たちのもっとも成功した理論は、現実が心を決めるまさにその場所で、口をつぐむのです。"
+      },
+      "example": {
+        "en": "Erwin Schrödinger pushed it to its breaking point with a cat. Seal a cat in a box with a quantum trigger that has a fifty-fifty chance of releasing poison. Follow the math literally and, until you open the box, the cat is in a blur of alive and dead at once. The thought experiment was meant to show how absurd the puzzle becomes when you scale it up to things we can hold.",
+        "zh": "薛丁格用一隻貓，把這問題推到了崩潰的臨界點。把一隻貓封進一個盒子，裡面有個量子觸發器，有一半一半的機率釋放毒藥。如果照字面跟著數學走，那麼在你打開盒子之前，這隻貓就處於一團「同時又活又死」的模糊之中。這個思想實驗，是要凸顯：當你把這道謎題放大到我們能捧在手裡的東西上，它會變得多麼荒謬。",
+        "ja": "エルヴィン・シュレーディンガーは、一匹の猫でこれを限界まで押し進めました。猫を箱に封じ、五分五分で毒を放つ量子の引き金を仕込む。数学を文字どおりたどると、箱を開けるまで、猫は生と死が同時に混じったぼやけの中にいる。この思考実験は、私たちが手にできるものまで拡大したとき、この謎がどれほど不条理になるかを示すためのものでした。"
+      },
+      "surprise": {
+        "en": "Here is the quiet shock: nobody agrees on why a look collapses the haze into a fact. There are several serious answers, and they are wildly different. One says the act of observing genuinely fixes the outcome. Another says the universe splits, and every possibility happens in its own branch — including a world where the cat lived and one where it didn't. The unnerving part is that every one of these pictures matches all the experiments perfectly. We cannot yet tell them apart.",
+        "zh": "這裡有個安靜的震撼：對於「為什麼一看就讓迷霧塌縮成事實」，沒有人有共識。有好幾個認真的答案，而且彼此天差地遠。其中一個說，觀測這個動作真的就定下了結果。另一個說，宇宙會分裂，每一種可能性都在它自己的分支裡發生——包括一個貓活著的世界，和一個貓死了的世界。最叫人不安的是：這每一幅圖像，都完美符合所有的實驗。我們至今還無法把它們分辨開來。",
+        "ja": "ここに静かな衝撃があります——なぜ一瞥がもやを事実へ崩すのか、誰も意見が一致しない。真剣な答えがいくつもあり、しかも互いに大きく食い違う。ある説は、観測という行為が本当に結果を定めるという。別の説は、宇宙が分かれ、あらゆる可能性がそれぞれの枝で起きる——猫が生きた世界も、死んだ世界も。落ち着かないのは、これらの描像のどれもが、すべての実験に完璧に合うことです。私たちはまだ、それらを見分けられないのです。"
+      },
+      "thread": {
+        "en": "For a century these riddles were a headache to argue over. Then someone asked the opposite question: what if we stopped fighting the weirdness and started building with it?",
+        "zh": "整整一個世紀，這些謎題都是拿來爭論的頭痛事。後來有人問了一個相反的問題：如果我們不再對抗這份詭異，反而開始拿它來蓋東西呢？",
+        "ja": "一世紀のあいだ、これらの謎は論じ合うための頭痛の種でした。やがて誰かが、逆の問いを立てました——奇妙さと戦うのをやめ、それで何かをつくり始めたら？"
+      }
+    },
+    {
+      "ref": "quantum_computing_concept",
+      "hook": {
+        "en": "Superposition, entanglement, undecided states — for a hundred years these were the puzzles that made physicists' heads ache. What if, instead of being a problem, they were exactly the raw material for a new kind of machine?",
+        "zh": "疊加、糾纏、未定的狀態——一百年來，這些都是讓物理學家頭痛的謎題。但如果，它們不是麻煩，反而正是一種全新機器的原料呢？",
+        "ja": "重ね合わせ、もつれ、未決定の状態——百年のあいだ、これらは物理学者の頭を悩ませる謎でした。でも、もしそれらが問題ではなく、まさに新しい種類の機械の材料だったとしたら？"
+      },
+      "reveal": {
+        "en": "That is quantum computing. An ordinary bit is a zero or a one. A quantum bit, riding on superposition, holds a blend of both at once — and a row of them, entangled, can explore a vast web of possibilities together rather than one at a time. For a few special problems, this lets the machine fold a calculation that would crush an ordinary computer down to something it can actually finish. The strangeness stops being a riddle and becomes a tool.",
+        "zh": "那就是量子計算。一個普通的位元，不是零就是一。一個量子位元，乘著疊加，同時握住兩者的混合——而一排彼此糾纏的量子位元，能一起去探索一張龐大的可能性之網，而不是一次只試一種。對少數幾類特殊的問題，這讓機器把一道會壓垮普通電腦的計算，摺疊成它真的算得完的東西。那份奇異，不再是個謎題，而成了一件工具。",
+        "ja": "それが量子計算です。ふつうのビットは 0 か 1。重ね合わせに乗った量子ビットは、その両方の混ざりを同時に保ち——もつれた量子ビットが並べば、一度に一つずつではなく、可能性の広大な網をともに探れる。いくつかの特別な問題では、これによって、ふつうのコンピュータを押しつぶす計算を、実際にやり終えられるものへと折りたためるのです。奇妙さは謎であることをやめ、道具になります。"
+      },
+      "example": {
+        "en": "A machine built on 'spooky' and 'undecided' could one day crack codes that guard today's secrets, or simulate a molecule atom by atom to design a new medicine or material — tasks no ordinary computer could ever touch. Real quantum computers already run, still small and delicate, and the frontier is being built right now.",
+        "zh": "一台建立在「鬼魅」與「未定」之上的機器，有朝一日或許能破解守護當今祕密的密碼，或一個原子一個原子地模擬分子，去設計新藥或新材料——這些都是普通電腦永遠碰不到的任務。真正的量子電腦已經在運轉了，仍然小巧而脆弱，而這片前沿，此刻正在被建造。",
+        "ja": "「不気味」と「未決定」の上に築かれた機械は、いつか今日の秘密を守る暗号を解き、あるいは分子を原子ごとにシミュレートして新しい薬や材料を設計するかもしれません——ふつうのコンピュータには決して届かない仕事です。本物の量子コンピュータはすでに動いており、まだ小さく繊細で、その最前線は、いままさに築かれているところです。"
+      },
+      "surprise": {
+        "en": "Step back and see the whole arc. The very features that drove Einstein to call the theory broken — the dice, the spookiness, the refusal to decide — are now the engine of a technology being built in laboratories today. The deepest weirdness in nature turned out not to be a flaw to explain away, but a resource to harness. That is the quiet pattern of physics: what looks like a wall is often a door.",
+        "zh": "退一步，看這整道弧線。那些曾逼得愛因斯坦說這理論壞掉了的特徵——骰子、鬼魅、拒絕決定——如今正是一項今日在實驗室裡被打造出來的技術的引擎。大自然中最深的詭異，最後證明不是一個該被解釋掉的瑕疵，而是一份可以駕馭的資源。這正是物理學那個安靜的規律：看起來像牆的東西，往往是一扇門。",
+        "ja": "一歩下がって、この弧の全体を見てください。アインシュタインに理論は壊れていると言わせた当の特徴——サイコロ、不気味さ、決めることの拒否——が、いまや今日の研究室で築かれる技術のエンジンなのです。自然のもっとも深い奇妙さは、説明して片づけるべき欠陥ではなく、使いこなせる資源だった。これこそ物理学の静かな規則です——壁に見えるものは、しばしば扉なのです。"
+      },
+      "thread": {
+        "en": "You've reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "wave_particle_duality_concept", "target": "quantum_mechanics_field", "relation_type": "conceptual" },
+    { "source": "quantum_mechanics_field", "target": "niels_bohr_person", "relation_type": "conceptual" },
+    { "source": "niels_bohr_person", "target": "quantum_entanglement_concept", "relation_type": "logical" },
+    { "source": "quantum_entanglement_concept", "target": "measurement_concept", "relation_type": "conceptual" },
+    { "source": "measurement_concept", "target": "quantum_computing_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up the double-slit experiment and watch single electrons build a pattern frame by frame; read how Bell's theorem turned 'spooky action' into a thing you can test, and why it won the 2022 Nobel Prize; or sit with Schrödinger's cat and pick which answer to the measurement puzzle you'd bet on — and the strangeness here becomes real, testable science.",
+    "zh": "想再往下墜一點？去查查雙縫實驗，看單個電子如何一格一格堆出條紋；讀讀貝爾定理如何把「鬼魅般的超距作用」變成一件你能檢驗的事，以及它為什麼贏得 2022 年的諾貝爾獎；或者陪薛丁格的貓坐一會兒，挑一個你願意下注的量測問題答案——這裡的奇異，就會變成真實、可檢驗的科學。",
+    "ja": "もっと落ちてみたいですか？二重スリット実験を調べ、単一の電子が一コマずつ模様を築くのを見て、ベルの定理がどうやって「不気味な遠隔作用」を検証できるものに変え、なぜ 2022 年のノーベル賞を受けたのかを読み、シュレーディンガーの猫と少し向き合って、測定の謎へのどの答えに賭けるかを選んでみてください——ここでの奇妙さが、現実の、検証できる科学に変わります。"
+  }
+}

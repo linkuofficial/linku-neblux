@@ -1,0 +1,192 @@
+{
+  "id": "ideas-that-spread",
+  "accent": "HIS",
+  "title": { "en": "How Ideas Spread", "zh": "思想如何傳播", "ja": "思想はいかに広がるか" },
+  "intro": {
+    "en": "An idea trapped in one head changes nothing. The real turning points of history are the moments when copying an idea suddenly got cheap. In six steps, follow the technology of thought itself — from the first cheap paper to the feed in your pocket.",
+    "zh": "一個被困在單一腦袋裡的想法，什麼都改變不了。歷史真正的轉捩點，是「複製一個想法」突然變便宜的那些時刻。跟著六步，追蹤思想本身的技術——從第一張便宜的紙，到你口袋裡的動態消息。",
+    "ja": "一つの頭の中に閉じ込められた考えは、何も変えません。歴史の本当の転換点は、ある考えを「複製する」ことが突然安くなった瞬間です。6 つのステップで、思考そのものの技術を追いましょう——最初の安価な紙から、あなたのポケットの中のフィードまで。"
+  },
+  "steps": [
+    {
+      "ref": "chinese_invention_of_paper_event",
+      "hook": {
+        "en": "Before paper, you wrote on silk you couldn't afford or bamboo strips you could barely lift. So how do you ever carry a whole library of ideas in your hands?",
+        "zh": "在紙出現之前，你只能寫在買不起的絲帛上，或是搬都搬不動的竹簡上。那麼，你要怎麼把一整座圖書館的想法，捧在手裡帶走？",
+        "ja": "紙が現れる前、人は買えないほど高い絹か、持ち上げるのもやっとの竹簡に書いていました。では、まるごと一つの図書館分の考えを、どうやって手で持ち運べるのでしょう？"
+      },
+      "reveal": {
+        "en": "In China, two inventions changed everything. First, cheap paper from pulped plant fibres — light, foldable, and quick to make. Then woodblock printing: carve a page once into a wooden block, ink it, and press out copy after copy. Suddenly a thought could be made light, copied, and stored — no longer locked to one fragile, costly scroll.",
+        "zh": "在中國，兩項發明改變了一切。首先是用植物纖維搗成的便宜紙——輕、可摺、做得快。接著是雕版印刷：把一頁字一次刻進木板，上墨，就能一張接一張地壓印出來。突然之間，一個念頭可以被做得很輕、被複製、被保存——不再被鎖在一卷脆弱又昂貴的卷軸裡。",
+        "ja": "中国で、二つの発明がすべてを変えました。まず、植物の繊維をすりつぶした安価な紙——軽く、折れて、速く作れる。次に木版印刷——一ページを一度木の板に彫り、墨をつけ、次々と押し刷る。突然、一つの考えを軽くし、複製し、保存できるようになった——もはや、もろくて高価な一巻の巻物に縛られなくなったのです。"
+      },
+      "example": {
+        "en": "By the 800s, Chinese workshops were block-printing Buddhist scriptures and almanacs by the thousand. One surviving printed scroll, the Diamond Sutra, is dated to 868 — already a finished, mass-made book.",
+        "zh": "到了九世紀，中國的作坊已經用雕版一次印出成千上萬份佛經與曆書。其中一卷留存至今的印刷品《金剛經》，標記著西元 868 年——它已經是一本成形的、大量製作的書。",
+        "ja": "九世紀には、中国の工房が仏典や暦を木版で何千部も刷っていました。現存する印刷物の一つ『金剛経』は 868 年の日付を持ち——すでに完成した、大量生産の本でした。"
+      },
+      "surprise": {
+        "en": "Here's the twist: paper then crept westward along the Silk Road for centuries before Europe finally had it. The 'Gutenberg moment' — cheap copies flooding a society — had effectively happened in Asia first, by roughly a thousand years. The great leap was already old before the West met it.",
+        "zh": "意外的是：紙接著沿著絲路向西緩緩爬行了好幾個世紀，歐洲才終於用上它。那個「古騰堡時刻」——便宜的複本淹沒整個社會——其實早在亞洲先發生了一次，大約早了一千年。當西方遇見這場大躍進時，它早已是舊聞。",
+        "ja": "意外なことに、紙はその後シルクロードを西へ何世紀もかけて這い進み、ヨーロッパがようやく手にしました。あの「グーテンベルクの瞬間」——安い複製が社会にあふれること——は、実はアジアで先に起きていた。およそ千年も早く。西洋が出会ったとき、その大跳躍はもう古い話だったのです。"
+      },
+      "thread": {
+        "en": "Woodblocks still meant carving each page by hand. What if you could rearrange the same letters to print any page at all?",
+        "zh": "但雕版仍得把每一頁親手刻出來。如果你能把同一批字母重新排列，就印得出任何一頁呢？",
+        "ja": "とはいえ木版は、まだ一ページずつ手で彫る必要がありました。もし同じ文字を並べ替えるだけで、どんなページでも刷れるとしたら？"
+      }
+    },
+    {
+      "ref": "invention_of_printing_press_event",
+      "hook": {
+        "en": "Carving a fresh block for every page is slow. What if the letters came loose — and you could set them, print, then scatter them and build the next page?",
+        "zh": "替每一頁刻一塊新版，太慢了。如果字母是一個個分開的——你可以排好、印完、再打散，重組出下一頁呢？",
+        "ja": "ページごとに新しい版を彫るのは遅い。もし文字が一つひとつばらばらで——並べて刷り、ばらして次のページを組めるとしたら？"
+      },
+      "reveal": {
+        "en": "That's movable type. In the 1450s, Johannes Gutenberg cast each letter as a tiny reusable metal block, arranged them into a page, and pressed inked sheets against them with a converted wine press. One workshop could now strike thousands of identical books. Copying an idea suddenly got dramatically cheaper — in a single human generation.",
+        "zh": "那就是活字印刷。1450 年代，古騰堡把每個字母鑄成一塊可重複使用的小金屬塊，排成一頁，再用一台改裝過的葡萄酒壓榨機，把沾了墨的紙壓上去。一間作坊，從此能印出成千上萬本一模一樣的書。複製一個想法，突然變得便宜得驚人——就在一個世代之內。",
+        "ja": "それが活版印刷です。1450 年代、ヨハネス・グーテンベルクは文字を一つずつ再利用できる小さな金属の塊として鋳造し、ページに組み、改造したぶどう搾り機で墨をつけた紙を押しつけました。一つの工房が、まったく同じ本を何千冊も刷れるようになった。ある考えを複製することが突然、劇的に安くなった——たった一世代のうちに。"
+      },
+      "example": {
+        "en": "Gutenberg's Bible, printed around 1455, was the first big European book made this way. The same trays of metal letters that set its pages could be broken up that afternoon and reset to print something completely different.",
+        "zh": "古騰堡的《聖經》，大約在 1455 年印成，是歐洲第一本用這種方式做出的大書。當天排出它書頁的那一盤金屬字母，下午就能拆掉，重排去印一本完全不同的書。",
+        "ja": "1455 年ごろに刷られたグーテンベルク聖書は、この方式で作られた最初のヨーロッパの大著でした。そのページを組んだ金属活字の盆は、その日の午後にはばらして組み直し、まったく別のものを刷ることができたのです。"
+      },
+      "surprise": {
+        "en": "The twist is the sheer speed of the flood. Within a few decades, Europe went from a few thousand laboriously hand-copied books to many millions in print. The ancient bottleneck on human knowledge — that every copy needed a scribe's whole day — simply snapped, and never came back.",
+        "zh": "意外的是這場洪水的速度。短短幾十年內，歐洲就從幾千本辛苦手抄的書，暴增到數以百萬計的印刷書。人類知識千年來的那道瓶頸——每一份複本都得耗掉一位抄寫員一整天——就這樣斷了，再也沒接回去。",
+        "ja": "意外なのは、その洪水のすさまじい速さです。わずか数十年で、ヨーロッパは苦労して手写した数千冊から、印刷された数百万冊へと跳ね上がりました。人類の知識をしばってきた古いボトルネック——一部の複製ごとに写字生の丸一日が要ること——は、ただぷつりと切れ、二度と戻りませんでした。"
+      },
+      "thread": {
+        "en": "Cheap copies didn't just spread the old books faster. They began to remake the societies that made them. How?",
+        "zh": "便宜的複本，不只是把舊書傳得更快。它們開始重塑那些製造它們的社會。怎麼做到的？",
+        "ja": "安い複製は、古い本をただ速く広めただけではありません。それを生んだ社会そのものを作り替え始めた。どうやって？"
+      }
+    },
+    {
+      "ref": "printing_revolution_concept",
+      "hook": {
+        "en": "If you can suddenly copy any text a thousandfold and no one can stop it, what does that do to the people in charge of which ideas are allowed?",
+        "zh": "如果你突然能把任何文字複製上千份，而且沒人攔得住，這對那些掌管「哪些想法被允許」的人，會造成什麼？",
+        "ja": "もしどんな文章でも突然千倍に複製でき、誰も止められないとしたら——どの考えを許すかを握る人々に、それは何をもたらすでしょう？"
+      },
+      "reveal": {
+        "en": "Cheap print didn't only spread old ideas — it created new kinds of power. It carried the Reformation across Europe in a few years. It pushed reading down from a tiny elite to ordinary people, sparking mass literacy. It even helped freeze drifting local dialects into standardized national languages, because printers had to pick one spelling and stamp it everywhere.",
+        "zh": "便宜的印刷不只是傳播舊想法——它創造出新型態的權力。它在短短幾年內把宗教改革帶遍全歐。它把閱讀從極少數菁英手中下放給一般人，點燃了大眾識字。它甚至幫忙把原本飄移不定的地方方言，凝固成標準化的民族語言——因為印刷工得選定一種拼法，再到處印同一種。",
+        "ja": "安価な印刷は、古い考えを広めただけでなく——新しい種類の力を生みました。数年でヨーロッパ全土に宗教改革を運んだ。読むことを、ごく一部のエリートから普通の人々へと押し下げ、大衆の識字を点火した。さらに、揺れ動いていた地方の方言を、標準化された国民の言語へと凍りつかせさえした——印刷業者が一つの綴りを選び、どこでも同じものを刷らねばならなかったからです。"
+      },
+      "example": {
+        "en": "In 1517, a monk named Martin Luther wrote up a list of complaints against the church. Within weeks, printers across the German lands had copied it far and wide — turning one local protest into a continent-wide storm.",
+        "zh": "1517 年，一位名叫馬丁・路德的修士寫下一串對教會的不滿。短短幾週內，德意志各地的印刷工就把它複製得四處流傳——把一場地方抗議，變成席捲整個歐陸的風暴。",
+        "ja": "1517 年、マルティン・ルターという修道士が教会への不満を書き連ねました。数週間のうちに、ドイツ各地の印刷業者がそれを遠くまで複製し——一つの地方の抗議を、大陸全体の嵐へと変えたのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: Luther's protest became unstoppable not because it was right, but because presses copied it faster than any authority could suppress it. The church could burn one pamphlet — but a hundred more were already printed in the next town. For the first time, an idea could simply out-run the people trying to bury it.",
+        "zh": "意外的是：路德的抗議之所以擋不住，不是因為它對，而是因為印刷機複製它的速度，比任何當局壓制它的速度都快。教會能燒掉一本小冊子——但隔壁城鎮早就又印好了一百本。人類史上第一次，一個想法可以直接「跑贏」想埋葬它的人。",
+        "ja": "意外なのはここです——ルターの抗議が止められなくなったのは、それが正しかったからではなく、印刷機がそれを複製する速さが、どんな権力が抑え込む速さよりも上回ったからです。教会は一冊の小冊子を焼ける——けれど、隣町ではもう百冊が刷り上がっている。史上初めて、一つの考えが、それを葬ろうとする人々を走って振り切れるようになったのです。"
+      },
+      "thread": {
+        "en": "If everyone can now read and check the same printed page, what happens when scholars start checking each other's work?",
+        "zh": "如果現在人人都能讀到、查核同一頁印刷品，那當學者開始互相查核彼此的研究，會發生什麼？",
+        "ja": "もし誰もが同じ印刷ページを読み、確かめられるなら——学者たちがたがいの研究を確かめ合い始めたとき、何が起きるでしょう？"
+      }
+    },
+    {
+      "ref": "scientific_revolution_event",
+      "hook": {
+        "en": "One clever person can be brilliantly, confidently wrong. So how did humanity ever build knowledge that corrects itself instead of just piling up mistakes?",
+        "zh": "一個聰明人，也可能既精彩又自信地搞錯。那麼，人類究竟是怎麼建立起一種會「自我修正」、而不是只把錯誤越疊越高的知識的？",
+        "ja": "賢い一人が、見事に、自信たっぷりに間違えることもあります。では人類はいったいどうやって、誤りをただ積み上げるのではなく、自分で「修正していく」知識を築いたのでしょう？"
+      },
+      "reveal": {
+        "en": "Print made science possible as a shared network. Scholars across a whole continent could now read the same results, repeat the same experiments, and build on — or tear down — one another's claims. Knowledge stopped being a private treasure passed down in secret and became a public, cumulative, self-correcting record that anyone could join.",
+        "zh": "印刷讓科學得以成為一張共享的網。整片大陸上的學者，現在能讀到同一份結果、重複同一個實驗，並在彼此的主張上繼續搭建——或把它推翻。知識不再是私下祕傳的私人寶藏，而成了一份公開、可累積、能自我修正的紀錄，任何人都能加入。",
+        "ja": "印刷は、科学を「共有のネットワーク」として可能にしました。大陸じゅうの学者が、同じ結果を読み、同じ実験を繰り返し、たがいの主張の上に積み上げ——あるいは打ち崩せるようになった。知識は、秘かに受け継がれる私的な宝であることをやめ、誰もが加われる、公開され積み重なり自分で修正される記録になったのです。"
+      },
+      "example": {
+        "en": "When Isaac Newton published his laws of motion in 1687, mathematicians across Europe could read the exact same equations, test them against the planets, and confirm them for themselves — no need to trust Newton's word alone.",
+        "zh": "1687 年牛頓發表他的運動定律時，全歐洲的數學家都能讀到一模一樣的方程式，拿它們去對照行星驗算，自己親手確認——不必只憑牛頓一句話就相信。",
+        "ja": "1687 年にニュートンが運動の法則を発表したとき、ヨーロッパじゅうの数学者がまったく同じ式を読み、惑星と照らして検証し、自分で確かめられました——ニュートンの言葉だけを信じる必要はなかったのです。"
+      },
+      "surprise": {
+        "en": "The twist: the real engine of science isn't the lone genius — it's the printed, shared record itself. A claim only becomes science when strangers anywhere can copy it, test it, and overturn it. Cheap copying didn't just spread science; it is the thing that lets science be science at all.",
+        "zh": "意外的是：科學真正的引擎，不是孤獨的天才——而是那份被印出來、被共享的紀錄本身。一個主張，唯有當任何地方的陌生人都能複製它、檢驗它、推翻它時，才成為科學。便宜的複製不只是傳播了科學；它正是讓科學「之所以能是科學」的那個東西。",
+        "ja": "意外なのはこれです——科学の本当のエンジンは、孤独な天才ではなく、印刷され共有された記録そのものです。ある主張が科学になるのは、どこの見知らぬ他人でもそれを複製し、検証し、覆せるときだけ。安い複製は科学を広めただけでなく——科学を科学たらしめている、まさにそのものなのです。"
+      },
+      "thread": {
+        "en": "Paper, presses, shared records — each one dropped the cost of copying. What happens when that cost falls all the way to nothing?",
+        "zh": "紙、印刷機、共享的紀錄——每一樣都讓複製的成本下降。那如果這個成本，一路掉到趨近於零呢？",
+        "ja": "紙、印刷機、共有の記録——どれも複製のコストを下げてきました。では、そのコストがゼロ近くまで落ちきったら、何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "development_of_internet_event",
+      "hook": {
+        "en": "Paper made copies cheap. The press made them cheaper. What would the world look like if copying an idea cost essentially nothing at all — and arrived anywhere, instantly?",
+        "zh": "紙讓複製變便宜。印刷機讓它更便宜。如果有一天，複製一個想法幾乎不花任何成本——而且瞬間就能送到任何地方，世界會變成什麼樣子？",
+        "ja": "紙は複製を安くした。印刷機はもっと安くした。では、ある考えを複製するコストがほぼゼロになり——しかもどこへでも瞬時に届くとしたら、世界はどう見えるでしょう？"
+      },
+      "reveal": {
+        "en": "That's the internet. It links computers all over the world into one network, where a copy of a message, a photo, or an entire book can be sent across the planet in a fraction of a second — and copied again, endlessly, at almost no cost. The same leap as paper and print, pushed to its limit: copying is now instant, and global.",
+        "zh": "那就是網際網路。它把全世界的電腦連成一張網，一封訊息、一張照片，乃至一整本書的複本，都能在不到一秒內傳遍全球——再被無止盡地複製，幾乎不花成本。這是跟紙與印刷同一種躍進，被推到極限：複製，如今是瞬間的，也是全球的。",
+        "ja": "それがインターネットです。世界じゅうのコンピュータを一つのネットワークにつなぎ、メッセージや写真、本まるごとの複製を、一秒の何分の一かで地球の裏側へ送り——さらに際限なく、ほぼ無コストで複製できる。紙と印刷と同じ跳躍を、限界まで押し進めたもの。複製はいまや、瞬時で、地球規模なのです。"
+      },
+      "example": {
+        "en": "A video filmed on a phone in one country can be watched by millions on the other side of the world the same afternoon — at no cost to the person who shared it. The same words that once took a scribe a day now reach a continent before your tea goes cold.",
+        "zh": "一支在某國用手機拍下的影片，當天下午就能被地球另一端的數百萬人看見——分享的人不花一毛錢。從前要抄寫員花一整天的同一段文字，如今在你的茶還沒涼之前，就傳遍了一整片大陸。",
+        "ja": "ある国でスマホで撮った動画が、その日の午後には地球の反対側の数百万人に見られる——共有した人には何のコストもかからずに。かつて写字生が丸一日かけた同じ言葉が、いまやお茶が冷める前に大陸へ届くのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: it's the same leap as Gutenberg's, but now the printing press sits in everyone's pocket. The power that once belonged to a guild of printers — to copy an idea and send it everywhere — now belongs to every single person with a phone. Anyone can reach everyone, for free.",
+        "zh": "意外的是：這跟古騰堡是同一種躍進，只是現在那台印刷機，就裝在每個人的口袋裡。從前屬於一個印刷業公會的權力——複製一個想法、把它送到各地——如今屬於每一個拿著手機的人。任何人，都能免費觸及所有人。",
+        "ja": "意外なのはこれです——グーテンベルクと同じ跳躍ですが、いまやその印刷機は誰のポケットにも収まっている。かつて印刷業者のギルドだけが持っていた力——考えを複製し、どこへでも送る力——が、いまはスマホを持つ一人ひとりのものになった。誰もが、無料で、すべての人に届くのです。"
+      },
+      "thread": {
+        "en": "But carrying a message instantly and everywhere quietly changes the message itself. How can the way an idea travels change what the idea means?",
+        "zh": "但「瞬間、無遠弗屆地」傳遞一則訊息，悄悄改變了訊息本身。傳播方式，怎麼會改變一個想法的「意義」？",
+        "ja": "けれど、メッセージを瞬時にどこへでも運ぶことは、ひそかにメッセージそのものを変えます。伝わり方が、考えの「意味」をどう変えうるのでしょう？"
+      }
+    },
+    {
+      "ref": "media_theory_concept",
+      "hook": {
+        "en": "We assume a message stays the same whether it's whispered, printed, or posted online. But what if how an idea travels quietly rewrites the idea itself?",
+        "zh": "我們總假設，一則訊息不管是被耳語、被印出、還是被貼上網，內容都一樣。但如果一個想法「怎麼傳」，會悄悄改寫這個想法本身呢？",
+        "ja": "私たちは、メッセージはささやかれようと、印刷されようと、ネットに投稿されようと、同じだと思い込んでいます。でも、考えの「伝わり方」が、ひそかにその考え自体を書き換えているとしたら？"
+      },
+      "reveal": {
+        "en": "This is the heart of media theory, captured in one line: the medium is the message. A book invites slow, private, linear thought. A feed invites fast, public, fragmented reaction. Each new tool for copying ideas reshapes not only what we know, but how we think — what feels true, what feels urgent, what we even notice. The channel is never neutral.",
+        "zh": "這正是媒介理論的核心，被濃縮成一句話：媒介即訊息。一本書邀請你緩慢、私密、線性地思考。一則動態消息邀請你快速、公開、碎片化地反應。每一種複製想法的新工具，重塑的不只是我們「知道什麼」，還有我們「怎麼想」——什麼感覺像真的、什麼感覺很急、我們甚至「注意到」什麼。傳遞的管道，從來不是中立的。",
+        "ja": "これがメディア理論の核心であり、一行に凝縮されています——メディアはメッセージである。本は、ゆっくりとした、私的で、線的な思考を誘う。フィードは、速く、公開された、断片的な反応を誘う。考えを複製する新しい道具はどれも、私たちが「何を知るか」だけでなく、「どう考えるか」を作り替える——何が真実に感じられ、何が緊急に感じられ、そもそも何に気づくのかを。経路は、決して中立ではないのです。"
+      },
+      "example": {
+        "en": "The same news told as a printed page, a thirty-second clip, or a one-line post lands as three different things in your mind — calm, dramatic, or instantly forgettable — though the underlying facts never changed.",
+        "zh": "同一則新聞，以一頁印刷品、一段三十秒的影片，或一行貼文的形式說出來，會在你心裡落成三種完全不同的東西——冷靜的、戲劇化的，或轉眼就忘的——儘管底層的事實從未改變。",
+        "ja": "同じニュースでも、印刷されたページ、三十秒のクリップ、一行の投稿として語られると、あなたの心の中で三つの別物として着地します——落ち着いたもの、ドラマチックなもの、すぐ忘れるもの——下にある事実は何も変わっていないのに。"
+      },
+      "surprise": {
+        "en": "The deepest twist closes the loop. The same printing press that helped end witch hunts — by spreading reasoned argument — also helped fuel them, by spreading the manuals that named witches. Cheap copying carries truth and lies with equal ease; it has no opinion about which it spreads. That oldest problem now runs at light speed, straight into the feed in your hand.",
+        "zh": "最深的意外，把這個圈閉合了起來。同一台幫忙終結獵巫的印刷機——靠傳播理性的論證——也幫忙煽動了獵巫，靠傳播那些指認女巫的手冊。便宜的複製，同樣輕易地承載真相與謊言；它對自己傳的是哪一種，毫無意見。那個最古老的問題，如今以光速運行，一路衝進你手裡的那則動態消息。",
+        "ja": "もっとも深い意外が、この輪を閉じます。魔女狩りを終わらせるのを助けた同じ印刷機——理性的な議論を広めることで——が、魔女を名指しする手引書を広めることで、それをあおりもしたのです。安い複製は、真実と嘘を等しく軽々と運ぶ。どちらを広めているかについて、それは何の意見も持たない。あの最も古い問題が、いまや光の速さで、あなたの手の中のフィードへとまっすぐ流れ込んでいるのです。"
+      },
+      "thread": {
+        "en": "You've followed copying from the first sheet of paper to the screen in your hand — and the thread runs straight into your own feed. The field is open; wander wherever a star pulls you.",
+        "zh": "你已經跟著「複製」這條線，從第一張紙一路走到你手中的螢幕——而這條線，直直地連進了你自己的動態消息。星空敞開著；哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは「複製」という糸を、最初の一枚の紙から手の中の画面まで追ってきました——そしてその糸は、あなた自身のフィードへとまっすぐ続いています。野は開かれています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "chinese_invention_of_paper_event", "target": "invention_of_printing_press_event", "relation_type": "historical" },
+    { "source": "invention_of_printing_press_event", "target": "printing_revolution_concept", "relation_type": "causal" },
+    { "source": "printing_revolution_concept", "target": "scientific_revolution_event", "relation_type": "causal" },
+    { "source": "scientific_revolution_event", "target": "development_of_internet_event", "relation_type": "conceptual" },
+    { "source": "development_of_internet_event", "target": "media_theory_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Read how printing fuelled the Reformation in a single decade, look up Marshall McLuhan's 'the medium is the message,' or follow how misinformation now spreads online — and you'll see the same thousand-year story still unfolding in your own hands.",
+    "zh": "想再往下墜一點？讀讀印刷如何在短短十年內推動宗教改革、查查麥克魯漢的「媒介即訊息」，或追蹤錯誤資訊如今如何在網路上擴散——你會看見那個延續千年的同一個故事，仍在你自己手中上演。",
+    "ja": "もっと落ちてみたいですか？印刷がわずか十年で宗教改革をどう後押ししたかを読み、マーシャル・マクルーハンの「メディアはメッセージである」を調べ、誤情報がいまネットでどう広がるかを追ってみてください——すると、あの千年の同じ物語が、いまもあなた自身の手の中で続いているのが見えるはずです。"
+  }
+}

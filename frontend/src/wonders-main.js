@@ -22,7 +22,13 @@ const RC = window.NebluxTokens?.RELATION_COLORS || {
 };
 const TYPE_SIZE = { field: 14, concept: 7, person: 10, event: 12 };
 
-const WONDER_IDS = ['edge-ai', 'black-holes']; // available tours (picker order)
+// Available tours, in picker order. Lead with the widest-appeal wonders; keep a
+// 7-step tour first so the picker preview always shows a full row of dots.
+const WONDER_IDS = [
+    'black-holes', 'quantum', 'infinity', 'the-mind', 'the-gene', 'light',
+    'chaos', 'symmetry', 'the-atom', 'emergence', 'networks', 'arrow-of-time',
+    'computation', 'edge-ai', 'language', 'markets', 'music', 'germs', 'ideas-that-spread'
+];
 
 // ===== UI STRINGS =====
 const UI = {

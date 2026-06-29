@@ -1,0 +1,221 @@
+{
+  "id": "computation",
+  "accent": "TEC",
+  "title": { "en": "Computation", "zh": "計算", "ja": "計算" },
+  "intro": {
+    "en": "What is 'computing,' really — and is there anything a machine can never figure out? In seven steps, follow that one question from a poet's daughter in 1843 to the hard wall at the edge of the entire digital age.",
+    "zh": "「計算」到底是什麼——有沒有什麼，是機器永遠算不出來的？跟著七步，從 1843 年一位詩人的女兒，走到整個數位時代邊緣那道堅硬的牆。",
+    "ja": "「計算する」とは、本当のところ何なのか——そして、機械が決して解けないものは存在するのか？7 つのステップで、その一つの問いを、1843 年のある詩人の娘から、デジタル時代全体の果てにそびえる硬い壁まで追いかけましょう。"
+  },
+  "steps": [
+    {
+      "ref": "ada_lovelace_person",
+      "hook": {
+        "en": "A hundred years before the first computer was switched on, could anyone have guessed what a machine of gears might one day do? One person did — and she had never seen a working computer in her life.",
+        "zh": "在第一台電腦被啟動的一百年前，有誰能猜到一台齒輪做的機器，有一天能做什麼？有一個人猜到了——而她這輩子從沒見過一台真正運作的電腦。",
+        "ja": "最初のコンピュータが動き出す百年も前に、歯車仕掛けの機械がいつか何をなしうるか、誰かに見通せたでしょうか？一人だけ、それを見通した人がいました——しかも彼女は、動くコンピュータを生涯一度も見たことがなかったのです。"
+      },
+      "reveal": {
+        "en": "Ada Lovelace saw further than the inventor himself. Looking at the plans for a giant mechanical calculator, she realized it need not be trapped with numbers. If music, or letters, or any idea could be written as symbols, then a machine that shuffles symbols could work on all of them. She had grasped the deepest truth of computing: a computer is not a number-cruncher, it is a symbol-manipulator.",
+        "zh": "愛達‧勒芙蕾絲看得比發明者本人還遠。她看著一台巨大機械計算器的設計圖，意識到它不必被困在數字裡。如果音樂、文字，或任何想法都能寫成符號，那麼一台會排列符號的機器，就能處理它們全部。她抓住了計算最深層的真相：電腦不是算數字的機器，而是操作符號的機器。",
+        "ja": "エイダ・ラブレスは、発明者本人よりも遠くを見ていました。巨大な機械式計算機の設計図を眺めながら、彼女はそれが数だけに縛られる必要はないと気づいたのです。音楽も、文字も、どんな考えも記号として書けるなら、記号を並べ替える機械は、そのすべてを扱える。彼女は計算の最も深い真実をつかんでいました——コンピュータは数を計算する機械ではなく、記号を操る機械なのだと。"
+      },
+      "example": {
+        "en": "She wrote a step-by-step procedure for that machine to compute a sequence of numbers — the first algorithm ever written for a computer. Today every photo filter, song, and message on your phone is exactly her idea: the world turned into symbols a machine can rearrange.",
+        "zh": "她為那台機器寫下一套逐步的程序，去算出一串數列——史上第一個為電腦寫的演算法。今天你手機裡每一個濾鏡、每一首歌、每一則訊息，正是她的點子：把世界變成符號，讓機器去重新排列。",
+        "ja": "彼女はその機械のために、ある数列を計算する手順を一歩ずつ書き残しました——史上初めてコンピュータのために書かれたアルゴリズムです。今日あなたのスマホにある写真フィルターも、曲も、メッセージも、まさに彼女の発想そのもの——世界を、機械が並べ替えられる記号に変えたのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: the first programmer in history was a poet's daughter, writing in 1843, for a computer that was never built. Her father was the wild Romantic poet Lord Byron. From a family of verse came the first person to see that a machine could one day make music and language — long before a single one existed.",
+        "zh": "意外的是：史上第一位程式設計師，是一位詩人的女兒，寫於 1843 年，為一台從未被造出的電腦。她的父親，是狂放的浪漫主義詩人拜倫勳爵。從一個寫詩的家族裡，走出了第一個看見「機器有一天能創作音樂與語言」的人——而那時，世上連一台電腦都還沒有。",
+        "ja": "意外なことに、歴史上初のプログラマーは詩人の娘であり、書かれたのは 1843 年、しかも一度も作られなかったコンピュータのためでした。彼女の父は、奔放なロマン派詩人バイロン卿。詩の一族から、機械がいつか音楽や言語を生み出せると最初に見抜いた人物が現れたのです——まだ一台のコンピュータも存在しないうちに。"
+      },
+      "thread": {
+        "en": "She wrote 'a procedure' for the machine to follow. But what exactly is a procedure precise enough that a mindless machine can obey it?",
+        "zh": "她為機器寫下「一套程序」去遵循。但一套程序要精確到什麼程度，一台沒有心智的機器才跟得了？",
+        "ja": "彼女は機械が従う「手順」を書きました。では、心を持たない機械が従えるほど厳密な手順とは、いったい何なのでしょう？"
+      }
+    },
+    {
+      "ref": "algorithm_concept",
+      "hook": {
+        "en": "You follow recipes, fold laundry, tie your shoes — all without thinking. What do these have in common, and could a machine with no understanding at all do the very same?",
+        "zh": "你照食譜做菜、摺衣服、綁鞋帶——全都不用想。這些事有什麼共通點，而一台完全不懂的機器，能不能做一模一樣的事？",
+        "ja": "あなたはレシピに従い、洗濯物をたたみ、靴ひもを結ぶ——どれも考えずに。これらに共通するものは何で、そして何も理解していない機械が、まったく同じことをできるのでしょうか？"
+      },
+      "reveal": {
+        "en": "Each is an algorithm: a precise recipe of finite, unambiguous steps that anyone — or anything — can follow without guessing. 'Add two eggs' is clear; 'add some eggs' is not. The whole power of an algorithm is that it leaves no room for judgment. Strip away the meaning and you are left with pure instructions, simple enough that a machine that understands nothing can carry them out perfectly.",
+        "zh": "每一件都是一個演算法：一份由有限、明確的步驟組成的精確食譜，任何人——或任何東西——都能照著走，不必猜。「加兩顆蛋」很清楚；「加一些蛋」就不是。演算法全部的力量，就在於它不留任何判斷的空間。把意義抽掉，剩下的就是純粹的指令，簡單到一台什麼都不懂的機器，也能完美執行。",
+        "ja": "どれもアルゴリズムです——有限で曖昧さのない手順からなる、誰でも、あるいは何でも、推測せずに従える厳密なレシピ。「卵を二個加える」は明確で、「卵を少し加える」はそうではない。アルゴリズムの力のすべては、判断の余地をいっさい残さない点にあります。意味を取り除けば残るのは純粋な指示——何も理解しない機械でも完璧にこなせるほど、単純なものです。"
+      },
+      "example": {
+        "en": "When you find a word in a dictionary by flipping to the middle and asking 'before or after?', then halving again and again — that is a famous algorithm, binary search. You run it by hand every time you look something up alphabetically.",
+        "zh": "當你查字典時翻到中間，問「在前面還是後面？」，再一次次對半翻——那就是一個著名的演算法，二分搜尋。每次你照字母順序查東西，你都在親手跑它。",
+        "ja": "辞書で単語を探すとき、真ん中を開いて「前か後か」と問い、また半分にしていく——それは二分探索という有名なアルゴリズムです。あなたは何かを五十音順で引くたび、それを手で走らせているのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: the word 'algorithm' comes from a single person — al-Khwarizmi, a Persian scholar who worked around the year 820, more than a thousand years before electricity. The rules of computing are older than the wire. We were thinking in algorithms long before we had any machine to run them on.",
+        "zh": "意外的是：「演算法」（algorithm）這個字，源自一個人——花拉子米，一位約在西元 820 年前後工作的波斯學者，比電力早了一千多年。計算的規則，比電線還要古老。早在我們有任何機器能跑它之前，我們就已經在用演算法思考了。",
+        "ja": "意外なことに、「アルゴリズム」という語は一人の人物に由来します——フワーリズミー、西暦 820 年ごろに活躍したペルシアの学者で、電気より千年以上も前の人です。計算の規則は、電線よりも古い。それを走らせる機械を持つよりずっと前から、私たちはアルゴリズムで考えていたのです。"
+      },
+      "thread": {
+        "en": "If an algorithm is just steps a mindless thing can follow, how simple can that mindless thing be? One man imagined the simplest possible machine of all.",
+        "zh": "如果演算法只是一台沒有心智的東西能跟的步驟，那這個東西可以簡單到什麼地步？有一個人，想像出了所有可能裡最簡單的那台機器。",
+        "ja": "アルゴリズムが、心を持たないものでも従える手順にすぎないなら、そのものはどこまで単純になれるのでしょう？ある一人が、ありうるかぎり最も単純な機械を思い描きました。"
+      }
+    },
+    {
+      "ref": "computation_concept",
+      "hook": {
+        "en": "Your phone holds billions of parts. A supercomputer fills a building. Surely they are doing something fundamentally different — or are they secretly the same?",
+        "zh": "你的手機裡有數十億個零件。一台超級電腦塞滿一整棟樓。它們做的事，肯定有著根本的不同——還是它們其實是同一回事？",
+        "ja": "あなたのスマホは数十億の部品を抱えています。スーパーコンピュータは建物を埋め尽くす。両者は根本から違うことをしているはず——それとも、こっそり同じなのでしょうか？"
+      },
+      "reveal": {
+        "en": "In 1936 Alan Turing boiled all of computing down to a laughably simple imaginary machine. Picture an endless paper tape divided into squares, and a tiny head that can do almost nothing: read one symbol, write one symbol, move one square left or right, and switch its inner state. That is the whole machine. Turing's astonishing claim: this toy can carry out any computation that any computer ever can.",
+        "zh": "1936 年，艾倫‧圖靈把整個計算，濃縮成一台簡單到好笑的想像機器。想像一條無限長、被分成一格格的紙帶，加上一個幾乎什麼都不會的小讀寫頭：讀一個符號、寫一個符號、向左或向右移一格，然後切換它內部的狀態。整台機器就只有這樣。圖靈那驚人的主張是：這個玩具，能執行任何電腦所能執行的任何計算。",
+        "ja": "1936 年、アラン・チューリングは計算のすべてを、笑ってしまうほど単純な想像上の機械にまで煮詰めました。マス目に区切られた果てしないテープと、ほとんど何もできない小さなヘッドを思い浮かべてください——記号を一つ読み、一つ書き、左か右へ一マス動き、内部の状態を切り替える。機械はそれだけ。チューリングの驚くべき主張はこうです——このおもちゃが、どんなコンピュータにもできるあらゆる計算をこなせる、と。"
+      },
+      "example": {
+        "en": "Open a calculator app, a game, and a web browser. Underneath, the same chip is doing nothing fancier than reading symbols, writing symbols, and following rules — exactly the tape-and-head dance Turing imagined, just unimaginably fast.",
+        "zh": "打開一個計算機 app、一個遊戲、一個瀏覽器。在底下，同一顆晶片做的事，不會比讀符號、寫符號、跟著規則走更花俏——正是圖靈想像的那套紙帶與讀寫頭之舞，只是快到難以想像。",
+        "ja": "電卓アプリ、ゲーム、ウェブブラウザを開いてみてください。その底では、同じチップが記号を読み、記号を書き、規則に従う以上のことは何もしていない——チューリングが思い描いたテープとヘッドの踊りそのもの、ただ想像を絶するほど速いだけです。"
+      },
+      "surprise": {
+        "en": "Here is the twist, called universality: in principle, your phone and the world's biggest supercomputer are equally powerful. They differ only in speed and memory, never in what is possible. Anything one can ever compute, the other can too — and so could Turing's paper tape, given enough time. Every computer that has ever existed is, at heart, the same single machine.",
+        "zh": "意外之處，叫做「萬能性」：原則上，你的手機和世界上最大的超級電腦，能力一樣強。它們的差別只在速度與記憶體，從來不在「什麼做得到」。一台能算的任何東西，另一台也能算——只要時間夠，圖靈的那條紙帶也行。歷史上存在過的每一台電腦，骨子裡，都是同一台機器。",
+        "ja": "意外なところは「万能性」と呼ばれます——原理上、あなたのスマホと世界最大のスーパーコンピュータは、同じだけ強力なのです。違うのは速さと記憶容量だけで、「何が可能か」では決して違わない。一方が計算できることは、もう一方にもできる——時間さえあれば、チューリングの紙テープにすら。これまで存在したあらゆるコンピュータは、その芯において、同じ一台の機械なのです。"
+      },
+      "thread": {
+        "en": "If this tiny machine can compute anything computable — then is everything computable? Turing asked that next, and the answer cut deep.",
+        "zh": "如果這台小機器能算出任何「可計算」的東西——那麼，是不是任何東西都可計算？圖靈接著問了這個問題，而答案，劃下了一道很深的傷口。",
+        "ja": "この小さな機械が「計算できるもの」を何でも計算できるなら——では、あらゆるものは計算できるのでしょうか？チューリングは次にそれを問い、その答えは深く切り込みました。"
+      }
+    },
+    {
+      "ref": "alan_turing_person",
+      "hook": {
+        "en": "You write a program. Will it ever finish, or run forever in a loop? Surely a clever enough checker could read any program and just tell you in advance — couldn't it?",
+        "zh": "你寫了一支程式。它會跑完，還是會永遠卡在迴圈裡？一個夠聰明的檢查程式，總能讀過任何程式、事先告訴你答案吧——不是嗎？",
+        "ja": "あなたはプログラムを書きます。それは終わるのか、それとも永遠にループし続けるのか？十分に賢いチェッカーなら、どんなプログラムも読んで前もって教えてくれるはず——そうではないのでしょうか？"
+      },
+      "reveal": {
+        "en": "No checker can. The same Turing who showed a machine could compute almost anything also proved a hard wall: no program can decide, for every possible program, whether it will eventually stop or run forever. This is the halting problem. The proof is a trap — imagine such a checker exists, then build a program that asks the checker about itself and does the opposite of whatever it predicts. The checker is caught in a contradiction, so it cannot exist.",
+        "zh": "沒有任何檢查程式做得到。同一個證明了「機器幾乎什麼都能算」的圖靈，也證明了一道堅硬的牆：沒有任何程式，能對「每一支可能的程式」判定它究竟會停下、還是永遠跑下去。這就是停機問題。證明本身是個陷阱——假設這樣的檢查程式存在，然後造一支程式，去問檢查程式關於它自己的事，再做出和檢查程式預測相反的舉動。檢查程式陷入了矛盾，所以它不可能存在。",
+        "ja": "どんなチェッカーにもできません。「機械はほとんど何でも計算できる」と示したまさにそのチューリングが、硬い壁も証明しました——あらゆるプログラムについて、それがいずれ止まるのか永遠に走り続けるのかを判定できるプログラムは、存在しない。これが停止問題です。証明は罠です——そんなチェッカーが存在すると仮定し、自分自身についてチェッカーに尋ね、その予測と逆の動きをするプログラムを作る。チェッカーは矛盾に陥り、ゆえに存在しえないのです。"
+      },
+      "example": {
+        "en": "This is not just theory. Programmers hit it daily: there is no perfect tool that reads your code and guarantees it will never hang. Some questions about software can only be answered by running it and waiting — possibly forever.",
+        "zh": "這不只是理論。寫程式的人每天都撞上它：沒有一個完美的工具，能讀過你的程式碼、保證它永遠不會卡死。有些關於軟體的問題，只能靠真的跑下去、然後等——而且可能等到永遠。",
+        "ja": "これは理論だけの話ではありません。プログラマーは日々これにぶつかります——あなたのコードを読んで、決してフリーズしないと保証してくれる完璧なツールは存在しない。ソフトウェアに関するある種の問いは、実際に走らせて待つしかない——下手をすれば永遠に。"
+      },
+      "surprise": {
+        "en": "Here is the twist: there are perfectly clear, well-posed questions that no computer can ever answer — not because it is too slow, but because it is logically impossible. And this limit was built into computing from its very birth, discovered by the same man who imagined the machine in the first place. He gave us the computer and its unbreakable boundary in one breath.",
+        "zh": "意外的是：有些問題清清楚楚、定義良好，卻沒有任何電腦能回答——不是因為它太慢，而是因為邏輯上根本不可能。而這道極限，從計算誕生的那一刻起就內建在裡頭，由那個一開始就想出這台機器的同一個人發現。他在同一口氣裡，給了我們電腦，也給了它那道無法打破的邊界。",
+        "ja": "意外なことに、はっきりと、きちんと立てられた問いでありながら、どんなコンピュータにも決して答えられないものがあります——遅すぎるからではなく、論理的に不可能だからです。そしてこの限界は、計算が生まれたその瞬間から組み込まれていた——機械をそもそも思い描いた、まさに同じ人物によって見いだされたのです。彼は一息のうちに、コンピュータと、その破れない境界を私たちに与えました。"
+      },
+      "thread": {
+        "en": "A clear question no machine can answer — it feels almost like a flaw in logic itself. As it happens, a mathematician had found the same crack a few years earlier, in a wholly different place.",
+        "zh": "一個機器答不出的清楚問題——這感覺幾乎像是邏輯本身的一道裂縫。而碰巧，一位數學家在幾年前，就已經在一個完全不同的地方，發現了同一道裂縫。",
+        "ja": "機械が答えられない明快な問い——それはまるで、論理そのものの欠陥のように感じられます。たまたまですが、ある数学者がその数年前、まったく別の場所で、同じ亀裂を見つけていたのです。"
+      }
+    },
+    {
+      "ref": "mathematical_logic_concept",
+      "hook": {
+        "en": "Mathematics feels like the one place where everything true can, in the end, be proven. Solid ground all the way down. But what if even that has a hole in it?",
+        "zh": "數學，感覺像是唯一一個「凡為真者，終究都能被證明」的地方。一路到底都是堅實的地基。但如果，連這裡也有一個洞呢？",
+        "ja": "数学は、真であるものはすべて、最後には証明できる——そんな唯一の場所のように感じられます。どこまでも揺るがぬ大地。でも、もしそこにすら穴があるとしたら？"
+      },
+      "reveal": {
+        "en": "A few years before Turing, the logician Kurt Gödel proved his incompleteness theorems: in any logical system rich enough to do ordinary arithmetic, there are true statements that the system can never prove. Mathematics cannot be both complete and free of contradiction. The trick at the heart of it is a sentence that refers to itself — roughly, 'this statement cannot be proven.' If it is false it is provable and so true; the system ties itself in a knot.",
+        "zh": "在圖靈之前幾年，邏輯學家庫爾特‧哥德爾證明了他的不完備定理：在任何豐富到能做一般算術的邏輯系統裡，都存在「為真、卻永遠無法被該系統證明」的敘述。數學不可能既完備、又沒有矛盾。其核心的把戲，是一句指涉自己的話——大致是：「這句話無法被證明。」如果它是假的，那它就可被證明、因而為真；系統把自己打成了死結。",
+        "ja": "チューリングの数年前、論理学者クルト・ゲーデルは不完全性定理を証明しました——ふつうの算術ができるほど豊かな論理体系には、その体系が決して証明できない真の命題が存在する、と。数学は、完全であることと無矛盾であることを、両方は満たせない。その核心にある仕掛けは、自分自身に言及する一文——おおよそ「この命題は証明できない」です。もしそれが偽なら証明可能となり、ゆえに真——体系はみずからを結び目に締め上げてしまうのです。"
+      },
+      "example": {
+        "en": "You have felt this knot before. 'This sentence is a lie.' If it is true, it lies, so it is false; if it is false, it tells the truth, so it is true. Gödel turned that dizzy loop into rigorous mathematics, and it never fully untangles.",
+        "zh": "你以前感受過這個死結。「這句話是謊話。」如果它是真的，它就在說謊、所以是假的；如果它是假的，它就說了實話、所以是真的。哥德爾把那令人暈眩的迴圈，化成了嚴謹的數學，而它，永遠解不開。",
+        "ja": "あなたはこの結び目を以前にも感じたことがあります。「この文は嘘である。」もし真なら嘘をついており、ゆえに偽。もし偽なら真実を語っており、ゆえに真。ゲーデルはその目まいのするループを厳密な数学に変え、それはついに完全にはほどけないのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: Turing's halting wall and Gödel's incompleteness are the same wall, wearing two faces. Both grow from one root — a thing that refers to itself. A program asking about itself, a sentence speaking about itself: the unbreakable limit on what computers can decide and the unbreakable limit on what mathematics can prove turn out to be a single boundary, seen from two sides.",
+        "zh": "意外的是：圖靈的停機之牆，與哥德爾的不完備，是同一道牆的兩張臉。兩者都長自同一個根——一個指涉自己的東西。一支詢問自己的程式、一句談論自己的話：電腦「能判定什麼」的不可破極限，與數學「能證明什麼」的不可破極限，原來是同一道邊界，從兩側看去。",
+        "ja": "意外なことに、チューリングの停止の壁とゲーデルの不完全性は、二つの顔を持つ同じ壁です。どちらも一つの根から生える——自分自身に言及するもの。自分について問うプログラム、自分について語る一文。コンピュータが「何を判定できるか」の破れない限界と、数学が「何を証明できるか」の破れない限界は、両側から見た一つの境界だったのです。"
+      },
+      "thread": {
+        "en": "So there are walls around what any machine can do. But inside those walls, the room is vast — and machines have lately started doing things no one ever wrote down for them.",
+        "zh": "所以，任何機器能做的事都有牆圍著。但在這些牆裡，空間大得驚人——而機器最近，開始做起一些從來沒人替它寫下來的事。",
+        "ja": "つまり、どんな機械にできることにも壁がある。けれどその壁の内側は広大で——機械は近ごろ、誰も書き残さなかったことをやり始めたのです。"
+      }
+    },
+    {
+      "ref": "artificial_intelligence_concept",
+      "hook": {
+        "en": "Every step so far, a human wrote the rules and the machine obeyed. But what if no one writes the rules — and the machine works them out for itself?",
+        "zh": "到目前為止的每一步，都是人寫下規則、機器服從。但如果沒有人寫規則——而是機器自己把規則摸索出來呢？",
+        "ja": "ここまでのどのステップでも、人間が規則を書き、機械が従ってきました。でも、もし誰も規則を書かず——機械が自分でそれを編み出すとしたら？"
+      },
+      "reveal": {
+        "en": "That is the leap of artificial intelligence. Inside the walls Turing and Gödel drew, the space of computable things is enormous — and we have learned to let machines find their own way through it. Instead of hand-coding every rule, we show a system mountains of examples and let it grow its own patterns. Machines now see, talk, and reason in ways no programmer ever spelled out line by line.",
+        "zh": "這正是人工智慧的躍進。在圖靈與哥德爾劃下的牆內，「可計算之物」的空間大得驚人——而我們學會了，讓機器自己在裡頭找路。我們不再手寫每一條規則，而是給系統看堆積如山的例子，讓它自己長出自己的模式。如今機器能看、能說、能推理，而那些方式，沒有任何程式設計師曾一行行寫下來過。",
+        "ja": "それが人工知能の飛躍です。チューリングとゲーデルが描いた壁の内側で、計算できるものの空間は途方もなく広い——そして私たちは、機械にそこを自力で進ませる術を身につけました。規則を一つずつ手で書く代わりに、システムに山のような例を見せ、自分でパターンを育てさせる。いまや機械は、どんなプログラマーも一行ずつ綴らなかったやり方で、見て、話し、推論するのです。"
+      },
+      "example": {
+        "en": "The system that finishes your sentence, recognizes a friend's face in a photo, or chats back in plain language was never handed those skills as rules. It read or saw vast piles of human examples and distilled the patterns on its own.",
+        "zh": "那個會幫你把句子接完、在照片裡認出朋友的臉、或用日常語言跟你對話的系統，這些本領，從來不是以規則的形式交給它的。它讀過、看過大量人類的例子，自己把模式蒸餾出來。",
+        "ja": "あなたの文を補い、写真の中の友人の顔を見分け、ふつうの言葉で返事をするシステムは、それらの技を規則として手渡されたわけではありません。膨大な人間の例を読み、あるいは見て、自分でパターンを抽出したのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: back in 1950, Turing asked 'can a machine think?' and offered a test — if you chat with something hidden and cannot tell it from a person, does the difference still matter? It was meant as a philosophical provocation, a needle to prod our certainties. Three-quarters of a century on, with machines that talk fluently, the debate he lit is more alive — and more unsettled — than ever.",
+        "zh": "意外的是：早在 1950 年，圖靈就問了「機器能思考嗎？」並提出一個測試——如果你跟一個藏起來的東西聊天，分辨不出它和真人的差別，那這個差別還重要嗎？這原本是一個哲學上的挑釁，一根戳向我們種種篤定的針。四分之三個世紀後，當機器能流利地說話，他點燃的那場辯論，比以往任何時候都更鮮活——也更懸而未決。",
+        "ja": "意外なことに、1950 年、チューリングは「機械は考えられるか」と問い、一つのテストを示しました——隠れた相手と会話して、人間と区別できないなら、その違いはなお意味を持つのか、と。それは哲学的な挑発として、私たちの確信を突く一本の針として放たれました。四分の三世紀を経て、流暢に話す機械を前に、彼が灯した議論は、かつてないほど生き生きと——そして未解決のままなのです。"
+      },
+      "thread": {
+        "en": "Faster, smarter, more humanlike — but always the same kind of machine underneath. What if you could build a machine that computes in a fundamentally different way?",
+        "zh": "更快、更聰明、更像人——但底下，始終是同一種機器。如果你能造出一台，用根本不同的方式來計算的機器呢？",
+        "ja": "より速く、より賢く、より人間らしく——けれど底にあるのは、つねに同じ種類の機械です。では、根本から異なるやり方で計算する機械を作れるとしたら？"
+      }
+    },
+    {
+      "ref": "quantum_computing_concept",
+      "hook": {
+        "en": "Every computer so far follows one path at a time, step after step. What if a machine could explore many paths at once — not faster, but genuinely all together?",
+        "zh": "到目前為止的每一台電腦，都是一次走一條路、一步接一步。如果有一台機器，能同時探索許多條路——不是更快，而是真的全部一起呢？",
+        "ja": "ここまでのどのコンピュータも、一度に一つの道を、一歩ずつたどります。では、機械が多くの道を一度に探れるとしたら——速くではなく、本当にすべてまとめて？"
+      },
+      "reveal": {
+        "en": "A quantum computer is that genuinely different kind of machine. Ordinary bits are either 0 or 1; a quantum bit, through a property called superposition, can hold a blend of both at once. String many together and the machine can, in a sense, explore a huge number of possibilities in one sweep. For a few special problems — like cracking certain codes or simulating molecules — that lets it leap where ordinary machines would crawl.",
+        "zh": "量子電腦，就是那台真正不同的機器。一般的位元，不是 0 就是 1；而一個量子位元，透過一種叫「疊加」的性質，能同時握住兩者的混合。把許多個串起來，這台機器在某種意義上，能在一次掃過裡探索極大量的可能性。對少數幾類特殊問題——像是破解某些密碼、或模擬分子——這讓它能一躍而過，而一般機器只能慢慢爬。",
+        "ja": "量子コンピュータが、その本当に異なる種類の機械です。ふつうのビットは 0 か 1 のどちらか。量子ビットは「重ね合わせ」という性質によって、両方の混ざり合いを一度に保てます。多数つなげば、この機械はある意味で、膨大な可能性を一掃きで探れる。ある種の暗号を破る、分子を模擬するといった、ごく一部の特別な問題では、ふつうの機械が這うところを跳び越えられるのです。"
+      },
+      "example": {
+        "en": "Today's quantum machines are delicate, cooled to near absolute zero, and still tiny — but real ones now run in a handful of labs. They are not a faster laptop; they are a new instrument, suited to a narrow set of problems that happen to matter enormously.",
+        "zh": "今天的量子機器很嬌弱，得冷卻到接近絕對零度，而且還很小——但真實的機器，如今已在少數幾間實驗室裡運轉。它們不是一台更快的筆電；它們是一種新的儀器，適用於一小撮恰好極其重要的問題。",
+        "ja": "今日の量子機械は繊細で、絶対零度近くまで冷やされ、まだ小さい——けれど本物が、いくつかの研究室で実際に動いています。速いノートパソコンではなく、新しい計器なのです——たまたま途方もなく重要な、狭い一群の問題に向いた。"
+      },
+      "surprise": {
+        "en": "Here is the final twist: even this strange new machine cannot climb over the halting wall. A quantum computer changes what is fast, never what is possible. The questions Turing proved unanswerable stay unanswerable, quantum or not — the deepest limit holds for every machine we can build or imagine. You have walked the whole boundary of the digital age, and from this edge, the open country runs in every direction.",
+        "zh": "最後一個意外：即使是這台奇異的新機器，也翻不過停機那道牆。量子電腦改變的是「什麼快」，從來不是「什麼可能」。圖靈證明答不出的那些問題，無論量子與否，依然答不出——那道最深的極限，對我們能造、能想像的每一台機器都成立。你已經走遍了數位時代的整道邊界；而從這個邊緣望出去，開闊的原野，向著每一個方向延伸。",
+        "ja": "最後の意外：この奇妙な新しい機械でさえ、停止の壁を越えられません。量子コンピュータが変えるのは「何が速いか」であって、「何が可能か」では決してない。チューリングが答えられないと証明した問いは、量子であろうとなかろうと答えられないまま——その最も深い限界は、私たちが作れる、あるいは思い描けるすべての機械に成り立ちます。あなたはデジタル時代の境界をぐるりと歩き終えました。そしてこの縁から、開けた原野が、あらゆる方向へと広がっています。"
+      },
+      "thread": {
+        "en": "You have reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "ada_lovelace_person", "target": "algorithm_concept", "relation_type": "historical" },
+    { "source": "algorithm_concept", "target": "computation_concept", "relation_type": "conceptual" },
+    { "source": "computation_concept", "target": "alan_turing_person", "relation_type": "logical" },
+    { "source": "alan_turing_person", "target": "mathematical_logic_concept", "relation_type": "conceptual" },
+    { "source": "mathematical_logic_concept", "target": "artificial_intelligence_concept", "relation_type": "conceptual" },
+    { "source": "artificial_intelligence_concept", "target": "quantum_computing_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Watch a short visual on how a Turing machine actually runs its tape, read a plain-language walkthrough of the halting problem and its self-referential trap, or try the Turing test yourself by chatting with a modern AI and asking what, if anything, gives it away.",
+    "zh": "想再往下墜一點？看一段短片，看圖靈機如何真的跑它的紙帶；讀一篇用白話講解停機問題與它那自我指涉陷阱的文章；或者親自試試圖靈測試——去跟一個現代 AI 聊天，看看到底是什麼（如果有的話）洩了它的底。",
+    "ja": "もっと落ちてみたいですか？チューリングマシンが実際にテープをどう走らせるかの短い映像を見て、停止問題とその自己言及の罠をやさしく解説した文章を読み、あるいは自分でチューリングテストを試してみてください——現代の AI と会話し、もし何かあるなら何がその正体を明かすのかを問いながら。"
+  }
+}

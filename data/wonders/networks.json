@@ -1,0 +1,192 @@
+{
+  "id": "networks",
+  "accent": "MAT",
+  "title": { "en": "Networks", "zh": "網路", "ja": "ネットワーク" },
+  "intro": {
+    "en": "Dots and lines — that is all a network is. Yet the same simple picture explains your friendships, epidemics, the brain, and why one app quietly wins everything. In six steps, watch the world dissolve into dots and links.",
+    "zh": "點與線——一個網路就只是這樣。但同一張簡單的圖，卻能解釋你的友誼、傳染病、大腦，以及為什麼某個 app 會悄悄贏走一切。跟著六步，看整個世界化為節點與連結。",
+    "ja": "点と線——ネットワークとは、ただそれだけのものです。けれど、この同じ単純な絵が、あなたの友情も、感染症も、脳も、そしてなぜ一つのアプリが静かにすべてを勝ち取るのかも説明してしまう。6 つのステップで、世界が点とつながりへとほどけていく様子を見ていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "graph_theory_concept",
+      "hook": {
+        "en": "A city had seven bridges. People wondered: could you take a Sunday stroll that crosses every bridge exactly once and comes home? What if the answer is a whole branch of mathematics?",
+        "zh": "一座城市有七座橋。人們好奇：能不能在星期天散個步，每座橋都剛好走過一次，最後又回到原點？如果這個問題的答案，竟是一整門數學呢？",
+        "ja": "ある町に、七つの橋がありました。人々はこう考えました——日曜の散歩で、すべての橋をちょうど一度ずつ渡り、家に戻ってこられるだろうか。もしその答えが、数学のまるごと一分野だとしたら？"
+      },
+      "reveal": {
+        "en": "That was Euler's leap. He realized the shape of the streets did not matter — only what connects to what. So he stripped the whole city down to dots (the patches of land) and lines (the bridges between them). With everything else thrown away, he could prove, by counting alone, that no such walk exists. Reduce anything to 'things' (nodes) and 'links' (edges), and you can reason about it as a network.",
+        "zh": "這正是歐拉的躍進。他發現街道的形狀根本不重要——重要的只有「什麼連著什麼」。於是他把整座城市簡化成點（一塊塊陸地）與線（連接它們的橋）。把其餘一切都丟掉之後，他光靠數數，就能證明這樣的散步路線並不存在。把任何東西化約成「事物」（節點）與「連結」（邊），你就能把它當成一個網路來推理。",
+        "ja": "それがオイラーの飛躍でした。彼は、通りの形などどうでもよいと見抜いた——大事なのは「何が何につながっているか」だけだと。そこで町ぜんたいを点（陸地の区画）と線（その間を結ぶ橋）に削ぎ落とした。ほかをすべて捨て去ったうえで、彼は数を数えるだけで、そんな散歩道は存在しないと証明できたのです。あらゆるものを「もの」（節点）と「つながり」（辺）に還元すれば、それをネットワークとして考えられるのです。"
+      },
+      "example": {
+        "en": "A subway map does the same trick: it lies about distances and street angles, keeping only which station links to which. That is why it is far easier to read than a true-to-scale map — it is a graph, not a picture.",
+        "zh": "捷運路線圖玩的就是同一招：它對距離和街道角度撒謊，只保留「哪一站連到哪一站」。這正是它比按比例畫的地圖好讀太多的原因——它是一張圖（graph），而不是一幅畫。",
+        "ja": "地下鉄の路線図も同じ手を使います。距離や通りの角度については嘘をつき、「どの駅がどの駅につながるか」だけを残す。縮尺どおりの地図よりずっと読みやすいのはそのためです——あれは絵ではなく、グラフなのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: this entire field of mathematics — graph theory, now used to route the internet and untangle DNA — was born in 1736 from one man trying to plan a walk across the bridges of a single town, Königsberg, and proving it could not be done. A puzzle with no practical point opened a door that never closed.",
+        "zh": "意外的是：這整門數學——圖論，如今被用來規劃網際網路的路由、解開 DNA 的纏繞——竟誕生於 1736 年，源自一個人想規劃一趟走過某座小城（柯尼斯堡）橋樑的散步，並證明這辦不到。一個沒有任何實用目的的謎題，打開了一道從此再沒關上的門。",
+        "ja": "意外なのはここです——この数学の一分野まるごと、いまやインターネットの経路を決め、DNA のもつれを解くのにも使われるグラフ理論は、1736 年、ある町（ケーニヒスベルク）の橋を渡る散歩を計画しようとし、それが不可能だと証明した一人の人物から生まれました。何の実用的な目的もない謎が、二度と閉じない扉を開いたのです。"
+      },
+      "thread": {
+        "en": "But Euler's bridges were a tidy little graph. What happens when the network is messy and enormous — millions of dots, like a whole society?",
+        "zh": "但歐拉的那些橋，是一張小巧整齊的圖。如果網路又亂又巨大——上百萬個點，像整個社會那樣——會怎麼樣？",
+        "ja": "けれどオイラーの橋は、小ぢんまりと整ったグラフでした。では、ネットワークが乱雑で巨大なとき——社会まるごとのように、何百万もの点があるとき——何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "network_theory_concept",
+      "hook": {
+        "en": "If you connected millions of people at random, you would expect everyone to have roughly the same number of links. Real networks look nothing like that. Why?",
+        "zh": "如果你把上百萬人隨機連起來，你會預期每個人的連結數量都差不多。但真實的網路完全不是這樣。為什麼？",
+        "ja": "何百万もの人をでたらめにつないだら、誰もがだいたい同じ数のつながりを持つはずです。ところが現実のネットワークは、まるでそうなっていない。なぜでしょう？"
+      },
+      "reveal": {
+        "en": "Network theory studies the shape of huge networks, and it found something striking: they are not random at all. A handful of nodes — the hubs — hold a huge share of all the links, while most nodes have only a few. Think of an airport map: a few mega-hubs like Atlanta or Dubai connect to hundreds of cities, while most airports connect to a handful. This lopsided pattern shows up again and again, from the web to the brain.",
+        "zh": "網路理論研究巨大網路的形狀，並發現了一件驚人的事：它們根本不是隨機的。少數幾個節點——也就是樞紐——掌握了所有連結中極大的一部分，而大多數節點只有寥寥幾條。想想機場地圖：亞特蘭大或杜拜那樣的少數超級樞紐連到上百個城市，多數機場卻只連到屈指可數的幾個。這種失衡的模式一再出現，從全球資訊網到大腦。",
+        "ja": "ネットワーク理論は巨大なネットワークの形を研究し、驚くべきことを見いだしました——それらはまったく無作為ではない。ひと握りの節点——ハブ——が全つながりの大きな割合を握り、大多数の節点はわずかしか持たない。空港の地図を思い浮かべてください。アトランタやドバイのような数少ない巨大ハブは数百の都市とつながるのに、ほとんどの空港はほんの数か所としかつながらない。この偏った形は、ウェブから脳まで、何度も繰り返し現れるのです。"
+      },
+      "example": {
+        "en": "On the web, a few sites like Wikipedia or YouTube are linked to by millions of pages, while the vast majority of pages have almost no links pointing at them. The network grew lopsided on its own — nobody planned it.",
+        "zh": "在網路上，維基百科或 YouTube 之類的少數網站被上百萬個頁面連結，而絕大多數頁面幾乎沒有任何連結指向它們。這個網路是自己長成失衡的——沒有人去設計它。",
+        "ja": "ウェブでは、ウィキペディアや YouTube のような数少ないサイトが何百万ものページからリンクされる一方、大多数のページにはほとんどリンクが向かいません。このネットワークは、ひとりでに偏って育った——誰も設計してはいないのです。"
+      },
+      "surprise": {
+        "en": "And because of those hubs, the whole network shrinks. Any two people on Earth turn out to be joined by a chain of roughly six acquaintances — the famous 'six degrees of separation.' A planet of eight billion people is, in network terms, astonishingly small. The hubs are the shortcuts that pull everyone close.",
+        "zh": "而正因為有這些樞紐，整個網路會縮小。地球上任意兩個人，竟然都能透過大約六層熟人的鏈條彼此相連——這就是著名的「六度分隔」。從網路的角度看，一個八十億人的星球小得令人吃驚。那些樞紐，就是把所有人拉近的捷徑。",
+        "ja": "そして、そのハブのおかげで、ネットワーク全体が縮みます。地球上のどんな二人も、およそ六人の知人の鎖でつながっていることがわかった——有名な「六次の隔たり」です。八十億人の惑星は、ネットワークの言葉でいえば、驚くほど小さい。ハブこそ、すべての人を近づける近道なのです。"
+      },
+      "thread": {
+        "en": "If your distance to anyone is so small, then where you sit in the web might matter enormously. Does your position decide what reaches you?",
+        "zh": "如果你和任何人之間的距離都這麼短，那麼你「坐」在網路的哪個位置，也許就極其重要。你的位置，會決定什麼能傳到你這裡嗎？",
+        "ja": "誰との距離もそんなに小さいのなら、あなたが網のどこに位置するかが、とてつもなく重要かもしれません。あなたの位置が、何があなたのもとに届くかを決めるのでしょうか？"
+      }
+    },
+    {
+      "ref": "social_network_theory_concept",
+      "hook": {
+        "en": "Two people work equally hard and are equally talented. One keeps hearing about new jobs and ideas; the other never does. What if the difference is not effort at all, but where each one sits in the web of who-knows-whom?",
+        "zh": "兩個人一樣努力、一樣有才華。其中一個人總是聽說新工作、新點子；另一個從來沒有。如果這個差別根本不是努力，而是兩人各自「坐」在那張誰認識誰的網路上的哪個位置呢？",
+        "ja": "二人の人がいて、同じだけ努力し、同じだけ才能がある。一方はいつも新しい仕事やアイデアを耳にし、もう一方はまったく耳にしない。もしその差が努力ではなく、誰が誰を知っているかという網の、どこに各自が座っているかだとしたら？"
+      },
+      "reveal": {
+        "en": "Social network theory studies exactly this: people as nodes, relationships as edges, and how your spot in the web shapes your life. It turns out your position can matter more than your effort. Whoever sits on the bridge between two separate groups sees information from both sides first — and information is opportunity. Who you know quietly shapes what reaches you.",
+        "zh": "社會網路理論研究的正是這件事：把人當作節點，把關係當作邊，看你在網路裡的位置如何形塑你的人生。結果發現，你的位置可能比你的努力更關鍵。誰坐在兩個獨立群體之間的橋上，誰就最先看到兩邊的資訊——而資訊就是機會。你認識誰，悄悄決定了什麼能傳到你這裡。",
+        "ja": "社会ネットワーク理論が研究するのは、まさにこれです——人を節点、関係を辺とし、網の中のあなたの位置がいかに人生を形づくるか。すると、位置は努力よりも効いてくることがある。二つの別々のグループのあいだの橋に座る者は、両側の情報を真っ先に目にする——そして情報とは機会です。誰を知っているかが、何があなたに届くかを静かに決めるのです。"
+      },
+      "example": {
+        "en": "Think of a person who knows both the engineers and the salespeople at a company while the two groups barely talk. They hear every rumor first and become quietly indispensable — not because they work harder, but because of where their links reach.",
+        "zh": "想想一個人，在公司裡同時認識工程師和業務，而這兩群人彼此幾乎不講話。這個人最先聽到每一則風聲，悄悄變得不可或缺——不是因為他更拚，而是因為他的連結伸到了哪裡。",
+        "ja": "ある会社で、技術者と営業の両方を知っている人を思い浮かべてください——その二つのグループはほとんど口をきかない。その人はあらゆる噂を真っ先に耳にし、いつのまにか欠かせない存在になる。より懸命に働くからではなく、そのつながりがどこまで届くかゆえに。"
+      },
+      "surprise": {
+        "en": "Here is the counterintuitive part: it is not your close friends who bring you most new jobs and ideas — it is your 'weak ties,' the distant acquaintances you barely keep up with. Close friends all know the same things you do. A faint, far-off connection is the one carrying news from a world you cannot see. This is called the strength of weak ties.",
+        "zh": "違反直覺的地方在於：替你帶來最多新工作、新點子的，並不是你的密友——而是你的「弱連結」，也就是那些你幾乎沒在聯絡的遠方熟人。密友知道的事情，往往跟你知道的一模一樣。一條微弱、遙遠的連結，才是那條從你看不見的世界捎來消息的線。這叫做「弱連結的力量」。",
+        "ja": "直感に反するのはここです——あなたに最も多くの新しい仕事やアイデアをもたらすのは、親しい友人ではない——「弱いつながり」、つまりほとんど連絡を取らない遠い知人なのです。親しい友人は、あなたと同じことを知っている。かすかで遠いつながりこそ、あなたには見えない世界からの知らせを運ぶ線なのです。これを「弱い紐帯の強さ」と呼びます。"
+      },
+      "thread": {
+        "en": "So connections carry value. But can a connection itself be the value — can a thing become more useful simply because more people are linked into it?",
+        "zh": "所以連結會承載價值。但連結本身能不能就是價值——一個東西，會不會只因為更多人連進來，就變得更有用？",
+        "ja": "つながりは価値を運ぶ。では、つながりそのものが価値になりうるでしょうか——あるものが、より多くの人がつながっているというだけで、より役に立つようになるのでしょうか？"
+      }
+    },
+    {
+      "ref": "network_effects_concept",
+      "hook": {
+        "en": "The very first telephone ever made was useless — there was no one to call. So why is a telephone today something you cannot live without? What changed about the object? Nothing. What changed was how many others held one.",
+        "zh": "史上第一支電話毫無用處——根本沒有人可以打。那為什麼今天的電話卻是你少不了的東西？這個物件本身改變了什麼？什麼都沒有。改變的，是有多少別人手上也握著一支。",
+        "ja": "世界で最初の電話は役立たずでした——かける相手がいなかったのです。では、なぜ今日の電話は、なくては生きられないものなのでしょう？この物それ自体は何が変わったのか。何も変わっていません。変わったのは、ほかに何人がそれを手にしているか、です。"
+      },
+      "reveal": {
+        "en": "This is a network effect: some things grow more valuable the more people use them. One telephone is worthless; a billion telephones are essential. The value lives not in the object but in the web of connections it joins. Each new user makes the whole network worth more to everyone already inside it — value that feeds on itself.",
+        "zh": "這就是網路效應：有些東西，用的人越多就越有價值。一支電話一文不值；十億支電話卻不可或缺。價值不在物件本身，而在它所加入的那張連結之網。每一個新使用者，都讓整個網路對已經在裡面的每個人更有價值——一種會自我滋養的價值。",
+        "ja": "これがネットワーク効果です——あるものは、使う人が増えるほど価値が高まる。電話が一台なら無価値、十億台なら必需品。価値は物そのものではなく、それが加わるつながりの網の中に宿る。新しい利用者が一人増えるたび、網ぜんたいが、すでに中にいる全員にとってより価値あるものになる——みずからを養って育つ価値です。"
+      },
+      "example": {
+        "en": "You probably stay on a certain messaging app not because it is the best, but because everyone you know is already there. A better app with no one on it is, like that first telephone, a phone that rings nowhere.",
+        "zh": "你之所以待在某個通訊 app，多半不是因為它最好用，而是因為你認識的人全都已經在上面。一個更好、卻沒人在用的 app，就像那第一支電話——一支打到哪裡都沒人接的電話。",
+        "ja": "あなたがある messaging アプリを使い続けるのは、それが最高だからではなく、たぶん知り合いが全員すでにそこにいるからです。誰もいない、より優れたアプリは、あの最初の電話と同じ——どこにもつながらない電話なのです。"
+      },
+      "surprise": {
+        "en": "This is why, online, the winner takes all. Once a network pulls ahead, every new person joins the crowd, which pulls in more people still — so the lead snowballs. And the unsettling consequence: the better product often loses. Not because it was worse, but because a rival got big first, and being big became the whole advantage.",
+        "zh": "這正是為什麼在網路世界，贏家通吃。一旦某個網路領先，每個新來的人都加入人多的那邊，這又吸引更多人進來——於是領先像滾雪球一樣越滾越大。而令人不安的後果是：比較好的產品常常輸。不是因為它比較差，而是因為對手先做大了，而「夠大」本身就成了全部的優勢。",
+        "ja": "だからこそ、オンラインでは勝者がすべてを得る。いったんあるネットワークが先行すると、新しい人は皆その人だかりに加わり、それがさらに人を呼ぶ——こうして差は雪だるま式にふくらむ。そして落ち着かない帰結はこれです——より優れた製品が、しばしば負ける。劣っていたからではなく、ライバルが先に大きくなり、大きいこと自体がまるごと優位になったからです。"
+      },
+      "thread": {
+        "en": "Things spread across a network and grow as they go. But not only good things spread that way — what about a disease?",
+        "zh": "東西會在網路上擴散，而且越散越大。但用這種方式擴散的，不只是好東西——那疾病呢？",
+        "ja": "ものはネットワーク上を広がり、進むほどに育つ。けれど、そうやって広がるのは良いものだけではありません——では、病気はどうでしょう？"
+      }
+    },
+    {
+      "ref": "epidemiological_modeling_concept",
+      "hook": {
+        "en": "A rumor and a virus seem to have nothing in common. One is an idea, the other a germ. Yet they travel a town in eerily similar ways. Could they obey the same hidden math?",
+        "zh": "謠言和病毒看似毫無共通之處。一個是念頭，一個是病菌。然而它們在一座城裡的傳播方式，卻詭異地相似。它們會不會服從同一套隱藏的數學？",
+        "ja": "噂とウイルスには、何の共通点もなさそうです。一方は考え、もう一方は病原体。なのに、町を巡るその広がり方は、不気味なほど似ている。両者は、同じ隠れた数学に従っているのでしょうか？"
+      },
+      "reveal": {
+        "en": "Epidemiological modeling says yes. To predict an outbreak, scientists treat people as nodes and their contacts as edges, then let infection travel along those edges. A disease spreads by the very same network math as a rumor or a meme: every contact is a link, and the sickness walks them one by one. To know how far it will go, you study the network, not just the germ.",
+        "zh": "流行病模型說：會。為了預測疫情，科學家把人當作節點、把接觸當作邊，然後讓感染沿著這些邊傳播。疾病擴散，靠的正是和謠言、迷因一模一樣的網路數學：每一次接觸都是一條連結，病就沿著它們一個接一個地走。想知道它會傳多遠，你研究的是網路，而不只是病菌。",
+        "ja": "感染症のモデルは「そうだ」と答えます。流行を予測するため、科学者は人を節点、その接触を辺とみなし、感染をその辺に沿って進ませる。病気は、噂やミームとまったく同じネットワークの数学で広がる——どの接触も一本のつながりであり、病はそれを一つずつたどっていく。どこまで広がるかを知るには、病原体だけでなく、ネットワークを調べるのです。"
+      },
+      "example": {
+        "en": "When health officials trace an outbreak, they are really drawing a graph: who met whom, and when. The same diagram a sociologist would draw to follow a piece of gossip across a school is the one an epidemiologist draws to follow a flu.",
+        "zh": "當衛生官員追蹤疫情時，他們其實是在畫一張圖：誰在何時遇見了誰。社會學家用來追一則八卦如何傳遍一所學校的那張圖，正是流行病學家用來追一場流感的同一張圖。",
+        "ja": "保健当局が流行を追跡するとき、彼らは実はグラフを描いています——誰がいつ誰と会ったか。社会学者が噂を学校じゅうに追うために描く図と、疫学者がインフルエンザを追うために描く図は、まったく同じものなのです。"
+      },
+      "surprise": {
+        "en": "And here the network's shape becomes a weapon. Because a few hubs touch so many others, you do not have to vaccinate everyone — vaccinate the hubs, the highly-connected people, and the epidemic collapses. The same trick protects the internet: shield the hub computers and a virus cannot cross the web. The wiring, not the germ alone, decides the outbreak.",
+        "zh": "而在這裡，網路的形狀化為一件武器。因為少數樞紐接觸了極多其他人，你不必替每個人都接種疫苗——只要替樞紐、那些連結極多的人接種，疫情就會崩潰。同樣的招數也能保護網際網路：守住樞紐電腦，病毒就跨不過整張網。決定疫情的，是這張網的接線方式，而不只是病菌本身。",
+        "ja": "そしてここで、ネットワークの形が武器になります。少数のハブが非常に多くの相手に触れているため、全員に接種する必要はない——ハブ、つまりつながりの多い人々に接種すれば、流行は崩れ落ちる。同じ手がインターネットも守る——ハブとなるコンピュータを守れば、ウイルスは網を越えられない。流行を決めるのは、病原体だけでなく、その配線なのです。"
+      },
+      "thread": {
+        "en": "Friendships, money, disease — all the same dots and lines. Push this idea to its limit and one question waits: what isn't a network?",
+        "zh": "友誼、金錢、疾病——全是同樣的點與線。把這個想法推到極限，一個問題正等著你：有什麼東西不是網路？",
+        "ja": "友情、お金、病気——どれも同じ点と線。この考えを極限まで押し進めると、一つの問いが待っています——ネットワークでないものなど、あるのでしょうか？"
+      }
+    },
+    {
+      "ref": "complex_systems_concept",
+      "hook": {
+        "en": "A single ant is almost stupid. A single neuron does almost nothing. Yet a colony builds bridges from its own bodies, and a brain writes poetry. Where does the cleverness come from, if not from the parts?",
+        "zh": "一隻螞蟻幾乎是笨的。一個神經元幾乎什麼都不做。然而一整個蟻群會用自己的身體搭橋，一個大腦會寫詩。如果這份聰明不是來自個別的零件，那它從哪裡來？",
+        "ja": "一匹のアリは、ほとんど愚かです。一個の神経細胞は、ほとんど何もしない。なのにコロニーは自分たちの体で橋を架け、脳は詩を書く。その賢さは、部品からでないなら、いったいどこから来るのでしょう？"
+      },
+      "reveal": {
+        "en": "From the wiring. Complex systems are networks whose behavior emerges from how the parts are connected, not from any part alone. Brains, economies, ecosystems, the internet — each is a vast graph, and its character lives in the pattern of links. No single neuron knows you are reading; no single trader sets the market. The whole does what no part can, and the network is where that whole lives.",
+        "zh": "來自接線方式。複雜系統是一種網路，它的行為「湧現」自零件如何相連，而非任何單一零件。大腦、經濟、生態系、網際網路——每一個都是一張龐大的圖，它的性格活在連結的模式裡。沒有任何單一神經元知道你正在閱讀；沒有任何單一交易者決定整個市場。整體做著任何部分都做不到的事，而那個整體，就活在網路之中。",
+        "ja": "配線からです。複雑系とは、その振る舞いが部品どうしのつなぎ方から「創発」するネットワークであり、どの部品単独からでもない。脳、経済、生態系、インターネット——どれも巨大なグラフであり、その性格はつながりの模様の中に宿る。どの神経細胞も、あなたが読んでいることを知らない。どの取引者も、市場を決めはしない。全体は、どの部分にもできないことをする——そしてその全体は、ネットワークの中に生きているのです。"
+      },
+      "example": {
+        "en": "A traffic jam is no single car's doing; it ripples backward through the network of cars as a wave nobody steers. Slime mold, with no brain at all, can map the shortest path through a maze — the network computes what the parts cannot.",
+        "zh": "塞車不是任何一輛車造成的；它像一道沒人在駕馭的波，沿著車與車的網路往後盪開。黏菌根本沒有大腦，卻能在迷宮裡找出最短路徑——是網路算出了零件算不出的東西。",
+        "ja": "渋滞は、どの一台の車のせいでもない——誰も操っていない波として、車のネットワークを後ろへ伝わっていく。粘菌は脳をまったく持たないのに、迷路の最短路を描き出せる——ネットワークが、部品にはできない計算をするのです。"
+      },
+      "surprise": {
+        "en": "And the deepest case is the one reading this. Your roughly 86 billion neurons are 'just' a network — dots and links, the same picture as Euler's bridges. No single cell is conscious, no wire holds a thought. Yet from how they connect, somehow, a mind appears: you, wondering at the very network you are made of. The web is everywhere, and you are one.",
+        "zh": "而最深的一個例子，正是此刻在閱讀的這一個。你那約八百六十億個神經元，「只不過」是一張網路——點與連結，和歐拉的橋是同一張圖。沒有任何單一細胞擁有意識，沒有任何一條線裝著一個念頭。然而從它們如何相連，竟不知怎地，浮現出一個心智：那就是你，對著你自身所構成的那張網感到驚奇。網無所不在——而你，就是一張網。",
+        "ja": "そして最も深い例は、いまこれを読んでいる、その当人です。あなたのおよそ 860 億個の神経細胞は、「ただの」ネットワーク——点とつながり、オイラーの橋と同じ絵です。どの細胞も意識を持たず、どの配線も思考を抱えてはいない。なのに、それらのつなぎ方から、なぜか心が現れる——あなたが、自分を形づくっているまさにそのネットワークに驚いている。網はどこにでもあり、そしてあなたが、一つの網なのです。"
+      },
+      "thread": {
+        "en": "You have walked from seven bridges to the wiring of your own mind, and found the same dots and lines underneath it all. The trail ends here — but the network is wide open. Wander wherever a link pulls you.",
+        "zh": "你從七座橋一路走到了自己心智的接線方式，並在這一切底下，發現了同樣的點與線。這趟旅程到此為止——但這張網仍然敞開。哪條連結吸引你，就往哪裡漫遊。",
+        "ja": "あなたは七つの橋から、自分自身の心の配線まで歩いてきて、そのすべての底に、同じ点と線を見つけました。旅はここまで——でもネットワークは大きく開いています。心ひかれるつながりがあれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "graph_theory_concept", "target": "network_theory_concept", "relation_type": "logical" },
+    { "source": "network_theory_concept", "target": "social_network_theory_concept", "relation_type": "conceptual" },
+    { "source": "social_network_theory_concept", "target": "network_effects_concept", "relation_type": "applied" },
+    { "source": "network_effects_concept", "target": "epidemiological_modeling_concept", "relation_type": "conceptual" },
+    { "source": "epidemiological_modeling_concept", "target": "complex_systems_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up the Seven Bridges of Königsberg and trace Euler's proof on a napkin; read about the 'six degrees' small-world experiments that mailed letters across a country to test it; or dig into scale-free networks to see why hubs appear almost everywhere you look.",
+    "zh": "想再往下走一點？去查查柯尼斯堡七橋問題，在餐巾紙上把歐拉的證明畫一遍；讀讀那些「六度分隔」的小世界實驗——它們真的把信件寄遍一整個國家來驗證這件事；或者深入「無尺度網路」，看看為什麼你往哪裡看，樞紐幾乎都會出現。",
+    "ja": "もっと先へ進みたいですか？ケーニヒスベルクの七つの橋を調べ、ナプキンの上でオイラーの証明をたどってみる。それを試すために国じゅうに手紙を送った「六次の隔たり」のスモールワールド実験を読んでみる。あるいは「スケールフリー・ネットワーク」を掘り下げ、なぜどこを見てもハブが現れるのかを確かめてみてください。"
+  }
+}

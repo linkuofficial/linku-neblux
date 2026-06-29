@@ -1,0 +1,221 @@
+{
+  "id": "infinity",
+  "accent": "MAT",
+  "title": { "en": "Infinity", "zh": "無限", "ja": "無限" },
+  "intro": {
+    "en": "Counting never stops — but some endless things turn out to be bigger than other endless things. In seven steps, follow that one strange idea as it breaks mathematics open and rebuilds it from the ground up.",
+    "zh": "數數永遠停不下來——但有些「沒有盡頭」的東西，竟然比另一些「沒有盡頭」的更大。跟著七步，看這個奇異的念頭如何把數學整個劈開，再從根基重建。",
+    "ja": "数えることに終わりはありません——でも「果てしないもの」のなかに、別の「果てしないもの」より大きいものがある。7 つのステップで、その奇妙な一つの考えが数学をこじ開け、土台から作り直していく様子を追いましょう。"
+  },
+  "steps": [
+    {
+      "ref": "number_theory_concept",
+      "hook": {
+        "en": "Count: 1, 2, 3… and you can always add one more. The numbers never run out. But hidden inside that endless line, are some numbers more fundamental than the rest?",
+        "zh": "數下去：1、2、3……你永遠可以再加一個。數字用不完。但在這條沒有盡頭的數列裡，有些數字會不會比其他的更「根本」？",
+        "ja": "数えてみましょう。1、2、3……いつでもあと一つ足せる。数は尽きません。でも、その果てしない列のなかに、ほかより根源的な数があるとしたら？"
+      },
+      "reveal": {
+        "en": "There are: the primes — numbers like 2, 3, 5, 7 that can only be divided by 1 and themselves. They are the indivisible atoms of arithmetic. Every other whole number is built by multiplying primes together, in exactly one way. They are scattered with no easy pattern, growing rarer as you climb — and yet they never stop coming.",
+        "zh": "有的：質數——像 2、3、5、7 這種，只能被 1 和自己整除的數。它們是算術中不可再分的「原子」。其他每一個整數，都是由質數相乘搭成的，而且方式唯一。它們散落在數線上、沒有簡單的規律，越往上越稀疏——但永遠源源不絕地冒出來。",
+        "ja": "あります——素数です。2、3、5、7 のように、1 と自分自身でしか割れない数。算術における、これ以上分けられない「原子」です。ほかのすべての整数は、素数のかけ算でただ一通りに組み立てられる。素数は単純な規則もなく散らばり、上へ行くほどまばらになる——それでも、決して尽きることがありません。"
+      },
+      "example": {
+        "en": "Your online banking leans on this: the encryption that guards your password multiplies two enormous primes together — a sum easy to do but, so far, nearly impossible to undo.",
+        "zh": "你的網路銀行就靠著這件事：守護你密碼的加密，把兩個巨大的質數相乘——這個乘法很好算，但反過來「拆回去」，至今幾乎沒人辦得到。",
+        "ja": "あなたのネットバンキングはこれに支えられています。パスワードを守る暗号は、巨大な素数を二つかけ合わせる——この計算は簡単なのに、逆にたどって「分解」するのは今のところほぼ不可能なのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: there is no largest prime. No matter how far you count, more primes always wait beyond. Euclid proved it around 2,300 years ago in a few lines — assume the primes run out, multiply every one of them together and add 1, and you've conjured a number none of them can divide. The list cannot end.",
+        "zh": "意外的是：根本沒有「最大的質數」。不管你數到多遠，前方永遠還有更多質數等著。歐幾里得在約兩千三百年前，用短短幾行就證明了：假設質數會用完，把它們全部相乘再加 1，你就變出一個誰也除不盡的數。這份清單，不可能有終點。",
+        "ja": "意外なことに、「最大の素数」は存在しません。どれだけ数えても、その先につねに新しい素数が待っている。ユークリッドは約二千三百年前、わずか数行でこれを証明しました——素数が尽きると仮定し、それらを全部かけて 1 を足す。すると、どの素数でも割り切れない数が現れる。リストに終わりはありえないのです。"
+      },
+      "thread": {
+        "en": "So a list can be endless. But what does it even mean to creep up on infinity without ever arriving?",
+        "zh": "原來一份清單可以沒有盡頭。但「不斷逼近無限、卻永遠到不了」，這究竟是什麼意思？",
+        "ja": "リストは果てしなくなりうる。でも「無限に近づきながら、決して到達しない」とは、そもそもどういうことなのでしょう？"
+      }
+    },
+    {
+      "ref": "limit_concept",
+      "hook": {
+        "en": "Step halfway to a wall. Then halfway again, and again. You never quite touch it — yet you clearly seem to be heading somewhere. Where?",
+        "zh": "朝牆走一半。再走剩下的一半，再一半。你永遠碰不到牆——但你顯然正在往某個地方靠近。是哪裡？",
+        "ja": "壁まで半分進む。残りのまた半分、さらに半分。決して壁には触れない——なのに、明らかにどこかへ向かっている。どこへ?"
+      },
+      "reveal": {
+        "en": "Toward the wall, exactly. Mathematicians tamed infinity by stopping asking 'do you arrive?' and asking instead 'what value do you approach?' That target is the limit. Your steps — half, then a quarter, then an eighth — never reach the wall in any single move, but they pile up to a clean total of one full distance. Infinity stops being a place you go and becomes a direction you lean.",
+        "zh": "正是那面牆。數學家馴服無限的方法，是不再問「你到得了嗎」，而改問「你正在逼近哪個值」。那個目標，就叫極限。你的腳步——二分之一、四分之一、八分之一——任何單獨一步都到不了牆，但它們疊加起來，剛好是「一整段」距離。無限不再是你要前往的地點，而變成你傾身靠近的方向。",
+        "ja": "ほかでもない、壁へ、です。数学者は「到達するか」を問うのをやめ、「どの値に近づくか」を問うことで無限を飼いならしました。その目標が極限です。あなたの歩み——二分の一、四分の一、八分の一——どの一歩も壁には届かないのに、足し合わせると、ちょうど「一つ分」の距離になる。無限は、行き着く場所ではなく、傾いて近づいていく方向になったのです。"
+      },
+      "example": {
+        "en": "It's how we measure a curve's exact slope, or the area under it: slice it into infinitely many slivers, then ask what the slices add up to as they grow infinitely thin. That single idea is the engine of all of calculus.",
+        "zh": "我們就是這樣量出一條曲線「某一點的精確斜率」，或它底下的面積：把它切成無限多片，再問當每一片變得無限薄時，這些片加起來會逼近什麼。這個念頭，就是整套微積分的引擎。",
+        "ja": "曲線の「ある点の正確な傾き」や、その下の面積も、こうして測ります——無限に多くの薄片に切り分け、一片が無限に薄くなるとき総和が何に近づくかを問う。このたった一つの考えが、微積分すべての原動力なのです。"
+      },
+      "surprise": {
+        "en": "The twist that unsettles everyone: 0.999… with the nines repeating forever is not almost 1. It is exactly 1 — the same number wearing a different coat. Because the endless string of nines leaves no gap at all between it and one, and a number with no gap to its target simply is that target.",
+        "zh": "讓所有人都不安的轉折：0.999……（9 無限重複下去）並不是「幾乎等於 1」。它就「精確等於 1」——同一個數，換了件衣服而已。因為那串永不停止的 9，和 1 之間連一絲縫隙都沒留下，而一個與目標毫無縫隙的數，根本就「是」那個目標。",
+        "ja": "誰もが落ち着かなくなる転回——0.999……（9 が永遠に続く）は「ほぼ 1」ではありません。「ちょうど 1」です——同じ数が別の服を着ているだけ。終わらない 9 の列は、自分と 1 のあいだに隙間をまったく残さない。目標との隙間がない数は、もうその目標そのものなのです。"
+      },
+      "thread": {
+        "en": "If we can pin infinity down this precisely, a bolder question follows: can we measure how big an infinity actually is — and compare two of them?",
+        "zh": "如果我們能把無限釘得這麼精準，就會冒出一個更大膽的問題：我們能不能量出一個無限「有多大」——並拿兩個無限來比較？",
+        "ja": "無限をここまで正確に押さえられるなら、より大胆な問いが続きます——無限が「どれだけ大きいか」を測り、二つの無限を比べられるのでしょうか?"
+      }
+    },
+    {
+      "ref": "set_theory_concept",
+      "hook": {
+        "en": "Infinity is infinity — surely there's only one of it, and asking which is 'bigger' is nonsense. Or is it?",
+        "zh": "無限就是無限——想必只有一種，問哪個「比較大」根本是胡說。真的嗎？",
+        "ja": "無限は無限——きっと一種類しかなく、どちらが「大きい」かなど無意味だ。本当にそうでしょうか?"
+      },
+      "reveal": {
+        "en": "Georg Cantor found a way to ask it. To compare two collections without counting, you pair their members one to one — like matching every left shoe to a right. If nothing is left over on either side, they're the same size. He paired the counting numbers 1, 2, 3… with the even numbers 2, 4, 6… one for one, forever, with none left out. So there are exactly as many even numbers as numbers — even though the evens are 'half' of them.",
+        "zh": "康托爾找到了問的辦法。要比較兩堆東西而不用真的去數，你就把它們的成員一對一配對——像把每隻左鞋配一隻右鞋。如果兩邊都沒剩，它們就一樣大。他把數數的 1、2、3……和偶數 2、4、6……一個對一個地配下去，永遠配得完、兩邊都不剩。所以偶數的「個數」，竟和全部數字一樣多——儘管偶數看起來只是其中的「一半」。",
+        "ja": "ゲオルク・カントールは、それを問う方法を見つけました。二つの集まりを数えずに比べるには、要素を一対一で組にする——左の靴ごとに右の靴を当てるように。どちらにも余りが出なければ、同じ大きさです。彼は数える数 1、2、3……と偶数 2、4、6……を一つずつ、永遠に、余りなく対にした。つまり偶数の「個数」は、全部の数と同じだけある——偶数は見かけ上その「半分」なのに。"
+      },
+      "example": {
+        "en": "Picture a hotel with infinitely many rooms, all full. A new guest arrives. Just ask everyone to shift up one room — guest in room 1 to room 2, and so on — and room 1 falls empty. A full infinite hotel always has room for more.",
+        "zh": "想像一家有無限多房間的旅館，全部客滿。這時來了一位新客人。只要請每個人往後挪一間——1 號房的人搬到 2 號，依此類推——1 號房就空出來了。一家客滿的無限旅館，永遠還住得下更多人。",
+        "ja": "無限に部屋がある満室のホテルを思い浮かべてください。新しい客が来ます。全員に一部屋ずつずれてもらうだけでいい——1 号室の客は 2 号室へ、という具合に——すると 1 号室が空く。満室の無限ホテルには、いつでもまだ空きがあるのです。"
+      },
+      "surprise": {
+        "en": "Then came the bombshell. Cantor showed the points on a single line — all the endless decimals between 0 and 1 — cannot be paired with the counting numbers at all. Whatever list you try, he builds a new number you missed, by changing the first digit of the first, the second of the second, and so on down the diagonal. The line is a strictly bigger infinity. Some endless things genuinely out-rank others.",
+        "zh": "接著，震撼彈來了。康托爾證明：一條線上的點——也就是 0 到 1 之間所有無止盡的小數——根本無法和數數的數一對一配對。不管你列出什麼清單，他都能造出一個你漏掉的新數：把第一個數的第一位改掉、第二個數的第二位改掉，沿著對角線一路改下去。這條線，是「嚴格更大」的無限。有些沒有盡頭的東西，真的勝過另一些。",
+        "ja": "そして衝撃が訪れます。カントールは、一本の線上の点——0 と 1 のあいだの果てしない小数すべて——が、数える数とはまったく対にできないことを示しました。どんなリストを作っても、彼は漏れた新しい数を作り出す——一番目の数の一桁目を、二番目の数の二桁目を、と対角線に沿って変えていくのです。線は「厳密により大きい」無限。果てしないもののなかに、本当にほかを上回るものがあるのです。"
+      },
+      "thread": {
+        "en": "Cantor didn't measure these infinities; he proved facts about them no example could ever check by hand. What kind of certainty lets you be sure about endlessly many things at once?",
+        "zh": "康托爾沒有去「量」這些無限，他是「證明」了關於它們的事實——這些事實，沒有任何例子能靠手一個個驗證。是什麼樣的確定性，能讓你對無限多件事一次拍板？",
+        "ja": "カントールは、これらの無限を「測った」のではなく、手では一つずつ確かめようのない事実を「証明」しました。無限に多くのことを一度に確信させる——そんな確かさとは、どんなものでしょう?"
+      }
+    },
+    {
+      "ref": "mathematical_proof_concept",
+      "hook": {
+        "en": "In science, you test a claim and trust it until something breaks it. But how could you ever test a statement about every number, when the numbers never end?",
+        "zh": "在科學裡，你檢驗一個主張，在它被推翻之前都姑且相信。但一個關於「每一個數」的陳述，當數字永無止盡時，你要怎麼檢驗它？",
+        "ja": "科学では、主張を試し、覆されるまでは信じます。でも「すべての数」についての言明を、数が尽きないとき、どうやって試せるのでしょう?"
+      },
+      "reveal": {
+        "en": "You don't test it — you prove it. A mathematical proof is a chain of logic, each link forced by the one before, starting from things already agreed true. Once the chain holds, the conclusion is certain — not 'very likely,' but settled, beyond any possible counterexample. This is what makes math different from every other field: its truths don't expire when new evidence arrives.",
+        "zh": "你不檢驗它——你「證明」它。數學證明是一條邏輯的鏈，每一環都被前一環逼出來，從已經公認為真的東西出發。一旦這條鏈接住了，結論就是確定的——不是「很有可能」，而是塵埃落定，沒有任何反例能撼動。這正是數學與其他所有領域不同之處：它的真理，不會因為出現新證據而過期。",
+        "ja": "試すのではなく——「証明」します。数学の証明とは論理の鎖で、各環は前の環に必然的に押し出され、すでに真と認められたものから出発します。鎖がつながれば、結論は確実——「とても起こりそう」ではなく、いかなる反例も寄せつけず確定する。これが数学をほかのあらゆる分野と分かつものです。その真理は、新しい証拠が現れても期限切れにならないのです。"
+      },
+      "example": {
+        "en": "Pythagoras' little rule about right triangles was proved once, over two thousand years ago. It has never needed updating, and it never will. A surveyor today leans on it with the same total confidence as the Greeks did.",
+        "zh": "畢達哥拉斯關於直角三角形的小定理，兩千多年前被證明過一次。它從沒需要修訂，將來也不會。今天的測量員依靠它的篤定，和當年的希臘人一模一樣。",
+        "ja": "直角三角形についてのピタゴラスの小さな定理は、二千年以上前に一度証明されました。修正の必要は一度もなく、これからもない。今日の測量士は、当時のギリシャ人とまったく同じ確信でそれに頼ります。"
+      },
+      "surprise": {
+        "en": "Here's the quiet power of it: a single proof can settle infinitely many cases at once. Euclid didn't check primes one by one; his few lines guaranteed the result for all of them, forever. One short argument can capture an endless ocean of facts in a single net — something no amount of experiment could ever do.",
+        "zh": "它安靜的威力在於：一個證明，能一次解決無限多種情況。歐幾里得沒有一個一個去檢查質數；他那短短幾行，一勞永逸地保證了「對所有質數都成立」。一段簡短的論證，能用一張網把無止盡的事實之海整個撈起——這是再多的實驗都永遠做不到的事。",
+        "ja": "その静かな力はここにあります——たった一つの証明が、無限に多くの場合を一度に片づける。ユークリッドは素数を一つずつ確かめたのではない。あのわずか数行が、すべての素数について結果を永遠に保証したのです。短い論証一つが、果てしない事実の海を一枚の網で丸ごとすくい上げる——どれほど実験を重ねても決してできないことを。"
+      },
+      "thread": {
+        "en": "But every proof starts 'from things already agreed true.' Who agreed them, and why those? What sits at the very bottom?",
+        "zh": "但每個證明都「從已經公認為真的東西出發」。是誰公認的，又為什麼是那些？最底層，到底擺著什麼？",
+        "ja": "でも、どの証明も「すでに真と認められたもの」から始まります。誰が、なぜそれらを認めたのか。いちばん底には、何が置かれているのでしょう?"
+      }
+    },
+    {
+      "ref": "axiomatic_system_concept",
+      "hook": {
+        "en": "A proof leans on earlier truths, which lean on earlier ones still. Follow that chain all the way down — and what stops it from falling forever?",
+        "zh": "一個證明倚靠著更早的真理，那些又倚靠更早的。順著這條鏈一路往下追——是什麼擋住它，不讓它永遠墜落下去？",
+        "ja": "証明は前の真理に寄りかかり、それはさらに前の真理に寄りかかる。その鎖をどこまでも下へたどると——何がそれを止め、永遠に落ち続けるのを防ぐのでしょう?"
+      },
+      "reveal": {
+        "en": "At the bottom sit the axioms: a small handful of starting rules we simply choose to accept, no proof asked. Everything else is built on top by pure logic. All of mathematics, in this light, is a game — pick your starting rules, then see what they force to be true. Change the rules, and you don't get a wrong game; you get a different, equally valid world.",
+        "zh": "底下坐著的是公理：一小撮我們選擇直接接受、不要求證明的起始規則。其餘的一切，都靠純粹的邏輯往上搭。從這個角度看，整個數學就是一場遊戲——挑好你的起始規則，再看看它們逼出哪些真理。換掉規則，你得到的不是一場「錯」的遊戲，而是一個不同、卻同樣成立的世界。",
+        "ja": "底に座っているのが公理です——証明を求めず、ただ受け入れると決めた、ひと握りの出発点の規則。ほかのすべては、その上に純粋な論理で組み上げられます。こう見れば、数学全体が一つのゲーム——出発の規則を選び、それが何を真へと強いるかを見る。規則を変えても「間違った」ゲームになるのではなく、異なる、しかし同じく正しい世界が手に入るのです。"
+      },
+      "example": {
+        "en": "Change one rule about counting — declare that after 11 comes 0 again — and you get 'clock arithmetic,' where 9 plus 4 equals 1. It sounds like a mistake, yet this exact system runs the cryptography that secures the whole internet.",
+        "zh": "換掉一條關於計數的規則——規定 11 之後又回到 0——你就得到「時鐘算術」，在裡頭 9 加 4 等於 1。聽起來像算錯了，但正是這套系統，撐起了守護整個網際網路的密碼學。",
+        "ja": "数える規則を一つ変える——11 の次にまた 0 が来ると決める——と「時計算術」になり、そこでは 9 足す 4 が 1 になります。間違いのように聞こえますが、まさにこの仕組みが、インターネット全体を守る暗号を動かしているのです。"
+      },
+      "surprise": {
+        "en": "The most famous example shook geometry. For two thousand years, one axiom seemed too obvious to question: parallel lines never meet. Then mathematicians dropped it — and instead of nonsense, out came curved geometries where parallel lines bend together or apart. Those 'wrong' geometries turned out to be the true shape of space near a star, the very geometry black holes live in.",
+        "zh": "最有名的例子撼動了幾何學。兩千年來，有一條公理顯得太理所當然、無人質疑：平行線永不相交。後來數學家把它拿掉了——結果跑出來的不是胡言亂語，而是「彎曲幾何」，在裡頭平行線會彼此靠攏或分開。這些「錯」的幾何，竟然正是恆星附近空間真正的形狀，是黑洞所棲身的那種幾何。",
+        "ja": "最も有名な例は幾何学を揺るがしました。二千年のあいだ、疑うにはあまりに自明に見えた公理が一つ——平行線は決して交わらない。やがて数学者はそれを外した——するとでたらめではなく、平行線が寄り合ったり離れたりする「曲がった幾何」が現れた。それら「間違った」幾何こそ、星の近くの空間の真の形——ブラックホールが住まう、まさにその幾何だったのです。"
+      },
+      "thread": {
+        "en": "If the whole towering edifice rests on rules we just chose, a haunting question whispers up from the foundations: can the rules ever fully prove themselves trustworthy?",
+        "zh": "如果這整座高聳的大廈，全靠我們隨手挑的規則撐著，那麼一個令人不安的問題就從地基悄悄升起：這些規則，能不能徹底證明它們自己值得信賴？",
+        "ja": "そびえ立つこの建物全体が、私たちがただ選んだ規則に支えられているなら——基礎から不気味な問いがささやき上がってきます。規則は、自分自身が信頼に足ると、完全に証明できるのでしょうか?"
+      }
+    },
+    {
+      "ref": "mathematical_logic_concept",
+      "hook": {
+        "en": "Surely, if we just choose our axioms carefully enough, math can prove every true statement and never trip over itself. That was the dream. Was it possible?",
+        "zh": "想必只要我們把公理挑得夠仔細，數學就能證明每一個為真的陳述、永遠不自相矛盾。這曾是個夢想。它有可能成真嗎？",
+        "ja": "公理さえ十分に注意して選べば、数学はあらゆる真の言明を証明でき、決して自分と矛盾しない。それが夢でした。実現できたのでしょうか?"
+      },
+      "reveal": {
+        "en": "In 1931 Kurt Gödel proved it impossible. Take any rule-system rich enough to do ordinary arithmetic. Gödel showed how to build, inside it, a statement that says of itself 'I cannot be proved here.' If the system could prove it, the system would be lying. So the statement is true — and unprovable within its own rules. Every such system contains truths it can see but can never reach.",
+        "zh": "1931 年，哥德爾證明了這不可能。隨便拿一個豐富到能做普通算術的規則系統。哥德爾示範了如何在它「內部」造出一句陳述，這句話說的是它自己：「我在這裡無法被證明。」如果系統能證明它，系統就是在說謊。所以這句話為真——卻在它自己的規則裡無法被證明。每一個這樣的系統，都含有它看得見、卻永遠搆不到的真理。",
+        "ja": "1931 年、クルト・ゲーデルはそれが不可能だと証明しました。ふつうの算術ができるほど豊かな規則系を、どれでもいい。ゲーデルは、その「内部」に、自分自身についてこう述べる言明を組み立てる方法を示しました——「私はここでは証明できない」。もし系がそれを証明できれば、系は嘘をついていることになる。だからその言明は真——なのに自分の規則の内では証明できない。そうした系はみな、見えていても決して届かない真理を抱えているのです。"
+      },
+      "example": {
+        "en": "It echoes the old liar's sentence 'this statement is false' — which can be neither true nor false without contradiction. Gödel's genius was turning that slippery word-trick into rock-solid arithmetic the system could not wriggle out of.",
+        "zh": "這呼應了古老的說謊者悖論：「這句話是假的」——它既不能為真也不能為假，否則就矛盾。哥德爾的天才之處，在於把那個滑溜的文字把戲，變成系統再也閃躲不掉的、堅如磐石的算術。",
+        "ja": "これは古い嘘つきの文「この文は偽である」——真でも偽でも矛盾する——を響かせます。ゲーデルの天才は、そのつかみどころのない言葉遊びを、系が逃れられない盤石の算術へと変えたことにありました。"
+      },
+      "surprise": {
+        "en": "And the deepest blow: he proved that no such system can prove its own consistency — it can never guarantee, from inside, that it will never contradict itself. The dream of a mathematics certain of itself, all the way down, is gone for good. Certainty itself has a horizon, built in, that no amount of cleverness can cross.",
+        "zh": "而最深的一擊是：他證明了，沒有任何這樣的系統能證明它自己「不矛盾」——它永遠無法從內部保證自己絕不會自相矛盾。那個「數學徹底確定自己」的夢，永遠地消失了。確定性本身，有一道與生俱來的地平線，再聰明也跨不過去。",
+        "ja": "そして最も深い一撃——彼は、そうした系のどれも自身の無矛盾性を証明できないことを示しました。内側から、自分が決して矛盾しないと保証することは、決してできない。底の底まで自分を確信する数学という夢は、永遠に消えました。確かさそのものに、どんな知恵をもってしても越えられない地平線が、初めから組み込まれているのです。"
+      },
+      "thread": {
+        "en": "Gödel's whole bombshell turned on one move: a sentence that talks about itself. That single trick — a thing defined in terms of itself — is stranger and more powerful than it looks.",
+        "zh": "哥德爾整顆震撼彈，靠的是一個動作：一句談論它自己的話。這個小把戲——一個用「它自己」來定義的東西——比它看起來更奇異、也更強大。",
+        "ja": "ゲーデルの衝撃のすべては、たった一手にかかっていました——自分自身について語る文。その一つの技——自分自身を使って定義されるもの——は、見かけよりずっと奇妙で、ずっと強力なのです。"
+      }
+    },
+    {
+      "ref": "recursion_concept",
+      "hook": {
+        "en": "How do you capture something endless in a finite rule? You'd need to say 'and so on forever' — but how do you write 'forever' down in a single line?",
+        "zh": "你要怎麼用一條有限的規則，捕捉一個無止盡的東西？你得說出「以此類推，直到永遠」——但「永遠」要怎麼用一行字寫下來？",
+        "ja": "果てしないものを、有限の規則でどう捉えるのでしょう？「以下ずっと同様に」と言わねばならない——でも「ずっと」を、たった一行でどう書き下すのでしょう?"
+      },
+      "reveal": {
+        "en": "You let the rule refer to itself. That is recursion: define a thing in terms of a smaller copy of itself, plus a place to stop. 'A line of people is one person, followed by a line of people' — five words that fold any length down to a single sentence. Self-reference is how the endless gets packed into the finite, how 'forever' becomes something you can hold in your hand.",
+        "zh": "你讓規則去指涉它自己。這就是遞迴：用一個「更小的自己」加上「一個停下來的地方」，來定義一個東西。「一排人，就是一個人，後面接著一排人」——這短短一句，把任意長度摺進了一行字。自我指涉，正是無止盡被打包進有限的辦法，是「永遠」變成你能握在手裡之物的方式。",
+        "ja": "規則に、自分自身を指し示させるのです。それが再帰——あるものを「より小さな自分自身」と「止まる場所」とで定義する。「人の列とは、一人と、その後ろに続く人の列である」——この短い一文が、どんな長さも一行に折りたたむ。自己参照こそ、果てしないものを有限に詰め込む方法——「ずっと」が、手のひらに乗せられるものになる方法です。"
+      },
+      "example": {
+        "en": "Stand between two facing mirrors and you see a corridor of reflections diving away to vanishing — each image holding a smaller image of the whole scene, all the way down. That endless tunnel is recursion you can stand inside.",
+        "zh": "站在兩面相對的鏡子之間，你會看到一條反射的長廊一路潛向消失點——每一個影像裡，都包著一個更小的、整個場景的影像，一路縮下去。那條沒有盡頭的隧道，就是你能站進去的遞迴。",
+        "ja": "向かい合った二枚の鏡のあいだに立つと、反射の回廊が消失点へと潜っていくのが見えます——どの像も、場面全体のより小さな像を内に抱え、どこまでも続く。その果てしないトンネルが、あなたが中に立てる再帰です。"
+      },
+      "surprise": {
+        "en": "Here's where the whole trail closes into a loop. This same self-reference is the heart of Gödel's bombshell — and it is also exactly what every computer program runs on. A line of code can call itself; a finite machine, by referring back to itself, handles unbounded tasks. The deepest puzzle in logic and the machine on your desk are powered by one idea — and that thread leads straight on toward the science of computation.",
+        "zh": "整條路徑就在這裡收成了一個圈。同一個自我指涉，是哥德爾震撼彈的核心——也正是每一支電腦程式運轉的根本。一行程式碼可以呼叫它自己；一台有限的機器，靠著回頭指向自己，就能處理無上限的任務。邏輯中最深的謎題，和你桌上的那台機器，是由同一個念頭驅動的——而這條線，一路直通向「計算」的科學。",
+        "ja": "ここで道全体が一つの輪に閉じます。この同じ自己参照が、ゲーデルの衝撃の核心——そして、あらゆるコンピュータプログラムが回る、まさにその仕組みでもある。一行のコードは自分自身を呼び出せる。有限の機械は、自分へ振り返ることで、限りのない仕事をこなす。論理の最も深い謎と、机の上のその機械が、一つの考えに動かされている——そしてこの糸は、まっすぐ「計算」の科学へと続いていきます。"
+      },
+      "thread": {
+        "en": "You started by counting and ended up at the edge of logic, geometry, and computing — all carried by one endless idea. You've reached the end of the trail, but the field is wide open. Wander wherever a star pulls you.",
+        "zh": "你從數數出發，最後站到了邏輯、幾何與計算的邊緣——這一切，都由同一個無止盡的念頭載著走。這趟旅程到此為止，但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは数えることから始め、論理と幾何と計算の縁にたどり着きました——そのすべてを、一つの果てしない考えが運んできた。旅はここまで、でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "number_theory_concept", "target": "limit_concept", "relation_type": "logical" },
+    { "source": "limit_concept", "target": "set_theory_concept", "relation_type": "conceptual" },
+    { "source": "set_theory_concept", "target": "mathematical_proof_concept", "relation_type": "conceptual" },
+    { "source": "mathematical_proof_concept", "target": "axiomatic_system_concept", "relation_type": "logical" },
+    { "source": "axiomatic_system_concept", "target": "mathematical_logic_concept", "relation_type": "logical" },
+    { "source": "mathematical_logic_concept", "target": "recursion_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Watch a walkthrough of Cantor's diagonal argument until the bigger infinity clicks, play with Hilbert's Hotel and its busloads of infinite guests, or follow a gentle retelling of Gödel's proof — and you'll feel the ground of mathematics shift under your feet, exactly as it did a century ago.",
+    "zh": "想再往下墜一點？看一段康托爾對角線論證的講解，直到那個「更大的無限」在你腦中喀一聲就位；玩玩希爾伯特旅館和它一車車的無限旅客；或讀一篇溫和重述的哥德爾證明——你會感覺到數學的地基在你腳下挪移，就像一個世紀前那樣。",
+    "ja": "もっと落ちてみたいですか？カントールの対角線論証の解説を、より大きな無限がストンと腑に落ちるまで見て、ヒルベルトのホテルと無限の乗客たちで遊び、ゲーデルの証明をやさしく語り直したものを追ってみてください——一世紀前とまったく同じように、数学の地面が足の下で動くのを感じるはずです。"
+  }
+}

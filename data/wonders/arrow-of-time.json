@@ -1,0 +1,192 @@
+{
+  "id": "arrow-of-time",
+  "accent": "PHY",
+  "title": { "en": "The Arrow of Time", "zh": "時間之箭", "ja": "時間の矢" },
+  "intro": {
+    "en": "You can play a video backward and unscramble it, but you can never unscramble an egg. Why does time run one way only? In six steps, chase the deepest law in physics — and find that it is really about counting.",
+    "zh": "你可以把影片倒著放、把畫面還原回去，卻永遠無法把一顆打破的蛋復原。為什麼時間只往一個方向走？跟著六步，追尋物理學中最深的一條定律——並發現它其實，是關於「數數」。",
+    "ja": "動画は逆再生して元に戻せても、割れた卵は決して元に戻せません。なぜ時間は一方向にしか進まないのでしょう？6 つのステップで、物理学でもっとも深い法則を追いかけ——それが実は「数えること」の話だと気づきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "energy_transformation_concept",
+      "hook": {
+        "en": "A battery dies, a fire burns out, your phone runs flat. It feels like the energy got 'used up' and vanished. But where could it actually have gone?",
+        "zh": "電池沒電、火燒盡、手機關機。感覺好像能量被「用掉」、憑空消失了。可是它，到底能跑去哪裡？",
+        "ja": "電池が切れ、火が燃え尽き、スマホの充電がなくなる。エネルギーが「使い果たされて」消えたように感じます。でも、それは実際どこへ行けるのでしょう？"
+      },
+      "reveal": {
+        "en": "Nowhere. Energy is never created or destroyed — it only changes form. The chemical energy in fuel becomes motion, then sound, then warmth in the air. Track every joule and the total never budges. What looks like energy disappearing is just energy quietly changing costume.",
+        "zh": "哪裡都去不了。能量從不被創造、也不被毀滅——它只會改變形式。燃料裡的化學能變成運動、再變成聲音、再變成空氣裡的熱。把每一焦耳都追蹤下來，總量永遠分毫不差。看起來像能量消失了，其實只是能量悄悄換了一身衣裳。",
+        "ja": "どこへも行きません。エネルギーは生まれも消えもせず——形を変えるだけです。燃料の中の化学エネルギーが運動になり、音になり、空気中の熱になる。すべてのジュールを追いかけても、合計はびくともしません。エネルギーが消えたように見えるのは、ただ静かに衣装を着替えているだけなのです。"
+      },
+      "example": {
+        "en": "Rub your hands together and they warm up: the motion of your muscles becomes heat in your skin. Not one bit of energy is lost — it just moved from one form to another.",
+        "zh": "把雙手互相搓一搓，它們會發熱：肌肉的運動變成了皮膚上的熱。沒有一丁點能量不見了——它只是從一種形式，換到了另一種。",
+        "ja": "両手をこすり合わせると温かくなります。筋肉の動きが、肌の上で熱に変わったのです。エネルギーは少しも失われていません——ただ、ある形から別の形へ移っただけです。"
+      },
+      "surprise": {
+        "en": "Here's the catch hiding in plain sight: if energy is always conserved, then nothing is ever truly 'used up.' Which makes an energy crisis sound impossible — there's exactly as much energy after you drive as before. So why does the world act as if energy runs out? Something is missing from this story.",
+        "zh": "這裡藏著一個就在眼前的矛盾：如果能量永遠守恆，那就沒有任何東西真正被「用光」。這樣一來，能源危機聽起來根本不可能發生——你開完車之後，世界上的能量跟開車前一樣多。那為什麼這世界，卻表現得好像能量會耗盡？這個故事裡，少了一塊東西。",
+        "ja": "ここに、目の前で隠れている落とし穴があります。エネルギーがつねに保存されるなら、何ひとつ本当に「使い果たされる」ことはない。すると、エネルギー危機など起こりえないように聞こえます——車を走らせた後も、世界のエネルギーは前とまったく同じ量。では、なぜ世界はエネルギーが尽きるかのように振る舞うのでしょう？この話には、ひとつ欠けているものがあります。"
+      },
+      "thread": {
+        "en": "If the amount of energy never changes, then something else about it must. What is it that quietly gets worse every time energy changes hands?",
+        "zh": "如果能量的「量」永遠不變，那一定有別的東西在變。每次能量易手，悄悄變糟的，到底是什麼？",
+        "ja": "エネルギーの「量」が決して変わらないなら、変わっているのは別の何かのはず。エネルギーが受け渡されるたび、ひそかに悪くなっていくものとは、何でしょう？"
+      }
+    },
+    {
+      "ref": "thermodynamics_laws_concept",
+      "hook": {
+        "en": "Every machine wastes some energy as heat — the engine warms up, the laptop's fan whirs. Why can't we ever build one that wastes nothing?",
+        "zh": "每一台機器都會把一部分能量浪費成熱——引擎發燙、筆電的風扇嗡嗡轉。為什麼我們永遠造不出一台「一點都不浪費」的機器？",
+        "ja": "どんな機械もエネルギーの一部を熱として無駄にします——エンジンは熱くなり、ノートパソコンのファンはうなる。なぜ私たちは、まったく無駄のない機械を決して作れないのでしょう？"
+      },
+      "reveal": {
+        "en": "This is thermodynamics, the science of heat and energy. Its first law is the one we just met: energy is conserved, the total stays fixed. But its second law adds a twist the first one missed: every time energy changes form, some of it always degrades into spread-out, low-grade heat that you can't fully use again. Energy is conserved in amount, but it steadily loses its usefulness.",
+        "zh": "這就是熱力學，研究熱與能量的學問。它的第一定律，就是我們剛遇到的那條：能量守恆，總量固定。但它的第二定律，補上了第一定律漏掉的轉折：每當能量改變形式，總有一部分會「降級」成散開的、低品質的熱，再也無法完全拿來用。能量在「量」上守恆，但它的「可用性」卻一路流失。",
+        "ja": "これが熱力学、熱とエネルギーの科学です。その第一法則は、いま出会ったばかりのもの——エネルギーは保存され、合計は変わらない。しかし第二法則は、第一法則が見落とした転換を加えます。エネルギーが形を変えるたび、その一部はつねに、もう完全には使えない、広がった低品質の熱へと劣化していく。エネルギーは量としては保存されても、その「使いやすさ」は着実に失われていくのです。"
+      },
+      "example": {
+        "en": "A hot coffee always cools to room temperature, never the reverse — the warmth spreads out into the room and won't gather back into the cup on its own. The energy is all still there, just smeared too thin to make you another hot drink.",
+        "zh": "熱咖啡總是冷卻到室溫，從不會反過來——那份溫暖會散進房間，再也不會自己聚回杯子裡。能量全都還在，只是被攤得太薄，再也沒辦法替你沖出第二杯熱飲。",
+        "ja": "熱いコーヒーはいつも室温まで冷め、その逆は起きません——温かさは部屋へ広がり、ひとりでにカップへ戻ることはない。エネルギーはすべてそこにあるのに、薄く広がりすぎて、もう一杯の温かい飲み物を作ることはできないのです。"
+      },
+      "surprise": {
+        "en": "The brutal part: you can't even break even. Every engine, every refrigerator, every living cell must dump some waste heat into its surroundings — there is no escape clause. A machine that turns heat fully into work, wasting nothing, is forbidden by law. Perfect efficiency isn't merely hard to build; nature flatly outlaws it.",
+        "zh": "最殘酷的是：你連「打平」都做不到。每一台引擎、每一台冰箱、每一個活細胞，都必須把一些廢熱倒進周圍環境——沒有任何例外條款。一台能把熱完全變成功、毫不浪費的機器，是被定律禁止的。完美效率不只是難造而已；是大自然乾脆把它列為違法。",
+        "ja": "もっとも厳しいのはここです——「収支を合わせる」ことすらできない。あらゆるエンジン、あらゆる冷蔵庫、あらゆる生きた細胞は、いくらかの廃熱を周囲へ捨てねばならない——抜け道はありません。熱を完全に仕事へ変え、何も無駄にしない機械は、法則によって禁じられている。完全な効率は、ただ作るのが難しいのではなく——自然がきっぱりと違法にしているのです。"
+      },
+      "thread": {
+        "en": "So energy always slides from useful toward useless. Physicists gave that slide a name, and a number you can measure. What is it?",
+        "zh": "所以能量總是從「有用」滑向「沒用」。物理學家給這個滑動取了個名字，還給了它一個能量測的數字。那是什麼？",
+        "ja": "つまりエネルギーはつねに、役立つものから役立たないものへと滑り落ちていく。物理学者はその滑り落ちに名前を、そして測れる数値を与えました。それは何でしょう？"
+      }
+    },
+    {
+      "ref": "entropy_concept",
+      "hook": {
+        "en": "If you wanted to put a number on 'how messed-up and spread-out a thing has become,' what would you even measure? And why would that number only ever climb?",
+        "zh": "如果你想用一個數字，標出「一個東西變得多亂、多散」，你到底該量什麼？而且，為什麼那個數字，只會一路往上爬？",
+        "ja": "「あるものが、どれだけ乱れて広がったか」を数値にしたいなら、いったい何を測ればいいのでしょう？そしてなぜ、その数値は上がる一方なのでしょう？"
+      },
+      "reveal": {
+        "en": "That number is entropy: a measure of how spread-out and disordered energy is. The second law, said plainly, is this — left to itself, the entropy of the whole world only ever increases. Order falls apart; heat spreads; differences even out. Things run downhill toward sameness, and never spontaneously back up.",
+        "zh": "那個數字叫做熵：衡量能量有多散、多無序的尺度。第二定律講白了就是——任其自然，整個世界的熵，只會不斷增加。秩序崩解、熱散開、差異被抹平。萬物滑向「都一樣」的下坡，而且永遠不會自己爬回去。",
+        "ja": "その数値がエントロピーです——エネルギーがどれだけ広がり、無秩序かを測る量。第二法則を平たく言えばこうです——放っておけば、世界全体のエントロピーは増える一方。秩序は崩れ、熱は広がり、差は均されていく。ものごとは「みな同じ」へと坂を下り、ひとりでに登り返すことは決してありません。"
+      },
+      "example": {
+        "en": "Drop a sandcastle and it crumbles to a flat heap; the heap never leaps back into towers and walls. Mix milk into coffee and it swirls into uniform brown; the swirls never unmix on their own. Every one of these is entropy climbing.",
+        "zh": "推倒一座沙堡，它會崩成一攤平沙；那攤沙永遠不會自己彈回成塔樓與城牆。把牛奶倒進咖啡，它會旋成均勻的褐色；那些旋紋永遠不會自己分回來。這每一件事，都是熵在往上爬。",
+        "ja": "砂のお城を崩せば平らな山になり、その山が塔や壁へ跳ね返ることはない。コーヒーに牛乳を混ぜれば一様な茶色に渦巻き、その渦がひとりでに分かれ戻ることはない。これらはどれも、エントロピーが登っていく姿です。"
+      },
+      "surprise": {
+        "en": "Here's what makes entropy unique among all of physics. Almost every other law works just as well run backward in time — a filmed collision of two billiard balls looks perfectly normal played in reverse. But entropy alone can tell past from future: the direction of 'more disordered' is the direction we call later. Entropy is the only thing in all of physics that draws an arrow on time.",
+        "zh": "這裡，正是熵在整個物理學中獨一無二的地方。幾乎所有其他定律，倒著放時間也照樣成立——拍下兩顆撞球相撞，倒著播放看起來完全正常。但唯獨熵，能分辨過去與未來：「更無序」的那個方向，就是我們稱之為「之後」的方向。在整個物理學裡，熵是唯一一個，在時間上畫出一支箭的東西。",
+        "ja": "ここが、物理学全体のなかでエントロピーを唯一無二にしている点です。ほかのほとんどの法則は、時間を逆回しにしても同じように成り立つ——二つのビリヤード球の衝突を撮った映像は、逆再生してもまったく自然に見えます。しかしエントロピーだけは、過去と未来を見分けられる——「より無秩序」な方向こそ、私たちが「あと」と呼ぶ方向なのです。物理学全体で、時間に矢を一本描くのは、エントロピーただひとつなのです。"
+      },
+      "thread": {
+        "en": "But why should disorder always win? Is there some force pushing things to fall apart — or is the reason something far simpler, and stranger?",
+        "zh": "可是，為什麼無序總是會贏？是有某種力量在推著東西崩壞嗎——還是說，原因其實簡單得多，也怪得多？",
+        "ja": "でも、なぜ無秩序がつねに勝つのでしょう？ものを壊そうと押す何かの力があるのか——それとも、理由ははるかに単純で、もっと奇妙なものなのでしょうか？"
+      }
+    },
+    {
+      "ref": "statistical_mechanics_concept",
+      "hook": {
+        "en": "No force pushes a sandcastle to crumble or a room to grow messy. So what actually makes disorder the winner, every single time?",
+        "zh": "並沒有一股力量在推沙堡崩塌、推房間變亂。那到底是什麼，讓無序每一次都成為贏家？",
+        "ja": "砂のお城を崩そう、部屋を散らかそうと押す力などありません。では、いったい何が無秩序を、毎回、勝者にしているのでしょう？"
+      },
+      "reveal": {
+        "en": "Not a force — just counting. This is statistical mechanics: the world is made of countless tiny pieces, atoms jostling at random, and we only see the big-picture average. The trick is that there are vastly more messy arrangements of those pieces than tidy ones. So a random shuffle almost always lands on 'messy,' simply because messy outnumbers tidy by a staggering margin. Entropy rises not because it must, but because the odds are overwhelming.",
+        "zh": "不是力量——只是數數。這就是統計力學：世界由數不清的微小零件構成，原子在隨機推擠，而我們只看得到那個大尺度的平均。關鍵在於，這些零件「亂」的排法，遠遠多過「整齊」的排法。所以隨機洗一洗，幾乎總是落在「亂」上，純粹因為亂的數量，以驚人的差距壓過整齊。熵會增加，不是因為它「必須」，而是因為機率壓倒性地一面倒。",
+        "ja": "力ではなく——ただの数え上げです。これが統計力学です。世界は数えきれない小さな粒——でたらめに揺れ動く原子——でできていて、私たちはその大きな平均しか見ていない。鍵はこうです。それらの粒の「乱れた」並べ方は、「整った」並べ方よりも圧倒的に多い。だからでたらめにかき混ぜれば、ほとんどいつも「乱れた」側に落ちる——乱れた並べ方が、整った並べ方を桁違いに上回っているからです。エントロピーが増えるのは「そうせねばならない」からではなく、確率が圧倒的に偏っているからなのです。"
+      },
+      "example": {
+        "en": "Shuffle a deck of cards and you'll never deal them back into perfect order — not because it's forbidden, but because there's only one tidy order against 80 thousand billion billion billion billion billion billion messy ones. The odds of tidy are simply too small to ever show up.",
+        "zh": "把一副牌洗一洗，你永遠不會把它洗回完美的順序——不是因為這被禁止，而是因為「整齊」只有一種排法，「亂」卻有八千億億億億億億億億種。整齊的機率，小到根本不可能出現。",
+        "ja": "トランプをシャッフルしても、完璧な順序に並べ戻ることは決してありません——禁じられているからではなく、整った並びがたった一通りなのに対し、乱れた並びは八千垓のさらに途方もない数だけあるからです。整う確率は、現れるにはあまりに小さすぎるのです。"
+      },
+      "surprise": {
+        "en": "Now the egg makes sense. The egg doesn't refuse to unbreak because a law forbids it — the laws of motion would happily run the shards back together. It stays broken because un-breaking is astronomically unlikely, like every air molecule in a room rushing to one corner at the same instant. Not impossible — just so improbable it never, ever happens. The arrow of time is really an arrow of probability.",
+        "zh": "現在，蛋的事說得通了。蛋拒絕復原，並不是因為哪條定律禁止它——運動定律其實樂意讓碎片倒退、重新拼回去。它之所以維持破碎，是因為「復原」的機率小到天文數字，就像房間裡每一顆空氣分子，在同一瞬間，全部衝向同一個角落。不是不可能——只是不可能到，它永遠、永遠不會發生。時間之箭，其實是一支機率之箭。",
+        "ja": "これで卵の謎が解けます。卵が元に戻るのを拒むのは、法則が禁じているからではありません——運動の法則は、破片を巻き戻して組み立て直すのを喜んで許します。卵が割れたままなのは、元に戻ることが天文学的にありえないから——部屋中の空気分子が、同じ一瞬にすべて一つの隅へ殺到するようなものです。不可能ではない——ただ、決して、決して起きないほどありえないだけ。時間の矢とは、実は確率の矢なのです。"
+      },
+      "thread": {
+        "en": "If entropy is really about counting 'how many ways could this be?' — that sounds less like physics and more like a question about knowledge. Could entropy and information be the same thing?",
+        "zh": "如果熵真的是在數「這件事，能有幾種可能的樣子？」——那聽起來，比較不像物理，反而像是一個關於「知識」的問題。熵和資訊，會不會其實是同一回事？",
+        "ja": "もしエントロピーが本当に「これは何通りありうるか」を数えているのなら——それは物理というより、「知識」についての問いに聞こえます。エントロピーと情報は、実は同じものなのでしょうか？"
+      }
+    },
+    {
+      "ref": "information_concept",
+      "hook": {
+        "en": "Entropy counts how many ways atoms could be arranged. Information seems to be about messages, bits, what you know. What could these two possibly have to do with each other?",
+        "zh": "熵在數「原子能有幾種排法」。資訊看起來則是關於訊息、位元、你知道什麼。這兩樣東西，到底能扯上什麼關係？",
+        "ja": "エントロピーは原子の並べ方が何通りあるかを数えます。情報はメッセージやビット、あなたが何を知っているかの話に見えます。この二つに、いったい何の関わりがあるのでしょう？"
+      },
+      "reveal": {
+        "en": "They turn out to be the very same idea. Information, measured precisely, is just 'how many possibilities are there, and how surprised should I be?' Entropy asks exactly that about a physical system: how many hidden arrangements could it secretly be in? High entropy means many possibilities, which means little is pinned down — so high entropy is the same as missing information. Heat is, quite literally, our ignorance about where all the atoms are.",
+        "zh": "結果，它們根本是同一個點子。資訊，精確地量起來，就是「總共有幾種可能，我該有多意外？」熵問的，正是物理系統裡同一件事：它私底下，可能處在多少種隱藏的排列？高熵代表可能性很多，也就代表幾乎什麼都沒被釘死——所以高熵，等同於「缺失的資訊」。熱，說穿了，就是我們對「所有原子到底在哪」的無知。",
+        "ja": "実は、まったく同じ考えだったのです。情報を厳密に測ると、「可能性は何通りあり、どれだけ驚くべきか」にすぎません。エントロピーは物理系について、まさにそれを問います——その系がひそかに取りうる隠れた配置は何通りか。高いエントロピーは可能性が多いこと、つまりほとんど何も定まっていないことを意味する——だから高エントロピーは、欠けた情報と同じです。熱とは、文字どおり、すべての原子がどこにあるかについての、私たちの無知なのです。"
+      },
+      "example": {
+        "en": "A tidy desk you can describe in one line ('everything in its tray') carries little hidden information. A messy desk needs a long list to pin down where each thing landed — more entropy, more information needed to specify it. Order is cheap to describe; chaos is expensive.",
+        "zh": "一張整齊的書桌，你一句話就能描述（「每樣東西都在它的格子裡」），藏的隱藏資訊很少。一張凌亂的書桌，得用一長串清單才講得清每樣東西落在哪——熵更高，要把它說清楚需要更多資訊。秩序，描述起來很便宜；混亂，很昂貴。",
+        "ja": "整った机は一行で説明できて（「すべて所定のトレイの中」）、隠れた情報はわずかです。散らかった机は、どこに何が落ちたかを定めるのに長い一覧が要る——エントロピーが高く、言い表すのにより多くの情報が要ります。秩序は説明が安く、混沌は高くつくのです。"
+      },
+      "surprise": {
+        "en": "And this bridge runs both ways: erasing a single bit of information must release a tiny, unavoidable puff of heat into the world. This is Landauer's principle, and it is not metaphor — it has been measured in the lab. It means thinking, remembering, and computing are physically chained to thermodynamics. Every time your computer forgets a number, it warms the room by a hair. Information isn't weightless; it costs heat.",
+        "zh": "而且這座橋是雙向的：抹除一個位元的資訊，必定會釋放出一小撮、無可避免的熱，散進世界。這就是蘭道爾原理，它不是比喻——已經在實驗室裡被量到。它意味著，思考、記憶、運算，在物理上都被鎖在熱力學上。你的電腦每忘掉一個數字，就把房間加熱了那麼一絲。資訊並非毫無重量；它的代價，是熱。",
+        "ja": "しかもこの橋は双方向です——たった一ビットの情報を消去すると、避けようのない小さな熱が世界へ放たれる。これがランダウアーの原理で、比喩ではありません——実験室で測定済みです。これは、考えること、覚えること、計算することが、物理的に熱力学へ鎖でつながれていることを意味します。コンピュータが数を一つ忘れるたび、部屋をほんのわずか温めている。情報には重さがないどころか——熱という代償があるのです。"
+      },
+      "thread": {
+        "en": "If entropy only ever rises, then it must have started low. Wind the whole universe backward and the order has to come from somewhere. Where did all this order begin?",
+        "zh": "如果熵只會增加，那它一開始就必須很低。把整個宇宙倒帶回去，這份秩序總得從某處來。這一切的秩序，究竟從哪裡開始？",
+        "ja": "エントロピーが上がる一方なら、最初は低かったはず。宇宙全体を巻き戻せば、その秩序はどこかから来たに違いありません。このすべての秩序は、いったいどこで始まったのでしょう？"
+      }
+    },
+    {
+      "ref": "cosmology_concept",
+      "hook": {
+        "en": "For entropy to keep rising for 13 billion years, the universe must have begun with an enormous reserve of order. But why would it start so neat in the first place?",
+        "zh": "要讓熵持續增加一百三十億年，宇宙一開始就必須備有一筆龐大的秩序存量。可是，它當初為什麼，會那麼整齊？",
+        "ja": "エントロピーが百三十億年も上がり続けるには、宇宙は始まりに莫大な秩序の蓄えを持っていたはず。でも、そもそもなぜそんなに整って始まったのでしょう？"
+      },
+      "reveal": {
+        "en": "This is the quiet astonishment at the root of it all. The early universe, just after the Big Bang, was in an extraordinarily ordered, extraordinarily low-entropy state — smooth, even, full of unspent order. Everything that has happened since, every star and storm and heartbeat, has been the universe slowly spending that order down. The arrow of time is the whole cosmos sliding, over billions of years, from that improbable neatness toward disorder.",
+        "zh": "這，就是這一切根源處那份安靜的驚奇。早期宇宙，就在大霹靂之後，處於一個異常有序、異常低熵的狀態——平滑、均勻、滿是尚未動用的秩序。從那之後發生的一切，每一顆恆星、每一場風暴、每一次心跳，都是宇宙在慢慢把那份秩序花掉。時間之箭，就是整個宇宙，花上數十億年，從那不可思議的整齊，滑向無序。",
+        "ja": "これこそ、すべての根っこにある静かな驚きです。ビッグバン直後の初期宇宙は、並外れて秩序立った、並外れて低エントロピーの状態にありました——なめらかで、一様で、使われていない秩序に満ちていた。それ以来起きたすべて、あらゆる星も嵐も鼓動も、宇宙がその秩序をゆっくり使い切っていく過程です。時間の矢とは、宇宙全体が数十億年をかけて、そのありえないほどの整然さから無秩序へと滑り落ちていくことなのです。"
+      },
+      "example": {
+        "en": "Think of the whole universe as a wound-up clock spring, set tight at the start. Everything that moves, lives, or thinks is powered by that spring slowly unwinding — and a plant building a leaf, or your brain forming a memory, is a small pocket of order paid for by a larger spreading of disorder elsewhere.",
+        "zh": "把整個宇宙想成一條上緊的時鐘發條，在最初被旋到最緊。一切會動、會活、會思考的東西，都靠這條發條慢慢鬆開來驅動——而一株植物長出一片葉子、你的大腦形成一段記憶，都是一小塊秩序，由別處更大一片無序的擴散，所支付的代價。",
+        "ja": "宇宙全体を、始まりにきつく巻かれた時計のぜんまいだと考えてください。動くもの、生きるもの、考えるものはすべて、そのぜんまいがゆっくりほどける力で動いています——そして植物が葉を作ること、あなたの脳が記憶を形づくることは、どこか別の場所で広がるより大きな無秩序によって支払われた、小さな秩序のかたまりなのです。"
+      },
+      "surprise": {
+        "en": "So here is the quiet wonder to end on. Every memory you hold, every plant that grows toward the light, every ordered thought in your head, is borrowing order paid for by the universe itself winding down. You are a small, beautiful eddy of low entropy, briefly running against the current. The price of every 'now' becoming 'next' is a sliver of the cosmos's dwindling order — and you, reading this, are part of how it gets spent.",
+        "zh": "於是，這裡有一個安靜的驚奇，作為結尾。你所擁有的每一段記憶、每一株向光生長的植物、你腦中每一個有序的念頭，都是在借用一份秩序，而那份秩序，是由宇宙自身的鬆解所支付的。你是一個小小的、美麗的低熵漩渦，短暫地逆著水流而行。每一個「現在」變成「之後」的代價，是宇宙日漸減少的秩序中的一絲——而此刻讀著這段話的你，正是它被花掉的方式之一。",
+        "ja": "そこで、結びに静かな驚きをひとつ。あなたが抱くすべての記憶、光へ向かって伸びるすべての植物、頭の中のすべての整った思考は、宇宙そのものがほどけていくことで支払われた秩序を、借りているのです。あなたは小さく美しい低エントロピーの渦——つかのま、流れに逆らって進んでいる。あらゆる「いま」が「つぎ」になる代償は、宇宙の減りゆく秩序のひとかけら——そしていまこれを読むあなたも、それが使われていく道筋の一部なのです。"
+      },
+      "thread": {
+        "en": "You've followed time's arrow all the way from a dead battery to the dawn of the cosmos — and the field is still wide open. Wander wherever a star pulls you.",
+        "zh": "你已經一路追著時間之箭，從一顆沒電的電池，走到宇宙的黎明——而整片星空，仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは時間の矢を、切れた電池から宇宙の夜明けまでたどり切りました——そして星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "energy_transformation_concept", "target": "thermodynamics_laws_concept", "relation_type": "logical" },
+    { "source": "thermodynamics_laws_concept", "target": "entropy_concept", "relation_type": "conceptual" },
+    { "source": "entropy_concept", "target": "statistical_mechanics_concept", "relation_type": "causal" },
+    { "source": "statistical_mechanics_concept", "target": "information_concept", "relation_type": "conceptual" },
+    { "source": "information_concept", "target": "cosmology_concept", "relation_type": "conceptual" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up Maxwell's demon — the imaginary creature that seems to cheat the second law, and why it can't. Ask why we remember the past but never the future, when the underlying physics barely cares about direction. Or read about Boltzmann, who first saw the arrow of time as a matter of statistics — and the equation for entropy that's carved on his gravestone.",
+    "zh": "想再往下追一點？去查查「馬克士威惡魔」——那隻看似能騙過第二定律的想像生物，以及它為什麼騙不成。問問為什麼我們記得過去、卻從不記得未來，明明底層的物理幾乎不在乎方向。或讀讀波茲曼，他最早把時間之箭看成一個統計問題——以及那條刻在他墓碑上的熵方程式。",
+    "ja": "もっと追ってみたいですか？「マクスウェルの悪魔」を調べてみてください——第二法則をだませそうに見える想像上の生き物と、なぜそれができないのかを。基礎の物理は方向をほとんど気にしないのに、なぜ私たちは過去を覚えて未来を覚えないのか、と問うてみてください。あるいはボルツマンを読んでみる——時間の矢を初めて統計の問題として見た人、そして彼の墓碑に刻まれたエントロピーの式を。"
+  }
+}

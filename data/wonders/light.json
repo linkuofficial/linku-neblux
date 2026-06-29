@@ -1,0 +1,221 @@
+{
+  "id": "light",
+  "accent": "PHY",
+  "title": { "en": "Light", "zh": "光", "ja": "光" },
+  "intro": {
+    "en": "The thing you see with is the strangest object in all of physics — a wave, a particle, and the universe's unbreakable speed limit, all at once. In seven steps, chase a beam of light from a rainbow on the wall to the quantum trick that powers a rooftop.",
+    "zh": "你用來「看」的那樣東西，是整個物理學裡最奇異的存在——它同時是波、是粒子，也是宇宙無法打破的速度極限。跟著七步，追著一束光，從牆上的彩虹，一路追到讓屋頂發電的量子把戲。",
+    "ja": "あなたが「見る」ために使っているもの——それは物理学のなかでもっとも奇妙な存在です。波であり、粒子であり、宇宙が決して破れない速度の限界でもある、そのすべてを同時に。7 つのステップで、一筋の光を追いましょう。壁にかかる虹から、屋根を発電させる量子の仕掛けまで。"
+  },
+  "steps": [
+    {
+      "ref": "optics_concept",
+      "hook": {
+        "en": "A puddle shows you the sky. A glass of water bends a straw in half. A storm leaves a stripe of color across the sky. Are these tricks, or are they all the same simple rule?",
+        "zh": "一灘積水把天空照給你看。一杯水把吸管折成兩段。一場雨在天上留下一道彩色的弧。這些是把戲，還是它們全都遵守同一條簡單的規則？",
+        "ja": "水たまりは空を映し、コップの水はストローを途中で折り曲げ、嵐は空に色の帯を残す。これは手品でしょうか、それともすべて同じ一つの単純な規則なのでしょうか？"
+      },
+      "reveal": {
+        "en": "It's one rule. Light bends, bounces, and splits in ways you can predict. When it crosses from air into water or glass it slows and changes direction — that is refraction, and it is why a lens can gather light to a point. When it hits a smooth surface it reflects at a clean, equal angle. And because each color bends by a slightly different amount, white light fans out into a spectrum. Lenses, mirrors, rainbows, and your own eye all run on this handful of rules. That study is optics.",
+        "zh": "答案是同一條規則。光會以你能預測的方式彎折、反彈、分裂。當它從空氣進入水或玻璃，會變慢、會轉向——這就是折射，也是為什麼一片透鏡能把光聚到一個點上。當它打到平滑的表面，會以乾淨、相等的角度反射。又因為每種顏色彎折的程度都略有不同，白光便散開成一道光譜。透鏡、鏡子、彩虹，還有你自己的眼睛，全都靠這寥寥幾條規則運作。研究這件事的學問，就是光學。",
+        "ja": "答えは一つの規則です。光はあなたが予測できるやり方で曲がり、跳ね返り、分かれる。空気から水やガラスへ入ると速度が落ち、向きを変える——これが屈折で、レンズが光を一点に集められる理由です。なめらかな表面に当たれば、きれいに等しい角度で反射する。そして色ごとに曲がる量がわずかに違うので、白い光は虹色のスペクトルへと広がる。レンズも鏡も虹も、そしてあなた自身の目も、このわずかな規則で動いています。これを学ぶのが光学です。"
+      },
+      "example": {
+        "en": "Your own eye is a single lens that refracts incoming light to a sharp point on the retina behind it — glasses just add a second lens to nudge that point back into place.",
+        "zh": "你的眼睛本身就是一片透鏡，把進來的光折射、聚到後方視網膜上的一個清晰焦點——眼鏡只是再加一片透鏡，把那個焦點輕輕推回原位。",
+        "ja": "あなたの目そのものが一枚のレンズで、入ってくる光を屈折させ、奥の網膜上の鮮明な一点に集めています——眼鏡は、もう一枚レンズを足して、その点を本来の位置へそっと戻しているだけなのです。"
+      },
+      "surprise": {
+        "en": "Here's the twist: a rainbow is just sorted sunlight — raindrops bending each color by its own angle, fanning white into a band. And the sky is blue for the very same reason a sunset is red. Air scatters short blue waves far more than long red ones, so the daytime sky glows blue overhead, while at sunset the light skims so much air that the blue is scattered away and only the red survives to reach you.",
+        "zh": "意外的是：彩虹只不過是被分類過的陽光——雨滴把每種顏色依各自的角度彎開，把白光攤成一條色帶。而天空之所以是藍的，原因和夕陽之所以是紅的，完全一樣。空氣對短波長的藍光散射得遠比長波長的紅光厲害，所以白天頭頂的天空泛著藍；而日落時，光要掠過厚厚一層空氣，藍光早被散射殆盡，只剩紅光撐到你眼前。",
+        "ja": "意外なことに、虹はただ仕分けされた太陽光です——雨粒が色ごとに固有の角度で曲げ、白い光を帯へと広げているのです。そして空が青いのは、夕焼けが赤いのとまったく同じ理由です。空気は波長の短い青い光を、長い赤い光よりずっと強く散らす。だから昼の空は頭上で青く輝き、日没時には光が分厚い空気をかすめるあいだに青が散らされ尽くし、赤だけが生き残ってあなたに届くのです。"
+      },
+      "thread": {
+        "en": "These rules tell you how light behaves — but never what light actually is. Two centuries after Newton, one man finally said it out loud.",
+        "zh": "這些規則告訴你光「怎麼表現」——卻從沒說過光「究竟是什麼」。牛頓之後過了兩個世紀，終於有一個人把答案說了出來。",
+        "ja": "これらの規則は光が「どうふるまうか」を教えてくれます——でも、光が「そもそも何であるか」は決して言いません。ニュートンから二世紀のち、ついに一人の人物がそれを口にしました。"
+      }
+    },
+    {
+      "ref": "electromagnetic_theory_concept",
+      "hook": {
+        "en": "Rub a balloon and it tugs your hair. Hold a magnet near iron and it pulls. These feel like two separate forces with nothing to do with each other — or do they?",
+        "zh": "搓一搓氣球，它會把你的頭髮拉起來。把磁鐵靠近鐵，它會把鐵吸過去。這感覺像是兩種毫不相干的力——還是說，其實不是？",
+        "ja": "風船をこすれば髪を引き寄せ、磁石を鉄に近づければ吸い寄せる。これは互いに何の関係もない、二つの別々の力に思えます——本当にそうでしょうか？"
+      },
+      "reveal": {
+        "en": "James Clerk Maxwell showed they are one thing. A changing electric field makes a magnetic field, and a changing magnetic field makes an electric field — each one giving birth to the other. He wrote this down as a single set of equations, and they revealed something startling: those two fields can take turns making each other forever, rippling outward through empty space. That self-sustaining ripple, Maxwell realized, IS light. Electricity, magnetism, and light are one phenomenon.",
+        "zh": "馬克士威證明了它們是同一件事。變化的電場會生出磁場，變化的磁場又會生出電場——彼此互相孕育。他把這寫成一組方程式，而它們揭露了一件驚人的事：這兩個場可以永遠輪流製造對方，向著虛空一波波盪開。馬克士威領悟到，那個自我維持的漣漪，「就是」光。電、磁、光，是同一種現象。",
+        "ja": "ジェームズ・クラーク・マクスウェルは、それらが一つのものだと示しました。変化する電場は磁場を生み、変化する磁場は電場を生む——たがいに相手を産み落とすのです。彼はこれを一組の方程式として書き下し、それは驚くべきことを明かしました。この二つの場は永遠に交代で相手を作り続け、空っぽの空間をさざ波となって広がっていける。その自分で続くさざ波こそ、光なのだ——マクスウェルはそう気づきました。電気と磁気と光は、一つの現象なのです。"
+      },
+      "example": {
+        "en": "Every radio antenna is Maxwell at work: wiggle electrons up and down a metal rod, and you launch an invisible electromagnetic ripple that another antenna, kilometers away, can feel and turn back into sound.",
+        "zh": "每一支無線電天線都是馬克士威在運作：讓電子在一根金屬桿裡上下抖動，你就送出一道看不見的電磁漣漪，幾公里外的另一支天線能「感覺」到它，再把它變回聲音。",
+        "ja": "あらゆる無線アンテナはマクスウェルの実演です。金属棒の中で電子を上下に揺らせば、目に見えない電磁波のさざ波が放たれ、数キロ先の別のアンテナがそれを感じ取り、ふたたび音へと戻すのです。"
+      },
+      "surprise": {
+        "en": "Here's the astonishing part. Maxwell's equations spat out the exact speed of those ripples — calculated purely from lab measurements of sparks and magnets, before anyone had thought to point them at light at all. The number came out at almost exactly the measured speed of light. That match was the proof: light had to be an electromagnetic wave. The speed of light fell out of an experiment about electricity.",
+        "zh": "最令人震驚的部分在這裡。馬克士威的方程式吐出了這些漣漪的精確速度——純粹從實驗室裡對火花與磁鐵的量測算出來，當時根本還沒有人想到要把它們用在「光」上。算出來的數字，幾乎正好等於已經量到的光速。這個吻合就是證據：光必定是一種電磁波。光速，竟是從一個關於電的實驗裡掉出來的。",
+        "ja": "驚くべきはここです。マクスウェルの方程式は、そのさざ波の速さをぴたりと吐き出しました——火花と磁石の実験室での測定だけから計算され、しかも誰もそれを光に向けて考える前のことです。出てきた数は、すでに測られていた光の速さとほぼ完全に一致した。この一致こそが証拠でした——光は電磁波であるしかない。光速は、電気についての実験から転がり出てきたのです。"
+      },
+      "thread": {
+        "en": "If visible light is one such ripple, what about ripples that are much longer, or much shorter, than the ones your eyes can catch?",
+        "zh": "如果可見光是這樣的一種漣漪，那麼比你眼睛能捕捉的還要長很多、或短很多的漣漪呢？",
+        "ja": "目に見える光がそうしたさざ波の一つなら、あなたの目がとらえられるものよりずっと長い、あるいはずっと短いさざ波は、どうなのでしょう？"
+      }
+    },
+    {
+      "ref": "electromagnetic_radiation_concept",
+      "hook": {
+        "en": "Your eyes catch red, green, blue and everything between. But why should the universe stop, exactly, at the edges of what you happen to see?",
+        "zh": "你的眼睛能接收紅、綠、藍，以及之間的一切。但宇宙憑什麼剛剛好，就停在你恰巧能看見的那兩端邊界？",
+        "ja": "あなたの目は赤、緑、青、そしてその間のすべてをとらえます。でも宇宙はなぜ、よりによってあなたが見える範囲のちょうど両端で、止まらねばならないのでしょう？"
+      },
+      "reveal": {
+        "en": "It doesn't. Visible light is a thin sliver of one vast spectrum of electromagnetic radiation. Stretch the ripple longer and you get infrared, microwaves, then radio waves. Squeeze it shorter and you get ultraviolet, then X-rays, then gamma rays. Radio, microwave, light, X-ray, gamma — they are all the same thing, the same electromagnetic ripple, differing only in wavelength. Your eyes simply evolved to notice one narrow band of it.",
+        "zh": "宇宙並沒有停。可見光只是電磁輻射這整片廣闊光譜裡薄薄的一條。把漣漪拉得更長，你會得到紅外線、微波、再到無線電波。把它擠得更短，你會得到紫外線、再到 X 光、再到伽瑪射線。無線電、微波、光、X 光、伽瑪射線——它們全是同一種東西，同一道電磁漣漪，差別只在波長。你的眼睛，只是恰好演化成能注意到其中窄窄的一段。",
+        "ja": "止まってなどいません。目に見える光は、電磁波という広大なスペクトルの薄い一片にすぎません。さざ波を長く引き伸ばせば赤外線、マイクロ波、そして電波になる。短く縮めれば紫外線、そして X 線、ガンマ線になる。電波、マイクロ波、光、X 線、ガンマ線——すべて同じもの、同じ電磁波のさざ波で、違うのは波長だけ。あなたの目は、たまたまその狭い一帯に気づくよう進化しただけなのです。"
+      },
+      "example": {
+        "en": "A TV remote talks to your TV in infrared — light too red for you to see. The same kind of ripple, just past the edge of your vision, is carrying the command.",
+        "zh": "電視遙控器是用紅外線跟電視「說話」的——那是一種紅到你看不見的光。同一種漣漪，只是落在你視覺邊界外那一點點，正載著你的指令飛過去。",
+        "ja": "テレビのリモコンは赤外線でテレビと話します——あなたには見えないほど赤い光です。同じ種類のさざ波が、あなたの視界のすぐ外側で、命令を運んでいるのです。"
+      },
+      "surprise": {
+        "en": "So your radio signal, your microwave oven, and your sunburn are the same phenomenon at different sizes. The radio plays music with metres-long ripples. The oven heats your dinner with ripples a few centimetres across. And a sunburn is ultraviolet ripples, short enough to break the molecules in your skin. One family of waves: some carry songs, some warm soup, and some quietly damage you.",
+        "zh": "於是，你的收音機訊號、你的微波爐、你曬傷的皮膚，是同一種現象在不同尺度上的樣子。收音機用幾公尺長的漣漪播放音樂。微波爐用幾公分寬的漣漪加熱你的晚餐。而曬傷，是紫外線的漣漪，短到足以打斷你皮膚裡的分子。同一個波的家族：有的載著歌、有的溫熱湯、有的悄悄傷害你。",
+        "ja": "つまり、あなたのラジオの信号、電子レンジ、そして日焼けは、大きさが違うだけの同じ現象なのです。ラジオは数メートルのさざ波で音楽を流す。電子レンジは数センチのさざ波で夕食を温める。そして日焼けは紫外線のさざ波——皮膚の分子を壊せるほど短い。一つの波の一族——あるものは歌を運び、あるものはスープを温め、あるものは静かにあなたを傷つけるのです。"
+      },
+      "thread": {
+        "en": "All these waves share one fixed speed. Try to catch up to that speed, and reality itself starts to buckle.",
+        "zh": "這些波，全都共享同一個固定的速度。試著去追上那個速度，現實本身就會開始扭曲。",
+        "ja": "これらの波はすべて、一つの決まった速さを共有しています。その速さに追いつこうとすると、現実そのものがゆがみ始めるのです。"
+      }
+    },
+    {
+      "ref": "special_relativity_concept",
+      "hook": {
+        "en": "Throw a ball forward from a moving train and it flies a little faster. So if you race alongside a light beam, surely it should look a little slower. What if it never does?",
+        "zh": "在行進的火車上往前丟一顆球，它會飛得稍微快一點。那麼，如果你跟著一束光並肩賽跑，它看起來理當會慢一點才對。如果它從來不會慢呢？",
+        "ja": "走る列車から前へボールを投げれば、少し速く飛びます。なら光と並んで走れば、光は少し遅く見えるはずです。もし、決して遅くならないとしたら？"
+      },
+      "reveal": {
+        "en": "Einstein took one stubborn fact as bedrock: light's speed is the same for every observer, no matter how they move. But speed is distance divided by time — so if everyone measures the same speed even while moving differently, then distance and time themselves cannot be fixed. They must stretch and shrink to keep light's speed constant. Moving clocks run slow; moving rulers shrink. Space and time bend so that the speed of light never has to.",
+        "zh": "愛因斯坦把一個頑固的事實當作基石：光的速度對每一個觀察者都一樣，不管他怎麼運動。但速度是距離除以時間——所以如果每個人就算運動狀態不同，量到的速度卻一樣，那麼距離與時間本身就不可能是固定的。它們必須伸縮，好讓光速保持不變。運動中的時鐘走得慢，運動中的尺會縮短。空間與時間彎折，只為了讓光速永遠不必改變。",
+        "ja": "アインシュタインは一つの頑固な事実を土台に据えました——光の速さは、どう動こうと、すべての観測者にとって同じである。けれど速さとは距離を時間で割ったもの——だから動き方が違っても全員が同じ速さを測るのなら、距離と時間そのものが固定ではありえない。光の速さを一定に保つため、それらは伸び縮みするしかない。動く時計は遅れ、動く物差しは縮む。光の速さが決して変わらずに済むよう、空間と時間のほうが曲がるのです。"
+      },
+      "example": {
+        "en": "This is measured, not imagined: GPS satellites move fast enough that their onboard clocks visibly drift from clocks on the ground. If your phone ignored that drift, its map would be off by kilometres within a day.",
+        "zh": "這是被量到的，不是想像出來的：GPS 衛星跑得夠快，機上的時鐘會明顯與地面的時鐘偏掉。要是你的手機無視這份偏差，地圖一天之內就會偏掉好幾公里。",
+        "ja": "これは想像ではなく測定されています。GPS 衛星は十分に速く動くため、搭載された時計は地上の時計と目に見えてずれていく。スマホがそのずれを無視すれば、地図は一日で数キロもずれてしまうのです。"
+      },
+      "surprise": {
+        "en": "Now the dizzying part: chase a light beam at 99% of its speed and it still flees from you at full speed, exactly as if you were standing still. You can never gain on it. And there is no universal 'now' — two people moving past each other can genuinely disagree about whether two distant events happened at the same time, and both are right. The present you feel is yours alone.",
+        "zh": "現在來到讓人暈眩的部分：你以 99% 光速去追一束光，它依然以全速從你身邊逃走，就好像你根本站著不動。你永遠追不上它。而且，根本沒有全宇宙共通的「現在」——兩個彼此擦身而過的人，可以真的對「兩件遠方的事是否同時發生」各執一詞，而且兩人都對。你所感受到的此刻，只屬於你自己。",
+        "ja": "ここからがめまいのする部分です。光速の 99% で光を追っても、光はまるであなたが立ち止まっているかのように、やはり全速力で逃げていく。決して追いつけない。そして宇宙共通の「いま」は存在しない——すれ違う二人が、遠く離れた二つの出来事が同時に起きたかどうかで本気で食い違い、しかも二人とも正しい。あなたが感じる「この瞬間」は、あなただけのものなのです。"
+      },
+      "thread": {
+        "en": "Light sets the cosmic speed limit and warps time around it. Yet look closely at a single faint beam, and it does something stranger still.",
+        "zh": "光定下了宇宙的速度極限，並讓時間繞著它扭曲。但若你仔細盯著單獨一束微弱的光，它會做出更怪異的事。",
+        "ja": "光は宇宙の速度の限界を定め、その周りで時間をねじ曲げます。けれど、たった一筋のかすかな光をじっと見つめると、それはさらに奇妙なふるまいを見せるのです。"
+      }
+    },
+    {
+      "ref": "wave_particle_duality_concept",
+      "hook": {
+        "en": "We just called light a wave — Maxwell's ripple. But turn a light source down, and down, and down, until only the faintest trickle is left. What is actually arriving then?",
+        "zh": "我們剛剛還說光是一種波——馬克士威的漣漪。但把一個光源轉暗、再暗、再暗，暗到只剩最微弱的一絲。那時候，真正抵達的，到底是什麼？",
+        "ja": "私たちはついさっき、光を波——マクスウェルのさざ波——と呼びました。でも光源をどんどん、どんどん暗くして、ごくかすかな一筋だけが残るまで絞ったら、そのとき本当に届いているのは、いったい何でしょう？"
+      },
+      "reveal": {
+        "en": "It arrives in lumps. Light is also a stream of indivisible packets called photons — you can have one photon, or two, but never half of one. So light is wave AND particle at once. Ask it a wave question, like 'how do you spread and interfere?', and it answers as a wave. Ask it a particle question, like 'where exactly did you land?', and it answers as a single dot. It is not switching costume; it is genuinely both, and which face you see depends only on how you look.",
+        "zh": "它是一顆一顆抵達的。光也是一串不可分割的小包裹，叫做光子——你可以有一顆光子、兩顆光子，但永遠不會有半顆。所以光同時是波，也是粒子。問它一個波的問題，比如「你怎麼散開、怎麼干涉？」，它就以波的樣子回答。問它一個粒子的問題，比如「你究竟落在哪裡？」，它就以單獨一個點回答。它不是在換戲服；它是真真切切兩者皆是，而你看見哪一面，只取決於你怎麼看。",
+        "ja": "それは塊となって届きます。光は、光子と呼ばれる分けられない包みの流れでもある——光子は一個、二個と数えられても、半分はありえません。だから光は波であり、同時に粒子なのです。「どう広がり、干渉するか」という波の問いを投げれば波として答え、「正確にどこに着いたか」という粒子の問いを投げれば一つの点として答える。衣装を着替えているのではなく、本当に両方であり、どちらの顔が見えるかは、ただあなたの見方しだいなのです。"
+      },
+      "example": {
+        "en": "The camera in your phone counts photons one by one. In near-darkness a photo goes grainy not because the camera is cheap, but because so few photons arrived that you can almost see them land as separate specks.",
+        "zh": "你手機裡的相機，是一顆一顆地數光子。在接近全黑的環境下拍照會變得很粗糙，不是因為相機便宜，而是因為抵達的光子太少，少到你幾乎能看見它們一粒一粒地落下。",
+        "ja": "スマホのカメラは光子を一個ずつ数えています。真っ暗に近い場所で写真がざらつくのは、カメラが安物だからではなく、届く光子があまりに少なく、それらが別々の粒として着地するのがほとんど見えてしまうからなのです。"
+      },
+      "surprise": {
+        "en": "Here is the experiment that haunts physics. Send photons at a barrier with two slits, one photon at a time, so slowly that only one is ever in flight. Each lands as a single dot — yet let thousands pile up and they build an interference pattern, the signature of a wave passing through both slits at once. Each lone photon behaves as if it took every path simultaneously and interfered with itself.",
+        "zh": "這裡有一個一直糾纏著物理學的實驗。把光子射向一道開了兩條縫的屏障，一次只射一顆，慢到任何時刻都只有一顆在飛。每一顆都落成單獨一個點——但讓成千上萬顆累積起來，它們竟堆出一個干涉圖樣，那正是「一道波同時穿過兩條縫」的招牌印記。每一顆孤單的光子，表現得彷彿同時走遍了每一條路，然後自己跟自己干涉。",
+        "ja": "ここに、物理学につきまとう実験があります。二つのスリットを開けた壁に向けて、一度に一個ずつ、つねに一個だけが飛んでいるほどゆっくりと光子を送る。一個一個は単独の点として着く——ところが何千個も積み重なると、干渉縞を描き出す。それは一つの波が二つのスリットを同時に通り抜けた証です。孤独な光子のそれぞれが、まるであらゆる道を同時に通り、自分自身と干渉したかのようにふるまうのです。"
+      },
+      "thread": {
+        "en": "If you could get countless photons to march together in perfect step, instead of arriving as a random trickle, what would that light become?",
+        "zh": "如果你能讓數不清的光子整齊劃一、完美同步地一起前進，而不是隨機零星地抵達，那樣的光，會變成什麼？",
+        "ja": "もし数えきれない光子を、ばらばらに届くのではなく、完璧に歩調をそろえて一緒に行進させられたら、その光は何になるのでしょう？"
+      }
+    },
+    {
+      "ref": "laser_concept",
+      "hook": {
+        "en": "Sunlight and a bulb spray light in every colour and every direction, a jumbled crowd. What if you could get every photon to march in perfect lockstep instead?",
+        "zh": "陽光和燈泡把光潑灑成各種顏色、各個方向，像一群亂哄哄的人。如果你能讓每一顆光子改成完美同步、整齊踏步前進呢？",
+        "ja": "太陽光や電球は、あらゆる色とあらゆる方向へ光をまき散らす、ごちゃ混ぜの群衆です。もしその代わりに、すべての光子を完璧に歩調をそろえて行進させられたら？"
+      },
+      "reveal": {
+        "en": "Then you get a laser. The trick is to coax atoms into releasing photons that are all identical — same colour, same direction, and crucially all in step, crest matching crest. Ordinary light is a noisy crowd; laser light is a disciplined column marching as one. That coherence is why a laser stays a tight, pure beam over enormous distances instead of spreading into a useless smear. Light, turned into a precision tool.",
+        "zh": "那你就得到一道雷射。訣竅是哄誘原子釋放出全都一模一樣的光子——同樣的顏色、同樣的方向，最關鍵的是全都同步，波峰對齊波峰。普通的光是一群吵鬧的人；雷射光是一支紀律嚴明、整齊如一前進的隊伍。正是這份「同調」，讓雷射能在極遠的距離外，仍保持一道又細又純的光束，而不是散成一片沒用的光暈。光，被打造成了一件精密工具。",
+        "ja": "そうすればレーザーが得られます。こつは、原子をなだめて、すべて同一の光子——同じ色、同じ方向、そして何より歩調がそろい、波の山と山が重なる光子——を放たせることです。ふつうの光は騒がしい群衆、レーザー光は一つになって行進する規律正しい隊列。その「コヒーレンス（同調）」こそ、レーザーが途方もない距離を越えても、役立たずのにじみへ広がらず、細く純粋な一筋であり続ける理由です。光が、精密な道具に変わったのです。"
+      },
+      "example": {
+        "en": "The little red dot that reads the barcode on your groceries is a laser. So is the invisible beam carrying this very page through hair-thin glass fibres under the ocean.",
+        "zh": "在你的雜貨上掃過、讀取條碼的那個小紅點，是一道雷射。把你正在讀的這一頁，透過海底髮絲般細的玻璃光纖傳過來的那道看不見的光，也是雷射。",
+        "ja": "あなたの買い物のバーコードを読み取る小さな赤い点は、レーザーです。海底の髪の毛ほど細いガラス繊維を通して、いままさにこのページを運んでいる目に見えない光も、レーザーです。"
+      },
+      "surprise": {
+        "en": "The same coherent light reaches across wildly different worlds. It reads your groceries at the till. It carries the entire internet as flickers of light through glass thinner than a hair. And bounced off a mirror left on the Moon by Apollo astronauts, a laser pulse measures the Moon's distance to the millimetre — by timing how long its light takes to come back.",
+        "zh": "同一種同調的光，跨越了天差地遠的世界。它在收銀台讀你的雜貨。它把整個網際網路化作光的閃爍，穿過比頭髮還細的玻璃傳送。而當一道雷射脈衝打在阿波羅太空人留在月球上的反射鏡上、再彈回來，它能把月球的距離量到毫米——靠的就是計時它的光來回花了多久。",
+        "ja": "同じコヒーレントな光が、まるで異なる世界をまたいで届きます。レジであなたの買い物を読み取る。インターネット全体を光のまたたきに変え、髪より細いガラスを通して運ぶ。そしてアポロの宇宙飛行士が月に残した鏡に当てて跳ね返せば、レーザーのパルスは月までの距離をミリ単位で測る——その光が往復する時間を計ることで。"
+      },
+      "thread": {
+        "en": "We have used light to see, to measure, and to carry messages. But a photon can do one more thing — it can hand you its energy outright.",
+        "zh": "我們已經用光來看、來量、來傳訊息。但光子還能做一件事——它能把自己的能量，直接交到你手上。",
+        "ja": "私たちは光を、見るために、測るために、便りを運ぶために使ってきました。でも光子はもう一つできることがある——自分のエネルギーを、そっくりあなたに手渡せるのです。"
+      }
+    },
+    {
+      "ref": "photovoltaics_concept",
+      "hook": {
+        "en": "We have treated light as something to look at, bend, and measure. But could a beam of light reach into a slab of solid material and push an electric current straight out of it?",
+        "zh": "我們一直把光當成可以看、可以折、可以量的東西。但一束光，能不能伸進一塊固體材料裡，直接從裡頭推出一股電流？",
+        "ja": "私たちは光を、眺め、曲げ、測るものとして扱ってきました。でも一筋の光が、固体の材料の中まで届いて、そこから電流をまっすぐ押し出すことなど、できるのでしょうか？"
+      },
+      "reveal": {
+        "en": "It can, and this is where the photon's particle face matters most. In silicon, a single photon carrying enough energy can strike an electron and knock it free, letting it flow as electric current. No spinning turbine, no burning fuel, no moving parts at all — light lands, and electricity comes out the other side. Pack a sheet of silicon with countless tiny versions of this, and you have a solar panel: photovoltaics, light becoming power directly.",
+        "zh": "可以，而且這正是光子「粒子那一面」最關鍵的地方。在矽裡，一顆帶著足夠能量的光子，能撞上一個電子、把它撞鬆撞自由，讓它流動成電流。沒有旋轉的渦輪、沒有燃燒的燃料、完全沒有任何會動的零件——光落下，電就從另一端冒出來。把一整片矽鋪滿無數個這種微小的版本，你就有了一塊太陽能板：光伏，光直接變成電力。",
+        "ja": "できます。そしてここが、光子の「粒子の顔」がもっとも効く場所です。シリコンの中では、十分なエネルギーを持つ一個の光子が電子に当たり、それをはじき出して自由にし、電流として流せるのです。回るタービンも、燃やす燃料も、動く部品もいっさいない——光が着地し、反対側から電気が出てくる。一枚のシリコンにこの小さな出来事を無数に敷き詰めれば、太陽光パネルになります。光起電力——光がそのまま電力になるのです。"
+      },
+      "example": {
+        "en": "The panel on a rooftop, the tiny cell powering a pocket calculator, the wings of a satellite — all of them are simply catching photons and letting those photons shake electrons loose into a current.",
+        "zh": "屋頂上的太陽能板、替口袋計算機供電的那一小片電池、衛星的翅膀——它們全都只是在接住光子，讓那些光子把電子搖鬆，化成一股電流。",
+        "ja": "屋根のパネル、電卓を動かす小さなセル、人工衛星の翼——どれもただ光子を受け止め、その光子に電子を揺り動かして電流にさせているだけなのです。"
+      },
+      "surprise": {
+        "en": "Here is the quiet wonder to end on. The solar panel runs on the very quantum effect Einstein won his Nobel Prize for — and it was this, the photoelectric effect, not relativity, that earned him the prize. The proof that light comes in photons is the same discovery now turning sunlight into power on roofs around the world. Every panel is a hundred-year-old quantum trick, working in plain daylight.",
+        "zh": "這裡有一個安靜的驚奇，作為收尾。太陽能板靠的，正是愛因斯坦藉以贏得諾貝爾獎的那個量子效應——而且為他贏得獎項的，是這個「光電效應」，而不是相對論。當年「光由光子構成」的那個證明，正是今天在全世界屋頂上把陽光變成電力的同一項發現。每一塊太陽能板，都是一個百年前的量子把戲，在光天化日下默默運轉。",
+        "ja": "最後に、静かな驚きを一つ。太陽光パネルが動くのは、まさにアインシュタインがノーベル賞を勝ち取った量子効果によるものです——そして彼に賞をもたらしたのは、相対論ではなく、この「光電効果」でした。光が光子としてやってくるという証明は、いま世界中の屋根で太陽光を電力に変えている、その同じ発見なのです。どのパネルも、白日のもとで静かに働く、百年前の量子の仕掛けです。"
+      },
+      "thread": {
+        "en": "You have followed light from a rainbow on a wall all the way to power on a roof — wave, particle, and speed limit, all one thing. The trail ends here, but the sky stays wide open.",
+        "zh": "你已經跟著光，從牆上的一道彩虹，一路走到屋頂上的電力——波、粒子、速度極限，全是同一樣東西。這條路到此為止，但整片星空仍然敞開。",
+        "ja": "あなたは光を、壁の虹から屋根の電力まで追ってきました——波であり、粒子であり、速度の限界であり、そのすべてが一つのもの。道はここで終わりますが、空はまだ大きく開いています。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "optics_concept", "target": "electromagnetic_theory_concept", "relation_type": "conceptual" },
+    { "source": "electromagnetic_theory_concept", "target": "electromagnetic_radiation_concept", "relation_type": "logical" },
+    { "source": "electromagnetic_radiation_concept", "target": "special_relativity_concept", "relation_type": "conceptual" },
+    { "source": "special_relativity_concept", "target": "wave_particle_duality_concept", "relation_type": "conceptual" },
+    { "source": "wave_particle_duality_concept", "target": "laser_concept", "relation_type": "applied" },
+    { "source": "laser_concept", "target": "photovoltaics_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Read how the double-slit experiment was actually run with single particles, look up Rayleigh scattering to see exactly why the sky is blue and sunsets are red, or follow a message as it travels as pulses of laser light through fibre-optic cable under the sea — and the strangeness of light becomes something you can trace, step by step.",
+    "zh": "想再往下墜一點？去讀讀「雙縫實驗」當年是怎麼用單一粒子真的做出來的、查一查「瑞利散射」看清楚天空為什麼是藍的、夕陽為什麼是紅的，或追蹤一則訊息如何化作一連串雷射光脈衝、穿過海底的光纖傳遞——光的奇異，就會變成你能一步步追蹤的東西。",
+    "ja": "もっと落ちてみたいですか？二重スリット実験が実際に単一粒子でどう行われたかを読み、レイリー散乱を調べて空が青く夕焼けが赤い理由をはっきり確かめ、一通のメッセージがレーザー光のパルスとなって海底の光ファイバーを旅する様子を追ってみてください——光の奇妙さが、あなたが一歩ずつたどれるものに変わります。"
+  }
+}

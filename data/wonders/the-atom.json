@@ -1,0 +1,221 @@
+{
+  "id": "the-atom",
+  "accent": "CHE",
+  "title": { "en": "The Atom", "zh": "原子", "ja": "原子" },
+  "intro": {
+    "en": "Everything you have ever touched is built from about a hundred kinds of tiny pieces, arranged by quantum rules. In seven steps, discover that matter is mostly empty space following a hidden code — and that we are now learning to write that code ourselves.",
+    "zh": "你碰過的一切，都是由大約一百種微小零件組成的，並依量子規則排列。跟著七步，你會發現物質其實大半是空無，只是遵循著一套隱藏的密碼——而我們如今正學著親手書寫這套密碼。",
+    "ja": "あなたが触れてきたすべては、約百種類の小さな部品でできていて、量子の規則によって並んでいます。7 つのステップで、物質はほとんどが空っぽで、隠れた暗号に従っているにすぎないこと——そして私たちが今、その暗号を自ら書き始めていることを見つけていきましょう。"
+  },
+  "steps": [
+    {
+      "ref": "dmitri_mendeleev_person",
+      "hook": {
+        "en": "By the 1860s chemists had found dozens of elements — gold, oxygen, sulfur — but they looked like a junk drawer with no order. What if they were secretly sorted all along?",
+        "zh": "到了一八六○年代，化學家已經找到幾十種元素——金、氧、硫——但它們看起來像一個毫無條理的雜物抽屜。如果它們其實一直都是排好序的呢？",
+        "ja": "一八六〇年代までに、化学者は金・酸素・硫黄など数十の元素を見つけていました。でもそれらは、秩序のないがらくた箱のように見えた。もし本当は、ずっと整理されていたとしたら？"
+      },
+      "reveal": {
+        "en": "Dmitri Mendeleev laid the known elements out on cards and sorted them by weight — and a rhythm appeared. Their properties repeated at regular intervals, so he arranged them into rows and columns: the periodic table. The bold part was where the pattern had holes, he left blank gaps rather than forcing a fit, trusting that the missing elements simply had not been found yet.",
+        "zh": "門得列夫把已知的元素寫在卡片上，依重量排序——結果，一種節奏浮現了。它們的性質每隔固定間隔就重複一次，於是他把它們排成行與列：週期表。最大膽的地方在於，當規律出現空缺，他寧可留下空白，也不硬塞，因為他相信那些缺的元素只是還沒被發現而已。",
+        "ja": "メンデレーエフは知られた元素をカードに書き、重さの順に並べました——すると、一つのリズムが現れた。性質が一定の間隔で繰り返すので、彼はそれを行と列に並べた——周期表です。大胆だったのは、規則に穴があるところで、無理に詰め込まず空欄のまま残したこと。足りない元素はまだ見つかっていないだけだと信じたのです。"
+      },
+      "example": {
+        "en": "It is the same chart hanging on the wall of every chemistry classroom — rows of boxes, each holding one kind of atom, from hydrogen at the top corner to the heavy metals below.",
+        "zh": "那就是每間化學教室牆上掛的同一張表——一格一格的方塊，每格裝著一種原子，從左上角的氫，一路排到下方的重金屬。",
+        "ja": "それは、どの化学教室の壁にも掛かっているあの表です——ます目が並び、それぞれに一種類の原子が入っている。左上の隅の水素から、下のほうの重い金属まで。"
+      },
+      "surprise": {
+        "en": "Here is the twist: from those empty slots, Mendeleev predicted the exact properties of elements nobody had ever seen — their weight, their color, even their melting point. Within his lifetime, gallium and germanium were dug up and measured, and they matched his guesses almost perfectly. He had read the future of matter from a hole in a table.",
+        "zh": "意外的是：門得列夫從那些空格裡，預測了沒有人見過的元素的確切性質——它們的重量、顏色，甚至熔點。在他有生之年，鎵和鍺被挖出來、量測過，結果幾乎完全吻合他的猜測。他從表上的一個洞，讀出了物質的未來。",
+        "ja": "意外なのはここです——メンデレーエフはその空欄から、誰も見たことのない元素の正確な性質を予言しました。重さ、色、さらには融点まで。彼の存命中にガリウムとゲルマニウムが掘り出されて測られ、その予想とほぼ完璧に一致した。彼は表にあいた穴から、物質の未来を読み取っていたのです。"
+      },
+      "thread": {
+        "en": "But why should the elements repeat at all? What hidden clock makes their character come around again and again?",
+        "zh": "可是元素為什麼會「重複」？是什麼隱藏的時鐘，讓它們的性格一輪又一輪地回來？",
+        "ja": "でも、なぜ元素は「繰り返す」のでしょう？どんな隠れた時計が、その性格を何度も巡らせているのでしょう？"
+      }
+    },
+    {
+      "ref": "periodic_law_concept",
+      "hook": {
+        "en": "Sodium explodes in water; the noble gas neon does nothing at all; and then a few steps later, potassium explodes again. Why does the table keep circling back to the same kinds of behavior?",
+        "zh": "鈉一碰到水就爆炸；惰性氣體氖卻完全無動於衷；再往後幾格，鉀又爆炸了一次。為什麼這張表，會一再繞回同樣的脾氣？",
+        "ja": "ナトリウムは水に触れると爆発する。希ガスのネオンはまったく何もしない。そして数歩あとで、カリウムがまた爆発する。なぜこの表は、同じ振る舞いへ何度も巡り戻ってくるのでしょう？"
+      },
+      "reveal": {
+        "en": "This is the periodic law: an element's character repeats with the count of electrons in its outermost layer. Electrons sit around the atom in shells, and only the outer shell does the chemistry. When a shell fills up and a new one starts, the cycle resets, and the next element acts like the one a whole row above. The table repeats because the electron count repeats.",
+        "zh": "這就是週期律：一個元素的性格，會隨著它「最外層」電子的數目重複。電子分層繞著原子排列，而真正在做化學反應的，只有最外層。當一層填滿、新的一層開始，循環就重置了，下一個元素的行為，就會像上一整列正上方的那個。表會重複，是因為電子數目在重複。",
+        "ja": "これが周期律です——元素の性格は、いちばん外側にある電子の数とともに繰り返す。電子は原子のまわりに殻をなして並び、化学反応をするのは外殻だけ。一つの殻が満ちて新しい殻が始まると、周期はリセットされ、次の元素はちょうど一段上の元素のように振る舞う。表が繰り返すのは、電子の数が繰り返すからです。"
+      },
+      "example": {
+        "en": "The whole right-hand column — helium, neon, argon — are the loners that barely react with anything. Their outer shells are already full, so they have nothing to gain by joining up. That is why neon signs glow quietly without burning.",
+        "zh": "整個最右邊那一列——氦、氖、氬——都是幾乎不跟任何東西反應的孤僻者。它們的最外層早就填滿了，加入別人也撈不到好處。這就是為什麼霓虹燈能靜靜發光，卻不會燃燒。",
+        "ja": "いちばん右の列ぜんぶ——ヘリウム、ネオン、アルゴン——は、何ともほとんど反応しない一匹狼たちです。外殻がすでに満ちているので、結びついても得るものがない。だからネオンサインは、燃えることなく静かに光るのです。"
+      },
+      "surprise": {
+        "en": "So the whole periodic order is really a map of how electrons stack up, shell by shell. The grand pattern that took chemists a century to find is, at heart, electron bookkeeping. Chemistry — every fire, every rust spot, every breath — is mostly a story about where the outer electrons sit.",
+        "zh": "於是整張週期表的次序，其實是一張「電子如何一層層堆疊」的地圖。這個讓化學家花了一個世紀才找到的宏大規律，骨子裡就是「數電子的帳」。化學——每一場火、每一塊鏽斑、每一次呼吸——說穿了，幾乎都是關於最外層電子坐在哪裡的故事。",
+        "ja": "つまり周期表の順序は、じつは「電子がどう積み重なるか」を一段ずつ描いた地図なのです。化学者が一世紀かけて見つけた壮大な規則は、根っこのところでは「電子の帳簿づけ」にすぎない。化学——あらゆる炎、あらゆる錆、あらゆる呼吸——は、つまるところ外殻の電子がどこにいるかの物語なのです。"
+      },
+      "thread": {
+        "en": "If chemistry is all about those outer electrons, then what actually happens when two atoms meet and their electrons get involved?",
+        "zh": "如果化學講的全是那些最外層電子，那麼當兩個原子相遇、它們的電子攪和在一起時，到底發生了什麼事？",
+        "ja": "化学がすべてその外殻の電子の話なら——二つの原子が出会い、電子どうしが関わり合うとき、実際には何が起きるのでしょう？"
+      }
+    },
+    {
+      "ref": "chemical_bonding_concept",
+      "hook": {
+        "en": "An atom on its own is rare. Almost everything around you is atoms locked together — water, salt, your own skin. What is the glue, and why does it hold?",
+        "zh": "單獨存在的原子很罕見。你周遭幾乎所有東西，都是原子彼此鎖在一起的——水、鹽、你自己的皮膚。那種膠是什麼？又為什麼黏得住？",
+        "ja": "単独で存在する原子はまれです。あなたの身のまわりのほとんどは、原子どうしが固く結びついたもの——水、塩、あなた自身の肌。その糊とは何で、なぜくっついていられるのでしょう？"
+      },
+      "reveal": {
+        "en": "Atoms bond to reach a more stable, fuller outer shell of electrons. Sometimes they share electrons between them, sometimes one atom hands an electron to another and they cling by opposite charge. Either way, joining up lets each atom settle into a calmer, lower-energy state. Every material you know is just one particular pattern of these bonds.",
+        "zh": "原子結合，是為了讓最外層電子達到更穩定、更「滿」的狀態。有時它們彼此共用電子，有時一個原子把電子交給另一個，再靠正負電荷互相吸住。無論哪種，結合都能讓每個原子安頓進更平靜、能量更低的狀態。你認得的每一種材料，都只是這些鍵的某一種特定排列。",
+        "ja": "原子が結合するのは、外殻の電子をより安定した、より満ちた状態にするためです。たがいに電子を共有することもあれば、一方の原子がもう一方へ電子を渡し、正負の電荷で引き合うこともある。どちらにせよ、結びつくことで各原子はより穏やかで、エネルギーの低い状態に落ち着く。あなたの知るすべての材料は、こうした結合の、ある一つの並び方にすぎません。"
+      },
+      "example": {
+        "en": "Table salt is just sodium giving one electron to chlorine: two violent elements, one that explodes in water and one that is a poison gas, hold hands and become the harmless white grains on your fries.",
+        "zh": "食鹽，不過就是鈉把一個電子交給氯：兩種凶暴的元素——一個遇水就爆、一個是有毒氣體——手牽起手，就變成你薯條上那些無害的白色顆粒。",
+        "ja": "食卓塩は、ナトリウムが塩素へ電子を一つ渡しただけのものです。二つの荒々しい元素——水に触れれば爆発するものと、毒ガスであるもの——が手をつなぎ、ポテトにかかった無害な白い粒になる。"
+      },
+      "surprise": {
+        "en": "Here is the twist: the only difference between soft, gray pencil graphite and the hardest diamond is HOW the very same carbon atoms are bonded. Same element, same atoms — but rearrange the bonds and you go from a smear on paper to the hardest natural substance on Earth. The atoms do not change; only their handshake does.",
+        "zh": "意外的是：柔軟的灰色鉛筆芯（石墨）和最堅硬的鑽石之間，唯一的差別，只是同樣那些碳原子「怎麼鍵結」。同一種元素、同樣的原子——但只要重排鍵結，你就從紙上的一道墨痕，變成地球上最堅硬的天然物質。原子沒變，變的只是它們握手的方式。",
+        "ja": "意外なのはここです——柔らかく灰色の鉛筆の芯（黒鉛）と、最も硬いダイヤモンドの違いは、まったく同じ炭素原子が「どう結合しているか」だけです。同じ元素、同じ原子——でも結合を組み替えるだけで、紙の上のこすれ跡から、地球上で最も硬い天然物質へと変わる。原子は変わらない。変わるのは、その握手の仕方だけなのです。"
+      },
+      "thread": {
+        "en": "But why do atoms bond like this at all? Why does sharing electrons lower their energy? To answer that, we have to go down to where electrons stop behaving like ordinary objects.",
+        "zh": "可是原子到底為什麼會這樣結合？為什麼「共用電子」能降低能量？要回答這個，我們得往下走，走到電子不再像尋常物體的那一層。",
+        "ja": "でも、そもそもなぜ原子はこのように結合するのでしょう？なぜ電子を共有するとエネルギーが下がるのか？それに答えるには、電子がふつうの物体のように振る舞わなくなる、より深いところへ下りねばなりません。"
+      }
+    },
+    {
+      "ref": "quantum_chemistry_concept",
+      "hook": {
+        "en": "We have been drawing electrons as little balls circling the atom like planets around a sun. What if that picture is simply wrong?",
+        "zh": "我們一直把電子畫成小球，像行星繞著太陽那樣繞著原子轉。如果這幅圖，根本就是錯的呢？",
+        "ja": "私たちは電子を小さな球として、太陽のまわりの惑星のように原子をめぐるものと描いてきました。もしその絵が、そもそも間違っているとしたら？"
+      },
+      "reveal": {
+        "en": "WHY atoms bond at all is pure quantum mechanics. An electron does not orbit on a tidy line; it exists as a fuzzy cloud of probability, more likely to be found in some places than others. When two atoms come close, these clouds overlap and merge into shared shapes that hold the atoms together. Bonding is not balls touching — it is waves of probability finding a lower-energy way to overlap.",
+        "zh": "原子為什麼會結合，純粹是量子力學。電子並不是沿著一條工整的線繞行；它以一團模糊的機率雲存在，在某些地方比其他地方更可能被找到。當兩個原子靠近，這些雲彼此重疊、融合成共用的形狀，把原子綁在一起。鍵結，不是小球相碰——而是機率的波，找到了一種能量更低的方式相互交疊。",
+        "ja": "原子がなぜ結合するのか、それは純粋に量子力学です。電子はきれいな線の上を回るのではなく、ぼんやりした確率の雲として存在し、ある場所では見つかりやすく、別の場所では見つかりにくい。二つの原子が近づくと、この雲どうしが重なり、原子をつなぎ留める共有の形へと溶け合う。結合とは球が触れ合うことではなく——確率の波が、よりエネルギーの低い重なり方を見つけることなのです。"
+      },
+      "example": {
+        "en": "It is like a guitar string, which can only hum at certain fixed notes, never the ones in between. An electron around an atom is the same: it can only settle into certain standing-wave shapes, and those allowed shapes are exactly the electron shells from step two.",
+        "zh": "這就像一根吉他弦，只能發出某些固定的音，永遠發不出之間的音。原子周圍的電子也一樣：它只能安頓在某些「駐波」形狀上，而那些被允許的形狀，正是第二步講的電子層。",
+        "ja": "それはギターの弦に似ています。弦は決まったいくつかの音だけを鳴らし、その間の音は決して出せない。原子のまわりの電子も同じで、ある決まった「定在波」の形にしか落ち着けず、その許された形こそ、第二歩で出てきた電子殻なのです。"
+      },
+      "surprise": {
+        "en": "So an electron is not a tiny planet at all; it is more like a standing wave, a vibration trapped around the nucleus. And the shapes those waves are allowed to take dictate every chemical reaction, every color of every dye, and even the smell of every flower. The deepest layer of chemistry is not chemistry — it is music made of probability.",
+        "zh": "所以電子根本不是一顆小行星；它更像一道駐波，一段被困在原子核周圍的振動。而這些波被允許採取的形狀，決定了每一個化學反應、每一種染料的顏色，甚至每一朵花的氣味。化學最底層的那一層，其實不是化學——而是用機率譜成的音樂。",
+        "ja": "だから電子は小さな惑星などではなく、むしろ定在波——原子核のまわりに閉じ込められた振動です。そしてその波が取りうる形が、あらゆる化学反応、あらゆる染料の色、さらにはあらゆる花の香りまでを決めている。化学の最も深い層は、じつは化学ではない——確率でできた音楽なのです。"
+      },
+      "thread": {
+        "en": "If those wave shapes decide everything, then when many atoms bond together, the overall shape they build must matter enormously. What does that shape do?",
+        "zh": "如果這些波的形狀決定了一切，那麼當許多原子鍵結在一起時，它們堆出來的「整體形狀」一定極為關鍵。那形狀，究竟在做什麼？",
+        "ja": "その波の形がすべてを決めるなら、多くの原子が結びついたとき、それらが築く「全体の形」もきわめて重要になるはずです。その形は、何をしているのでしょう？"
+      }
+    },
+    {
+      "ref": "molecular_structure_concept",
+      "hook": {
+        "en": "A molecule is more than a list of atoms. The same atoms can be folded into different three-dimensional shapes — and somehow that shape changes everything. How can geometry alone decide what a thing does?",
+        "zh": "一個分子不只是一張原子清單。同樣的原子，可以被摺成不同的三維形狀——而那形狀，不知怎地改變了一切。光是「幾何」，怎麼能決定一樣東西的作用？",
+        "ja": "分子は、原子のリスト以上のものです。同じ原子が、異なる三次元の形に折りたためる——そしてその形が、なぜかすべてを変える。形だけで、どうやってその物の働きが決まるのでしょう？"
+      },
+      "reveal": {
+        "en": "Atoms do not just bond; they assemble into precise three-dimensional structures, with fixed angles and distances set by those quantum wave shapes. And the SHAPE is what decides the function. A molecule works by fitting physically into another molecule, like a key into a lock. Get the shape right and it slots in; get it wrong and nothing happens.",
+        "zh": "原子不只是鍵結；它們會組裝成精確的三維結構，鍵角與鍵長都由那些量子波的形狀固定下來。而決定功能的，正是那個「形狀」。一個分子之所以能作用，是因為它能在物理上嵌進另一個分子，像鑰匙插進鎖。形狀對了，它就卡進去；形狀錯了，什麼都不會發生。",
+        "ja": "原子はただ結合するのではなく、精密な三次元構造へと組み上がります。結合の角度や距離は、あの量子の波の形によって決まっている。そして働きを決めるのは、その「形」です。分子は、もう一つの分子に物理的にはまり込むことで働く——鍵が錠前に入るように。形が合えばはまり、合わなければ何も起きません。"
+      },
+      "example": {
+        "en": "Many medicines work exactly this way: a drug molecule is shaped to fit one particular receptor in your body and nothing else. Change a single corner of that shape and the key no longer turns the lock.",
+        "zh": "許多藥物正是這樣作用的：一個藥物分子被塑成剛好能嵌進你體內某一個特定受體、而且只嵌得進那一個。把那形狀的某個角落改一改，這把鑰匙就再也轉不動那把鎖了。",
+        "ja": "多くの薬は、まさにこのように働きます。薬の分子は、体内のある特定の受容体だけにぴたりとはまる形をしている。その形の一隅を変えるだけで、鍵はもう錠前を回せなくなるのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: your nose smells shape, not substance. Spearmint and caraway are built from identical atoms in the identical formula — they are mirror images of each other, like a left and a right hand. Yet one smells of mint and the other of rye bread, because your scent receptors feel the difference between left and right. This handedness is called chirality.",
+        "zh": "意外的是：你的鼻子聞的是「形狀」，不是「物質」。綠薄荷和葛縷子（凱莉茴香）由完全相同的原子、完全相同的化學式構成——它們互為鏡像，就像左手和右手。然而一個聞起來是薄荷味，另一個是裸麥麵包味，因為你的嗅覺受體分得出左與右的差別。這種「左右手性」，叫做掌性（手性）。",
+        "ja": "意外なのはここです——あなたの鼻は「物質」ではなく「形」を嗅いでいます。スペアミントとキャラウェイは、まったく同じ原子・同じ化学式でできている——たがいに鏡像で、右手と左手のような関係です。それでも一方はミント、もう一方はライ麦パンの匂いがする。嗅覚の受容体が、左と右の違いを感じ取るからです。この「右手左手の性質」を、キラリティ（掌性）と呼びます。"
+      },
+      "thread": {
+        "en": "If shape rules everything at the scale of a single molecule, what new powers appear when we arrange atoms by the thousand, just a few atoms across?",
+        "zh": "如果在單一分子的尺度上，形狀就主宰一切，那麼當我們把原子以千計地排列、整體卻只有幾個原子寬時，又會冒出什麼新本領？",
+        "ja": "一つの分子の尺度で形がすべてを支配するなら、原子を何千個と並べ、それでも全体が数個分の幅しかないとき、どんな新しい力が現れるのでしょう？"
+      }
+    },
+    {
+      "ref": "nanotechnology_concept",
+      "hook": {
+        "en": "Take any ordinary material and grind it finer and finer, down to specks just a few atoms wide. You might expect a smaller pile of the same stuff. What you get instead can be a completely different material.",
+        "zh": "拿任何一種尋常材料，把它磨得越來越細，細到只有幾個原子寬的微粒。你或許以為會得到一小堆「同樣的東西」。但你拿到的，可能是一種完全不同的材料。",
+        "ja": "どんなありふれた材料でも、どんどん細かく砕いていき、わずか数原子分の幅の粒にしてみる。同じものが少し小さくなるだけだと思うかもしれません。ところが手に入るのは、まったく別の材料でありうるのです。"
+      },
+      "reveal": {
+        "en": "This is nanotechnology: building and shaping matter at the scale of a few atoms or molecules. At that size, an enormous fraction of the atoms sit right on the surface, exposed, instead of buried inside. Surface atoms behave differently from buried ones, so a material's color, strength, and reactivity can all shift — purely because the pieces got small enough.",
+        "zh": "這就是奈米科技：在幾個原子或分子的尺度上建構、塑形物質。在那個尺寸下，極大比例的原子都坐在「表面」、暴露在外，而不是埋在內部。表面的原子，行為和被埋住的不一樣，於是材料的顏色、強度、反應性，全都可能改變——純粹因為碎塊變得夠小了。",
+        "ja": "これがナノテクノロジーです——数個の原子や分子の尺度で物質を組み立て、形づくる。その大きさでは、ものすごい割合の原子が内部に埋もれるのではなく、「表面」にむき出しで並んでいる。表面の原子は埋もれた原子と振る舞いが違うので、材料の色も強さも反応性も変わりうる——ただ、粒が十分に小さくなったというだけで。"
+      },
+      "example": {
+        "en": "Stained-glass windows in old cathedrals get their deep ruby red from tiny specks of gold suspended in the glass — medieval craftsmen were doing nanotechnology by accident, centuries before anyone had the word for it.",
+        "zh": "古老大教堂的彩繪玻璃，那深沉的寶石紅，來自懸浮在玻璃裡的微小金粒——中世紀的工匠，早在任何人有這個詞之前的好幾百年，就誤打誤撞地做著奈米科技。",
+        "ja": "古い大聖堂のステンドグラスの、あの深いルビー色は、ガラスの中に漂う極小の金の粒から生まれます——中世の職人たちは、誰もその言葉を持つ何世紀も前から、偶然にもナノテクノロジーをしていたのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: gold, which we trust never to rust or react, turns red and becomes a busy chemical catalyst once its specks are small enough — a few billionths of a meter across. Nothing about the element changed. Size alone, not chemistry, changed what the material IS. At the nanoscale, even gold forgets how to be gold.",
+        "zh": "意外的是：我們信任「永不生鏽、永不反應」的黃金，一旦微粒小到夠小——只有幾十億分之一公尺寬——竟會變紅，並成為一個忙碌的化學催化劑。元素本身一點都沒變。光是「尺寸」，而非化學，就改變了這材料「是什麼」。在奈米尺度，連黃金都忘了該怎麼當黃金。",
+        "ja": "意外なのはここです——決して錆びず反応しないと私たちが信じる金が、その粒が十分に小さくなると——わずか数十億分の一メートルの幅で——赤くなり、せわしない化学触媒になる。元素そのものは何も変わっていない。化学ではなく「大きさ」だけが、その材料が「何であるか」を変えたのです。ナノの尺度では、金でさえ金であることを忘れてしまう。"
+      },
+      "thread": {
+        "en": "If size and arrangement can hand a material brand-new powers, then instead of stumbling onto them by luck, could we design them on purpose?",
+        "zh": "如果尺寸與排列方式能賦予材料全新的本領，那麼與其靠運氣撞見，我們能不能「刻意」把它們設計出來？",
+        "ja": "大きさと並べ方が材料に新しい力を授けられるなら、運まかせに出くわすのではなく、それを「狙って」設計できるのではないでしょうか？"
+      }
+    },
+    {
+      "ref": "materials_by_design_concept",
+      "hook": {
+        "en": "For most of history, finding a new material meant mixing things and hoping — slow, lucky guesswork. What if you could run that whole process backwards?",
+        "zh": "在歷史的絕大部分時間裡，找到新材料的方法，就是把東西混在一起、然後期待——緩慢、靠運氣的瞎猜。如果你能把這整個過程「倒過來」跑呢？",
+        "ja": "歴史のほとんどの間、新しい材料を見つけるとは、いろいろ混ぜて期待することでした——遅く、運まかせの当て推量。もし、その全過程を「逆向き」に走らせられるとしたら？"
+      },
+      "reveal": {
+        "en": "That is materials by design. Because we now understand the rules — how electrons stack, how atoms bond, how shape sets function — we can work backwards. You start from the property you want, say, light but stronger than steel, and use computers to calculate the atomic structure that would deliver it. Then you build that exact arrangement, atom by atom. We are no longer searching for materials; we are commissioning them.",
+        "zh": "這就是「依需求設計材料」。因為我們如今懂得了規則——電子如何堆疊、原子如何鍵結、形狀如何決定功能——我們可以反過來做。你從你想要的性質出發，比方說「比鋼更輕卻更強」，再用電腦算出能達成它的原子結構。然後，你就一個原子一個原子地，把那個精確的排列蓋出來。我們不再是「尋找」材料，而是在「訂製」材料。",
+        "ja": "それが「設計による材料」です。電子がどう積み重なり、原子がどう結合し、形がどう働きを決めるか——その規則を私たちは今や理解しているので、逆向きに進められる。ほしい性質、たとえば「鋼より軽くて強い」から出発し、それを実現する原子構造をコンピュータで計算する。そしてその正確な並びを、原子一つひとつ組み上げる。私たちはもう材料を「探して」いない——「注文して」つくっているのです。"
+      },
+      "example": {
+        "en": "It is how engineers design a lithium battery to hold more charge, or a lighter alloy for an aircraft wing — sketching the structure on a screen and predicting how it will behave before a single sample is ever made in the lab.",
+        "zh": "工程師正是這樣設計能裝更多電的鋰電池，或更輕的飛機機翼合金——在螢幕上把結構描出來，預測它會如何表現，而這一切，發生在實驗室裡做出第一個樣品之前。",
+        "ja": "技術者がより多くの電気をためるリチウム電池や、航空機の翼のためのより軽い合金を設計するのも、このやり方です——構造を画面の上に描き、研究室で最初の試料を一つ作る前に、それがどう振る舞うかを予測する。"
+      },
+      "surprise": {
+        "en": "Here is the quiet twist: this is software-and-hardware co-design, aimed at matter itself. Cheap, common ingredients, cleverly arranged by good computation, can outperform rare and expensive ones thrown together carelessly. The winning material is not always the costliest one — it is the one whose structure was designed best. The future of stuff is engineered from the atom up.",
+        "zh": "這裡藏著一個安靜的意外：這就是軟硬協同設計，只是對象換成了「物質本身」。便宜、常見的原料，只要用好的運算巧妙地排列，整體表現可以勝過隨手胡亂湊在一起的稀有昂貴材料。勝出的材料，未必是最貴的那個——而是結構被設計得最好的那個。未來的物質，是從原子層級往上「工程」出來的。",
+        "ja": "ここに静かな意外があります——これはソフトとハードの協調設計を、「物質そのもの」へ向けたものなのです。安く、ありふれた原料でも、よい計算で巧みに並べれば、無造作に放り込まれた希少で高価なものを総合性能で上回れる。勝つ材料は、いつも最も高価なものとはかぎらない——構造が最もよく設計されたものなのです。未来の物質は、原子の層から上へと「工学」されていく。"
+      },
+      "thread": {
+        "en": "You started from a wall chart of about a hundred boxes, and walked all the way to designing matter on purpose. The map is in your hands now — the field is wide open.",
+        "zh": "你從牆上那張約一百格的表出發，一路走到了「刻意設計物質」。地圖如今在你手上——這片領域，仍然敞開。",
+        "ja": "あなたは壁に掛かった約百のます目の表から出発し、「物質を狙って設計する」ところまで歩いてきました。地図はいま、あなたの手の中にある——この分野は、まだ大きく開いています。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "dmitri_mendeleev_person", "target": "periodic_law_concept", "relation_type": "logical" },
+    { "source": "periodic_law_concept", "target": "chemical_bonding_concept", "relation_type": "causal" },
+    { "source": "chemical_bonding_concept", "target": "quantum_chemistry_concept", "relation_type": "conceptual" },
+    { "source": "quantum_chemistry_concept", "target": "molecular_structure_concept", "relation_type": "logical" },
+    { "source": "molecular_structure_concept", "target": "nanotechnology_concept", "relation_type": "applied" },
+    { "source": "nanotechnology_concept", "target": "materials_by_design_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up how the periodic table is actually built from electron shells, find a picture of what an electron orbital really looks like (those strange dumbbell and cloud shapes), or read Richard Feynman's famous 1959 talk 'There's Plenty of Room at the Bottom' — the spark that lit nanotechnology, where he asks why we can't just arrange the atoms the way we want.",
+    "zh": "想再往下墜一點？去查查週期表究竟如何由電子層「蓋」出來、找一張電子軌域真正長什麼樣子的圖（那些奇怪的啞鈴形與雲團形），或讀讀費曼一九五九年那場著名的演講〈底下的空間還多得很〉——點燃奈米科技的那把火，他在裡頭問：我們為什麼不能就照自己想要的方式，把原子排好？",
+    "ja": "もっと落ちてみたいですか？周期表が電子殻からどう「築かれる」のかを調べ、電子の軌道が実際どんな姿か（あの奇妙なダンベル形や雲の形）の図を探し、リチャード・ファインマンの一九五九年の有名な講演「底にはまだたっぷり空きがある」を読んでみてください——ナノテクノロジーに火をつけた一席で、彼はこう問います。なぜ私たちは、原子を望むとおりに並べられないのか、と。"
+  }
+}

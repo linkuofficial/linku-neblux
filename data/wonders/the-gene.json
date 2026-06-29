@@ -1,0 +1,221 @@
+{
+  "id": "the-gene",
+  "accent": "BIO",
+  "title": { "en": "The Gene", "zh": "基因", "ja": "遺伝子" },
+  "intro": {
+    "en": "A four-letter code, copied into every cell, writes a whole living thing. In seven steps, follow that code from blind chance to the moment we learned to read it — and rewrite it.",
+    "zh": "一段只有四個字母的密碼，被抄進每一個細胞，寫出一整個生命。跟著七步，沿著這段密碼，從盲目的機運，走到我們學會讀它——並改寫它——的那一刻。",
+    "ja": "わずか四文字の暗号が、すべての細胞に写し取られ、一つの生き物まるごとを書き上げる。7 つのステップで、その暗号を盲目の偶然からたどり、私たちがそれを読み——そして書き換える——ようになった瞬間まで歩きましょう。"
+  },
+  "steps": [
+    {
+      "ref": "natural_selection_concept",
+      "hook": {
+        "en": "An eye focuses light; a wing rides the air. They look designed. But what if no one designed them — and they built themselves, with no plan at all?",
+        "zh": "眼睛能聚焦光線，翅膀能乘著空氣。它們看起來像被設計過的。但如果根本沒有人設計——它們是在毫無藍圖的情況下，自己長出來的呢？",
+        "ja": "目は光を集め、翼は空気に乗る。どちらも設計されたように見えます。でも、もし誰も設計などせず——何の計画もなしに、ひとりでに出来上がったのだとしたら？"
+      },
+      "reveal": {
+        "en": "That is natural selection, and it needs only three plain ingredients. Things make copies of themselves. The copies vary a little, by accident. Whichever variants survive and breed best leave more copies behind. Run that loop for millions of years and it slowly stacks tiny advantages into eyes, wings, and brains. No designer, no goal — just copy, vary, select, repeated past imagining.",
+        "zh": "這就是天擇，而它只需要三樣平凡的材料。東西會複製自己。複製出來的彼此略有差異，純屬偶然。哪些變異活得久、繁殖得好，就留下更多複本。讓這個循環跑上數百萬年，它會把一個個微小的優勢慢慢疊成眼睛、翅膀、大腦。沒有設計者，也沒有目標——只是複製、變異、篩選，重複到難以想像的次數。",
+        "ja": "これが自然選択で、必要なのは三つの素朴な材料だけです。ものは自分の複製をつくる。複製どうしは偶然、少しずつ違う。生き延びてうまく子を残した変異が、より多くの複製を後に残す。このループを何百万年も回せば、ごく小さな利点が少しずつ積み上がり、やがて目や翼や脳になる。設計者も目的もない——ただ複製・変異・選択を、想像を超える回数くり返すだけです。"
+      },
+      "example": {
+        "en": "Bacteria show it in days: in a dish of antibiotic, the few cells that happen to resist survive and multiply, and soon the whole dish is resistant. The drug never taught them — it only spared the ones that already differed.",
+        "zh": "細菌幾天內就演給你看：在一盤抗生素裡，少數剛好有抗藥性的細胞活了下來、不斷分裂，很快整盤都有了抗藥性。藥物並沒有「教會」它們——它只是放過了那些本來就不一樣的。",
+        "ja": "細菌は数日でそれを見せてくれます。抗生物質を入れた皿の中で、たまたま耐性をもつ少数の細胞が生き残って増え、やがて皿全体が耐性になる。薬が教えたのではない——もともと違っていたものを、見逃しただけなのです。"
+      },
+      "surprise": {
+        "en": "Here is the twist: Darwin had this whole idea while knowing nothing about genes. He could see that traits passed down and varied, but the hidden machinery that carried them was a complete mystery to him. The missing piece was found by a quiet monk named Gregor Mendel, patiently counting tall and short pea plants in a monastery garden — the first glimpse of the gene.",
+        "zh": "意外的是：達爾文想出這整套理論時，對基因一無所知。他看得出特徵會遺傳、會變異，但背後承載這一切的隱形機制，對他完全是個謎。補上這塊缺片的，是一位安靜的修士——孟德爾，他在修道院的菜園裡，耐心數著高矮不同的豌豆——那是人類第一次瞥見基因。",
+        "ja": "意外なことに、ダーウィンはこの理論をまるごと思いついたとき、遺伝子について何も知りませんでした。形質が受け継がれ、変異することは見えても、それを運ぶ隠れた仕組みは彼にとって完全な謎だった。その欠けた一片を見つけたのは、メンデルという物静かな修道士でした。修道院の菜園で、背の高い豆と低い豆を根気よく数えながら——それが人類が初めて垣間見た遺伝子だったのです。"
+      },
+      "thread": {
+        "en": "So heredity passes through something. For a century no one knew what. What is the actual stuff that carries the code of life?",
+        "zh": "所以遺傳是靠某種東西傳下去的。整整一個世紀，沒人知道那是什麼。承載生命密碼的，究竟是什麼實體？",
+        "ja": "つまり遺伝は、何かを通して伝わる。一世紀のあいだ、それが何かは誰も知りませんでした。生命の暗号を運ぶ、その実体とは何なのでしょう？"
+      }
+    },
+    {
+      "ref": "dna_concept",
+      "hook": {
+        "en": "Whatever carries heredity has to copy itself perfectly, billions of times, yet still hold enough room to spell out an entire creature. What kind of thing could do both?",
+        "zh": "不管承載遺傳的是什麼，它都得能完美複製自己幾十億次，卻又要裝得下足以拼出一整個生物的資訊。什麼樣的東西能同時做到這兩件事？",
+        "ja": "遺伝を運ぶものが何であれ、それは何十億回も完璧に自分を複製でき、しかも生き物まるごとを書き出すだけの容量を持たねばなりません。両方をこなせるものなど、いったい何でしょう？"
+      },
+      "reveal": {
+        "en": "The answer is a molecule: DNA. Picture a ladder twisted into a spiral — the famous double helix. The rungs are made from just four chemical letters, A, T, G, C, and the order of those letters is the message. Better still, the two sides of the ladder mirror each other: A always pairs with T, G with C. So the molecule carries its own backup, and to copy itself it simply unzips down the middle and rebuilds each half.",
+        "zh": "答案是一種分子：DNA。想像一架梯子被扭成螺旋——那就是著名的雙螺旋。梯子的橫桿由四個化學字母組成：A、T、G、C，而這些字母的排列順序，就是訊息本身。更妙的是，梯子的兩側互為鏡像：A 永遠配 T，G 永遠配 C。於是這個分子自帶一份備份，要複製時，它只要從中間拉開拉鍊，再各自補回另一半就行了。",
+        "ja": "答えは一つの分子——DNA です。はしごがらせんにねじれた姿を思い浮かべてください。あの有名な二重らせんです。横木はたった四つの化学の文字、A・T・G・C でできていて、その並び順こそがメッセージです。さらに巧みなことに、はしごの両側はたがいに鏡映し——A はつねに T と、G は C と対になる。だから分子は自分の控えを持ち、複製するときは真ん中からファスナーのように開いて、それぞれが反対側を作り直すだけでよいのです。"
+      },
+      "example": {
+        "en": "This is what a DNA test reads. A swab from your cheek holds the same four-letter sequence found in every other cell of you — so a few cells can identify a whole person, or trace a family back generations.",
+        "zh": "DNA 檢測讀的就是這個。從你臉頰刮下的一點細胞，帶著與你體內每個細胞相同的四字母序列——所以區區幾個細胞，就能指認出一整個人，或往上追溯一個家族好幾代。",
+        "ja": "DNA 検査が読み取るのもこれです。頬から綿棒でぬぐった少しの細胞には、体じゅうのどの細胞とも同じ四文字の配列が入っている——だからわずかな細胞で一人の人物を特定でき、家系を何世代もさかのぼれるのです。"
+      },
+      "surprise": {
+        "en": "Now the scale. Each of your cells holds about two meters of DNA, wound and folded down into a speck far too small to see. Stretched out, the DNA in your whole body would reach beyond the Sun and back many times over. And because all life writes in the same four letters, you share a striking fraction of your code with a banana — proof that everything alive is one enormous, distant family.",
+        "zh": "再來看尺度。你的每一個細胞，都裝著大約兩公尺長的 DNA，被纏繞、摺疊成一個小到看不見的點。若全部攤開，你全身的 DNA 能來回延伸到太陽以外好幾趟。而正因為所有生命都用同樣這四個字母在書寫，你和一根香蕉，竟共享了相當可觀的一段密碼——這證明了所有活著的東西，都是同一個龐大而遙遠的家族。",
+        "ja": "次は尺度です。あなたの細胞一つひとつには、およそ二メートルもの DNA が巻かれ、折りたたまれて、目には見えないほど小さな点に収まっています。すべて伸ばせば、全身の DNA は太陽の先まで何度も往復するほど。そしてすべての生命が同じ四文字で書いているからこそ、あなたはバナナとも驚くほどの割合の暗号を共有している——生きとし生けるものが、一つの巨大で遠い家族であることの証なのです。"
+      },
+      "thread": {
+        "en": "But a string of letters just sits there. How does a silent code in the dark turn into a living, breathing body?",
+        "zh": "可是一串字母只是擺在那裡。一段沉默、藏在黑暗裡的密碼，是怎麼變成一個會呼吸、活生生的身體的？",
+        "ja": "けれど文字の列は、ただそこにあるだけ。暗闇に眠る沈黙の暗号が、どうやって呼吸する生きた体になるのでしょう？"
+      }
+    },
+    {
+      "ref": "gene_expression_concept",
+      "hook": {
+        "en": "A book on a shelf does nothing until someone reads it aloud and acts on it. So who reads the DNA — and what do they build from it?",
+        "zh": "書架上的書，在有人把它讀出來、照著做之前，什麼也不會發生。那麼，是誰在讀 DNA——又從中造出了什麼？",
+        "ja": "棚の本は、誰かが声に出して読み、その通りに動くまで何もしません。では、DNA を読むのは誰で——そこから何を作るのでしょう？"
+      },
+      "reveal": {
+        "en": "The cell reads it in two moves, called the central dogma. First the relevant stretch of DNA is copied into a short working message, RNA. Then that message is fed into a tiny machine that strings together beads called amino acids in the exact order the letters dictate. The finished chain is a protein — and proteins are the workers that build and run everything in you. A code has become a machine.",
+        "zh": "細胞分兩步來讀，這叫做中心法則。首先，相關的那段 DNA 被抄寫成一份短短的工作訊息，叫 RNA。接著這份訊息被送進一台微小的機器，它依照字母指定的順序，把一顆顆叫做胺基酸的珠子串起來。串好的這條鏈，就是蛋白質——而蛋白質正是建造、運轉你體內一切的工人。一段密碼，於是變成了一台機器。",
+        "ja": "細胞は二段階で読みます。これを「セントラルドグマ」と呼びます。まず必要な DNA の一節が、短い作業用のメッセージ RNA に写し取られる。次にそのメッセージが小さな機械に送り込まれ、文字が指定するとおりの順番で、アミノ酸という粒を数珠つなぎにしていく。出来上がった鎖がタンパク質——あなたの中のすべてを作り、動かす働き手です。暗号が、機械になったのです。"
+      },
+      "example": {
+        "en": "When you tan in the sun, certain skin cells read out a gene to make more of the pigment that darkens your skin. The DNA did not change; it was simply read more, on demand.",
+        "zh": "當你曬太陽變黑，某些皮膚細胞會把一個基因讀出來，多製造一些讓膚色變深的色素。DNA 並沒有改變，只是被「按需求」多讀了幾次而已。",
+        "ja": "日に焼けて肌が黒くなるとき、特定の皮膚細胞は、肌を濃くする色素をより多く作るために、ある遺伝子を読み出します。DNA が変わったのではなく、必要に応じて「多く読まれた」だけなのです。"
+      },
+      "surprise": {
+        "en": "Here is what stuns people: every cell in your body carries the very same full code — the neuron firing in your brain and the cell on your fingertip hold identical DNA. The only difference is which genes each one switches on and which it leaves silent. A neuron is not a skin cell because of a different book; it is reading different pages of the same book.",
+        "zh": "讓人震驚的是：你身體裡每一個細胞，都帶著一模一樣的完整密碼——大腦裡放電的神經元，和你指尖上的細胞，握著的是同一份 DNA。唯一的差別，只在於各自打開了哪些基因、又讓哪些保持沉默。神經元之所以不是皮膚細胞，並不是因為它讀的是另一本書；而是因為它讀的是同一本書的不同頁。",
+        "ja": "人を驚かせるのはここです。あなたの体のどの細胞も、まったく同じ完全な暗号を持っている——脳で発火する神経細胞も、指先の細胞も、同一の DNA を握っています。違いはただ、どの遺伝子を「オン」にし、どれを黙らせておくか、それだけ。神経細胞が皮膚細胞でないのは、別の本を読んでいるからではない——同じ本の、別のページを読んでいるからなのです。"
+      },
+      "thread": {
+        "en": "So the code spells out a chain of amino acids. But a limp string can't do anything. How does a flat list of beads turn into a working tool?",
+        "zh": "所以密碼拼出的是一條胺基酸鏈。但一條軟趴趴的鏈子什麼也做不了。一串扁平的珠子，是怎麼變成一個能運作的工具的？",
+        "ja": "つまり暗号は、アミノ酸の鎖を綴ります。でも、ぐにゃりとした鎖は何もできません。平らに並んだ粒の列が、どうやって働く道具になるのでしょう？"
+      }
+    },
+    {
+      "ref": "protein_structure_concept",
+      "hook": {
+        "en": "A protein leaves the machine as a long, floppy thread. Moments later it does a precise job — grips a molecule, cuts another, carries oxygen. How does a loose string become a tool?",
+        "zh": "蛋白質離開機器時，是一條長長、軟趴趴的線。沒過多久，它就能做精準的工作——抓住某個分子、剪斷另一個、運送氧氣。一條鬆散的線，怎麼變成一個工具的？",
+        "ja": "タンパク質は機械から、長くてぐにゃぐにゃの糸として出てきます。ほどなくして、それは精密な仕事をする——ある分子をつかみ、別の分子を切り、酸素を運ぶ。ゆるい糸が、どうやって道具になるのでしょう？"
+      },
+      "reveal": {
+        "en": "It folds. The one-dimensional string of amino acids collapses, in a fraction of a second, into a precise three-dimensional shape. The order of the beads decides the shape, and the shape is everything: a pocket exactly fitted to grab one molecule, a groove shaped to slice another. The function isn't written separately anywhere — the shape simply IS the function. Change one bead and you may change the fold, and the job, completely.",
+        "zh": "它會摺疊。那條一維的胺基酸線，會在不到一秒之間，塌縮成一個精確的三維形狀。珠子的順序決定了形狀，而形狀就是一切：一個剛好能抓住某分子的凹袋，一道剛好能切開另一分子的溝槽。功能並沒有被另外寫在哪裡——形狀本身就是功能。改動一顆珠子，就可能徹底改變它的摺法，連帶改變它的工作。",
+        "ja": "折りたたまれるのです。一次元のアミノ酸の糸が、一秒にも満たぬ間に、精密な三次元の形へと崩れ落ちる。粒の順番が形を決め、その形がすべて——ある分子をつかむのにぴったりのくぼみ、別の分子を切るのにちょうどよい溝。機能はどこかに別に書かれてなどいない——形そのものが機能なのです。粒を一つ変えれば、折り方が、そして仕事が、まるごと変わりかねません。"
+      },
+      "example": {
+        "en": "Hemoglobin, the protein that ferries oxygen through your blood, folds into a shape with four cradles, each cupping one oxygen molecule. In sickle-cell disease, a single changed letter warps that fold, and the cells turn stiff and crescent-shaped.",
+        "zh": "血紅素，這個在你血液裡運送氧氣的蛋白質，會摺成一個有四個搖籃的形狀，每個搖籃捧著一個氧分子。在鐮刀型貧血裡，一個字母的改變就扭曲了那個摺法，讓細胞變得僵硬、彎成新月狀。",
+        "ja": "血液中で酸素を運ぶタンパク質ヘモグロビンは、四つのゆりかごを持つ形に折りたたまれ、それぞれが酸素分子を一つずつ抱きます。鎌状赤血球症では、たった一文字の変化がその折り方をゆがめ、細胞は硬く三日月形になってしまうのです。"
+      },
+      "surprise": {
+        "en": "When folding goes wrong, the results can be devastating — some forms of dementia trace back to proteins that fold into the wrong shape and clump. Yet for fifty years, predicting how a string would fold from its letters alone was one of biology's great unsolved problems. It was finally cracked, around 2020, not by a microscope but by an AI that had learned the patterns from known structures — a deep puzzle in living matter, solved by a machine.",
+        "zh": "當摺疊出錯，後果可能極為慘烈——某些失智症，就源自摺成錯誤形狀、糾結成團的蛋白質。然而整整五十年，光憑字母去預測一條線會怎麼摺，一直是生物學最大的未解難題之一。它最終在 2020 年前後被攻破——靠的不是顯微鏡，而是一個從已知結構裡學會了模式的 AI。一個藏在生命物質裡的深奧謎題，竟被一台機器解開了。",
+        "ja": "折りたたみが狂うと、結果は壊滅的になりえます——ある種の認知症は、まちがった形に折れて固まったタンパク質に行き着く。それでも五十年もの間、文字だけからどう折れるかを予測することは、生物学最大の未解決問題の一つでした。それがついに、2020 年ごろ攻略された——顕微鏡ではなく、既知の構造からパターンを学んだ AI によって。生命の物質に潜む深い謎が、機械の手で解かれたのです。"
+      },
+      "thread": {
+        "en": "So the letters fix the protein, and the protein does the work. But if the code is fixed at birth, how can the same cell answer to hunger, stress, or the seasons?",
+        "zh": "所以字母決定了蛋白質，蛋白質做了工作。但如果密碼在出生時就定死了，同一個細胞，又怎麼能對飢餓、壓力、季節做出回應？",
+        "ja": "つまり文字がタンパク質を定め、タンパク質が仕事をする。でも暗号が生まれた時に決まっているなら、同じ細胞が、どうやって飢えやストレスや季節に応えられるのでしょう？"
+      }
+    },
+    {
+      "ref": "epigenetics_concept",
+      "hook": {
+        "en": "Your DNA is set at birth and barely changes for life. Yet your cells must respond to a famine, a fright, the turn of winter. How does a fixed code stay this flexible?",
+        "zh": "你的 DNA 在出生時就定下來，一生幾乎不變。可是你的細胞，卻得回應一場饑荒、一次驚嚇、冬天的到來。一段固定的密碼，怎麼能保持這麼有彈性？",
+        "ja": "あなたの DNA は生まれた時に決まり、一生ほとんど変わりません。それでも細胞は、飢饉に、恐怖に、冬の訪れに応えねばならない。固定された暗号が、どうしてこれほど柔軟でいられるのでしょう？"
+      },
+      "reveal": {
+        "en": "Through a second layer of writing called epigenetics. Tiny chemical tags settle ON the DNA, without altering a single one of its letters. A tag can clamp a gene shut or hold it open — like sticky notes and bookmarks placed over the text, deciding which pages get read today. The underlying book is untouched; the marks just change how it is read. This is how one fixed code keeps answering a changing world.",
+        "zh": "靠的是第二層書寫，叫做表觀遺傳。微小的化學標籤會貼「在」DNA 上面，卻不更動它任何一個字母。一個標籤可以把某個基因夾死、關上，也可以把它撐開——就像貼在文字上的便利貼和書籤，決定今天該讀哪幾頁。底下那本書原封不動，標記只是改變了它被閱讀的方式。固定的一份密碼，就是這樣不斷回應著一個變動的世界。",
+        "ja": "エピジェネティクスと呼ばれる、第二の書き込みの層によってです。小さな化学のタグが、文字を一つも変えずに DNA の「上」にとまる。タグは遺伝子を閉じ込めることも、開いたままにすることもできる——本文の上に貼った付箋やしおりのように、今日どのページを読むかを決めるのです。下にある本はそのまま。印が、読まれ方だけを変える。固定された一つの暗号が、こうして移ろう世界に応え続けるのです。"
+      },
+      "example": {
+        "en": "A queen bee and a worker bee can carry identical DNA. The queen becomes a queen because, as a larva, she is fed royal jelly, which changes the chemical tags on her genes — the same code, read two completely different ways.",
+        "zh": "蜂后和工蜂可以帶著一模一樣的 DNA。蜂后之所以成為蜂后，是因為她在幼蟲期被餵食蜂王漿，那改變了她基因上的化學標籤——同一份密碼，被讀成了兩種截然不同的樣子。",
+        "ja": "女王バチと働きバチは、まったく同じ DNA を持ちうる。女王が女王になるのは、幼虫のときにローヤルゼリーを与えられ、それが遺伝子の化学タグを変えるからです——同じ暗号が、まるで違う二通りに読まれるのです。"
+      },
+      "surprise": {
+        "en": "The unsettling part: some of these tags can be inherited. Studies of populations that lived through famine suggest that the marks left by starvation in one generation can show up in their children and grandchildren — shaping how those descendants store food and energy. What your grandparents lived through may echo, faintly, in your own cells. Experience can leave a trace that crosses generations.",
+        "zh": "令人不安的是：有些標籤可以遺傳。對經歷過饑荒的族群的研究顯示，饑餓在某一代身上留下的標記，可能出現在他們的子孫身上——影響著這些後代如何儲存食物與能量。你祖父母所經歷的，也許正微弱地，在你自己的細胞裡迴響。經歷，可以留下一道跨越世代的痕跡。",
+        "ja": "落ち着かないのはここです——こうしたタグの一部は遺伝しうる。飢饉を生き延びた集団の研究は、ある世代に飢餓が残した印が、その子や孫に現れうることを示唆しています——子孫が食物やエネルギーをどう蓄えるかを左右しながら。あなたの祖父母が経験したことが、かすかに、あなた自身の細胞に響いているかもしれない。経験は、世代を越える痕跡を残しうるのです。"
+      },
+      "thread": {
+        "en": "So nature writes over the code with tags. If nature can edit which genes speak, could we ever pick up the pen ourselves — and rewrite the letters?",
+        "zh": "所以大自然會用標籤在密碼上加註。如果大自然能編輯哪些基因發聲，我們自己有沒有可能拿起筆——直接改寫那些字母？",
+        "ja": "つまり自然は、タグで暗号に上書きする。自然がどの遺伝子を語らせるかを編集できるなら、私たち自身が筆を取り——文字そのものを書き換えることは、できるのでしょうか？"
+      }
+    },
+    {
+      "ref": "crispr_concept",
+      "hook": {
+        "en": "For most of history, changing a creature's genes meant crossbreeding for generations and hoping. What if you could go straight into the code and edit one letter, like fixing a typo?",
+        "zh": "在歷史上的絕大多數時候，要改變一個生物的基因，意味著雜交好幾個世代，然後祈禱。如果你能直接走進密碼裡，像改一個錯字那樣，編輯掉某一個字母呢？",
+        "ja": "歴史の大半において、生き物の遺伝子を変えるとは、何世代も交配を重ねて祈ることでした。もし暗号の中へまっすぐ入り込み、誤字を直すように一文字を編集できるとしたら？"
+      },
+      "reveal": {
+        "en": "That tool is CRISPR. At its heart is a pair of molecular scissors guided by a short piece of RNA — a written address that tells the scissors exactly where in the three-billion-letter genome to cut. Hand it a new address and it goes somewhere else. For the first time, editing a specific gene became as targeted as searching for a word in a document and changing it.",
+        "zh": "那個工具就是 CRISPR。它的核心，是一把由一小段 RNA 引導的分子剪刀——那段 RNA 就像一個寫好的地址，告訴剪刀該在這三十億字母的基因組裡，精確地剪在哪裡。換一個地址給它，它就去剪別的地方。人類第一次，能像在文件裡搜尋一個詞、再把它改掉那樣，精準地編輯某一個特定的基因。",
+        "ja": "その道具が CRISPR です。中心にあるのは、短い RNA に導かれた分子のはさみ——その RNA は書かれた住所のようなもので、三十億文字のゲノムのどこを切るかを、はさみに正確に教えます。新しい住所を渡せば、別の場所へ向かう。特定の遺伝子を編集することが、文書の中である語を探して書き換えるのと同じくらい狙いを定めたものになった、初めての出来事でした。"
+      },
+      "example": {
+        "en": "Doctors have begun using CRISPR to treat sickle-cell disease — the very fold problem from a few steps ago. They edit a patient's own blood-making cells to switch a healthy gene back on, then return them to the body. A one-letter mistake, corrected at the source.",
+        "zh": "醫生已經開始用 CRISPR 治療鐮刀型貧血——正是前面幾步提過的那個摺疊問題。他們編輯病人自己的造血細胞，把一個健康的基因重新打開，再放回身體裡。一個字母的錯誤，從源頭被修正了。",
+        "ja": "医師たちは、CRISPR を鎌状赤血球症の治療に使い始めています——数ステップ前のあの折りたたみの問題そのものです。患者自身の血を作る細胞を編集して健康な遺伝子を再びオンにし、体に戻す。一文字の誤りが、源で正されるのです。"
+      },
+      "surprise": {
+        "en": "Here is the wonder hidden inside the tool: CRISPR was not invented by humans. It was borrowed. Bacteria have used it for perhaps a billion years as an immune system — they keep snippets of the viruses that attacked them, like mugshots, and use those scissors to slice up the same virus if it returns. Our most precise gene-editing tool is a weapon from an ancient, unending war between bacteria and the viruses that hunt them.",
+        "zh": "藏在這工具裡的驚奇是：CRISPR 不是人類發明的，是借來的。細菌用它當免疫系統，或許已經用了十億年——它們把曾攻擊過自己的病毒，留下一小段一小段、像通緝照那樣存著，等同一種病毒再來，就用那把剪刀把它剪碎。人類最精準的基因編輯工具，其實是細菌與獵殺它們的病毒之間，一場古老而無休止的戰爭裡的武器。",
+        "ja": "道具の中に隠れた驚きはこれです——CRISPR は人間が発明したのではない。借りものなのです。細菌はおそらく十億年もの間、それを免疫系として使ってきました——襲ってきたウイルスの断片を、手配写真のように保管し、同じウイルスが戻ってくれば、あのはさみで切り刻む。人類で最も精密な遺伝子編集の道具は、細菌と、それを狩るウイルスとの、古く果てしない戦争から生まれた武器なのです。"
+      },
+      "thread": {
+        "en": "Once you can read the code and cut it where you like, a bigger door swings open. What if you stopped editing life and started writing it from scratch?",
+        "zh": "一旦你能讀懂密碼、又能隨意剪開它，一扇更大的門就敞開了。如果你不再只是「編輯」生命，而是開始從零「書寫」它呢？",
+        "ja": "暗号を読み、好きな場所で切れるようになると、もっと大きな扉が開きます。もし生命を編集するのをやめて、ゼロから書き始めたとしたら？"
+      }
+    },
+    {
+      "ref": "synthetic_biology_concept",
+      "hook": {
+        "en": "If DNA is just a code, and a code can be read and written, then why only edit what already lives? Could you design a new instruction and load it into a cell?",
+        "zh": "如果 DNA 只是一段密碼，而密碼能讀也能寫，那為什麼只編輯已經活著的東西？你能不能設計一段全新的指令，再把它載入一個細胞？",
+        "ja": "DNA がただの暗号で、暗号は読み書きできるなら、なぜすでに生きているものを編集するだけにとどまるのでしょう？新しい命令を設計して、細胞に載せることはできないのでしょうか？"
+      },
+      "reveal": {
+        "en": "That is synthetic biology. Once you can both read and write DNA, life becomes something you can engineer. You design a stretch of code to do a chosen job, build it letter by letter, and insert it into a living cell — turning the cell into a tiny programmable factory that follows your instruction and churns out whatever it tells it to make. Biology stops being only something we study, and becomes something we author.",
+        "zh": "那就是合成生物學。一旦你能讀、也能寫 DNA，生命就變成一個你可以「設計」的東西。你設計出一段密碼來執行某個指定任務，一個字母一個字母把它造出來，再插進一個活細胞裡——讓那個細胞變成一座微小的、可程式化的工廠，照著你的指令，源源不斷生產出它被吩咐去做的東西。生物學，不再只是我們研究的對象，而成了我們能親手書寫的東西。",
+        "ja": "それが合成生物学です。DNA を読むことも書くこともできるようになると、生命は「設計できるもの」になる。選んだ仕事をこなす暗号の一節を設計し、一文字ずつ組み立て、生きた細胞に挿し込む——細胞は小さなプログラム可能な工場となり、あなたの命令どおりに、言われたものをひたすら作り出す。生物学は、もはや私たちが研究するだけのものではなく、私たち自身が書き起こすものになるのです。"
+      },
+      "example": {
+        "en": "Much of the insulin that keeps people with diabetes alive is no longer taken from animals — it is brewed by bacteria given the human insulin gene. We rewrote a microbe's instructions, and it now makes medicine for us by the vatful.",
+        "zh": "如今讓糖尿病患者活下去的胰島素，大部分已經不再取自動物——而是由被植入了人類胰島素基因的細菌釀造出來的。我們改寫了一隻微生物的指令，它如今就一桶一桶地，替我們製造藥物。",
+        "ja": "糖尿病の人々を生かすインスリンの多くは、もはや動物から採るのではありません——ヒトのインスリン遺伝子を与えられた細菌が醸し出すのです。私たちは微生物の命令を書き換え、それは今や私たちのために、何樽もの薬を作っています。"
+      },
+      "surprise": {
+        "en": "And it is just beginning. Engineers now boot up cells that brew lifesaving drugs, food flavors, even spider silk — a fiber tougher than steel for its weight, grown in a tank instead of spun by a spider. Biology is quietly becoming a manufacturing platform, where the factory is alive and the blueprint is written in four letters. We have gone from reading the code of life to printing with it.",
+        "zh": "而這一切才剛剛開始。工程師如今能啟動細胞，去釀造救命的藥物、食物的香氣，甚至蜘蛛絲——一種以同等重量計比鋼還韌的纖維，現在是在桶子裡長出來，而不是由蜘蛛吐出來。生物學正悄悄變成一種製造方式，工廠本身是活的，藍圖則用四個字母寫成。我們已經從「閱讀」生命的密碼，走到了用它來「列印」。",
+        "ja": "しかも、これはまだ始まりにすぎません。技術者は今、命を救う薬や、食品の香り、さらにはクモの糸まで醸す細胞を起動できる——重さあたり鋼より強い繊維を、クモが紡ぐのではなく、培養槽で育てるのです。生物学は静かに製造の手段になりつつあり、その工場は生きていて、設計図は四文字で書かれている。私たちは生命の暗号を「読む」ことから、それで「印刷する」ところまで来たのです。"
+      },
+      "thread": {
+        "en": "You have followed the code from blind chance to a pen in your own hand — and the page is still blank and open. Wander wherever a star pulls you.",
+        "zh": "你已經沿著這段密碼，從盲目的機運，一路走到了握在你自己手裡的一支筆——而那一頁，仍然空白、仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
+        "ja": "あなたは暗号を、盲目の偶然から、自分の手の中の一本のペンまでたどってきました——そのページは、まだ白く、まだ開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+      }
+    }
+  ],
+  "edges": [
+    { "source": "natural_selection_concept", "target": "dna_concept", "relation_type": "causal" },
+    { "source": "dna_concept", "target": "gene_expression_concept", "relation_type": "logical" },
+    { "source": "gene_expression_concept", "target": "protein_structure_concept", "relation_type": "logical" },
+    { "source": "protein_structure_concept", "target": "epigenetics_concept", "relation_type": "conceptual" },
+    { "source": "epigenetics_concept", "target": "crispr_concept", "relation_type": "conceptual" },
+    { "source": "crispr_concept", "target": "synthetic_biology_concept", "relation_type": "applied" }
+  ],
+  "outward": {
+    "en": "Want to fall further? Look up the story of Rosalind Franklin's 'Photo 51,' the X-ray image that revealed the double helix; watch how AlphaFold predicts a protein's fold from its letters alone; or read about the CRISPR patent saga and the fierce debate over editing human embryos — and the code of life turns from a textbook idea into the most charged frontier in science.",
+    "zh": "想再往下墜一點？去查查羅莎琳·富蘭克林「51 號照片」的故事，那張揭開雙螺旋的 X 光影像；看一段 AlphaFold 如何單憑字母就預測出蛋白質摺法的影片；或讀讀 CRISPR 的專利之爭，以及編輯人類胚胎所引發的激烈辯論——生命的密碼，就會從教科書裡的一個概念，變成科學中最炙手可熱的前線。",
+    "ja": "もっと落ちてみたいですか？二重らせんを明かした X 線写真、ロザリンド・フランクリンの「51 号写真」の物語を調べ、AlphaFold が文字だけからタンパク質の折りたたみをどう予測するかを見て、CRISPR の特許をめぐる争いと、ヒト胚を編集することへの激しい議論を読んでみてください——生命の暗号は、教科書の中の概念から、科学でもっとも熱を帯びた最前線へと変わります。"
+  }
+}

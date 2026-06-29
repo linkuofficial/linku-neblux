@@ -10,9 +10,10 @@ const ready = (page: import("@playwright/test").Page) =>
 test("picker lists the available tours and previews their length", async ({ page }) => {
     await page.goto("/wonders.html"); // no ?w → picker
     const cards = page.locator(".wpk-card");
-    await expect(cards).toHaveCount(2);
+    await expect(cards).toHaveCount(19);
     // each card previews the journey length (eyebrow "· N steps" + N dots)
     await expect(cards.first().locator(".wpk-card-eyebrow")).toContainText(/\d+/);
+    // the first tour (black-holes) is a 7-step journey → a full row of dots
     await expect(cards.first().locator(".wpk-card-dot")).toHaveCount(7);
 });
 
