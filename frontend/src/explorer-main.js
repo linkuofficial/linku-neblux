@@ -903,11 +903,16 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
                     return findNodeAtScreen(px, py) || undefined;
                 })
                 .on('start', ev => {
-                    if (!ev.active) sim.alphaTarget(0.3).restart();
+                    // Pin the grabbed node, but DON'T reheat yet — a plain click
+                    // also fires 'start', and reheating there drifts the graph
+                    // mid-camera-move so the focused node never settles at centre.
                     ev.subject.fx = ev.subject.x;
                     ev.subject.fy = ev.subject.y;
                 })
                 .on('drag', ev => {
+                    // Reheat on the first real movement only (idempotent via guard).
+                    // No !ev.active check here — during a drag ev.active is truthy.
+                    if (sim.alphaTarget() === 0) sim.alphaTarget(0.3).restart();
                     const [px, py] = d3.pointer(ev.sourceEvent, canvas);
                     ev.subject.fx = (px - viewTransform.x) / viewTransform.k;
                     ev.subject.fy = (py - viewTransform.y) / viewTransform.k;
@@ -1269,11 +1274,22 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         function centerViewOnNode(node, duration = 500) {
             if (!canvasSel || !zoomBehavior || !node || Number.isNaN(node.x) || Number.isNaN(node.y)) return;
             const W = window.innerWidth, H = window.innerHeight;
-            const panelOffset = getPanelOffset();
-            const availableWidth = Math.max(240, W + panelOffset * 2);
+            const panel = document.getElementById('panel');
+            const isOpen = !!(panel && panel.classList.contains('open'));
+            const desktopPanel = isOpen && W > 768;
+            const rect = isOpen ? panel.getBoundingClientRect() : null;
+            // Reclaim the card's footprint (transform-INVARIANT width; rect.left is
+            // wrong mid-slide) so the node centres in the VISIBLE graph area, not
+            // behind the card. Mobile: reclaim sheet height so the tapped node
+            // floats into the clear band above it instead of behind it.
+            const mobileSheet = (isOpen && W <= 768) ? (rect.height || H * 0.58) : 0;
+            const panelWidth = desktopPanel ? (rect.width + 32) : 0;
+            const availableWidth = Math.max(240, W - panelWidth);
+            const availableHeight = Math.max(220, H - mobileSheet);
             const centerX = availableWidth / 2;
-            const scale = estimateAdaptiveScale(node, availableWidth, H);
-            const transform = d3.zoomIdentity.translate(centerX, H / 2).scale(scale).translate(-node.x, -node.y);
+            const centerY = availableHeight / 2;
+            const scale = estimateAdaptiveScale(node, availableWidth, availableHeight);
+            const transform = d3.zoomIdentity.translate(centerX, centerY).scale(scale).translate(-node.x, -node.y);
             canvasSel.transition().duration(duration).call(zoomBehavior.transform, transform);
         }
 
@@ -1442,6 +1458,8 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
             const node = nodeMap[d.id] || d;
             document.getElementById('p-type').textContent = typeLabel(node.type);
             document.getElementById('p-type').style.color = nc(node);
+            // Tint the card's accent (top border) with this node's domain colour.
+            document.getElementById('panel').style.setProperty('--node-accent', nc(node));
             document.getElementById('p-label').textContent = nodeLabel(node);
             document.getElementById('p-domains').innerHTML = node.domain.map(dm =>
                 `<span class="d-badge" style="color:${DC[dm]}">${escHtml(dm)}</span>`
@@ -1537,12 +1555,13 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
 
             document.getElementById('panel').classList.add('open');
             document.getElementById('recommend').classList.remove('visible');
+            if (renderer) renderer.setQuiet(true);
         }
 
         function closePanel() {
             document.getElementById('panel').classList.remove('open');
             selectedNodeId = null;
-            if (renderer) renderer.setSelected(null);
+            if (renderer) { renderer.setSelected(null); renderer.setQuiet(false); }
             applyFocusMode();
             updateRecommendations();
         }

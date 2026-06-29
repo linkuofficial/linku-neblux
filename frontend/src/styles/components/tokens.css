@@ -10,10 +10,12 @@
     --line-subtle: rgba(255, 255, 255, 0.14);
     --glass-1: rgba(8, 8, 12, 0.80);
     --glass-2: rgba(10, 10, 16, 0.88);
-    --panel-bg: rgba(242, 246, 252, 0.96);
-    --panel-ink: #334155;
-    --panel-soft: #64748b;
-    --panel-faint: #94a3b8;
+    /* Detail panel — dark glass (harmonises with the Deep Field canvas behind it).
+       Translucent so backdrop-filter shows the graph faintly through the card. */
+    --panel-bg: rgba(14, 19, 30, 0.72);
+    --panel-ink: #e9eef7;
+    --panel-soft: #a8b6cc;
+    --panel-faint: #7c8aa6;
     --accent: var(--neblux-accent);
     --radius-sm: var(--neblux-radius-sm);
     --radius-md: var(--neblux-radius-md);

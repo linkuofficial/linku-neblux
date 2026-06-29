@@ -74,6 +74,14 @@ export function createCanvasRenderer(opts) {
     let rafId = 0;
     let dirty = true;
     let running = false;
+    // Quiet mode: when a glass panel is open on mobile, the backdrop-blur is
+    // recomputed every time the canvas under it repaints. Capping the ambient
+    // (twinkle/photon) redraw to QUIET_FPS roughly halves that GPU cost.
+    // (Reuses `lastDrawMs`, set by draw() below, as the gate clock.)
+    // narrowViewport is refreshed on resize so the hot loop never reads layout.
+    let quiet = false;
+    let narrowViewport = window.innerWidth <= 768;
+    const QUIET_FPS = 30;
     const stats = { lastMs: 0, avgMs: 0, frames: 0 };
 
     // ── atmosphere (lazy: far field needs dpr from resize) ─────────────────
@@ -499,9 +507,14 @@ export function createCanvasRenderer(opts) {
     function loop(nowMs) {
         rafId = 0;
         if (!running) return;
+        const now = nowMs || performance.now();
         // Continuous when ambient animation runs (twinkle/photon); on-demand
-        // (dirty-flag) under prefers-reduced-motion.
-        if (!reducedMotion || dirty) draw(nowMs || performance.now());
+        // (dirty-flag) under prefers-reduced-motion. In quiet mode (mobile +
+        // panel open) the ambient redraw is rate-capped, but state changes still
+        // paint immediately via `dirty`, so interaction stays fully responsive.
+        const throttling = quiet && !reducedMotion && narrowViewport;
+        const ambientDue = !throttling || (now - lastDrawMs) >= (1000 / QUIET_FPS);
+        if ((!reducedMotion && ambientDue) || dirty) draw(now);
         if (!reducedMotion || dirty) rafId = requestAnimationFrame(loop);
         else running = false;
     }
@@ -533,7 +546,7 @@ export function createCanvasRenderer(opts) {
         }
     });
 
-    window.addEventListener('resize', () => { resize(); notify(); });
+    window.addEventListener('resize', () => { narrowViewport = window.innerWidth <= 768; resize(); notify(); });
     resize();
 
     return {
@@ -543,6 +556,9 @@ export function createCanvasRenderer(opts) {
         stats,
         get reducedMotion() { return reducedMotion; },
         setTransform(t) { transform = { k: t.k, x: t.x, y: t.y }; notify(); },
+        // Rate-cap ambient redraw while a glass panel is open (effective on
+        // mobile only — see loop()). Resumes full fidelity when cleared.
+        setQuiet(v) { quiet = !!v; if (!quiet) notify(); },
         getTransform() { return transform; },
         setHover(id) { if (hoveredId !== id) { hoveredId = id; notify(); } },
         getHover() { return hoveredId; },

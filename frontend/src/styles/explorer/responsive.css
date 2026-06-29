@@ -23,20 +23,8 @@
         top: 50px;
     }
 
-    #panel {
-        width: 100%;
-        height: min(70vh, 600px);
-        top: auto;
-        bottom: 0;
-        border-left: none;
-        border-top: 1px solid rgba(148, 163, 184, 0.26);
-        transform: translateY(100%);
-        border-radius: 18px 18px 0 0;
-    }
-
-    #panel.open {
-        transform: translateY(0);
-    }
+    /* #panel mobile bottom-sheet form lives in components/panel-mobile.css
+       (shared single source, imported last so it wins the cascade). */
 
     #legend {
         display: none;

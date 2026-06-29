@@ -1,0 +1,33 @@
+/* panel-mobile — mobile bottom-sheet form of #panel, shared by app + explorer.
+
+   Single source of truth. Imported LAST in both page manifests (app.css /
+   explorer.css) so it wins the cascade over page-specific tablet-width overrides
+   such as app's `@media (max-width:1100px) #panel { width:304px }`.
+
+   The sheet is content-height (capped) so it covers only what it needs;
+   centerViewOnNode (app-main / explorer-main) floats the tapped node into the
+   clear band above the sheet so nothing you care about sits behind the card.
+   Blur is lighter than the desktop card — backdrop-filter cost scales with
+   radius and mobile GPUs are weaker. */
+
+@media (max-width: 768px) {
+    #panel {
+        right: 0;
+        left: 0;
+        top: auto;
+        bottom: 0;
+        width: auto;
+        height: auto;
+        max-height: min(58vh, 520px);
+        border: none;
+        border-top: 2px solid var(--node-accent, rgba(148, 163, 184, 0.26));
+        border-radius: 18px 18px 0 0;
+        transform: translateY(100%);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    #panel.open {
+        transform: translateY(0);
+    }
+}

@@ -46,3 +46,5 @@
 @import "../explorer/zoom-indicator.css";
 @import "../explorer/shortcuts.css";
 @import "../explorer/responsive.css";
+/* Mobile bottom-sheet override — imported last so it wins the cascade. */
+@import "../components/panel-mobile.css";

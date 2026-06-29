@@ -1049,11 +1049,16 @@ function buildGraph() {
             return findNodeAtScreen(px, py) || undefined;
         })
         .on('start', (ev) => {
-            if (!ev.active) sim.alphaTarget(0.3).restart();
+            // Pin the grabbed node, but DON'T reheat yet — a plain click also
+            // fires 'start', and reheating there drifts the whole graph mid-
+            // camera-move so the focused node never settles at centre.
             ev.subject.fx = ev.subject.x;
             ev.subject.fy = ev.subject.y;
         })
         .on('drag', (ev) => {
+            // Reheat on the first real movement only (idempotent via the guard).
+            // No !ev.active check here — during a drag ev.active is truthy.
+            if (sim.alphaTarget() === 0) sim.alphaTarget(0.3).restart();
             const [px, py] = d3.pointer(ev.sourceEvent, canvas);
             ev.subject.fx = (px - viewTransform.x) / viewTransform.k;
             ev.subject.fy = (py - viewTransform.y) / viewTransform.k;
@@ -1295,13 +1300,26 @@ function centerViewOnNode(node, duration = 500) {
     const W = window.innerWidth;
     const H = window.innerHeight;
     const panel = document.getElementById('panel');
-    const panelOpen = !!(panel && panel.classList.contains('open') && window.innerWidth > 760);
-    const panelWidth = panelOpen ? (panel.getBoundingClientRect().width || 364) : 0;
+    const isOpen = !!(panel && panel.classList.contains('open'));
+    const mobile = W <= 768;  // matches components/panel-mobile.css breakpoint
+    // Desktop: panel docks at the right, so reclaim its width horizontally.
+    // Mobile: panel is a bottom sheet, so reclaim its height vertically — this
+    // floats the tapped node into the clear band above the card instead of
+    // burying it underneath (the bug this whole change fixes).
+    const rect = isOpen ? panel.getBoundingClientRect() : null;
+    const desktopPanel = isOpen && !mobile;
+    // Reclaim the card's footprint (transform-INVARIANT width; rect.left is wrong
+    // mid-slide. 32 ≈ its 16px inset + a little breathing room) so the node
+    // centres in the VISIBLE graph area, not behind the card.
+    const panelWidth = desktopPanel ? (rect.width + 32) : 0;
+    const sheetHeight = (isOpen && mobile) ? (rect.height || H * 0.58) : 0;
     const availableWidth = Math.max(260, W - panelWidth);
+    const availableHeight = Math.max(220, H - sheetHeight);
     const centerX = availableWidth / 2;
-    const scale = estimateAdaptiveScale(node, availableWidth, H);
+    const centerY = availableHeight / 2;
+    const scale = estimateAdaptiveScale(node, availableWidth, availableHeight);
     const transform = d3.zoomIdentity
-        .translate(centerX, H / 2)
+        .translate(centerX, centerY)
         .scale(scale)
         .translate(-node.x, -node.y);
     canvasSel.transition().duration(duration).call(zoomBehavior.transform, transform);
@@ -1312,6 +1330,7 @@ function setPanelOpenState(isOpen) {
     if (!panel) return;
     panel.classList.toggle('open', !!isOpen);
     document.body.classList.toggle('panel-open', !!isOpen);
+    if (renderer) renderer.setQuiet(!!isOpen);
 }
 
 // ===== PANEL =====
@@ -1328,6 +1347,8 @@ function openPanel(d) {
 
     document.getElementById('p-type').textContent = t(d.type);
     document.getElementById('p-type').style.color = nc(d);
+    // Tint the card's accent (top border) with this node's domain colour.
+    document.getElementById('panel').style.setProperty('--node-accent', nc(d));
     document.getElementById('p-label').textContent = nodeLabel(d);
     document.getElementById('p-domains').innerHTML = d.domain.map(dm =>
         `<span class="d-badge" style="color:${DC[dm]}">${escHtml(dm)}</span>`

@@ -42,3 +42,5 @@
 @import "../components/welcome.css";
 @import "../app/welcome.css";
 @import "../app/lp-hint.css";
+/* Mobile bottom-sheet override — imported last so it wins the cascade. */
+@import "../components/panel-mobile.css";

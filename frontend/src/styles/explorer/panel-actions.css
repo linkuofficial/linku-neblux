@@ -33,6 +33,19 @@
     color: var(--panel-ink);
 }
 
+/* Primary action — filled gold pill (id beats the .p-act-btn:hover class). */
+#pa-expand {
+    background: var(--accent);
+    border-color: transparent;
+    color: #1a1205;
+    font-weight: 600;
+}
+
+#pa-expand:hover {
+    background: #f4cd6a;
+    color: #1a1205;
+}
+
 .p-conn-toggle {
     display: block;
     width: 100%;
