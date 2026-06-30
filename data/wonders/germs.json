@@ -45,8 +45,8 @@
       },
       "reveal": {
         "en": "Germ theory: the once-radical claim that invisible microbes — not bad air — cause specific diseases, each illness traceable to its own particular organism. It sounds obvious now. At the time it overturned centuries of belief, and replaced a vague cloud of 'miasma' with a precise, testable cause you could one day hunt down and kill.",
-        "zh": "細菌學說（germ theory）：一個曾經激進到嚇人的主張——是看不見的微生物、而非壞空氣，造成了一種種特定的疾病，每一種病都能追溯到它專屬的那種生物。如今聽來理所當然。但在當年，它推翻了數百年的信念，把一團模糊的「瘴氣」，換成了一個精確、可檢驗、有朝一日能被追捕並消滅的病因。",
-        "ja": "細菌説（germ theory）——目に見えない微生物が、悪い空気ではなく、それぞれ特定の病気を起こし、どの病にもそれ専用の生き物がたどれる、というかつては過激すぎる主張です。いまでは当たり前に聞こえます。けれど当時、それは数百年の信念をくつがえし、漠然とした「瘴気（しょうき）」の雲を、いつか追いつめて殺せる、精密で検証可能な原因へと置き換えたのです。"
+        "zh": "細菌學說：一個曾經激進到嚇人的主張——是看不見的微生物、而非壞空氣，造成了一種種特定的疾病，每一種病都能追溯到它專屬的那種生物。如今聽來理所當然。但在當年，它推翻了數百年的信念，把一團模糊的「瘴氣」，換成了一個精確、可檢驗、有朝一日能被追捕並消滅的病因。",
+        "ja": "細菌説——目に見えない微生物が、悪い空気ではなく、それぞれ特定の病気を起こし、どの病にもそれ専用の生き物がたどれる、というかつては過激すぎる主張です。いまでは当たり前に聞こえます。けれど当時、それは数百年の信念をくつがえし、漠然とした「瘴気（しょうき）」の雲を、いつか追いつめて殺せる、精密で検証可能な原因へと置き換えたのです。"
       },
       "example": {
         "en": "It's why a surgeon today scrubs in, sterilizes every blade, and wears gloves — a whole ritual built on the belief that a wound goes bad because something living got into it.",
@@ -73,11 +73,11 @@
       },
       "reveal": {
         "en": "Louis Pasteur proved it doesn't. With a clever swan-necked flask that let air in but trapped dust, he showed broth stays clear forever — until you let the floating microbes reach it. Life comes from life. And if microbes can be kept out, they can also be killed: gentle heat sterilizes without ruining the food. We still call it pasteurization.",
-        "zh": "路易・巴斯德（Louis Pasteur）證明了：不是。他用一個巧妙的鵝頸瓶，讓空氣能進、卻把灰塵擋在外面，證明了肉湯能永遠保持清澈——除非你讓飄浮的微生物碰到它。生命來自生命。而既然微生物能被擋在外面，它們也就能被殺死：溫和的加熱能滅菌，又不毀掉食物。我們至今仍把它叫做「巴氏滅菌法（pasteurization）」。",
+        "zh": "路易・巴斯德（Louis Pasteur）證明了：不是。他用一個巧妙的鵝頸瓶，讓空氣能進、卻把灰塵擋在外面，證明了肉湯能永遠保持清澈——除非你讓飄浮的微生物碰到它。生命來自生命。而既然微生物能被擋在外面，它們也就能被殺死：溫和的加熱能滅菌，又不毀掉食物。我們至今仍把它叫做「巴氏滅菌法」。",
         "ja": "ルイ・パスツール（Louis Pasteur）は、そうではないと証明しました。空気は通すが塵は閉じ込める、巧妙な白鳥の首のフラスコを使い、スープは永遠に澄んだまま——漂う微生物がそこへ届かないかぎりは——と示したのです。生命は生命から生まれる。そして微生物を締め出せるなら、殺すこともできる。穏やかな加熱は、食べ物を損なわずに滅菌する。私たちはいまもそれを「低温殺菌（パスツリゼーション）」と呼びます。"
       },
       "example": {
-        "en": "Every carton of milk you've ever poured was briefly heated this way — warm enough to kill the germs, cool enough to keep the taste.",
+        "en": "Nearly every carton of milk you've ever poured was briefly heated this way — warm enough to kill the germs, cool enough to keep the taste.",
         "zh": "你倒過的每一盒牛奶，都曾這樣被短暫加熱過——熱到足以殺死病菌，又涼到足以留住味道。",
         "ja": "あなたが注いだことのある牛乳は、どの一パックも、こうして一瞬だけ温められています——病原菌を殺すには十分に熱く、味を残すには十分にぬるく。"
       },

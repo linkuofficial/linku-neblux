@@ -105,9 +105,9 @@
         "ja": "力ではなく——ただの数え上げです。これが統計力学です。世界は数えきれない小さな粒——でたらめに揺れ動く原子——でできていて、私たちはその大きな平均しか見ていない。鍵はこうです。それらの粒の「乱れた」並べ方は、「整った」並べ方よりも圧倒的に多い。だからでたらめにかき混ぜれば、ほとんどいつも「乱れた」側に落ちる——乱れた並べ方が、整った並べ方を桁違いに上回っているからです。エントロピーが増えるのは「そうせねばならない」からではなく、確率が圧倒的に偏っているからなのです。"
       },
       "example": {
-        "en": "Shuffle a deck of cards and you'll never deal them back into perfect order — not because it's forbidden, but because there's only one tidy order against 80 thousand billion billion billion billion billion billion messy ones. The odds of tidy are simply too small to ever show up.",
-        "zh": "把一副牌洗一洗，你永遠不會把它洗回完美的順序——不是因為這被禁止，而是因為「整齊」只有一種排法，「亂」卻有八千億億億億億億億億種。整齊的機率，小到根本不可能出現。",
-        "ja": "トランプをシャッフルしても、完璧な順序に並べ戻ることは決してありません——禁じられているからではなく、整った並びがたった一通りなのに対し、乱れた並びは八千垓のさらに途方もない数だけあるからです。整う確率は、現れるにはあまりに小さすぎるのです。"
+        "en": "Shuffle a deck of cards and you'll never deal them back into perfect order — not because it's forbidden, but because there's only one tidy arrangement against more jumbled ones than there are atoms in the whole Earth. The odds of tidy are simply too small to ever show up.",
+        "zh": "把一副牌洗一洗，你永遠不會把它洗回完美的順序——不是因為這被禁止，而是因為「整齊」只有一種排法，而「亂」的排法，比整個地球的原子還要多。整齊的機率，小到根本不可能出現。",
+        "ja": "トランプをシャッフルしても、完璧な順序に並べ戻ることは決してありません——禁じられているからではなく、整った並びがたった一通りなのに対し、乱れた並びは地球全体の原子の数より多いからです。整う確率は、現れるにはあまりに小さすぎるのです。"
       },
       "surprise": {
         "en": "Now the egg makes sense. The egg doesn't refuse to unbreak because a law forbids it — the laws of motion would happily run the shards back together. It stays broken because un-breaking is astronomically unlikely, like every air molecule in a room rushing to one corner at the same instant. Not impossible — just so improbable it never, ever happens. The arrow of time is really an arrow of probability.",

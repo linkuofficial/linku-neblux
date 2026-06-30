@@ -199,9 +199,9 @@
         "ja": "最後の意外：この奇妙な新しい機械でさえ、停止の壁を越えられません。量子コンピュータが変えるのは「何が速いか」であって、「何が可能か」では決してない。チューリングが答えられないと証明した問いは、量子であろうとなかろうと答えられないまま——その最も深い限界は、私たちが作れる、あるいは思い描けるすべての機械に成り立ちます。あなたはデジタル時代の境界をぐるりと歩き終えました。そしてこの縁から、開けた原野が、あらゆる方向へと広がっています。"
       },
       "thread": {
-        "en": "You have reached the end of the trail — but the field is wide open. Wander wherever a star pulls you.",
-        "zh": "這趟旅程到此為止——但整片星空仍然敞開。哪顆星吸引你，就往哪裡漫遊。",
-        "ja": "この旅はここまで——でも星空はまだ大きく開いています。心ひかれる星があれば、そこへ散歩しに行きましょう。"
+        "en": "You followed computing from a poet's daughter writing the first program all the way to the one wall no machine — not even a quantum one — can ever cross. The trail ends here; the field is wide open.",
+        "zh": "你跟著「計算」一路走來，從一位詩人之女寫下第一支程式，走到那道任何機器——連量子電腦——都永遠跨不過去的牆。這趟旅程到此為止；整片星空仍然敞開。",
+        "ja": "あなたは計算の道を、詩人の娘が最初のプログラムを書いた瞬間から、どんな機械も——量子のものでさえ——決して越えられない、ただ一つの壁までたどってきました。旅はここまで。星空はまだ大きく開いています。"
       }
     }
   ],

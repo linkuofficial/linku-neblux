@@ -21,7 +21,7 @@
         "ja": "あります——素数です。2、3、5、7 のように、1 と自分自身でしか割れない数。算術における、これ以上分けられない「原子」です。ほかのすべての整数は、素数のかけ算でただ一通りに組み立てられる。素数は単純な規則もなく散らばり、上へ行くほどまばらになる——それでも、決して尽きることがありません。"
       },
       "example": {
-        "en": "Your online banking leans on this: the encryption that guards your password multiplies two enormous primes together — a sum easy to do but, so far, nearly impossible to undo.",
+        "en": "Your online banking leans on this: the encryption that guards your password multiplies two enormous primes together — a product easy to do but, so far, nearly impossible to undo.",
         "zh": "你的網路銀行就靠著這件事：守護你密碼的加密，把兩個巨大的質數相乘——這個乘法很好算，但反過來「拆回去」，至今幾乎沒人辦得到。",
         "ja": "あなたのネットバンキングはこれに支えられています。パスワードを守る暗号は、巨大な素数を二つかけ合わせる——この計算は簡単なのに、逆にたどって「分解」するのは今のところほぼ不可能なのです。"
       },
