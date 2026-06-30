@@ -575,6 +575,36 @@ function setLoading(msg, showRetry = false) {
 }
 
 // ===== PICKER =====
+// Premium "alive" cards: a gentle 3-D tilt toward the cursor plus a specular
+// sheen that tracks it. Pointer-fine devices only, and never under reduced
+// motion. CSS reads --rx/--ry (tilt) and --mx/--my (sheen centre).
+const CARD_TILT = !prefersReducedMotion &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+function attachCardMotion(card) {
+    if (!CARD_TILT) return;
+    let raf = 0, lx = 0.5, ly = 0.5;
+    card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        lx = (e.clientX - r.left) / r.width;
+        ly = (e.clientY - r.top) / r.height;
+        if (raf) return;
+        raf = requestAnimationFrame(() => {
+            raf = 0;
+            const max = 5.5; // degrees
+            card.style.setProperty('--ry', ((lx - 0.5) * 2 * max).toFixed(2) + 'deg');
+            card.style.setProperty('--rx', (-(ly - 0.5) * 2 * max).toFixed(2) + 'deg');
+            card.style.setProperty('--mx', (lx * 100).toFixed(1) + '%');
+            card.style.setProperty('--my', (ly * 100).toFixed(1) + '%');
+        });
+    });
+    card.addEventListener('pointerleave', () => {
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+        card.style.setProperty('--mx', '50%');
+        card.style.setProperty('--my', '0%');
+    });
+}
 function renderPicker() {
     const $ = id => document.getElementById(id);
     $('wpk-kicker').textContent = t('pickerKicker');
@@ -582,15 +612,19 @@ function renderPicker() {
     $('wpk-subtitle').textContent = t('pickerSubtitle');
     const grid = $('wpk-grid');
     grid.innerHTML = '';
-    for (const { id, wonder: w } of (pickerMetas || [])) {
+    (pickerMetas || []).forEach(({ id, wonder: w }, idx) => {
         const accent = DC[w.accent] || 'var(--accent)';
         const card = document.createElement('button');
         card.type = 'button';
         card.className = 'wpk-card';
+        // Per-card domain accent + entrance-stagger index drive the CSS (accent
+        // glow, sheen, breathing dot, fade-up). See .wpk-card in wonders.css.
+        card.style.setProperty('--card-accent', accent);
+        card.style.setProperty('--i', String(idx));
         const n = (w.steps || []).length;
         const top = document.createElement('div');
         top.className = 'wpk-card-top';
-        top.innerHTML = `<span class="wpk-dot" style="background:${accent}"></span><span class="wpk-card-eyebrow">${(w.accent || '').toUpperCase()} · ${n} ${t('steps')}</span>`;
+        top.innerHTML = `<span class="wpk-dot"></span><span class="wpk-card-eyebrow">${(w.accent || '').toUpperCase()} · ${n} ${t('steps')}</span>`;
         const title = document.createElement('div');
         title.className = 'wpk-card-title';
         title.textContent = pick(w.title);
@@ -612,8 +646,9 @@ function renderPicker() {
             try { sessionStorage.setItem('wonder-autostart', id); } catch {}
             window.location.search = '?w=' + id;
         });
+        attachCardMotion(card);
         grid.appendChild(card);
-    }
+    });
 }
 
 async function showPicker() {

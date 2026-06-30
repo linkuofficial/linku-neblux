@@ -165,7 +165,21 @@
     width: 100%;
     max-width: 720px;
 }
+/* Premium card: a glass tile carrying its domain accent, with a cursor-tracking
+   specular sheen, a gentle 3-D tilt (JS sets --rx/--ry/--mx/--my), an accent
+   ambient glow on hover, and a staggered fade-up entrance. --card-accent and
+   --i are set per card in JS; all motion is disabled under reduced-motion. */
 .wpk-card {
+    --card-accent: var(--accent);
+    --lift: 0px;
+    --scale: 1;
+    --rx: 0deg;
+    --ry: 0deg;
+    --mx: 50%;
+    --my: 0%;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     text-align: left;
     background: var(--glass-2);
     backdrop-filter: blur(14px);
@@ -175,25 +189,75 @@
     padding: 24px 22px;
     cursor: pointer;
     color: var(--ink-main);
-    transition: transform 0.18s var(--ease-ui), border-color 0.2s, background 0.2s;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift)) scale(var(--scale));
+    transition: transform 0.16s var(--ease-ui), border-color 0.22s, box-shadow 0.28s, background 0.22s;
+    animation: wpk-card-in 0.55s var(--ease-ui) backwards;
+    animation-delay: calc(var(--i, 0) * 55ms);
 }
-.wpk-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(240, 192, 80, 0.4);
+/* specular sheen that follows the cursor (centre set via --mx/--my in JS) */
+.wpk-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(240px circle at var(--mx) var(--my),
+        color-mix(in srgb, var(--card-accent) 20%, transparent), transparent 62%);
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-ui);
+}
+/* always-on accent hairline along the top edge */
+.wpk-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    z-index: 1;
+    background: linear-gradient(90deg, transparent,
+        color-mix(in srgb, var(--card-accent) 65%, transparent), transparent);
+    opacity: 0.45;
+    transition: opacity 0.3s var(--ease-ui);
+}
+.wpk-card > * { position: relative; z-index: 1; }
+.wpk-card:hover,
+.wpk-card:focus-visible {
+    --lift: -5px;
+    --scale: 1.018;
+    border-color: color-mix(in srgb, var(--card-accent) 55%, transparent);
     background: var(--glass-1);
+    box-shadow:
+        0 20px 52px -18px color-mix(in srgb, var(--card-accent) 45%, transparent),
+        0 0 22px -10px color-mix(in srgb, var(--card-accent) 40%, transparent);
+    outline: none;
 }
+.wpk-card:hover::before,
+.wpk-card:focus-visible::before { opacity: 1; }
+.wpk-card:hover::after,
+.wpk-card:focus-visible::after { opacity: 1; }
+.wpk-card:active { --scale: 1.004; }
+
 .wpk-card-top { display: flex; align-items: center; gap: 9px; }
-.wpk-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.wpk-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--card-accent);
+    box-shadow: 0 0 6px 0 color-mix(in srgb, var(--card-accent) 60%, transparent);
+    animation: wpk-dot-breathe 4.8s ease-in-out infinite;
+}
 .wpk-card-eyebrow {
     font-family: var(--font-label);
     font-size: var(--text-2xs);
     letter-spacing: var(--tracking-wider);
     text-transform: uppercase;
     color: var(--ink-faint);
+    transition: color 0.22s;
 }
+.wpk-card:hover .wpk-card-eyebrow { color: var(--ink-soft); }
 .wpk-card-title {
     font-family: var(--font-display);
     font-size: var(--text-lg);
@@ -212,14 +276,62 @@
     width: 14px; height: 3px;
     border-radius: 999px;
     background: rgba(148, 163, 184, 0.28);
+    transition: background 0.25s var(--ease-ui);
 }
-.wpk-card:hover .wpk-card-dot { background: rgba(240, 192, 80, 0.45); }
+.wpk-card:hover .wpk-card-dot { background: color-mix(in srgb, var(--card-accent) 70%, transparent); }
+/* the preview dots light up left-to-right on hover */
+.wpk-card:hover .wpk-card-dot:nth-child(2) { transition-delay: 35ms; }
+.wpk-card:hover .wpk-card-dot:nth-child(3) { transition-delay: 70ms; }
+.wpk-card:hover .wpk-card-dot:nth-child(4) { transition-delay: 105ms; }
+.wpk-card:hover .wpk-card-dot:nth-child(5) { transition-delay: 140ms; }
+.wpk-card:hover .wpk-card-dot:nth-child(6) { transition-delay: 175ms; }
+.wpk-card:hover .wpk-card-dot:nth-child(7) { transition-delay: 210ms; }
 .wpk-card-go {
     margin-top: 4px;
     font-family: var(--font-label);
     font-size: var(--text-xs);
     letter-spacing: 0.04em;
-    color: var(--accent);
+    color: var(--card-accent);
+    filter: saturate(0.85) brightness(0.96);
+    transition: transform 0.22s var(--ease-ui), filter 0.22s;
+}
+.wpk-card:hover .wpk-card-go {
+    transform: translateX(4px);
+    filter: saturate(1.1) brightness(1.12);
+}
+
+/* Living backdrop behind the picker — a slow, very faint accent/indigo aurora. */
+#wonder-picker::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(42% 52% at 24% 28%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 72%),
+        radial-gradient(48% 58% at 82% 72%, rgba(120, 150, 220, 0.10), transparent 72%);
+    animation: wpk-aurora 26s ease-in-out infinite alternate;
+}
+
+@keyframes wpk-card-in {
+    from { opacity: 0; transform: perspective(900px) translateY(18px) scale(0.965); }
+    to   { opacity: 1; transform: perspective(900px) translateY(0) scale(1); }
+}
+@keyframes wpk-dot-breathe {
+    0%, 100% { box-shadow: 0 0 5px 0 color-mix(in srgb, var(--card-accent) 50%, transparent); }
+    50%      { box-shadow: 0 0 11px 1px color-mix(in srgb, var(--card-accent) 78%, transparent); }
+}
+@keyframes wpk-aurora {
+    from { transform: translate3d(-2%, -1%, 0) scale(1.04); opacity: 0.6; }
+    to   { transform: translate3d(2%, 2%, 0) scale(1.12); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpk-card { animation: none; transform: none; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; }
+    .wpk-card:hover, .wpk-card:focus-visible { --lift: 0px; --scale: 1; transform: none; }
+    .wpk-card::before { display: none; }
+    .wpk-dot { animation: none; }
+    #wonder-picker::before { animation: none; }
 }
 
 /* ── Narrative panel ────────────────────────────────────────────────────── */
