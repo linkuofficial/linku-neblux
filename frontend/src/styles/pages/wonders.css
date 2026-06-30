@@ -159,7 +159,7 @@
 }
 #wpk-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 320px));
     gap: 18px;
     justify-content: center;
     width: 100%;
@@ -181,9 +181,11 @@
     isolation: isolate;
     overflow: hidden;
     text-align: left;
+    /* The fill is ~88% opaque (--glass-2), so a backdrop blur would be almost
+       invisible here yet would force a GPU layer + live blur pass per card (×19)
+       and breaks under the 3-D tilt — so the picker cards skip it. The real
+       frosted glass stays where backdrop shows: the panel and intro card. */
     background: var(--glass-2);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
     border: 0.5px solid var(--rail-border);
     border-radius: var(--radius-lg);
     padding: 24px 22px;
@@ -194,6 +196,10 @@
     gap: 10px;
     transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--lift)) scale(var(--scale));
     transition: transform 0.16s var(--ease-ui), border-color 0.22s, box-shadow 0.28s, background 0.22s;
+}
+/* Entrance plays on first render only (JS adds .is-entering); a language
+   toggle rebuilds the cards without it, so the grid never re-cascades. */
+.wpk-card.is-entering {
     animation: wpk-card-in 0.55s var(--ease-ui) backwards;
     animation-delay: calc(var(--i, 0) * 55ms);
 }
@@ -232,7 +238,8 @@
     box-shadow:
         0 20px 52px -18px color-mix(in srgb, var(--card-accent) 45%, transparent),
         0 0 22px -10px color-mix(in srgb, var(--card-accent) 40%, transparent);
-    outline: none;
+    /* keyboard focus keeps the global :focus-visible ring (_base.css) on top of
+       the glow — do not suppress the outline, or keyboard users lose the cue. */
 }
 .wpk-card:hover::before,
 .wpk-card:focus-visible::before { opacity: 1; }
@@ -242,11 +249,22 @@
 
 .wpk-card-top { display: flex; align-items: center; gap: 9px; }
 .wpk-dot {
+    position: relative;
     width: 9px; height: 9px;
     border-radius: 50%;
     flex-shrink: 0;
     background: var(--card-accent);
-    box-shadow: 0 0 6px 0 color-mix(in srgb, var(--card-accent) 60%, transparent);
+    box-shadow: 0 0 6px 0 color-mix(in srgb, var(--card-accent) 55%, transparent);
+}
+/* Breathing glow lives on a pseudo so it animates opacity/scale (compositor,
+   no repaint) instead of box-shadow (which would repaint ×19 cards forever). */
+.wpk-dot::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 70%, transparent), transparent 70%);
+    opacity: 0.5;
     animation: wpk-dot-breathe 4.8s ease-in-out infinite;
 }
 .wpk-card-eyebrow {
@@ -318,8 +336,8 @@
     to   { opacity: 1; transform: perspective(900px) translateY(0) scale(1); }
 }
 @keyframes wpk-dot-breathe {
-    0%, 100% { box-shadow: 0 0 5px 0 color-mix(in srgb, var(--card-accent) 50%, transparent); }
-    50%      { box-shadow: 0 0 11px 1px color-mix(in srgb, var(--card-accent) 78%, transparent); }
+    0%, 100% { opacity: 0.34; transform: scale(0.9); }
+    50%      { opacity: 0.78; transform: scale(1.25); }
 }
 @keyframes wpk-aurora {
     from { transform: translate3d(-2%, -1%, 0) scale(1.04); opacity: 0.6; }
@@ -327,10 +345,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .wpk-card { animation: none; transform: none; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; }
+    .wpk-card.is-entering { animation: none; }
+    .wpk-card { transform: none; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; }
     .wpk-card:hover, .wpk-card:focus-visible { --lift: 0px; --scale: 1; transform: none; }
     .wpk-card::before { display: none; }
-    .wpk-dot { animation: none; }
+    .wpk-dot::after { animation: none; }
     #wonder-picker::before { animation: none; }
 }
 
@@ -351,6 +370,17 @@
     color: var(--ink-main);
 }
 #wonder-panel[hidden] { display: none; }
+
+/* visually hidden, but available to screen readers (e.g. the step announcer) */
+.vh {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0; border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 
 #wp-head {
     padding: 26px 26px 16px;

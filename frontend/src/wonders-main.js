@@ -33,7 +33,7 @@ const WONDER_IDS = [
 // ===== UI STRINGS =====
 const UI = {
     en: {
-        hdrTitle: 'Neblux Wonders', home: 'Home', graph: 'Graph', tours: 'Tours',
+        hdrTitle: 'Neblux Wonders', home: 'Home', graph: 'Graph', tours: 'Tours', progress: 'Tour progress',
         loading: 'Loading…', retry: 'Retry',
         tagHook: 'A QUESTION', tagExample: 'FOR INSTANCE', tagSurprise: 'THE TWIST',
         cueNext: 'Up next', cueOutward: 'Go further',
@@ -45,7 +45,7 @@ const UI = {
         errLoad: "Couldn't load this tour.",
     },
     zh: {
-        hdrTitle: 'Neblux 驚奇之旅', home: '首頁', graph: '圖譜', tours: '驚奇之旅',
+        hdrTitle: 'Neblux 驚奇之旅', home: '首頁', graph: '圖譜', tours: '驚奇之旅', progress: '旅程進度',
         loading: '載入中…', retry: '重試',
         tagHook: '先想想', tagExample: '舉個例', tagSurprise: '意外的是',
         cueNext: '接下來', cueOutward: '想真的學會',
@@ -57,7 +57,7 @@ const UI = {
         errLoad: '這趟旅程載入失敗。',
     },
     ja: {
-        hdrTitle: 'Neblux Wonders', home: 'ホーム', graph: 'グラフ', tours: 'ツアー',
+        hdrTitle: 'Neblux Wonders', home: 'ホーム', graph: 'グラフ', tours: 'ツアー', progress: 'ツアーの進捗',
         loading: '読み込み中…', retry: '再試行',
         tagHook: 'まず考えて', tagExample: 'たとえば', tagSurprise: '意外にも',
         cueNext: '次は', cueOutward: 'さらに先へ',
@@ -127,11 +127,16 @@ function buildStarMeta() {
         const d = degree[n.id] || 0;
         const degCap = Math.min(d, 20);
         const tier = n.type === 'field' ? 'primary' : (n.type === 'concept' ? 'secondary' : 'minor');
+        // Richer bloom than the full-graph tuning: a tour shows only 6–8 stars on
+        // a full-screen canvas, so each one carries more of the scene and is given
+        // a more luminous halo/corona to read as a deliberate constellation rather
+        // than sparse dots. (This buildStarMeta is Wonders-local; app/explorer use
+        // explorer's own.)
         const size = tier === 'primary'
-            ? { core: 4.0 + degCap * 0.28, glow: 15 + degCap * 0.8, halo: 30 + degCap * 1.4, corona: 60 + degCap * 2.2 }
+            ? { core: 4.6 + degCap * 0.30, glow: 18 + degCap * 0.9, halo: 38 + degCap * 1.6, corona: 78 + degCap * 2.4 }
             : tier === 'secondary'
-                ? { core: 1.8 + degCap * 0.10, glow: 7.0 + degCap * 0.35, halo: 15 + degCap * 0.7, corona: 30 + degCap * 1.0 }
-                : { core: 1.1, glow: 3.4, halo: 7.5, corona: 16 };
+                ? { core: 2.3 + degCap * 0.12, glow: 9.5 + degCap * 0.42, halo: 21 + degCap * 0.8, corona: 46 + degCap * 1.3 }
+                : { core: 1.5, glow: 5.0, halo: 11, corona: 25 };
         let h = 0;
         for (let i = 0; i < n.id.length; i++) h = ((h << 5) - h + n.id.charCodeAt(i)) | 0;
         h = Math.abs(h);
@@ -448,17 +453,26 @@ function renderStep(i, recenter = true) {
         alt.hidden = true;
     }
 
-    // Progress dots.
+    // Progress dots. Keep keyboard focus from dropping to <body> when the dots
+    // are rebuilt — a keyboard user mid-tour stays on the (new) active dot.
     const prog = $('wp-progress');
+    const dotsHadFocus = prog.contains(document.activeElement);
     prog.innerHTML = '';
+    let activeDot = null;
     for (let k = 0; k < wonder.steps.length; k++) {
         const dot = document.createElement('button');
         dot.type = 'button';
         dot.className = 'wp-dot' + (k === i ? ' is-active' : '') + (k < i ? ' is-past' : '');
-        dot.setAttribute('aria-label', `Step ${k + 1}`);
+        dot.setAttribute('aria-label', `${k + 1} / ${wonder.steps.length}`);
+        if (k === i) { dot.setAttribute('aria-current', 'step'); activeDot = dot; }
         dot.onclick = () => goToStep(k);
         prog.appendChild(dot);
     }
+    if (dotsHadFocus && activeDot) activeDot.focus();
+    // Announce the step to screen readers: the per-step title lives outside
+    // #wp-body's live region, so prev/next would otherwise be silent.
+    const live = $('wp-live');
+    if (live) live.textContent = `${nodeLabel(nodeById[stepNodeIds[i]])} · ${i + 1} / ${wonder.steps.length}`;
 
     setStepVisuals(i);
     if (recenter) centerViewOnNode(nodeById[stepNodeIds[i]]);
@@ -517,6 +531,7 @@ function applyStaticI18n() {
     $('loading-text').textContent = t('loading');
     $('loading-retry').textContent = t('retry');
     $('wi-start').textContent = t('start');
+    const progEl = $('wp-progress'); if (progEl) progEl.setAttribute('aria-label', t('progress'));
     document.querySelectorAll('.wp-tag').forEach(el => {
         const tag = el.getAttribute('data-tag');
         el.textContent = tag === 'hook' ? t('tagHook') : tag === 'example' ? t('tagExample') : t('tagSurprise');
@@ -582,11 +597,15 @@ const CARD_TILT = !prefersReducedMotion &&
     window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 function attachCardMotion(card) {
     if (!CARD_TILT) return;
-    let raf = 0, lx = 0.5, ly = 0.5;
+    let raf = 0, rect = null;
+    const refresh = () => { rect = card.getBoundingClientRect(); };
+    // Cache the rect on enter (and promote to its own layer only while active)
+    // so pointermove never forces a layout read or pins an idle compositor layer.
+    card.addEventListener('pointerenter', () => { refresh(); card.style.willChange = 'transform'; });
     card.addEventListener('pointermove', e => {
-        const r = card.getBoundingClientRect();
-        lx = (e.clientX - r.left) / r.width;
-        ly = (e.clientY - r.top) / r.height;
+        if (!rect) refresh();
+        const lx = (e.clientX - rect.left) / rect.width;
+        const ly = (e.clientY - rect.top) / rect.height;
         if (raf) return;
         raf = requestAnimationFrame(() => {
             raf = 0;
@@ -599,12 +618,16 @@ function attachCardMotion(card) {
     });
     card.addEventListener('pointerleave', () => {
         if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        card.style.willChange = '';
         card.style.setProperty('--rx', '0deg');
         card.style.setProperty('--ry', '0deg');
         card.style.setProperty('--mx', '50%');
         card.style.setProperty('--my', '0%');
     });
 }
+// The staggered fade-up entrance should play once, not re-cascade every time
+// renderPicker() rebuilds the grid (e.g. on a language toggle).
+let pickerHasEntered = false;
 function renderPicker() {
     const $ = id => document.getElementById(id);
     $('wpk-kicker').textContent = t('pickerKicker');
@@ -621,6 +644,7 @@ function renderPicker() {
         // glow, sheen, breathing dot, fade-up). See .wpk-card in wonders.css.
         card.style.setProperty('--card-accent', accent);
         card.style.setProperty('--i', String(idx));
+        if (!pickerHasEntered) card.classList.add('is-entering');
         const n = (w.steps || []).length;
         const top = document.createElement('div');
         top.className = 'wpk-card-top';
@@ -649,6 +673,7 @@ function renderPicker() {
         attachCardMotion(card);
         grid.appendChild(card);
     });
+    pickerHasEntered = true;
 }
 
 async function showPicker() {

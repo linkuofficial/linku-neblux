@@ -92,14 +92,24 @@ export function createCanvasRenderer(opts) {
     function ensureNebulae() {
         if (nebulae) return;
         const seedByDomain = new Map();
-        for (const n of nodes) {
-            const meta = starMeta(n);
-            if (meta.tier !== 'primary') continue;
+        const consider = (n, meta) => {
             const key = domainColor(n);
             const cur = seedByDomain.get(key);
             if (!cur || (meta.degree || 0) > cur.degree) {
                 seedByDomain.set(key, { node: n, degree: meta.degree || 0 });
             }
+        };
+        for (const n of nodes) {
+            const meta = starMeta(n);
+            if (meta.tier === 'primary') consider(n, meta);
+        }
+        // A small curated subgraph (e.g. a Wonders tour) can contain no field/hub
+        // node at all — which would leave the Deep Field with no nebula fog and
+        // read as a flat void. Fall back to seeding from the strongest node per
+        // domain so the scene keeps its atmosphere. In the full graph a primary
+        // always exists, so this branch never alters app/explorer.
+        if (!seedByDomain.size) {
+            for (const n of nodes) consider(n, starMeta(n));
         }
         nebulae = [];
         for (const [color, seed] of seedByDomain) {
