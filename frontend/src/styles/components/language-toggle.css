@@ -31,7 +31,7 @@
     justify-content: center;
     border: none;
     background: transparent;
-    color: rgba(150, 169, 193, 0.62);
+    color: rgba(150, 169, 193, 0.82);
     cursor: pointer;
     transition: color 0.15s;
     font-size: 13px;
@@ -45,7 +45,7 @@
     content: '/';
     position: absolute;
     left: -4px;
-    color: rgba(214, 230, 248, 0.38);
+    color: rgba(214, 230, 248, 0.52);
     pointer-events: none;
 }
 

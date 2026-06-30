@@ -433,11 +433,17 @@ function renderStep(i, recenter = true) {
         thread.dataset.cue = t('cueOutward');
         thread.classList.add('is-outward');
         thread.onclick = ev => { ev.preventDefault(); };
+        // Outward is inert prose, not a control — drop it from the tab order and
+        // mark it disabled so keyboard/SR users don't land on a dead button.
+        thread.tabIndex = -1;
+        thread.setAttribute('aria-disabled', 'true');
     } else {
         thread.textContent = pick(step.thread);
         thread.dataset.cue = t('cueNext');
         thread.classList.remove('is-outward');
         thread.onclick = ev => { ev.preventDefault(); goToStep(i + 1); };
+        thread.tabIndex = 0;
+        thread.removeAttribute('aria-disabled');
     }
 
     // Nav buttons. On the last step the primary exit loops back to the picker

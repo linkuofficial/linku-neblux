@@ -406,6 +406,7 @@
 }
 #wp-progress { display: flex; gap: 7px; flex-wrap: wrap; }
 .wp-dot {
+    position: relative;
     width: 22px; height: 4px;
     border: none; padding: 0;
     border-radius: 999px;
@@ -413,6 +414,9 @@
     cursor: pointer;
     transition: background 0.25s var(--ease-ui), transform 0.2s var(--ease-ui);
 }
+/* The visible bar is only 4px tall; extend an invisible hit area so the dot
+   meets the ~24px touch-target minimum without changing how it looks. */
+.wp-dot::before { content: ""; position: absolute; inset: -10px -3px; }
 .wp-dot.is-past { background: rgba(240, 192, 80, 0.42); }
 .wp-dot.is-active { background: var(--accent); transform: scaleY(1.5); }
 
@@ -597,8 +601,10 @@
 @keyframes hintIn { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
 @keyframes hintOut { from { opacity: 1; } to { opacity: 0; transform: translate(-50%, 8px); } }
 
-/* ── Mobile: panel becomes a bottom sheet ───────────────────────────────── */
-@media (max-width: 768px) {
+/* ── Mobile + portrait tablets: panel becomes a bottom sheet ────────────────
+   At 900px the 42vw side panel (≈340–380px) would eat half a portrait tablet
+   and cramp the canvas, so switch to the bottom sheet from there down. */
+@media (max-width: 900px) {
     /* free area is the top on mobile (sheet covers the bottom) */
     #wonder-hint { bottom: auto; top: 68px; }
     #wonder-panel {
@@ -621,4 +627,17 @@
 
 @media (prefers-reduced-motion: reduce) {
     .wp-block, #wi-start, #wonder-hint { animation: none; transition: none; }
+}
+
+/* High-contrast mode: the glass translucency + 0.5px hairlines nearly vanish,
+   so give the panel/cards/dividers solid fills and opaque borders. */
+@media (prefers-contrast: more) {
+    #wonder-panel, .wpk-card, #wi-card { background: #0a0a12; }
+    .wpk-card { border-color: rgba(255, 255, 255, 0.55); }
+    #wonder-panel { border-left-color: rgba(255, 255, 255, 0.4); }
+    #wp-head, #wp-foot { border-color: rgba(255, 255, 255, 0.3); }
+    .wp-example { border-left-color: rgba(255, 255, 255, 0.55); }
+    .wp-surprise { border-color: rgba(240, 192, 80, 0.6); }
+    .wp-dot { background: rgba(200, 212, 230, 0.5); }
+    .wp-dot.is-active, .wp-dot.is-past { background: var(--accent); }
 }
