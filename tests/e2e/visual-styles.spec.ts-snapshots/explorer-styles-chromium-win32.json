@@ -316,7 +316,7 @@
       "padding": "24px 20px 20px",
       "border": "",
       "border-radius": "20px",
-      "box-shadow": "rgba(0, 0, 0, 0.58) 0px 24px 56px 0px",
+      "box-shadow": "rgba(0, 0, 0, 0.58) 0px 24px 56px 0px, rgb(91, 155, 213) 0px 0px 42px -12px",
       "opacity": "1",
       "width": "332px",
       "height": "688px",

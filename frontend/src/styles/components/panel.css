@@ -18,7 +18,12 @@
     box-shadow: var(--shadow-strong);
     padding: 24px 20px 20px;
     transform: translateX(calc(100% + 24px));
-    transition: transform 0.4s var(--ease-ui);
+    /* The card slides in, and a soft halo in the node's own domain colour
+       (--node-accent, set per-node from JS) blooms in as it opens — the same
+       "alive, domain-tinted" feel as the Wonders cards, kept calm for a reading
+       surface (no cursor tilt/sheen here). Visibility never depends on a
+       transition completing — the slide + glow are both correct at rest. */
+    transition: transform 0.4s var(--ease-ui), box-shadow 0.5s var(--ease-ui);
     will-change: transform;
     overflow-y: auto;
     z-index: 11;
@@ -28,7 +33,12 @@
 }
 
 #panel.open {
-    transform: translateX(0)
+    transform: translateX(0);
+    box-shadow: var(--shadow-strong), 0 0 42px -12px var(--node-accent, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #panel { transition: none; }
 }
 
 #close {
