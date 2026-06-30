@@ -138,9 +138,9 @@
         "ja": "スマホのカメラは光子を一個ずつ数えています。真っ暗に近い場所で写真がざらつくのは、カメラが安物だからではなく、届く光子があまりに少なく、それらが別々の粒として着地するのがほとんど見えてしまうからなのです。"
       },
       "surprise": {
-        "en": "Here is the experiment that haunts physics. Send photons at a barrier with two slits, one photon at a time, so slowly that only one is ever in flight. Each lands as a single dot — yet let thousands pile up and they build an interference pattern, the signature of a wave passing through both slits at once. Each lone photon behaves as if it took every path simultaneously and interfered with itself.",
-        "zh": "這裡有一個一直糾纏著物理學的實驗。把光子射向一道開了兩條縫的屏障，一次只射一顆，慢到任何時刻都只有一顆在飛。每一顆都落成單獨一個點——但讓成千上萬顆累積起來，它們竟堆出一個干涉圖樣，那正是「一道波同時穿過兩條縫」的招牌印記。每一顆孤單的光子，表現得彷彿同時走遍了每一條路，然後自己跟自己干涉。",
-        "ja": "ここに、物理学につきまとう実験があります。二つのスリットを開けた壁に向けて、一度に一個ずつ、つねに一個だけが飛んでいるほどゆっくりと光子を送る。一個一個は単独の点として着く——ところが何千個も積み重なると、干渉縞を描き出す。それは一つの波が二つのスリットを同時に通り抜けた証です。孤独な光子のそれぞれが、まるであらゆる道を同時に通り、自分自身と干渉したかのようにふるまうのです。"
+        "en": "Here is how real those grains are: your own eye is a photon counter. Let your eyes fully adapt to the dark, and a single light-sensing rod cell in your retina can fire from just one photon striking it — and you can sense a flash made of only a handful. The 'particle' of light is not some abstraction trapped in a lab. You have personally caught light arriving one grain at a time.",
+        "zh": "這些「光的顆粒」有多真實？你的眼睛，就是一台光子計數器。讓雙眼完全適應黑暗，你視網膜裡一顆感光的桿細胞，只要被一顆光子打中就會發出訊號——而你，能察覺到一道只由區區幾顆光子組成的微光。光的「粒子」不是被關在實驗室裡的抽象概念——你的眼睛，早就一顆一顆地，親自接住過飛來的光。",
+        "ja": "その「粒」がどれほど現実か——あなたの目は、光子の計数器です。目を闇に十分慣らせば、網膜の一個の感光する桿体細胞は、たった一個の光子が当たるだけで信号を出す——そしてあなたは、ほんの数個の光子だけでできたかすかな光を感じ取れる。光の「粒子」は、実験室に閉じこめられた抽象などではありません。あなたはとうに、一粒ずつ飛んでくる光を、自分の目で受け止めてきたのです。"
       },
       "thread": {
         "en": "If you could get countless photons to march together in perfect step, instead of arriving as a random trickle, what would that light become?",
