@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- Design lab for the graph detail card (#panel). Dev-only: not in vite build
+     inputs, never deployed. Open at /_cardlab.html under `npm run dev` to
+     iterate on panel.css against a mock Deep Field backdrop. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>card lab</title>
+    <link rel="stylesheet" href="/neblux-fonts.css">
+    <link rel="stylesheet" href="/neblux-theme.css">
+    <link rel="stylesheet" href="src/shared.css">
+    <link rel="stylesheet" href="src/styles/pages/app.css">
+    <style>
+        /* mimic the Deep Field backdrop so the glass card reads in context */
+        html, body { height: 100%; margin: 0; }
+        body {
+            background:
+                radial-gradient(60% 60% at 70% 30%, rgba(40, 60, 110, 0.18), transparent 70%),
+                radial-gradient(50% 50% at 20% 80%, rgba(120, 70, 90, 0.12), transparent 70%),
+                #07070c;
+        }
+        /* a few faint "stars" for realism */
+        .star { position: fixed; width: 2px; height: 2px; border-radius: 50%; background: #cfe0f5; opacity: .5; }
+    </style>
+</head>
+<body>
+    <div class="star" style="left:22%;top:30%"></div>
+    <div class="star" style="left:38%;top:62%;width:3px;height:3px;opacity:.7"></div>
+    <div class="star" style="left:14%;top:74%"></div>
+    <div class="star" style="left:55%;top:20%;opacity:.35"></div>
+    <div class="star" style="left:48%;top:48%;width:1px;height:1px;opacity:.4"></div>
+
+    <div id="panel" class="open" style="--node-accent:#c97a5b">
+        <button id="close" aria-label="Close detail panel">&#x2715;</button>
+        <div id="p-type">CONCEPT</div>
+        <div id="p-label">Special Relativity</div>
+        <div id="p-domains"><span class="d-badge" style="--badge:#c97a5b">Physics</span></div>
+        <div id="p-era">1905 · Albert Einstein</div>
+        <div id="p-desc">
+            <p class="pd-lead">Light always travels at the same speed, no matter how fast you chase it — and to keep that one fact true, space and time themselves must stretch and bend.</p>
+            <details class="pd-sec" open>
+                <summary>The core idea</summary>
+                <div class="pd-sec-body"><p>Moving clocks run slow and moving rulers contract, just enough to keep the speed of light fixed for every observer. There is no universal "now."</p></div>
+            </details>
+            <details class="pd-sec">
+                <summary>Why it matters</summary>
+                <div class="pd-sec-body"><p>GPS satellites move fast enough that their clocks visibly drift from ours; without correcting for relativity, your phone's map would be off by kilometres within a day.</p></div>
+            </details>
+        </div>
+        <div id="p-tags">
+            <span class="tag">spacetime</span>
+            <span class="tag">speed of light</span>
+            <span class="tag">time dilation</span>
+        </div>
+        <a id="p-search" target="_blank">Search on Google &#x2192;</a>
+        <div id="p-conns">
+            <h3>All Connections</h3>
+            <div id="p-conn-list">
+                <button class="ci"><span class="ll" style="background:#5b9bd5;width:8px;height:8px;border-radius:50%;flex:none"></span>General Relativity</button>
+                <button class="ci"><span class="ll" style="background:#9b7bc9;width:8px;height:8px;border-radius:50%;flex:none"></span>Wave-Particle Duality</button>
+                <button class="ci"><span class="ll" style="background:#c95b5b;width:8px;height:8px;border-radius:50%;flex:none"></span>Black Hole</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
