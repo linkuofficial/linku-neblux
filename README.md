@@ -4,7 +4,7 @@
 
 **Wonders（驚奇之旅）= 產品核心**：19 趟三語（en/zh/ja）敘事旅程，畫在 687 節點的知識圖譜上。
 
-> **動手前先讀 [docs/DIRECTION.md](docs/DIRECTION.md)**——方向、鐵律、待辦順序都在那裡。
+> **文件導航**：方向與鐵律 [docs/DIRECTION.md](docs/DIRECTION.md)（永久）→ 執行任務 [docs/ROADMAP.md](docs/ROADMAP.md)（逐項打勾）→ 程式碼定位 [docs/CODEBASE-MAP.md](docs/CODEBASE-MAP.md) → 寫 tour [docs/tour-authoring.md](docs/tour-authoring.md)。動手前先讀 DIRECTION。
 
 ## 指令
 
