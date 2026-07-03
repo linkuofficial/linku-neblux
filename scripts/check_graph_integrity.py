@@ -8,7 +8,7 @@ connections within a node, and invalid type/domain/relation_type values.
 Broken edges are skipped by both the build-time layout baker
 (frontend/src/engine/layout.js) and the runtime edge builder
 (frontend/src/app-main.js), so they don't crash — but they silently drop
-intended connections. See docs/graph-integrity-findings.md.
+intended connections. See docs/archive/graph-integrity-findings.md.
 
 Usage:  python scripts/check_graph_integrity.py
 Exit 1 if any hard error (dup id / self-loop / invalid enum / missing field).
@@ -64,7 +64,7 @@ def main():
     if broken:
         total = sum(len(v) for v in broken.values())
         warns.append(f"{total} broken edges to {len(broken)} missing targets "
-                     f"(see docs/graph-integrity-findings.md)")
+                     f"(see docs/archive/graph-integrity-findings.md)")
 
     print(f"graph integrity: {len(errors)} ERROR, {len(warns)} WARN  "
           f"({len(nodes)} nodes)")

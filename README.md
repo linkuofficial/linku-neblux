@@ -1,57 +1,39 @@
-﻿# Neblux
+# Neblux
 
-跨領域知識圖譜探索平台，部署於 [neblux.linku.tech](https://neblux.linku.tech)。
+好奇心驅動的知識體驗 → <https://neblux.linku.tech>
 
-**靜態前端，零後端。** Vanilla JS + D3.js，部署至 Cloudflare Pages。
+**Wonders（驚奇之旅）= 產品核心**：19 趟三語（en/zh/ja）敘事旅程，畫在 687 節點的知識圖譜上。
 
-## 快速開始
+> **動手前先讀 [docs/DIRECTION.md](docs/DIRECTION.md)**——方向、鐵律、待辦順序都在那裡。
+
+## 指令
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
-npm run build    # 輸出至 dist/
+npm run build    # → dist/
+npm run test:e2e # Playwright smoke（首次先 npm run test:e2e:install）
 ```
 
-> Node.js 22+ 必須。
+Node.js 22+ 必須。
 
-## 專案結構
+## 結構
 
-```text
-Neblux/
-├── frontend/               # 三個 HTML 入口（index / app / explorer）
-│   ├── src/                # JS 邏輯
-│   └── public/             # 靜態資源（_headers、圖示、主題）
-├── data/
-│   ├── all_nodes.json      # 627 個知識節點
-│   ├── i18n/               # 多語言標籤（en / zh / ja）
-│   └── ...                 # 生成日誌、批次紀錄
-├── scripts/                # 資料生成、品質檢查、翻譯等離線工具
-├── docs/                   # 狀態記錄、設計文件
-├── vite.config.ts          # build + dev，含自動複製 data/ 到 public/data/
-└── playwright.config.ts    # E2E 測試
-```
+| 路徑 | 內容 |
+|------|------|
+| `frontend/` | 4 入口：`index`（落地）、`wonders`（核心）、`app`（全圖）、`explorer`（轉型中） |
+| `frontend/src/engine/` | 共用 Canvas 圖引擎 |
+| `data/all_nodes.json` | 687 個知識節點（含英文描述） |
+| `data/wonders/` | 19 趟 tour JSON（三語文案＋骨幹 edges） |
+| `data/i18n/` | 多語標籤、描述、sections |
+| `scripts/` | 離線資料管線（線上站不依賴） |
+| `docs/` | `DIRECTION.md`（北極星）＋現行指南；歷史計畫在 `docs/archive/` |
 
 ## 部署
 
-平台：**Cloudflare Pages**
-
-| 設定 | 值 |
-|------|-----|
-| Build command | `npm run build` |
-| Output directory | `dist` |
-
-`frontend/public/_headers` 內含 CSP 等安全 headers，Cloudflare Pages 自動套用。
-
-## 資料更新
-
-修改 `data/all_nodes.json` 或 `data/i18n/*.json` 後，`npm run build` 會自動將最新資料複製到 `dist/data/`。
-
-## 測試
-
-```bash
-npm run test:e2e          # Playwright E2E smoke
-npm run test:e2e:install  # 首次安裝 Chromium
-```
+Cloudflare Pages：Build command `npm run build`、Output directory `dist`。
+CSP 等 headers 在 `frontend/public/_headers`。
+改 `data/*.json` 後重新 build 即更新（純靜態、零後端）。
 
 ## 網址
 
