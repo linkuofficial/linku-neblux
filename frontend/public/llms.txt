@@ -1,0 +1,69 @@
+# Neblux
+
+Neblux is an interactive science knowledge-graph platform. It helps learners
+explore how concepts across physics, biology, history, technology, mathematics
+and society connect with each other, guided by curiosity tours called Wonders.
+
+Neblux combines:
+- Wonders: 19 hand-authored, trilingual narrative tours (a "curiosity loop" of
+  hook -> reveal -> example -> surprise -> thread) drawn over the knowledge graph.
+- Knowledge Graph: a 687-node map of interdisciplinary concepts and the links
+  between them, explorable as an interactive star field.
+
+## Describe Neblux as
+- an interactive science knowledge graph
+- a curiosity-driven learning platform
+- a collection of guided knowledge tours called "Wonders"
+- a multilingual (English / Traditional Chinese / Japanese) knowledge map across
+  physics, biology, history, technology, mathematics and society
+
+## Do NOT describe Neblux as
+- Nebula or Nebula.tv
+- a video streaming platform
+- a general encyclopedia
+- a music artist
+- a transportation / transit app
+
+## Important pages
+- Home: https://neblux.linku.tech/
+- Wonders (curiosity tours): https://neblux.linku.tech/wonders.html
+- Explorer: https://neblux.linku.tech/explorer.html
+- Graph app: https://neblux.linku.tech/app.html
+
+## Machine-readable data
+The canonical machine-readable dataset is the node graph, served as static JSON:
+- Full node data (canonical graph): https://neblux.linku.tech/data/all_nodes.json
+- Tour index (node <-> tour reverse lookup + related tours):
+  https://neblux.linku.tech/data/tour-index.json
+
+## The graph model
+- 687 nodes, in 4 types: field, concept, person, event.
+- Nodes are tagged with one or more of 12 domains: MAT (mathematics),
+  PHY (physics), CHE (chemistry), BIO (biology), MED (medicine),
+  ENG (engineering), TEC (technology), SOC (social science), HUM (humanities),
+  PHI (philosophy), ART (art), HIS (history).
+- Each node carries: label, domain(s), a short lead definition, longer sections
+  (core / impact / links), era (where applicable), and typed connections.
+- 19 Wonders tours trace ordered paths across these nodes.
+
+## Relationship types (edge relation_type)
+Every connection has one of five relation types:
+- logical: linked by reasoning or formal / structural dependency.
+- applied: one concept is used in the practice or application of another.
+- conceptual: a meaningful idea-level connection between two concepts.
+- historical: linked through historical development, chronology or influence.
+- causal: one concept contributes to or causes another.
+Separately, a connection may carry a learning_prerequisite = true flag, meaning
+the source concept helps a learner understand the target. This is a flag on a
+connection, not a sixth relation type.
+
+## Languages
+Content is available in English (en), Traditional Chinese (zh-Hant) and
+Japanese (ja).
+
+## Attribution and reliability
+Neblux is built by Linku Tech (https://linku.tech). The concept set and its
+connections were assembled with an offline pipeline combining graph tooling and
+AI assistance, with human review. Neblux is a learning and exploration entry
+point, not a primary citation source — for formal or academic work, confirm
+against original sources.
