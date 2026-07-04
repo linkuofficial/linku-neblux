@@ -188,5 +188,8 @@
     "en": "Want to fall further? Look up Maxwell's demon — the imaginary creature that seems to cheat the second law, and why it can't. Ask why we remember the past but never the future, when the underlying physics barely cares about direction. Or read about Boltzmann, who first saw the arrow of time as a matter of statistics — and the equation for entropy that's carved on his gravestone.",
     "zh": "想再往下追一點？去查查「馬克士威惡魔」——那隻看似能騙過第二定律的想像生物，以及它為什麼騙不成。問問為什麼我們記得過去、卻從不記得未來，明明底層的物理幾乎不在乎方向。或讀讀波茲曼，他最早把時間之箭看成一個統計問題——以及那條刻在他墓碑上的熵方程式。",
     "ja": "もっと追ってみたいですか？「マクスウェルの悪魔」を調べてみてください——第二法則をだませそうに見える想像上の生き物と、なぜそれができないのかを。基礎の物理は方向をほとんど気にしないのに、なぜ私たちは過去を覚えて未来を覚えないのか、と問うてみてください。あるいはボルツマンを読んでみる——時間の矢を初めて統計の問題として見た人、そして彼の墓碑に刻まれたエントロピーの式を。"
-  }
+  },
+  "outward_links": [
+    { "node": "james_clerk_maxwell_person", "match": { "en": "Maxwell's demon", "zh": "馬克士威惡魔", "ja": "マクスウェルの悪魔" } }
+  ]
 }

@@ -188,5 +188,8 @@
     "en": "Want to fall further? Look up Noether's theorem explained simply, watch why a spinning skater speeds up when she pulls her arms in (angular momentum), or follow the decades-long hunt for the Higgs particle — and this idea, that every symmetry is a law, becomes real, observed science you can trace yourself.",
     "zh": "想再往下墜一點？去查查用最簡單方式講解的諾特定理、看一段「為什麼花式溜冰選手收手臂就轉得更快」的影片（角動量），或追一追長達數十年的希格斯粒子獵尋——這個「每一種對稱都是一條定律」的想法，就會變成你能親手追蹤、真實被觀測到的科學。",
     "ja": "もっと落ちてみたいですか？やさしく説明されたネーターの定理を調べ、フィギュアスケーターが腕を引き込むとなぜ速く回るのか（角運動量）を見て、何十年にもおよぶヒッグス粒子の探索をたどってみてください——「あらゆる対称性は法則である」というこの考えが、自分の手で追える、現実に観測された科学に変わります。"
-  }
+  },
+  "outward_links": [
+    { "node": "standard_model_concept", "match": { "en": "Higgs particle", "zh": "希格斯粒子", "ja": "ヒッグス粒子" } }
+  ]
 }

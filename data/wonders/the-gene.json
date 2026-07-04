@@ -217,5 +217,8 @@
     "en": "Want to fall further? Look up the story of Rosalind Franklin's 'Photo 51,' the X-ray image that revealed the double helix; watch how AlphaFold predicts a protein's fold from its letters alone; or read about the CRISPR patent saga and the fierce debate over editing human embryos — and the code of life turns from a textbook idea into the most charged frontier in science.",
     "zh": "想再往下墜一點？去查查羅莎琳·富蘭克林「51 號照片」的故事，那張揭開雙螺旋的 X 光影像；看一段 AlphaFold 如何單憑字母就預測出蛋白質摺法的影片；或讀讀 CRISPR 的專利之爭，以及編輯人類胚胎所引發的激烈辯論——生命的密碼，就會從教科書裡的一個概念，變成科學中最炙手可熱的前線。",
     "ja": "もっと落ちてみたいですか？二重らせんを明かした X 線写真、ロザリンド・フランクリンの「51 号写真」の物語を調べ、AlphaFold が文字だけからタンパク質の折りたたみをどう予測するかを見て、CRISPR の特許をめぐる争いと、ヒト胚を編集することへの激しい議論を読んでみてください——生命の暗号は、教科書の中の概念から、科学でもっとも熱を帯びた最前線へと変わります。"
-  }
+  },
+  "outward_links": [
+    { "node": "rosalind_franklin_person", "match": { "en": "Rosalind Franklin", "zh": "羅莎琳·富蘭克林", "ja": "ロザリンド・フランクリン" } }
+  ]
 }

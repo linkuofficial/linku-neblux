@@ -117,7 +117,9 @@ test("the tour's exit to the graph lands on its constellation", async ({ page })
 });
 
 test("a tour without outward_links keeps plain, link-free outward prose", async ({ page }) => {
-    await page.goto("/wonders.html?w=edge-ai&s=7");
+    // music has no outward_links (its finale names the harmonic series / equal
+    // temperament — concepts with no graph node), so its outward stays plain.
+    await page.goto("/wonders.html?w=music&s=6");
     await ready(page);
     await expect(page.locator("#wp-outward")).toBeVisible();
     await expect(page.locator("#wp-outward a.wp-outlink")).toHaveCount(0);

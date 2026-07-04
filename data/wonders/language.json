@@ -217,5 +217,8 @@
     "en": "Want to fall further? Look up the Sapir-Whorf debate over whether language shapes thought, watch how young children quietly crack grammar with no one teaching them, or dig into what large language models are really doing when they 'speak' — and the puzzle of your own first words turns into living science.",
     "zh": "想再往下走一點？去查查「薩丕爾－沃爾夫假說」關於語言是否塑造思考的辯論、看看幼兒如何在沒人教的情況下悄悄破解文法，或鑽進大型語言模型「說話」時究竟在做什麼——你自己最初那幾個字的謎，就會變成一門活生生的科學。",
     "ja": "もっと先へ進みたいですか？言語が思考を形づくるかをめぐる「サピア＝ウォーフ仮説」の論争を調べ、幼い子が誰にも教わらず文法をそっと解き明かす様子を見て、大規模言語モデルが「話す」とき本当は何をしているのかを掘り下げてみてください——あなた自身の最初のひと言の謎が、生きた科学に変わります。"
-  }
+  },
+  "outward_links": [
+    { "node": "natural_language_processing_concept", "match": { "en": "large language models", "zh": "大型語言模型", "ja": "大規模言語モデル" } }
+  ]
 }

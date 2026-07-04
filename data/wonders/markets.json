@@ -188,5 +188,8 @@
     "en": "Want to fall further? Play a few rounds of the Prisoner's Dilemma against a friend and watch trust break and rebuild; read Daniel Kahneman's 'Thinking, Fast and Slow' to meet your own biases face to face; or look up Akerlof's 'market for lemons' to see how a single hidden fact can sink a whole market — and these ideas stop being theory and start explaining your own days.",
     "zh": "想再往下走一點？找個朋友玩幾局囚徒困境，看著信任如何崩解、又如何重建；讀讀康納曼的《快思慢想》，與你自己的偏誤面對面；或去查查阿克洛夫的「檸檬市場」，看看一個藏起來的事實如何能擊沉整個市場——這些想法，就會從理論變成在解釋你自己的每一天。",
     "ja": "もっと先へ進みたいですか？友人と囚人のジレンマを何回か対戦し、信頼が壊れては築き直される様子を見てみる。カーネマンの『ファスト＆スロー』を読んで、自分自身のバイアスと面と向かう。あるいはアカロフの「レモン市場」を調べ、たった一つの隠れた事実が市場全体を沈めうることを見てみる——すると、これらの考えは理論であることをやめ、あなた自身の日々を説明し始めます。"
-  }
+  },
+  "outward_links": [
+    { "node": "information_asymmetry_concept", "match": { "en": "market for lemons", "zh": "檸檬市場", "ja": "レモン市場" } }
+  ]
 }

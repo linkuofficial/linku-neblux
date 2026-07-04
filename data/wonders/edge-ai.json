@@ -222,5 +222,8 @@
     "en": "Hooked? To actually get your hands dirty: grab a Raspberry Pi or ESP32, run a TinyML example, and write a PID controller that holds a motor steady at a target angle — and you'll touch every step above yourself.",
     "zh": "被勾住了嗎？想真的動手：找一塊 Raspberry Pi 或 ESP32、跑一個 TinyML 範例、寫一支 PID 控制器讓馬達穩穩停在目標角度——你會親手碰到上面每一步。",
     "ja": "心をつかまれましたか？本気で手を動かすなら——Raspberry Pi か ESP32 を手に入れ、TinyML のサンプルを動かし、モーターを目標角度でぴたりと保つ PID コントローラを書いてみる。すると、上のすべてのステップに自分の手で触れることになります。"
-  }
+  },
+  "outward_links": [
+    { "node": "control_theory_concept", "match": { "en": "PID controller", "zh": "PID 控制器", "ja": "PID コントローラ" } }
+  ]
 }
