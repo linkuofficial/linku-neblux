@@ -3,6 +3,7 @@
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
 > 最後更新：2026-07-04（P0-1 ~ P0-7 完成；剩 P0-B 火種句待 [人工] 審核）
+> 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
 
 ## 工作守則（每次開工先讀）
 
