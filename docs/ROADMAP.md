@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1 完成）
+> 最後更新：2026-07-04（P0-1、P0-2 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -25,7 +25,7 @@
   - 驗收：`wonders.html?w=light&s=4` 直開第 4 站、計數顯「4 / 7」；原 intro／autostart 流程不變；新增 E2E。
   - 陷阱：intro 由 `sessionStorage['wonder-autostart']` 控制，別破壞該路徑。
 
-- [ ] **P0-2 每趟 tour 分享 stub ＋ og 圖**
+- [x] **P0-2 每趟 tour 分享 stub ＋ og 圖**（2026-07-04）
   - 改：新增 `scripts/build_share_pages.mjs`，掛進 build（`package.json` 的 build script 後段或 vite closeBundle）。devDependency：`sharp`（已核准）。
   - 作法：對每個 `data/wonders/*.json` 生成 `dist/w/<id>.html`：og:title（en title）、og:description（en intro）、og:image=`/og/<id>.png`、canonical、`<meta http-equiv="refresh" content="0;url=/wonders.html?w=<id>">`、body 內一個普通 `<a>` 後備連結。**禁 inline script——只用 meta refresh。**
   - og 圖：1200×630 PNG 存 `dist/og/`。內容＝純星座圖形（深底 `#05070f` 系、tour accent 色、以 steps 數在圓弧上佈點並連線）。**圖內不放文字**（build 環境 CJK 字型不可靠；標題交給 og:title）。SVG 模板 → sharp 轉 PNG。
