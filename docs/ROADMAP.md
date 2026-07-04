@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1、P0-2 完成）
+> 最後更新：2026-07-04（P0-1、P0-2、P0-3 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -32,7 +32,7 @@
   - 驗收：build 後 `dist/w/` 19 個 stub、`dist/og/` 19 張圖；`npm run preview` 訪問 `/w/light` 自動轉到 tour。
   - 陷阱：stub 是 build 產物，不進 git；`frontend/public/_headers` 不需改。
 
-- [ ] **P0-3 tour-index.json（資料地基）**
+- [x] **P0-3 tour-index.json（資料地基）**（2026-07-04）
   - 改：新增 `scripts/build_tour_index.mjs` 掛進 build；輸出 `dist/data/tour-index.json`（dev 期也複製到 `frontend/public/data/`）。
   - 形狀：
     ```json

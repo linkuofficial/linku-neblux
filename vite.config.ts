@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { pathToFileURL } from 'url';
 import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync } from 'fs';
+import { buildTourIndex } from './scripts/build_tour_index.mjs';
 
 function copyDataPlugin() {
     return {
@@ -87,6 +88,17 @@ function copyDataPlugin() {
                         copyFileSync(resolve(wondersSrc, f), resolve(wondersDest, f));
                     }
                 }
+            }
+
+            // Reverse-lookup index (tours/nodes/related) derived from the wonders +
+            // graph. Written into public/data so dev serves it and build copies it
+            // into dist/data. Consumed at runtime by the constellation layer and
+            // the tour↔graph cross-links (progressive enhancement — a missing file
+            // just means those extras don't appear).
+            try {
+                buildTourIndex(srcDir, [resolve(destDir, 'tour-index.json')]);
+            } catch (err) {
+                this.warn?.(`tour-index build skipped: ${(err as Error).message}`);
             }
         },
     };

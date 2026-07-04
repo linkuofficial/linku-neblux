@@ -81,6 +81,23 @@ test("picking a tour from the picker dives straight in (no second gate)", async 
     await expect(page.locator("#wonder-intro")).toBeHidden();
 });
 
+test("tour-index.json is served with tours / nodes / related", async ({ page }) => {
+    const res = await page.request.get("/data/tour-index.json");
+    expect(res.status(), "tour-index.json status").toBe(200);
+    const idx = await res.json();
+    expect(Object.keys(idx.tours)).toHaveLength(19);
+    expect(idx.tours.light.steps).toContain("optics_concept");
+    // reverse lookup: a light step node points back to its tour + 1-based step
+    expect(idx.nodes["optics_concept"]).toContainEqual({ tour: "light", step: 1 });
+    // related: light links to quantum via the shared wave-particle-duality bridge
+    expect(
+        idx.related.light.some(
+            (r: { tour: string; via: string }) =>
+                r.tour === "quantum" && r.via === "wave_particle_duality_concept",
+        ),
+    ).toBeTruthy();
+});
+
 test("wonder data files are served", async ({ page }) => {
     for (const id of ["edge-ai", "black-holes"]) {
         const res = await page.request.get(`/data/wonders/${id}.json`);
