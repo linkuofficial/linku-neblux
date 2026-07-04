@@ -246,6 +246,8 @@ async function setLang(lang) {
     applyI18n();
     // Node labels are read live by the renderer's label hook — just repaint.
     if (renderer) renderer.notify();
+    // Constellation names are baked strings — rebuild them for the new language.
+    rebuildConstellations();
 }
 
 function applyI18n() {
@@ -379,6 +381,8 @@ let localeSectionsMap = {}; // Structured zh/ja sections for the active non-en l
 let _searchIndex = null; // Pre-built lowercase index for fast search
 let currentPanelNodeId = null;
 let relatedLabelIds = new Set();
+let tourIndex = null;          // reverse index (tours/nodes/related); lazy + non-blocking
+let constellationList = [];    // built tour-overlay data, kept for hit-tests + re-localize
 const TOP_CHROME_EXPAND_DELAY = 90;
 const TOP_CHROME_COLLAPSE_DELAY = 260;
 const NAV_HISTORY_STORAGE_KEY = 'neblux-nav-history-v1';
@@ -1076,7 +1080,7 @@ function buildGraph() {
         const [px, py] = d3.pointer(e, canvas);
         const node = findNodeAtScreen(px, py);
         renderer.setHover(node ? node.id : null);
-        canvas.style.cursor = node ? 'pointer' : '';
+        canvas.style.cursor = node || renderer.constellationNameAt(px, py) ? 'pointer' : '';
     });
     canvas.addEventListener('pointerleave', () => {
         renderer.setHover(null);
@@ -1087,10 +1091,13 @@ function buildGraph() {
         const node = findNodeAtScreen(px, py);
         if (node) {
             handleNodeClick(e, node);
-        } else {
-            setPanelOpenState(false);
-            clearHighlights();
+            return;
         }
+        // Node hit takes priority; a click on a constellation name enters its tour.
+        const cid = renderer && renderer.constellationNameAt(px, py);
+        if (cid) { window.location.href = 'wonders.html?w=' + cid; return; }
+        setPanelOpenState(false);
+        clearHighlights();
     });
 
     // Don't let a pointer press steal keyboard focus onto the canvas. The canvas
@@ -1197,7 +1204,34 @@ function buildGraph() {
         selectNode: (id) => focusNode(id),
         debug: () => renderer.debugCounts(),
         stats: () => renderer.stats,
+        // Constellation overlay diagnostics.
+        constellationCount: () => renderer.constellationCount(),
+        constellationT: () => renderer.constellationT(),
+        constellationNameAt: (x, y) => renderer.constellationNameAt(x, y),
+        constellations: () => constellationList,
+        setConstellations: (list) => renderer.setConstellations(list),   // A/B pixel tests
+        nodeAtScreen: (x, y) => { const n = findNodeAtScreen(x, y); return n ? n.id : null; },
+        constellationScreen: (id) => {
+            const c = constellationList.find(x => x.id === id);
+            if (!c) return null;
+            let sx = 0, sy = 0, n = 0;
+            for (const nid of c.nodeIds) { const nn = nodeMap[nid]; if (nn && Number.isFinite(nn.x)) { sx += nn.x; sy += nn.y; n++; } }
+            if (!n) return null;
+            return { x: (sx / n) * viewTransform.k + viewTransform.x, y: (sy / n) * viewTransform.k + viewTransform.y };
+        },
+        focusConstellation: (id) => focusConstellation(id),
+        zoomTo: (k) => {
+            let sx = 0, sy = 0, n = 0;
+            for (const nn of allNodes) { if (Number.isFinite(nn.x)) { sx += nn.x; sy += nn.y; n++; } }
+            if (!n) return;
+            const W = window.innerWidth, H = window.innerHeight;
+            canvasSel.call(zoomBehavior.transform,
+                d3.zoomIdentity.translate(W / 2, H / 2).scale(k).translate(-sx / n, -sy / n));
+        },
     };
+
+    // Progressive tour-constellation overlay (fire-and-forget; silent on failure).
+    setupConstellations();
 }
 
 // ===== SEMANTIC ZOOM =====
@@ -1293,6 +1327,88 @@ function fitView() {
     const W = window.innerWidth, H = window.innerHeight;
     const transform = d3.zoomIdentity.translate(W / 2 - cx, H / 2 - cy);
     canvasSel.call(zoomBehavior.transform, transform);
+}
+
+// ===== TOUR CONSTELLATION OVERLAY (P0-5) =====
+function pickTitle(tour, id) {
+    const tt = tour && tour.title;
+    return (tt && (tt[LANG] || tt.en)) || id;
+}
+
+// Build the overlay data from the loaded tour-index: each tour's spine = its
+// consecutive steps that both exist as graph nodes (local/missing steps skipped).
+function rebuildConstellations() {
+    if (!tourIndex || !renderer) return;
+    const list = [];
+    for (const [id, tour] of Object.entries(tourIndex.tours || {})) {
+        const steps = tour.steps || [];
+        const nodeIds = steps.filter(s => nodeMap[s]);
+        if (nodeIds.length < 2) continue;
+        const segments = [];
+        for (let i = 0; i + 1 < steps.length; i++) {
+            if (nodeMap[steps[i]] && nodeMap[steps[i + 1]]) segments.push([steps[i], steps[i + 1]]);
+        }
+        if (!segments.length) continue;
+        list.push({ id, name: pickTitle(tour, id), accent: DC[tour.accent] || '#9b7bc9', nodeIds, segments });
+    }
+    constellationList = list;
+    renderer.setConstellations(list);
+}
+
+async function setupConstellations() {
+    // Progressive enhancement: fetch the reverse index; on any failure the overlay
+    // simply never appears (ironclad rule 1 — the graph stands on its own).
+    let idx;
+    try {
+        const ctrl = new AbortController();
+        const tm = setTimeout(() => ctrl.abort(), 8000);
+        const r = await fetch('/data/tour-index.json', { signal: ctrl.signal });
+        clearTimeout(tm);
+        if (!r.ok) return;
+        idx = await r.json();
+    } catch { return; }
+    tourIndex = idx;
+    rebuildConstellations();
+
+    // Deferred deep link: app.html?constellation=<id> frames + lights that tour.
+    const cid = new URLSearchParams(window.location.search).get('constellation');
+    if (cid && idx.tours && idx.tours[cid]) setTimeout(() => focusConstellation(cid), 300);
+}
+
+// Frame an arbitrary node subset (used by ?constellation= and its focus).
+function frameNodes(list, duration = 650) {
+    if (!canvasSel || !zoomBehavior) return;
+    const xs = [], ys = [];
+    for (const n of list) { if (n && Number.isFinite(n.x)) { xs.push(n.x); ys.push(n.y); } }
+    if (!xs.length) return;
+    const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
+    const cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+    const W = window.innerWidth, H = window.innerHeight, pad = 200;
+    const scale = Math.max(0.15, Math.min(1.8, Math.min(W / ((x1 - x0) + pad), H / ((y1 - y0) + pad))));
+    const transform = d3.zoomIdentity.translate(W / 2, H / 2).scale(scale).translate(-cx, -cy);
+    canvasSel.transition().duration(duration).call(zoomBehavior.transform, transform);
+}
+
+// Light a whole tour: its stars glow, the rest of the sky dims, its internal
+// edges highlight, and the camera frames the group. Reuses the vis focus model.
+function focusConstellation(tourId) {
+    const c = constellationList.find(x => x.id === tourId);
+    if (!c) return;
+    const memberSet = new Set(c.nodeIds);
+    for (const n of allNodes) {
+        const v = ensureVis(n);
+        v.selected = false;
+        v.related = memberSet.has(n.id);
+        v.dimmed = !memberSet.has(n.id);
+    }
+    for (const e of allEdges) {
+        const s = e.source.id || e.source, tg = e.target.id || e.target;
+        ensureVis(e).highlight = memberSet.has(s) && memberSet.has(tg);
+    }
+    relatedLabelIds = new Set(memberSet);
+    currentPanelNodeId = null;
+    if (renderer) { renderer.setSelected(null); renderer.notify(); }
+    frameNodes(c.nodeIds.map(id => nodeMap[id]));
 }
 
 function centerViewOnNode(node, duration = 500) {

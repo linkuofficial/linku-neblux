@@ -70,6 +70,9 @@ export function createCanvasRenderer(opts) {
     let transform = { k: 1, x: 0, y: 0 };
     let hoveredId = null;
     let selectedNode = null;
+    let constellations = [];   // tour overlays: [{id, name, accent, members[], segments[[a,b]]}]
+    let lastConstNames = [];   // last-frame name boxes (screen space) for click hit-testing
+    let curConstT = 0;         // current zoom crossfade for the constellation layer (0..1)
     let lpMode = false;
     let rafId = 0;
     let dirty = true;
@@ -349,6 +352,87 @@ export function createCanvasRenderer(opts) {
         ctx.globalAlpha = 1;
     }
 
+    // ── tour constellation overlay ─────────────────────────────────────────
+    // Zoom crossfade: 1 when zoomed out (whole-sky index), 0 when zoomed in.
+    // Zero when no constellations are set, so app-without-index / explorer are
+    // untouched (ironclad rule 1 — a missing tour-index just means no overlay).
+    function constellationT() {
+        if (!constellations.length) return 0;
+        const { inHi, outHi } = THEME.constellation;
+        const k = transform.k;
+        if (k <= inHi) return 1;
+        if (k >= outHi) return 0;
+        return (outHi - k) / (outHi - inHi);
+    }
+
+    // Dashed accent-colour spine arcs — drawn above the resting edges, below the
+    // stars (per the layer-order rule). One batched stroke per tour (≈19).
+    function drawConstellationLines(k, tx, ty, ct) {
+        if (ct <= 0.01) return;
+        const C = THEME.constellation;
+        ctx.save();
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = C.lineWidth;
+        ctx.setLineDash([C.dash[0] * k, C.dash[1] * k]);
+        for (const c of constellations) {
+            ctx.strokeStyle = c.accent;
+            ctx.globalAlpha = C.lineAlpha * ct;
+            ctx.beginPath();
+            for (const [a, b] of c.segments) {
+                if (!Number.isFinite(a.x) || !Number.isFinite(b.x)) continue;
+                const cp = curveControl({ source: a, target: b });
+                ctx.moveTo(a.x * k + tx, a.y * k + ty);
+                ctx.quadraticCurveTo(cp.cx * k + tx, cp.cy * k + ty, b.x * k + tx, b.y * k + ty);
+            }
+            ctx.stroke();
+        }
+        ctx.setLineDash([]);
+        ctx.restore();
+        ctx.globalAlpha = 1;
+    }
+
+    // Constellation names at each tour's centroid — drawn on top of the stars so
+    // they stay readable; records screen boxes for click hit-testing.
+    function drawConstellationNames(k, tx, ty, ct) {
+        lastConstNames = [];
+        if (ct <= 0.01) return;
+        const C = THEME.constellation;
+        ctx.save();
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.font = `${C.nameSize}px 'IBM Plex Mono', monospace`;
+        const canSpace = 'letterSpacing' in ctx;
+        if (canSpace) ctx.letterSpacing = '1px';
+        for (const c of constellations) {
+            let sx = 0, sy = 0, n = 0;
+            for (const m of c.members) { if (Number.isFinite(m.x)) { sx += m.x; sy += m.y; n++; } }
+            if (!n) continue;
+            const cx = (sx / n) * k + tx, cy = (sy / n) * k + ty;
+            if (cx < -120 || cx > width + 120 || cy < -60 || cy > height + 60) continue;
+            ctx.globalAlpha = C.nameAlpha * ct;
+            ctx.strokeStyle = 'rgba(4,7,12,0.92)';   // paint-order: halo behind glyphs
+            ctx.lineWidth = 3.5;
+            ctx.strokeText(c.name, cx, cy);
+            ctx.fillStyle = c.accent;
+            ctx.fillText(c.name, cx, cy);
+            const w = ctx.measureText(c.name).width;
+            lastConstNames.push({ id: c.id, x: cx, y: cy, w: w + 18, h: C.nameSize + 14 });
+        }
+        if (canSpace) ctx.letterSpacing = '0px';
+        ctx.restore();
+        ctx.globalAlpha = 1;
+    }
+
+    function constellationNameAt(px, py) {
+        // Topmost-last: iterate in reverse so the last drawn name wins on overlap.
+        for (let i = lastConstNames.length - 1; i >= 0; i--) {
+            const b = lastConstNames[i];
+            if (Math.abs(px - b.x) <= b.w / 2 && Math.abs(py - b.y) <= b.h / 2) return b.id;
+        }
+        return null;
+    }
+
     function drawStars(k, tx, ty, nowSec) {
         ctx.save();
         ctx.globalCompositeOperation = 'lighter';
@@ -453,6 +537,9 @@ export function createCanvasRenderer(opts) {
         ctx.textAlign = 'center';
         ctx.textBaseline = 'alphabetic';
         const canSpace = 'letterSpacing' in ctx;
+        // Node labels recede as the constellation names rise (zoomed out), so the
+        // two label layers never fight. 1 when no overlay / zoomed in.
+        const labelMul = 1 - curConstT * THEME.constellation.labelFade;
 
         // Gather visible candidates, then place them strongest-first into an
         // occupancy grid so ambient field labels in dense clusters stop stacking
@@ -476,7 +563,7 @@ export function createCanvasRenderer(opts) {
             if (!strong && (occupied.has(key) || occupied.has(keyL) || occupied.has(keyR))) continue;
             occupied.add(key);
             const info = c.info;
-            ctx.globalAlpha = c.a.label.c;
+            ctx.globalAlpha = c.a.label.c * labelMul;
             ctx.font = `${info.size}px 'IBM Plex Mono', monospace`;
             if (canSpace) ctx.letterSpacing = info.field ? THEME.labels.field.spacing : '0px';
             ctx.strokeStyle = 'rgba(4,7,12,0.92)';   // CSS paint-order: stroke
@@ -502,10 +589,13 @@ export function createCanvasRenderer(opts) {
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
         ctx.clearRect(0, 0, width, height);
         const { k, x: tx, y: ty } = transform;
+        curConstT = constellationT();
         drawAtmosphere(k, tx, ty);
         drawEdges(k, tx, ty, nowSec);
+        drawConstellationLines(k, tx, ty, curConstT);   // above edges, below stars
         drawStars(k, tx, ty, nowSec);
         vignette.draw(ctx, width, height);
+        drawConstellationNames(k, tx, ty, curConstT);   // on top, readable
         drawFocusRing(k, tx, ty, nowSec);
         drawLabels(k, tx, ty);
         stats.lastMs = performance.now() - t0;
@@ -572,6 +662,22 @@ export function createCanvasRenderer(opts) {
         getTransform() { return transform; },
         setHover(id) { if (hoveredId !== id) { hoveredId = id; notify(); } },
         getHover() { return hoveredId; },
+        // Tour constellation overlay. `list` = [{id, name, accent, nodeIds[], segments[[a,b]]}];
+        // node ids resolve to live node objects so arcs/centroids track the layout.
+        setConstellations(list) {
+            const byId = new Map(nodes.map(n => [n.id, n]));
+            constellations = (list || []).map(c => ({
+                id: c.id, name: c.name, accent: c.accent,
+                members: (c.nodeIds || []).map(id => byId.get(id)).filter(Boolean),
+                segments: (c.segments || [])
+                    .map(([a, b]) => [byId.get(a), byId.get(b)])
+                    .filter(([a, b]) => a && b),
+            })).filter(c => c.segments.length);
+            notify();
+        },
+        constellationNameAt,
+        constellationCount: () => constellations.length,
+        constellationT: () => constellationT(),
         setSelected(node) { selectedNode = node || null; notify(); },
         setLpMode(v) { lpMode = !!v; notify(); },
         // test/diagnostic snapshot of what the scene is currently lighting up
@@ -592,6 +698,9 @@ export function createCanvasRenderer(opts) {
             for (const id of edgeLit.keys()) { if (!edgeSet.has(id)) edgeLit.delete(id); }
             // Nebulae are domain-anchored — rebuild when the visible set changes.
             nebulae = null;
+            // Constellation refs point at the old node objects — drop them (only
+            // the app sets constellations, and it never swaps its data).
+            constellations = []; lastConstNames = [];
             notify();
         },
     };

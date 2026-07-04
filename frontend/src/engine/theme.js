@@ -58,6 +58,21 @@ export const THEME = {
         related: 0.92,
         hovered: 0.9,
     },
+    // Tour "constellation" overlay on the full graph: dashed accent-colour spine
+    // arcs + a name at the tour's centroid, cross-faded by zoom. Pulled up when
+    // zoomed OUT (k ≤ inHi) — the whole-sky index — and gone when zoomed IN
+    // (k ≥ outHi), where individual node labels take over instead.
+    constellation: {
+        inHi: 0.55,          // fully present at/below this zoom scale
+        outHi: 0.9,          // fully gone at/above this zoom scale
+        lineAlpha: 0.5,      // spine arc alpha at full presence
+        lineWidth: 1.1,
+        dash: [5, 7],        // world-space dash pattern (scaled by k)
+        nameAlpha: 0.9,
+        nameSize: 13,
+        labelFade: 0.85,     // how much node labels recede at full constellation presence
+        focusDimOthers: 0.12, // ?constellation= : non-member star dim
+    },
 };
 
 // ── colour helpers ─────────────────────────────────────────────────────────

@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1、P0-2、P0-3、P0-4 完成）
+> 最後更新：2026-07-04（P0-1 ~ P0-5 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -52,7 +52,7 @@
   - c. 「進入圖譜」維持 `app.html` 不動（P0-6 再升級）。
   - 驗收：light 結尾至少 1 個 outward 活連結；推薦卡顯示且理由含具體概念名；無 `outward_links` 的 tour 行為與現在完全相同；E2E 補斷言。
 
-- [ ] **P0-5 星座層（主刀）**
+- [x] **P0-5 星座層（主刀）**（2026-07-04）
   - 改：`frontend/src/app-main.js`、`frontend/src/engine/canvas-renderer.js`（新畫層）、`frontend/src/engine/theme.js`（樣式 token）、E2E。
   - 作法：app 非阻塞 fetch `tour-index.json`（失敗靜默，星座層不出現——鐵律 1）。對每 tour 的 spine edges 以既有節點座標畫虛線弧（用 `geometry.js` 曲線），色 = `DOMAIN_COLORS[accent]`。zoom 語意：zoom 低（建議 < 0.55）星座線與星座名（置於該 tour 節點質心）漸顯、節點標籤淡出；zoom 高（> 0.9）反向。點擊星座名 → `wonders.html?w=<id>`；節點命中優先於星座。
   - 新 URL 參數 `app.html?constellation=<tourId>`：載入後以該 tour 節點包圍盒取景置中、spine 高亮、其餘 dim（沿用 `vis` 旗標模式）。
