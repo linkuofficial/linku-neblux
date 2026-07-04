@@ -30,24 +30,8 @@
     border-bottom: 1.5px solid rgba(240, 192, 80, 0.72);
 }
 
-#ctaExplore {
-    letter-spacing: 0.04em;
-    padding: 10px 22px;
-    font-family: var(--font-label);
-    border-radius: var(--neblux-radius-md);
-    background: rgba(240, 192, 80, 0.92) !important;
-    color: #1a1208 !important;
-    border-color: transparent !important;
-    font-weight: 600;
-}
-
-#ctaExplore:hover {
-    background: rgba(240, 192, 80, 1) !important;
-}
-
-#nodeCount {
-    display: none !important;
-}
+/* #ctaExplore is now a quiet secondary entrance (the featured tour card is the
+   primary CTA) — its styling comes from the shared glass-pane utility classes. */
 
 /* Recipe C — ghost (no container chrome; two text links + faint divider). */
 .footer-nav {

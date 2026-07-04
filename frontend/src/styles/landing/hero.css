@@ -15,3 +15,51 @@
     text-wrap: pretty;           /* 避免末行孤字 */
     line-height: 1.55;
 }
+
+/* Featured Wonder card — the landing's headline tour CTA (primary entrance;
+   the graph is demoted to the quiet secondary links below it). */
+.featured-card {
+    display: block;
+    padding: 22px 24px;
+    border-radius: 16px;
+    text-decoration: none;
+    border-left: 3px solid var(--featured-accent, #c95b9b);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+.featured-card:hover {
+    transform: translateY(-2px);
+    background: color-mix(in srgb, var(--featured-accent, #c95b9b) 10%, transparent);
+}
+.featured-card[hidden] { display: none; }
+.featured-eyebrow {
+    display: block;
+    font-family: var(--font-label, 'IBM Plex Mono', monospace);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--featured-accent, #c95b9b);
+    margin-bottom: 8px;
+}
+.featured-title {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    line-height: 1.1;
+    color: #e8eef7;
+    margin-bottom: 8px;
+}
+.featured-intro {
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(212, 228, 250, 0.72);
+    margin-bottom: 14px;
+}
+.featured-cta {
+    display: inline-block;
+    font-family: var(--font-label, 'IBM Plex Mono', monospace);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--featured-accent, #c95b9b);
+}

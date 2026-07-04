@@ -1,8 +1,15 @@
 import { test, expect } from "@playwright/test";
 
-test("index page loads", async ({ page }) => {
+test("index page loads with a featured tour front and centre", async ({ page }) => {
     await page.goto("/");
     await expect(page).toHaveTitle(/Neblux/);
+    // The landing headlines a specific tour that links into Wonders.
+    const featured = page.locator("#featuredCard");
+    await expect(featured).toBeVisible();
+    await expect(featured).toHaveAttribute("href", /wonders\.html\?w=light/);
+    await expect(page.locator("#featuredTitle")).not.toBeEmpty();
+    // The old NODES · EDGES · DOMAINS stat line is gone.
+    await expect(page.locator("#nodeCount")).toHaveCount(0);
 });
 
 test("app page loads and shows graph container", async ({ page }) => {

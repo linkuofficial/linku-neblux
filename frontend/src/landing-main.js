@@ -19,11 +19,15 @@
 
         // ─── State ───────────────────────────────────────────────────────
         const SUPPORTED_LANGS = ['en', 'zh', 'ja'];
+        const FEATURED_TOUR = 'light';   // the landing's headline tour — rotate = edit this line
         let allNodes = [];
         let searchIndex = [];
         let i18n = null;
+        let featuredWonder = null;
         let lang = normalizeLang(localStorage.getItem('neblux-lang'));
         let activeIndex = -1;
+
+        function pickLang(obj) { return (obj && (obj[lang] || obj.en)) || ''; }
 
         function normalizeLang(value) {
             if (!value) return 'en';
@@ -41,13 +45,17 @@
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
         const searchSpinner = document.getElementById('searchSpinner');
-        const nodeCountEl = document.getElementById('nodeCount');
         const langToggle = document.getElementById('langToggle');
         const heroKicker = document.getElementById('heroKicker');
         const heroTitle = document.getElementById('heroTitle');
         const heroSubtitle = document.getElementById('heroSubtitle');
         const ctaExplore = document.getElementById('ctaExplore');
         const ctaWonders = document.getElementById('ctaWonders');
+        const featuredCard = document.getElementById('featuredCard');
+        const featuredEyebrow = document.getElementById('featuredEyebrow');
+        const featuredTitle = document.getElementById('featuredTitle');
+        const featuredIntro = document.getElementById('featuredIntro');
+        const featuredCtaEl = document.getElementById('featuredCta');
         const pillTooltip = document.getElementById('pillTooltip');
         const pillTooltipDomain = document.getElementById('pillTooltipDomain');
         const pillTooltipTitle = document.getElementById('pillTooltipTitle');
@@ -141,11 +149,33 @@
                     tags: (node.display_tags || []).map((t) => String(t).toLowerCase()),
                     desc: (node.description || '').toLowerCase(),
                 }));
-                nodeCountEl.textContent = `${allNodes.length} NODES · ${countEdges(data)} EDGES · 13 DOMAINS`;
-                nodeCountEl.style.opacity = '1';
             } catch (e) {
                 console.error('Failed to load nodes:', e);
             }
+        }
+
+        // Headline tour for the featured card. Progressive — if it fails to load,
+        // the card stays hidden and the rest of the landing is unaffected.
+        async function loadFeatured() {
+            try {
+                const res = await fetch(`../data/wonders/${FEATURED_TOUR}.json`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                featuredWonder = await res.json();
+            } catch (e) {
+                featuredWonder = null;
+            }
+        }
+
+        function renderFeatured(langCopy) {
+            if (!featuredCard || !featuredWonder) return;
+            const w = featuredWonder;
+            featuredCard.href = `wonders.html?w=${FEATURED_TOUR}`;
+            featuredCard.style.setProperty('--featured-accent', DOMAIN_COLORS[w.accent] || '#c95b9b');
+            featuredEyebrow.textContent = `${langCopy.featuredEyebrow} · ${(w.steps || []).length} ${langCopy.featuredSteps}`;
+            featuredTitle.textContent = pickLang(w.title);
+            featuredIntro.textContent = pickLang(w.intro);
+            featuredCtaEl.textContent = langCopy.featuredCta;
+            featuredCard.hidden = false;
         }
 
         async function loadI18n(locale) {
@@ -169,15 +199,6 @@
                 console.warn('i18n load failed:', e);
                 i18n = null;
             }
-        }
-
-        function countEdges(data) {
-            if (data.edges) return data.edges.length;
-            let count = 0;
-            for (const node of (data.nodes || [])) {
-                count += (node.connections || []).length;
-            }
-            return Math.floor(count / 2);
         }
 
         // ─── Search ──────────────────────────────────────────────────────
@@ -420,8 +441,11 @@
                     heroKicker: 'BEGIN ANYWHERE',
                     heroTitle: 'Everything touches <span class="text-primary">everything</span>',
                     heroSubtitle: 'Follow one spark of curiosity into the deep field of everything we know.',
-                    ctaExplore: 'Start Exploring',
-                    ctaWonders: 'Take a guided tour',
+                    ctaExplore: 'Open the graph',
+                    ctaWonders: 'Browse all wonders',
+                    featuredEyebrow: 'FEATURED WONDER',
+                    featuredSteps: 'steps',
+                    featuredCta: 'Begin this tour →',
                     placeholder: 'Explore the infinite...',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX. EXPLORE THE INFINITE.`,
                     footerGraph: 'Graph',
@@ -431,8 +455,11 @@
                     heroKicker: '從任一點開始',
                     heroTitle: '萬物彼此<span class="text-primary">相連</span>',
                     heroSubtitle: '順著一絲好奇，潛入人類所知的浩瀚星海。',
-                    ctaExplore: '開始探索',
-                    ctaWonders: '來趟驚奇之旅',
+                    ctaExplore: '打開圖譜',
+                    ctaWonders: '瀏覽所有驚奇',
+                    featuredEyebrow: '精選驚奇',
+                    featuredSteps: '步',
+                    featuredCta: '開始這趟 →',
                     placeholder: '探索無限知識…',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX．探索無限知識。`,
                     footerGraph: '圖譜',
@@ -442,8 +469,11 @@
                     heroKicker: 'どこからでも',
                     heroTitle: 'すべては、すべてに<span class="text-primary">つながる</span>',
                     heroSubtitle: 'ひとつの好奇心を追って、知の深宇宙へ。',
-                    ctaExplore: '探索する',
-                    ctaWonders: 'ガイドツアーへ',
+                    ctaExplore: 'グラフを開く',
+                    ctaWonders: 'すべてのツアー',
+                    featuredEyebrow: '注目のツアー',
+                    featuredSteps: 'ステップ',
+                    featuredCta: 'このツアーへ →',
                     placeholder: '無限の知識を探索…',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX. 知のつながりを探索する。`,
                     footerGraph: 'グラフ',
@@ -525,6 +555,7 @@
 
             const langCopy = copy[lang] || copy.en;
             const tooltipCopy = pillTooltipMap[lang] || pillTooltipMap.en;
+            renderFeatured(langCopy);
             heroKicker.textContent = langCopy.heroKicker;
             heroTitle.innerHTML = langCopy.heroTitle;
             heroSubtitle.textContent = langCopy.heroSubtitle;
@@ -566,7 +597,7 @@
         // ─── Init ────────────────────────────────────────────────────────
         document.documentElement.lang = htmlLang(lang);
         localStorage.setItem('neblux-lang', lang);
-        Promise.all([loadData(), loadI18n(lang)]).then(() => {
+        Promise.all([loadData(), loadI18n(lang), loadFeatured()]).then(() => {
             applyLang();
         });
 

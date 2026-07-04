@@ -96,15 +96,23 @@
                 </p>
             </section>
 
-            <!-- Primary CTAs -->
-            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+            <!-- Featured Wonder (headline tour) — the landing's primary CTA -->
+            <a id="featuredCard" href="wonders.html" hidden
+                class="featured-card glass-pane w-full text-left transition-colors duration-300">
+                <span id="featuredEyebrow" class="featured-eyebrow"></span>
+                <span id="featuredTitle" class="featured-title"></span>
+                <span id="featuredIntro" class="featured-intro"></span>
+                <span id="featuredCta" class="featured-cta"></span>
+            </a>
+
+            <!-- Secondary entrances (graph demoted to a quiet link) -->
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
                 <a id="ctaWonders"
-                    class="glass-pane px-6 py-3 text-center font-label-code text-label-code text-on-surface transition-colors duration-300"
-                    style="border-color:rgba(201,91,155,0.45);background:rgba(201,91,155,0.1)"
-                    href="wonders.html">Take a guided tour</a>
+                    class="glass-pane px-5 py-2.5 text-center font-label-code text-label-code text-on-surface/70 hover:text-on-surface transition-colors duration-300"
+                    href="wonders.html">Browse all wonders</a>
                 <a id="ctaExplore"
-                    class="glass-pane px-6 py-3 text-center font-label-code text-label-code text-on-surface transition-colors duration-300"
-                    href="app.html">Start Exploring</a>
+                    class="glass-pane px-5 py-2.5 text-center font-label-code text-label-code text-on-surface/70 hover:text-on-surface transition-colors duration-300"
+                    href="app.html">Open the graph</a>
             </div>
 
             <!-- Search Container (relative for dropdown positioning) -->
@@ -171,11 +179,6 @@
                 <div id="pillTooltipBody" class="pill-tooltip-body"></div>
             </div>
 
-            <!-- Node count indicator -->
-            <div id="nodeCount"
-                class="font-label-code text-[11px] text-on-surface/20 tracking-wider opacity-0 transition-opacity duration-700">
-                <!-- Populated after data loads -->
-            </div>
         </div>
     </main>
 

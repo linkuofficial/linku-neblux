@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1 ~ P0-6 完成）
+> 最後更新：2026-07-04（P0-1 ~ P0-7 完成；剩 P0-B 火種句待 [人工] 審核）
 
 ## 工作守則（每次開工先讀）
 
@@ -64,7 +64,7 @@
   - 作法：card 若 `tour-index.nodes[id]` 存在 → 列「這顆星是〈光〉第 5 站 →」連 `wonders.html?w=&s=`（多重隸屬全列）。wonders 每站加安靜連結「在整片天空看這顆星 →」連 `app.html?node=<ref>`（`local` 節點不顯示）。tour 結尾「進入圖譜」改連 `app.html?constellation=<id>`。
   - 驗收：三個方向跳轉正確；E2E。
 
-- [ ] **P0-7 落地頁改版**
+- [x] **P0-7 落地頁改版**（2026-07-04）
   - 改：`frontend/index.html`、`frontend/src/landing-main.js`。
   - 作法：頂部常數 `const FEATURED_TOUR = 'light'`（輪替＝手動改這行）。首屏全幅 featured 卡（title/intro/步數/開始 CTA，三語）；「Start Exploring」降次要樣式；footer 移除「N NODES · N EDGES · 13 DOMAINS」統計行。
   - 驗收：首屏可見 featured tour 並可點入；E2E smoke 更新。
