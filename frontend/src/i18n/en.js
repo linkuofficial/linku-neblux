@@ -22,6 +22,7 @@ export default {
     prerequisites: '\u2191 What it builds on',
     unlocks: '\u2193 Where it leads',
     allConnections: 'All Connections',
+    starInTour: 'Step {step} of “{tour}” →',
     noneFoundational: 'None \u2014 this is a foundation.',
     noneDetected: 'Nothing yet \u2014 this is a frontier.',
     pending: 'pending',

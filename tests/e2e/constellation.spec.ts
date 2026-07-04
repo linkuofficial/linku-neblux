@@ -115,6 +115,24 @@ test("clicking a constellation name enters its tour", async ({ page }) => {
     await expect(page).toHaveURL(new RegExp(`wonders\\.html\\?w=${target!.id}`));
 });
 
+test("a graph node that is a tour step links back into that tour", async ({ page }) => {
+    await page.addInitScript(() => {
+        try {
+            localStorage.setItem("neblux-app-onboard-seen-v1", "1");
+        } catch {}
+    });
+    await page.goto("/app.html");
+    await appReady(page); // appReady waits for the tour-index (constellations) to load
+    await page.evaluate(() => document.getElementById("welcome-overlay")?.classList.add("hidden"));
+
+    // optics_concept is step 1 of the Light tour.
+    await page.evaluate(() => (window as any).__nebluxApp.selectNode("optics_concept"));
+    const link = page.locator('#p-tours a[href="wonders.html?w=light&s=1"]');
+    await expect(link).toBeVisible();
+    await link.click();
+    await expect(page).toHaveURL(/wonders\.html\?w=light&s=1/);
+});
+
 test("app.html?constellation=<id> frames and lights only that tour", async ({ page }) => {
     await page.goto("/app.html?constellation=the-mind");
     await appReady(page);

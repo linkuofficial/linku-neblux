@@ -22,6 +22,7 @@ export default {
     prerequisites: '\u2191 \u5b83\u7684\u6839\u57fa',
     unlocks: '\u2193 \u5b83\u901a\u5411\u4f55\u65b9',
     allConnections: '\u6240\u6709\u9023\u7d50',
+    starInTour: '\u9019\u9846\u661f\u662f\u3008{tour}\u3009\u7b2c {step} \u7ad9 \u2192',
     noneFoundational: '\u7121 \u2014 \u9019\u88e1\u662f\u6839\u57fa\u3002',
     noneDetected: '\u5c1a\u7121 \u2014 \u9019\u88e1\u662f\u524d\u6cbf\u3002',
     pending: '\u5f85\u78ba\u8a8d',

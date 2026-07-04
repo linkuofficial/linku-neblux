@@ -587,6 +587,22 @@
     margin-top: 2px;
 }
 
+/* Quiet per-step wormhole to the full graph. */
+#wp-sky {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    color: var(--ink-soft);
+    text-decoration: none;
+    opacity: 0.75;
+    transition: color 0.2s, opacity 0.2s;
+}
+#wp-sky[hidden] { display: none; }
+#wp-sky:hover { color: var(--accent); opacity: 1; }
+
 #wp-nav {
     margin-top: 14px;
     display: flex;

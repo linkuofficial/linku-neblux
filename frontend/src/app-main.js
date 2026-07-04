@@ -1469,6 +1469,21 @@ function openPanel(d) {
     document.getElementById('p-domains').innerHTML = d.domain.map(dm =>
         `<span class="d-badge" style="color:${DC[dm]}">${escHtml(dm)}</span>`
     ).join('');
+
+    // Wormhole into Wonders: if this star is a step on one or more tours, link
+    // straight to that beat. All memberships listed. (Progressive — no tour-index,
+    // no line.)
+    const pTours = document.getElementById('p-tours');
+    if (pTours) {
+        const memberships = (tourIndex && tourIndex.nodes && tourIndex.nodes[d.id]) || [];
+        pTours.innerHTML = memberships.map(m => {
+            const tour = tourIndex.tours && tourIndex.tours[m.tour];
+            const accent = DC[tour && tour.accent] || 'var(--node-accent)';
+            const label = t('starInTour').replace('{tour}', escHtml(pickTitle(tour, m.tour))).replace('{step}', m.step);
+            return `<a class="p-tour" href="wonders.html?w=${encodeURIComponent(m.tour)}&s=${m.step}" style="--tour-accent:${accent}">${label}</a>`;
+        }).join('');
+        pTours.style.display = memberships.length ? '' : 'none';
+    }
     document.getElementById('p-desc').innerHTML = renderPanelDescription(d);
     document.getElementById('p-tags').innerHTML = (d.display_tags || []).map((tag) =>
         `<span class="tag">${escHtml(localizeTag(tag))}</span>`

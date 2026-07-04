@@ -99,6 +99,23 @@ test("the finale turns outward prose into live graph links + next-tour cards", a
     await expect(page.locator("#wp-recs .wp-rec-why").first()).not.toBeEmpty();
 });
 
+test("each tour step links out to that concept on the full graph", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=3"); // step 3 = electromagnetic_radiation_concept
+    await ready(page);
+    const sky = page.locator("#wp-sky");
+    await expect(sky).toBeVisible();
+    await expect(sky).toHaveAttribute("href", "app.html?node=electromagnetic_radiation_concept");
+});
+
+test("the tour's exit to the graph lands on its constellation", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=7"); // finale
+    await ready(page);
+    const alt = page.locator("#wp-alt");
+    await expect(alt).toBeVisible();
+    await alt.click();
+    await expect(page).toHaveURL(/app\.html\?constellation=light/);
+});
+
 test("a tour without outward_links keeps plain, link-free outward prose", async ({ page }) => {
     await page.goto("/wonders.html?w=edge-ai&s=7");
     await ready(page);

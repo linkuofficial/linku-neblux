@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1 ~ P0-5 完成）
+> 最後更新：2026-07-04（P0-1 ~ P0-6 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -59,7 +59,7 @@
   - 驗收：E2E 像素取樣證低 zoom 有星座線、高 zoom 無；點星座名跳轉；`?constellation=light` 取景並高亮。
   - 陷阱：畫層順序在一般 edges 之上、節點之下；尊重 `prefers-reduced-motion`；visual-styles 基準會變（守則 3）；19×~6 條邊，無效能疑慮，勿過度優化。
 
-- [ ] **P0-6 雙向蟲洞**
+- [x] **P0-6 雙向蟲洞**（2026-07-04）
   - 改：`frontend/src/app-main.js`（detail card）、`frontend/src/wonders-main.js`（每站 footer）、兩邊 i18n 字串（三語）。
   - 作法：card 若 `tour-index.nodes[id]` 存在 → 列「這顆星是〈光〉第 5 站 →」連 `wonders.html?w=&s=`（多重隸屬全列）。wonders 每站加安靜連結「在整片天空看這顆星 →」連 `app.html?node=<ref>`（`local` 節點不顯示）。tour 結尾「進入圖譜」改連 `app.html?constellation=<id>`。
   - 驗收：三個方向跳轉正確；E2E。

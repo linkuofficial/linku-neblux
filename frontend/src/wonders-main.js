@@ -38,6 +38,7 @@ const UI = {
         tagHook: 'A QUESTION', tagExample: 'FOR INSTANCE', tagSurprise: 'THE TWIST',
         cueNext: 'Up next', cueOutward: 'Go further', recWhy: 'from “{via}”, keep falling',
         start: 'Begin the tour', wander: 'Wander the graph', otherTours: 'Explore other wonders →',
+        skyLink: 'See this star in the whole sky →',
         steps: 'steps', hint: '✦ Tap any star to jump to its step',
         pickerKicker: 'Wonders', pickerTitle: 'Choose a wonder',
         pickerSubtitle: 'Pick a thread of curiosity and follow it, step by step.',
@@ -50,6 +51,7 @@ const UI = {
         tagHook: '先想想', tagExample: '舉個例', tagSurprise: '意外的是',
         cueNext: '接下來', cueOutward: '想真的學會', recWhy: '從『{via}』，繼續往下墜',
         start: '開始這趟', wander: '漫遊整張圖', otherTours: '探索其他主題 →',
+        skyLink: '在整片天空看這顆星 →',
         steps: '步', hint: '✦ 點任一顆星，就能跳到那一步',
         pickerKicker: '驚奇之旅', pickerTitle: '選一趟驚奇之旅',
         pickerSubtitle: '挑一條好奇的線索，一步步跟著它走。',
@@ -62,6 +64,7 @@ const UI = {
         tagHook: 'まず考えて', tagExample: 'たとえば', tagSurprise: '意外にも',
         cueNext: '次は', cueOutward: 'さらに先へ', recWhy: '「{via}」から、もっと深くへ',
         start: 'ツアーを始める', wander: 'グラフを散歩する', otherTours: '他のツアーへ →',
+        skyLink: '空全体でこの星を見る →',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
         pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
         pickerSubtitle: '好奇心の糸を一つ選んで、一歩ずつたどってみましょう。',
@@ -547,6 +550,20 @@ function renderStep(i, recenter = true) {
         alt.hidden = true;
     }
 
+    // Quiet wormhole to the full graph — see this concept among all the stars.
+    // Only ref steps have a graph counterpart; tour-local nodes hide the link.
+    const sky = $('wp-sky');
+    if (sky) {
+        const ref = wonder.steps[i] && wonder.steps[i].ref;
+        if (ref) {
+            sky.textContent = t('skyLink');
+            sky.href = `app.html?node=${encodeURIComponent(ref)}`;
+            sky.hidden = false;
+        } else {
+            sky.hidden = true;
+        }
+    }
+
     // Progress dots. Keep keyboard focus from dropping to <body> when the dots
     // are rebuilt — a keyboard user mid-tour stays on the (new) active dot.
     const prog = $('wp-progress');
@@ -865,7 +882,11 @@ async function boot() {
         if (stepIndex === wonder.steps.length - 1) { window.location.href = 'wonders.html'; }
         else goToStep(stepIndex + 1);
     });
-    document.getElementById('wp-alt').addEventListener('click', () => { window.location.href = 'app.html'; });
+    // "Enter the graph" from a tour's end → land on that tour's constellation
+    // (framed + lit), not a cold full-graph view.
+    document.getElementById('wp-alt').addEventListener('click', () => {
+        window.location.href = wonderId ? `app.html?constellation=${wonderId}` : 'app.html';
+    });
     document.getElementById('wi-start').addEventListener('click', () => startTour());
     document.getElementById('loading-retry').addEventListener('click', boot);
 
