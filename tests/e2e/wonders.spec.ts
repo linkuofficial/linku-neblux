@@ -32,6 +32,29 @@ test("a deep-link loads the tour subgraph with a clean console + intro gate", as
     expect(errors, `runtime errors during tour load:\n${errors.join("\n")}`).toHaveLength(0);
 });
 
+test("a step-level deep link opens that step directly, skipping the intro", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=4");
+    await ready(page);
+
+    // ?s=4 skips the intro gate and opens on step 4 of 7
+    await expect(page.locator("#wonder-panel")).toBeVisible();
+    await expect(page.locator("#wonder-intro")).toBeHidden();
+    await expect(page.locator("#wp-count")).toContainText("4 / 7");
+
+    // stepping keeps the URL in sync (1-based)
+    await page.locator("#wp-next").click();
+    await expect(page.locator("#wp-count")).toContainText("5 / 7");
+    await expect(page).toHaveURL(/\?w=light&s=5/);
+});
+
+test("an out-of-range ?s is ignored and falls back to the intro gate", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=99");
+    await ready(page);
+    // invalid step → treat as a plain deep-link: show the intro for context
+    await expect(page.locator("#wonder-intro")).toBeVisible();
+    await expect(page.locator("#wonder-panel")).toBeHidden();
+});
+
 test("the intro gate starts the tour and steps advance", async ({ page }) => {
     await page.goto("/wonders.html?w=edge-ai");
     await ready(page);

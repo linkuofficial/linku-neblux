@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04
+> 最後更新：2026-07-04（P0-1 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -19,7 +19,7 @@
 
 ## Phase 0 — 前端（純靜態）
 
-- [ ] **P0-1 站級深連結**
+- [x] **P0-1 站級深連結**（2026-07-04）
   - 改：`frontend/src/wonders-main.js`、`tests/e2e/wonders.spec.ts`。
   - 作法：`goToStep(k)` 內 `history.replaceState(null, '', '?w='+id+'&s='+(k+1))`（URL 用 1-based）。載入時解析 `s`：合法（1..steps.length）→ 跳過 intro 直接開始並 `goToStep(s-1)`；不合法 → 忽略。回 picker 時 URL 清空參數。
   - 驗收：`wonders.html?w=light&s=4` 直開第 4 站、計數顯「4 / 7」；原 intro／autostart 流程不變；新增 E2E。

@@ -77,6 +77,7 @@ else if (LANG.startsWith('ja')) LANG = 'ja';
 else LANG = 'en';
 
 let wonder = null;
+let wonderId = null;          // current tour id, for deep-link URL sync
 let graphNodes = null;        // cached full-graph nodes (loaded once)
 let pickerMetas = null;       // cached [{id, wonder}] for the picker
 let labelMap = {};            // id -> localized label string (non-en)
@@ -511,14 +512,20 @@ function goToStep(i) {
     i = Math.max(0, Math.min(wonder.steps.length - 1, i));
     stepIndex = i;
     renderStep(i);
+    // Deep link: mirror the current step in the address bar (1-based) so the URL
+    // is shareable and reload lands on this exact beat. replaceState (not push) —
+    // stepping through a tour shouldn't stack browser-history entries.
+    if (wonderId) {
+        try { history.replaceState(null, '', `?w=${wonderId}&s=${i + 1}`); } catch {}
+    }
 }
 
-function startTour() {
+function startTour(startStep = 0) {
     started = true;
     document.getElementById('wonder-intro').hidden = true;
     const panel = document.getElementById('wonder-panel');
     panel.hidden = false;
-    goToStep(0);
+    goToStep(startStep);   // goToStep clamps, so an out-of-range deep link is safe
     // Move focus off the now-hidden start button onto the panel so keyboard /
     // screen-reader users land on the narrative.
     panel.focus();
@@ -703,6 +710,7 @@ async function loadWonder(id) {
     }
     await loadLabelMap(LANG);
     wonder = await fetchJson(`/data/wonders/${id}.json`);
+    wonderId = id;
     buildSubgraph(graphNodes);
     if (!nodes.length) throw new Error('empty subgraph');
 
@@ -716,23 +724,29 @@ async function loadWonder(id) {
     renderer.resize();
     sim.alpha(1).restart();
 
-    // Coming from the picker, the visitor already saw this tour's title, intro
-    // and length on the card, so skip the intro gate and open on step one. A
-    // direct deep-link (?w=…) still gets the intro card for context.
-    let autostart = false;
+    // Entry routing, in priority order (startStep -1 = show the intro gate):
+    //   1. picker autostart (sessionStorage) — visitor already saw the card → step one
+    //   2. deep-link ?s=<k> with a valid step — a shared step link → open on it
+    //   3. plain ?w=<id> — a direct link with no step → intro card for context
+    let startStep = -1;
     try {
         if (sessionStorage.getItem('wonder-autostart') === id) {
             sessionStorage.removeItem('wonder-autostart');
-            autostart = true;
+            startStep = 0;
         }
     } catch {}
-    if (!autostart) document.getElementById('wonder-intro').hidden = false;
+    if (startStep < 0) {
+        const sRaw = new URLSearchParams(window.location.search).get('s');
+        const s = sRaw && /^\d+$/.test(sRaw) ? parseInt(sRaw, 10) : NaN;
+        if (s >= 1 && s <= wonder.steps.length) startStep = s - 1;   // URL is 1-based
+    }
+    if (startStep < 0) document.getElementById('wonder-intro').hidden = false;
 
     // Let the layout settle briefly, then either frame the field (intro) or open
-    // on step one (autostart) — never both, so the camera isn't yanked.
+    // on the target step — never both, so the camera isn't yanked.
     setTimeout(() => {
         renderer.resize();
-        if (!started) { autostart ? startTour() : fitView(0); }
+        if (!started) { startStep >= 0 ? startTour(startStep) : fitView(0); }
     }, 700);
 }
 
@@ -749,7 +763,7 @@ async function boot() {
         else goToStep(stepIndex + 1);
     });
     document.getElementById('wp-alt').addEventListener('click', () => { window.location.href = 'app.html'; });
-    document.getElementById('wi-start').addEventListener('click', startTour);
+    document.getElementById('wi-start').addEventListener('click', () => startTour());
     document.getElementById('loading-retry').addEventListener('click', boot);
 
     try {
