@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { pathToFileURL } from 'url';
 import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync } from 'fs';
 import { buildTourIndex } from './scripts/build_tour_index.mjs';
+import { buildStaticHtml } from './scripts/build_static_html.mjs';
 
 function copyDataPlugin() {
     return {
@@ -104,9 +105,25 @@ function copyDataPlugin() {
     };
 }
 
+// Generate the static machine-readable layer (concept pages ×3 langs, trust
+// pages, sitemap, graph.json) into frontend/public so the dev server serves them
+// and build copies them into dist/. Outputs are gitignored build artifacts.
+function staticHtmlPlugin() {
+    return {
+        name: 'static-html',
+        buildStart() {
+            try {
+                buildStaticHtml(resolve(__dirname, 'data'), resolve(__dirname, 'frontend/public'));
+            } catch (err) {
+                this.warn?.(`static html build skipped: ${(err as Error).message}`);
+            }
+        },
+    };
+}
+
 export default defineConfig({
     root: 'frontend',
-    plugins: [copyDataPlugin()],
+    plugins: [copyDataPlugin(), staticHtmlPlugin()],
     resolve: {
         alias: {
             '@': resolve(__dirname, 'frontend/src'),

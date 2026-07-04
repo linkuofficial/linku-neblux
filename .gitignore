@@ -14,6 +14,16 @@ __pycache__/
 # Data files copied to public at build time (derived from data/)
 frontend/public/data/
 
+# Static machine-readable layer generated at build time (scripts/build_static_html.mjs):
+# concept pages ×3 langs, trust pages, sitemap. Regenerated on every dev start / build.
+frontend/public/concepts/
+frontend/public/zh/
+frontend/public/ja/
+frontend/public/about.html
+frontend/public/methodology.html
+frontend/public/sources.html
+frontend/public/sitemap.xml
+
 # Content-pipeline scratch: scores, worklists, batch rewrites, specs, temp dumps
 data/_*
 data/all_nodes_backup_*.json
