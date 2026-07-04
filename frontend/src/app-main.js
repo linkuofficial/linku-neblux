@@ -179,6 +179,7 @@ function structLabel(kind, type) {
             ja: person ? '代表的な著作・業績' : event ? '経過と主な出来事' : '代表例',
         },
         links: { en: 'Connections across fields', zh: '跨領域連結', ja: '分野とのつながり' },
+        lead: { en: 'In precise terms', zh: '更精確地說', ja: 'より正確に言うと' },
     };
     const set = L[kind] || L.links;
     return set[LANG] || set.en;
@@ -190,7 +191,16 @@ function descBlock(title, inner) {
 
 function renderStructuredSections(node, sec) {
     const type = node.type;
-    let html = `<p class="pd-lead">${descInlineMarkup(sec.lead || '')}</p>`;
+    // A reviewed "spark" — a hook-voice opener — leads when present, and the
+    // precise definition (lead) tucks into a collapsible below it, so the star
+    // lands before the textbook line. Nodes without a spark are unchanged.
+    let html;
+    if (sec.spark) {
+        html = `<p class="pd-lead pd-spark">${descInlineMarkup(sec.spark)}</p>`;
+        if (sec.lead) html += descBlock(structLabel('lead', type), `<p>${descInlineMarkup(sec.lead)}</p>`);
+    } else {
+        html = `<p class="pd-lead">${descInlineMarkup(sec.lead || '')}</p>`;
+    }
     if (sec.core) html += descBlock(structLabel('core', type), `<p>${descInlineMarkup(sec.core)}</p>`);
     if (sec.works && sec.works.length) {
         const items = sec.works.map((w) => `<li>${descInlineMarkup(w)}</li>`).join('');
