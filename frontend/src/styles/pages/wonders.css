@@ -482,6 +482,9 @@
     padding: 16px 26px 22px;
     border-top: 0.5px solid var(--line-subtle);
 }
+/* Explicit display on these ids out-specifies the UA [hidden] rule — restore it
+   so toggling .hidden actually removes them (last step swaps thread ↔ outward). */
+#wp-thread[hidden], #wp-outward[hidden], #wp-recs[hidden] { display: none; }
 #wp-thread {
     display: block;
     font-family: var(--font-body);
@@ -512,17 +515,77 @@
     background: rgba(240, 192, 80, 0.1);
     border-color: rgba(240, 192, 80, 0.35);
 }
-#wp-thread.is-outward {
-    cursor: default;
-    color: var(--ink-soft);
+/* Last-step outward prose — readable (not greyed), carrying live links into the
+   graph. Replaces the old inert .is-outward thread. */
+#wp-outward {
+    font-family: var(--font-body);
     font-size: var(--text-sm);
     line-height: var(--leading-relaxed);
+    color: var(--ink-soft);
     background: rgba(255, 255, 255, 0.04);
     border: 0.5px solid var(--line-subtle);
     border-radius: var(--radius-md);
     padding: 14px 16px;
 }
-#wp-thread.is-outward::after { content: ''; }
+#wp-outward::before {
+    content: attr(data-cue);
+    display: block;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+#wp-outward .wp-outlink {
+    color: var(--ink-main);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(240, 192, 80, 0.5);
+    transition: color 0.2s, border-color 0.2s;
+}
+#wp-outward .wp-outlink:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Next-tour recommendation cards (endgame). */
+#wp-recs {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.wp-rec {
+    display: block;
+    text-decoration: none;
+    padding: 11px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 0.5px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    transition: background 0.2s var(--ease-ui), border-color 0.2s;
+}
+.wp-rec:hover {
+    background: rgba(240, 192, 80, 0.1);
+    border-color: rgba(240, 192, 80, 0.35);
+}
+.wp-rec-cue {
+    display: block;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 3px;
+}
+.wp-rec-title {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--ink-main);
+}
+.wp-rec-title::after { content: ' →'; color: var(--accent); }
+.wp-rec-why {
+    display: block;
+    font-size: var(--text-2xs);
+    color: var(--ink-soft);
+    margin-top: 2px;
+}
 
 #wp-nav {
     margin-top: 14px;

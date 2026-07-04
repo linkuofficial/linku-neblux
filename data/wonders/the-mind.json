@@ -188,5 +188,9 @@
     "en": "Want to fall further? Read about the 'hard problem of consciousness' and why it splits philosophers, look up Libet's free-will experiments and the storm of debate around them, or read about split-brain patients — people whose two hemispheres were surgically separated and who seem, unsettlingly, to harbor two minds in one skull. The deepest mystery science has is still wide open, and you are welcome inside it.",
     "zh": "想再往下墜一點？讀讀「意識的困難問題」、看看它為何讓哲學家們分裂兩派，查查利貝特（Libet）的自由意志實驗以及圍繞它的爭論風暴，或讀讀「裂腦」病人——那些左右半腦被手術分開的人，似乎令人不安地，在一顆顱骨裡藏著兩個心智。科學手上最深的謎，至今依然全然敞開，而你，受邀走進其中。",
     "ja": "もっと落ちてみたいですか？「意識のハードプロブレム」と、それが哲学者をなぜ二分するのかを読み、リベット（Libet）の自由意志実験と、それを取り巻く論争の嵐を調べ、分離脳の患者について読んでみてください——左右の半球を手術で切り離され、一つの頭蓋に二つの心を宿しているかに見える人々です。科学が抱える最も深い謎は、いまなお大きく開かれており、あなたはその中へ招かれています。"
-  }
+  },
+  "outward_links": [
+    { "node": "free_will_concept", "match": { "en": "free-will", "zh": "自由意志", "ja": "自由意志" } },
+    { "node": "consciousness_concept", "match": { "en": "consciousness", "zh": "意識", "ja": "意識" } }
+  ]
 }

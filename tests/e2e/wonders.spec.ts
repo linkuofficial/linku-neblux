@@ -81,6 +81,31 @@ test("picking a tour from the picker dives straight in (no second gate)", async 
     await expect(page.locator("#wonder-intro")).toBeHidden();
 });
 
+test("the finale turns outward prose into live graph links + next-tour cards", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=7"); // deep-link straight to the last step
+    await ready(page);
+    await expect(page.locator("#wp-count")).toContainText("7 / 7");
+
+    // outward prose carries at least one live link into the graph
+    const outlink = page.locator("#wp-outward a.wp-outlink").first();
+    await expect(outlink).toBeVisible();
+    await expect(outlink).toHaveAttribute("href", /app\.html\?node=laser_concept/);
+
+    // next-tour recommendation cards appear, each pointing at a related tour
+    const recs = page.locator("#wp-recs .wp-rec");
+    await expect(recs.first()).toBeVisible();
+    await expect(recs.first()).toHaveAttribute("href", /wonders\.html\?w=/);
+    // the reason line names a concrete bridge concept
+    await expect(page.locator("#wp-recs .wp-rec-why").first()).not.toBeEmpty();
+});
+
+test("a tour without outward_links keeps plain, link-free outward prose", async ({ page }) => {
+    await page.goto("/wonders.html?w=edge-ai&s=7");
+    await ready(page);
+    await expect(page.locator("#wp-outward")).toBeVisible();
+    await expect(page.locator("#wp-outward a.wp-outlink")).toHaveCount(0);
+});
+
 test("tour-index.json is served with tours / nodes / related", async ({ page }) => {
     const res = await page.request.get("/data/tour-index.json");
     expect(res.status(), "tour-index.json status").toBe(200);

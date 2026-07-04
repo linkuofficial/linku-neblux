@@ -36,7 +36,7 @@ const UI = {
         hdrTitle: 'Neblux Wonders', home: 'Home', graph: 'Graph', tours: 'Tours', progress: 'Tour progress',
         loading: 'Loading…', retry: 'Retry',
         tagHook: 'A QUESTION', tagExample: 'FOR INSTANCE', tagSurprise: 'THE TWIST',
-        cueNext: 'Up next', cueOutward: 'Go further',
+        cueNext: 'Up next', cueOutward: 'Go further', recWhy: 'from “{via}”, keep falling',
         start: 'Begin the tour', wander: 'Wander the graph', otherTours: 'Explore other wonders →',
         steps: 'steps', hint: '✦ Tap any star to jump to its step',
         pickerKicker: 'Wonders', pickerTitle: 'Choose a wonder',
@@ -48,7 +48,7 @@ const UI = {
         hdrTitle: 'Neblux 驚奇之旅', home: '首頁', graph: '圖譜', tours: '驚奇之旅', progress: '旅程進度',
         loading: '載入中…', retry: '重試',
         tagHook: '先想想', tagExample: '舉個例', tagSurprise: '意外的是',
-        cueNext: '接下來', cueOutward: '想真的學會',
+        cueNext: '接下來', cueOutward: '想真的學會', recWhy: '從『{via}』，繼續往下墜',
         start: '開始這趟', wander: '漫遊整張圖', otherTours: '探索其他主題 →',
         steps: '步', hint: '✦ 點任一顆星，就能跳到那一步',
         pickerKicker: '驚奇之旅', pickerTitle: '選一趟驚奇之旅',
@@ -60,7 +60,7 @@ const UI = {
         hdrTitle: 'Neblux Wonders', home: 'ホーム', graph: 'グラフ', tours: 'ツアー', progress: 'ツアーの進捗',
         loading: '読み込み中…', retry: '再試行',
         tagHook: 'まず考えて', tagExample: 'たとえば', tagSurprise: '意外にも',
-        cueNext: '次は', cueOutward: 'さらに先へ',
+        cueNext: '次は', cueOutward: 'さらに先へ', recWhy: '「{via}」から、もっと深くへ',
         start: 'ツアーを始める', wander: 'グラフを散歩する', otherTours: '他のツアーへ →',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
         pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
@@ -81,6 +81,9 @@ let wonderId = null;          // current tour id, for deep-link URL sync
 let graphNodes = null;        // cached full-graph nodes (loaded once)
 let pickerMetas = null;       // cached [{id, wonder}] for the picker
 let labelMap = {};            // id -> localized label string (non-en)
+let graphLabelById = {};      // id -> English label (for via nodes not in the subgraph)
+let tourIndex = null;         // reverse index (tours/nodes/related); lazy + non-blocking
+let relatedWonderCache = {};  // tour id -> wonder JSON, for endgame recommendation cards
 let nodes = [];               // subgraph node objects (sim mutates x/y)
 let edges = [];               // subgraph link objects (sim mutates source/target)
 let nodeById = {};
@@ -403,6 +406,87 @@ function setStepVisuals(i) {
     if (renderer) renderer.setSelected(nodeById[curId]);
 }
 
+// ===== ENDGAME (outward live links + next-tour recommendations) =====
+function escapeHtml(s) {
+    return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// Render the outward paragraph with the first occurrence of each configured
+// match phrase (current language) wrapped in a link to that node on the graph.
+// Everything is escaped; only the anchors we build are inserted as markup. A
+// tour with no `outward_links` (or whose phrase isn't in this language) renders
+// as plain prose — byte-identical to the old inert outward.
+function outwardHTML(text, links) {
+    const spans = [];
+    for (const l of (links || [])) {
+        const phrase = l.match && l.match[LANG];
+        if (!phrase) continue;
+        const idx = text.indexOf(phrase);
+        if (idx < 0) continue;                     // phrase not present in this language → skip
+        spans.push({ start: idx, end: idx + phrase.length, node: l.node });
+    }
+    spans.sort((a, b) => a.start - b.start);
+    let html = '', pos = 0;
+    for (const s of spans) {
+        if (s.start < pos) continue;               // drop overlaps, keep the earliest
+        html += escapeHtml(text.slice(pos, s.start));
+        html += `<a class="wp-outlink" href="app.html?node=${encodeURIComponent(s.node)}">${escapeHtml(text.slice(s.start, s.end))}</a>`;
+        pos = s.end;
+    }
+    html += escapeHtml(text.slice(pos));
+    return html;
+}
+
+function viaLabel(id) {
+    if (LANG !== 'en' && labelMap[id]) return labelMap[id];
+    return graphLabelById[id] || id;
+}
+
+// Endgame "next tour" cards, from tour-index.related. Async (fetches the related
+// tours' titles) and progressive — if the index or a tour file is missing the
+// cards simply don't appear (ironclad rule 1). Guards against the reader leaving
+// the last step mid-fetch.
+async function renderRecs() {
+    const box = document.getElementById('wp-recs');
+    if (!box) return;
+    const myWonder = wonderId;
+    const rel = tourIndex && tourIndex.related && tourIndex.related[myWonder];
+    if (!rel || !rel.length) { box.hidden = true; box.innerHTML = ''; return; }
+
+    const items = await Promise.all(rel.slice(0, 2).map(async r => {
+        let w = relatedWonderCache[r.tour];
+        if (w === undefined) {
+            try { w = await fetchJson(`/data/wonders/${r.tour}.json`); }
+            catch { w = null; }
+            relatedWonderCache[r.tour] = w;
+        }
+        return { tour: r.tour, via: r.via, wonder: w };
+    }));
+
+    // Fetches are async — bail if the reader has since left the last step.
+    if (wonderId !== myWonder || stepIndex !== wonder.steps.length - 1) return;
+
+    box.innerHTML = '';
+    for (const it of items) {
+        if (!it.wonder) continue;
+        const a = document.createElement('a');
+        a.className = 'wp-rec';
+        a.href = `wonders.html?w=${it.tour}`;
+        const cue = document.createElement('span');
+        cue.className = 'wp-rec-cue';
+        cue.textContent = t('cueNext');
+        const title = document.createElement('span');
+        title.className = 'wp-rec-title';
+        title.textContent = pick(it.wonder.title);
+        const why = document.createElement('span');
+        why.className = 'wp-rec-why';
+        why.textContent = t('recWhy').replace('{via}', viaLabel(it.via));
+        a.append(cue, title, why);
+        box.appendChild(a);
+    }
+    box.hidden = box.children.length === 0;
+}
+
 function renderStep(i, recenter = true) {
     const step = wonder.steps[i];
     if (!step) return;
@@ -426,25 +510,28 @@ function renderStep(i, recenter = true) {
     setBlock('wp-example', pick(step.example));
     setBlock('wp-surprise', pick(step.surprise));
 
-    // Thread / closing CTA. The eyebrow cue (data-cue) tells the user this is the
-    // way forward; the teaser text is the pull.
+    // Thread / closing CTA. Mid-tour, #wp-thread is the "up next" teaser (click to
+    // advance). On the last step it gives way to #wp-outward — readable outward
+    // prose carrying live links into the graph — plus next-tour recommendations.
     const thread = $('wp-thread');
+    const outward = $('wp-outward');
+    const recs = $('wp-recs');
     if (last) {
-        thread.textContent = pick(wonder.outward) || pick(step.thread);
-        thread.dataset.cue = t('cueOutward');
-        thread.classList.add('is-outward');
-        thread.onclick = ev => { ev.preventDefault(); };
-        // Outward is inert prose, not a control — drop it from the tab order and
-        // mark it disabled so keyboard/SR users don't land on a dead button.
-        thread.tabIndex = -1;
-        thread.setAttribute('aria-disabled', 'true');
+        thread.hidden = true;
+        thread.onclick = null;
+        const outwardText = pick(wonder.outward) || pick(step.thread);
+        outward.hidden = !outwardText;
+        outward.dataset.cue = t('cueOutward');
+        outward.innerHTML = outwardHTML(outwardText, wonder.outward_links);
+        renderRecs();                                  // async + progressive
     } else {
+        thread.hidden = false;
         thread.textContent = pick(step.thread);
         thread.dataset.cue = t('cueNext');
-        thread.classList.remove('is-outward');
         thread.onclick = ev => { ev.preventDefault(); goToStep(i + 1); };
         thread.tabIndex = 0;
-        thread.removeAttribute('aria-disabled');
+        outward.hidden = true; outward.innerHTML = '';
+        recs.hidden = true; recs.innerHTML = '';
     }
 
     // Nav buttons. On the last step the primary exit loops back to the picker
@@ -577,9 +664,14 @@ function setupLangToggle() {
             // Only a tour has a graph to relabel; the picker needs no i18n fetch.
             if (renderer) {
                 renderer.notify();
-                // Background: star labels need the i18n map (cached after first
-                // load); repaint once ready if we're still on this language.
-                loadLabelMap(lang).then(() => { if (LANG === lang && renderer) renderer.notify(); });
+                // Background: star labels — and the endgame rec cards' via-labels —
+                // need the i18n map (cached after first load). Once it's ready,
+                // repaint and re-render the step so localized via-labels land.
+                loadLabelMap(lang).then(() => {
+                    if (LANG !== lang) return;
+                    if (renderer) renderer.notify();
+                    if (started && stepIndex >= 0) renderStep(stepIndex, false);
+                });
             }
         });
     });
@@ -708,6 +800,17 @@ async function loadWonder(id) {
         const graph = await fetchJson('/data/all_nodes.json');
         graphNodes = Array.isArray(graph) ? graph : graph.nodes;
     }
+    if (!Object.keys(graphLabelById).length) {
+        for (const n of graphNodes) graphLabelById[n.id] = n.label;   // via labels for rec cards
+    }
+    // Reverse index for endgame recommendations — lazy, non-blocking, silent on
+    // failure (a missing file just means no rec cards; ironclad rule 1). If it
+    // lands after the reader is already at the finale (e.g. a ?s=last deep link),
+    // re-render the recs then.
+    if (!tourIndex) fetchJson('/data/tour-index.json').then(idx => {
+        tourIndex = idx;
+        if (started && wonder && stepIndex === wonder.steps.length - 1) renderRecs();
+    }).catch(() => {});
     await loadLabelMap(LANG);
     wonder = await fetchJson(`/data/wonders/${id}.json`);
     wonderId = id;

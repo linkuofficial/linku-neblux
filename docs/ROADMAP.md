@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1、P0-2、P0-3 完成）
+> 最後更新：2026-07-04（P0-1、P0-2、P0-3、P0-4 完成）
 
 ## 工作守則（每次開工先讀）
 
@@ -45,7 +45,7 @@
   - `related` 演算法：對每對 tour (A,B)，weight = A 的節點在 `all_nodes.json` 的 `connections` 指向 B 節點的邊數（雙向合計），取前 2 名；`via` = 貢獻最多的節點。
   - 驗收：19 tours、`nodes` 涵蓋全部被引用節點；JSON 可被 `fetch` 取得。
 
-- [ ] **P0-4 終局修復**
+- [x] **P0-4 終局修復**（2026-07-04）
   - 改：`frontend/src/wonders-main.js`、`frontend/src/styles/pages/wonders.css`、3 個示範 tour JSON。
   - a. outward 活連結：tour JSON 新增選填欄位 `"outward_links": [{ "node": "<id>", "match": { "en": "...", "zh": "...", "ja": "..." } }]`。渲染時在 outward 文字找當前語言 `match` 首次出現，包成 `<a href="app.html?node=<id>">`；找不到就跳過。移除 `.is-outward` 的灰化與 `aria-disabled`，改可讀樣式。先為 light、quantum、the-mind 三趟填示範（node id 必先 grep 驗證存在；找不到對應節點的概念就不加）。
   - b. 下一趟推薦：讀 `tour-index.related`，結尾渲染 1–2 張推薦卡：「〈量子〉——從『波粒二象性』繼續往下 →」連 `wonders.html?w=<id>`。via 節點 label 用當前語言（labelMap 已有）。UI 字串進 `UI` 物件（三語）。
