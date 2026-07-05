@@ -11,6 +11,7 @@
     "build": "vite build && node scripts/build_share_pages.mjs",
     "preview": "vite preview",
     "test:e2e": "playwright test --grep-invert @visual",
+    "verify": "npm run build && npm run test:e2e",
     "test:e2e:visual": "playwright test --grep @visual",
     "test:e2e:install": "playwright install --with-deps chromium"
   },

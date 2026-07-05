@@ -1,5 +1,8 @@
 # Verification Runbook
 
+> ⚠️ **（2026-07-06）本檔內容嚴重過期，勿照做。** 全文為 Nodus 時代的 Python 後端流程（pytest／uvicorn／Neo4j），與現行「零後端」Neblux 不符，路徑也指向已不存在的位置。
+> **現行驗證＝`npm run verify`（build + E2E），詳見 `AGENTS.md` 驗證門檻節與 `docs/playbooks/`。** 本檔待重寫或裁撤（已記入 AGENTS.md 技術債台帳）。
+
 此文件用於快速確認 Nodus 專案在本機是否處於可交付狀態。
 
 ## 1. Python tests

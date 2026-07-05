@@ -3,10 +3,20 @@
 > 好奇心驅動的知識體驗網站。Linku Tech 的**次要資產**：目標是「做好、維護」，不擴張範圍；可由 AI 完整生成程式碼。
 > 本機工作區容器脈絡：`D:\LINKU\AGENTS.md`（AI 協作協議、跨 repo 規則）；全域規則：Codex 讀 `~/.codex/AGENTS.md`、Claude 讀 `~/.claude/CLAUDE.md`。雲端/其他環境讀不到上述檔案時，以本檔自足。
 
+## ⚡ 30 秒硬規則（先讀這裡）
+
+- **禁區（強制交叉審查路徑，動之前必須先有 brief）**：`frontend/src/engine/`、`data/*.json` 結構變更、部署設定（`frontend/public/_headers`、Cloudflare Pages 設定）。
+- **驗證單命令**：`npm run verify`（= `npm run build` + `npm run test:e2e`）。視覺改動另需 `npm run dev` 瀏覽器實看（Canvas 渲染，DOM 斷言無效）。
+- **Done 前檢查清單**：
+  - [ ] `npm run verify` 全過
+  - [ ] 視覺改動已在瀏覽器實看
+  - [ ] HANDOFF 已填（brief 的 HANDOFF 區）
+- **不確定 → 停**，寫進 brief 的 Questions 區，禁止猜。
+
 ## 動手前必讀
 - **方向北極星：`docs/DIRECTION.md`（2026-07-03 定案），動 Neblux 前先讀。**
   核心判斷：Wonders（驚奇之旅）是產品、圖譜是空間。架構憲法：靜態為骨動態為光（API 掛掉站照常）、匿名聚合（無帳號無個資）、個人永久免費、安靜的驚奇（不遊戲化）。
-- 文件地圖：`docs/CODEBASE-MAP.md`（程式地圖）、`docs/ROADMAP.md`、`docs/verification_runbook.md`（驗證手冊）、`docs/brand-voice.md`（文案語氣）、`docs/tour-authoring.md`（tour 製作）、`docs/gates/`（品質 gate 紀錄）、`docs/archive/`（歷史計畫）。
+- 文件地圖：`docs/CODEBASE-MAP.md`（程式地圖）、`docs/ROADMAP.md`、`docs/verification_runbook.md`（**已過期勿照做**，見技術債台帳）、`docs/playbooks/`（常見任務 SOP）、`docs/brand-voice.md`（文案語氣）、`docs/tour-authoring.md`（tour 製作）、`docs/gates/`（品質 gate 紀錄）、`docs/archive/`（歷史計畫）。
 
 ## 現況
 純靜態前端、**零後端**，線上站只讀打包進去的 JSON。未來後端限定 Cloudflare Pages Functions 同源 `/api/*`（漸進增強），規劃見 DIRECTION.md。
@@ -34,12 +44,12 @@ npm run test:e2e:install  # 首次安裝 Chromium
 `scripts/*.py` + `config.yaml`：節點生成、翻譯、品質檢查工具，連 Neo4j 與 Claude API，**僅離線手動執行**，線上站不依賴。修改線上資料只需改 `data/*.json` 後重新 build。
 
 ## 驗證門檻（宣稱完成前）
-1. `npm run build` 成功。
-2. `npm run test:e2e` 通過。
-3. 視覺改動：`npm run dev` 用瀏覽器實看（Canvas 渲染，截圖/肉眼確認，勿只信 DOM）。
-4. 詳細驗證程序見 `docs/verification_runbook.md`。
+1. `npm run verify` 全過（= `npm run build` 成功 + `npm run test:e2e` 通過）。
+2. 視覺改動：`npm run dev` 用瀏覽器實看（Canvas 渲染，截圖/肉眼確認，勿只信 DOM）。
+3. 常見任務步驟見 `docs/playbooks/`。（`docs/verification_runbook.md` 已過期勿照做，見技術債台帳。）
 
 ## 已知技術債（台帳；「暫不處理」的決定不重開，除非前提改變）
+- `docs/verification_runbook.md` 全文為 Nodus 時代 Python 後端流程，嚴重過期（2026-07-06 發現，已加檔頭警告攔截）。待重寫為 npm run verify 流程或裁撤併入 playbooks——方向需凜空裁決。
 - HTML 入口資源路徑風格不一致（`index.html` 用絕對 `/src/...`；`app.html`/`explorer.html` 混用相對與絕對）；皆可運作。**（2026-06-10）複查：純 cosmetic、有 build 風險、零收益，暫不處理。**
 - 粒子動畫兩套實作（`src/particles.js`〔app 頁背景，動態 import〕+ `src/landing-main.js`〔index 落地頁〕）。兩者用途不同、各自獨立，整併收益低，暫不處理。
 - app-main 與 explorer-main 有平行的 canvas 接線（findNodeAtScreen、nc/nr、星體 meta、焦點邏輯）。**刻意未抽共用**：兩頁語意不同（app=全圖、explorer=漸進展開），抽離風險高於收益。視為可接受重複。
