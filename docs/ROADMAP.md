@@ -70,9 +70,10 @@
   - 作法：頂部常數 `const FEATURED_TOUR = 'light'`（輪替＝手動改這行）。首屏全幅 featured 卡（title/intro/步數/開始 CTA，三語）；「Start Exploring」降次要樣式；footer 移除「N NODES · N EDGES · 13 DOMAINS」統計行。
   - 驗收：首屏可見 featured tour 並可點入；E2E smoke 更新。
 
-- [ ] **P0-B 火種句（背景工作，不擋上列任何一項）**
-  - 作法：`sections` 新增選填欄位 `spark`（一句 hook 語態開場）；`app-main.js` 渲染描述時有 `spark` 就以它開頭、原 lead 收合。內容由離線管線生成＋`[人工]`逐句審核，每批 ≤ 20 節點，從被 tour 引用的 122 節點開始。
-  - 驗收：抽 10 句對照 `brand-voice.md`；禁標題黨；zh 過 `check_simplified.py`。
+- [~] **P0-B 火種句（背景工作，不擋上列任何一項）— 機制完成、內容擱置（2026-07-06）**
+  - 機制已上且休眠：`app-main.js` `renderStructuredSections` 有 `sections.spark` 就以它開場、原 lead 收進「更精確地說」摺疊；`.pd-spark` CSS 在。**無 spark 資料就走 else、無害**。重上＝純資料改。
+  - 88 句三語草稿寫過又撤（commit `a51ea7c`/`2a59fb2`，擱置於 `d9e853b`）：凜空與多個 AI 仍不滿意。重訪方向＝**少而精**（只放真正驚豔的少數節點），非每節點湊一句。**別在他重新開口前把資料加回或當缺口補。**
+  - 作法（保留備查）：`sections` 選填 `spark`；驗收：對 `brand-voice.md`、禁標題黨、zh 過 `check_simplified.py`。
 
 ## Phase 1 — 後端（平台鎖定 Cloudflare Pages Functions，禁自行選型）
 
