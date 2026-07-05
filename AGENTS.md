@@ -5,7 +5,8 @@
 
 ## ⚡ 30 秒硬規則（先讀這裡）
 
-- **禁區（強制交叉審查路徑，動之前必須先有 brief）**：`frontend/src/engine/`、`data/*.json` 結構變更、部署設定（`frontend/public/_headers`、Cloudflare Pages 設定）。
+- **禁區（強制交叉審查路徑，動之前必須先有 brief）**：`frontend/src/engine/`、`data/*.json` 結構變更、部署設定（`frontend/public/_headers`、`functions/`〔CF Pages Functions〕、`wrangler`／Cloudflare Pages 設定）。
+- **只做被交派的任務**：`docs/ROADMAP.md` 的「下一步 P1 後端／`API_ENABLED`／`functions/`」是規劃，**不是授權**。要動後端骨架＝重大決策，先開 brief 走模式⑤，禁止順手實作。
 - **驗證單命令**：`npm run verify`（= `npm run build` + `npm run test:e2e`）。視覺改動另需 `npm run dev` 瀏覽器實看（Canvas 渲染，DOM 斷言無效）。
 - **Done 前檢查清單**：
   - [ ] `npm run verify` 全過
