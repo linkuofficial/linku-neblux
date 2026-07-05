@@ -99,7 +99,9 @@ function copyDataPlugin() {
             try {
                 buildTourIndex(srcDir, [resolve(destDir, 'tour-index.json')]);
             } catch (err) {
-                this.warn?.(`tour-index build skipped: ${(err as Error).message}`);
+                // tour-index drives the constellation layer + tour↔graph links —
+                // product foundation, not an optional extra. Fail the build loud.
+                this.error(`tour-index failed to generate: ${(err as Error).message}`);
             }
         },
     };
@@ -115,7 +117,9 @@ function staticHtmlPlugin() {
             try {
                 buildStaticHtml(resolve(__dirname, 'data'), resolve(__dirname, 'frontend/public'));
             } catch (err) {
-                this.warn?.(`static html build skipped: ${(err as Error).message}`);
+                // Concept pages / sitemap / graph.json are product foundation — a
+                // silently missing static layer is a broken deploy, not a warning.
+                this.error(`static discoverability layer failed to generate: ${(err as Error).message}`);
             }
         },
     };

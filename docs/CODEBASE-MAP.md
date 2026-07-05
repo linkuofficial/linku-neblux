@@ -38,7 +38,8 @@
 - `data/all_nodes.json`：687 節點。欄位：`id, label, type(concept|person|field|event), domain[], display_tags[], description, sections{lead, core, impact, links[], works[]}, era, connections[]`。邊欄位：`target, relation_type(logical|applied|conceptual|historical|causal), relation(一句描述), directed, learning_prerequisite`。
 - `data/wonders/<id>.json`：tour。schema 見 `tour-authoring.md`。
 - `data/i18n/`：`{lang}.json`（標籤+UI）、`{lang}_descriptions.json`、`{lang}_sections.json`。執行期載入鏈在 `src/api.js`（fallback → en）。
-- build（`vite.config.ts`）：複製 `data/` → `frontend/public/data/`；拆 `all_nodes.json` 為 slim topology ＋ `descriptions.json`（非阻塞 streaming）；`isJunk` 過濾備份產物。
+- build（`vite.config.ts`）：兩個 buildStart plugin。`copyDataPlugin` 複製 `data/` → `frontend/public/data/`、拆 `all_nodes.json` 為 slim topology ＋ `descriptions.json`（非阻塞 streaming）、預烘焙 layout、生成 `tour-index.json`；`isJunk` 過濾備份產物。`staticHtmlPlugin` 呼叫 `scripts/build_static_html.mjs`（＋`static_content.mjs`）生成**靜態可發現層**：`/concepts/<id>.html` 687×3 語、About/Methodology/Sources 三語、`sitemap.xml`、`data/graph.json`。
+- **靜態可發現層＝gitignore 的 build artifact**：寫進 `frontend/public/`（`concepts/`、`zh/`、`ja/`、`about|methodology|sources.html`、`sitemap.xml`），dev server 也服務（故 e2e 測得到），`vite build` 複製到 dist。**別找 `build_concept_pages.mjs`/`build_sitemap.mjs`——不存在，全在 `build_static_html.mjs`。** 生成失敗會讓 build fail（非 warn）。守門：`tests/e2e/discoverability.spec.ts`、`tests/e2e/api-failure.spec.ts`（API 全滅站照常，鐵律）。`llms.txt` 為手寫靜態檔（非生成）。
 
 ## 測試
 

@@ -39,6 +39,14 @@
 
 ## 工作分解與分工
 
+> **實作落點（2026-07-06 定案；Codex 未參與，全由 Claude 實作）**：下面 B / D / graph.json / 信任頁**沒有**拆成 `build_concept_pages.mjs` / `build_sitemap.mjs` 等多支——**全部合併在**：
+> - `scripts/build_static_html.mjs`：概念頁 687×3、信任頁、`sitemap.xml`、`data/graph.json` 的唯一生成入口（含共用 page-shell）。
+> - `scripts/static_content.mjs`：About / Methodology / Sources 三語文案。
+> - 由 `vite.config.ts` 的 **`staticHtmlPlugin`** 在 **`buildStart`** 呼叫（`vite build` 與 `npm run dev` 都會跑，所以 dev server 也服務這些頁、e2e 才測得到；**不是** post-build script）。
+> - 輸出寫到 `frontend/public/`（`concepts/`、`zh/`、`ja/`、`about|methodology|sources.html`、`sitemap.xml`、`data/graph.json`），全部是 **gitignore 的 build artifact**（追蹤數 0；`lastmod`/`generated_at` 逐日變動不會弄髒 working tree）。
+> - 生成失敗會讓 build **fail**（`staticHtmlPlugin` 用 `this.error`）；layout bake 這類可降級的才 warn。
+> - 守門測試：`tests/e2e/discoverability.spec.ts`（no-JS 可讀、DefinedTerm、CSP、sitemap/graph.json/llms）。
+
 ### Codex 負責（管線/程式，邊界清楚可獨立驗收）
 - **B. `scripts/build_concept_pages.mjs`**：讀 `all_nodes.json` ＋ `i18n/*`（label/descriptions/sections）＋ `tour-index.json`，輸出 687×3 靜態頁到 `dist/{,,zh/,ja/}concepts/<id>.html`。每頁含：H1/lead/type/domain/tags/era/core/impact、前置↑、解鎖↓、相關（含 `relation` 一句＋relation_type）、Appears in Wonders 反查、語言切換、**Open-in-graph CTA（不跳轉）**、canonical、hreflang(en/zh-Hant/ja/x-default)、`DefinedTerm` JSON-LD、生成日期。CSP 安全、零可執行 inline script。接進 `package.json` build（緊接 `build_share_pages.mjs`）。骨架/class 命名見 Codex 回覆 §2.2。
 - **D. `scripts/build_sitemap.mjs`**：build 時生成，涵蓋 4 入口＋19 tour stub＋687×3 概念頁＋信任頁。先求全量 URL 正確，head hreflang 為主，sitemap xhtml alternate 為加分項。
