@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Cross-domain knowledge graph generation and exploration platform",
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/build_share_pages.mjs",
