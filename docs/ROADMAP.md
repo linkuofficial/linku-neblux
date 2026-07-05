@@ -4,6 +4,7 @@
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
 > 最後更新：2026-07-04（P0-1 ~ P0-7 完成；剩 P0-B 火種句待 [人工] 審核）
 > 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
+> 2026-07-06 追加：P0 hardening——永久「API 全滅站照常」守門 `tests/e2e/api-failure.spec.ts`（鐵律入 CI）；必要 build 產物（概念頁/sitemap/graph.json/tour-index）改 fail-fast（`this.error`），layout bake 維持 warn；文件與實作命名對齊。P0-B spark 機制完成、內容擱置（見下）。**P0 收線；下一步 P1 後端**（開場：`API_ENABLED` flag 止血 landing/explorer 的失敗 `/api` 請求 → P1-0 骨架 → 人工建 D1 `DB`／KV `LINKS`）。e2e 43 綠。
 
 ## 工作守則（每次開工先讀）
 
