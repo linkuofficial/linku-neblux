@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-04（P0-1 ~ P0-7 完成；剩 P0-B 火種句待 [人工] 審核）
+> 最後更新：2026-07-06（P1-0 程式面完成：止血旗標 + `functions/api/health.ts` + `schema.sql`，本地 wrangler 實測 health OK；剩 `[人工]` D1/KV 綁定）
 > 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
 > 2026-07-06 追加：P0 hardening——永久「API 全滅站照常」守門 `tests/e2e/api-failure.spec.ts`（鐵律入 CI）；必要 build 產物（概念頁/sitemap/graph.json/tour-index）改 fail-fast（`this.error`），layout bake 維持 warn；文件與實作命名對齊。P0-B spark 機制完成、內容擱置（見下）。**P0 收線；下一步 P1 後端**（開場：`API_ENABLED` flag 止血 landing/explorer 的失敗 `/api` 請求 → P1-0 骨架 → 人工建 D1 `DB`／KV `LINKS`）。e2e 43 綠。
 
@@ -78,10 +78,12 @@
 
 ## Phase 1 — 後端（平台鎖定 Cloudflare Pages Functions，禁自行選型）
 
-- [ ] **P1-0 骨架**
-  - 新增 `functions/api/health.ts`（回 `{ok:true}`）；本地驗證 `npx wrangler pages dev dist`。
-  - 新增 E2E：block 所有 `/api/*` 請求後跑四頁 smoke，必須全過（「API 全滅站照常」守門，永久保留）。
-  - `[人工]` Cloudflare dashboard 建 D1（綁定名 `DB`）與 KV（綁定名 `LINKS`）。schema 存 `functions/schema.sql`：
+- [~] **P1-0 骨架（程式面完成 2026-07-06；剩 `[人工]` D1/KV 綁定）**
+  - [x] 止血：新增 `frontend/src/config.js` `API_ENABLED=false` 旗標，gate landing/explorer 全部 `/api/*` 嘗試（`/api/graph/full`、`/api/i18n/*`）。瀏覽器實測兩頁零 `/api` 請求、直達靜態、console 乾淨。旗標關閉但保留分支（凜空定案）。
+  - [x] `functions/api/health.ts`（`onRequestGet` 回 `{ok:true}`，零依賴）；本地 `npx wrangler pages dev dist` 實測 `GET /api/health` → `{"ok":true}`（compat date 需用受支援值，如 `2024-11-06`；環境時鐘 2026 但 wrangler binary 較舊）。
+  - [x] `functions/schema.sql` 落地（echo / tour_finish 兩表）。
+  - [x] 「block `/api/*` 四頁 smoke」守門已存在（`tests/e2e/api-failure.spec.ts`，P0 補）；e2e 43 綠、`npm run verify` 全過。
+  - [ ] `[人工]` Cloudflare dashboard 建 D1（綁定名 `DB`）與 KV（綁定名 `LINKS`），並套用 `functions/schema.sql`（`npx wrangler d1 execute DB --file=functions/schema.sql`）。schema：
     ```sql
     CREATE TABLE IF NOT EXISTS echo (tour TEXT NOT NULL, step INTEGER NOT NULL, count INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (tour, step));
     CREATE TABLE IF NOT EXISTS tour_finish (tour TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0);

@@ -10,6 +10,8 @@ __pycache__/
 .env.staging
 .env.production
 .vite/
+# Cloudflare Pages/Workers local dev state (wrangler pages dev)
+.wrangler/
 
 # Data files copied to public at build time (derived from data/)
 frontend/public/data/
