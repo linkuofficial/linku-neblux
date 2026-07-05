@@ -1,6 +1,7 @@
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
 import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.js";
+import { API_ENABLED } from "./config.js";
 
         // ===== CONSTANTS =====
         const DC = window.NebluxTokens?.DOMAIN_COLORS || {
@@ -692,10 +693,12 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         }
 
         async function fetchLocaleLabels(locale) {
-            try {
-                const primary = await fetch(`/api/i18n/${encodeURIComponent(locale)}`);
-                if (primary.ok) return await primary.json();
-            } catch (_) {}
+            if (API_ENABLED) {
+                try {
+                    const primary = await fetch(`/api/i18n/${encodeURIComponent(locale)}`);
+                    if (primary.ok) return await primary.json();
+                } catch (_) {}
+            }
             const fallback = await fetch(`../data/i18n/${encodeURIComponent(locale)}.json`);
             if (fallback.ok) return await fallback.json();
             const english = await fetch('../data/i18n/en.json');
@@ -705,15 +708,17 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
 
         async function fetchLocaleDescriptions(locale) {
             if (!locale || locale === 'en') return {};
-            try {
-                const primary = await fetch(`/api/i18n/${encodeURIComponent(locale)}/descriptions`);
-                if (primary.ok) {
-                    const payload = await primary.json();
-                    if (payload && typeof payload === 'object') {
-                        return payload.descriptions && typeof payload.descriptions === 'object' ? payload.descriptions : payload;
+            if (API_ENABLED) {
+                try {
+                    const primary = await fetch(`/api/i18n/${encodeURIComponent(locale)}/descriptions`);
+                    if (primary.ok) {
+                        const payload = await primary.json();
+                        if (payload && typeof payload === 'object') {
+                            return payload.descriptions && typeof payload.descriptions === 'object' ? payload.descriptions : payload;
+                        }
                     }
-                }
-            } catch (_) {}
+                } catch (_) {}
+            }
             for (const path of [
                 `../data/i18n/${encodeURIComponent(locale)}_descriptions.json`,
                 `../data/i18n/${encodeURIComponent(locale)}_descriptions_batch1.json`
@@ -832,10 +837,12 @@ import { TAG_LABELS, TAG_TOKEN_ZH, TAG_TOKEN_JA, I18N as APP_UI } from "./i18n.j
         // ===== DATA LOADING =====
         async function loadData() {
             let apiError = null;
-            try {
-                const apiPayload = await fetchJsonWithTimeout('/api/graph/full', 9000);
-                return normalizeGraphNodes(apiPayload);
-            } catch (err) { apiError = err; }
+            if (API_ENABLED) {
+                try {
+                    const apiPayload = await fetchJsonWithTimeout('/api/graph/full', 9000);
+                    return normalizeGraphNodes(apiPayload);
+                } catch (err) { apiError = err; }
+            }
             try {
                 const staticPayload = await fetchJsonWithTimeout('../data/all_nodes.json', 7000);
                 return normalizeGraphNodes(staticPayload);

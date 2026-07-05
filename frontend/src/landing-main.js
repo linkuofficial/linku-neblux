@@ -1,3 +1,5 @@
+        import { API_ENABLED } from './config.js';
+
         const copyrightYearEl = document.getElementById('copyright-year');
         if (copyrightYearEl) {
             copyrightYearEl.textContent = String(new Date().getFullYear());
@@ -126,11 +128,15 @@
                 }
 
                 if (!data || !Array.isArray(data.nodes)) {
-                    try {
-                        const apiRes = await fetch('/api/graph/full');
-                        if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`);
-                        data = await apiRes.json();
-                    } catch (_) {
+                    if (API_ENABLED) {
+                        try {
+                            const apiRes = await fetch('/api/graph/full');
+                            if (apiRes.ok) data = await apiRes.json();
+                        } catch (_) {
+                            // Fall through to the static graph below.
+                        }
+                    }
+                    if (!data || !Array.isArray(data.nodes)) {
                         const fallbackRes = await fetch('../data/all_nodes.json');
                         if (!fallbackRes.ok) throw new Error(`HTTP ${fallbackRes.status}`);
                         data = await fallbackRes.json();
@@ -185,11 +191,15 @@
             }
             try {
                 let data;
-                try {
-                    const apiRes = await fetch(`/api/i18n/${encodeURIComponent(locale)}`);
-                    if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`);
-                    data = await apiRes.json();
-                } catch (_) {
+                if (API_ENABLED) {
+                    try {
+                        const apiRes = await fetch(`/api/i18n/${encodeURIComponent(locale)}`);
+                        if (apiRes.ok) data = await apiRes.json();
+                    } catch (_) {
+                        // Fall through to the static locale file below.
+                    }
+                }
+                if (!data) {
                     const fallbackRes = await fetch(`../data/i18n/${encodeURIComponent(locale)}.json`);
                     if (!fallbackRes.ok) throw new Error(`HTTP ${fallbackRes.status}`);
                     data = await fallbackRes.json();
