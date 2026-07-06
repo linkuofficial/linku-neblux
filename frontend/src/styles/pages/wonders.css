@@ -622,6 +622,37 @@
 .wp-share:hover,
 .wp-share.is-copied { color: var(--accent); opacity: 1; }
 
+/* Quiet "✨ this moved me too" resonance affordance (P1-2), beside the share
+   link under the surprise beat. */
+.wp-echo {
+    margin-top: 10px;
+    margin-right: 18px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    color: var(--ink-soft);
+    opacity: 0.75;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+}
+.wp-echo::before { content: '✨ '; }
+.wp-echo[hidden] { display: none; }
+.wp-echo:hover { color: var(--accent); opacity: 1; }
+/* The ordinal line shown once you echo — one small accent line (DIRECTION:
+   the count is shown as an ordinal, never a time-windowed "N this week"). */
+.wp-echo-count {
+    margin: 9px 0 0;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    opacity: 0.9;
+}
+.wp-echo-count[hidden] { display: none; }
+
 #wp-nav {
     margin-top: 14px;
     display: flex;

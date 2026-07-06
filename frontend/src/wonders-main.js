@@ -9,6 +9,7 @@
 
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
+import { API_ENABLED } from "./config.js";
 
 // ===== TOKENS =====
 const DC = window.NebluxTokens?.DOMAIN_COLORS || {
@@ -44,6 +45,7 @@ const UI = {
         recordKicker: 'A journey record', recordHooks: 'The questions you followed',
         recordReflect: 'To carry with you', recordPrint: 'Print / Save as PDF',
         recordBack: 'Back to the tour', recordDate: 'Walked on {date}',
+        echoAction: 'This moved me too', echoOrdinal: "You're number {n} to be moved here",
         steps: 'steps', hint: '✦ Tap any star to jump to its step',
         pickerKicker: 'Wonders', pickerTitle: 'Choose a wonder',
         pickerSubtitle: 'Pick a thread of curiosity and follow it, step by step.',
@@ -62,6 +64,7 @@ const UI = {
         recordKicker: '旅程紀錄', recordHooks: '你一路追問的問題',
         recordReflect: '帶著走的思考', recordPrint: '列印 / 存成 PDF',
         recordBack: '回到旅程', recordDate: '走完於 {date}',
+        echoAction: '我也被這一刻打動了', echoOrdinal: '你是第 {n} 位在這裡被打動的人',
         steps: '步', hint: '✦ 點任一顆星，就能跳到那一步',
         pickerKicker: '驚奇之旅', pickerTitle: '選一趟驚奇之旅',
         pickerSubtitle: '挑一條好奇的線索，一步步跟著它走。',
@@ -80,6 +83,7 @@ const UI = {
         recordKicker: '旅の記録', recordHooks: 'たどってきた問い',
         recordReflect: '持ち帰る問い', recordPrint: '印刷 / PDF に保存',
         recordBack: 'ツアーに戻る', recordDate: '{date} に歩き終えた',
+        echoAction: '私も心を動かされた', echoOrdinal: 'ここで心を動かされた {n} 人目です',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
         pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
         pickerSubtitle: '好奇心の糸を一つ選んで、一歩ずつたどってみましょう。',
@@ -116,6 +120,8 @@ let viewTransform = { k: 1, x: 0, y: 0 };
 let currentZoom = 1;
 let stepIndex = -1;           // -1 = intro not started
 let started = false;
+let echoCounts = null;        // { [step]: count } per-beat ✨ tallies (null = not loaded / API off)
+const echoedSteps = new Set();// 1-based steps this page has echoed — drives the ordinal display
 
 // ===== HELPERS =====
 function t(k) { return (UI[LANG] || UI.en)[k] ?? UI.en[k] ?? k; }
@@ -537,6 +543,30 @@ function renderStep(i, recenter = true) {
         shareBtn.textContent = t('shareMoment');
         shareBtn.onclick = () => shareCurrentBeat(i);
     }
+    // "✨ This moved me too" — per-beat resonance (P1-2). Progressive enhancement:
+    // shown only when API_ENABLED (else the tally endpoint isn't live — ironclad
+    // rule 1). Before you echo: the quiet ✨; after: hide it, show the ordinal line.
+    const echoBtn = $('wp-echo');
+    const echoLine = $('wp-echo-count');
+    if (echoBtn && echoLine) {
+        const stepNum = i + 1;
+        // Show ✨ only once a GET /api/echo has actually succeeded (echoCounts set):
+        // if the endpoint is down/500/timeout even with API_ENABLED, echoCounts
+        // stays null and no ✨ appears — API down → UI unchanged (ironclad rule 1).
+        const canEcho = API_ENABLED && !!surpriseText && echoCounts !== null;
+        const echoed = echoedSteps.has(stepNum);
+        echoBtn.textContent = t('echoAction');
+        echoBtn.hidden = !canEcho || echoed;
+        echoBtn.onclick = () => echoCurrentBeat(i);
+        if (canEcho && echoed) {
+            const n = (echoCounts && echoCounts[stepNum]) || 1;
+            echoLine.textContent = t('echoOrdinal').replace('{n}', n);
+            echoLine.hidden = false;
+        } else {
+            echoLine.hidden = true;
+            echoLine.textContent = '';
+        }
+    }
 
     // Thread / closing CTA. Mid-tour, #wp-thread is the "up next" teaser (click to
     // advance). On the last step it gives way to #wp-outward — readable outward
@@ -689,6 +719,51 @@ function flashShareCopied() {
         btn.textContent = t('shareMoment');
         btn.classList.remove('is-copied');
     }, 2000);
+}
+
+// ✨ echo: record that this beat also moved you. Write via sendBeacon (never
+// blocks render); the running tally is read lazily by loadEchoCounts. Reached
+// only when API_ENABLED, and every failure is silent (ironclad rule 1).
+function echoCurrentBeat(i) {
+    if (!API_ENABLED || !wonderId || !wonder) return;
+    const stepNum = i + 1;
+    if (echoedSteps.has(stepNum)) return;
+    // Fire-and-forget write. If the beacon can't even be queued (no sendBeacon, or
+    // it returns false), the echo didn't happen — stay silent, don't flip state or
+    // show a false "you're the Nth" confirmation (quiet failure, ironclad rule 1).
+    let queued = false;
+    try {
+        if (navigator.sendBeacon) {
+            const blob = new Blob([JSON.stringify({ tour: wonderId, step: stepNum })], { type: 'application/json' });
+            queued = navigator.sendBeacon('/api/echo', blob);
+        }
+    } catch { queued = false; }
+    if (!queued) return;
+    echoedSteps.add(stepNum);
+    // Optimistic: bump the local tally so the ordinal reads "you're the Nth".
+    if (!echoCounts) echoCounts = {};
+    echoCounts[stepNum] = (echoCounts[stepNum] || 0) + 1;
+    const btn = document.getElementById('wp-echo');
+    const line = document.getElementById('wp-echo-count');
+    if (btn) btn.hidden = true;
+    if (line) {
+        line.textContent = t('echoOrdinal').replace('{n}', echoCounts[stepNum]);
+        line.hidden = false;
+        const live = document.getElementById('wp-live');
+        if (live) live.textContent = line.textContent;
+    }
+}
+
+// Fetch the tour's running ✨ tallies (per step). Non-blocking + silent on
+// failure — a dead API just means no ordinal is ever shown (ironclad rule 1).
+async function loadEchoCounts(id) {
+    try {
+        const data = await fetchJson(`/api/echo?tour=${encodeURIComponent(id)}`, 4000);
+        if (wonderId === id && data && data.ok) {
+            echoCounts = data.counts || {};
+            if (started && stepIndex >= 0) renderStep(stepIndex, false);
+        }
+    } catch { /* API down → no ✨ ordinal, silent */ }
 }
 
 function startTour(startStep = 0) {
@@ -901,6 +976,7 @@ async function loadWonder(id) {
     await loadLabelMap(LANG);
     wonder = await fetchJson(`/data/wonders/${id}.json`);
     wonderId = id;
+    if (API_ENABLED) loadEchoCounts(id);   // per-beat ✨ tallies; non-blocking, silent if API down
     buildSubgraph(graphNodes);
     if (!nodes.length) throw new Error('empty subgraph');
 

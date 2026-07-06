@@ -435,3 +435,20 @@ test("a tour with authored reflect questions shows them instead of the outward f
     await expect(items.first()).toHaveText("What surprised you most?");
     await expect(page.locator("#wr-reflect .wr-reflect-prose")).toHaveCount(0);
 });
+
+test("the ✨ resonance affordance stays dormant while API_ENABLED is false", async ({ page }) => {
+    const apiCalls: string[] = [];
+    page.on("request", (r) => { if (r.url().includes("/api/")) apiCalls.push(r.url()); });
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(String(e)));
+    page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
+
+    await page.goto("/wonders.html?w=light&s=2"); // a surprise-bearing step
+    await ready(page);
+    // No backend deployed (API_ENABLED=false): the ✨ never shows, no ordinal, and
+    // the tour makes zero /api calls — ironclad rule 1 (API down → site unchanged).
+    await expect(page.locator("#wp-echo")).toBeHidden();
+    await expect(page.locator("#wp-echo-count")).toBeHidden();
+    expect(apiCalls, `no /api calls with API disabled:\n${apiCalls.join("\n")}`).toHaveLength(0);
+    expect(errors, `clean console:\n${errors.join("\n")}`).toHaveLength(0);
+});
