@@ -353,3 +353,85 @@ test("the shared URL carries the current beat from both the deep-link and picker
     shared = await page.evaluate(() => (window as any).__shared);
     expect(shared?.url, "picker entry shares step 1 of the picked tour").toContain("?w=black-holes&s=1");
 });
+
+test("?print=1 renders a static journey record — constellation, every hook, date, reflection", async ({ page }) => {
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(String(e)));
+    page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
+
+    await page.goto("/wonders.html?w=light&print=1");
+    await expect(page.locator("#wonder-record")).toBeVisible();
+
+    // The constellation is an inline SVG.
+    await expect(page.locator("#wr-constellation svg")).toBeVisible();
+    // One hook per step (light is a 7-step tour), each carrying its question.
+    await expect(page.locator("#wr-hooks .wr-hook")).toHaveCount(7);
+    await expect(page.locator("#wr-hooks .wr-hook-q").first()).not.toBeEmpty();
+    // Title + a localized date.
+    await expect(page.locator("#wr-title")).toHaveText("Light");
+    await expect(page.locator("#wr-date")).toContainText(/\d{4}/);
+    // light has no `reflect` yet → the reflection block falls back to outward prose.
+    await expect(page.locator("#wr-reflect-heading")).toBeVisible();
+    await expect(page.locator("#wr-reflect")).not.toBeEmpty();
+
+    // The record replaces the tour chrome (no canvas walk in print mode).
+    await expect(page.locator("#wonder-panel")).toBeHidden();
+    await expect(page.locator("#wonder-intro")).toBeHidden();
+    await expect(page.locator("#wonder-picker")).toBeHidden();
+    expect(errors, `runtime errors rendering the record:\n${errors.join("\n")}`).toHaveLength(0);
+});
+
+test("in print media the record drops all screen chrome and keeps only the sheet", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&print=1");
+    await expect(page.locator("#wonder-record")).toBeVisible();
+
+    await page.emulateMedia({ media: "print" });
+    // Site header, language toggle and the on-screen action bar are print-hidden…
+    await expect(page.locator("#hdr")).toBeHidden();
+    await expect(page.locator("#lang-toggle")).toBeHidden();
+    await expect(page.locator("#wr-actions")).toBeHidden();
+    // …while the printable sheet (title, hooks) stays.
+    await expect(page.locator("#wr-sheet")).toBeVisible();
+    await expect(page.locator("#wr-title")).toBeVisible();
+});
+
+test("the record re-localizes when the language is switched", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&print=1");
+    await expect(page.locator("#wonder-record")).toBeVisible();
+    await expect(page.locator("#wr-kicker")).toHaveText("A journey record");
+
+    await page.locator('.lang-btn[data-lang="zh"]').click();
+    await expect(page.locator("#wr-kicker")).toHaveText("旅程紀錄");
+    await expect(page.locator("#wr-title")).toHaveText("光");
+});
+
+test("the finale offers a quiet link to keep a printable record", async ({ page }) => {
+    await page.goto("/wonders.html?w=light&s=7"); // last step
+    await ready(page);
+    const record = page.locator("#wp-record");
+    await expect(record).toBeVisible();
+    await expect(record).toHaveAttribute("href", "?w=light&print=1");
+});
+
+test("a tour with authored reflect questions shows them instead of the outward fallback", async ({ page }) => {
+    // No shipped tour has `reflect` yet (decision ③ deferred the content), so inject
+    // one to pin the reflect-present branch before authoring lands.
+    await page.route("**/data/wonders/light.json", async (route) => {
+        const res = await route.fetch();
+        const json = await res.json();
+        json.reflect = {
+            en: ["What surprised you most?", "Where might this idea show up in your day?"],
+            zh: ["最讓你意外的是什麼？", "這個想法可能出現在你生活的哪裡？"],
+            ja: ["いちばん意外だったことは？", "この考えはどこに現れそう？"],
+        };
+        await route.fulfill({ json });
+    });
+    await page.goto("/wonders.html?w=light&print=1");
+    await expect(page.locator("#wonder-record")).toBeVisible();
+
+    // The authored questions render as a list — the outward prose fallback is not used.
+    const items = page.locator("#wr-reflect .wr-reflect-list li");
+    await expect(items).toHaveCount(2);
+    await expect(items.first()).toHaveText("What surprised you most?");
+    await expect(page.locator("#wr-reflect .wr-reflect-prose")).toHaveCount(0);
+});

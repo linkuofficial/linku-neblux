@@ -40,6 +40,10 @@ const UI = {
         start: 'Begin the tour', wander: 'Wander the graph', otherTours: 'Explore other wonders →',
         skyLink: 'See this star in the whole sky →',
         shareMoment: 'Share this moment', shareCopied: 'Link copied',
+        recordLink: 'Keep a record of this journey',
+        recordKicker: 'A journey record', recordHooks: 'The questions you followed',
+        recordReflect: 'To carry with you', recordPrint: 'Print / Save as PDF',
+        recordBack: 'Back to the tour', recordDate: 'Walked on {date}',
         steps: 'steps', hint: '✦ Tap any star to jump to its step',
         pickerKicker: 'Wonders', pickerTitle: 'Choose a wonder',
         pickerSubtitle: 'Pick a thread of curiosity and follow it, step by step.',
@@ -54,6 +58,10 @@ const UI = {
         start: '開始這趟', wander: '漫遊整張圖', otherTours: '探索其他主題 →',
         skyLink: '在整片天空看這顆星 →',
         shareMoment: '分享這個瞬間', shareCopied: '已複製連結',
+        recordLink: '留下這趟旅程的紀錄',
+        recordKicker: '旅程紀錄', recordHooks: '你一路追問的問題',
+        recordReflect: '帶著走的思考', recordPrint: '列印 / 存成 PDF',
+        recordBack: '回到旅程', recordDate: '走完於 {date}',
         steps: '步', hint: '✦ 點任一顆星，就能跳到那一步',
         pickerKicker: '驚奇之旅', pickerTitle: '選一趟驚奇之旅',
         pickerSubtitle: '挑一條好奇的線索，一步步跟著它走。',
@@ -68,6 +76,10 @@ const UI = {
         start: 'ツアーを始める', wander: 'グラフを散歩する', otherTours: '他のツアーへ →',
         skyLink: '空全体でこの星を見る →',
         shareMoment: 'この瞬間をシェア', shareCopied: 'リンクをコピーしました',
+        recordLink: 'この旅の記録を残す',
+        recordKicker: '旅の記録', recordHooks: 'たどってきた問い',
+        recordReflect: '持ち帰る問い', recordPrint: '印刷 / PDF に保存',
+        recordBack: 'ツアーに戻る', recordDate: '{date} に歩き終えた',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
         pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
         pickerSubtitle: '好奇心の糸を一つ選んで、一歩ずつたどってみましょう。',
@@ -532,6 +544,7 @@ function renderStep(i, recenter = true) {
     const thread = $('wp-thread');
     const outward = $('wp-outward');
     const recs = $('wp-recs');
+    const record = $('wp-record');
     if (last) {
         thread.hidden = true;
         thread.onclick = null;
@@ -540,6 +553,12 @@ function renderStep(i, recenter = true) {
         outward.dataset.cue = t('cueOutward');
         outward.innerHTML = outwardHTML(outwardText, wonder.outward_links);
         renderRecs();                                  // async + progressive
+        // Quiet endgame affordance: take a printable record of this journey.
+        if (record) {
+            record.textContent = t('recordLink');
+            record.href = `?w=${wonderId}&print=1`;
+            record.hidden = false;
+        }
     } else {
         thread.hidden = false;
         thread.textContent = pick(step.thread);
@@ -548,6 +567,7 @@ function renderStep(i, recenter = true) {
         thread.tabIndex = 0;
         outward.hidden = true; outward.innerHTML = '';
         recs.hidden = true; recs.innerHTML = '';
+        if (record) { record.hidden = true; }
     }
 
     // Nav buttons. On the last step the primary exit loops back to the picker
@@ -725,6 +745,9 @@ function setupLangToggle() {
             applyStaticI18n();
             if (started && stepIndex >= 0) renderStep(stepIndex, false);
             if (!document.getElementById('wonder-picker').hidden) renderPicker();
+            // The printable record has its own localized DOM — rebuild it in the
+            // new language (it re-fetches labels; both are cached after first load).
+            if (wonderId && !document.getElementById('wonder-record').hidden) renderRecord(wonderId);
             // Only a tour has a graph to relabel; the picker needs no i18n fetch.
             if (renderer) {
                 renderer.notify();
@@ -917,6 +940,143 @@ async function loadWonder(id) {
     }, 700);
 }
 
+// ===== JOURNEY RECORD (printable) =====
+// A single static page — constellation + the tour's hook questions + reflection
+// prompts + date — built entirely from the loaded wonder JSON. Zero backend.
+// Reached via ?w=<id>&print=1 or the endgame "keep a record" link. On screen it
+// is a dark sheet; @media print turns it into a white A4 page (see wonders.css).
+const LOCALE = { en: 'en-US', zh: 'zh-TW', ja: 'ja-JP' };
+
+// White line-art constellation: the tour's steps on a dome arc joined by a spine,
+// in the tour's domain colour. Same arc layout as the build-time OG image
+// (scripts/build_share_pages.mjs) but stripped to ink-friendly line-art (no dark
+// field), so it reads on the dark screen sheet and on white paper alike.
+function recordConstellationSVG(accent, n) {
+    const W = 900, H = 190;
+    const count = Math.max(1, n);
+    const f = v => v.toFixed(1);
+    const marginX = 70, spanX = W - marginX * 2;
+    const baseY = H * 0.66, dome = H * 0.42;
+    const pts = [];
+    for (let i = 0; i < count; i++) {
+        const u = count <= 1 ? 0.5 : i / (count - 1);
+        pts.push({ x: marginX + spanX * u, y: baseY - dome * Math.sin(Math.PI * u) });
+    }
+    const spine = pts.map((p, i) => `${i ? 'L' : 'M'}${f(p.x)} ${f(p.y)}`).join(' ');
+    const dots = pts.map((p, i) => {
+        const r = (i === 0 || i === count - 1) ? 7 : 5;
+        return `<circle cx="${f(p.x)}" cy="${f(p.y)}" r="${r + 3}" fill="none" stroke="${accent}" stroke-width="1" opacity="0.4"/>`
+            + `<circle cx="${f(p.x)}" cy="${f(p.y)}" r="${r}" fill="${accent}"/>`;
+    }).join('');
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="100%" role="img">`
+        + `<path d="${spine}" fill="none" stroke="${accent}" stroke-width="2" stroke-opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>`
+        + dots + '</svg>';
+}
+
+async function renderRecord(id) {
+    const $ = idv => document.getElementById(idv);
+    // Capture the language this render is for; if the reader switches language
+    // while our fetches are in flight, a newer renderRecord is already running —
+    // bail before touching the DOM so the sheet never ends up half-translated
+    // (mirrors setupLangToggle's `if (LANG !== lang) return` guard).
+    const lang = LANG;
+    // The record needs only the tour JSON + the localized label map (id→label),
+    // never the ~1 MB full graph — keep the print page light. The tour JSON is
+    // already loaded on a language re-render, so only fetch it on first entry.
+    if (!wonder || wonderId !== id) {
+        wonder = await fetchJson(`/data/wonders/${id}.json`);
+        wonderId = id;
+    }
+    // Concept labels for the current language. Fetched directly rather than via
+    // loadLabelMap, whose cache is seeded `en: {}` for the tour path (where
+    // English labels come from the graph node) — so English resolves here too.
+    // Falls back to en.json, then to the raw id, on miss.
+    let recLabels = {};
+    try { recLabels = await fetchJson(`/data/i18n/${lang}.json`, 6000); }
+    catch { try { recLabels = await fetchJson('/data/i18n/en.json', 6000); } catch { recLabels = {}; } }
+    if (LANG !== lang) return;   // language changed mid-fetch → a newer render owns the DOM
+    document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : lang;
+
+    const stepLabel = step => step.local
+        ? (pick(step.local.label) || step.local.id)
+        : (recLabels[step.ref] || step.ref);
+
+    // Header: kicker, tour title, localized date.
+    $('wr-kicker').textContent = t('recordKicker');
+    $('wr-title').textContent = pick(wonder.title);
+    let dateStr;
+    try {
+        dateStr = new Intl.DateTimeFormat(LOCALE[LANG] || 'en-US',
+            { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date());
+    } catch { dateStr = new Date().toISOString().slice(0, 10); }
+    $('wr-date').textContent = t('recordDate').replace('{date}', dateStr);
+
+    // Constellation, tinted with the tour's domain colour (both the graphic and
+    // the on-screen accents; print overrides text accents to dark ink).
+    const accent = DC[wonder.accent] || 'var(--accent)';
+    $('wr-sheet').style.setProperty('--rec-accent', accent);
+    $('wr-constellation').innerHTML = recordConstellationSVG(accent, (wonder.steps || []).length);
+
+    // The tour's hook questions — one per step, each under its concept label.
+    $('wr-hooks-heading').textContent = t('recordHooks');
+    const ol = $('wr-hooks');
+    ol.innerHTML = '';
+    for (const step of (wonder.steps || [])) {
+        const li = document.createElement('li');
+        li.className = 'wr-hook';
+        const lbl = document.createElement('div');
+        lbl.className = 'wr-hook-label';
+        lbl.textContent = stepLabel(step);
+        const q = document.createElement('p');
+        q.className = 'wr-hook-q';
+        q.textContent = pick(step.hook);
+        li.append(lbl, q);
+        ol.appendChild(li);
+    }
+
+    // Reflection prompts: the tour's `reflect` questions, or the `outward` prose
+    // as a fallback when a tour hasn't authored reflect yet (ROADMAP P2-1).
+    const rHeading = $('wr-reflect-heading');
+    rHeading.textContent = t('recordReflect');
+    const rbox = $('wr-reflect');
+    rbox.innerHTML = '';
+    const reflect = wonder.reflect && (wonder.reflect[LANG] || wonder.reflect.en);
+    if (Array.isArray(reflect) && reflect.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'wr-reflect-list';
+        for (const qtext of reflect) {
+            const li = document.createElement('li');
+            li.textContent = qtext;
+            ul.appendChild(li);
+        }
+        rbox.appendChild(ul);
+        rHeading.hidden = false;
+    } else {
+        const outwardText = pick(wonder.outward);
+        if (outwardText) {
+            const p = document.createElement('p');
+            p.className = 'wr-reflect-prose';
+            p.textContent = outwardText;
+            rbox.appendChild(p);
+            rHeading.hidden = false;
+        } else {
+            rHeading.hidden = true;   // nothing to reflect on → drop the section
+        }
+    }
+
+    // Footer source line + actions (actions hidden in print via @media print).
+    $('wr-source').textContent = `Neblux Wonders · neblux.linku.tech/wonders.html?w=${id}`;
+    const printBtn = $('wr-print');
+    printBtn.textContent = t('recordPrint');
+    printBtn.onclick = () => window.print();
+    const back = $('wr-back');
+    back.textContent = t('recordBack');
+    back.href = `wonders.html?w=${id}`;
+
+    setLoading(null);
+    $('wonder-record').hidden = false;
+}
+
 // ===== BOOT =====
 async function boot() {
     applyStaticI18n();
@@ -939,9 +1099,13 @@ async function boot() {
 
     try {
         setLoading(t('loading'));
-        const wid = new URLSearchParams(window.location.search).get('w');
-        // Tour loads the graph + labels lazily; picker stays lightweight.
-        if (wid && WONDER_IDS.includes(wid)) await loadWonder(wid);
+        const params = new URLSearchParams(window.location.search);
+        const wid = params.get('w');
+        const isPrint = params.get('print') === '1';
+        // Print record: a static page, no graph/canvas. Tour loads the graph +
+        // labels lazily; picker stays lightweight.
+        if (isPrint && wid && WONDER_IDS.includes(wid)) await renderRecord(wid);
+        else if (wid && WONDER_IDS.includes(wid)) await loadWonder(wid);
         else await showPicker();
     } catch (err) {
         console.error('wonders boot failed', err);

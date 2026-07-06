@@ -98,6 +98,7 @@
             <a id="wp-thread" href="#" role="button"></a>
             <div id="wp-outward" hidden></div>
             <div id="wp-recs" hidden></div>
+            <a id="wp-record" hidden></a>
             <div id="wp-nav">
                 <button id="wp-prev" type="button">←</button>
                 <span id="wp-count"></span>
@@ -130,6 +131,32 @@
         </div>
         <div id="wpk-grid"></div>
     </div>
+
+    <!-- Printable journey record (?w=<id>&print=1). Screen: dark sheet; print:
+         a single white A4 page. Pure static DOM built from the loaded tour JSON. -->
+    <main id="wonder-record" hidden>
+        <div id="wr-actions">
+            <button id="wr-print" type="button"></button>
+            <a id="wr-back"></a>
+        </div>
+        <article id="wr-sheet">
+            <header id="wr-head">
+                <div id="wr-kicker"></div>
+                <h1 id="wr-title"></h1>
+                <div id="wr-date"></div>
+            </header>
+            <div id="wr-constellation" aria-hidden="true"></div>
+            <section class="wr-section">
+                <h2 id="wr-hooks-heading" class="wr-heading"></h2>
+                <ol id="wr-hooks"></ol>
+            </section>
+            <section class="wr-section">
+                <h2 id="wr-reflect-heading" class="wr-heading"></h2>
+                <div id="wr-reflect"></div>
+            </section>
+            <footer id="wr-foot"><span id="wr-source"></span></footer>
+        </article>
+    </main>
 
     <script src="/neblux-tokens.js"></script>
     <script type="module" src="/src/wonders-main.js"></script>

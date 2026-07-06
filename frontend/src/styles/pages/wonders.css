@@ -739,3 +739,224 @@
     .wp-dot { background: rgba(200, 212, 230, 0.5); }
     .wp-dot.is-active, .wp-dot.is-past { background: var(--accent); }
 }
+
+/* ── Endgame "keep a record" link (footer, last step only) ──────────────────
+   A quiet centred affordance, matching #wp-sky. */
+#wp-record {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    color: var(--ink-soft);
+    text-decoration: none;
+    opacity: 0.78;
+    transition: color 0.2s, opacity 0.2s;
+}
+#wp-record[hidden] { display: none; }
+#wp-record::before { content: '❏ '; }
+#wp-record::after { content: ' →'; color: var(--accent); }
+#wp-record:hover { color: var(--accent); opacity: 1; }
+
+/* ── Printable journey record (?w=<id>&print=1) ─────────────────────────────
+   On screen: a dark, scrollable sheet above the canvas. In print (@media print,
+   further down): a single white A4 page. --rec-accent (set per tour in JS) tints
+   the constellation + on-screen accents. */
+#wonder-record {
+    position: fixed;
+    inset: 0;
+    /* Below the language toggle (z-16) so it stays reachable over the sheet, but
+       above the tour chrome it replaces (header z-6, panel z-12, picker z-14). */
+    z-index: 15;
+    overflow-y: auto;
+    background: var(--bg-1);
+    padding: 30px 20px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#wonder-record[hidden] { display: none; }
+
+#wr-actions {
+    width: min(760px, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+#wr-print {
+    font-family: var(--font-label);
+    font-size: var(--text-sm);
+    letter-spacing: 0.04em;
+    color: var(--ink-main);
+    background: rgba(240, 192, 80, 0.14);
+    border: 0.5px solid rgba(240, 192, 80, 0.5);
+    border-radius: var(--radius-control);
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.2s var(--ease-ui), transform 0.15s var(--ease-ui);
+}
+#wr-print:hover { background: rgba(240, 192, 80, 0.22); transform: translateY(-1px); }
+#wr-back {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.04em;
+    color: var(--ink-faint);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+#wr-back::before { content: '← '; }
+#wr-back:hover { color: var(--accent); }
+
+#wr-sheet {
+    --rec-accent: var(--accent);
+    width: min(760px, 100%);
+    background: var(--glass-2);
+    border: 0.5px solid var(--line-subtle);
+    border-radius: var(--radius-lg);
+    padding: 46px 52px 40px;
+    color: var(--ink-main);
+}
+#wr-head { text-align: center; }
+#wr-kicker {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--rec-accent);
+    margin-bottom: 12px;
+}
+#wr-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.015em;
+    color: var(--ink-main);
+    margin-bottom: 10px;
+}
+#wr-date {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: 0.03em;
+    color: var(--ink-faint);
+}
+#wr-constellation {
+    margin: 22px auto 30px;
+    max-width: 620px;
+}
+#wr-constellation svg { display: block; width: 100%; height: auto; }
+
+.wr-section { margin-top: 28px; }
+.wr-heading {
+    font-family: var(--font-label);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--rec-accent);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    border-bottom: 0.5px solid var(--line-subtle);
+}
+.wr-heading[hidden] { display: none; }
+
+#wr-hooks { margin: 0; padding-left: 1.5em; }
+.wr-hook { margin-bottom: 15px; }
+.wr-hook::marker { color: var(--rec-accent); font-family: var(--font-label); }
+.wr-hook-label {
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 3px;
+}
+.wr-hook-q {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-main);
+}
+.wr-reflect-list { margin: 0; padding-left: 1.5em; }
+.wr-reflect-list li {
+    margin-bottom: 9px;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-main);
+}
+.wr-reflect-list li::marker { color: var(--rec-accent); }
+.wr-reflect-prose {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: var(--ink-soft);
+}
+#wr-foot {
+    margin-top: 32px;
+    padding-top: 14px;
+    border-top: 0.5px solid var(--line-subtle);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: var(--text-2xs);
+    letter-spacing: 0.02em;
+    color: var(--ink-faint);
+}
+
+@media (max-width: 640px) {
+    #wr-sheet { padding: 32px 22px 30px; }
+}
+
+/* Print: one white A4 page. Hide every screen chrome; ink-friendly white sheet
+   with dark text and the domain-tinted line-art constellation. Long tours may
+   overflow to a second page — hook questions are the tour's substance and are
+   never truncated (ROADMAP P2-1 decision). */
+@media print {
+    @page { size: A4; margin: 14mm; }
+    #hdr, #lang-toggle, #canvas, #loading, #wonder-panel, #wonder-intro,
+    #wonder-picker, #wonder-hint, #wr-actions { display: none !important; }
+    /* Drop the cosmic backdrop overlays (_base.css) — they print as a grey
+       vignette that wastes ink; the record wants a clean white page. */
+    body::before, body::after { display: none !important; }
+    html, body { background: #fff !important; }
+    #wonder-record {
+        position: static;
+        display: block;
+        overflow: visible;
+        background: #fff !important;
+        padding: 0;
+    }
+    #wr-sheet {
+        width: 100%;
+        background: #fff !important;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        color: #111 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    #wr-title { color: #111 !important; font-size: 21pt; margin-bottom: 6px; }
+    #wr-kicker, .wr-heading, .wr-hook::marker,
+    .wr-reflect-list li::marker { color: #333 !important; }
+    #wr-date { color: #555 !important; font-size: 9pt; }
+    #wr-constellation { margin: 12pt auto 16pt; max-width: 460px; }
+    .wr-section { margin-top: 16pt; }
+    .wr-heading {
+        font-size: 9pt; margin-bottom: 9pt; padding-bottom: 5pt;
+        border-bottom: 0.5pt solid #ccc;
+    }
+    .wr-hook { margin-bottom: 9pt; break-inside: avoid; }
+    .wr-hook-label { color: #666 !important; font-size: 7.5pt; }
+    .wr-hook-q { color: #111 !important; font-size: 10.5pt; line-height: 1.4; }
+    .wr-reflect-list li { color: #111 !important; font-size: 10.5pt; line-height: 1.4; }
+    .wr-reflect-prose { color: #222 !important; font-size: 10.5pt; line-height: 1.4; }
+    #wr-foot {
+        margin-top: 16pt; padding-top: 8pt;
+        border-top: 0.5pt solid #ccc; color: #777 !important; font-size: 8pt;
+    }
+}
