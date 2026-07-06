@@ -58,7 +58,7 @@
 ## 新 tour 上線 checklist（漏一項就是壞版本）
 
 1. [ ] 每個 `steps[].ref` 都存在於 `data/all_nodes.json`（grep 每個 id）。
-2. [ ] `frontend/src/wonders-main.js` 的 `WONDER_IDS` 加入新 id。
+2. [ ] `frontend/src/wonders-main.js` 的 `WONDER_IDS` 加入新 id。（後端 `functions/api/echo.ts` 由 `tour-index.json` 自動辨識，無需手動同步。）
 3. [ ] `tests/e2e/wonders.spec.ts` 的 `toHaveCount(19)` 改成新數量。
 4. [ ] 全部三語欄位齊備（缺一語會 fallback en，體驗劣化）。
 5. [ ] `npm run build` 後確認 `dist/data/wonders/<id>.json` 存在。

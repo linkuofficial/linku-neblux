@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-06（P2-1 旅程紀錄產物實作＋驗證完成：`?w=<id>&print=1` 可列印記錄頁——白底線稿星座＋各站 hook＋反思(reflect 選填/fallback outward)＋在地化日期，`@media print` A4，三語；e2e 54 綠、三語 print-media 實看過；reflect 內容機制先行待 authoring；**未 commit**，待凜空裁決。設計簡報見 `docs/tasks/2026-07-06-p2-1-journey-record.md`）
+> 最後更新：2026-07-07（P1-2 級1 迴響 ✨ 實作＋本機 wrangler 實測＋強制交叉審查完成：`functions/api/echo.ts`〔POST/GET、同源檢查、tour-index 精確站數驗證、IP 加鹽 hash 節流、D1 UPSERT〕＋前端 surprise beat ✨/序數三語，壓 `API_ENABLED` 旗標休眠；e2e 56 綠、審查 findings 全修；卡 `[人工]` 建 D1/KV＋翻旗；**未 commit**。簡報 `docs/tasks/2026-07-07-p1-2-echo.md`。｜ 前次：P2-1 旅程紀錄產物已 commit＋push）
 > 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
 > 2026-07-06 追加：P0 hardening——永久「API 全滅站照常」守門 `tests/e2e/api-failure.spec.ts`（鐵律入 CI）；必要 build 產物（概念頁/sitemap/graph.json/tour-index）改 fail-fast（`this.error`），layout bake 維持 warn；文件與實作命名對齊。P0-B spark 機制完成、內容擱置（見下）。**P0 收線；下一步 P1 後端**（開場：`API_ENABLED` flag 止血 landing/explorer 的失敗 `/api` 請求 → P1-0 骨架 → 人工建 D1 `DB`／KV `LINKS`）。e2e 43 綠。
 
@@ -95,11 +95,11 @@
   - [ ] `GET /api/og?w=&s=`（動態 og，workers-og＋CJK 子集）— **跳過＝債**：邊緣 CJK 子集化最脆、P0-2 靜態 og 已可用、次要資產邊際價值低。要補另立案，屬 `functions/` 禁區。
   - 驗收（原始）：分享連結預覽正確；API 掛掉時分享鈕靜默隱藏。（現況：分享鈕純前端不依賴 API；預覽為 P0-2 每趟靜態 og，非 per-beat。）
 
-- [ ] **P1-2 級1 迴響**
-  - `POST /api/echo {tour, step}`：驗證 tour ∈ WONDER_IDS、step 在範圍；D1 UPSERT +1。`GET /api/echo?tour=` 回該 tour 各站計數。
-  - 前端：✨ 鈕（surprise 旁），`navigator.sendBeacon`，失敗靜默；顯示文案用序數（「你是第 N 位…」三語），**禁**「本週 N 人」。
-  - 節流：KV key `ip:tour:step` TTL 3600 秒，>3 次忽略。
-  - 驗收：計數遞增；API 掛掉 UI 無 ✨ 且無錯誤。
+- [~] **P1-2 級1 迴響（實作＋本機實測＋強制交叉審查完成 2026-07-06；卡 `[人工]` 綁定＋翻旗；未 commit）**
+  - [x] 後端 `functions/api/echo.ts`：`POST {tour,step}`（同源檢查→tour-index 驗每趟精確站數→KV 節流(IP 加鹽 SHA-256、TTL 3600、>3 忽略)→D1 UPSERT +1）；`GET ?tour=` 回各站計數。本機 wrangler+D1/KV curl 全過。
+  - [x] 前端：surprise beat 旁安靜 ✨（`sendBeacon`、失敗靜默）＋一行序數「你是第 N 位…」三語（**禁**「本週 N 人」）。壓 `API_ENABLED` 旗標；e2e 休眠守門綠（API 掛掉無 ✨ 無錯）。設計＋審查見 `docs/tasks/2026-07-07-p1-2-echo.md`。
+  - [ ] `[人工]` Cloudflare 建 D1 `DB`＋套 `functions/schema.sql`、建 KV `THROTTLE`；就緒後翻 `config.js` `API_ENABLED=true`＝啟用。
+  - 驗收（原始）：計數遞增；API 掛掉 UI 無 ✨ 且無錯誤。→ 達成（本機／休眠守門雙證）。
 
 - [ ] **P1-3 級3 遙測**
   - Analytics Engine 綁定 `WONDER_EVENTS`。打點：start / step / finish / drop（`visibilitychange`＋sendBeacon），欄位：tour、event、lang、step。
