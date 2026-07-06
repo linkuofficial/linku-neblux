@@ -2,7 +2,7 @@
 
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
-> 最後更新：2026-07-06（P1-0 程式面完成：止血旗標 + `functions/api/health.ts` + `schema.sql`，本地 wrangler 實測 health OK；剩 `[人工]` D1/KV 綁定）
+> 最後更新：2026-07-06（P2-1 旅程紀錄產物實作＋驗證完成：`?w=<id>&print=1` 可列印記錄頁——白底線稿星座＋各站 hook＋反思(reflect 選填/fallback outward)＋在地化日期，`@media print` A4，三語；e2e 54 綠、三語 print-media 實看過；reflect 內容機制先行待 authoring；**未 commit**，待凜空裁決。設計簡報見 `docs/tasks/2026-07-06-p2-1-journey-record.md`）
 > 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
 > 2026-07-06 追加：P0 hardening——永久「API 全滅站照常」守門 `tests/e2e/api-failure.spec.ts`（鐵律入 CI）；必要 build 產物（概念頁/sitemap/graph.json/tour-index）改 fail-fast（`this.error`），layout bake 維持 warn；文件與實作命名對齊。P0-B spark 機制完成、內容擱置（見下）。**P0 收線；下一步 P1 後端**（開場：`API_ENABLED` flag 止血 landing/explorer 的失敗 `/api` 請求 → P1-0 骨架 → 人工建 D1 `DB`／KV `LINKS`）。e2e 43 綠。
 
@@ -108,9 +108,11 @@
 
 ## Phase 2 — 教育（依賴 Phase 0）
 
-- [ ] **P2-1 旅程紀錄產物**
-  - `wonders.html?w=<id>&print=1`（或走完後按鈕）：渲染可列印 DOM——星座 SVG、七個 hook 問題、2–3 題反思（tour JSON 選填欄位 `reflect`，未填則用 outward 文字）、日期。`@media print` 排 A4 一頁。三語。零後端。
-  - 驗收：Ctrl+P 出單頁 A4，三語版面皆正常。
+- [~] **P2-1 旅程紀錄產物（實作＋驗證完成 2026-07-06；reflect 內容機制先行、待 authoring；未 commit）**
+  - `wonders.html?w=<id>&print=1`（＋終局「留下這趟旅程的紀錄」連結）：渲染可列印 DOM——白底線稿星座 SVG、每站 hook 問題、2–3 題反思（tour JSON 選填欄位 `reflect`，未填則用 outward 文字）、在地化日期。`@media print` 白底 A4（緊排、長趟可溢出第二頁不刪 hook）。三語。零後端。設計裁決見 `docs/tasks/2026-07-06-p2-1-journey-record.md`。
+  - [x] 機制：記錄頁 + 星座 + hooks + reflect(fallback outward) + print CSS + 5 條 e2e 守門（e2e 55 綠）；三語瀏覽器實看＋print-media 截圖過；對抗審查 approve、4 findings 已修。
+  - [ ] `reflect` 各趟內容 authoring（決策③機會型；現走 outward fallback，非缺口）。
+  - 驗收（原始）：Ctrl+P 出單頁 A4，三語版面皆正常。→ 達成（長趟可能落第二頁＝決策②授權）。
 - [ ] **P2-2 `[人工]` 種子老師**：5–10 位高中自然／社會科老師試用，請他們回報學生棄坑點。
 - **閘門：≥2 位老師主動二次使用，才做 P2-3。**
 - [ ] **P2-3 班級星圖**

@@ -30,7 +30,12 @@
     { "source": "optics_concept", "target": "electromagnetic_theory_concept",
       "relation_type": "conceptual" } // ∈ logical|applied|conceptual|historical|causal
   ],
-  "outward": { "en": "...", "zh": "...", "ja": "..." }   // 結尾延伸建議
+  "outward": { "en": "...", "zh": "...", "ja": "..." },  // 結尾延伸建議
+  "reflect": {                          // 選填；P2-1 旅程紀錄產物的反思提問，省略則列印頁 fallback 到 outward
+    "en": ["...?", "...?"],             // 每語 2–3 題，開放式問句
+    "zh": ["...？", "...？"],
+    "ja": ["...？", "...？"]
+  }
 }
 ```
 
@@ -41,6 +46,7 @@
 - **example**：一個讀者今天就摸得到的例子（手機相機、遙控器、條碼機）。
 - **surprise**：反直覺的轉折，**全 tour 的傳播資產**。必須是可查證的事實——不確定就不寫，寧缺勿假。
 - **thread**：一句話把讀者推向下一站，留下新的缺口。
+- **reflect**（選填）：走完 tour 後的反思提問，出現在旅程紀錄列印頁（`wonders.html?w=<id>&print=1`）供學習者／老師印下帶走。每語 2–3 題、開放式問句，邀讀者把這趟連回自己的思考——不是事實記憶的測驗題、不是是非題。省略時列印頁自動 fallback 顯示 `outward` 散文，因此它是純加值、不寫也不會壞。三語同樣是原生重寫非逐句翻譯，zh 一律繁體。
 - 語態：第二人稱、對「聰明但非本科的朋友」說話。完整規範見 `brand-voice.md`。
 
 ## 三語規則
