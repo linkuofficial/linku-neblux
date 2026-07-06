@@ -603,6 +603,25 @@
 #wp-sky[hidden] { display: none; }
 #wp-sky:hover { color: var(--accent); opacity: 1; }
 
+/* Quiet "share this moment" affordance, tucked under the surprise beat. */
+.wp-share {
+    margin-top: 10px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    font-family: var(--font-label);
+    font-size: var(--text-2xs);
+    letter-spacing: var(--tracking-wider);
+    color: var(--ink-soft);
+    opacity: 0.7;
+    cursor: pointer;
+    transition: color 0.2s, opacity 0.2s;
+}
+.wp-share::before { content: '↗ '; }
+.wp-share[hidden] { display: none; }
+.wp-share:hover,
+.wp-share.is-copied { color: var(--accent); opacity: 1; }
+
 #wp-nav {
     margin-top: 14px;
     display: flex;

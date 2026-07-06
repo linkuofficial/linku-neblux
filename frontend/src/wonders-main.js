@@ -39,6 +39,7 @@ const UI = {
         cueNext: 'Up next', cueOutward: 'Go further', recWhy: 'from “{via}”, keep falling',
         start: 'Begin the tour', wander: 'Wander the graph', otherTours: 'Explore other wonders →',
         skyLink: 'See this star in the whole sky →',
+        shareMoment: 'Share this moment', shareCopied: 'Link copied',
         steps: 'steps', hint: '✦ Tap any star to jump to its step',
         pickerKicker: 'Wonders', pickerTitle: 'Choose a wonder',
         pickerSubtitle: 'Pick a thread of curiosity and follow it, step by step.',
@@ -52,6 +53,7 @@ const UI = {
         cueNext: '接下來', cueOutward: '想真的學會', recWhy: '從『{via}』，繼續往下墜',
         start: '開始這趟', wander: '漫遊整張圖', otherTours: '探索其他主題 →',
         skyLink: '在整片天空看這顆星 →',
+        shareMoment: '分享這個瞬間', shareCopied: '已複製連結',
         steps: '步', hint: '✦ 點任一顆星，就能跳到那一步',
         pickerKicker: '驚奇之旅', pickerTitle: '選一趟驚奇之旅',
         pickerSubtitle: '挑一條好奇的線索，一步步跟著它走。',
@@ -65,6 +67,7 @@ const UI = {
         cueNext: '次は', cueOutward: 'さらに先へ', recWhy: '「{via}」から、もっと深くへ',
         start: 'ツアーを始める', wander: 'グラフを散歩する', otherTours: '他のツアーへ →',
         skyLink: '空全体でこの星を見る →',
+        shareMoment: 'この瞬間をシェア', shareCopied: 'リンクをコピーしました',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
         pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
         pickerSubtitle: '好奇心の糸を一つ選んで、一歩ずつたどってみましょう。',
@@ -511,7 +514,17 @@ function renderStep(i, recenter = true) {
     setBlock('wp-hook', pick(step.hook));
     setBlock('wp-reveal', pick(step.reveal));
     setBlock('wp-example', pick(step.example));
-    setBlock('wp-surprise', pick(step.surprise));
+    const surpriseText = pick(step.surprise);
+    setBlock('wp-surprise', surpriseText);
+    // "Share this moment" — a quiet affordance tied to the surprise beat. Shares
+    // the existing ?w=&s= deep link (P1-1 frontend slice; dynamic og + KV short
+    // links deferred, see task brief). Hidden when the step has no surprise.
+    const shareBtn = $('wp-share');
+    if (shareBtn) {
+        shareBtn.hidden = !surpriseText;
+        shareBtn.textContent = t('shareMoment');
+        shareBtn.onclick = () => shareCurrentBeat(i);
+    }
 
     // Thread / closing CTA. Mid-tour, #wp-thread is the "up next" teaser (click to
     // advance). On the last step it gives way to #wp-outward — readable outward
@@ -622,6 +635,40 @@ function goToStep(i) {
     if (wonderId) {
         try { history.replaceState(null, '', `?w=${wonderId}&s=${i + 1}`); } catch {}
     }
+}
+
+// "Share this moment": hand the current beat's deep link to the native share
+// sheet, or copy it when Web Share is unavailable (mostly desktop). Frontend
+// only — no backend. Rich per-beat og previews and KV short links are deferred
+// (see docs/tasks brief); the shared URL is the plain ?w=&s= deep link.
+async function shareCurrentBeat(i) {
+    if (!wonderId || !wonder) return;
+    const url = `${location.origin}${location.pathname}?w=${wonderId}&s=${i + 1}`;
+    const step = wonder.steps[i];
+    const shareData = { title: pick(wonder.title), text: pick(step && step.surprise) || pick(wonder.title), url };
+    if (navigator.share) {
+        try { await navigator.share(shareData); }
+        catch { /* user dismissed the sheet, or share failed — stay quiet */ }
+        return;
+    }
+    try {
+        await navigator.clipboard.writeText(url);
+        flashShareCopied();
+    } catch { /* clipboard blocked — nothing loud to do */ }
+}
+
+function flashShareCopied() {
+    const btn = document.getElementById('wp-share');
+    if (!btn) return;
+    btn.textContent = t('shareCopied');
+    btn.classList.add('is-copied');
+    const live = document.getElementById('wp-live');
+    if (live) live.textContent = t('shareCopied');
+    clearTimeout(btn._copiedTimer);
+    btn._copiedTimer = setTimeout(() => {
+        btn.textContent = t('shareMoment');
+        btn.classList.remove('is-copied');
+    }, 2000);
 }
 
 function startTour(startStep = 0) {

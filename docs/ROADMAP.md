@@ -89,11 +89,11 @@
     CREATE TABLE IF NOT EXISTS tour_finish (tour TEXT PRIMARY KEY, count INTEGER NOT NULL DEFAULT 0);
     ```
 
-- [ ] **P1-1 級2 分享**
-  - `GET /s/:code`：KV 查 target（僅允許同源路徑）→ 302；miss → 302 首頁。
-  - `GET /api/og?w=&s=`：先查 Cache API；miss 用 `workers-og` 渲染該 beat（tour 標題＋surprise 摘句）。**CJK 字型子集若卡住 → 降級沿用 P0-2 靜態圖並回報使用者，不硬撐。**
-  - 前端：surprise 區塊旁「分享這個瞬間」→ 產生短連結＋Web Share API（無則複製連結）。
-  - 驗收：分享連結預覽正確；API 掛掉時分享鈕靜默隱藏。
+- [~] **P1-1 級2 分享（前端切片完成 2026-07-06；兩塊後端跳過＝債，見 `docs/tasks/2026-07-06-p1-1-share-moment.md`）**
+  - [x] 前端：surprise 區塊旁安靜「分享這個瞬間」→ **分享既有 `?w=&s=` 深連結**＋Web Share API（桌面無則複製連結）。純前端、非禁區、graceful。e2e 44 綠、瀏覽器實看過。
+  - [ ] `GET /s/:code`（KV 短連結）— **跳過＝債**：卡 `[人工]` KV `LINKS`＋ROADMAP 未定義 code 怎麼 mint（規格洞，不猜）。要補先補規格＋建 KV，屬 `functions/` 禁區。
+  - [ ] `GET /api/og?w=&s=`（動態 og，workers-og＋CJK 子集）— **跳過＝債**：邊緣 CJK 子集化最脆、P0-2 靜態 og 已可用、次要資產邊際價值低。要補另立案，屬 `functions/` 禁區。
+  - 驗收（原始）：分享連結預覽正確；API 掛掉時分享鈕靜默隱藏。（現況：分享鈕純前端不依賴 API；預覽為 P0-2 每趟靜態 og，非 per-beat。）
 
 - [ ] **P1-2 級1 迴響**
   - `POST /api/echo {tour, step}`：驗證 tour ∈ WONDER_IDS、step 在範圍；D1 UPSERT +1。`GET /api/echo?tour=` 回該 tour 各站計數。
