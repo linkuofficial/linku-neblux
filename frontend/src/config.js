@@ -23,3 +23,14 @@ export const API_ENABLED = false;
 // function actually exist. Vite statically replaces the import.meta.env
 // reference at build time; unset → undefined → false.
 export const ECHO_ENABLED = import.meta.env.VITE_ECHO_ENABLED === "true";
+
+// TELEMETRY_ENABLED gates the wonders funnel beacons (/api/event, P1-3): start /
+// step / finish / drop / picker_view. Same build-time pattern as ECHO_ENABLED —
+// false everywhere the backend doesn't exist (local dev, e2e) so those make zero
+// /api/event calls and the dormancy + api-failure guards stay green (sendEvent
+// short-circuits on the false constant — the sendBeacon call is never reached).
+// True only when the production build sets
+// VITE_TELEMETRY_ENABLED=true, where the D1 `DB` binding and /api/event exist.
+// Every beacon is fire-and-forget and fails silently (ironclad rule 1); the data
+// is anonymous aggregate only (ironclad rule 2).
+export const TELEMETRY_ENABLED = import.meta.env.VITE_TELEMETRY_ENABLED === "true";

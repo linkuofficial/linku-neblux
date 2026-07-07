@@ -452,3 +452,29 @@ test("the ✨ resonance affordance stays dormant while ECHO_ENABLED is false", a
     expect(apiCalls, `no /api calls with API disabled:\n${apiCalls.join("\n")}`).toHaveLength(0);
     expect(errors, `clean console:\n${errors.join("\n")}`).toHaveLength(0);
 });
+
+test("funnel telemetry stays dormant while TELEMETRY_ENABLED is false", async ({ page }) => {
+    const events: string[] = [];
+    page.on("request", (r) => { if (r.url().includes("/api/event")) events.push(r.url()); });
+    const errors: string[] = [];
+    page.on("pageerror", (e) => errors.push(String(e)));
+    page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
+
+    // Exercise every beacon point: picker impression, start, step, finish, drop.
+    await page.goto("/wonders.html");              // picker_view (no graph hook here)
+    await expect(page.locator(".wpk-card").first()).toBeVisible();
+    await page.goto("/wonders.html?w=edge-ai");    // start + step
+    await ready(page);
+    await page.locator("#wi-start").click();
+    await page.locator("#wp-next").click();
+    // Fire the drop path BEFORE the finale — reportDrop early-returns once finishSent
+    // is set, so dispatching after goToStep(last) would never reach sendEvent('drop').
+    await page.evaluate(() => document.dispatchEvent(new Event("visibilitychange"))); // drop path
+    await page.evaluate(() => (window as any).__nebluxWonders.goToStep(6)); // finish (last beat)
+
+    // Gate off (TELEMETRY_ENABLED=false): zero /api/event beacons, clean console,
+    // tour behaves exactly as before — ironclad rule 1.
+    expect(events, `no /api/event beacons when disabled:\n${events.join("\n")}`).toHaveLength(0);
+    expect(errors, `clean console:\n${errors.join("\n")}`).toHaveLength(0);
+    await expect(page.locator("#wp-alt")).toBeVisible();
+});

@@ -9,7 +9,7 @@
 
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
-import { ECHO_ENABLED } from "./config.js";
+import { ECHO_ENABLED, TELEMETRY_ENABLED } from "./config.js";
 
 // ===== TOKENS =====
 const DC = window.NebluxTokens?.DOMAIN_COLORS || {
@@ -122,6 +122,13 @@ let stepIndex = -1;           // -1 = intro not started
 let started = false;
 let echoCounts = null;        // { [step]: count } per-beat ✨ tallies (null = not loaded / API off)
 const echoedSteps = new Set();// 1-based steps this page has echoed — drives the ordinal display
+// P1-3 funnel telemetry dedup state. Correct ONLY because every tour switch is a
+// full-page navigation (picker click, next-from-finale, enter-graph all set
+// location.*), so these reset on reload. If in-page tour switching is ever added,
+// reset all of these on switch or the second tour's start/step/finish/drop are
+// silently suppressed.
+let finishSent = false, dropSent = false, pickerViewSent = false;
+const stepsSent = new Set();  // 1-based steps a `step` beacon was already sent for
 
 // ===== HELPERS =====
 function t(k) { return (UI[LANG] || UI.en)[k] ?? UI.en[k] ?? k; }
@@ -515,6 +522,8 @@ function renderStep(i, recenter = true) {
     const step = wonder.steps[i];
     if (!step) return;
     const last = i === wonder.steps.length - 1;
+    // Funnel: reaching the final beat = a completed tour (once per page load).
+    if (last && !finishSent && wonderId) { finishSent = true; sendEvent('finish', { tour: wonderId, step: i + 1 }); }
     const $ = id => document.getElementById(id);
 
     // Orientation: which tour, where in it, and what concept this step is about.
@@ -679,6 +688,9 @@ function goToStep(i) {
     i = Math.max(0, Math.min(wonder.steps.length - 1, i));
     stepIndex = i;
     renderStep(i);
+    // Funnel: which beats got viewed (deduped per step).
+    const stepNum = i + 1;
+    if (wonderId && !stepsSent.has(stepNum)) { stepsSent.add(stepNum); sendEvent('step', { tour: wonderId, step: stepNum }); }
     // Deep link: mirror the current step in the address bar (1-based) so the URL
     // is shareable and reload lands on this exact beat. replaceState (not push) —
     // stepping through a tour shouldn't stack browser-history entries.
@@ -766,8 +778,42 @@ async function loadEchoCounts(id) {
     } catch { /* API down → no ✨ ordinal, silent */ }
 }
 
+// ===== P1-3 FUNNEL TELEMETRY =====
+// Fire-and-forget beacon, TELEMETRY_ENABLED only, silent on any failure (ironclad
+// rule 1). Anonymous aggregate (ironclad rule 2): tour / event / lang / step plus
+// a client-self-reported `returning` boolean — no session id ever leaves the tab.
+function sendEvent(event, extra) {
+    if (!TELEMETRY_ENABLED) return;
+    try {
+        if (!navigator.sendBeacon) return;
+        const payload = Object.assign({ event, lang: LANG }, extra || {});
+        const blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+        navigator.sendBeacon('/api/event', blob);
+    } catch { /* beacon unavailable → telemetry is best-effort, stay silent */ }
+}
+
+// A reader leaving mid-tour (tab hidden / page unload) before the finale = a drop,
+// tagged with the beat they left on. Once per session-tour; never fires after a
+// finish. visibilitychange→hidden is the reliable mobile signal; pagehide backs
+// up desktop close/navigation.
+function reportDrop() {
+    if (!started || finishSent || dropSent || !wonderId) return;
+    dropSent = true;
+    sendEvent('drop', { tour: wonderId, step: stepIndex + 1 });
+}
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') reportDrop(); });
+window.addEventListener('pagehide', reportDrop);
+
 function startTour(startStep = 0) {
     started = true;
+    // Funnel start. `returning` flags a second start in this tab's session
+    // (sessionStorage, cleared on close) — a stickiness signal, not an identity.
+    let returning = 0;
+    try {
+        if (sessionStorage.getItem('wonder-started')) returning = 1;
+        else sessionStorage.setItem('wonder-started', '1');
+    } catch {}
+    if (wonderId) sendEvent('start', { tour: wonderId, returning });
     document.getElementById('wonder-intro').hidden = true;
     const panel = document.getElementById('wonder-panel');
     panel.hidden = false;
@@ -941,6 +987,9 @@ function renderPicker() {
         grid.appendChild(card);
     });
     pickerHasEntered = true;
+    // Funnel: the picker was shown (hook conversion denominator). Once per page
+    // load — a language toggle rebuilds the grid but isn't a new impression.
+    if (!pickerViewSent) { pickerViewSent = true; sendEvent('picker_view'); }
 }
 
 async function showPicker() {
