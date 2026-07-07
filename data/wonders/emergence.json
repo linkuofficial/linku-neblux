@@ -188,5 +188,19 @@
     "en": "Want to fall further? Open Conway's Game of Life and watch gliders crawl out of four tiny rules; code the three flocking rules of 'boids' and grow a flock on your screen; then read Philip Anderson's short essay 'More Is Different' — and emergence turns from a story into something you can run with your own hands.",
     "zh": "想再往下墜一點？打開康威的「生命遊戲」，看滑翔機從四條小小的規則裡爬出來；寫出群聚演算法「boids」的三條規則，在你的螢幕上養出一群鳥；再讀一讀安德森那篇短文〈多，就是不一樣〉（More Is Different）——湧現，就會從一個故事，變成你能親手跑起來的東西。",
     "ja": "もっと落ちてみたいですか？コンウェイの「ライフゲーム」を開き、たった四つのルールからグライダーが這い出すのを眺め、群れアルゴリズム「boids」の三つのルールを書いて画面上に群れを育て、それからフィリップ・アンダーソンの短い論文「More Is Different（多は異なる）」を読んでみてください——創発が、物語から、自分の手で動かせるものへと変わります。"
+  },
+  "reflect": {
+    "en": [
+      "Where have you seen simple local rules create a pattern no one planned?",
+      "When you look at a group, a city, or your own mind, what might be lost if you only study the pieces?"
+    ],
+    "zh": [
+      "你在哪裡看過簡單的局部規則，長出沒有人事先設計的圖樣？",
+      "當你看一個群體、一座城市，或自己的心智時，如果只研究零件，可能會漏掉什麼？"
+    ],
+    "ja": [
+      "身近なところで、単純な局所のルールから、誰も設計していない模様が生まれる例はありますか？",
+      "集団、都市、自分の心を眺めるとき、部品だけを調べると何を見落としそうですか？"
+    ]
   }
 }

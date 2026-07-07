@@ -188,5 +188,19 @@
     "en": "Want to fall further? Look up the harmonic series and hear the hidden tower inside one note, find out why pianos are tuned to equal temperament and what it quietly sacrifices, or read about the 'chills' response — the neuroscience of why your favorite song raises the hair on your arms.",
     "zh": "想再往下走一點？去查查「泛音列」，親耳聽見一個音裡藏著的那座塔；查查鋼琴為什麼採用「平均律」、又默默犧牲了什麼；或讀讀關於「起雞皮疙瘩」的研究——你最愛的那首歌，為什麼能讓你手臂上的汗毛豎起來，背後的神經科學。",
     "ja": "もっと下りてみたいですか？「倍音列」を調べて一つの音に隠れた塔を耳で聞き、ピアノがなぜ「平均律」で調律され、何を静かに犠牲にしているのかを知り、あるいは「鳥肌（チル）」反応——大好きな曲がなぜ腕の毛を逆立てるのか、その神経科学——を読んでみてください。"
+  },
+  "reflect": {
+    "en": [
+      "Which part of music now feels most physical to you: vibration, ratio, expectation, or reward?",
+      "Think of a song that moves you. What might your brain be predicting before the moment arrives?"
+    ],
+    "zh": [
+      "現在你覺得音樂裡最「物理」的是哪一部分：振動、比例、期待，還是獎賞？",
+      "想一首會打動你的歌。在那個時刻來臨前，你的大腦可能已經預測了什麼？"
+    ],
+    "ja": [
+      "音楽の中で、いまいちばん「物理」だと感じるのは何ですか？振動、比率、期待、報酬のどれでしょう？",
+      "心を動かされる曲を一つ思い浮かべてください。その瞬間が来る前に、あなたの脳は何を予測しているのでしょう？"
+    ]
   }
 }

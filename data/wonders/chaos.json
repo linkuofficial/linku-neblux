@@ -188,5 +188,19 @@
     "en": "Want to fall further? Look up the Lorenz attractor and watch the butterfly effect draw its two wings; zoom forever into the Mandelbrot set, the most famous fractal there is; or set a double pendulum swinging and try, just try, to predict where it goes — chaos becomes something you can see with your own eyes.",
     "zh": "想再往下墜一點？去查查「羅倫茲吸引子」，看蝴蝶效應如何畫出它那兩片翅膀；無止盡地放大「曼德博集合」，那是最有名的碎形；或者讓一個雙擺擺動起來，試試看——就試試看——預測它會往哪裡去——混沌，會變成你能親眼看見的東西。",
     "ja": "もっと落ちてみたいですか？「ローレンツ・アトラクター」を調べ、バタフライ効果がその二枚の翼を描く様子を眺めてみる。最も有名なフラクタル「マンデルブロ集合」へ、どこまでも拡大していく。あるいは二重振り子を揺らし、それがどこへ行くかを予測しようと——ただ試してみる。カオスが、自分の目で見えるものに変わります。"
+  },
+  "reflect": {
+    "en": [
+      "Think of a system in your life where a tiny change can grow large. What makes it hard to predict?",
+      "Does chaos make the world feel less knowable, or more interesting to observe? Why?"
+    ],
+    "zh": [
+      "想一個你生活中「小改變可能變成大結果」的系統。它難預測的地方在哪裡？",
+      "混沌讓世界感覺更難理解，還是更值得觀察？為什麼？"
+    ],
+    "ja": [
+      "あなたの身近で、小さな変化が大きな結果になりうる仕組みを一つ思い浮かべてください。何が予測を難しくしていますか？",
+      "カオスは世界をわかりにくく感じさせますか、それとも観察したくさせますか？それはなぜですか？"
+    ]
   }
 }

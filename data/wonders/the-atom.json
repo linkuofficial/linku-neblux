@@ -217,5 +217,19 @@
     "en": "Want to fall further? Look up how the periodic table is actually built from electron shells, find a picture of what an electron orbital really looks like (those strange dumbbell and cloud shapes), or read Richard Feynman's famous 1959 talk 'There's Plenty of Room at the Bottom' — the spark that lit nanotechnology, where he asks why we can't just arrange the atoms the way we want.",
     "zh": "想再往下墜一點？去查查週期表究竟如何由電子層「蓋」出來、找一張電子軌域真正長什麼樣子的圖（那些奇怪的啞鈴形與雲團形），或讀讀費曼一九五九年那場著名的演講〈底下的空間還多得很〉——點燃奈米科技的那把火，他在裡頭問：我們為什麼不能就照自己想要的方式，把原子排好？",
     "ja": "もっと落ちてみたいですか？周期表が電子殻からどう「築かれる」のかを調べ、電子の軌道が実際どんな姿か（あの奇妙なダンベル形や雲の形）の図を探し、リチャード・ファインマンの一九五九年の有名な講演「底にはまだたっぷり空きがある」を読んでみてください——ナノテクノロジーに火をつけた一席で、彼はこう問います。なぜ私たちは、原子を望むとおりに並べられないのか、と。"
+  },
+  "reflect": {
+    "en": [
+      "Which ordinary material now feels more like a hidden arrangement than a solid thing?",
+      "If shape can change what matter does, where in your life might structure matter as much as ingredients?"
+    ],
+    "zh": [
+      "現在哪一種普通材料，讓你覺得它不像「一塊東西」，而像一種藏起來的排列？",
+      "如果形狀能改變物質的作用，在你的生活裡，哪裡是「結構」和「成分」一樣重要？"
+    ],
+    "ja": [
+      "いま、どんな普通の材料が「ただの固いもの」ではなく、隠れた並び方に見えますか？",
+      "形が物質の働きを変えるなら、あなたの生活のどこで、材料そのものと同じくらい構造が大事になっていますか？"
+    ]
   }
 }

@@ -217,5 +217,19 @@
     "en": "Want to fall further? Watch a short visual on how a Turing machine actually runs its tape, read a plain-language walkthrough of the halting problem and its self-referential trap, or try the Turing test yourself by chatting with a modern AI and asking what, if anything, gives it away.",
     "zh": "想再往下墜一點？看一段短片，看圖靈機如何真的跑它的紙帶；讀一篇用白話講解停機問題與它那自我指涉陷阱的文章；或者親自試試圖靈測試——去跟一個現代 AI 聊天，看看到底是什麼（如果有的話）洩了它的底。",
     "ja": "もっと落ちてみたいですか？チューリングマシンが実際にテープをどう走らせるかの短い映像を見て、停止問題とその自己言及の罠をやさしく解説した文章を読み、あるいは自分でチューリングテストを試してみてください——現代の AI と会話し、もし何かあるなら何がその正体を明かすのかを問いながら。"
+  },
+  "reflect": {
+    "en": [
+      "Which everyday routine of yours is most like an algorithm, and where does understanding still matter?",
+      "If some true answers cannot be reached by any program or proof, how does that change your trust in machines?"
+    ],
+    "zh": [
+      "你日常哪個動作最像一套演算法？而在哪一步，「理解」仍然重要？",
+      "如果有些真相不是任何程式或證明都能抵達，這會怎麼改變你對機器的信任？"
+    ],
+    "ja": [
+      "あなたの日常のどの手順が、いちばんアルゴリズムに似ていますか？その中で、まだ「理解」が必要なのはどこですか？",
+      "どんなプログラムや証明でも届かない真実があるとしたら、機械への信頼はどう変わりますか？"
+    ]
   }
 }

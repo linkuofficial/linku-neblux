@@ -218,6 +218,20 @@
     "zh": "想再往下墜一點？去查查羅莎琳·富蘭克林「51 號照片」的故事，那張揭開雙螺旋的 X 光影像；看一段 AlphaFold 如何單憑字母就預測出蛋白質摺法的影片；或讀讀 CRISPR 的專利之爭，以及編輯人類胚胎所引發的激烈辯論——生命的密碼，就會從教科書裡的一個概念，變成科學中最炙手可熱的前線。",
     "ja": "もっと落ちてみたいですか？二重らせんを明かした X 線写真、ロザリンド・フランクリンの「51 号写真」の物語を調べ、AlphaFold が文字だけからタンパク質の折りたたみをどう予測するかを見て、CRISPR の特許をめぐる争いと、ヒト胚を編集することへの激しい議論を読んでみてください——生命の暗号は、教科書の中の概念から、科学でもっとも熱を帯びた最前線へと変わります。"
   },
+  "reflect": {
+    "en": [
+      "What part of life feels most like information after this tour, and what still feels more than code?",
+      "If we can read and write living instructions, what question should come before \"can we\"?"
+    ],
+    "zh": [
+      "走完這趟後，生命的哪一部分最像資訊？哪一部分仍然不像只是程式碼？",
+      "如果我們能讀寫生命的指令，在問「能不能做」之前，應該先問什麼？"
+    ],
+    "ja": [
+      "この旅のあと、生命のどの部分がいちばん情報のように見えますか？それでも、ただのコード以上に感じる部分はどこですか？",
+      "生きた命令を読み書きできるなら、「できるか」と問う前に、まず何を問うべきでしょう？"
+    ]
+  },
   "outward_links": [
     { "node": "rosalind_franklin_person", "match": { "en": "Rosalind Franklin", "zh": "羅莎琳·富蘭克林", "ja": "ロザリンド・フランクリン" } }
   ]

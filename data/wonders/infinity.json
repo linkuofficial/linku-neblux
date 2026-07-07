@@ -217,5 +217,19 @@
     "en": "Want to fall further? Watch a walkthrough of Cantor's diagonal argument until the bigger infinity clicks, play with Hilbert's Hotel and its busloads of infinite guests, or follow a gentle retelling of Gödel's proof — and you'll feel the ground of mathematics shift under your feet, exactly as it did a century ago.",
     "zh": "想再往下墜一點？看一段康托爾對角線論證的講解，直到那個「更大的無限」在你腦中喀一聲就位；玩玩希爾伯特旅館和它一車車的無限旅客；或讀一篇溫和重述的哥德爾證明——你會感覺到數學的地基在你腳下挪移，就像一個世紀前那樣。",
     "ja": "もっと落ちてみたいですか？カントールの対角線論証の解説を、より大きな無限がストンと腑に落ちるまで見て、ヒルベルトのホテルと無限の乗客たちで遊び、ゲーデルの証明をやさしく語り直したものを追ってみてください——一世紀前とまったく同じように、数学の地面が足の下で動くのを感じるはずです。"
+  },
+  "reflect": {
+    "en": [
+      "Which infinite idea felt most unsettling: endless counting, different sizes of infinity, or limits of proof?",
+      "How do you decide whether an idea is real when you can never finish checking every case?"
+    ],
+    "zh": [
+      "哪一種無限最讓你不安：數不完的數、不同大小的無限，還是證明的邊界？",
+      "當你永遠無法檢查完所有情況時，你會怎麼判斷一個想法是否可信？"
+    ],
+    "ja": [
+      "いちばん落ち着かなく感じた無限はどれですか？終わらない数え上げ、大小のある無限、証明の限界のどれでしょう？",
+      "すべての場合を調べ切れないとき、あなたは何をもとに考えを信じますか？"
+    ]
   }
 }

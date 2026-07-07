@@ -223,6 +223,20 @@
     "zh": "被勾住了嗎？想真的動手：找一塊 Raspberry Pi 或 ESP32、跑一個 TinyML 範例、寫一支 PID 控制器讓馬達穩穩停在目標角度——你會親手碰到上面每一步。",
     "ja": "心をつかまれましたか？本気で手を動かすなら——Raspberry Pi か ESP32 を手に入れ、TinyML のサンプルを動かし、モーターを目標角度でぴたりと保つ PID コントローラを書いてみる。すると、上のすべてのステップに自分の手で触れることになります。"
   },
+  "reflect": {
+    "en": [
+      "Where would you rather have intelligence close to the machine instead of in the cloud, and what risk would that reduce?",
+      "In an edge system, which part feels most fragile to you: sensing, learning, computing, or control? Why?"
+    ],
+    "zh": [
+      "哪一種情境下，你會希望智慧留在機器旁邊，而不是送上雲端？它會少掉哪個風險？",
+      "在一套 edge 系統裡，你覺得最脆弱的是感測、學習、運算，還是控制？為什麼？"
+    ],
+    "ja": [
+      "どんな場面なら、知能をクラウドではなく機械のすぐそばに置きたいですか？それでどんな危険を減らせますか？",
+      "エッジの仕組みで、いちばん壊れやすそうに感じるのは、感知、学習、計算、制御のどれですか？なぜですか？"
+    ]
+  },
   "outward_links": [
     { "node": "control_theory_concept", "match": { "en": "PID controller", "zh": "PID 控制器", "ja": "PID コントローラ" } }
   ]

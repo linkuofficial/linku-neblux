@@ -218,6 +218,20 @@
     "zh": "想再往下墜一點？去查查愛因斯坦「最快樂的念頭」（等效原理）、看一段 2019 年黑洞影像如何被拼出來的影片，或讀讀 LIGO 如何真的「聽見」兩個黑洞合併——這裡的奇異，就會變成真實、被觀測到的科學。",
     "ja": "もっと落ちてみたいですか？アインシュタインの「人生で最も幸福な考え」（等価原理）を調べ、2019 年のブラックホール画像がどう組み立てられたかを見て、LIGO が二つのブラックホールの合体を実際に「聴いた」話を読んでみてください——ここでの奇妙さが、現実の、観測された科学に変わります。"
   },
+  "reflect": {
+    "en": [
+      "Which idea felt strangest: time changing, space bending, or information hiding on a horizon? Why?",
+      "When a theory breaks at a black hole's center, does that feel like failure or an opening? What makes you say that?"
+    ],
+    "zh": [
+      "這趟裡哪個想法最不像常識：時間會變、空間會彎，還是資訊會藏在邊界上？為什麼？",
+      "當一套理論在黑洞中心失效時，你覺得那比較像失敗，還是像一扇入口？為什麼？"
+    ],
+    "ja": [
+      "この旅でいちばん常識から遠かったのは、時間が変わること、空間が曲がること、情報が境界に隠れることのどれですか？なぜそう感じましたか？",
+      "理論がブラックホールの中心で通用しなくなるとき、それは失敗に見えますか、それとも入口に見えますか？そう思う理由は何ですか？"
+    ]
+  },
   "outward_links": [
     { "node": "relativity_general_concept", "match": { "en": "equivalence principle", "zh": "等效原理", "ja": "等価原理" } }
   ]
