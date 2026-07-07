@@ -9,7 +9,7 @@
 
 import * as d3 from "d3";
 import { createCanvasRenderer, ensureVis } from "./engine/canvas-renderer.js";
-import { API_ENABLED } from "./config.js";
+import { ECHO_ENABLED } from "./config.js";
 
 // ===== TOKENS =====
 const DC = window.NebluxTokens?.DOMAIN_COLORS || {
@@ -544,16 +544,16 @@ function renderStep(i, recenter = true) {
         shareBtn.onclick = () => shareCurrentBeat(i);
     }
     // "✨ This moved me too" — per-beat resonance (P1-2). Progressive enhancement:
-    // shown only when API_ENABLED (else the tally endpoint isn't live — ironclad
+    // shown only when ECHO_ENABLED (else the tally endpoint isn't live — ironclad
     // rule 1). Before you echo: the quiet ✨; after: hide it, show the ordinal line.
     const echoBtn = $('wp-echo');
     const echoLine = $('wp-echo-count');
     if (echoBtn && echoLine) {
         const stepNum = i + 1;
         // Show ✨ only once a GET /api/echo has actually succeeded (echoCounts set):
-        // if the endpoint is down/500/timeout even with API_ENABLED, echoCounts
+        // if the endpoint is down/500/timeout even with ECHO_ENABLED, echoCounts
         // stays null and no ✨ appears — API down → UI unchanged (ironclad rule 1).
-        const canEcho = API_ENABLED && !!surpriseText && echoCounts !== null;
+        const canEcho = ECHO_ENABLED && !!surpriseText && echoCounts !== null;
         const echoed = echoedSteps.has(stepNum);
         echoBtn.textContent = t('echoAction');
         echoBtn.hidden = !canEcho || echoed;
@@ -723,9 +723,9 @@ function flashShareCopied() {
 
 // ✨ echo: record that this beat also moved you. Write via sendBeacon (never
 // blocks render); the running tally is read lazily by loadEchoCounts. Reached
-// only when API_ENABLED, and every failure is silent (ironclad rule 1).
+// only when ECHO_ENABLED, and every failure is silent (ironclad rule 1).
 function echoCurrentBeat(i) {
-    if (!API_ENABLED || !wonderId || !wonder) return;
+    if (!ECHO_ENABLED || !wonderId || !wonder) return;
     const stepNum = i + 1;
     if (echoedSteps.has(stepNum)) return;
     // Fire-and-forget write. If the beacon can't even be queued (no sendBeacon, or
@@ -976,7 +976,7 @@ async function loadWonder(id) {
     await loadLabelMap(LANG);
     wonder = await fetchJson(`/data/wonders/${id}.json`);
     wonderId = id;
-    if (API_ENABLED) loadEchoCounts(id);   // per-beat ✨ tallies; non-blocking, silent if API down
+    if (ECHO_ENABLED) loadEchoCounts(id);   // per-beat ✨ tallies; non-blocking, silent if API down
     buildSubgraph(graphNodes);
     if (!nodes.length) throw new Error('empty subgraph');
 

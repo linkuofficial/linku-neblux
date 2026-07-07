@@ -436,7 +436,7 @@ test("a tour with authored reflect questions shows them instead of the outward f
     await expect(page.locator("#wr-reflect .wr-reflect-prose")).toHaveCount(0);
 });
 
-test("the ✨ resonance affordance stays dormant while API_ENABLED is false", async ({ page }) => {
+test("the ✨ resonance affordance stays dormant while ECHO_ENABLED is false", async ({ page }) => {
     const apiCalls: string[] = [];
     page.on("request", (r) => { if (r.url().includes("/api/")) apiCalls.push(r.url()); });
     const errors: string[] = [];
@@ -445,7 +445,7 @@ test("the ✨ resonance affordance stays dormant while API_ENABLED is false", as
 
     await page.goto("/wonders.html?w=light&s=2"); // a surprise-bearing step
     await ready(page);
-    // No backend deployed (API_ENABLED=false): the ✨ never shows, no ordinal, and
+    // Echo gate off (ECHO_ENABLED=false): the ✨ never shows, no ordinal, and
     // the tour makes zero /api calls — ironclad rule 1 (API down → site unchanged).
     await expect(page.locator("#wp-echo")).toBeHidden();
     await expect(page.locator("#wp-echo-count")).toBeHidden();
