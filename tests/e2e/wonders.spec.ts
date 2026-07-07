@@ -468,8 +468,9 @@ test("funnel telemetry stays dormant while TELEMETRY_ENABLED is false", async ({
     await page.locator("#wi-start").click();
     await page.locator("#wp-next").click();
     // Fire the drop path BEFORE the finale — reportDrop early-returns once finishSent
-    // is set, so dispatching after goToStep(last) would never reach sendEvent('drop').
-    await page.evaluate(() => document.dispatchEvent(new Event("visibilitychange"))); // drop path
+    // is set. Use pagehide (the listener calls reportDrop directly); a synthetic
+    // visibilitychange wouldn't flip document.visibilityState to "hidden".
+    await page.evaluate(() => window.dispatchEvent(new Event("pagehide"))); // drop path
     await page.evaluate(() => (window as any).__nebluxWonders.goToStep(6)); // finish (last beat)
 
     // Gate off (TELEMETRY_ENABLED=false): zero /api/event beacons, clean console,

@@ -36,7 +36,9 @@ async function tourSteps(request: Request): Promise<Record<string, number> | nul
         const res = await fetch(new URL('/data/tour-index.json', request.url).toString());
         if (!res.ok) return null;
         const idx: any = await res.json();
-        const map: Record<string, number> = {};
+        // Null-proto map so a tour like "constructor"/"toString" can't hit an
+        // inherited Object.prototype member and pass as a valid tour.
+        const map: Record<string, number> = Object.create(null);
         for (const id of Object.keys(idx.tours || {})) {
             const t = idx.tours[id];
             map[id] = t && Array.isArray(t.steps) ? t.steps.length : 0;
@@ -51,7 +53,7 @@ async function tourSteps(request: Request): Promise<Record<string, number> | nul
 function sameOrigin(request: Request): boolean {
     const origin = request.headers.get('Origin');
     if (!origin) return true;
-    try { return new URL(origin).host === new URL(request.url).host; }
+    try { return new URL(origin).origin === new URL(request.url).origin; }
     catch { return false; }
 }
 
