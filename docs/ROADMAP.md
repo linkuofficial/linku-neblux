@@ -98,7 +98,8 @@
 - [~] **P1-2 級1 迴響（實作＋本機實測＋強制交叉審查完成 2026-07-06；卡 `[人工]` 綁定＋翻旗；未 commit）**
   - [x] 後端 `functions/api/echo.ts`：`POST {tour,step}`（同源檢查→tour-index 驗每趟精確站數→KV 節流(IP 加鹽 SHA-256、TTL 3600、>3 忽略)→D1 UPSERT +1）；`GET ?tour=` 回各站計數。本機 wrangler+D1/KV curl 全過。
   - [x] 前端：surprise beat 旁安靜 ✨（`sendBeacon`、失敗靜默）＋一行序數「你是第 N 位…」三語（**禁**「本週 N 人」）。壓 `API_ENABLED` 旗標；e2e 休眠守門綠（API 掛掉無 ✨ 無錯）。設計＋審查見 `docs/tasks/2026-07-07-p1-2-echo.md`。
-  - [ ] `[人工]` Cloudflare 建 D1 `DB`＋套 `functions/schema.sql`（KV `THROTTLE` 選填、缺了只是不節流）；就緒後翻 `config.js` `ECHO_ENABLED=true`＝啟用。**翻的是 `ECHO_ENABLED` 不是 `API_ENABLED`**——echo 已拆成獨立旗標，避免全域旗標重開 landing/explorer 的 `/api/graph/full`、`/api/i18n/*` 404（P1-0 止血保證）。`API_ENABLED` 續 false 直到那些端點真的部署。
+  - [x] D1 `DB`（`neblux-echo`）已建＋套 `functions/schema.sql`（2 表）＋綁定 nodus Pages 專案 Production（2026-07-07）。KV `THROTTLE` 選填、暫未建（缺了只是不節流）。
+  - [ ] `[人工]` 啟用＝在 Cloudflare Pages（`nodus` 專案）→ Settings → Variables and secrets（Production）加建置環境變數 **`VITE_ECHO_ENABLED=true`**，再觸發一次部署（push 或 Retry deployment）。**啟用是設 env var、不是改原始碼**：`config.js` 的 `ECHO_ENABLED = import.meta.env.VITE_ECHO_ENABLED === "true"`，本機/e2e 無此變數→false（守門續綠、echo 死碼消除），只有帶該變數的正式建置才會把 echo 打進 bundle。echo 已與 `API_ENABLED` 拆開，避免全域旗標重開 landing/explorer 的 `/api/graph/full`、`/api/i18n/*` 404（P1-0 止血保證）；`API_ENABLED` 續 false。
   - 驗收（原始）：計數遞增；API 掛掉 UI 無 ✨ 且無錯誤。→ 達成（本機／休眠守門雙證）。
 
 - [ ] **P1-3 級3 遙測**

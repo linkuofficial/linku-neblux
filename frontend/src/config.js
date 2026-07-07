@@ -13,7 +13,13 @@ export const API_ENABLED = false;
 // ECHO_ENABLED gates ONLY the wonders per-beat ✨ resonance (/api/echo, P1-2),
 // which IS a deployed Pages Function. Split from API_ENABLED so echo can go live
 // without making landing/explorer poke the (nonexistent) graph/i18n endpoints
-// and reintroduce the 404s P1-0 stanched. Flip to true once the D1 `DB` binding
-// is created and functions/schema.sql is applied. Every echo call fails silently
-// (ironclad rule 1), so an early flip just shows no ✨ until DB exists.
-export const ECHO_ENABLED = false;
+// and reintroduce the 404s P1-0 stanched.
+//
+// Build-time gate, NOT a hardcoded constant: it must be false everywhere the
+// backend doesn't exist (local dev, `npm run dev`, the e2e server) so those
+// environments make zero /api/echo calls and the dormancy + api-failure guards
+// stay green. It is true ONLY when the production build sets VITE_ECHO_ENABLED=
+// true — i.e. on Cloudflare Pages, where the D1 `DB` binding and the /api/echo
+// function actually exist. Vite statically replaces the import.meta.env
+// reference at build time; unset → undefined → false.
+export const ECHO_ENABLED = import.meta.env.VITE_ECHO_ENABLED === "true";
