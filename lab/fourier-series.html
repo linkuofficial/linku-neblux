@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>傅立葉級數 — Neblux Depth</title>
+<meta name="description" content="用越來越多顆弦波，把一個有直角的方波一層層疊出來。">
+<link rel="stylesheet" href="./fourier-series.css">
+<script type="application/json" id="node-meta">
+{ "depth_id": "fourier-series", "node_id": "fourier_analysis_concept", "spec_version": "0.2" }
+</script>
+<script src="./fourier-series.js" defer></script>
+</head>
+<body>
+<header class="site-header" aria-label="Neblux depth">
+  <a class="brand" href="/app.html?node=fourier_analysis_concept">Neblux</a>
+  <span>Depth sample</span>
+</header>
+
+<main class="page-shell">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">傅立葉級數</p>
+    <h1 id="title">有直角的方波，是一堆圓滑弦波疊出來的。</h1>
+  </section>
+
+  <section class="lab-surface" aria-labelledby="playground-title">
+    <div class="surface-copy">
+      <p class="section-kicker">互動主體</p>
+      <h2 id="playground-title">一層一層把方波疊回來</h2>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="wave-canvas" width="960" height="480" aria-label="傅立葉合成畫布"></canvas>
+    </div>
+    <div class="controls" aria-label="傅立葉合成參數">
+      <label class="control control-n">
+        <span><b>N</b> 疊幾顆弦波</span>
+        <output id="n-value">1 顆</output>
+        <input id="n" type="range" min="1" max="8" value="1" step="1">
+      </label>
+    </div>
+  </section>
+
+  <section class="tasks" aria-labelledby="tasks-title">
+    <p class="section-kicker">觀察任務</p>
+    <h2 id="tasks-title">先讓畫面回答</h2>
+    <ol>
+      <li>只疊 1 顆：一條圓圓的弦波，離方波還很遠。</li>
+      <li>一路疊到 8 顆：形狀愈來愈方，但盯著轉角——突起變窄了，卻沒消失。</li>
+    </ol>
+  </section>
+
+  <section class="formal" aria-labelledby="formal-title">
+    <p class="section-kicker">形式化</p>
+    <h2 id="formal-title">剛剛疊的東西，寫成一個總和</h2>
+    <p class="formula" aria-label="square wave approximately four over pi times sine omega t plus one third sine three omega t plus one fifth sine five omega t and so on">
+      方波(t) ≈ (4/π)·[ sin(ωt) + ⅓sin(3ωt) + ⅕sin(5ωt) + … ]
+    </p>
+    <p>括號裡每一項都是一顆弦波：頻率是 1、3、5…（只有奇數倍），前面的分數（1、⅓、⅕…）讓愈後面的愈矮，所以高階只負責修邊角。<span class="sym n">N</span> 就是你那支滑桿——<b>取括號裡的前 N 項</b>。</p>
+    <p class="aside">轉角那個約 9% 的過衝不會因為多疊幾顆而消失，只會被擠得更窄——這叫 <b>Gibbs 現象</b>。</p>
+  </section>
+
+  <section class="links" aria-labelledby="links-title">
+    <p class="section-kicker">連結</p>
+    <h2 id="links-title">回到 Neblux 圖譜</h2>
+    <p>這頁暫時掛在較寬的「Fourier Analysis」節點；傅立葉級數是其中較窄的一個焦點，等資料變更經過審查後才考慮拆出更精確的節點。</p>
+    <a class="graph-link" href="/app.html?node=fourier_analysis_concept">打開對應圖譜節點</a>
+  </section>
+</main>
+</body>
+</html>

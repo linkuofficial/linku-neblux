@@ -25,8 +25,8 @@
         freq: Number(freqInput.value),
         phase: Number(phaseInput.value),
         time: 0,
-        width: 960,
-        height: 420,
+        width: 0,
+        height: 0,
         dpr: 1,
     };
 
@@ -41,11 +41,14 @@
 
     function resize() {
         const rect = canvas.getBoundingClientRect();
+        const w = Math.floor(rect.width);
+        const h = Math.floor(rect.height);
+        if (w < 2 || h < 2) return; // 版面還沒算好，交給 ResizeObserver 之後再叫
         state.dpr = Math.max(1, Math.min(window.devicePixelRatio || 1, 2));
-        state.width = Math.max(320, Math.floor(rect.width));
-        state.height = Math.max(260, Math.floor(rect.height));
-        canvas.width = Math.floor(state.width * state.dpr);
-        canvas.height = Math.floor(state.height * state.dpr);
+        state.width = w;
+        state.height = h;
+        canvas.width = Math.round(w * state.dpr);
+        canvas.height = Math.round(h * state.dpr);
         ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
     }
 
@@ -159,6 +162,7 @@
     }
 
     function draw(now) {
+        if (state.width < 2 || state.height < 2) { requestAnimationFrame(draw); return; } // 版面還沒算好
         const speed = reduceMotion.matches ? 0.00018 : 0.00055;
         state.time = now * speed;
         const travel = state.time * Math.PI * 2;
@@ -185,6 +189,8 @@
 
     [ampInput, freqInput, phaseInput].forEach((input) => input.addEventListener('input', syncState));
     window.addEventListener('resize', resize);
+    window.addEventListener('load', resize);
+    if (window.ResizeObserver) new ResizeObserver(resize).observe(canvas);
     syncState();
     resize();
     requestAnimationFrame(draw);

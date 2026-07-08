@@ -23,17 +23,18 @@
       "id": "fourier-series",
       "node_id": "fourier_analysis_concept",
       "focus": "fourier-series-square-wave",
-      "status": "candidate",
-      "depth_path": null,
+      "status": "review",
+      "depth_path": "lab/fourier-series.html",
       "public": false,
       "mapping_confidence": "medium",
       "qa": {
-        "csp_safe": false,
-        "reference_notes": false,
-        "formula_walkthrough": false,
-        "mobile_canvas_check": false
+        "csp_safe": true,
+        "reference_notes": true,
+        "formula_walkthrough": true,
+        "mobile_canvas_check": true
       },
-      "notes": "Fourier Analysis exists as a broad graph node; Fourier series is a narrower depth-page focus."
+      "notes": "M2 page 02. Golden-sample template reused (structure/CSS/canvas scaffold). Streamlined per Riku feedback: static render-on-demand canvas (no auto-flow), a single control (N = wave count, 1->8), and only two curves on the canvas (faint dashed target square + bright synth). The 'sum of specific sines' logic moved from an on-canvas component overlay to an explicit expanding-sum formula (sin + 1/3 sin3 + 1/5 sin5 + ...). Browser-verified desktop/mobile: synth math independently checked (converges to +/-1 square with ~9% Gibbs overshoot that persists; N=1 = 4/pi fundamental), single control + 44px touch target confirmed, static render paints without rAF/visible-tab dependency, no console errors. Still mapped to the broader Fourier Analysis node. Pending Riku five-minute test.",
+      "notes_path": "lab/fourier-series-notes.md"
     },
     {
       "id": "s-plane",

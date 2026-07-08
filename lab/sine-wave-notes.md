@@ -37,6 +37,7 @@ This page teaches a single pure sinusoid. It does not cover:
 ## Manual QA Notes
 
 - CSP shape: page uses external `sine-wave.js`; inline script is only `type="application/json"` metadata.
+- Rendering: animated via requestAnimationFrame; canvas sized through a ResizeObserver (+ a zero-size guard) so it renders once the layout resolves in any viewer, not only when the initial getBoundingClientRect happens to be ready.
 - Controls: exactly three range inputs (`A`, `f`, `φ`); each has a ≥44px touch target (min-height 44px + touch-action manipulation), verified at 1280px desktop and 390px mobile.
 - Formula appears only in the formal section.
 - Mobile check: Playwright desktop/mobile pass; canvas nonblank, slider changes alter pixels, console/page errors empty. Temporary screenshots currently regenerated at `test-results/sine-wave-desktop.png` and `test-results/sine-wave-mobile.png`; `test-results/` is an ephemeral test-artifact directory and may be cleared by later Playwright/verify runs.
