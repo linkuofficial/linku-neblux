@@ -370,9 +370,12 @@ test("?print=1 renders a static journey record — constellation, every hook, da
     // Title + a localized date.
     await expect(page.locator("#wr-title")).toHaveText("Light");
     await expect(page.locator("#wr-date")).toContainText(/\d{4}/);
-    // light has no `reflect` yet → the reflection block falls back to outward prose.
+    // light ships authored reflect questions; the outward prose fallback must not render.
     await expect(page.locator("#wr-reflect-heading")).toBeVisible();
-    await expect(page.locator("#wr-reflect")).not.toBeEmpty();
+    const reflectItems = page.locator("#wr-reflect .wr-reflect-list li");
+    await expect(reflectItems).toHaveCount(2);
+    await expect(reflectItems.first()).toHaveText("After this tour, what ordinary use of light feels less ordinary: seeing, sending messages, measuring, or making power?");
+    await expect(page.locator("#wr-reflect .wr-reflect-prose")).toHaveCount(0);
 
     // The record replaces the tour chrome (no canvas walk in print mode).
     await expect(page.locator("#wonder-panel")).toBeHidden();
@@ -413,27 +416,23 @@ test("the finale offers a quiet link to keep a printable record", async ({ page 
     await expect(record).toHaveAttribute("href", "?w=light&print=1");
 });
 
-test("a tour with authored reflect questions shows them instead of the outward fallback", async ({ page }) => {
-    // No shipped tour has `reflect` yet (decision ③ deferred the content), so inject
-    // one to pin the reflect-present branch before authoring lands.
+test("a tour without authored reflect questions falls back to outward prose", async ({ page }) => {
+    // All shipped tours now carry `reflect`; strip it from one fixture to keep the
+    // legacy fallback branch guarded.
     await page.route("**/data/wonders/light.json", async (route) => {
         const res = await route.fetch();
         const json = await res.json();
-        json.reflect = {
-            en: ["What surprised you most?", "Where might this idea show up in your day?"],
-            zh: ["最讓你意外的是什麼？", "這個想法可能出現在你生活的哪裡？"],
-            ja: ["いちばん意外だったことは？", "この考えはどこに現れそう？"],
-        };
+        delete json.reflect;
         await route.fulfill({ json });
     });
     await page.goto("/wonders.html?w=light&print=1");
     await expect(page.locator("#wonder-record")).toBeVisible();
 
-    // The authored questions render as a list — the outward prose fallback is not used.
-    const items = page.locator("#wr-reflect .wr-reflect-list li");
-    await expect(items).toHaveCount(2);
-    await expect(items.first()).toHaveText("What surprised you most?");
-    await expect(page.locator("#wr-reflect .wr-reflect-prose")).toHaveCount(0);
+    // Without authored questions, the record falls back to outward prose.
+    await expect(page.locator("#wr-reflect .wr-reflect-list")).toHaveCount(0);
+    const prose = page.locator("#wr-reflect .wr-reflect-prose");
+    await expect(prose).toBeVisible();
+    await expect(prose).not.toBeEmpty();
 });
 
 test("the ✨ resonance affordance stays dormant while ECHO_ENABLED is false", async ({ page }) => {

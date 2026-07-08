@@ -1,7 +1,8 @@
--- Neblux D1 schema (binding name: DB). Apply in the Cloudflare dashboard or via
---   npx wrangler d1 execute DB --file=functions/schema.sql
+-- Neblux D1 schema (Pages binding name: DB; D1 database name currently
+-- `neblux-echo`). Apply in the Cloudflare D1 Console or via:
+--   npx wrangler d1 execute neblux-echo --remote --file=functions/schema.sql
 -- Anonymous aggregate counts only — DIRECTION ironclad rule 2 (no accounts, no
--- personal data). Populated by the P1-2 echo endpoint and tour-finish tracking.
+-- personal data). Populated by P1-2 echo/tour-finish and P1-3 telemetry.
 
 -- Per-step "✨ echo" tallies (P1-2): one row per (tour, step).
 CREATE TABLE IF NOT EXISTS echo (
