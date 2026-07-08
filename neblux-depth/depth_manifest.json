@@ -1,0 +1,55 @@
+{
+  "version": "0.2",
+  "source_graph": "data/all_nodes.json",
+  "entries": [
+    {
+      "id": "sine-wave",
+      "node_id": "oscillations_and_waves_concept",
+      "focus": "sine-wave-three-parameters",
+      "status": "review",
+      "depth_path": "lab/sine-wave.html",
+      "public": false,
+      "mapping_confidence": "medium",
+      "qa": {
+        "csp_safe": true,
+        "reference_notes": true,
+        "formula_walkthrough": true,
+        "mobile_canvas_check": true
+      },
+      "notes": "M1 golden sample created and browser-checked with Playwright desktop/mobile canvas pixel checks. Still mapped to the broader Oscillations and Waves node until an exact graph-node data change is reviewed.",
+      "notes_path": "lab/sine-wave-notes.md"
+    },
+    {
+      "id": "fourier-series",
+      "node_id": "fourier_analysis_concept",
+      "focus": "fourier-series-square-wave",
+      "status": "candidate",
+      "depth_path": null,
+      "public": false,
+      "mapping_confidence": "medium",
+      "qa": {
+        "csp_safe": false,
+        "reference_notes": false,
+        "formula_walkthrough": false,
+        "mobile_canvas_check": false
+      },
+      "notes": "Fourier Analysis exists as a broad graph node; Fourier series is a narrower depth-page focus."
+    },
+    {
+      "id": "s-plane",
+      "node_id": "control_theory_concept",
+      "focus": "s-plane-poles-step-response",
+      "status": "candidate",
+      "depth_path": null,
+      "public": false,
+      "mapping_confidence": "medium",
+      "qa": {
+        "csp_safe": false,
+        "reference_notes": false,
+        "formula_walkthrough": false,
+        "mobile_canvas_check": false
+      },
+      "notes": "s-plane and pole placement are control-theory subtopics. This entry requires an explicit control-theory correctness gate before publication."
+    }
+  ]
+}

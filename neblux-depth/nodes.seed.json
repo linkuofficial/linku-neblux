@@ -1,0 +1,79 @@
+{
+  "version": "0.1",
+  "nodes": [
+    {
+      "id": "sine-wave",
+      "title": "弦波與三參數",
+      "intuition": "所有波動的原子——大小、快慢、起點三個旋鈕，就完整描述一顆波。",
+      "prereqs": [],
+      "depth_url": null,
+      "tags": ["batch-1"]
+    },
+    {
+      "id": "euler-formula",
+      "title": "歐拉公式",
+      "intuition": "e^(iθ) 是「旋轉」的代數寫法，把指數和三角函數焊在一起。",
+      "prereqs": [],
+      "depth_url": null
+    },
+    {
+      "id": "phasor",
+      "title": "相量",
+      "intuition": "把來回擺動的波，看成一支旋轉的箭——旋轉比擺動好算。",
+      "prereqs": ["sine-wave", "euler-formula"],
+      "depth_url": null
+    },
+    {
+      "id": "fourier-series",
+      "title": "傅立葉級數",
+      "intuition": "任何重複的形狀，都是弦波一層一層疊出來的。",
+      "prereqs": ["sine-wave"],
+      "depth_url": null,
+      "tags": ["batch-1"]
+    },
+    {
+      "id": "fourier-transform",
+      "title": "傅立葉轉換",
+      "intuition": "把「時間裡的訊號」翻譯成「它含有哪些頻率」的另一種語言。",
+      "prereqs": ["fourier-series", "euler-formula"],
+      "depth_url": null
+    },
+    {
+      "id": "convolution",
+      "title": "摺積",
+      "intuition": "一個訊號滑過另一個訊號，沿路累積的重疊面積。",
+      "prereqs": [],
+      "related": ["fourier-transform"],
+      "depth_url": null
+    },
+    {
+      "id": "laplace-transform",
+      "title": "拉普拉斯轉換",
+      "intuition": "傅立葉的加強版——除了振盪，還能描述衰減與爆炸。",
+      "prereqs": ["fourier-transform"],
+      "depth_url": null
+    },
+    {
+      "id": "s-plane",
+      "title": "s 平面與極點",
+      "intuition": "一張地圖：極點站在哪裡，決定系統安穩、震盪還是失控。",
+      "prereqs": ["laplace-transform"],
+      "depth_url": null,
+      "tags": ["batch-1"]
+    },
+    {
+      "id": "transfer-function",
+      "title": "轉移函數",
+      "intuition": "把整個系統壓縮成一個分數——輸入乘上它，就得到輸出。",
+      "prereqs": ["laplace-transform"],
+      "depth_url": null
+    },
+    {
+      "id": "step-response",
+      "title": "步階響應",
+      "intuition": "突然踩下油門，看系統怎麼反應——認識一個系統個性最快的方法。",
+      "prereqs": ["transfer-function"],
+      "depth_url": null
+    }
+  ]
+}

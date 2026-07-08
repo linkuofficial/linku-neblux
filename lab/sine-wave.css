@@ -1,0 +1,268 @@
+:root {
+  color-scheme: dark;
+  --bg: #05070d;
+  --ink: #eef4ff;
+  --muted: #9ba8bd;
+  --line: #223047;
+  --panel: #0d1420;
+  --panel-2: #121b29;
+  --amp: #70e0c2;
+  --freq: #f0c15a;
+  --phase: #ef7f72;
+  --link: #9bbcff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.site-header {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 22px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.brand {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.page-shell {
+  width: min(1040px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 42px 0 72px;
+}
+
+.intro {
+  margin-bottom: 34px;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 820px;
+  margin-bottom: 0;
+  color: var(--ink);
+  font-size: clamp(2rem, 7vw, 4.7rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.18rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.lab-surface {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.surface-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.canvas-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  min-height: 300px;
+  border: 1px solid #2a3b55;
+  background: #070b12;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  align-items: center;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+}
+
+.control span,
+.control output {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.control output {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.control input {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-height: 44px; /* 觸控目標 ≥44px（spec §1 手機要求）*/
+  accent-color: currentColor;
+  touch-action: manipulation; /* 去 300ms 觸控延遲、拖動即時 */
+  cursor: pointer;
+}
+
+.control-amp {
+  color: var(--amp);
+}
+
+.control-freq {
+  color: var(--freq);
+}
+
+.control-phase {
+  color: var(--phase);
+}
+
+.tasks,
+.formal,
+.links {
+  padding-top: 34px;
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+.tasks ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #d5deee;
+}
+
+.formula {
+  margin: 12px 0 16px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: clamp(1.55rem, 5vw, 2.6rem);
+  line-height: 1.25;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.sym {
+  font-weight: 700;
+}
+
+.sym.amp {
+  color: var(--amp);
+}
+
+.sym.freq {
+  color: var(--freq);
+}
+
+.sym.phase {
+  color: var(--phase);
+}
+
+.links p,
+.formal p {
+  max-width: 820px;
+  color: #ced8ea;
+}
+
+.graph-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 16px;
+  border: 1px solid var(--link);
+  color: var(--link);
+  text-decoration: none;
+}
+
+.graph-link:hover {
+  background: #15223a;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100vw - 24px, 640px);
+    padding-top: 28px;
+  }
+
+  .site-header {
+    padding: 0 14px;
+  }
+
+  .lab-surface {
+    padding: 14px;
+  }
+
+  .surface-copy {
+    display: block;
+  }
+
+  .canvas-wrap {
+    aspect-ratio: 1 / 1;
+    min-height: 280px;
+  }
+
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .control span,
+  .control output {
+    white-space: normal;
+  }
+}

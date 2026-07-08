@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>弦波與三參數 — Neblux Depth</title>
+<meta name="description" content="用振幅、頻率與相位三個旋鈕，看見一顆弦波如何被完整決定。">
+<link rel="stylesheet" href="./sine-wave.css">
+<script type="application/json" id="node-meta">
+{ "depth_id": "sine-wave", "node_id": "oscillations_and_waves_concept", "spec_version": "0.2" }
+</script>
+<script src="./sine-wave.js" defer></script>
+</head>
+<body>
+<header class="site-header" aria-label="Neblux depth">
+  <a class="brand" href="/app.html?node=oscillations_and_waves_concept">Neblux</a>
+  <span>Depth sample</span>
+</header>
+
+<main class="page-shell">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">弦波與三參數</p>
+    <h1 id="title">大小、快慢、起點三個數字，就能決定一整顆波。</h1>
+  </section>
+
+  <section class="lab-surface" aria-labelledby="playground-title">
+    <div class="surface-copy">
+      <p class="section-kicker">互動主體</p>
+      <h2 id="playground-title">一條正在流動的弦波</h2>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="wave-canvas" width="960" height="480" aria-label="弦波畫布"></canvas>
+    </div>
+    <div class="controls" aria-label="弦波參數">
+      <label class="control control-amp">
+        <span><b>A</b> 振幅</span>
+        <output id="amp-value">1.00</output>
+        <input id="amp" type="range" min="0" max="1.8" value="1" step="0.01">
+      </label>
+      <label class="control control-freq">
+        <span><b>f</b> 頻率</span>
+        <output id="freq-value">1.00 Hz</output>
+        <input id="freq" type="range" min="0.25" max="4" value="1" step="0.01">
+      </label>
+      <label class="control control-phase">
+        <span><b>φ</b> 相位</span>
+        <output id="phase-value">0.00π</output>
+        <input id="phase" type="range" min="-3.14159" max="3.14159" value="0" step="0.01">
+      </label>
+    </div>
+  </section>
+
+  <section class="tasks" aria-labelledby="tasks-title">
+    <p class="section-kicker">觀察任務</p>
+    <h2 id="tasks-title">先讓畫面回答</h2>
+    <ol>
+      <li>把振幅拉低，再拉高；注意中心線沒有搬家，但波峰離中心的距離變了。</li>
+      <li>把頻率加倍；數一數同一個畫面裡塞進幾個完整週期。</li>
+      <li>只動相位；波的形狀沒有換，只是整條沿著時間方向挪動。</li>
+    </ol>
+  </section>
+
+  <section class="formal" aria-labelledby="formal-title">
+    <p class="section-kicker">形式化</p>
+    <h2 id="formal-title">剛剛玩的三個旋鈕，寫成一行式子</h2>
+    <p class="formula" aria-label="y of t equals A times sine of two pi f t plus phi">
+      y(t) = <span class="sym amp">A</span> · sin(2π<span class="sym freq">f</span>t + <span class="sym phase">φ</span>)
+    </p>
+    <p><span class="sym amp">A</span> 是波峰離中心線的高度；<span class="sym freq">f</span> 是每秒走過幾圈；<span class="sym phase">φ</span> 是一開始站在圓周上的哪個角度。式子沒有多寫任何東西：畫面裡能改的，剛好就是這三個量。</p>
+  </section>
+
+  <section class="links" aria-labelledby="links-title">
+    <p class="section-kicker">連結</p>
+    <h2 id="links-title">回到 Neblux 圖譜</h2>
+    <p>這頁暫時掛在較寬的「Oscillations and Waves」節點；等資料變更經過審查後，才考慮新增更精確的弦波節點。</p>
+    <a class="graph-link" href="/app.html?node=oscillations_and_waves_concept">打開對應圖譜節點</a>
+  </section>
+</main>
+</body>
+</html>
+

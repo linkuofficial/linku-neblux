@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Neblux node registry",
+  "description": "單一資料源。邊只儲存 prereqs（有向）；『延伸』由反向推導（誰把我列為前置，我就是誰的延伸），不重複儲存。depth_url 為 null 即暗節點，非空即亮節點。若既有圖譜已有節點資料格式，本 schema 廢棄、改為擴充既有格式（見 PLAN 守則 3）。",
+  "type": "object",
+  "required": ["version", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string" },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "intuition"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "kebab-case，同時是深度頁檔名 lab/{id}.html"
+          },
+          "title": { "type": "string" },
+          "intuition": {
+            "type": "string",
+            "maxLength": 60,
+            "description": "一句話直覺。暗節點在圖譜與旅程中僅靠這句存在"
+          },
+          "prereqs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": [],
+            "description": "前置節點 id；必須指向存在的節點，且整體無環（DAG）"
+          },
+          "related": {
+            "type": "array",
+            "items": { "type": "string" },
+            "default": [],
+            "description": "非階層的鬆散關聯（對稱），選填"
+          },
+          "depth_url": {
+            "type": ["string", "null"],
+            "default": null,
+            "description": "深度頁路徑；null=暗節點"
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "選填，例：batch-1 標記首批目標"
+          }
+        }
+      }
+    }
+  }
+}
