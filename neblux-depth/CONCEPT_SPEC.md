@@ -1,7 +1,13 @@
-# 概念頁生成規格 CONCEPT_SPEC v0.2
+# Neblux Depth 生成規格 CONCEPT_SPEC v0.3
 
-適用：Neblux 深度頁黃金樣本與後續候選頁。  
+適用：Neblux Depth 黃金樣本與後續候選頁。  
 本版取代 v0.1 的「inline JS 單檔可上線」假設。Neblux 現行 CSP 不允許 executable inline script，因此可公開頁面必須採 same-origin 外置 JS。
+
+## 0. 命名與定位
+
+- 對外功能名固定為 `Neblux Depth`，不另翻譯成中文產品名。
+- 單頁交付物稱為 `Depth page`；中文內部討論可用「Depth page」混寫，但 UI 與公開文件不使用「實驗室」、「深一層」、「概念小窗」等別名。
+- `Neblux Depth` 是比 graph node 更深一層的互動小窗，不是完整課程、教材平台或第二套 graph。
 
 ## 1. 檔案與技術約束
 
@@ -25,9 +31,9 @@
 
 每頁必須對應 `depth_manifest.json` 的一個 entry。頁面本身不複製 graph title、description 或 graph connections；這些仍由既有 `data/all_nodes.json` 管。
 
-可寫在 manifest 的深度頁專屬資訊：
+可寫在 manifest 的 Depth page 專屬資訊：
 
-- `id`：深度頁穩定 id，例如 `sine-wave`
+- `id`：Depth page 穩定 id，例如 `sine-wave`
 - `node_id`：既有 graph node id
 - `focus`：本頁實際教學焦點
 - `depth_path`：上線路徑，未完成時為 `null`
@@ -64,7 +70,7 @@
 M1 不硬編碼 prereq-DAG。頁尾只提供：
 
 - 回 graph node：`/app.html?node=<node_id>`
-- 回 Neblux 入口或暫定 lab index（如果該 index 尚未存在，先不顯示）
+- 回 Neblux 入口或暫定 Depth index（如果該 index 尚未存在，先不顯示）
 
 圖譜整合與延伸連結留到 M3 另開 brief。
 
@@ -113,5 +119,6 @@ M1 不硬編碼 prereq-DAG。頁尾只提供：
 
 ## 7. 修訂紀錄
 
+- v0.3（2026-07-09）：命名定案為 `Neblux Depth`；不另設中文產品名；補上定位邊界。
 - v0.2（2026-07-09）：改為 Neblux CSP 相容；加入 manifest、內容正確性 gate；移除硬編碼 prereq-DAG。
 - v0.1（2026-07-08）：初版。

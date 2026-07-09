@@ -85,7 +85,7 @@ for (const entry of manifest.entries || []) {
     }
 
     if (entry.depth_path !== null) {
-        check(typeof entry.depth_path === 'string' && entry.depth_path.startsWith('lab/') && !entry.depth_path.includes('..'), `${label}: depth_path stays under lab/`);
+        check(typeof entry.depth_path === 'string' && entry.depth_path.startsWith('depth/') && !entry.depth_path.includes('..'), `${label}: depth_path stays under depth/`);
         const path = resolve(root, entry.depth_path);
         check(existsSync(path), `${label}: depth_path file exists`);
         if (existsSync(path)) {

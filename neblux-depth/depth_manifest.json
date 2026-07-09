@@ -7,7 +7,7 @@
       "node_id": "oscillations_and_waves_concept",
       "focus": "sine-wave-three-parameters",
       "status": "review",
-      "depth_path": "lab/sine-wave.html",
+      "depth_path": "depth/sine-wave.html",
       "public": false,
       "mapping_confidence": "medium",
       "qa": {
@@ -17,14 +17,14 @@
         "mobile_canvas_check": true
       },
       "notes": "M1 golden sample created and browser-checked with Playwright desktop/mobile canvas pixel checks. Still mapped to the broader Oscillations and Waves node until an exact graph-node data change is reviewed.",
-      "notes_path": "lab/sine-wave-notes.md"
+      "notes_path": "depth/sine-wave-notes.md"
     },
     {
       "id": "fourier-series",
       "node_id": "fourier_analysis_concept",
       "focus": "fourier-series-square-wave",
       "status": "review",
-      "depth_path": "lab/fourier-series.html",
+      "depth_path": "depth/fourier-series.html",
       "public": false,
       "mapping_confidence": "medium",
       "qa": {
@@ -34,7 +34,7 @@
         "mobile_canvas_check": true
       },
       "notes": "M2 page 02. Golden-sample template reused (structure/CSS/canvas scaffold). Streamlined per Riku feedback: static render-on-demand canvas (no auto-flow), a single control (N = wave count, 1->8), and only two curves on the canvas (faint dashed target square + bright synth). The 'sum of specific sines' logic moved from an on-canvas component overlay to an explicit expanding-sum formula (sin + 1/3 sin3 + 1/5 sin5 + ...). Browser-verified desktop/mobile: synth math independently checked (converges to +/-1 square with ~9% Gibbs overshoot that persists; N=1 = 4/pi fundamental), single control + 44px touch target confirmed, static render paints without rAF/visible-tab dependency, no console errors. Still mapped to the broader Fourier Analysis node. Pending Riku five-minute test.",
-      "notes_path": "lab/fourier-series-notes.md"
+      "notes_path": "depth/fourier-series-notes.md"
     },
     {
       "id": "s-plane",
