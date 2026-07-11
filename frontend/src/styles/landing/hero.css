@@ -16,50 +16,138 @@
     line-height: 1.55;
 }
 
-/* Featured Wonder card — the landing's headline tour CTA (primary entrance;
-   the graph is demoted to the quiet secondary links below it). */
+/* Featured Wonder docket — the landing's headline tour CTA (primary entrance;
+   the graph is demoted to the quiet .side-link entries below it). It lives in
+   the right-hand grid column (layout.css) and shares the wonders-picker card
+   language: accent hairline on top, step-length preview dashes, mono CTA. */
 .featured-card {
+    position: relative;
     display: block;
-    padding: 22px 24px;
-    border-radius: 16px;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 26px 26px 24px;
+    border-radius: 18px;
     text-decoration: none;
-    border-left: 3px solid var(--featured-accent, #c95b9b);
-    transition: transform 0.25s ease, background 0.25s ease;
-}
-.featured-card:hover {
-    transform: translateY(-2px);
-    background: color-mix(in srgb, var(--featured-accent, #c95b9b) 10%, transparent);
+    transition: transform 0.25s var(--neblux-ease-ui, ease), box-shadow 0.3s ease, border-color 0.25s ease;
 }
 .featured-card[hidden] { display: none; }
+/* accent hairline along the top edge */
+.featured-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent,
+        color-mix(in srgb, var(--featured-accent, #c95b9b) 75%, transparent), transparent);
+    opacity: 0.6;
+}
+/* faint accent nebula rising from the top corner */
+.featured-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(130% 90% at 88% -12%,
+        color-mix(in srgb, var(--featured-accent, #c95b9b) 13%, transparent), transparent 62%);
+}
+.featured-card:hover,
+.featured-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--featured-accent, #c95b9b) 45%, transparent);
+    box-shadow: 0 24px 60px -24px color-mix(in srgb, var(--featured-accent, #c95b9b) 45%, transparent);
+}
 .featured-eyebrow {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-label, 'IBM Plex Mono', monospace);
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--featured-accent, #c95b9b);
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+}
+/* breathing domain dot (reuses the `pulse` keyframes from _base.css) */
+.featured-eyebrow::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--featured-accent, #c95b9b);
+    box-shadow: 0 0 8px 0 color-mix(in srgb, var(--featured-accent, #c95b9b) 60%, transparent);
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 .featured-title {
     display: block;
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
-    line-height: 1.1;
+    font-size: clamp(1.6rem, 2.4vw, 2.1rem);
+    line-height: 1.12;
     color: #e8eef7;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 .featured-intro {
     display: block;
     font-size: 14px;
-    line-height: 1.55;
+    line-height: 1.6;
     color: rgba(212, 228, 250, 0.72);
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
+/* step-length preview dashes (mirrors .wpk-card-dots on the picker) */
+.featured-dots { display: flex; gap: 5px; margin-bottom: 16px; }
+.featured-dots:empty { display: none; }
+.featured-dot {
+    width: 16px;
+    height: 3px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.28);
+    transition: background 0.25s ease;
+}
+.featured-card:hover .featured-dot,
+.featured-card:focus-visible .featured-dot {
+    background: color-mix(in srgb, var(--featured-accent, #c95b9b) 75%, transparent);
+}
+/* the dashes light up left-to-right */
+.featured-card:hover .featured-dot:nth-child(2) { transition-delay: 35ms; }
+.featured-card:hover .featured-dot:nth-child(3) { transition-delay: 70ms; }
+.featured-card:hover .featured-dot:nth-child(4) { transition-delay: 105ms; }
+.featured-card:hover .featured-dot:nth-child(5) { transition-delay: 140ms; }
+.featured-card:hover .featured-dot:nth-child(6) { transition-delay: 175ms; }
+.featured-card:hover .featured-dot:nth-child(7) { transition-delay: 210ms; }
 .featured-cta {
     display: inline-block;
     font-family: var(--font-label, 'IBM Plex Mono', monospace);
     font-size: 13px;
     letter-spacing: 0.04em;
     color: var(--featured-accent, #c95b9b);
+    transition: transform 0.22s var(--neblux-ease-ui, ease);
+}
+.featured-card:hover .featured-cta { transform: translateX(4px); }
+
+/* Quiet secondary entrances stacked under the docket. */
+.side-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    margin-top: 22px;
+    padding-left: 4px;
+}
+.side-link {
+    font-family: var(--font-label, 'IBM Plex Mono', monospace);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(212, 228, 250, 0.55);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.side-link::after { content: " →"; opacity: 0.7; }
+.side-link:hover { color: #e8eef7; }
+
+@media (prefers-reduced-motion: reduce) {
+    .featured-card, .featured-cta, .featured-dot { transition: none; }
+    .featured-card:hover, .featured-card:hover .featured-cta { transform: none; }
+    .featured-eyebrow::before { animation: none; }
 }

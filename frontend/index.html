@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="/src/styles/landing.css">
 </head>
 
-<body class="text-on-surface min-h-screen overflow-hidden relative antialiased hairline-border m-4 rounded-xl">
+<body class="text-on-surface min-h-screen relative antialiased hairline-border m-4 rounded-xl">
     <noscript>
         <div style="max-width:820px;margin:0 auto;padding:24px 20px;color:#c9d4ee;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7">
             <h1>Neblux — Interactive Science Knowledge Graph</h1>
@@ -96,45 +96,45 @@
         </div>
     </header>
 
-    <!-- Main Canvas -->
+    <!-- Main Canvas — asymmetric layout: statement column left, featured docket right
+         (grid areas live in src/styles/landing/layout.css). -->
     <main
-        class="relative z-10 w-full h-screen flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-16 pointer-events-none">
-        <!-- Search Area -->
-        <div class="w-full max-w-2xl mx-auto flex flex-col items-center space-y-6 sm:space-y-8 mt-10 sm:mt-16 pointer-events-auto">
+        class="relative z-10 w-full min-h-screen flex items-center px-margin-mobile md:px-margin-desktop pointer-events-none">
+        <div class="landing-grid w-full mx-auto pointer-events-auto">
             <!-- Value Proposition -->
-            <section class="text-center px-2">
-                <p id="heroKicker" class="font-label-code text-label-code text-on-surface/60 tracking-[0.14em] mb-2">
+            <section class="landing-hero" aria-labelledby="heroTitle">
+                <p id="heroKicker" class="font-label-code text-label-code text-on-surface/60 tracking-[0.14em] mb-3">
                     BEGIN ANYWHERE</p>
                 <h1 id="heroTitle"
-                    class="hero-title text-on-surface mb-4">
+                    class="hero-title text-on-surface mb-5">
                     Everything touches <span class="text-primary">everything</span>
                 </h1>
-                <p id="heroSubtitle" class="hero-subtitle font-body-base text-body-base text-on-surface/80 max-w-xl mx-auto">
+                <p id="heroSubtitle" class="hero-subtitle font-body-base text-body-base text-on-surface/80 max-w-xl">
                     Follow one spark of curiosity into the deep field of everything we know.
                 </p>
             </section>
 
-            <!-- Featured Wonder (headline tour) — the landing's primary CTA -->
-            <a id="featuredCard" href="wonders.html" hidden
-                class="featured-card glass-pane w-full text-left transition-colors duration-300">
-                <span id="featuredEyebrow" class="featured-eyebrow"></span>
-                <span id="featuredTitle" class="featured-title"></span>
-                <span id="featuredIntro" class="featured-intro"></span>
-                <span id="featuredCta" class="featured-cta"></span>
-            </a>
+            <!-- Featured Wonder (headline tour) — still the primary CTA, but docked to
+                 the side column instead of parking centre stage. -->
+            <aside class="landing-side">
+                <a id="featuredCard" href="wonders.html" hidden
+                    class="featured-card glass-pane w-full text-left">
+                    <span id="featuredEyebrow" class="featured-eyebrow"></span>
+                    <span id="featuredTitle" class="featured-title"></span>
+                    <span id="featuredIntro" class="featured-intro"></span>
+                    <span id="featuredDots" class="featured-dots" aria-hidden="true"></span>
+                    <span id="featuredCta" class="featured-cta"></span>
+                </a>
 
-            <!-- Secondary entrances (graph demoted to a quiet link) -->
-            <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a id="ctaWonders"
-                    class="glass-pane px-5 py-2.5 text-center font-label-code text-label-code text-on-surface/70 hover:text-on-surface transition-colors duration-300"
-                    href="wonders.html">Browse all wonders</a>
-                <a id="ctaExplore"
-                    class="glass-pane px-5 py-2.5 text-center font-label-code text-label-code text-on-surface/70 hover:text-on-surface transition-colors duration-300"
-                    href="app.html">Open the graph</a>
-            </div>
+                <!-- Secondary entrances (graph demoted to a quiet link) -->
+                <nav class="side-links" aria-label="Secondary entrances">
+                    <a id="ctaWonders" class="side-link" href="wonders.html">Browse all wonders</a>
+                    <a id="ctaExplore" class="side-link" href="app.html">Open the graph</a>
+                </nav>
+            </aside>
 
             <!-- Search Container (relative for dropdown positioning) -->
-            <div class="relative w-full">
+            <div class="landing-search relative w-full">
                 <div class="relative w-full glass-pane search-shell overflow-hidden flex items-center p-2 search-glow transition-all duration-300"
                     id="searchContainer">
                     <span class="ml-4 text-on-surface opacity-50" aria-hidden="true">⌕</span>
@@ -149,7 +149,7 @@
             </div>
 
             <!-- Suggestion Pills -->
-            <div id="suggestionPills" class="flex flex-wrap justify-center gap-3">
+            <div id="suggestionPills" class="landing-pills flex flex-wrap gap-3">
                 <button
                     class="pill-btn inline-flex px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300"
                     data-query="black hole" data-domain="PHY" data-topic="blackHoles">

@@ -57,6 +57,7 @@
         const featuredEyebrow = document.getElementById('featuredEyebrow');
         const featuredTitle = document.getElementById('featuredTitle');
         const featuredIntro = document.getElementById('featuredIntro');
+        const featuredDots = document.getElementById('featuredDots');
         const featuredCtaEl = document.getElementById('featuredCta');
         const pillTooltip = document.getElementById('pillTooltip');
         const pillTooltipDomain = document.getElementById('pillTooltipDomain');
@@ -177,9 +178,18 @@
             const w = featuredWonder;
             featuredCard.href = `wonders.html?w=${FEATURED_TOUR}`;
             featuredCard.style.setProperty('--featured-accent', DOMAIN_COLORS[w.accent] || '#c95b9b');
-            featuredEyebrow.textContent = `${langCopy.featuredEyebrow} · ${(w.steps || []).length} ${langCopy.featuredSteps}`;
+            const stepCount = (w.steps || []).length;
+            featuredEyebrow.textContent = `${langCopy.featuredEyebrow} · ${stepCount} ${langCopy.featuredSteps}`;
             featuredTitle.textContent = pickLang(w.title);
             featuredIntro.textContent = pickLang(w.intro);
+            if (featuredDots) {
+                featuredDots.innerHTML = '';
+                for (let k = 0; k < stepCount; k++) {
+                    const d = document.createElement('i');
+                    d.className = 'featured-dot';
+                    featuredDots.appendChild(d);
+                }
+            }
             featuredCtaEl.textContent = langCopy.featuredCta;
             featuredCard.hidden = false;
         }

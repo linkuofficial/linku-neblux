@@ -1,0 +1,48 @@
+/* layout.css — the landing's asymmetric grid.
+   Statement column (hero → search → pills) leads on the left; the featured
+   Wonder docket rides the right column. The docket stays the primary CTA but
+   no longer parks in dead centre — the page reads left-to-right like a chart,
+   not top-down like a banner stack. Collapses to a single scrolling column
+   on small screens. */
+
+/* The page is a fixed one-viewport composition on desktop; small screens and
+   short windows stack and scroll instead of clipping. (overflow moved here
+   from the old body `overflow-hidden` utility so the media query can win.) */
+body { overflow: hidden; }
+@media (max-width: 900px), (max-height: 700px) {
+    body { overflow-y: auto; overflow-x: hidden; }
+}
+
+.landing-grid {
+    max-width: 1120px;
+    display: grid;
+    grid-template-columns: minmax(0, 13fr) minmax(0, 9fr);
+    grid-template-areas:
+        "hero   side"
+        "search side"
+        "pills  side";
+    align-content: center;
+    column-gap: clamp(48px, 7vw, 104px);
+    row-gap: clamp(22px, 3.5vh, 34px);
+    padding: 72px 0;
+}
+.landing-hero   { grid-area: hero; align-self: end; }
+.landing-side   { grid-area: side; align-self: center; }
+.landing-search { grid-area: search; max-width: 560px; }
+.landing-pills  { grid-area: pills; align-self: start; max-width: 560px; }
+
+@media (max-width: 900px) {
+    .landing-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "hero"
+            "side"
+            "search"
+            "pills";
+        row-gap: 26px;
+        /* clear the absolute header at the top; keep off the footer below */
+        padding: 96px 0 72px;
+    }
+    .landing-search,
+    .landing-pills { max-width: none; }
+}

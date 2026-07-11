@@ -952,7 +952,8 @@ function renderPicker() {
         const accent = DC[w.accent] || 'var(--accent)';
         const card = document.createElement('button');
         card.type = 'button';
-        card.className = 'wpk-card';
+        // The first tour leads the grid at double width (see .wpk-card--lead).
+        card.className = idx === 0 ? 'wpk-card wpk-card--lead' : 'wpk-card';
         // Per-card domain accent + entrance-stagger index drive the CSS (accent
         // glow, sheen, breathing dot, fade-up). See .wpk-card in wonders.css.
         card.style.setProperty('--card-accent', accent);

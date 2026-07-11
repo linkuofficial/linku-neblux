@@ -6,6 +6,7 @@
    global tokens (public/neblux-theme.css, src/index-tailwind.css) load before this.
    ════════════════════════════════════════════════════════════════════════ */
 @import "./landing/_base.css";
+@import "./landing/layout.css";
 @import "./landing/hero.css";
 @import "./landing/hairline.css";
 @import "./landing/ruler.css";

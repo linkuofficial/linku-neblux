@@ -115,7 +115,9 @@
 }
 #wi-start:hover { background: rgba(240, 192, 80, 0.22); transform: translateY(-1px); }
 
-/* ── Picker (choose a wonder) ───────────────────────────────────────────── */
+/* ── Picker (choose a wonder) ───────────────────────────────────────────────
+   Reads as an editorial index page, not a centred dialog: a left-aligned
+   masthead over a wide card grid, with the first tour as a two-column lead. */
 #wonder-picker {
     position: fixed;
     inset: 0;
@@ -123,18 +125,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* "safe" centering: stay centered when the grid fits, but anchor to the top
-       once the tour list outgrows the viewport — otherwise the first cards get
-       pushed above the scroll origin and become unclickable. */
-    justify-content: safe center;
-    gap: 28px;
-    padding: 32px 24px;
+    justify-content: flex-start;
+    gap: 34px;
+    /* top padding clears the fixed wordmark + language toggle */
+    padding: clamp(88px, 13vh, 140px) clamp(20px, 5vw, 48px) 96px;
     overflow-y: auto;
-    pointer-events: none; /* let header/lang underneath stay clickable; re-enable on cards */
+    /* The picker takes pointer events itself so the wheel scrolls it anywhere
+       on the page (the old pointer-events:none pass-through left dead zones
+       between cards); the wordmark nav is lifted above it instead. */
+    pointer-events: auto;
 }
 #wonder-picker[hidden] { display: none; }
-#wpk-head, .wpk-card { pointer-events: auto; }
-#wpk-head { text-align: center; max-width: 560px; }
+/* Keep the fixed wordmark nav clickable above the picker sheet (base z-6). */
+body:has(#wonder-picker:not([hidden])) #hdr { z-index: 15; }
+#wpk-head {
+    text-align: left;
+    width: min(1120px, 100%);
+}
+/* hairline rule anchoring the masthead to the grid below it */
+#wpk-head::after {
+    content: "";
+    display: block;
+    margin-top: 28px;
+    height: 1px;
+    background: linear-gradient(90deg,
+        color-mix(in srgb, var(--accent) 38%, transparent),
+        var(--line-subtle) 32%, transparent 92%);
+}
 #wpk-kicker {
     font-family: var(--font-label);
     font-size: var(--text-xs);
@@ -156,14 +173,23 @@
     font-size: var(--text-base);
     line-height: var(--leading-relaxed);
     color: var(--ink-soft);
+    max-width: 56ch;
 }
 #wpk-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 320px));
-    gap: 18px;
+    grid-template-columns: repeat(auto-fill, minmax(min(270px, 100%), 1fr));
+    gap: 20px;
     justify-content: center;
     width: 100%;
-    max-width: 720px;
+    max-width: 1120px;
+}
+/* The first tour leads the grid at double width — an editorial front page,
+   not a uniform contact sheet. (Guarded to widths where ≥2 columns exist,
+   or the span would force an overflowing implicit track.) */
+@media (min-width: 640px) {
+    .wpk-card--lead { grid-column: span 2; padding: 30px 30px 26px; }
+    .wpk-card--lead .wpk-card-title { font-size: var(--text-xl); letter-spacing: -0.01em; }
+    .wpk-card--lead .wpk-card-intro { font-size: var(--text-base); max-width: 58ch; }
 }
 /* Premium card: a glass tile carrying its domain accent, with a cursor-tracking
    specular sheen, a gentle 3-D tilt (JS sets --rx/--ry/--mx/--my), an accent
