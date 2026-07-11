@@ -6,11 +6,12 @@
 <meta name="color-scheme" content="dark">
 <title>弦波與三參數 — Neblux Depth</title>
 <meta name="description" content="用振幅、頻率與相位三個旋鈕，看見一顆弦波如何被完整決定。">
-<link rel="stylesheet" href="./sine-wave.css">
+<link rel="stylesheet" href="./sine-wave.css?v=2">
 <script type="application/json" id="node-meta">
 { "depth_id": "sine-wave", "node_id": "oscillations_and_waves_concept", "spec_version": "0.2" }
 </script>
-<script src="./sine-wave.js" defer></script>
+<script src="./sine-wave.js?v=2" defer></script>
+<script src="./sym-tooltip.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -20,13 +21,24 @@
 
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
-    <p class="eyebrow">弦波與三參數</p>
-    <h1 id="title">大小、快慢、起點三個數字，就能決定一整顆波。</h1>
+    <h1 id="title">弦波 <span class="topic-en">Sine Wave</span></h1>
+    <p class="deck">大小、快慢、起點三個數字，就能決定一整顆波。</p>
+    <figure class="metaphor">
+      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="像調音響：音量、音高、進拍時間三個旋鈕">
+        <line class="m-axis" x1="12" y1="42" x2="328" y2="42"/>
+        <path class="m-wave" d="M20 42 Q35 8 50 42 T80 42 T110 42 T140 42 T170 42 T200 42 T230 42 T260 42 T290 42 T320 42"/>
+        <line class="m-amp" x1="35" y1="42" x2="35" y2="25"/>
+        <circle class="m-amp-dot" cx="35" cy="25" r="3.5"/>
+        <line class="m-phase" x1="110" y1="12" x2="110" y2="72"/>
+        <g class="m-freq"><line x1="20" y1="60" x2="20" y2="68"/><line x1="80" y1="60" x2="80" y2="68"/><line x1="140" y1="60" x2="140" y2="68"/><line x1="200" y1="60" x2="200" y2="68"/><line x1="260" y1="60" x2="260" y2="68"/><line x1="320" y1="60" x2="320" y2="68"/></g>
+      </svg>
+      <figcaption>像調音響：<span class="sym amp">A</span> 是音量、<span class="sym freq">f</span> 是音高、<span class="sym phase">φ</span> 是晚多少才進拍。</figcaption>
+    </figure>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
-      <p class="section-kicker">互動主體</p>
+      <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
       <h2 id="playground-title">一條正在流動的弦波</h2>
     </div>
     <div class="canvas-wrap">
@@ -34,17 +46,17 @@
     </div>
     <div class="controls" aria-label="弦波參數">
       <label class="control control-amp">
-        <span><b>A</b> 振幅</span>
+        <span><i class="chip chip-amp" aria-hidden="true"></i><b>A</b> 振幅</span>
         <output id="amp-value">1.00</output>
         <input id="amp" type="range" min="0" max="1.8" value="1" step="0.01">
       </label>
       <label class="control control-freq">
-        <span><b>f</b> 頻率</span>
+        <span><i class="chip chip-freq" aria-hidden="true"></i><b>f</b> 頻率</span>
         <output id="freq-value">1.00 Hz</output>
         <input id="freq" type="range" min="0.25" max="4" value="1" step="0.01">
       </label>
       <label class="control control-phase">
-        <span><b>φ</b> 相位</span>
+        <span><i class="chip chip-phase" aria-hidden="true"></i><b>φ</b> 相位</span>
         <output id="phase-value">0.00π</output>
         <input id="phase" type="range" min="-3.14159" max="3.14159" value="0" step="0.01">
       </label>
@@ -52,7 +64,7 @@
   </section>
 
   <section class="tasks" aria-labelledby="tasks-title">
-    <p class="section-kicker">觀察任務</p>
+    <p class="section-kicker"><span class="step-no">2</span>觀察</p>
     <h2 id="tasks-title">先讓畫面回答</h2>
     <ol>
       <li>把振幅拉低，再拉高；注意中心線沒有搬家，但波峰離中心的距離變了。</li>
@@ -61,13 +73,38 @@
     </ol>
   </section>
 
+  <section class="usecases" aria-labelledby="usecases-title">
+    <p class="section-kicker"><span class="step-no">3</span>哪裡用得到</p>
+    <h2 id="usecases-title">你每天都在轉這三個旋鈕</h2>
+    <ul class="usecase-list">
+      <li><b>調音量</b>——手機音量鍵改的就是聲波的 <span class="sym amp">A</span>：波形不變，波峰變高。</li>
+      <li><b>唱高音</b>——音高就是 <span class="sym freq">f</span>：每秒振動次數越多聽起來越高，標準音 A4 = 440 Hz。</li>
+      <li><b>家裡的插座</b>——台灣市電是 60 Hz 的弦波，這個數字說的就是 <span class="sym freq">f</span>。</li>
+      <li><b>降噪耳機</b>——把外界聲音反相（<span class="sym phase">φ</span> 移半圈）再疊回去，正負抵消，世界就安靜了。</li>
+    </ul>
+  </section>
+
   <section class="formal" aria-labelledby="formal-title">
-    <p class="section-kicker">形式化</p>
-    <h2 id="formal-title">剛剛玩的三個旋鈕，寫成一行式子</h2>
-    <p class="formula" aria-label="y of t equals A times sine of two pi f t plus phi">
-      y(t) = <span class="sym amp">A</span> · sin(2π<span class="sym freq">f</span>t + <span class="sym phase">φ</span>)
-    </p>
-    <p><span class="sym amp">A</span> 是波峰離中心線的高度；<span class="sym freq">f</span> 是每秒走過幾圈；<span class="sym phase">φ</span> 是一開始站在圓周上的哪個角度。式子沒有多寫任何東西：畫面裡能改的，剛好就是這三個量。</p>
+    <p class="section-kicker"><span class="step-no">4</span>寫成式子</p>
+    <details class="formal-details">
+      <summary><h2 id="formal-title">剛剛玩的三個旋鈕，寫成一行式子</h2><span class="summary-hint">玩過了？打開來看</span></summary>
+      <div class="details-body">
+        <p class="formula" aria-label="y of t equals A times sine of two pi f t plus phi">
+          y(t) = <span class="sym amp" data-sym="amp" data-tip="A 振幅：波峰離中心線的高度，就是「振幅」那支旋鈕。">A</span> · sin(2π<span class="sym freq" data-sym="freq" data-tip="f 頻率：每秒走過幾個完整週期，就是「頻率」那支旋鈕。">f</span>t + <span class="sym phase" data-sym="phase" data-tip="φ 相位：t=0 時起步的角度，就是「相位」那支旋鈕。">φ</span>)
+        </p>
+        <p class="sym-explainer" aria-live="polite">把游標移到算式的符號上（手機點一下），看它對應到哪一支旋鈕。</p>
+        <p>式子沒有多寫任何東西：畫面裡能改的，剛好就是這三個量。</p>
+        <dl class="symbol-gloss">
+          <dt data-sym="amp"><span class="sym amp">A</span></dt>
+          <dd>振幅：波峰離中心線的高度。只改它，中心線不搬家，波峰離中心的距離變了。</dd>
+          <dt data-sym="freq"><span class="sym freq">f</span></dt>
+          <dd>頻率：每秒走過幾個完整週期。加倍，同一個畫面裡就塞進兩倍的週期。</dd>
+          <dt data-sym="phase"><span class="sym phase">φ</span></dt>
+          <dd>相位：一開始站在圓周上的哪個角度。只動它，形狀不換，整條沿時間方向平移。</dd>
+        </dl>
+      </div>
+    </details>
+    <div class="sym-tip" role="tooltip" hidden></div>
   </section>
 
   <section class="links" aria-labelledby="links-title">

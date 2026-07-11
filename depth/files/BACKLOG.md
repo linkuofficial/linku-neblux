@@ -11,6 +11,13 @@
 - 狀態:待另案裁決,不透過 Neblux 承載。
 - 觸發條件:FOC capstone 開源文件線成形時,與其合併評估。
 
+## 技術債(待清理,非阻斷)
+
+### s-plane / transformer 的符號 tooltip 遷移到共用模組
+- 現況:兩頁在 SPEC_DELTA C5 規範定案前已各自 inline 實作 tooltip(邏輯寫在 `*.js`、tip 文字存 JS `GLOSS` 物件、未用 `data-tip` 契約),且與各自 canvas 高亮深度耦合。行為已符合 C5,但未走共用 `depth/sym-tooltip.js`。
+- 待辦:抽出各頁的 canvas 高亮為 `window.__nebluxSymHook`,tooltip/gloss/cross-highlight 改用共用模組,tip 文字改由 `data-tip`/`<dd>` 供給,刪除 inline 重複碼。
+- 觸發/約束:兩頁仍 `public:false`、s-plane 待凜空數學複核——遷移時逐頁瀏覽器驗證,不與數學複核同批進行以免混淆。收益:消除 3 份 tooltip 實作漂移,讓 C5 規範零例外。
+
 ## 暫緩(HOLD)
 
 ### KV Cache 顯存權衡(原旗艦 #2)

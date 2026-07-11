@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>自注意力 — Neblux Depth</title>
+<title>Transformer — Neblux Depth</title>
 <meta name="description" content="每個字看著其他字，混出新的意思——用一顆注意力頭拆開『it』指誰是怎麼算出來的。">
-<link rel="stylesheet" href="./transformer.css">
+<link rel="stylesheet" href="./transformer.css?v=2">
 <script type="application/json" id="node-meta">
 { "depth_id": "transformer", "node_id": "deep_learning_concept", "spec_version": "0.2" }
 </script>
-<script src="./transformer.js" defer></script>
+<script src="./transformer.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -20,16 +20,28 @@
 
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
-    <p class="eyebrow">自注意力 Self-Attention</p>
-    <h1 id="title">一個字的意思，是它挑著看的其他字，混出來的。</h1>
+    <h1 id="title">Transformer <span class="topic-zh">自注意力</span></h1>
+    <p class="deck">一個字的意思，是它挑著看的其他字，混出來的。</p>
+    <figure class="metaphor">
+      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="吵雜房間裡，注意力多分給重要的聲音">
+        <circle class="m-me" cx="46" cy="42" r="10"/>
+        <line class="m-ray r1" x1="58" y1="37" x2="140" y2="19"/>
+        <line class="m-ray r2" x1="58" y1="42" x2="209" y2="42"/>
+        <line class="m-ray r3" x1="58" y1="47" x2="140" y2="65"/>
+        <circle class="m-p p1" cx="150" cy="16" r="8"/>
+        <circle class="m-p p2" cx="220" cy="42" r="9"/>
+        <circle class="m-p p3" cx="150" cy="68" r="8"/>
+      </svg>
+      <figcaption>像在吵雜的房間聽人講話：你自動把注意力多分給重要的聲音——每個字也這樣挑著「聽」其他字。</figcaption>
+    </figure>
     <p>在一個句子裡，每個字都在偷偷決定：其他的字，各要看多重。看得越重的，就越多地混進它自己新的意思裡——代名詞「it」到底指誰，就是這樣被決定的。</p>
     <p class="takeaway">這一頁只想讓你看見一件事：一個字更新後的意思，是它對句子裡每個字分配的注意力、加權混合出來的。</p>
-    <p class="aside">這頁只拆開「一顆注意力頭、一個固定句子」這件事。用的 Q／K／V 是為了看得清楚而手挑的固定數字，不是訓練出來的。不談多頭、位置編碼、前饋層、疊很多層、也不談訓練。</p>
+    <p class="aside">互動只拆開「一顆注意力頭、一個固定句子」這件事，用的 Q／K／V 是為了看得清楚而手挑的固定數字，不是訓練出來的。多頭、位置編碼、前饋層、堆疊與訓練，在下面「拉遠看」一段補齊位置。</p>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
-      <p class="section-kicker">互動主體</p>
+      <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
       <h2 id="playground-title">點一個字，看它把注意力給了誰</h2>
     </div>
 
@@ -45,10 +57,16 @@
 
     <p class="how-to">點上面句子裡的字，看它從自己的位置望出去，注意力落在哪些字身上——最亮的那個，就是它最在意的。</p>
 
-    <p class="canvas-caption"><b>注意力熱圖</b>：每一橫列＝從某個字「看出去」，格子越亮＝看那個字越重；整列加起來剛好是 1。</p>
+    <div class="canvas-legend">
+      <span class="legend-item"><i class="chip chip-q" aria-hidden="true"></i>你點的字（q，橫列）</span>
+      <span class="legend-item"><i class="chip chip-k" aria-hidden="true"></i>被看的字（k，直行）</span>
+      <span class="legend-item"><i class="chip chip-w" aria-hidden="true"></i>格子越亮＝看得越重（w）</span>
+    </div>
+    <p class="canvas-caption"><b>注意力熱圖</b>：每一橫列＝從某個字「看出去」，格子越亮＝看那個字越重；整列加起來剛好是 1。滑到任何一格，看它是「誰看誰」。</p>
     <div class="canvas-wrap">
       <canvas id="attn-canvas" width="960" height="720" aria-label="自注意力權重熱圖"></canvas>
     </div>
+    <div class="cell-tip" role="status" hidden></div>
 
     <p class="readout" id="readout" aria-live="polite">從「it」看出去，最亮的是「cat」（0.83）。</p>
 
@@ -62,7 +80,7 @@
   </section>
 
   <section class="tasks" aria-labelledby="tasks-title">
-    <p class="section-kicker">觀察任務</p>
+    <p class="section-kicker"><span class="step-no">2</span>觀察</p>
     <h2 id="tasks-title">先讓畫面回答</h2>
     <ol>
       <li>點「it」：七格裡哪一格最亮？它其實在看句子裡的哪個字？</li>
@@ -72,9 +90,54 @@
     </ol>
   </section>
 
+  <section class="zoomout" aria-labelledby="zoomout-title">
+    <p class="section-kicker"><span class="step-no">3</span>拉遠看</p>
+    <h2 id="zoomout-title">你剛玩的，是整座 Transformer 的哪一塊？</h2>
+    <svg class="arch-art" viewBox="0 0 340 150" role="img" aria-label="Transformer 流程：文字變向量、加位置、多頭自注意力、前饋層、疊很多層、輸出下一個字">
+      <rect class="arch-box" x="6" y="10" width="86" height="30" rx="4"/>
+      <text class="arch-txt" x="49" y="29" text-anchor="middle">文字 → 向量</text>
+      <polygon class="arch-arrow" points="98,25 108,21 108,29"/>
+      <rect class="arch-box" x="112" y="10" width="64" height="30" rx="4"/>
+      <text class="arch-txt" x="144" y="29" text-anchor="middle">＋位置</text>
+      <polygon class="arch-arrow" points="150,46 146,56 154,56"/>
+      <rect class="arch-box hot" x="6" y="62" width="120" height="30" rx="4"/>
+      <text class="arch-txt hot" x="66" y="81" text-anchor="middle">多頭自注意力</text>
+      <polygon class="arch-arrow" points="132,77 142,73 142,81"/>
+      <rect class="arch-box" x="146" y="62" width="62" height="30" rx="4"/>
+      <text class="arch-txt" x="177" y="81" text-anchor="middle">前饋層</text>
+      <rect class="arch-loop" x="2" y="56" width="212" height="42" rx="6"/>
+      <text class="arch-n" x="222" y="81">× N 層</text>
+      <polygon class="arch-arrow" points="262,77 272,73 272,81"/>
+      <rect class="arch-box" x="276" y="62" width="60" height="30" rx="4"/>
+      <text class="arch-txt" x="306" y="76" text-anchor="middle">下一個字</text>
+      <text class="arch-txt sub" x="306" y="87" text-anchor="middle">的機率</text>
+      <text class="arch-note" x="6" y="116">↑ 你剛剛玩的就在這格裡（它的其中一顆頭）</text>
+    </svg>
+    <ul class="arch-list">
+      <li><b>多頭</b>——同時開很多顆你剛玩的頭，各自關注不同的關係（誰指誰、誰形容誰…），結果拼在一起。</li>
+      <li><b>位置編碼</b>——先把「字的順序」加進向量，不然「貓咬狗」和「狗咬貓」分不出來。</li>
+      <li><b>前饋層</b>——注意力混完之後，每個字自己再過一層加工。</li>
+      <li><b>疊 N 層</b>——這一套重複幾十層，意思越混越抽象，最後輸出「下一個字」的機率。</li>
+      <li><b>訓練</b>——真正的 Q／K／V 是從大量文字裡學出來的；這頁為了看得清楚，用手挑的數字。</li>
+    </ul>
+  </section>
+
+  <section class="usecases" aria-labelledby="usecases-title">
+    <p class="section-kicker"><span class="step-no">4</span>哪裡用得到</p>
+    <h2 id="usecases-title">你大概每天都在用它</h2>
+    <ul class="usecase-list">
+      <li><b>ChatGPT、Claude 這類 AI</b>——GPT 的「T」就是 Transformer；它回你話時，每個字都在做你剛玩的注意力計算。</li>
+      <li><b>Google 翻譯</b>——Transformer 2017 年就是為翻譯而發明的（論文《Attention Is All You Need》）。</li>
+      <li><b>程式補全（Copilot）</b>——看你寫到一半的程式碼，把注意力放在相關的變數和函式上。</li>
+      <li><b>AlphaFold 蛋白質結構</b>——同一套注意力，看的不是字，是胺基酸之間誰跟誰有關。</li>
+    </ul>
+  </section>
+
   <section class="formal" aria-labelledby="formal-title">
-    <p class="section-kicker">形式化</p>
-    <h2 id="formal-title">剛剛的「多重要」，寫成三行</h2>
+    <p class="section-kicker"><span class="step-no">5</span>寫成式子</p>
+    <details class="formal-details">
+      <summary><h2 id="formal-title">剛剛的「多重要」，寫成三行</h2><span class="summary-hint">玩過了？打開來看</span></summary>
+      <div class="details-body">
 
     <div class="formula-block">
       <p class="formula-line" aria-label="score i j equals q i dot k j, divided by square root of d"><span class="sym score" data-sym="score">score<sub>ij</sub></span> = (<span class="sym q" data-sym="q">q<sub>i</sub></span> · <span class="sym k" data-sym="k">k<sub>j</sub></span>) / <span class="sym sqrtd" data-sym="sqrtd">√d</span></p>
@@ -109,6 +172,8 @@
     </dl>
 
     <p class="aside">拿掉 √d 的縮放，it→cat 的分數會從 0.83 衝到 <b>0.99</b>：差距被放大，softmax 幾乎整個押在同一格上（飽和）。√d 就是用來擋住這件事。</p>
+      </div>
+    </details>
     <div class="sym-tip" role="tooltip" hidden></div>
   </section>
 

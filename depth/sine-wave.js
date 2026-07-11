@@ -148,17 +148,35 @@
         }
     }
 
+    // C6 三重對應：畫面元素末端放「色塊＋名字」小籤（與滑桿標籤、公式符號同色），
+    // 深色底墊片讓籤壓在線上也讀得清。
+    function drawTag(x, y, color, text) {
+        ctx.font = '600 12px system-ui, sans-serif';
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        const sw = 9;
+        const padX = 5;
+        const h = 20;
+        const tw = ctx.measureText(text).width;
+        const boxW = padX * 2 + sw + 6 + tw;
+        ctx.fillStyle = 'rgba(5, 7, 13, 0.78)';
+        ctx.fillRect(x, y - h / 2, boxW, h);
+        ctx.fillStyle = color;
+        ctx.fillRect(x + padX, y - sw / 2, sw, sw);
+        ctx.fillText(text, x + padX + sw + 6, y + 1);
+    }
+
     function drawLabels(cx, cy, plotWidth, plotHeight) {
         ctx.fillStyle = colors.muted;
         ctx.font = '13px system-ui, sans-serif';
+        ctx.textAlign = 'left';
         ctx.textBaseline = 'top';
         ctx.fillText('center', cx + 8, cy + 8);
-        ctx.fillStyle = colors.amp;
-        ctx.fillText('A', cx + 18, cy - state.amp * plotHeight * 0.34 - 22);
-        ctx.fillStyle = colors.freq;
-        ctx.fillText('f', cx + plotWidth - 24, cy + plotHeight / 2 - 38);
-        ctx.fillStyle = colors.phase;
-        ctx.fillText('φ', cx + plotWidth * 0.12 + 8, cy - plotHeight / 2 + 10);
+        const waveScale = plotHeight * 0.34;
+        const topClamp = cy - plotHeight / 2 + 12;
+        drawTag(cx + 16, Math.max(topClamp, cy - state.amp * waveScale - 14), colors.amp, 'A 振幅');
+        drawTag(cx + plotWidth - 88, cy + plotHeight / 2 - 32, colors.freq, 'f 頻率');
+        drawTag(cx + plotWidth * 0.12 + 8, Math.max(topClamp, cy - plotHeight / 2 + 14), colors.phase, 'φ 相位');
     }
 
     function draw(now) {

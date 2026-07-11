@@ -6,11 +6,11 @@
 <meta name="color-scheme" content="dark">
 <title>極點位置與步階響應 — Neblux Depth</title>
 <meta name="description" content="把複數平面上一個點的位置，對應到系統被推一下之後會不會過衝、震盪。">
-<link rel="stylesheet" href="./s-plane.css">
+<link rel="stylesheet" href="./s-plane.css?v=2">
 <script type="application/json" id="node-meta">
 { "depth_id": "s-plane", "node_id": "control_theory_concept", "spec_version": "0.2" }
 </script>
-<script src="./s-plane.js" defer></script>
+<script src="./s-plane.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -20,15 +20,23 @@
 
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
-    <p class="eyebrow">極點與步階響應</p>
-    <h1 id="title">同樣推一下，有的系統穩穩停住，有的卻要來回震盪好幾下才安靜。</h1>
+    <h1 id="title">s 平面與極點 <span class="topic-en">s-Plane &amp; Poles</span></h1>
+    <p class="deck">同樣推一下，有的系統穩穩停住，有的卻要來回震盪好幾下才安靜。</p>
+    <figure class="metaphor">
+      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="過減速丘之後：避震鬆的車彈好幾下，調得剛好的一次貼地">
+        <line class="m-ref" x1="14" y1="24" x2="326" y2="24"/>
+        <path class="m-bounce" d="M14 70 C34 70 34 6 54 6 C70 6 68 40 84 40 C98 40 96 16 110 16 C122 16 122 30 134 30 C146 30 148 22 162 24 L326 24"/>
+        <path class="m-settle" d="M14 70 C50 70 70 26 110 24 L326 24"/>
+      </svg>
+      <figcaption>像過減速丘：避震鬆的車（<span class="sym zeta">ζ</span> 小）要彈好幾下，調得剛好的一次貼地——差別只在一個設定。</figcaption>
+    </figure>
     <p>決定它是哪一種的，只是一張圖上一個點的位置。把那個點在圖上挪一挪，右邊「被推一下之後的反應」就跟著換了個性——過衝、震盪、慢慢拖，全寫在這個點放在哪裡。</p>
     <p class="takeaway">這一頁只想讓你看見一件事：一個系統會不會過衝、震盪，全由它的極點放在複數平面（左邊那張座標圖）上的哪裡決定。</p>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
-      <p class="section-kicker">互動主體</p>
+      <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
       <h2 id="playground-title">挪動極點，看它怎麼安定下來</h2>
     </div>
     <p class="how-to">拉下面的滑桿，左圖那個 ✕ 就跟著動；右圖「被推一下的反應」立刻換個性。你會看見：點放在哪，就決定它穩不穩、晃不晃。</p>
@@ -48,20 +56,39 @@
     </div>
     <div class="controls" aria-label="極點與步階響應參數">
       <label class="control control-zeta">
-        <span><b>ζ</b> 阻尼比</span>
+        <span><i class="chip chip-zeta" aria-hidden="true"></i><b>ζ</b> 阻尼比</span>
         <output id="zeta-value">0.30</output>
         <input id="zeta" type="range" min="0" max="1.2" value="0.30" step="0.01">
       </label>
       <label class="control control-wn">
-        <span><b>ωn</b> 自然頻率</span>
+        <span><i class="chip chip-wn" aria-hidden="true"></i><b>ωn</b> 自然頻率</span>
         <output id="wn-value">2.0 rad/s</output>
         <input id="wn" type="range" min="1" max="3" value="2.0" step="0.1">
       </label>
     </div>
+    <p class="strip-hint">四種個性——<b>點一張卡</b>，滑桿直接跳到那種狀態：</p>
+    <div class="regime-strip" role="group" aria-label="四種阻尼個性——點一下，直接把 ζ 設成那種個性">
+      <button type="button" class="regime-card" data-zeta="0" data-regime="undamped" aria-pressed="false">
+        <svg viewBox="0 0 96 44" aria-hidden="true"><line class="rg-ref" x1="4" y1="22" x2="92" y2="22"/><path class="rg-curve" d="M4 22 Q10 4 16 22 T28 22 T40 22 T52 22 T64 22 T76 22 T88 22"/></svg>
+        <span class="rg-name">無阻尼</span><span class="rg-cond">ζ = 0　永遠晃</span>
+      </button>
+      <button type="button" class="regime-card" data-zeta="0.3" data-regime="underdamped" aria-pressed="false">
+        <svg viewBox="0 0 96 44" aria-hidden="true"><line class="rg-ref" x1="4" y1="22" x2="92" y2="22"/><path class="rg-curve" d="M4 40 C12 40 12 6 22 6 C32 6 30 32 40 32 C48 32 48 16 56 16 C63 16 63 26 70 26 C78 26 80 21 92 22"/></svg>
+        <span class="rg-name">欠阻尼</span><span class="rg-cond">0&lt;ζ&lt;1　衝過頭再回穩</span>
+      </button>
+      <button type="button" class="regime-card" data-zeta="1" data-regime="critical" aria-pressed="false">
+        <svg viewBox="0 0 96 44" aria-hidden="true"><line class="rg-ref" x1="4" y1="22" x2="92" y2="22"/><path class="rg-curve" d="M4 40 C20 40 24 24 44 22.5 L92 22"/></svg>
+        <span class="rg-name">臨界阻尼</span><span class="rg-cond">ζ = 1　最快貼住不晃</span>
+      </button>
+      <button type="button" class="regime-card" data-zeta="1.2" data-regime="overdamped" aria-pressed="false">
+        <svg viewBox="0 0 96 44" aria-hidden="true"><line class="rg-ref" x1="4" y1="22" x2="92" y2="22"/><path class="rg-curve" d="M4 40 C28 40 44 31 62 25.5 C76 23 84 22.4 92 22.2"/></svg>
+        <span class="rg-name">過阻尼</span><span class="rg-cond">ζ &gt; 1　不晃但拖慢</span>
+      </button>
+    </div>
   </section>
 
   <section class="tasks" aria-labelledby="tasks-title">
-    <p class="section-kicker">觀察任務</p>
+    <p class="section-kicker"><span class="step-no">2</span>觀察</p>
     <h2 id="tasks-title">先讓兩張圖回答</h2>
     <ol>
       <li>把 ζ 從大慢慢調到小：白線從「乖乖爬到 1」變成「衝過頭，再回頭晃幾下」。第一個高峰從 ζ 多少開始冒出來？</li>
@@ -70,9 +97,22 @@
     </ol>
   </section>
 
+  <section class="usecases" aria-labelledby="usecases-title">
+    <p class="section-kicker"><span class="step-no">3</span>哪裡用得到</p>
+    <h2 id="usecases-title">所有「推一下之後怎麼回穩」的東西，都在這張圖上</h2>
+    <ul class="usecase-list">
+      <li><b>汽車避震</b>——過減速丘彈幾下才停？調避震就是在調 <span class="sym zeta">ζ</span>。</li>
+      <li><b>無人機與機器手臂</b>——馬達控制要「快、又不衝過頭」，工程師就在欠阻尼與臨界阻尼之間找平衡。</li>
+      <li><b>台北 101 的阻尼球</b>——660 噸的調諧質塊阻尼器，把強風下大樓的震盪吸掉。</li>
+      <li><b>電源供應器</b>——回授穩壓調太猛，輸出電壓會過衝、震盪，看的還是這張圖。</li>
+    </ul>
+  </section>
+
   <section class="formal" aria-labelledby="formal-title">
-    <p class="section-kicker">形式化</p>
-    <h2 id="formal-title">剛剛看到的形狀，寫成方程式</h2>
+    <p class="section-kicker"><span class="step-no">4</span>寫成式子</p>
+    <details class="formal-details">
+      <summary><h2 id="formal-title">剛剛看到的形狀，寫成方程式</h2><span class="summary-hint">四種個性都試過了？打開來看</span></summary>
+      <div class="details-body">
     <div class="formula-group">
       <p class="formula-line">H(<span class="sym" data-sym="s">s</span>) = <span class="sym wn" data-sym="wn">ωn</span>² / ( <span class="sym" data-sym="s">s</span>² + 2·<span class="sym zeta" data-sym="zeta">ζ</span>·<span class="sym wn" data-sym="wn">ωn</span>·<span class="sym" data-sym="s">s</span> + <span class="sym wn" data-sym="wn">ωn</span>² )</p>
       <p class="formula-line">poles (0&lt;<span class="sym zeta" data-sym="zeta">ζ</span>&lt;1)：<span class="sym" data-sym="s">s</span> = −<span class="sym zeta" data-sym="zeta">ζ</span>·<span class="sym wn" data-sym="wn">ωn</span> ± j·<span class="sym wn" data-sym="wn">ωn</span>·√(1 − <span class="sym zeta" data-sym="zeta">ζ</span>²) = −<span class="sym muted" data-sym="sigma">σ</span> ± j·<span class="sym muted" data-sym="wd">ω_d</span></p>
@@ -81,13 +121,7 @@
     </div>
     <p class="sym-explainer" aria-live="polite">把游標移到算式裡的符號上（手機點一下），看它對應到畫面上的哪個東西。</p>
 
-    <p>極點放在哪裡，決定系統是哪一種個性：</p>
-    <ul class="regimes">
-      <li><span class="sym zeta">ζ</span> = 0 → <b>無阻尼</b>（極點在虛軸上，等幅震盪永不停）</li>
-      <li>0 &lt; <span class="sym zeta">ζ</span> &lt; 1 → <b>欠阻尼</b>（過衝後收斂，ζ 越小衝越高、晃越久）</li>
-      <li><span class="sym zeta">ζ</span> = 1 → <b>臨界阻尼</b>（重極點落在負實軸上，不震盪、最快到位）</li>
-      <li><span class="sym zeta">ζ</span> &gt; 1 → <b>過阻尼</b>（兩個實極點，不震盪，但被較慢的那個拖尾）</li>
-    </ul>
+    <p class="pole-map">四種個性（上面那排縮圖）對回極點位置：<span class="sym zeta">ζ</span> = 0 極點落在虛軸上（等幅震盪永不停）；0 &lt; <span class="sym zeta">ζ</span> &lt; 1 共軛極點對（過衝後收斂，ζ 越小衝越高）；<span class="sym zeta">ζ</span> = 1 重極點落在 −ωn（不震盪、最快到位）；<span class="sym zeta">ζ</span> &gt; 1 兩個實極點（不震盪，被較慢的那個拖尾）。</p>
 
     <p>每個符號對回剛剛畫面上的東西：</p>
     <dl class="symbol-gloss">
@@ -108,6 +142,8 @@
       <dt data-sym="y"><span class="sym ink">y(t)</span></dt>
       <dd>y(t)：白線，追著穩態值 1 跑的實際反應。</dd>
     </dl>
+      </div>
+    </details>
     <div class="sym-tip" role="tooltip" hidden></div>
   </section>
 

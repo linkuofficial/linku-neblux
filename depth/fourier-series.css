@@ -7,6 +7,9 @@
   --panel: #0d1420;
   --panel-2: #121b29;
   --n: #70e0c2;
+  --omega: #f0c15a;
+  --coef: #ef7f72;
+  --falloff: #b79cf0;
   --link: #9bbcff;
 }
 
@@ -90,6 +93,134 @@ h2 {
   letter-spacing: 0;
 }
 
+/* 主題的英文/中文 companion：小一號、次要色，永遠與主題同行不被埋沒 */
+.topic-en,
+.topic-zh {
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+/* aha 一句話：副標，重量介於 H1 與內文之間 */
+.deck {
+  max-width: 760px;
+  margin: 16px 0 0;
+  color: #d5deee;
+  font-size: clamp(1.15rem, 3.2vw, 1.7rem);
+  line-height: 1.32;
+  font-weight: 400;
+}
+
+/* ---- 生活比喻入口（SPEC C7）---- */
+.metaphor {
+  max-width: 460px;
+  margin: 22px 0 0;
+}
+
+.metaphor-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.metaphor figcaption {
+  margin-top: 6px;
+  color: #ced8ea;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.m-sine { fill: none; stroke: var(--n); }
+.m-sine.s1 { stroke-width: 2.5; }
+.m-sine.s2 { stroke-width: 2; opacity: 0.72; }
+.m-sine.s3 { stroke-width: 1.5; opacity: 0.5; }
+.m-plus { fill: var(--muted); font: 700 20px system-ui, sans-serif; }
+.m-square { fill: none; stroke: var(--omega); stroke-width: 2.5; stroke-dasharray: 6 4; }
+
+/* ---- 步驟鏈（SPEC C7）---- */
+.step-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: #dce4f2;
+}
+
+/* ---- 三重對應色塊 + 圖例（SPEC C6）：圖例走 HTML，不塞 canvas 小字 ---- */
+.chip {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 8px;
+  border-radius: 3px;
+  vertical-align: -1px;
+}
+
+.chip-n,
+.chip-synth { background: var(--n); }
+.chip-target { background: transparent; border: 2px dashed var(--omega); }
+.chip-gap { background: rgba(240, 193, 90, 0.16); border: 1px solid rgba(240, 193, 90, 0.45); }
+.chip-new { background: var(--falloff); }
+
+.canvas-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 12px;
+  color: #dce4f2;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.legend-item { white-space: nowrap; }
+
+/* ---- 公式預設收合（SPEC C7）---- */
+.formal-details {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.formal-details summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.formal-details summary::-webkit-details-marker { display: none; }
+
+.formal-details summary::before {
+  content: '▸';
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: transform 0.15s ease;
+}
+
+.formal-details[open] summary::before { transform: rotate(90deg); }
+
+.formal-details summary h2 { margin: 0; }
+
+.summary-hint {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.details-body { padding: 0 16px 18px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .formal-details summary::before { transition: none; }
+}
+
 .lab-surface {
   padding: 22px;
   border: 1px solid var(--line);
@@ -160,7 +291,21 @@ canvas {
   color: var(--n);
 }
 
+.usecase-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 1.25rem;
+  max-width: 820px;
+  color: #ced8ea;
+}
+
+.usecase-list b {
+  color: var(--ink);
+}
+
 .tasks,
+.usecases,
 .formal,
 .links {
   padding-top: 34px;
@@ -194,6 +339,97 @@ canvas {
 
 .sym.n {
   color: var(--n);
+}
+
+.sym.omega {
+  color: var(--omega);
+}
+
+.sym.coef {
+  color: var(--coef);
+}
+
+.sym.falloff {
+  color: var(--falloff);
+}
+
+/* ---- 公式符號懸浮註釋（SPEC_DELTA C5，共用 sym-tooltip.js 驅動）---- */
+.symbol-gloss {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  align-items: center;
+  margin: 14px 0 0;
+  padding: 0;
+}
+
+.symbol-gloss dt {
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 詞彙表＝鍵盤／輔助科技的正式互動圖例：乾淨 tab 停點，觸控目標 ≥44px */
+.symbol-gloss dt[data-sym] {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.symbol-gloss dt[data-sym].is-active {
+  outline: 1px solid currentColor;
+}
+
+.symbol-gloss dt[data-sym]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.symbol-gloss dd {
+  margin: 0;
+  color: #ced8ea;
+}
+
+.formal .sym[data-sym] {
+  padding: 0 2px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* .is-active 以底線＋外框標示，色彩非唯一通道 */
+.formal .sym[data-sym].is-active {
+  text-decoration: underline;
+  outline: 1px solid currentColor;
+}
+
+.sym-explainer {
+  min-height: 1.6em;
+  margin: 10px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: #ced8ea;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.sym-tip {
+  position: fixed;
+  z-index: 40;
+  max-width: 260px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: #0a0f18;
+  color: var(--ink);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.sym-tip[hidden] {
+  display: none;
 }
 
 .links p,

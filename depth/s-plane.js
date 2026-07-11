@@ -39,6 +39,31 @@
 
     const state = { zeta: 0.3, wn: 2.0 };
 
+    // C7 參數↔畫面連動強調：拉滑桿（或點個性縮圖）時，極點 ✕ 與 y(t) 曲線同拍
+    // 脈衝一下，把「這個點決定那條線」的因果感做在畫面上。尊重 reduced-motion。
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let pulse = 0;       // 0..1，rAF 迴圈裡衰減
+    let pulseT0 = 0;
+    let pulseRaf = null;
+
+    function kickPulse() {
+        if (reduceMotion.matches) return;
+        pulseT0 = performance.now();
+        // 立即用 pulse=1 畫一幀：拉桿當下就看得到「點與線同拍」，不等下一個 rAF
+        pulse = 1;
+        renderSplane(effectiveSym());
+        renderStep(effectiveSym());
+        if (pulseRaf !== null) return;
+        const loop = (now) => {
+            pulse = Math.max(0, 1 - (now - pulseT0) / 600);
+            renderSplane(effectiveSym());
+            renderStep(effectiveSym());
+            if (pulse > 0) pulseRaf = requestAnimationFrame(loop);
+            else pulseRaf = null;
+        };
+        pulseRaf = requestAnimationFrame(loop);
+    }
+
     // ---------- Part 3：公式符號 <-> 畫面的雙向連動 ----------
     const formalSection = document.querySelector('.formal');
     const symExplainer = document.querySelector('.sym-explainer');
@@ -122,6 +147,14 @@
 
     // halo：Part 3e「s」符號被選取時，極點 ✕ 加一圈光暈（純疊加，不動原本的 ✕ 畫法）
     function drawPoleMark(ctx, x, y, halo) {
+        if (pulse > 0) {
+            // 連動脈衝：擴散淡出的圓環，強調「這個點」剛剛動了
+            ctx.strokeStyle = `rgba(238, 244, 255, ${(0.95 * pulse).toFixed(3)})`;
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.arc(x, y, 9 + (1 - pulse) * 16, 0, Math.PI * 2);
+            ctx.stroke();
+        }
         if (halo) {
             ctx.strokeStyle = 'rgba(238, 244, 255, 0.9)';
             ctx.lineWidth = 2;
@@ -404,6 +437,22 @@
             ctx.shadowBlur = 0;
         }
 
+        // 連動脈衝：曲線與極點 ✕ 同拍閃一下（同一條線疊加亮描，不是新形狀）
+        if (pulse > 0) {
+            ctx.strokeStyle = `rgba(238, 244, 255, ${(0.65 * pulse).toFixed(3)})`;
+            ctx.lineWidth = 3.5 + 4 * pulse;
+            ctx.beginPath();
+            for (let i = 0; i <= samples; i += 1) {
+                const tau = (18 * i) / samples;
+                const yv = Math.min(2.2, Math.max(0, stepResponse(tau, zeta)));
+                const px = L.toPxX(tau);
+                const py = L.toPxY(yv);
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.stroke();
+        }
+
         // φ 被選取時：重描曲線起頭一小段（同一條線加粗，不是新形狀），只在 φ 有意義的欠阻尼／無阻尼範圍
         if (highlight === 'phi' && zeta < 1 - EPS) {
             const tEnd = Math.min(18, 3);
@@ -494,11 +543,24 @@
         resizeCanvas(stepCanvas, stepCtx, stepState, () => renderStep(effectiveSym()));
     }
 
+    // 個性縮圖列：目前 ζ 落在哪種個性，該卡亮框；點卡直接把 ζ 設成該個性的代表值。
+    const regimeCards = Array.from(document.querySelectorAll('.regime-card'));
+
+    function syncRegimeCards() {
+        const regime = regimeOf(state.zeta);
+        regimeCards.forEach((card) => {
+            const on = card.dataset.regime === regime;
+            card.classList.toggle('is-current', on);
+            card.setAttribute('aria-pressed', String(on));
+        });
+    }
+
     function syncState() {
         state.zeta = Number(zetaInput.value);
         state.wn = Number(wnInput.value);
         zetaValue.textContent = state.zeta.toFixed(2);
         wnValue.textContent = `${state.wn.toFixed(1)} rad/s`;
+        syncRegimeCards();
         renderSplane(effectiveSym());
         renderStep(effectiveSym());
     }
@@ -664,8 +726,15 @@
         });
     }
 
-    zetaInput.addEventListener('input', syncState);
-    wnInput.addEventListener('input', syncState);
+    zetaInput.addEventListener('input', () => { syncState(); kickPulse(); });
+    wnInput.addEventListener('input', () => { syncState(); kickPulse(); });
+    regimeCards.forEach((card) => {
+        card.addEventListener('click', () => {
+            zetaInput.value = card.dataset.zeta;
+            syncState();
+            kickPulse();
+        });
+    });
     window.addEventListener('resize', resizeAll);
     window.addEventListener('load', resizeAll);
     if (window.ResizeObserver) {

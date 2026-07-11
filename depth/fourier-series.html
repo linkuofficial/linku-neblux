@@ -6,11 +6,12 @@
 <meta name="color-scheme" content="dark">
 <title>傅立葉級數 — Neblux Depth</title>
 <meta name="description" content="用越來越多顆弦波，把一個有直角的方波一層層疊出來。">
-<link rel="stylesheet" href="./fourier-series.css">
+<link rel="stylesheet" href="./fourier-series.css?v=2">
 <script type="application/json" id="node-meta">
 { "depth_id": "fourier-series", "node_id": "fourier_analysis_concept", "spec_version": "0.2" }
 </script>
-<script src="./fourier-series.js" defer></script>
+<script src="./fourier-series.js?v=2" defer></script>
+<script src="./sym-tooltip.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -20,21 +21,37 @@
 
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
-    <p class="eyebrow">傅立葉級數</p>
-    <h1 id="title">有直角的方波，是一堆圓滑弦波疊出來的。</h1>
+    <h1 id="title">傅立葉級數 <span class="topic-en">Fourier Series</span></h1>
+    <p class="deck">有直角的方波，是一堆圓滑弦波疊出來的。</p>
+    <figure class="metaphor">
+      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="幾顆圓滑的弦波，合起來變成有直角的方波">
+        <path class="m-sine s1" d="M10 26 Q20 6 30 26 T50 26 T70 26 T90 26"/>
+        <path class="m-sine s2" d="M10 44 Q15 34 20 44 T30 44 T40 44 T50 44 T60 44 T70 44 T80 44 T90 44"/>
+        <path class="m-sine s3" d="M10 60 Q13 54 16 60 T22 60 T28 60 T34 60 T40 60 T46 60 T52 60 T58 60 T64 60 T70 60 T76 60 T82 60 T88 60"/>
+        <text class="m-plus" x="106" y="49">＝</text>
+        <path class="m-square" d="M140 62 V22 H185 V62 H230 V22 H275 V62 H320 V22 H330"/>
+      </svg>
+      <figcaption>像合唱：一個人的聲音是圓的，人數夠、比例對，合起來就能唱出直角。</figcaption>
+    </figure>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
-      <p class="section-kicker">互動主體</p>
+      <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
       <h2 id="playground-title">一層一層把方波疊回來</h2>
+    </div>
+    <div class="canvas-legend">
+      <span class="legend-item"><i class="chip chip-target" aria-hidden="true"></i>目標：方波（虛線）</span>
+      <span class="legend-item"><i class="chip chip-synth" aria-hidden="true"></i>你疊出來的（前 N 顆弦波）</span>
+      <span class="legend-item"><i class="chip chip-gap" aria-hidden="true"></i>淡色面積＝還差多少</span>
+      <span class="legend-item"><i class="chip chip-new" aria-hidden="true"></i>剛加入的那顆（拖 N 時短暫顯示）</span>
     </div>
     <div class="canvas-wrap">
       <canvas id="wave-canvas" width="960" height="480" aria-label="傅立葉合成畫布"></canvas>
     </div>
     <div class="controls" aria-label="傅立葉合成參數">
       <label class="control control-n">
-        <span><b>N</b> 疊幾顆弦波</span>
+        <span><i class="chip chip-n" aria-hidden="true"></i><b>N</b> 疊幾顆弦波</span>
         <output id="n-value">1 顆</output>
         <input id="n" type="range" min="1" max="8" value="1" step="1">
       </label>
@@ -42,7 +59,7 @@
   </section>
 
   <section class="tasks" aria-labelledby="tasks-title">
-    <p class="section-kicker">觀察任務</p>
+    <p class="section-kicker"><span class="step-no">2</span>觀察</p>
     <h2 id="tasks-title">先讓畫面回答</h2>
     <ol>
       <li>只疊 1 顆：一條圓圓的弦波，離方波還很遠。</li>
@@ -50,14 +67,41 @@
     </ol>
   </section>
 
+  <section class="usecases" aria-labelledby="usecases-title">
+    <p class="section-kicker"><span class="step-no">3</span>哪裡用得到</p>
+    <h2 id="usecases-title">「拆成弦波」是整個訊號世界的地基</h2>
+    <ul class="usecase-list">
+      <li><b>MP3 與串流音樂</b>——把聲音拆成頻率成分，耳朵聽不到的直接丟掉，檔案就小了。</li>
+      <li><b>等化器（EQ）</b>——音樂 App 拉「低音／高音」滑桿，就是在調各頻率成分的大小。</li>
+      <li><b>JPEG 圖片</b>——影像版的同一招：把圖拆成頻率成分再壓縮，丟掉眼睛不敏感的高頻。</li>
+      <li><b>電力與電路</b>——方波訊號、馬達雜訊都由諧波組成；工程師用這個總和找出干擾來自哪一顆弦波。</li>
+    </ul>
+  </section>
+
   <section class="formal" aria-labelledby="formal-title">
-    <p class="section-kicker">形式化</p>
-    <h2 id="formal-title">剛剛疊的東西，寫成一個總和</h2>
+    <p class="section-kicker"><span class="step-no">4</span>寫成式子</p>
+    <details class="formal-details">
+      <summary><h2 id="formal-title">剛剛疊的東西，寫成一個總和</h2><span class="summary-hint">疊到夠方了？打開來看</span></summary>
+      <div class="details-body">
     <p class="formula" aria-label="square wave approximately four over pi times sine omega t plus one third sine three omega t plus one fifth sine five omega t and so on">
-      方波(t) ≈ (4/π)·[ sin(ωt) + ⅓sin(3ωt) + ⅕sin(5ωt) + … ]
+      方波(t) ≈ <span class="sym coef" data-sym="coef" data-tip="4/π 整體高度係數，讓疊出來的方波剛好落在 ±1 之間。">(4/π)</span>·[ sin(<span class="sym omega" data-sym="omega" data-tip="ω 基頻角頻率：最低那顆弦波的快慢，定義整個方波的週期。">ω</span>t) + <span class="sym falloff" data-sym="falloff" data-tip="1、⅓、⅕… 遞減係數：只取奇數倍頻，且愈後面愈矮，高階只負責修邊角。">⅓</span>sin(3<span class="sym omega" data-sym="omega" data-tip="ω 基頻角頻率：最低那顆弦波的快慢，定義整個方波的週期。">ω</span>t) + <span class="sym falloff" data-sym="falloff" data-tip="1、⅓、⅕… 遞減係數：只取奇數倍頻，且愈後面愈矮，高階只負責修邊角。">⅕</span>sin(5<span class="sym omega" data-sym="omega" data-tip="ω 基頻角頻率：最低那顆弦波的快慢，定義整個方波的週期。">ω</span>t) + … ]
     </p>
-    <p>括號裡每一項都是一顆弦波：頻率是 1、3、5…（只有奇數倍），前面的分數（1、⅓、⅕…）讓愈後面的愈矮，所以高階只負責修邊角。<span class="sym n">N</span> 就是你那支滑桿——<b>取括號裡的前 N 項</b>。</p>
-    <p class="aside">轉角那個約 9% 的過衝不會因為多疊幾顆而消失，只會被擠得更窄——這叫 <b>Gibbs 現象</b>。</p>
+    <p class="sym-explainer" aria-live="polite">把游標移到算式的符號上（手機點一下），看它在講括號裡的哪一件事。</p>
+    <p>括號裡每一項都是一顆弦波。<span class="sym n" data-sym="n" data-tip="N 你那支滑桿：取括號裡的前 N 項一起疊。">N</span> 就是你那支滑桿——<b>取括號裡的前 N 項</b>。</p>
+    <dl class="symbol-gloss">
+      <dt data-sym="omega"><span class="sym omega">ω</span></dt>
+      <dd>基頻角頻率：括號裡第一顆（也是最慢那顆）弦波的快慢，定義整個方波的週期。</dd>
+      <dt data-sym="falloff"><span class="sym falloff">1、⅓、⅕…</span></dt>
+      <dd>遞減係數：頻率只取 1、3、5…（奇數倍），而且前面的分數讓愈後面的愈矮，所以高階只負責修邊角。</dd>
+      <dt data-sym="coef"><span class="sym coef">4/π</span></dt>
+      <dd>整體高度係數：把整串弦波一起放大，讓疊出來的方波落在 ±1。</dd>
+      <dt data-sym="n"><span class="sym n">N</span></dt>
+      <dd>你的滑桿：取括號裡的前 N 項。N 越大，愈多高階項加進來，轉角愈方。</dd>
+    </dl>
+    <p class="aside">轉角那個約 9% 的過衝不會因為多疊幾顆而消失，只會被擠得更窄——這叫 <b>Gibbs 現象</b>（畫面轉角圈起來的那個突起）。</p>
+      </div>
+    </details>
+    <div class="sym-tip" role="tooltip" hidden></div>
   </section>
 
   <section class="links" aria-labelledby="links-title">

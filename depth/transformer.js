@@ -144,6 +144,11 @@
         layout: null,
     };
 
+    // 熱圖 hover：目前滑到的格子 {i, j}（i=看出去的字、j=被看的字），null=不在格上。
+    // 白話浮籤（.cell-tip）跟著游標，格子本身加白框——白話與數字同時浮出。
+    const cellTip = document.querySelector('.cell-tip');
+    let hoverCell = null;
+
     // hover / focus / pin tracked independently; effective = pin > hover > focus.
     // pointerout clears only hover; focusout clears only focus.
     let hoverSym = null;
@@ -171,8 +176,9 @@
         const barSectionH = availH * 0.22;
         const gridSectionH = availH - barSectionH;
 
-        const topLabelH = clamp(16, gridSectionH * 0.08, 26);
-        const leftLabelW = clamp(20, availW * 0.05, 32);
+        // 軸標直接寫 token 字（不用 1–7 數字），左欄與上緣要留得下「because」
+        const topLabelH = clamp(18, gridSectionH * 0.1, 34);
+        const leftLabelW = clamp(46, availW * 0.11, 78);
 
         const gridW = availW - leftLabelW;
         const gridH = gridSectionH - topLabelH;
@@ -194,14 +200,34 @@
     // highlight: the active symbol id (null = none). Every boost is additive and
     // guarded, so it is a no-op if the mapped element is not currently drawn.
     function drawHeatmap(L, matrix, selIdx, highlight) {
-        // Cells: amber fill, alpha = weight. A small display-only floor keeps
-        // near-zero cells faintly visible so "faint" reads differently from "empty".
+        // Cells: amber fill. Alpha is normalized to the matrix max and gamma-
+        // stretched so the contrast reads even for low weights: darkest darker,
+        // the brightest cell always at full amber. A tiny display floor keeps
+        // "faint" distinguishable from "empty".
+        let maxW = 0;
+        for (let i = 0; i < 7; i += 1) {
+            for (let j = 0; j < 7; j += 1) maxW = Math.max(maxW, matrix[i][j]);
+        }
         for (let i = 0; i < 7; i += 1) {
             for (let j = 0; j < 7; j += 1) {
                 const w = matrix[i][j];
-                const alpha = Math.max(w, 0.06);
-                ctx.fillStyle = `rgba(240, 193, 90, ${alpha})`;
+                const alpha = 0.04 + 0.96 * Math.pow(w / maxW, 1.35);
+                ctx.fillStyle = `rgba(240, 193, 90, ${alpha.toFixed(3)})`;
                 ctx.fillRect(L.gridX + j * L.cell, L.gridY + i * L.cell, L.cell, L.cell);
+            }
+        }
+
+        // 每格疊一個淡數字：亮度差之外的第二通道（色弱也讀得出深淺）。
+        const numFont = Math.round(clamp(8, L.cell * 0.2, 12));
+        ctx.font = `${numFont}px system-ui, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        for (let i = 0; i < 7; i += 1) {
+            for (let j = 0; j < 7; j += 1) {
+                const w = matrix[i][j];
+                const bright = w / maxW > 0.55;
+                ctx.fillStyle = bright ? colors.labelOnAmber : 'rgba(238, 244, 255, 0.55)';
+                ctx.fillText(w.toFixed(2), L.gridX + j * L.cell + L.cell / 2, L.gridY + i * L.cell + L.cell / 2);
             }
         }
 
@@ -258,6 +284,13 @@
             }
         }
 
+        // Hovered cell: ink outline (the plain-language tip lives in the DOM cell-tip).
+        if (hoverCell) {
+            ctx.strokeStyle = colors.ink;
+            ctx.lineWidth = 2;
+            ctx.strokeRect(L.gridX + hoverCell.j * L.cell + 1, L.gridY + hoverCell.i * L.cell + 1, L.cell - 2, L.cell - 2);
+        }
+
         // Ring the max cell in that row + print its weight.
         const row = matrix[selIdx];
         const maxJ = argmax(row);
@@ -281,22 +314,38 @@
         ctx.textBaseline = 'top';
         ctx.fillText(label, lx, ly - 12);
 
-        // Axis labels: numbers 1-7. Top = keys (amber under 'k'), left = queries
-        // (teal under 'q'); default axis colour otherwise.
-        const topColor = highlight === 'k' ? colors.k : colors.axis;
-        const leftColor = highlight === 'q' ? colors.q : colors.axis;
-        ctx.font = `${Math.round(clamp(10, L.cell * 0.24, 14))}px system-ui, sans-serif`;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'bottom';
+        // Axis labels: the actual token words on both axes (no 1-7 numbers to
+        // mentally translate). Top = keys (amber under 'k'); left = queries —
+        // the selected row's word is always q-teal to match the row outline.
+        const topColor = highlight === 'k' ? colors.k : colors.muted;
+        const axisFont = Math.round(clamp(9, L.cell * 0.22, 12));
+        ctx.font = `${axisFont}px system-ui, sans-serif`;
+        // 窄格（手機）時最長的字擺不進一格寬，就斜著寫
+        const rotateTop = ctx.measureText('because').width > L.cell - 6;
         for (let j = 0; j < 7; j += 1) {
+            const cxx = L.gridX + j * L.cell + L.cell / 2;
             ctx.fillStyle = topColor;
-            ctx.fillText(String(j + 1), L.gridX + j * L.cell + L.cell / 2, L.gridY - 4);
+            if (rotateTop) {
+                ctx.save();
+                ctx.translate(cxx, L.gridY - 4);
+                ctx.rotate(-0.6);
+                ctx.textAlign = 'left';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(TOKENS[j], 0, 0);
+                ctx.restore();
+            } else {
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                ctx.fillText(TOKENS[j], cxx, L.gridY - 4);
+            }
         }
         ctx.textAlign = 'right';
         ctx.textBaseline = 'middle';
         for (let i = 0; i < 7; i += 1) {
-            ctx.fillStyle = leftColor;
-            ctx.fillText(String(i + 1), L.gridX - 8, L.gridY + i * L.cell + L.cell / 2);
+            const isSel = i === selIdx;
+            ctx.fillStyle = isSel ? colors.q : (highlight === 'q' ? colors.q : colors.muted);
+            ctx.font = `${isSel ? '700 ' : ''}${axisFont}px system-ui, sans-serif`;
+            ctx.fillText(TOKENS[i], L.gridX - 8, L.gridY + i * L.cell + L.cell / 2);
         }
     }
 
@@ -604,6 +653,51 @@
         if (x < L.gridX || x > L.gridX + L.gridSize || y < L.gridY || y > L.gridY + L.gridSize) return;
         const row = Math.floor((y - L.gridY) / L.cell);
         if (row >= 0 && row < 7) selectToken(row);
+    });
+
+    // 熱圖白話層：滑到哪一格，浮出「誰看誰＝多少」＋白框那一格。
+    function cellAt(evt) {
+        const L = state.layout;
+        if (!L) return null;
+        const rect = canvas.getBoundingClientRect();
+        const x = evt.clientX - rect.left;
+        const y = evt.clientY - rect.top;
+        if (x < L.gridX || x > L.gridX + L.gridSize || y < L.gridY || y > L.gridY + L.gridSize) return null;
+        return {
+            i: Math.min(6, Math.max(0, Math.floor((y - L.gridY) / L.cell))),
+            j: Math.min(6, Math.max(0, Math.floor((x - L.gridX) / L.cell))),
+        };
+    }
+
+    canvas.addEventListener('pointermove', (evt) => {
+        const cell = cellAt(evt);
+        const changed = (cell === null) !== (hoverCell === null)
+            || (cell && hoverCell && (cell.i !== hoverCell.i || cell.j !== hoverCell.j));
+        hoverCell = cell;
+        if (cellTip) {
+            if (cell) {
+                const w = state.matrix[cell.i][cell.j];
+                cellTip.textContent = `「${TOKENS[cell.i]}」看「${TOKENS[cell.j]}」＝ ${w.toFixed(2)}`;
+                cellTip.hidden = false;
+                const margin = 10;
+                let left = evt.clientX + 14;
+                let top = evt.clientY - 34;
+                left = Math.min(left, window.innerWidth - cellTip.offsetWidth - margin);
+                top = Math.max(margin, top);
+                cellTip.style.left = `${left}px`;
+                cellTip.style.top = `${top}px`;
+            } else {
+                cellTip.hidden = true;
+            }
+        }
+        if (changed) render(effectiveSym());
+    });
+
+    canvas.addEventListener('pointerleave', () => {
+        if (hoverCell === null) return;
+        hoverCell = null;
+        if (cellTip) cellTip.hidden = true;
+        render(effectiveSym());
     });
 
     tInput.addEventListener('input', () => {
