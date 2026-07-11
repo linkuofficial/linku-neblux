@@ -7,6 +7,8 @@
       "node_id": "oscillations_and_waves_concept",
       "focus": "sine-wave-three-parameters",
       "status": "review",
+      "review_status": "pending_triage",
+      "reviewed_at": null,
       "depth_path": "depth/sine-wave.html",
       "public": false,
       "mapping_confidence": "medium",
@@ -24,6 +26,8 @@
       "node_id": "fourier_analysis_concept",
       "focus": "fourier-series-square-wave",
       "status": "review",
+      "review_status": "pending_triage",
+      "reviewed_at": null,
       "depth_path": "depth/fourier-series.html",
       "public": false,
       "mapping_confidence": "medium",
@@ -40,17 +44,39 @@
       "id": "s-plane",
       "node_id": "control_theory_concept",
       "focus": "s-plane-poles-step-response",
-      "status": "candidate",
-      "depth_path": null,
+      "status": "review",
+      "review_status": "pending_triage",
+      "reviewed_at": null,
+      "depth_path": "depth/s-plane.html",
       "public": false,
       "mapping_confidence": "medium",
       "qa": {
-        "csp_safe": false,
-        "reference_notes": false,
-        "formula_walkthrough": false,
-        "mobile_canvas_check": false
+        "csp_safe": true,
+        "reference_notes": true,
+        "formula_walkthrough": true,
+        "mobile_canvas_check": true
       },
-      "notes": "s-plane and pole placement are control-theory subtopics. This entry requires an explicit control-theory correctness gate before publication."
+      "notes": "M3 page 03. Opus-designed / Sonnet-built from the golden-sample template. Two resize-robust canvases: draggable-free 2nd-order poles in the s-plane (left) driving the unit-step response (right), two controls (zeta 0-1.2, wn 1-3). Math independently cross-checked (throwaway RK4 vs closed forms, max dev ~1e-12 across all four regimes; %OS zeta=0.3->37.2%, 0.5->16.3%, 0.707->4.3%; phi=arccos to stay clean at zeta=0; wn-invariance of the normalized curve confirmed by pixel comparison; settling-time 4/(zeta*wn) kept as approx, not drawn). CONTROL-THEORY CORRECTNESS GATE: this is Riku's core academic track -- stays public:false until Riku personally verifies every formula line AND passes the five-minute student test.",
+      "notes_path": "depth/s-plane-notes.md"
+    },
+    {
+      "id": "transformer",
+      "node_id": "deep_learning_concept",
+      "focus": "self-attention-one-head",
+      "status": "review",
+      "review_status": "pending_triage",
+      "reviewed_at": null,
+      "depth_path": "depth/transformer.html",
+      "public": false,
+      "mapping_confidence": "medium",
+      "qa": {
+        "csp_safe": true,
+        "reference_notes": true,
+        "formula_walkthrough": true,
+        "mobile_canvas_check": true
+      },
+      "notes": "M3 page 04 (transformer). Opus-designed / Sonnet-built from the golden-sample template. Teaches ONE self-attention head over a fixed 7-token sentence: tap a query token, see its softmax attention (7x7 heatmap + stacked weight bar + plain-language readout), default selection 'it' shows it->cat=0.83 on load. Honest scope stated on-page and in notes: Q/K/V are hand-picked ILLUSTRATIVE constants (not learned), v=k simplification, single head, no positional encoding / feed-forward / stacking / training. Math live in JS (stable softmax over score=q.k/sqrt(d), d=4): verified it->cat 0.83, hid/scared->cat 0.72, every row sums to 1; sqrt(d) demo (0.83 vs 0.99 without) shipped; optional temperature slider keeps rows summing to 1. Mapped to the broad Deep Learning node. Pending Riku five-minute test.",
+      "notes_path": "depth/transformer-notes.md"
     }
   ]
 }

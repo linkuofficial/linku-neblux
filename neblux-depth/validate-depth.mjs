@@ -13,6 +13,11 @@ const graphIds = new Set(nodes.map((node) => node.id));
 const ids = new Set();
 const nodeIds = new Set();
 const statuses = new Set(['candidate', 'draft', 'review', 'live', 'blocked']);
+// review_status is the v0.4 triage/decision lifecycle (governance metadata),
+// distinct from `status` (manifest build lifecycle). Enum extends the V03 §2 set
+// with pending_triage (initial value for existing pages) and pending_rework
+// (a triage outcome), which the reconciliation packet's docs both use.
+const reviewStatuses = new Set(['pending_triage', 'draft', 'in_review', 'approved', 'published', 'pending_rework', 'archived']);
 const confidences = new Set(['low', 'medium', 'high']);
 const qaKeys = ['csp_safe', 'reference_notes', 'formula_walkthrough', 'mobile_canvas_check'];
 const idPattern = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -68,8 +73,18 @@ for (const entry of manifest.entries || []) {
     nodeIds.add(entry.node_id);
 
     check(statuses.has(entry.status), `${label}: status is valid`);
+    check(reviewStatuses.has(entry.review_status), `${label}: review_status is valid`);
+    check(entry.reviewed_at === null || typeof entry.reviewed_at === 'string', `${label}: reviewed_at is null or string`);
     check(confidences.has(entry.mapping_confidence), `${label}: mapping_confidence is valid`);
     check(typeof entry.public === 'boolean', `${label}: public is boolean`);
+
+    // Optional v0.4 governance fields — validated only when present, so future
+    // authored pages (e.g. quant-outliers) can carry them without forcing the
+    // pre-triage pages to fabricate content.
+    if (entry.source_notes !== undefined) check(typeof entry.source_notes === 'string' && !entry.source_notes.includes('..'), `${label}: source_notes is a local path`);
+    if (entry.content_focus !== undefined) check(typeof entry.content_focus === 'string', `${label}: content_focus is a string`);
+    if (entry.tour_refs !== undefined) check(Array.isArray(entry.tour_refs) && entry.tour_refs.every((r) => typeof r === 'string'), `${label}: tour_refs is a string array`);
+    if (entry.locales !== undefined) check(Array.isArray(entry.locales) && entry.locales.every((l) => typeof l === 'string'), `${label}: locales is a string array`);
 
     for (const key of qaKeys) {
         check(typeof entry.qa?.[key] === 'boolean', `${label}: qa.${key} is boolean`);
