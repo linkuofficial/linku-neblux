@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>自注意力 — Neblux Depth</title>
+<meta name="description" content="每個字看著其他字，混出新的意思——用一顆注意力頭拆開『it』指誰是怎麼算出來的。">
+<link rel="stylesheet" href="./transformer.css">
+<script type="application/json" id="node-meta">
+{ "depth_id": "transformer", "node_id": "deep_learning_concept", "spec_version": "0.2" }
+</script>
+<script src="./transformer.js" defer></script>
+</head>
+<body>
+<header class="site-header" aria-label="Neblux depth">
+  <a class="brand" href="/app.html?node=deep_learning_concept">Neblux</a>
+  <span>Depth sample</span>
+</header>
+
+<main class="page-shell">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">自注意力 Self-Attention</p>
+    <h1 id="title">一個字的意思，是它挑著看的其他字，混出來的。</h1>
+    <p>在一個句子裡，每個字都在偷偷決定：其他的字，各要看多重。看得越重的，就越多地混進它自己新的意思裡——代名詞「it」到底指誰，就是這樣被決定的。</p>
+    <p class="takeaway">這一頁只想讓你看見一件事：一個字更新後的意思，是它對句子裡每個字分配的注意力、加權混合出來的。</p>
+    <p class="aside">這頁只拆開「一顆注意力頭、一個固定句子」這件事。用的 Q／K／V 是為了看得清楚而手挑的固定數字，不是訓練出來的。不談多頭、位置編碼、前饋層、疊很多層、也不談訓練。</p>
+  </section>
+
+  <section class="lab-surface" aria-labelledby="playground-title">
+    <div class="surface-copy">
+      <p class="section-kicker">互動主體</p>
+      <h2 id="playground-title">點一個字，看它把注意力給了誰</h2>
+    </div>
+
+    <div class="token-strip" role="group" aria-label="選擇要從哪個字看出去">
+      <button type="button" class="token-chip" data-token="The" aria-pressed="false">The</button>
+      <button type="button" class="token-chip" data-token="cat" aria-pressed="false">cat</button>
+      <button type="button" class="token-chip" data-token="hid" aria-pressed="false">hid</button>
+      <button type="button" class="token-chip" data-token="because" aria-pressed="false">because</button>
+      <button type="button" class="token-chip" data-token="it" aria-pressed="false">it</button>
+      <button type="button" class="token-chip" data-token="was" aria-pressed="false">was</button>
+      <button type="button" class="token-chip" data-token="scared" aria-pressed="false">scared</button>
+    </div>
+
+    <p class="how-to">點上面句子裡的字，看它從自己的位置望出去，注意力落在哪些字身上——最亮的那個，就是它最在意的。</p>
+
+    <p class="canvas-caption"><b>注意力熱圖</b>：每一橫列＝從某個字「看出去」，格子越亮＝看那個字越重；整列加起來剛好是 1。</p>
+    <div class="canvas-wrap">
+      <canvas id="attn-canvas" width="960" height="720" aria-label="自注意力權重熱圖"></canvas>
+    </div>
+
+    <p class="readout" id="readout" aria-live="polite">從「it」看出去，最亮的是「cat」（0.83）。</p>
+
+    <div class="controls" aria-label="自注意力參數">
+      <label class="control control-t">
+        <span><b>T</b>（實驗用）</span>
+        <output id="t-value">1.00</output>
+        <input id="t" type="range" min="0.25" max="4" value="1" step="0.05">
+      </label>
+    </div>
+  </section>
+
+  <section class="tasks" aria-labelledby="tasks-title">
+    <p class="section-kicker">觀察任務</p>
+    <h2 id="tasks-title">先讓畫面回答</h2>
+    <ol>
+      <li>點「it」：七格裡哪一格最亮？它其實在看句子裡的哪個字？</li>
+      <li>再點「scared」和「hid」：它們最亮的那一格是不是都落在同一個字上？（那個字被幾個字盯著）</li>
+      <li>看每一列：不管選哪個字，一整列的亮度加起來都一樣多——注意力被分給七個字，總和不變。</li>
+      <li>拉 T：把注意力從「死盯一個」慢慢拉成「平均看每一個」。總和有變嗎？</li>
+    </ol>
+  </section>
+
+  <section class="formal" aria-labelledby="formal-title">
+    <p class="section-kicker">形式化</p>
+    <h2 id="formal-title">剛剛的「多重要」，寫成三行</h2>
+
+    <div class="formula-block">
+      <p class="formula-line" aria-label="score i j equals q i dot k j, divided by square root of d"><span class="sym score" data-sym="score">score<sub>ij</sub></span> = (<span class="sym q" data-sym="q">q<sub>i</sub></span> · <span class="sym k" data-sym="k">k<sub>j</sub></span>) / <span class="sym sqrtd" data-sym="sqrtd">√d</span></p>
+      <p class="formula-line" aria-label="w i j equals softmax over j of score i j">
+        <span class="sym w" data-sym="w">w<sub>ij</sub></span> = <span class="sym softmax" data-sym="softmax">softmax<sub>j</sub></span>(<span class="sym score" data-sym="score">score<sub>ij</sub></span>) = exp(score<sub>ij</sub>) / Σ<sub>k</sub> exp(score<sub>ik</sub>)
+      </p>
+      <p class="formula-line" aria-label="output i equals sum over j of w i j times v j">
+        <span class="sym out" data-sym="output">output<sub>i</sub></span> = Σ<sub>j</sub> <span class="sym w" data-sym="w">w<sub>ij</sub></span> · <span class="sym v" data-sym="v">v<sub>j</sub></span>
+      </p>
+    </div>
+    <p class="sym-explainer" aria-live="polite">把游標移到算式的符號上（手機點一下），看它對應畫面上的哪個東西。</p>
+
+    <p>d = 4，√d = 2。每個符號對回剛剛畫面上的東西：</p>
+
+    <dl class="symbol-gloss">
+      <dt data-sym="q"><span class="sym q">q<sub>i</sub></span></dt>
+      <dd>你點的字在找什麼（teal，對應你選的字和熱圖裡它那一橫列）。</dd>
+      <dt data-sym="k"><span class="sym k">k<sub>j</sub></span></dt>
+      <dd>token j 提供／代表什麼（amber，熱圖上緣被看的七個字）。</dd>
+      <dt data-sym="score"><span class="sym score">score<sub>ij</sub></span></dt>
+      <dd>q<sub>i</sub>·k<sub>j</sub>／√d，還沒正規化的原始比對分數（選中那列七格的原始強度）。</dd>
+      <dt data-sym="sqrtd"><span class="sym sqrtd">√d</span></dt>
+      <dd>縮放係數＝2，讓 softmax 不要太快飽和；跟下面的 <b>T</b> 滑桿是同一件事的教學版。真實模型 d≈64 時 √d=8。</dd>
+      <dt data-sym="softmax"><span class="sym softmax">softmax</span></dt>
+      <dd>把一整列七個分數壓成加起來剛好＝1 的比例——就是下面那條長條被剛好填滿。</dd>
+      <dt data-sym="w"><span class="sym w">w<sub>ij</sub></span></dt>
+      <dd>amber，熱圖裡的一格、或長條裡的一段；看得越重就越大，每一列的和＝1。</dd>
+      <dt data-sym="v"><span class="sym v">v<sub>j</sub></span></dt>
+      <dd>token j 傳出去的內容；這個 demo 用 v=k 簡化，真實模型會學一個獨立的 W_V。</dd>
+      <dt data-sym="output"><span class="sym out">output<sub>i</sub></span></dt>
+      <dd>混合完的新向量：以 it 為例，output ≈ 0.83·v<sub>cat</sub> + 0.07·v<sub>it</sub> + …，幾乎全落在 ENTITY 軸上——it 接手了 cat 的身分。</dd>
+    </dl>
+
+    <p class="aside">拿掉 √d 的縮放，it→cat 的分數會從 0.83 衝到 <b>0.99</b>：差距被放大，softmax 幾乎整個押在同一格上（飽和）。√d 就是用來擋住這件事。</p>
+    <div class="sym-tip" role="tooltip" hidden></div>
+  </section>
+
+  <section class="links" aria-labelledby="links-title">
+    <p class="section-kicker">連結</p>
+    <h2 id="links-title">回到 Neblux 圖譜</h2>
+    <p>這頁暫時掛在較寬的「Deep Learning」節點；自注意力只是其中一個更窄的焦點，這頁只教一顆注意力頭的核心，不代表整個節點的範圍。等資料變更經過審查後才考慮拆出更精確的節點。</p>
+    <a class="graph-link" href="/app.html?node=deep_learning_concept">打開對應圖譜節點</a>
+  </section>
+</main>
+</body>
+</html>

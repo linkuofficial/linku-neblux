@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>極點位置與步階響應 — Neblux Depth</title>
+<meta name="description" content="把複數平面上一個點的位置，對應到系統被推一下之後會不會過衝、震盪。">
+<link rel="stylesheet" href="./s-plane.css">
+<script type="application/json" id="node-meta">
+{ "depth_id": "s-plane", "node_id": "control_theory_concept", "spec_version": "0.2" }
+</script>
+<script src="./s-plane.js" defer></script>
+</head>
+<body>
+<header class="site-header" aria-label="Neblux depth">
+  <a class="brand" href="/app.html?node=control_theory_concept">Neblux</a>
+  <span>Depth sample</span>
+</header>
+
+<main class="page-shell">
+  <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">極點與步階響應</p>
+    <h1 id="title">同樣推一下，有的系統穩穩停住，有的卻要來回震盪好幾下才安靜。</h1>
+    <p>決定它是哪一種的，只是一張圖上一個點的位置。把那個點在圖上挪一挪，右邊「被推一下之後的反應」就跟著換了個性——過衝、震盪、慢慢拖，全寫在這個點放在哪裡。</p>
+    <p class="takeaway">這一頁只想讓你看見一件事：一個系統會不會過衝、震盪，全由它的極點放在複數平面（左邊那張座標圖）上的哪裡決定。</p>
+  </section>
+
+  <section class="lab-surface" aria-labelledby="playground-title">
+    <div class="surface-copy">
+      <p class="section-kicker">互動主體</p>
+      <h2 id="playground-title">挪動極點，看它怎麼安定下來</h2>
+    </div>
+    <p class="how-to">拉下面的滑桿，左圖那個 ✕ 就跟著動；右圖「被推一下的反應」立刻換個性。你會看見：點放在哪，就決定它穩不穩、晃不晃。</p>
+    <div class="canvas-grid">
+      <div class="canvas-col">
+        <p class="canvas-caption"><b>極點：系統的性格座標</b>　·　✕ 就是極點，它放哪，脾氣就怎樣</p>
+        <div class="canvas-wrap splane">
+          <canvas id="splane-canvas" width="640" height="640" aria-label="s 平面極點圖"></canvas>
+        </div>
+      </div>
+      <div class="canvas-col">
+        <p class="canvas-caption"><b>步階響應：把它推一下之後，怎麼反應</b></p>
+        <div class="canvas-wrap step">
+          <canvas id="step-canvas" width="960" height="540" aria-label="步階響應曲線圖"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="controls" aria-label="極點與步階響應參數">
+      <label class="control control-zeta">
+        <span><b>ζ</b> 阻尼比</span>
+        <output id="zeta-value">0.30</output>
+        <input id="zeta" type="range" min="0" max="1.2" value="0.30" step="0.01">
+      </label>
+      <label class="control control-wn">
+        <span><b>ωn</b> 自然頻率</span>
+        <output id="wn-value">2.0 rad/s</output>
+        <input id="wn" type="range" min="1" max="3" value="2.0" step="0.1">
+      </label>
+    </div>
+  </section>
+
+  <section class="tasks" aria-labelledby="tasks-title">
+    <p class="section-kicker">觀察任務</p>
+    <h2 id="tasks-title">先讓兩張圖回答</h2>
+    <ol>
+      <li>把 ζ 從大慢慢調到小：白線從「乖乖爬到 1」變成「衝過頭，再回頭晃幾下」。第一個高峰從 ζ 多少開始冒出來？</li>
+      <li>停在會晃的地方，只動 ωn：曲線形狀一模一樣，變的只有時間軸的秒數，左圖那個點往外跑。同一種個性，換了個節拍。</li>
+      <li>把 ζ 加大越過 1：晃動不見了，但到位反而變慢、拖尾。找出「剛好不再晃」的那個點。</li>
+    </ol>
+  </section>
+
+  <section class="formal" aria-labelledby="formal-title">
+    <p class="section-kicker">形式化</p>
+    <h2 id="formal-title">剛剛看到的形狀，寫成方程式</h2>
+    <div class="formula-group">
+      <p class="formula-line">H(<span class="sym" data-sym="s">s</span>) = <span class="sym wn" data-sym="wn">ωn</span>² / ( <span class="sym" data-sym="s">s</span>² + 2·<span class="sym zeta" data-sym="zeta">ζ</span>·<span class="sym wn" data-sym="wn">ωn</span>·<span class="sym" data-sym="s">s</span> + <span class="sym wn" data-sym="wn">ωn</span>² )</p>
+      <p class="formula-line">poles (0&lt;<span class="sym zeta" data-sym="zeta">ζ</span>&lt;1)：<span class="sym" data-sym="s">s</span> = −<span class="sym zeta" data-sym="zeta">ζ</span>·<span class="sym wn" data-sym="wn">ωn</span> ± j·<span class="sym wn" data-sym="wn">ωn</span>·√(1 − <span class="sym zeta" data-sym="zeta">ζ</span>²) = −<span class="sym muted" data-sym="sigma">σ</span> ± j·<span class="sym muted" data-sym="wd">ω_d</span></p>
+      <p class="formula-line">step (underdamped)：<span class="sym ink" data-sym="y">y(t)</span> = 1 − ( <span class="sym envelope" data-sym="envelope">e^(−<span class="sym zeta">ζ</span>·<span class="sym wn">ωn</span>·t) / √(1 − <span class="sym zeta">ζ</span>²)</span> ) · sin( <span class="sym muted" data-sym="wd">ω_d</span>·t + <span class="sym muted" data-sym="phi">φ</span> )， <span class="sym muted" data-sym="wd">ω_d</span> = <span class="sym wn" data-sym="wn">ωn</span>·√(1−<span class="sym zeta" data-sym="zeta">ζ</span>²)， <span class="sym muted" data-sym="phi">φ</span> = cos⁻¹ <span class="sym zeta" data-sym="zeta">ζ</span></p>
+      <p class="formula-line">overshoot (0&lt;<span class="sym zeta" data-sym="zeta">ζ</span>&lt;1)：M_p = exp( −<span class="sym zeta" data-sym="zeta">ζ</span>·π / √(1 − <span class="sym zeta" data-sym="zeta">ζ</span>²) )</p>
+    </div>
+    <p class="sym-explainer" aria-live="polite">把游標移到算式裡的符號上（手機點一下），看它對應到畫面上的哪個東西。</p>
+
+    <p>極點放在哪裡，決定系統是哪一種個性：</p>
+    <ul class="regimes">
+      <li><span class="sym zeta">ζ</span> = 0 → <b>無阻尼</b>（極點在虛軸上，等幅震盪永不停）</li>
+      <li>0 &lt; <span class="sym zeta">ζ</span> &lt; 1 → <b>欠阻尼</b>（過衝後收斂，ζ 越小衝越高、晃越久）</li>
+      <li><span class="sym zeta">ζ</span> = 1 → <b>臨界阻尼</b>（重極點落在負實軸上，不震盪、最快到位）</li>
+      <li><span class="sym zeta">ζ</span> &gt; 1 → <b>過阻尼</b>（兩個實極點，不震盪，但被較慢的那個拖尾）</li>
+    </ul>
+
+    <p>每個符號對回剛剛畫面上的東西：</p>
+    <dl class="symbol-gloss">
+      <dt data-sym="zeta"><span class="sym zeta">ζ</span></dt>
+      <dd>ζ 阻尼比：cos θ = ζ（θ 從負實軸量起），決定過衝與震盪。</dd>
+      <dt data-sym="wn"><span class="sym wn">ωn</span></dt>
+      <dd>ωn 自然頻率：極點到原點的距離＝圓半徑，決定快慢；只縮放時間軸，不改變曲線形狀。</dd>
+      <dt data-sym="s"><span class="sym">s</span></dt>
+      <dd>s：複數頻率，s 平面上的座標；極點＝讓分母為零的位置＝畫面上的 ✕。</dd>
+      <dt data-sym="sigma"><span class="sym muted">σ = ζωn</span></dt>
+      <dd>σ = ζωn：極點實部的大小＝衰減率，點越靠左，衰減越快。</dd>
+      <dt data-sym="wd"><span class="sym muted">ω_d = ωn√(1−ζ²)</span></dt>
+      <dd>ω_d = ωn√(1−ζ²)：極點虛部＝系統實際震盪的頻率。</dd>
+      <dt data-sym="phi"><span class="sym muted">φ = cos⁻¹ ζ</span></dt>
+      <dd>φ = cos⁻¹ ζ：相位，讓 y(0) = 0 對得起來。</dd>
+      <dt data-sym="envelope"><span class="sym envelope">e^(−ζωn t)/√(1−ζ²)</span></dt>
+      <dd>e^(−ζωn t)/√(1−ζ²)：teal 虛線包絡線，震盪被關在這條線裡面，逐漸收攏。</dd>
+      <dt data-sym="y"><span class="sym ink">y(t)</span></dt>
+      <dd>y(t)：白線，追著穩態值 1 跑的實際反應。</dd>
+    </dl>
+    <div class="sym-tip" role="tooltip" hidden></div>
+  </section>
+
+  <section class="links" aria-labelledby="links-title">
+    <p class="section-kicker">連結</p>
+    <h2 id="links-title">回到 Neblux 圖譜</h2>
+    <p>這頁暫時掛在較寬的「Control Theory」節點；極點與步階響應是其中較窄的一個焦點，等資料變更經過審查後才考慮拆出更精確的節點。</p>
+    <a class="graph-link" href="/app.html?node=control_theory_concept">打開對應圖譜節點</a>
+  </section>
+</main>
+</body>
+</html>
