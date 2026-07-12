@@ -1,0 +1,65 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:5397926a562097938d7917784080ced8d333215a501ba3618411e86240278f04",
+  "layoutVersion": "wonder-language-1.0.0",
+  "membersFingerprint": "sha256:5397926a562097938d7917784080ced8d333215a501ba3618411e86240278f04",
+  "nodes": {
+    "language_and_thought_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -510,
+      "y": -73.37
+    },
+    "natural_language_processing_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 7,
+      "x": 510,
+      "y": 73.37
+    },
+    "noam_chomsky_person": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -170,
+      "y": -54.76
+    },
+    "semantics_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 0,
+      "y": 0
+    },
+    "semiotics_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 170,
+      "y": 54.76
+    },
+    "syntax_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -340,
+      "y": -83.76
+    },
+    "translation_studies_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 340,
+      "y": 83.76
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "language"
+}

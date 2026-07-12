@@ -1,0 +1,58 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:1f1e72f34ff4b34fd9e191573a854e3916f5fb3ee75a92e89181e8d029c2f7ca",
+  "layoutVersion": "wonder-ideas-that-spread-1.0.0",
+  "membersFingerprint": "sha256:1f1e72f34ff4b34fd9e191573a854e3916f5fb3ee75a92e89181e8d029c2f7ca",
+  "nodes": {
+    "chinese_invention_of_paper_event": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -425,
+      "y": -83.64
+    },
+    "development_of_internet_event": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 255,
+      "y": 73.73
+    },
+    "invention_of_printing_press_event": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -255,
+      "y": -73.73
+    },
+    "media_theory_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 425,
+      "y": 83.64
+    },
+    "printing_revolution_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -85,
+      "y": -29.15
+    },
+    "scientific_revolution_event": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 85,
+      "y": 29.15
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "ideas-that-spread"
+}

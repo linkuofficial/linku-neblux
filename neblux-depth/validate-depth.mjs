@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import { resolve } from 'path';
+import { DEPTH_QA_KEYS, DEPTH_REVIEW_STATUSES, DEPTH_STATUSES, isDepthPublishable } from './depth-contract.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const fail = [];
@@ -12,14 +13,14 @@ const nodes = Array.isArray(graphRaw) ? graphRaw : graphRaw.nodes;
 const graphIds = new Set(nodes.map((node) => node.id));
 const ids = new Set();
 const nodeIds = new Set();
-const statuses = new Set(['candidate', 'draft', 'review', 'live', 'blocked']);
+const statuses = new Set(DEPTH_STATUSES);
 // review_status is the v0.4 triage/decision lifecycle (governance metadata),
 // distinct from `status` (manifest build lifecycle). Enum extends the V03 §2 set
 // with pending_triage (initial value for existing pages) and pending_rework
 // (a triage outcome), which the reconciliation packet's docs both use.
-const reviewStatuses = new Set(['pending_triage', 'draft', 'in_review', 'approved', 'published', 'pending_rework', 'archived']);
+const reviewStatuses = new Set(DEPTH_REVIEW_STATUSES);
 const confidences = new Set(['low', 'medium', 'high']);
-const qaKeys = ['csp_safe', 'reference_notes', 'formula_walkthrough', 'mobile_canvas_check'];
+const qaKeys = DEPTH_QA_KEYS;
 const idPattern = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 function check(condition, message) {
@@ -92,6 +93,10 @@ for (const entry of manifest.entries || []) {
 
     if (entry.public) {
         for (const key of qaKeys) check(entry.qa[key] === true, `${label}: public page passed qa.${key}`);
+        check(entry.status === 'live', `${label}: public page status is live`);
+        check(entry.review_status === 'published', `${label}: public page review_status is published`);
+        check(typeof entry.depth_path === 'string' && entry.depth_path.length > 0, `${label}: public page has depth_path`);
+        check(isDepthPublishable(entry), `${label}: public page satisfies shared publication predicate`);
     }
 
     if (entry.notes_path) {

@@ -1,11 +1,12 @@
 # Neblux 方向（北極星）
 
-定案 2026-07-03。這是結論，禁止重新論證。動 Neblux 前先讀完本檔。
+初版定案 2026-07-03；Graph Atlas 方向更新 2026-07-12。這是結論，禁止在實作任務中自行重新論證。動 Neblux 前先讀完本檔。
 
 ## 定位
 
-- Wonders（驚奇之旅）= 產品核心。知識圖譜 = 它的空間。
-- 目標：兩者互為介面——旅程畫在圖上、圖是旅程的索引。
+- Wonders（驚奇之旅）＝產品核心與教育合作單位。Graph Atlas／知識圖譜＝共同空間與導航系統。Depth＝單一概念的深入觀測。
+- 目標：三者互為介面——Wonder 把主題編成可走的路，圖譜提供全局方位與自由探索，Depth 讓物理／數學專有名詞可由搜尋或節點深入。
+- 對外仍是一個 Neblux，不拆成三個彼此競爭的產品入口。
 
 ## 鐵律（違反即錯）
 
@@ -15,14 +16,44 @@
 4. 禁止遊戲化：無徽章、點數、streak、排行榜、成就彈窗。計數展示只用一行小字。
 5. 使用者文案語態遵守 `docs/brand-voice.md`。
 
-## 前端待辦（依序執行）
+## Graph Atlas 產品架構（2026-07-12 定案）
 
-1. **深連結**：`?w=<tour>&s=<step>`，步進時 `history.replaceState`。build 時為每趟 tour 生成專屬 og:image 與 stub 頁。
-2. **終局修復**：tour 結尾 outward 文字改為可點連結（概念在圖上就連 `app.html?node=`）。「下一趟」推薦附一句理由（由 tour 節點 edges 推導）。「進入圖譜」出口改為聚焦剛走完的星座，不是全圖冷啟動。
-3. **星座層**：把 19 趟 tour 的 `edges` 骨幹疊畫在 app 大圖（虛線＋accent 色，用 zoom 門檻控制顯示）。拉遠→顯示星座名、隱節點標籤；拉近→反之。點星座線/名→跳進該 tour 對應站。
-4. **雙向連結**：build 生成 `tour-index.json`（node→tour 反查）。圖譜卡片顯示「這顆星是〈光〉第 5 站」可點入 tour；tour 每站附連結回 `app.html?node=`。
-5. **落地頁**：主推一趟 featured tour；圖譜降為次要入口。footer 移除節點數統計。
-- 背景工作（不擋上列）：被 tour 觸及的 122 個節點，detail card 首行改為 hook 語態一句。管線生成＋人工審核，禁止標題黨。
+### 1. Atlas 首頁
+
+- 首頁改為宇宙地圖入口：中央是視覺尺度最大的 Main Galaxy，周圍是可辨識、可直接進入的 Wonder clusters。
+- 首頁的星系與星團 preview 主要負責方位、氣氛與跳轉，不承載完整知識操作，也不載入完整 graph。
+- Main 可以最大，但不能以亮度、CTA 或排版把 Wonders 降成裝飾；第一屏必須看得見 Wonder 名稱與入口，可保留 featured Wonder 強調位。
+- 本條取代 2026-07-03「landing 只主推 featured Wonder、圖譜降為次要入口」的舊方向。切換 production `index.html` 仍需 WP4／WP10 gates，不因本文件定案而直接上線。
+
+### 2. Main Galaxy
+
+- 承載大部分 canonical nodes，目標壓力規模約 1,000 nodes／7,000 edges；核心操作是搜尋、自由探索、focus、path、Wonder／Depth 往返。
+- Mathematics 與 Physics 是固定的雙 galactic nuclei；其大質量表示空間導航與跨域結構角色，不表示其他領域知識價值較低。
+- Canonical domain inventory 是 12 個：`MAT, PHY, CHE, BIO, MED, ENG, TEC, SOC, HUM, PHI, ART, HIS`。每個都有獨立 domain core；新增 domain 必須走 major layout migration。
+- 不採 runtime 全域引力。永久位置由 build-time stable layout、locks 與 explicit migration 管理；普通內容更新不得令全圖漂移。
+- 遠景不畫 node edges，中景只顯示有限 bridges，近景／focus 才展開局部真實 relations。禁止把 1,000／7,000 全量每幀繪製當實作方案。
+
+### 3. Wonder Cluster
+
+- 每趟 Wonder 從線性 6–7 steps 擴成約 12–30 nodes 的主題星團，但 guided spine 仍是內容與教育體驗的主體。
+- Guided 與 Explore 共用同一 Wonder source：`steps`／authored `edges` 管引導骨幹，人工核可的 context 擴充自由探索；禁止另建會漂移的平行 Wonder graph。
+- 同一 canonical node 出現在 Main 或多個 Wonders 時，以蟲洞提供同節點往返；這是 URL navigation，不是複製節點。
+- Wonder 可含有已公開 Depth 的入口，但不重複維護 Depth publication truth。
+- 不一次載入全部 Wonders 或完整 graph；各星團使用獨立 static bundle，按需載入。
+
+### 4. Depth
+
+- 暫不設 Depth 專用總入口。主要入口是搜尋引擎精確名詞頁，以及 Main／Wonder node 的「深入」操作。
+- 現階段只聚焦物理與數學專有名詞；不因 Graph Atlas 建設而擴大 Depth 內容量產。
+- Depth publication 由 `neblux-depth/depth_manifest.json` 治理；未通過 public／live／published／QA gate 的頁面不得出現在 Atlas、Wonder、sitemap 或公開索引。
+- Google 直達 Depth 後，使用者必須能返回同一 canonical node 的 Main／Wonder context。
+
+### 5. 分級載入與靜態資料
+
+- Canonical node identity 永遠來自 `data/all_nodes.json`；Wonder membership 來自 Wonder JSON；Depth publication 來自 Depth manifest。
+- Atlas 與 Wonder 只讀 build-time indices／bundles；Main 可一次載入 slim topology，描述與 sections 繼續分流。
+- API 只可增亮體驗，不能成為 Atlas、Main、Wonder、Depth 任一核心路徑的必要條件。
+- 精確契約見 `docs/GRAPH-ATLAS-DATA-CONTRACT.md`；架構裁決見 `docs/GRAPH-ATLAS-ADRS.md`；工程順序見 `docs/GRAPH-ATLAS-IMPLEMENTATION-ROADMAP.md`。
 
 ## 後端（要做就照此，禁止自行選型）
 

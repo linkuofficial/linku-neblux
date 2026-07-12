@@ -13,7 +13,17 @@
     "test:e2e": "playwright test --grep-invert @visual",
     "verify": "npm run build && npm run test:e2e",
     "test:e2e:visual": "playwright test --grep @visual",
-    "test:e2e:install": "playwright install --with-deps chromium"
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "atlas:validate": "node scripts/atlas/validate.mjs",
+    "test:atlas": "node --test tests/atlas/validators.test.mjs tests/atlas/layout.test.mjs",
+    "atlas:layout:init": "node scripts/atlas/layout/bake-main.mjs",
+    "atlas:layout:check": "node scripts/atlas/layout/check-layout.mjs",
+    "atlas:layout:add": "node scripts/atlas/layout/add-node.mjs",
+    "atlas:layout:wonder": "node scripts/atlas/layout/bake-wonder.mjs",
+    "atlas:layout:diff": "node scripts/atlas/layout/diff-layout.mjs",
+    "atlas:layout:debt": "node scripts/atlas/layout/report-layout-debt.mjs",
+    "atlas:layout:bless": "node scripts/atlas/layout/bless-layout.mjs",
+    "atlas:classify:propose": "node scripts/atlas/layout/classify-celestial.mjs"
   },
   "keywords": [
     "knowledge-graph",

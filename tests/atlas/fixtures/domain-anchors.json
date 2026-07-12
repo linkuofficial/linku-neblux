@@ -1,0 +1,6 @@
+{
+  "anchors": {
+    "MAT": { "nodeId": "core_alpha" },
+    "PHY": { "nodeId": "physics_field" }
+  }
+}

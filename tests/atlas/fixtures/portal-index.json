@@ -1,0 +1,10 @@
+{
+  "nodes": {
+    "core_alpha": {
+      "destinations": [
+        { "view": "main", "route": "/app.html?node=core_alpha" },
+        { "view": "wonder", "id": "light", "route": "/wonders.html?w=light&node=core_alpha" }
+      ]
+    }
+  }
+}
