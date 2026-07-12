@@ -13,6 +13,18 @@
 
 ## 技術債(待清理,非阻斷)
 
+### 四頁 claim-source 對照表未產出
+- 現況:`SPEC_DELTA.md` §C3 把逐條技術陳述對照一手來源的 claim-source 表訂為發布前提、一票否決,但 sine-wave/fourier-series/s-plane/transformer 四頁截至 2026-07-12 公開裁決時都只有 `*-notes.md` 的 Reference Notes 段落,沒有正式對照表(`CLAIM_SOURCE_TABLE_TEMPLATE.md` 格式)。
+- 決策:凜空 2026-07-12 裁決「先公開,補表列技術債」,四頁 manifest 已標 `public:true`/`review_status:published`。
+- 待辦:四頁依模板補齊正式 claim-source 表。
+- 觸發/約束:`depth/` 尚未接進正式 build/導覽(見 `docs/tasks/2026-07-11-depth-build-integration.md`),真正對外曝光前應優先補齊此項,因為那時才會有真實流量與信譽風險。
+
+### s-plane 逐行公式對照課本核對未完成
+- 現況:`depth/s-plane-notes.md` 與 `docs/tasks/2026-07-09-depth-layer-m2.md` 都把「凜空逐行對照自己控制理論課本核對每條公式」訂為 hard blocker(非五分鐘體感測試可取代),因為這是凜空的核心學術線。截至 2026-07-12 公開裁決時,此項尚未完成——凜空僅做過一般測試。
+- 決策:凜空 2026-07-12 明確知情接受此風險,選擇先公開。
+- 待辦:凜空找時間逐行核對 `H(s)`、極點公式、欠阻尼步階響應閉式解、`M_p`、`φ=arccos ζ` 等公式與自己課本(notes 提及 Ogata/Nise)是否一致。
+- 觸發/約束:若核對發現公式誤植,應優先處理並不待其他排程——此頁尚未真正接上線(見 build-integration brief 狀態),窗口期內修正成本最低。
+
 ### s-plane / transformer 的符號 tooltip 遷移到共用模組
 - 現況:兩頁在 SPEC_DELTA C5 規範定案前已各自 inline 實作 tooltip(邏輯寫在 `*.js`、tip 文字存 JS `GLOSS` 物件、未用 `data-tip` 契約),且與各自 canvas 高亮深度耦合。行為已符合 C5,但未走共用 `depth/sym-tooltip.js`。
 - 待辦:抽出各頁的 canvas 高亮為 `window.__nebluxSymHook`,tooltip/gloss/cross-highlight 改用共用模組,tip 文字改由 `data-tip`/`<dd>` 供給,刪除 inline 重複碼。
