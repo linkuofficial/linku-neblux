@@ -1,7 +1,16 @@
 # GO/NO-GO Memo — 旗艦:量化異常值災難(quant-outliers)
 
-狀態:已簽核——**條件式 GO**(2026-07-12,凜空授權「照建議執行」採納助理深度消化建議;有異議可隨時修訂)
+狀態:**條件已解除,GO**(2026-07-14,見下方「條件解除」段;2026-07-12 簽核歷史保留於原簽核欄,不覆寫)
 簽核欄:☑ 條件式 GO(條件:claim-source 階段核實錨點——OPT-13B 78.6%/4.8%/79.3% 三聯數字、act_scales 存在性與 MIT 授權——**全數通過後前端實作才動工**;任一核實不過即回本 memo 重審)日期:2026-07-12
+
+## 條件解除(2026-07-14)
+
+凜空授權助理直接 WebFetch 一手來源核實(範圍限釘死的單點事實,非開放式競查;例外記於 memory `gemini-deep-research-delegation`),核實結果全文見 `depth/files/QUANT_OUTLIERS_ANCHOR_VERIFY_BRIEF.md`。
+
+- **V1(OPT-13B 三聯數字)VERIFIED**:`smoothquant_opt_demo.ipynb` 逐字核對 FP16 0.786 / naive W8A8 0.048 / SmoothQuant W8A8 0.793;模型確為 `facebook/opt-13b`;naive 為 per-tensor absmax(=對稱)。
+- **V2(act_scales 存在性+MIT 授權)VERIFIED**:`opt-13b.pt` 存在於官方 HuggingFace repo `mit-han-lab/smoothquant-scales`;`smoothquant` repo LICENSE = MIT。**更正**:act_scales 是從 HF 下載或 `generate_act_scales.py` 自行生成,repo 內 `act_scales/` 目錄本身只有 README,無 in-tree `.pt`——動工時 claim-source 表需照此寫,不寫「目錄內附檔」。
+- 兩項皆為簽核欄指名的兩個核實條件,雙雙通過。**凜空 2026-07-14 指示「清 GO 條件」**,本 memo 狀態由條件式 GO 轉為 GO,前端可動工(仍先過紙上原型,見 `docs/tasks/2026-07-14-quant-outliers-paper-prototype.md`)。
+- 額外核了 §3.5 點 4 指名的最弱引用(V3/V4)與 §3.5 點 5 甲/乙機制的雙方錨點(V5–V7),供紙上原型直接取用,結果與細節見驗證 brief,不重複貼於此。
 
 ---
 
