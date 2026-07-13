@@ -424,7 +424,7 @@ production 仍使用舊 `app.html`，直到切換 brief 核可。
 - Main Galaxy
 - Light 或相關 Wonder cluster（只有內容核可時才露出）
 
-WP8 不取代既有 `neblux-depth/PLAN.md` Phase A 或 `docs/tasks/2026-07-11-depth-build-integration.md`。四頁 triage、內容正確性、理解測試與正式 build publication gate 必須先完成；Graph Atlas 只消費核可後的 published index。
+WP8 不取代既有 `neblux-depth/PLAN.md` Phase A 或 `docs/tasks/2026-07-11-depth-build-integration.md`。四頁 triage、內容正確性與理解測試仍是前置；正式 build publication gate 已完成接線與驗證，Depth 頁已納入 build／sitemap（尚未正式部署，亦無站內導覽入口）。Graph Atlas 只消費核可後的 published index。
 
 ### 驗收
 

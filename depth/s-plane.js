@@ -177,10 +177,13 @@
     function splaneLayout() {
         const w = splaneState.width;
         const h = splaneState.height;
-        const PAD = 10;
-        const reMin = -6.5, reMax = 1.5, imMin = -4, imMax = 4;
-        const spanRe = reMax - reMin; // 8
-        const spanIm = imMax - imMin; // 8
+        const PAD = 16;
+        // Keep equal aspect while leaving room for the farthest overdamped pole.
+        // The previous -6.5..1.5 range pushed the imaginary axis to 81% width,
+        // clipping the ωn circle and making the plot look visibly skewed.
+        const reMin = -6, reMax = 4, imMin = -5, imMax = 5;
+        const spanRe = reMax - reMin; // 10
+        const spanIm = imMax - imMin; // 10
         const availW = Math.max(1, w - PAD * 2);
         const availH = Math.max(1, h - PAD * 2);
         const scale = Math.min(availW / spanRe, availH / spanIm);

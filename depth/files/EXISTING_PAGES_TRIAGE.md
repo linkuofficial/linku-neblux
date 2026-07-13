@@ -5,7 +5,7 @@
 
 **四頁裁決已於 2026-07-12 完成,全數「公開」。manifest 已同步更新(`status:live`／`review_status:published`／`public:true`)。Phase A 阻斷項解除,可進 Phase B。**
 
-> 注:manifest 的 `public:true` 目前只是治理狀態旗標。`depth/` 尚未接進 `npm run build`/sitemap/正式導覽(見 `docs/tasks/2026-07-11-depth-build-integration.md`,狀態仍 draft、屬禁區,需另走交叉審查才能真正把頁面接上線)。也就是說裁決生效,但一般訪客目前還無法從 Neblux 網站點到這四頁。
+> 注：manifest 的 `public:true` 是發布治理旗標。Depth build integration 已接上 `npm run build`、sitemap 與同源 `/depth/{id}.html` 產物，並通過 build-contract／E2E 守門；目前工作樹仍待凜空裁決與正式部署，且尚未加入首頁／圖譜的正式導覽入口。正式部署與搜尋引擎提交前，claim-source 技術債仍應依 BACKLOG 處理。
 
 ---
 
@@ -16,7 +16,7 @@
 | 檢核項 | 狀態 | 備註 |
 |---|---|---|
 | 凜空內容複核 | ☑ 已完成 | 2026-07-12 |
-| claim-source 表 | ☐ 無 | 公開前必補 → 已知技術債(見 BACKLOG.md) |
+| claim-source 表 | ☐ 無 | 公開裁決已接受技術債；正式流量擴大前補齊(見 BACKLOG.md) |
 | 語域符合可及性分層(第一層零先備) | ☑ 是 | 內容範圍極小(單一正弦三參數),語域風險低 |
 | no-JS 完整可讀 | ☑ 是 | |
 | 無障礙快檢(鍵盤/對比/reduced-motion) | ☑ 過 | |
@@ -25,7 +25,7 @@
 
 **裁決:☑ 公開**
 理由:一般測試通過,範圍小、風險低。
-後續動作:claim-source 表列技術債補齊;等 build-integration brief 核可後才真正上線。
+後續動作:claim-source 表列技術債補齊;build integration 已完成，正式部署／導覽入口另待裁決。
 
 ---
 
@@ -34,7 +34,7 @@
 | 檢核項 | 狀態 | 備註 |
 |---|---|---|
 | 凜空內容複核 | ☑ 已完成 | 2026-07-12 |
-| claim-source 表 | ☐ 無 | 公開前必補 → 已知技術債(見 BACKLOG.md) |
+| claim-source 表 | ☐ 無 | 公開裁決已接受技術債；正式流量擴大前補齊(見 BACKLOG.md) |
 | 語域符合可及性分層(第一層零先備) | ☑ 是 | |
 | no-JS 完整可讀 | ☑ 是 | |
 | 無障礙快檢(鍵盤/對比/reduced-motion) | ☑ 過 | |
@@ -43,7 +43,7 @@
 
 **裁決:☑ 公開**
 理由:一般測試通過。
-後續動作:claim-source 表列技術債補齊;等 build-integration brief 核可後才真正上線。
+後續動作:claim-source 表列技術債補齊;build integration 已完成，正式部署／導覽入口另待裁決。
 
 ---
 
@@ -52,7 +52,7 @@
 | 檢核項 | 狀態 | 備註 |
 |---|---|---|
 | 凜空內容複核 | ☑ 已完成(一般測試) ☐ 逐行公式對照課本(notes 標註的 hard blocker) | **逐行對照未做**,凜空知情接受此風險 |
-| claim-source 表 | ☐ 無 | 公開前必補 → 已知技術債(見 BACKLOG.md) |
+| claim-source 表 | ☐ 無 | 公開裁決已接受技術債；正式流量擴大前補齊(見 BACKLOG.md) |
 | 語域符合可及性分層(第一層零先備) | ☑ 是 | |
 | no-JS 完整可讀 | ☑ 是 | |
 | 無障礙快檢(鍵盤/對比/reduced-motion) | ☑ 過 | |
@@ -62,7 +62,7 @@
 **裁決:☑ 公開**
 理由:凜空判斷可先上線,承認較複雜、後續會再修。
 **已知風險(明記,非疏漏)**:此頁 notes(`depth/s-plane-notes.md`)與 M2 brief(`docs/tasks/2026-07-09-depth-layer-m2.md`)都把「凜空逐行對照自己控制理論課本核對每條公式」訂為 hard blocker,非五分鐘體感測試可取代。這項尚未完成即公開,是本次裁決明確接受的風險,列入 BACKLOG.md。若日後核對發現公式誤植,應優先處理(此頁是凜空核心學術線)。
-後續動作:凜空找時間逐行核對公式;claim-source 表補齊;等 build-integration brief 核可後才真正上線。
+後續動作:凜空找時間逐行核對公式;claim-source 表補齊;build integration 已完成，正式部署／導覽入口另待裁決。
 
 ---
 
@@ -71,7 +71,7 @@
 | 檢核項 | 狀態 | 備註 |
 |---|---|---|
 | 凜空內容複核 | ☑ 已完成 | 2026-07-12 |
-| claim-source 表 | ☐ 無 | 公開前必補 → 已知技術債(見 BACKLOG.md) |
+| claim-source 表 | ☐ 無 | 公開裁決已接受技術債；正式流量擴大前補齊(見 BACKLOG.md) |
 | 語域符合可及性分層(第一層零先備) | ☑ 是 | 簡化(v=k、常數 Q/K/V)於頁內誠實揭露 |
 | no-JS 完整可讀 | ☑ 是 | |
 | 無障礙快檢(鍵盤/對比/reduced-motion) | ☑ 過 | |
@@ -80,7 +80,7 @@
 
 **裁決:☑ 公開**
 理由:凜空判斷可先上線,承認較複雜、後續會再修。內容範圍誠實揭露(單頭、v=k、無位置編碼等),數學自檢通過。
-後續動作:claim-source 表補齊;等 build-integration brief 核可後才真正上線。範圍控制事故另見下節。
+後續動作:claim-source 表補齊;build integration 已完成，正式部署／導覽入口另待裁決。範圍控制事故另見下節。
 
 ---
 

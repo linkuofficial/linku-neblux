@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<title>弦波與三參數 — Neblux Depth</title>
-<meta name="description" content="用振幅、頻率與相位三個旋鈕，看見一顆弦波如何被完整決定。">
+<title>波的四個參數 — Neblux Depth</title>
+<meta name="description" content="用振幅、頻率、波速與相位看見行進波，並連起週期與波長。">
 <link rel="stylesheet" href="./sine-wave.css?v=2">
 <script type="application/json" id="node-meta">
 { "depth_id": "sine-wave", "node_id": "oscillations_and_waves_concept", "spec_version": "0.2" }
@@ -21,30 +21,31 @@
 
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
-    <h1 id="title">弦波 <span class="topic-en">Sine Wave</span></h1>
-    <p class="deck">大小、快慢、起點三個數字，就能決定一整顆波。</p>
+    <h1 id="title">波 <span class="topic-en">Sine Wave</span></h1>
+    <p class="deck">大小、振動快慢、傳播速度與起點，決定波怎麼前進。</p>
     <figure class="metaphor">
-      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="像調音響：音量、音高、進拍時間三個旋鈕">
+      <svg class="metaphor-art" viewBox="0 0 340 110" role="img" aria-label="波峰、波谷、振幅與一個完整週期">
         <line class="m-axis" x1="12" y1="42" x2="328" y2="42"/>
         <path class="m-wave" d="M20 42 Q35 8 50 42 T80 42 T110 42 T140 42 T170 42 T200 42 T230 42 T260 42 T290 42 T320 42"/>
         <line class="m-amp" x1="35" y1="42" x2="35" y2="25"/>
         <circle class="m-amp-dot" cx="35" cy="25" r="3.5"/>
-        <line class="m-phase" x1="110" y1="12" x2="110" y2="72"/>
-        <g class="m-freq"><line x1="20" y1="60" x2="20" y2="68"/><line x1="80" y1="60" x2="80" y2="68"/><line x1="140" y1="60" x2="140" y2="68"/><line x1="200" y1="60" x2="200" y2="68"/><line x1="260" y1="60" x2="260" y2="68"/><line x1="320" y1="60" x2="320" y2="68"/></g>
+        <text class="m-label" x="35" y="12" text-anchor="middle">波峰</text>
+        <text class="m-label" x="125" y="88" text-anchor="middle">波谷</text>
+        <g class="m-period"><line x1="20" y1="102" x2="80" y2="102"/><line x1="20" y1="97" x2="20" y2="107"/><line x1="80" y1="97" x2="80" y2="107"/><text x="50" y="96" text-anchor="middle">T</text></g>
       </svg>
-      <figcaption>像調音響：<span class="sym amp">A</span> 是音量、<span class="sym freq">f</span> 是音高、<span class="sym phase">φ</span> 是晚多少才進拍。</figcaption>
+      <figcaption>波峰與波谷反覆出現；<span class="sym amp">A</span> 是高度，<span class="sym freq">f</span> 是每秒重複次數，週期 <span class="sym freq">T = 1/f</span>。</figcaption>
     </figure>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
       <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
-      <h2 id="playground-title">一條正在流動的弦波</h2>
+      <h2 id="playground-title">調四個量，看波形怎麼前進</h2>
     </div>
     <div class="canvas-wrap">
-      <canvas id="wave-canvas" width="960" height="480" aria-label="弦波畫布"></canvas>
+      <canvas id="wave-canvas" width="960" height="480" aria-label="空間中向右傳播的波"></canvas>
     </div>
-    <div class="controls" aria-label="弦波參數">
+    <div class="controls" aria-label="波的參數">
       <label class="control control-amp">
         <span><i class="chip chip-amp" aria-hidden="true"></i><b>A</b> 振幅</span>
         <output id="amp-value">1.00</output>
@@ -52,11 +53,16 @@
       </label>
       <label class="control control-freq">
         <span><i class="chip chip-freq" aria-hidden="true"></i><b>f</b> 頻率</span>
-        <output id="freq-value">1.00 Hz</output>
+        <output id="freq-value">1.00 Hz · T = 1.00 s</output>
         <input id="freq" type="range" min="0.25" max="4" value="1" step="0.01">
       </label>
+      <label class="control control-speed">
+        <span><i class="chip chip-speed" aria-hidden="true"></i><b>v</b> 波速</span>
+        <output id="speed-value">8.0 m/s · λ = 8.00 m</output>
+        <input id="speed" type="range" min="4" max="16" value="8" step="0.1">
+      </label>
       <label class="control control-phase">
-        <span><i class="chip chip-phase" aria-hidden="true"></i><b>φ</b> 相位</span>
+        <span><i class="chip chip-phase" aria-hidden="true"></i><b>φ</b> 相位 <em>進階</em></span>
         <output id="phase-value">0.00π</output>
         <input id="phase" type="range" min="-3.14159" max="3.14159" value="0" step="0.01">
       </label>
@@ -68,40 +74,45 @@
     <h2 id="tasks-title">先讓畫面回答</h2>
     <ol>
       <li>把振幅拉低，再拉高；注意中心線沒有搬家，但波峰離中心的距離變了。</li>
-      <li>把頻率加倍；數一數同一個畫面裡塞進幾個完整週期。</li>
-      <li>只動相位；波的形狀沒有換，只是整條沿著時間方向挪動。</li>
+      <li>固定波速，把頻率加倍；週期 T 會減半，同一段空間裡也會塞進更多波。</li>
+      <li>固定頻率，只調波速；波前進得更快時，波峰間距 λ 也會拉長。</li>
+      <li>只動進階的相位；波峰與波谷的高度不變，只是整條沿空間方向平移。</li>
     </ol>
   </section>
 
   <section class="usecases" aria-labelledby="usecases-title">
     <p class="section-kicker"><span class="step-no">3</span>哪裡用得到</p>
-    <h2 id="usecases-title">你每天都在轉這三個旋鈕</h2>
+    <h2 id="usecases-title">這四個量就在日常裡</h2>
     <ul class="usecase-list">
-      <li><b>調音量</b>——手機音量鍵改的就是聲波的 <span class="sym amp">A</span>：波形不變，波峰變高。</li>
-      <li><b>唱高音</b>——音高就是 <span class="sym freq">f</span>：每秒振動次數越多聽起來越高，標準音 A4 = 440 Hz。</li>
-      <li><b>家裡的插座</b>——台灣市電是 60 Hz 的弦波，這個數字說的就是 <span class="sym freq">f</span>。</li>
-      <li><b>降噪耳機</b>——把外界聲音反相（<span class="sym phase">φ</span> 移半圈）再疊回去，正負抵消，世界就安靜了。</li>
+      <li><b>調音量</b>——在理想化的波形模型裡，振幅 <span class="sym amp">A</span> 變大，波峰與波谷離中心線更遠。</li>
+      <li><b>唱高音</b>——頻率 <span class="sym freq">f</span> 越高、週期越短；標準音 A4 的頻率是 440 Hz。</li>
+      <li><b>家裡的插座</b>——台灣市電的標稱頻率是 60 Hz，換成週期約為 16.7 ms。</li>
+      <li><b>看水波往外跑</b>——頻率不變時，波傳得越快，相鄰波峰的距離 λ 越長；三者由 <span class="sym speed">v = fλ</span> 連在一起。</li>
+      <li><b>比較兩個波</b>——相位 <span class="sym phase">φ</span> 可以描述誰先、誰後；只有一個波時通常不必先把它當主角。</li>
     </ul>
   </section>
 
   <section class="formal" aria-labelledby="formal-title">
     <p class="section-kicker"><span class="step-no">4</span>寫成式子</p>
     <details class="formal-details">
-      <summary><h2 id="formal-title">剛剛玩的三個旋鈕，寫成一行式子</h2><span class="summary-hint">玩過了？打開來看</span></summary>
+      <summary><h2 id="formal-title">把行進波寫成式子</h2><span class="summary-hint">玩過了？打開來看</span></summary>
       <div class="details-body">
-        <p class="formula" aria-label="y of t equals A times sine of two pi f t plus phi">
-          y(t) = <span class="sym amp" data-sym="amp" data-tip="A 振幅：波峰離中心線的高度，就是「振幅」那支旋鈕。">A</span> · sin(2π<span class="sym freq" data-sym="freq" data-tip="f 頻率：每秒走過幾個完整週期，就是「頻率」那支旋鈕。">f</span>t + <span class="sym phase" data-sym="phase" data-tip="φ 相位：t=0 時起步的角度，就是「相位」那支旋鈕。">φ</span>)
+        <p class="formula" aria-label="y of x and t equals A times sine of two pi f times x over v minus t plus phi">
+          y(x,t) = <span class="sym amp" data-sym="amp" data-tip="A 振幅：中心線到波峰或波谷的距離。">A</span> · sin[2π<span class="sym freq" data-sym="freq" data-tip="f 頻率：每秒完成幾個週期；T = 1/f。">f</span>(x/<span class="sym speed" data-sym="speed" data-tip="v 波速：波形在空間中的傳播速度；λ = v/f。">v</span> − t) + <span class="sym phase" data-sym="phase" data-tip="φ 相位：波在週期中的起始位置。">φ</span>]
         </p>
         <p class="sym-explainer" aria-live="polite">把游標移到算式的符號上（手機點一下），看它對應到哪一支旋鈕。</p>
-        <p>式子沒有多寫任何東西：畫面裡能改的，剛好就是這三個量。</p>
+        <p>畫面裡能改的是 A、f、v、φ；週期與波長則由 <span class="formula-inline">T = 1/f</span>、<span class="formula-inline">λ = v/f</span> 算出來。</p>
         <dl class="symbol-gloss">
           <dt data-sym="amp"><span class="sym amp">A</span></dt>
           <dd>振幅：波峰離中心線的高度。只改它，中心線不搬家，波峰離中心的距離變了。</dd>
           <dt data-sym="freq"><span class="sym freq">f</span></dt>
-          <dd>頻率：每秒走過幾個完整週期。加倍，同一個畫面裡就塞進兩倍的週期。</dd>
+          <dd>頻率：每秒完成幾個週期。固定波速時，頻率加倍會讓週期與波長都減半。</dd>
+          <dt data-sym="speed"><span class="sym speed">v</span></dt>
+          <dd>波速：波形在空間中前進的速度。固定頻率時，速度越快，波長 λ 越長。</dd>
           <dt data-sym="phase"><span class="sym phase">φ</span></dt>
-          <dd>相位：一開始站在圓周上的哪個角度。只動它，形狀不換，整條沿時間方向平移。</dd>
+          <dd>相位：波在週期中的起始位置。只改它，振幅、頻率與波長不變，整條沿空間方向平移。</dd>
         </dl>
+        <p class="scope-note"><b>怎麼讀這張圖</b>：橫軸是一段固定的空間。先用波峰、波谷認識振幅，再用 <span class="formula-inline">T = 1/f</span> 連起週期與頻率、用 <span class="formula-inline">λ = v/f</span> 連起波速與波長；相位留到需要比較兩個波的先後時使用。</p>
       </div>
     </details>
     <div class="sym-tip" role="tooltip" hidden></div>
@@ -110,7 +121,7 @@
   <section class="links" aria-labelledby="links-title">
     <p class="section-kicker">連結</p>
     <h2 id="links-title">回到 Neblux 圖譜</h2>
-    <p>這頁暫時掛在較寬的「Oscillations and Waves」節點；等資料變更經過審查後，才考慮新增更精確的弦波節點。</p>
+    <p>這頁暫時掛在較寬的「Oscillations and Waves」節點；等資料變更經過審查後，才考慮新增更精確的波形節點。</p>
     <a class="graph-link" href="/app.html?node=oscillations_and_waves_concept">打開對應圖譜節點</a>
   </section>
 </main>

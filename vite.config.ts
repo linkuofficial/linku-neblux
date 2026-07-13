@@ -4,6 +4,7 @@ import { pathToFileURL } from 'url';
 import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync } from 'fs';
 import { buildTourIndex } from './scripts/build_tour_index.mjs';
 import { buildStaticHtml } from './scripts/build_static_html.mjs';
+import { publishDepthPages } from './scripts/build_depth_pages.mjs';
 
 function copyDataPlugin() {
     return {
@@ -110,12 +111,22 @@ function copyDataPlugin() {
 // Generate the static machine-readable layer (concept pages ×3 langs, trust
 // pages, sitemap, graph.json) into frontend/public so the dev server serves them
 // and build copies them into dist/. Outputs are gitignored build artifacts.
+// Published Depth pages are copied first (publication gated by
+// neblux-depth/depth_manifest.json) so the sitemap can include their URLs.
 function staticHtmlPlugin() {
     return {
         name: 'static-html',
         buildStart() {
+            let depthUrls: string[] = [];
             try {
-                buildStaticHtml(resolve(__dirname, 'data'), resolve(__dirname, 'frontend/public'));
+                depthUrls = publishDepthPages(__dirname, resolve(__dirname, 'frontend/public')).urls;
+            } catch (err) {
+                // A published Depth page with missing/invalid files is a broken
+                // deploy, not a warning. Unpublished pages are simply not copied.
+                this.error(`depth pages failed to publish: ${(err as Error).message}`);
+            }
+            try {
+                buildStaticHtml(resolve(__dirname, 'data'), resolve(__dirname, 'frontend/public'), { extraSitemapUrls: depthUrls });
             } catch (err) {
                 // Concept pages / sitemap / graph.json are product foundation — a
                 // silently missing static layer is a broken deploy, not a warning.
