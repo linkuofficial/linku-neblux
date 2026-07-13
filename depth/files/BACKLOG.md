@@ -25,10 +25,11 @@
 - 待辦:凜空就 `depth/s-plane-claim-sources.md` 逐列核對——每條公式已對到可線上取得的一手來源式號（MIT 2.14 handout Eq. (13)–(15)、Hallauer Eq. (9.29)/(9.36)/(9.37)/(9.40) 等）,附獨立數值驗證（`node depth/s-plane-claim-check.mjs`,24 檢查全過）與中英術語對照表;逐列標 verified/rejected 即同時關閉本債與上一項的 s-plane 份額。
 - 觸發/約束:若核對發現公式誤植,應優先處理並不待其他排程——此頁已接進 build，但正式部署前仍是修正成本最低的窗口。
 
-### s-plane / transformer 的符號 tooltip 遷移到共用模組
+### s-plane / transformer 的符號 tooltip 遷移到共用模組（已清）
 - 現況:兩頁在 SPEC_DELTA C5 規範定案前已各自 inline 實作 tooltip(邏輯寫在 `*.js`、tip 文字存 JS `GLOSS` 物件、未用 `data-tip` 契約),且與各自 canvas 高亮深度耦合。行為已符合 C5,但未走共用 `depth/sym-tooltip.js`。
-- 待辦:抽出各頁的 canvas 高亮為 `window.__nebluxSymHook`,tooltip/gloss/cross-highlight 改用共用模組,tip 文字改由 `data-tip`/`<dd>` 供給,刪除 inline 重複碼。
-- 觸發/約束:兩頁目前皆為 `public:true`／`review_status:published`；s-plane 數學複核仍待凜空完成。遷移時逐頁瀏覽器驗證，不與數學複核同批進行以免混淆。收益:消除 tooltip 實作漂移，讓 C5 規範零例外。
+- 已做(2026-07-13):兩頁改接 `depth/sym-tooltip.js`——`s-plane.js`/`transformer.js` 刪除 inline 的 GLOSS 物件、showTip/hideTip、hover/focus/pin 追蹤與 initSymInteractivity,改由頁面專屬 `window.__nebluxSymHook` 回呼只做「canvas 高亮＋滑桿/讀數 is-cued」。s-plane 的 tip 文字與既有 `<dd>` 逐字相同,直接吃 dd fallback,HTML 未新增 `data-tip`;transformer 的舊 GLOSS 文字與 `<dd>` 不同(dd 是另一份較長說明),故在 `transformer.html` 的公式 `<span data-sym>` 上逐一補上 `data-tip`,內容為舊 GLOSS 文字逐字複製,以保留原本 tooltip 用字不變。純外掛遷移,未動任何公式/係數/物理或數學說明文字。`s-plane.js`/`transformer.js` 版本號 `?v=2→3`,並掛上 `sym-tooltip.js?v=2`。
+- 驗證:`npm run verify` 全過(build + depth-build 4/4 + E2E 72/72,含四頁 canvas-boot 桌機/手機 gate);瀏覽器實測(`npm run dev`)兩頁逐一點開詞彙表按鈕,確認浮動 tooltip 文字與舊版逐字相同、`aria-pressed`/`is-active` 正確切換、canvas 高亮與對應滑桿/讀數的 `is-cued` 樣式仍如常觸發。
+- 觸發/約束:兩頁目前皆為 `public:true`／`review_status:published`；s-plane 數學複核仍待凜空完成——本次遷移只動 tooltip 管線,不觸及任何公式/係數/canvas 數學,不影響複核範圍。
 
 ### sine-wave 繁中教材本地化（本輪已處理）
 - 決定:頁面可見文案使用較符合台灣教材語感的「波」；保留英文 `Sine Wave` 供精確對照。

@@ -10,7 +10,8 @@
 <script type="application/json" id="node-meta">
 { "depth_id": "transformer", "node_id": "deep_learning_concept", "spec_version": "0.2" }
 </script>
-<script src="./transformer.js?v=2" defer></script>
+<script src="./transformer.js?v=3" defer></script>
+<script src="./sym-tooltip.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -157,12 +158,12 @@
       <div class="details-body">
 
     <div class="formula-block">
-      <p class="formula-line" aria-label="score i j equals q i dot k j, divided by square root of d"><span class="sym score" data-sym="score">score<sub>ij</sub></span> = (<span class="sym q" data-sym="q">q<sub>i</sub></span> · <span class="sym k" data-sym="k">k<sub>j</sub></span>) / <span class="sym sqrtd" data-sym="sqrtd">√d</span></p>
+      <p class="formula-line" aria-label="score i j equals q i dot k j, divided by square root of d"><span class="sym score" data-sym="score" data-tip="score_ij ＝ q_i·k_j／√d：還沒正規化的原始比對分數，就是選中那列七格的原始強度。">score<sub>ij</sub></span> = (<span class="sym q" data-sym="q" data-tip="q_i 查詢向量：你點的那個字在「找什麼」。對應你選的字（teal）和熱圖裡它那一橫列。">q<sub>i</sub></span> · <span class="sym k" data-sym="k" data-tip="k_j 鍵向量：每個字提供什麼、代表什麼。對應熱圖上緣那排、被看的七個字（amber）。">k<sub>j</sub></span>) / <span class="sym sqrtd" data-sym="sqrtd" data-tip="√d ＝ 2：把分數縮小的縮放係數，擋住 softmax 太快押在同一格上（拿掉它 it→cat 會從 0.83 衝到 0.99）；跟下面的 T 滑桿是同一件事的教學版。">√d</span></p>
       <p class="formula-line" aria-label="w i j equals softmax over j of score i j">
-        <span class="sym w" data-sym="w">w<sub>ij</sub></span> = <span class="sym softmax" data-sym="softmax">softmax<sub>j</sub></span>(<span class="sym score" data-sym="score">score<sub>ij</sub></span>) = exp(score<sub>ij</sub>) / Σ<sub>k</sub> exp(score<sub>ik</sub>)
+        <span class="sym w" data-sym="w" data-tip="w_ij 注意力權重：熱圖裡的一格、長條裡的一段；看得越重就越大，每一列的和＝1。">w<sub>ij</sub></span> = <span class="sym softmax" data-sym="softmax" data-tip="softmax：把一整列七個分數壓成加起來剛好等於 1 的比例——就是下面那條長條被剛好填滿。">softmax<sub>j</sub></span>(<span class="sym score" data-sym="score" data-tip="score_ij ＝ q_i·k_j／√d：還沒正規化的原始比對分數，就是選中那列七格的原始強度。">score<sub>ij</sub></span>) = exp(score<sub>ij</sub>) / Σ<sub>k</sub> exp(score<sub>ik</sub>)
       </p>
       <p class="formula-line" aria-label="output i equals sum over j of w i j times v j">
-        <span class="sym out" data-sym="output">output<sub>i</sub></span> = Σ<sub>j</sub> <span class="sym w" data-sym="w">w<sub>ij</sub></span> · <span class="sym v" data-sym="v">v<sub>j</sub></span>
+        <span class="sym out" data-sym="output" data-tip="output_i：七個字的值照權重混合後、那個字更新後的新意思——就是下面那條長條，也是那句白話讀數。">output<sub>i</sub></span> = Σ<sub>j</sub> <span class="sym w" data-sym="w" data-tip="w_ij 注意力權重：熱圖裡的一格、長條裡的一段；看得越重就越大，每一列的和＝1。">w<sub>ij</sub></span> · <span class="sym v" data-sym="v" data-tip="v_j 值向量：每個字真正送出去、被混進來的內容（這個 demo 用 v=k 簡化）；長條裡的每一段就是它們。">v<sub>j</sub></span>
       </p>
     </div>
     <p class="sym-explainer" aria-live="polite">把游標移到算式的符號上（手機點一下），看它對應畫面上的哪個東西。</p>

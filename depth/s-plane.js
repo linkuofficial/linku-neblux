@@ -11,19 +11,6 @@
         wn: '#f0c15a',
     };
 
-    // 每個符號的白話說明——同時餵給 aria-label、浮動 tooltip、固定說明列。
-    const GLOSS = {
-        zeta: 'ζ 阻尼比：cos θ = ζ（θ 從負實軸量起），決定過衝與震盪。',
-        wn: 'ωn 自然頻率：極點到原點的距離＝圓半徑，決定快慢；只縮放時間軸，不改變曲線形狀。',
-        sigma: 'σ = ζωn：極點實部的大小＝衰減率，點越靠左，衰減越快。',
-        wd: 'ω_d = ωn√(1−ζ²)：極點虛部＝系統實際震盪的頻率。',
-        phi: 'φ = cos⁻¹ ζ：相位，讓 y(0) = 0 對得起來。',
-        s: 's：複數頻率，s 平面上的座標；極點＝讓分母為零的位置＝畫面上的 ✕。',
-        envelope: 'e^(−ζωn t)/√(1−ζ²)：teal 虛線包絡線，震盪被關在這條線裡面，逐漸收攏。',
-        y: 'y(t)：白線，追著穩態值 1 跑的實際反應。',
-    };
-    const DEFAULT_HINT = '把游標移到算式裡的符號上（手機點一下），看它對應到畫面上的哪個東西。';
-
     const zetaInput = document.getElementById('zeta');
     const zetaValue = document.getElementById('zeta-value');
     const wnInput = document.getElementById('wn');
@@ -51,44 +38,25 @@
         pulseT0 = performance.now();
         // 立即用 pulse=1 畫一幀：拉桿當下就看得到「點與線同拍」，不等下一個 rAF
         pulse = 1;
-        renderSplane(effectiveSym());
-        renderStep(effectiveSym());
+        renderSplane(activeSym);
+        renderStep(activeSym);
         if (pulseRaf !== null) return;
         const loop = (now) => {
             pulse = Math.max(0, 1 - (now - pulseT0) / 600);
-            renderSplane(effectiveSym());
-            renderStep(effectiveSym());
+            renderSplane(activeSym);
+            renderStep(activeSym);
             if (pulse > 0) pulseRaf = requestAnimationFrame(loop);
             else pulseRaf = null;
         };
         pulseRaf = requestAnimationFrame(loop);
     }
 
-    // ---------- Part 3：公式符號 <-> 畫面的雙向連動 ----------
-    const formalSection = document.querySelector('.formal');
-    const symExplainer = document.querySelector('.sym-explainer');
-    const symTip = document.querySelector('.sym-tip');
+    // ---------- Part 3：公式符號 <-> 畫面的雙向連動由共用 depth/sym-tooltip.js 驅動 ----------
+    // canvas 高亮／滑桿提示透過 window.__nebluxSymHook 接回；tip 文字改由 HTML
+    // 的 data-tip／<dd> 供給（見 s-plane.html .symbol-gloss，文字與舊 GLOSS 逐字相同）。
     const controlZeta = document.querySelector('.control-zeta');
     const controlWn = document.querySelector('.control-wn');
-    const symEls = formalSection ? Array.from(formalSection.querySelectorAll('[data-sym]')) : [];
-    // 詞彙表 <dt> ＝正式的鍵盤／AT 互動圖例（唯一的 role=button + tab 停點）。
-    const glossEls = formalSection ? Array.from(formalSection.querySelectorAll('.symbol-gloss dt[data-sym]')) : [];
-
-    let hoverSym = null;
-    let hoverEl = null;
-    let focusSym = null;   // 鍵盤焦點獨立於滑鼠 hover 追蹤
-    let focusEl = null;
-    let pinnedSym = null;
-    let pinnedEl = null;
-
-    // 有效作用中符號＝釘選 > 滑鼠 hover > 鍵盤焦點（三者獨立，互不清除彼此）
-    function effectiveSym() {
-        return pinnedSym || hoverSym || focusSym;
-    }
-
-    function effectiveEl() {
-        return pinnedEl || hoverEl || focusEl;
-    }
+    let activeSym = null; // 由 __nebluxSymHook 回報的當前作用中符號（pin > focus > hover）
 
     // ---------- text helper：每次都明講 baseline/align，不吃殘留狀態 ----------
     function drawText(ctx, str, x, y, color, align, baseline, font) {
@@ -542,8 +510,8 @@
     }
 
     function resizeAll() {
-        resizeCanvas(splaneCanvas, splaneCtx, splaneState, () => renderSplane(effectiveSym()));
-        resizeCanvas(stepCanvas, stepCtx, stepState, () => renderStep(effectiveSym()));
+        resizeCanvas(splaneCanvas, splaneCtx, splaneState, () => renderSplane(activeSym));
+        resizeCanvas(stepCanvas, stepCtx, stepState, () => renderStep(activeSym));
     }
 
     // 個性縮圖列：目前 ζ 落在哪種個性，該卡亮框；點卡直接把 ζ 設成該個性的代表值。
@@ -564,170 +532,21 @@
         zetaValue.textContent = state.zeta.toFixed(2);
         wnValue.textContent = `${state.wn.toFixed(1)} rad/s`;
         syncRegimeCards();
-        renderSplane(effectiveSym());
-        renderStep(effectiveSym());
+        renderSplane(activeSym);
+        renderStep(activeSym);
     }
 
-    // ---------- Part 3：浮動 tooltip ----------
-    function showTip(el, text) {
-        if (!symTip || !el) return;
-        symTip.textContent = text;
-        symTip.hidden = false;
-        const margin = 8;
-        const rect = el.getBoundingClientRect();
-        const tipRect = symTip.getBoundingClientRect();
-        let top = rect.top - tipRect.height - margin;
-        if (top < margin) {
-            top = rect.bottom + margin; // 頂端放不下就改放下面
-        }
-        let left = rect.left + rect.width / 2 - tipRect.width / 2;
-        left = Math.max(margin, Math.min(left, window.innerWidth - tipRect.width - margin));
-        top = Math.min(top, window.innerHeight - tipRect.height - margin);
-        symTip.style.left = `${left}px`;
-        symTip.style.top = `${top}px`;
-    }
-
-    function hideTip() {
-        if (!symTip) return;
-        symTip.hidden = true;
-    }
-
-    // ---------- Part 3：作用中符號改變時，統一刷新所有連動（圖例 class、說明列、tooltip、滑桿提示、兩張畫布） ----------
-    function refresh() {
-        const sym = effectiveSym();
-        const el = effectiveEl();
-
-        // 高亮（is-active）套用到所有 [data-sym]（公式符號＋詞彙表），做交叉呼應。
-        symEls.forEach((node) => {
-            node.classList.toggle('is-active', node.dataset.sym === sym);
-        });
-        // aria-pressed 只掛在正式的 role=button 元素（詞彙表 <dt>）上，公式符號僅為指標提示。
-        glossEls.forEach((node) => {
-            node.setAttribute('aria-pressed', String(node.dataset.sym === pinnedSym));
-        });
-
-        if (symExplainer) {
-            symExplainer.textContent = sym ? (GLOSS[sym] || '') : DEFAULT_HINT;
-        }
-
-        if (sym && el) {
-            showTip(el, GLOSS[sym] || '');
-        } else {
-            hideTip();
-        }
-
+    // ---------- Part 3：作用中符號改變時的畫布／滑桿提示連動 ----------
+    // 呼叫時機、is-active／aria-pressed／tooltip／sym-explainer 全部交給
+    // depth/sym-tooltip.js；這裡只補這頁特有的 canvas 高亮與 is-cued。
+    function applySymHighlight(sym) {
+        activeSym = sym;
         if (controlZeta) controlZeta.classList.toggle('is-cued', sym === 'zeta');
         if (controlWn) controlWn.classList.toggle('is-cued', sym === 'wn');
-
         renderSplane(sym);
         renderStep(sym);
     }
-
-    function closestSym(node) {
-        return node && node.closest ? node.closest('[data-sym]') : null;
-    }
-
-    function setHover(sym, el) {
-        if (hoverSym === sym && hoverEl === el) return;
-        hoverSym = sym;
-        hoverEl = el;
-        refresh();
-    }
-
-    // 鍵盤焦點獨立追蹤：pointerout 只清 hover、focusout 只清 focus，互不影響。
-    function setFocus(sym, el) {
-        if (focusSym === sym && focusEl === el) return;
-        focusSym = sym;
-        focusEl = el;
-        refresh();
-    }
-
-    function togglePin(el) {
-        const sym = el.dataset.sym;
-        if (pinnedSym === sym) {
-            pinnedSym = null;
-            pinnedEl = null;
-        } else {
-            pinnedSym = sym;
-            pinnedEl = el;
-        }
-        refresh();
-    }
-
-    function unpinAll() {
-        if (pinnedSym === null) return;
-        pinnedSym = null;
-        pinnedEl = null;
-        refresh();
-    }
-
-    function initSymInteractivity() {
-        if (!formalSection || symEls.length === 0) return;
-
-        // 只有詞彙表 <dt> 是鍵盤 tab 停點＋role=button（8 個）；公式符號只保留指標互動，非 tab 停點。
-        glossEls.forEach((el) => {
-            el.setAttribute('tabindex', '0');
-            el.setAttribute('role', 'button');
-            el.setAttribute('aria-label', GLOSS[el.dataset.sym] || '');
-            el.setAttribute('aria-pressed', 'false');
-        });
-
-        formalSection.addEventListener('pointerover', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            setHover(el.dataset.sym, el);
-        });
-
-        formalSection.addEventListener('pointerout', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            const toEl = closestSym(e.relatedTarget);
-            if (toEl) setHover(toEl.dataset.sym, toEl);
-            else setHover(null, null);
-        });
-
-        formalSection.addEventListener('focusin', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            setFocus(el.dataset.sym, el);
-        });
-
-        formalSection.addEventListener('focusout', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            const toEl = closestSym(e.relatedTarget);
-            if (toEl) setFocus(toEl.dataset.sym, toEl);
-            else setFocus(null, null);
-        });
-
-        formalSection.addEventListener('click', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            e.stopPropagation();
-            togglePin(el);
-        });
-
-        formalSection.addEventListener('keydown', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                e.preventDefault();
-                togglePin(el);
-            }
-        });
-
-        // 只有「既非符號、也不在互動主體（滑桿／畫布）或形式化區內」的點擊才解除釘選，
-        // 這樣調整 ζ/ωn 滑桿或點畫布時不會誤把使用者想保留的釘選丟掉。
-        document.addEventListener('click', (e) => {
-            const t = e.target;
-            if (t.closest && (t.closest('[data-sym]') || t.closest('.lab-surface') || t.closest('.formal'))) return;
-            unpinAll();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') unpinAll();
-        });
-    }
+    window.__nebluxSymHook = applySymHighlight;
 
     zetaInput.addEventListener('input', () => { syncState(); kickPulse(); });
     wnInput.addEventListener('input', () => { syncState(); kickPulse(); });
@@ -744,7 +563,6 @@
         new ResizeObserver(resizeAll).observe(splaneCanvas);
         new ResizeObserver(resizeAll).observe(stepCanvas);
     }
-    initSymInteractivity();
     resizeAll();
     syncState();
 })();

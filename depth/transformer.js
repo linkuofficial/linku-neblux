@@ -90,21 +90,6 @@
         console.assert(Math.abs(itNoScale[catIdx] - 0.99) < 0.01, `it->cat without sqrt(d) should be ~0.99, got ${itNoScale[catIdx]}`);
     })();
 
-    // ---- Symbol glossary text ---------------------------------------------------
-    // One source of truth per symbol, shared by the <dt> aria-label, the floating
-    // tooltip, and the fixed explainer line. Keys match every data-sym in the DOM.
-    const GLOSS = {
-        q: 'q_i 查詢向量：你點的那個字在「找什麼」。對應你選的字（teal）和熱圖裡它那一橫列。',
-        k: 'k_j 鍵向量：每個字提供什麼、代表什麼。對應熱圖上緣那排、被看的七個字（amber）。',
-        score: 'score_ij ＝ q_i·k_j／√d：還沒正規化的原始比對分數，就是選中那列七格的原始強度。',
-        sqrtd: '√d ＝ 2：把分數縮小的縮放係數，擋住 softmax 太快押在同一格上（拿掉它 it→cat 會從 0.83 衝到 0.99）；跟下面的 T 滑桿是同一件事的教學版。',
-        softmax: 'softmax：把一整列七個分數壓成加起來剛好等於 1 的比例——就是下面那條長條被剛好填滿。',
-        w: 'w_ij 注意力權重：熱圖裡的一格、長條裡的一段；看得越重就越大，每一列的和＝1。',
-        v: 'v_j 值向量：每個字真正送出去、被混進來的內容（這個 demo 用 v=k 簡化）；長條裡的每一段就是它們。',
-        output: 'output_i：七個字的值照權重混合後、那個字更新後的新意思——就是下面那條長條，也是那句白話讀數。',
-    };
-    const DEFAULT_HINT = '把游標移到算式的符號上（手機點一下），看它對應畫面上的哪個東西。';
-
     // ---- Canvas + DOM wiring -----------------------------------------------------
     const canvas = document.getElementById('attn-canvas');
     const ctx = canvas.getContext('2d');
@@ -114,13 +99,11 @@
     const chips = Array.from(document.querySelectorAll('.token-chip'));
     const controlT = document.querySelector('.control-t');
 
-    // ---- Formula symbol <-> canvas linkage ----
-    const formalSection = document.querySelector('.formal');
-    const symExplainer = document.querySelector('.sym-explainer');
-    const symTip = document.querySelector('.sym-tip');
-    const symEls = formalSection ? Array.from(formalSection.querySelectorAll('[data-sym]')) : [];
-    // 詞彙表 <dt> ＝正式的鍵盤／AT 互動圖例（唯一的 role=button + tab 停點）。
-    const glossEls = formalSection ? Array.from(formalSection.querySelectorAll('.symbol-gloss dt[data-sym]')) : [];
+    // ---- Formula symbol <-> canvas linkage: driven by shared depth/sym-tooltip.js
+    // via window.__nebluxSymHook. is-active / aria-pressed / tooltip / explainer are
+    // all handled there; tip text comes from data-tip on the formula spans (see
+    // transformer.html, verbatim same wording as the old inline GLOSS).
+    let activeSym = null; // last symbol reported by __nebluxSymHook (pin > focus > hover)
 
     const colors = {
         bg: '#070b12',
@@ -148,23 +131,6 @@
     // 白話浮籤（.cell-tip）跟著游標，格子本身加白框——白話與數字同時浮出。
     const cellTip = document.querySelector('.cell-tip');
     let hoverCell = null;
-
-    // hover / focus / pin tracked independently; effective = pin > hover > focus.
-    // pointerout clears only hover; focusout clears only focus.
-    let hoverSym = null;
-    let hoverEl = null;
-    let focusSym = null;
-    let focusEl = null;
-    let pinnedSym = null;
-    let pinnedEl = null;
-
-    function effectiveSym() {
-        return pinnedSym || hoverSym || focusSym;
-    }
-
-    function effectiveEl() {
-        return pinnedEl || hoverEl || focusEl;
-    }
 
     const clamp = (min, v, max) => Math.max(min, Math.min(max, v));
 
@@ -465,60 +431,17 @@
             btn.setAttribute('aria-pressed', on ? 'true' : 'false');
             btn.classList.toggle('selected', on);
         });
-        // refresh() re-applies the (possibly pinned) symbol cues to the new
-        // selection and redraws with the current effective highlight.
-        refresh();
+        // Re-apply the (possibly pinned) symbol cues to the new selection and
+        // redraw with the current active highlight (tracked via __nebluxSymHook).
+        applySymCues(activeSym);
     }
 
-    // ---- Floating tooltip (viewport-clamped, flips below if it would overflow top) ----
-    function showTip(el, text) {
-        if (!symTip || !el) return;
-        symTip.textContent = text;
-        symTip.hidden = false;
-        const margin = 8;
-        const rect = el.getBoundingClientRect();
-        const tipRect = symTip.getBoundingClientRect();
-        let top = rect.top - tipRect.height - margin;
-        if (top < margin) {
-            top = rect.bottom + margin; // no room above → drop below
-        }
-        let left = rect.left + rect.width / 2 - tipRect.width / 2;
-        left = Math.max(margin, Math.min(left, window.innerWidth - tipRect.width - margin));
-        top = Math.min(top, window.innerHeight - tipRect.height - margin);
-        symTip.style.left = `${left}px`;
-        symTip.style.top = `${top}px`;
-    }
-
-    function hideTip() {
-        if (!symTip) return;
-        symTip.hidden = true;
-    }
-
-    // ---- Active symbol changed → refresh every linkage (legend class, explainer,
-    // tooltip, DOM cues, canvas). ----
-    function refresh() {
-        const sym = effectiveSym();
-        const el = effectiveEl();
-
-        // is-active on all [data-sym] (formula spans + gloss dt) for cross-highlight.
-        symEls.forEach((node) => {
-            node.classList.toggle('is-active', node.dataset.sym === sym);
-        });
-        // aria-pressed only on the real role=button elements (the gloss <dt>).
-        glossEls.forEach((node) => {
-            node.setAttribute('aria-pressed', String(node.dataset.sym === pinnedSym));
-        });
-
-        if (symExplainer) {
-            symExplainer.textContent = sym ? (GLOSS[sym] || '') : DEFAULT_HINT;
-        }
-
-        if (sym && el) {
-            showTip(el, GLOSS[sym] || '');
-        } else {
-            hideTip();
-        }
-
+    // ---- Active symbol changed → page-specific DOM cues + canvas (called by the
+    // shared depth/sym-tooltip.js via window.__nebluxSymHook). is-active class,
+    // aria-pressed, the floating tooltip and the explainer line are all handled
+    // by that shared module; this only does what's specific to this page. ----
+    function applySymCues(sym) {
+        activeSym = sym;
         // DOM-side cues: √d ↔ the T control; output ↔ the readout sentence;
         // q ↔ the selected token chip.
         if (controlT) controlT.classList.toggle('is-cued', sym === 'sqrtd');
@@ -529,115 +452,7 @@
 
         render(sym);
     }
-
-    function closestSym(node) {
-        return node && node.closest ? node.closest('[data-sym]') : null;
-    }
-
-    function setHover(sym, el) {
-        if (hoverSym === sym && hoverEl === el) return;
-        hoverSym = sym;
-        hoverEl = el;
-        refresh();
-    }
-
-    // Keyboard focus tracked independently: pointerout clears only hover,
-    // focusout clears only focus — they never clear each other.
-    function setFocus(sym, el) {
-        if (focusSym === sym && focusEl === el) return;
-        focusSym = sym;
-        focusEl = el;
-        refresh();
-    }
-
-    function togglePin(el) {
-        const sym = el.dataset.sym;
-        if (pinnedSym === sym) {
-            pinnedSym = null;
-            pinnedEl = null;
-        } else {
-            pinnedSym = sym;
-            pinnedEl = el;
-        }
-        refresh();
-    }
-
-    function unpinAll() {
-        if (pinnedSym === null) return;
-        pinnedSym = null;
-        pinnedEl = null;
-        refresh();
-    }
-
-    function initSymInteractivity() {
-        if (!formalSection || symEls.length === 0) return;
-
-        // Only the gloss <dt> are keyboard tab stops + role=button (8 of them);
-        // formula-line symbols keep pointer interaction only, never tab stops.
-        glossEls.forEach((el) => {
-            el.setAttribute('tabindex', '0');
-            el.setAttribute('role', 'button');
-            el.setAttribute('aria-label', GLOSS[el.dataset.sym] || '');
-            el.setAttribute('aria-pressed', 'false');
-        });
-
-        formalSection.addEventListener('pointerover', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            setHover(el.dataset.sym, el);
-        });
-
-        formalSection.addEventListener('pointerout', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            const toEl = closestSym(e.relatedTarget);
-            if (toEl) setHover(toEl.dataset.sym, toEl);
-            else setHover(null, null);
-        });
-
-        formalSection.addEventListener('focusin', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            setFocus(el.dataset.sym, el);
-        });
-
-        formalSection.addEventListener('focusout', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            const toEl = closestSym(e.relatedTarget);
-            if (toEl) setFocus(toEl.dataset.sym, toEl);
-            else setFocus(null, null);
-        });
-
-        formalSection.addEventListener('click', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            e.stopPropagation();
-            togglePin(el);
-        });
-
-        formalSection.addEventListener('keydown', (e) => {
-            const el = closestSym(e.target);
-            if (!el) return;
-            if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                e.preventDefault();
-                togglePin(el);
-            }
-        });
-
-        // Only a click that is neither a symbol nor inside the interactive surface
-        // (chips / canvas / slider) nor inside the formal section unpins — so
-        // adjusting T or selecting a token never drops a pin the user wanted kept.
-        document.addEventListener('click', (e) => {
-            const t = e.target;
-            if (t.closest && (t.closest('[data-sym]') || t.closest('.lab-surface') || t.closest('.formal'))) return;
-            unpinAll();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') unpinAll();
-        });
-    }
+    window.__nebluxSymHook = applySymCues;
 
     chips.forEach((btn, i) => {
         btn.addEventListener('click', () => selectToken(i));
@@ -690,21 +505,21 @@
                 cellTip.hidden = true;
             }
         }
-        if (changed) render(effectiveSym());
+        if (changed) render(activeSym);
     });
 
     canvas.addEventListener('pointerleave', () => {
         if (hoverCell === null) return;
         hoverCell = null;
         if (cellTip) cellTip.hidden = true;
-        render(effectiveSym());
+        render(activeSym);
     });
 
     tInput.addEventListener('input', () => {
         state.T = Number(tInput.value);
         tValue.textContent = state.T.toFixed(2);
         state.matrix = computeMatrix(state.T);
-        render(effectiveSym()); // keep any pinned/hovered highlight while dragging
+        render(activeSym); // keep any pinned/hovered highlight while dragging
     });
 
     function resize() {
@@ -718,7 +533,7 @@
         canvas.width = Math.round(w * state.dpr);
         canvas.height = Math.round(h * state.dpr);
         ctx.setTransform(state.dpr, 0, 0, state.dpr, 0, 0);
-        render(effectiveSym());
+        render(activeSym);
     }
 
     window.addEventListener('resize', resize);
@@ -731,7 +546,5 @@
         btn.setAttribute('aria-pressed', on ? 'true' : 'false');
         btn.classList.toggle('selected', on);
     });
-    initSymInteractivity();
     resize();
-    refresh();
 })();
