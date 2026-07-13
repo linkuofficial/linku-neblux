@@ -10,7 +10,8 @@
 <script type="application/json" id="node-meta">
 { "depth_id": "s-plane", "node_id": "control_theory_concept", "spec_version": "0.2" }
 </script>
-<script src="./s-plane.js?v=2" defer></script>
+<script src="./s-plane.js?v=3" defer></script>
+<script src="./sym-tooltip.js?v=2" defer></script>
 </head>
 <body>
 <header class="site-header" aria-label="Neblux depth">
@@ -21,34 +22,32 @@
 <main class="page-shell">
   <section class="intro" aria-labelledby="title">
     <h1 id="title">s 平面與極點 <span class="topic-en">s-Plane &amp; Poles</span></h1>
-    <p class="deck">同樣推一下，有的系統穩穩停住，有的卻要來回震盪好幾下才安靜。</p>
+    <p class="deck">把避震器壓一下：會彈幾下、多久停，由極點位置決定。</p>
     <figure class="metaphor">
-      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="過減速丘之後：避震鬆的車彈好幾下，調得剛好的一次貼地">
+      <svg class="metaphor-art" viewBox="0 0 340 84" role="img" aria-label="避震器的不同阻尼設定會呈現晃動或平順回穩">
         <line class="m-ref" x1="14" y1="24" x2="326" y2="24"/>
         <path class="m-bounce" d="M14 70 C34 70 34 6 54 6 C70 6 68 40 84 40 C98 40 96 16 110 16 C122 16 122 30 134 30 C146 30 148 22 162 24 L326 24"/>
         <path class="m-settle" d="M14 70 C50 70 70 26 110 24 L326 24"/>
       </svg>
-      <figcaption>像過減速丘：避震鬆的車（<span class="sym zeta">ζ</span> 小）要彈好幾下，調得剛好的一次貼地——差別只在一個設定。</figcaption>
+      <figcaption>拖動極點，看回彈從晃動變成平順。</figcaption>
     </figure>
-    <p>決定它是哪一種的，只是一張圖上一個點的位置。把那個點在圖上挪一挪，右邊「被推一下之後的反應」就跟著換了個性——過衝、震盪、慢慢拖，全寫在這個點放在哪裡。</p>
-    <p class="takeaway">這一頁只想讓你看見一件事：一個系統會不會過衝、震盪，全由它的極點放在複數平面（左邊那張座標圖）上的哪裡決定。</p>
   </section>
 
   <section class="lab-surface" aria-labelledby="playground-title">
     <div class="surface-copy">
       <p class="section-kicker"><span class="step-no">1</span>先動手玩</p>
-      <h2 id="playground-title">挪動極點，看它怎麼安定下來</h2>
+      <h2 id="playground-title">移動極點，看看回彈怎麼變</h2>
     </div>
-    <p class="how-to">拉下面的滑桿，左圖那個 ✕ 就跟著動；右圖「被推一下的反應」立刻換個性。你會看見：點放在哪，就決定它穩不穩、晃不晃。</p>
+    <p class="how-to">調整 <b>ζ</b> 與 <b>ωn</b>。左邊的極點會移動，右邊的回應會跟著改變。</p>
     <div class="canvas-grid">
       <div class="canvas-col">
-        <p class="canvas-caption"><b>極點：系統的性格座標</b>　·　✕ 就是極點，它放哪，脾氣就怎樣</p>
+        <p class="canvas-caption"><b>極點位置</b>　× 會跟著參數移動</p>
         <div class="canvas-wrap splane">
           <canvas id="splane-canvas" width="640" height="640" aria-label="s 平面極點圖"></canvas>
         </div>
       </div>
       <div class="canvas-col">
-        <p class="canvas-caption"><b>步階響應：把它推一下之後，怎麼反應</b></p>
+        <p class="canvas-caption"><b>回彈曲線</b>　看它會不會晃、多久停</p>
         <div class="canvas-wrap step">
           <canvas id="step-canvas" width="960" height="540" aria-label="步階響應曲線圖"></canvas>
         </div>
@@ -66,7 +65,7 @@
         <input id="wn" type="range" min="1" max="3" value="2.0" step="0.1">
       </label>
     </div>
-    <p class="strip-hint">四種個性——<b>點一張卡</b>，滑桿直接跳到那種狀態：</p>
+    <p class="strip-hint">四種阻尼。點一下，直接比較。</p>
     <div class="regime-strip" role="group" aria-label="四種阻尼個性——點一下，直接把 ζ 設成那種個性">
       <button type="button" class="regime-card" data-zeta="0" data-regime="undamped" aria-pressed="false">
         <svg viewBox="0 0 96 44" aria-hidden="true"><line class="rg-ref" x1="4" y1="22" x2="92" y2="22"/><path class="rg-curve" d="M4 22 Q10 4 16 22 T28 22 T40 22 T52 22 T64 22 T76 22 T88 22"/></svg>
@@ -101,7 +100,7 @@
     <p class="section-kicker"><span class="step-no">3</span>哪裡用得到</p>
     <h2 id="usecases-title">所有「推一下之後怎麼回穩」的東西，都在這張圖上</h2>
     <ul class="usecase-list">
-      <li><b>汽車避震</b>——過減速丘彈幾下才停？調避震就是在調 <span class="sym zeta">ζ</span>。</li>
+      <li><b>汽車避震</b>——過減速丘彈幾下才停？可先用阻尼比 <span class="sym zeta">ζ</span> 的簡化模型觀察。</li>
       <li><b>無人機與機器手臂</b>——馬達控制要「快、又不衝過頭」，工程師就在欠阻尼與臨界阻尼之間找平衡。</li>
       <li><b>台北 101 的阻尼球</b>——660 噸的調諧質塊阻尼器，把強風下大樓的震盪吸掉。</li>
       <li><b>電源供應器</b>——回授穩壓調太猛，輸出電壓會過衝、震盪，看的還是這張圖。</li>
@@ -150,7 +149,8 @@
   <section class="links" aria-labelledby="links-title">
     <p class="section-kicker">連結</p>
     <h2 id="links-title">回到 Neblux 圖譜</h2>
-    <p>這頁暫時掛在較寬的「Control Theory」節點；極點與步階響應是其中較窄的一個焦點，等資料變更經過審查後才考慮拆出更精確的節點。</p>
+    <p>這頁暫時只聚焦標準二階系統的極點與步階響應。拉普拉斯轉換、一般高階系統、零點、頻率響應與狀態空間不在這頁一次講完，會拆成後續頁面，再從這裡連過去。</p>
+    <p class="scope-note">目前先把「極點位置如何改變回應」看清楚；其他概念先保留入口，不用一頁承擔整個控制理論。</p>
     <a class="graph-link" href="/app.html?node=control_theory_concept">打開對應圖譜節點</a>
   </section>
 </main>

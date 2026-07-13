@@ -1,0 +1,65 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:9f5dfa10946e72c3c8c56db59bbbd982dff058eb09c8496fcd1686ac1d7792d5",
+  "layoutVersion": "wonder-black-holes-1.0.0",
+  "membersFingerprint": "sha256:9f5dfa10946e72c3c8c56db59bbbd982dff058eb09c8496fcd1686ac1d7792d5",
+  "nodes": {
+    "black_hole_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 0,
+      "y": 0
+    },
+    "cosmology_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 7,
+      "x": 510,
+      "y": 73.37
+    },
+    "entropy_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 340,
+      "y": 83.76
+    },
+    "gravitational_force_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -510,
+      "y": -73.37
+    },
+    "quantum_mechanics_field": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 170,
+      "y": 54.76
+    },
+    "relativity_general_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -170,
+      "y": -54.76
+    },
+    "special_relativity_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -340,
+      "y": -83.76
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "black-holes"
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neblux.linku.tech/schemas/domain-anchors-1.0.0.json",
+  "title": "Neblux Main Galaxy Domain Anchors",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "layoutVersion", "anchors"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "layoutVersion": { "type": "string", "minLength": 1 },
+    "anchors": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ART", "BIO", "CHE", "ENG", "HIS", "HUM", "MAT", "MED", "PHI", "PHY", "SOC", "TEC"],
+      "properties": {
+        "ART": { "$ref": "#/$defs/anchor" }, "BIO": { "$ref": "#/$defs/anchor" },
+        "CHE": { "$ref": "#/$defs/anchor" }, "ENG": { "$ref": "#/$defs/anchor" },
+        "HIS": { "$ref": "#/$defs/anchor" }, "HUM": { "$ref": "#/$defs/anchor" },
+        "MAT": { "$ref": "#/$defs/anchor" }, "MED": { "$ref": "#/$defs/anchor" },
+        "PHI": { "$ref": "#/$defs/anchor" }, "PHY": { "$ref": "#/$defs/anchor" },
+        "SOC": { "$ref": "#/$defs/anchor" }, "TEC": { "$ref": "#/$defs/anchor" }
+      }
+    }
+  },
+  "$defs": {
+    "anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodeId", "x", "y", "lock", "massClass", "archetype"],
+      "properties": {
+        "nodeId": { "type": "string", "minLength": 1 },
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "lock": { "enum": ["hard"] },
+        "massClass": { "enum": ["light", "standard", "heavy", "bridge", "nucleus"] },
+        "archetype": { "enum": ["galactic_nucleus", "domain_core", "subfield_giant", "concept_star", "bridge_star", "beacon_star", "event_remnant", "local_protostar"] }
+      }
+    }
+  }
+}

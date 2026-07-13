@@ -2,53 +2,50 @@
 
 Depth id: `sine-wave`  
 Graph node: `oscillations_and_waves_concept`  
-Status: M1 review sample
+Status: content revision pending Riku review
 
-## Reference Notes
+## Teaching Decision (2026-07-13 revision 3)
 
-- OpenStax Precalculus 2e, 5.1 Angles: used for the radian/full-turn convention behind the `2π` factor.
-  https://openstax.org/books/precalculus-2e/pages/5-1-angles
-- Phase (waves), Wikipedia summary with NIST phase material: used as a secondary check that phase is an angle-like offset through a periodic cycle and that sinusoidal signals can be written with amplitude, frequency, and phase parameters.
-  https://en.wikipedia.org/wiki/Phase_(waves)
+The page now uses a one-dimensional traveling sinusoid with four controls:
+
+1. **Amplitude `A`** and **frequency `f`** are the two primary controls.
+2. **Wave speed `v`** is a physical propagation control; the canvas derives wavelength as `λ = v/f`.
+3. **Period `T`** remains derived as `T = 1/f`.
+4. **Phase `φ`** remains advanced and changes spatial starting position without changing amplitude, frequency, or wavelength.
+5. Crest and trough remain labelled in both the static introduction and live canvas.
+
+Desktop presents all four controls in one row. Mobile keeps one horizontal control rail instead of adding a second stacked row.
 
 ## Formula Walkthrough
 
-Formula used by the page:
-
 ```txt
-y(t) = A sin(2π f t + φ)
+y(x,t) = A sin[2πf(x/v - t) + φ]
+T = 1/f
+λ = v/f
 ```
 
-- `A`: amplitude. In the canvas, this is the vertical distance from the center line to a crest. The amplitude slider changes that distance without moving the center line.
-- `f`: frequency in hertz. In the canvas, raising `f` packs more cycles into the same horizontal span. The `2π` factor converts each cycle into one full radian turn.
-- `t`: time. The animation advances `t`, which is why the curve flows even when the controls are untouched.
-- `φ`: phase. In the canvas, changing `φ` shifts where the wave begins in its cycle. The curve keeps the same shape and frequency.
+- `A`: center-line-to-crest or center-line-to-trough distance.
+- `f`: cycles per second in hertz.
+- `T`: time for one cycle, derived from frequency.
+- `v`: propagation speed in metres per second; at fixed `f`, increasing `v` increases `λ`.
+- `φ`: initial position within the cycle; changing it translates the wave without changing amplitude, period, or wavelength.
+- `x`: position across the fixed 8 m canvas window.
+- `t`: time advanced by the animation.
 
 ## Scope Note
 
-This page teaches a single pure sinusoid. It does not cover:
-
-- wave speed or wavelength in a physical medium
-- damping, envelopes, or time-varying amplitude
-- Fourier decomposition
-- phasor/complex-number representation
-- sampling, aliasing, or discrete-time signals
+This page teaches one undamped, one-dimensional traveling sinusoid. The visible motion now uses the selected physical `v`; damping, Fourier decomposition, phasors, sampling, and aliasing remain outside scope.
 
 ## Manual QA Notes
 
-- CSP shape: page uses external `sine-wave.js`; inline script is only `type="application/json"` metadata.
-- Rendering: animated via requestAnimationFrame; canvas sized through a ResizeObserver (+ a zero-size guard) so it renders once the layout resolves in any viewer, not only when the initial getBoundingClientRect happens to be ready.
-- Controls: exactly three range inputs (`A`, `f`, `φ`); each has a ≥44px touch target (min-height 44px + touch-action manipulation), verified at 1280px desktop and 390px mobile.
-- Formula appears only in the formal section.
-- Mobile check: Playwright desktop/mobile pass; canvas nonblank, slider changes alter pixels, console/page errors empty. Temporary screenshots currently regenerated at `test-results/sine-wave-desktop.png` and `test-results/sine-wave-mobile.png`; `test-results/` is an ephemeral test-artifact directory and may be cleared by later Playwright/verify runs.
+- External `sine-wave.js`; inline script is metadata only.
+- Four range inputs are present: `A`, `f`, physical `v`, and advanced `φ`.
+- The frequency output derives `T`; the speed output derives `λ`.
+- Crest and trough labels move with frequency, speed, phase, and animation time.
+- `depth/sine-wave-claim-check.mjs` extracts the shipped `waveY()` and verifies formula, extrema, `T=1/f`, `λ=v/f`, and phase translation.
 
-## Riku Review
+## Review Boundary
 
-Initial review: acceptable for this iteration（「還可以」）. This closes the M1 golden-sample pass as a review sample, not as a public launch.
-
-Closeout boundary:
-
-- Do not start M2 from this result without an explicit new task.
-- Keep `sine-wave` mapped to `oscillations_and_waves_concept` until a reviewed data change creates a more exact graph node.
-- Keep `public: false`; this page is not wired into Neblux navigation or deployment yet.
-
+- Confirm that phase is visually secondary enough for the intended learner level.
+- Keep this page mapped to `oscillations_and_waves_concept` until a reviewed data change creates a more exact node.
+- Keep propagation limited to the visible one-dimensional traveling-wave model; link out rather than adding reflection, interference, dispersion, or medium-dependent speed.

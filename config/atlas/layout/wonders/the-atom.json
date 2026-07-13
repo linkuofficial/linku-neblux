@@ -1,0 +1,65 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:927b3219988e2f3c9ce0937f69748b2c1d5630098d654ce7d6d2e1f8b7f0ed76",
+  "layoutVersion": "wonder-the-atom-1.0.0",
+  "membersFingerprint": "sha256:927b3219988e2f3c9ce0937f69748b2c1d5630098d654ce7d6d2e1f8b7f0ed76",
+  "nodes": {
+    "chemical_bonding_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -170,
+      "y": -54.76
+    },
+    "dmitri_mendeleev_person": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -510,
+      "y": -73.37
+    },
+    "materials_by_design_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 7,
+      "x": 510,
+      "y": 73.37
+    },
+    "molecular_structure_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 170,
+      "y": 54.76
+    },
+    "nanotechnology_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 340,
+      "y": 83.76
+    },
+    "periodic_law_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -340,
+      "y": -83.76
+    },
+    "quantum_chemistry_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 0,
+      "y": 0
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "the-atom"
+}

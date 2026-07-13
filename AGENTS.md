@@ -7,7 +7,7 @@
 
 - **禁區（強制交叉審查路徑，動之前必須先有 brief）**：`frontend/src/engine/`、`data/*.json` 結構變更、部署設定（`frontend/public/_headers`、`functions/`〔CF Pages Functions〕、`wrangler`／Cloudflare Pages 設定）。
 - **只做被交派的任務**：`docs/ROADMAP.md` 的「下一步 P1 後端／`API_ENABLED`／`functions/`」是規劃，**不是授權**。要動後端骨架＝重大決策，先開 brief 走模式⑤，禁止順手實作。
-- **驗證單命令**：`npm run verify`（= `npm run build` + `npm run test:e2e`）。視覺改動另需 `npm run dev` 瀏覽器實看（Canvas 渲染，DOM 斷言無效）。
+- **驗證單命令**：`npm run verify`（= `npm run build` + `npm run test:depth-build` + `npm run test:e2e`）。視覺改動另需 `npm run dev` 瀏覽器實看（Canvas 渲染，DOM 斷言無效）。
 - **Done 前檢查清單**：
   - [ ] `npm run verify` 全過
   - [ ] 視覺改動已在瀏覽器實看
@@ -29,6 +29,7 @@ npm install
 npm run dev            # Vite dev server (port 3000)
 npm run build          # Vite production build → dist/
 npm run preview        # 預覽 build 結果
+npm run test:depth-build # Depth 發布契約與 dist 集合
 npm run test:e2e       # Playwright E2E smoke
 npm run test:e2e:install  # 首次安裝 Chromium
 ```
@@ -45,17 +46,17 @@ npm run test:e2e:install  # 首次安裝 Chromium
 `scripts/*.py` + `config.yaml`：節點生成、翻譯、品質檢查工具，連 Neo4j 與 Claude API，**僅離線手動執行**，線上站不依賴。修改線上資料只需改 `data/*.json` 後重新 build。
 
 ## 驗證門檻（宣稱完成前）
-1. `npm run verify` 全過（= `npm run build` 成功 + `npm run test:e2e` 通過）。
+1. `npm run verify` 全過（= `npm run build` 成功 + `npm run test:depth-build` + `npm run test:e2e` 通過）。
 2. 視覺改動：`npm run dev` 用瀏覽器實看（Canvas 渲染，截圖/肉眼確認，勿只信 DOM）。
-3. 常見任務步驟見 `docs/playbooks/`。（`docs/verification_runbook.md` 已過期勿照做，見技術債台帳。）
+3. 常見任務步驟見 `docs/playbooks/`；最短驗證路徑索引見 `docs/verification_runbook.md`（2026-07-13 已重寫為現行流程，與本檔衝突時以本檔為準）。
 
 ## 已知技術債（台帳；「暫不處理」的決定不重開，除非前提改變）
-- `docs/verification_runbook.md` 全文為 Nodus 時代 Python 後端流程，嚴重過期（2026-07-06 發現，已加檔頭警告攔截）。待重寫為 npm run verify 流程或裁撤併入 playbooks——方向需凜空裁決。
 - HTML 入口資源路徑風格不一致（`index.html` 用絕對 `/src/...`；`app.html`/`explorer.html` 混用相對與絕對）；皆可運作。**（2026-06-10）複查：純 cosmetic、有 build 風險、零收益，暫不處理。**
 - 粒子動畫兩套實作（`src/particles.js`〔app 頁背景，動態 import〕+ `src/landing-main.js`〔index 落地頁〕）。兩者用途不同、各自獨立，整併收益低，暫不處理。
 - app-main 與 explorer-main 有平行的 canvas 接線（findNodeAtScreen、nc/nr、星體 meta、焦點邏輯）。**刻意未抽共用**：兩頁語意不同（app=全圖、explorer=漸進展開），抽離風險高於收益。視為可接受重複。
 
 ### 已清（歷史）
+- （2026-07-13）`docs/verification_runbook.md` 依凜空指示清償：Nodus 時代 Python 後端內容（pytest／uvicorn／Neo4j）全文裁撤，重寫為現行 `npm run verify` 薄版指引＋分區守門表；單一事實來源仍是本檔驗證門檻節與 `docs/playbooks/`，避免第二事實來源再度漂移。
 - 渲染升級 SVG → Canvas 全部完成（2026-06-13），見 `docs/archive/rendering-upgrade-plan.md`；SVG 時代圖視覺 CSS 14 檔已刪。
 - （2026-06-12，分支 `feat/arch-render-upgrade`）explorer 引擎外置（HTML 139.7kB → 8.9kB）、D3 改 npm import、資料瘦身（topology 2.3MB → 1.06MB + descriptions 783kB streaming）、CSP 收緊（去 `'unsafe-inline'`）、共用 `src/engine/geometry.js`、清死碼。E2E 11 passed（含 `descriptions.spec.ts` 描述串流守門）。
 - （2026-06-10）i18n 生成中間/備份產物已刪；`vite.config.ts` 加 `isJunk` 過濾。commit `7ce6a8a`。

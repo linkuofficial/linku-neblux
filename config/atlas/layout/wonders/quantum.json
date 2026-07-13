@@ -1,0 +1,58 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:b8a7d3c4656ecaca7764aeda9740193b82a5c0c6ec583434d071b28ca76ec51a",
+  "layoutVersion": "wonder-quantum-1.0.0",
+  "membersFingerprint": "sha256:b8a7d3c4656ecaca7764aeda9740193b82a5c0c6ec583434d071b28ca76ec51a",
+  "nodes": {
+    "measurement_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 255,
+      "y": 73.73
+    },
+    "niels_bohr_person": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -85,
+      "y": -29.15
+    },
+    "quantum_computing_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 425,
+      "y": 83.64
+    },
+    "quantum_entanglement_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 85,
+      "y": 29.15
+    },
+    "quantum_mechanics_field": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -255,
+      "y": -73.73
+    },
+    "wave_particle_duality_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -425,
+      "y": -83.64
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "quantum"
+}

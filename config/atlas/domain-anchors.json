@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "layoutVersion": "main-2.0.0",
+  "anchors": {
+    "ART": { "nodeId": "arts_field", "x": -900, "y": -100, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "BIO": { "nodeId": "biology_field", "x": 930, "y": 150, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "CHE": { "nodeId": "chemistry_field", "x": 720, "y": -260, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "ENG": { "nodeId": "engineering_field", "x": 520, "y": 680, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "HIS": { "nodeId": "history_field", "x": -600, "y": -420, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "HUM": { "nodeId": "humanities_field", "x": -600, "y": 620, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "MAT": { "nodeId": "mathematics_field", "x": -260, "y": 0, "lock": "hard", "massClass": "nucleus", "archetype": "galactic_nucleus" },
+    "MED": { "nodeId": "medicine_field", "x": 800, "y": 520, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "PHI": { "nodeId": "philosophy_field", "x": -830, "y": 300, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "PHY": { "nodeId": "physics_field", "x": 260, "y": 0, "lock": "hard", "massClass": "nucleus", "archetype": "galactic_nucleus" },
+    "SOC": { "nodeId": "social_science_field", "x": -240, "y": 760, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" },
+    "TEC": { "nodeId": "technology_field", "x": 160, "y": 760, "lock": "hard", "massClass": "heavy", "archetype": "domain_core" }
+  }
+}

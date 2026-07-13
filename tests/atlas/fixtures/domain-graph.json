@@ -1,0 +1,7 @@
+{
+  "nodes": [
+    { "id": "core_alpha", "type": "field", "domain": ["MAT"], "connections": [] },
+    { "id": "physics_field", "type": "field", "domain": ["PHY"], "connections": [] },
+    { "id": "bridge", "type": "concept", "domain": ["MAT", "PHY"], "connections": [] }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:504f8a3dcdf372c87772bab098cae71aad288d92e387cda0db0a3ecc13229da9",
+  "layoutVersion": "wonder-chaos-1.0.0",
+  "membersFingerprint": "sha256:504f8a3dcdf372c87772bab098cae71aad288d92e387cda0db0a3ecc13229da9",
+  "nodes": {
+    "chaos_theory_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -85,
+      "y": -29.15
+    },
+    "classical_mechanics_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -425,
+      "y": -83.64
+    },
+    "dynamical_systems_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -255,
+      "y": -73.73
+    },
+    "nonlinear_dynamics_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 85,
+      "y": 29.15
+    },
+    "randomness_and_determinism_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 425,
+      "y": 83.64
+    },
+    "scale_invariance_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 255,
+      "y": 73.73
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "chaos"
+}

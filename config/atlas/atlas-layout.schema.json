@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neblux.linku.tech/schemas/atlas-layout-1.0.0.json",
+  "title": "Neblux Graph Atlas Layout",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "layoutVersion", "coordinateSystem", "mainGalaxy", "wonders", "roads"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "layoutVersion": { "type": "string", "minLength": 1 },
+    "coordinateSystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height", "origin"],
+      "properties": {
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 },
+        "origin": { "enum": ["center"] }
+      }
+    },
+    "mainGalaxy": { "$ref": "#/$defs/region" },
+    "wonders": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/wonderRegion" }
+    },
+    "roads": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "from", "to", "via", "strengthClass", "approved"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "from": { "type": "string", "minLength": 1 },
+          "to": { "type": "string", "minLength": 1 },
+          "via": { "type": "string", "minLength": 1 },
+          "strengthClass": { "enum": ["weak", "standard", "strong"] },
+          "approved": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "visualRadius", "hitRadius", "route"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "visualRadius": { "type": "number", "exclusiveMinimum": 0 },
+        "hitRadius": { "type": "number", "exclusiveMinimum": 0 },
+        "route": { "type": "string", "minLength": 1 }
+      }
+    },
+    "wonderRegion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "visualRadius", "hitRadius", "route", "dominantDomains", "visualScale"],
+      "properties": {
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "visualRadius": { "type": "number", "exclusiveMinimum": 0 },
+        "hitRadius": { "type": "number", "exclusiveMinimum": 0 },
+        "route": { "type": "string", "minLength": 1 },
+        "dominantDomains": { "type": "array", "minItems": 1, "items": { "enum": ["ART", "BIO", "CHE", "ENG", "HIS", "HUM", "MAT", "MED", "PHI", "PHY", "SOC", "TEC"] } },
+        "visualScale": { "enum": ["small", "medium", "large"] }
+      }
+    }
+  }
+}

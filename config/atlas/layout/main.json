@@ -1,0 +1,9663 @@
+{
+  "algorithmParamsHash": "sha256:e4cf62bef6e6c6555158d6f4512d1609a0f62284b5878dd15807fc1a50f9e24a",
+  "anchorConfigFingerprint": "sha256:34f15c575cea956b0764fd0007f5a1be54868e108e512223039b24d121db886d",
+  "layoutInputSnapshot": {
+    "abolition_of_slavery_event": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "abstract_algebra_concept": {
+      "domains": [
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "abstraction_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "acid_base_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "acid_base_theory_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "acoustics_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "ada_lovelace_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "adam_smith_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "adaptation_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "additive_manufacturing_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "aerospace_engineering_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "aesthetic_experience_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "aesthetic_theory_concept": {
+      "domains": [
+        "ART",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "aesthetics_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "age_of_revolutions_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "agricultural_revolution_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "alan_turing_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "albert_einstein_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "alexander_fleming_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "person"
+    },
+    "alexander_von_humboldt_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "HIS",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "algebra_field": {
+      "domains": [
+        "MAT"
+      ],
+      "type": "field"
+    },
+    "algebraic_topology_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "algorithm_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "allegory_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "analogy_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "analytical_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "analytical_method_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "anatomy_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "ancient_china_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "ancient_medicine_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "ancient_rome_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "anesthesia_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "animation_art_concept": {
+      "domains": [
+        "ART",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "annales_school_concept": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "anthropology_field": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "antibiotic_resistance_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "antisepsis_concept": {
+      "domains": [
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "antoine_lavoisier_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "apollo_program_event": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "archaeometry_concept": {
+      "domains": [
+        "CHE",
+        "HIS",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "archimedes_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "architectural_design_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "architectural_theory_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "architecture_field": {
+      "domains": [
+        "ART",
+        "ENG"
+      ],
+      "type": "field"
+    },
+    "archival_science_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "aristotle_person": {
+      "domains": [
+        "ART",
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "art_and_science_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "art_education_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "art_history_methodology_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "art_market_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "art_nouveau_concept": {
+      "domains": [
+        "ART",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "art_therapy_concept": {
+      "domains": [
+        "ART",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "artificial_intelligence_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "artistic_movements_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "arts_field": {
+      "domains": [
+        "ART"
+      ],
+      "type": "field"
+    },
+    "astrochemistry_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "astronomy_field": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "atlantic_slave_trade_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "atmospheric_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "augmented_reality_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "automation_concept": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "autonomous_systems_concept": {
+      "domains": [
+        "ENG",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "autonomous_vehicles_concept": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "axiomatic_system_concept": {
+      "domains": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "baroque_art_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "battery_technology_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "bauhaus_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "behavioral_ecology_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "behavioral_economics_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "behavioral_genetics_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "big_history_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "bioarchaeology_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "bioethics_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "biogeochemical_cycles_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "bioinformatics_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "biology_field": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "field"
+    },
+    "biomechanics_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "biomedical_devices_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "biomedical_engineering_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "biomedical_imaging_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "biomimicry_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "black_hole_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "blockchain_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "book_history_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "botany_concept": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "concept"
+    },
+    "boundary_conditions_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "bureaucracy_concept": {
+      "domains": [
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "byzantine_empire_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "calculus_field": {
+      "domains": [
+        "MAT"
+      ],
+      "type": "field"
+    },
+    "calligraphy_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "canon_formation_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "capitalism_concept": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cardiology_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "carl_friedrich_gauss_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "catalysis_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "category_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "causality_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "causation_in_history_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cell_biology_concept": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "concept"
+    },
+    "cell_theory_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "ceramics_art_concept": {
+      "domains": [
+        "ART",
+        "CHE",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "chaos_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "charles_darwin_person": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "chemical_bonding_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "chemical_ecology_concept": {
+      "domains": [
+        "BIO",
+        "CHE"
+      ],
+      "type": "concept"
+    },
+    "chemical_engineering_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "chemical_equilibrium_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "chemical_safety_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "chemical_thermodynamics_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "chemistry_field": {
+      "domains": [
+        "CHE"
+      ],
+      "type": "field"
+    },
+    "chiaroscuro_concept": {
+      "domains": [
+        "ART",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "chinese_invention_of_paper_event": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "chirality_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "cinema_studies_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "civil_engineering_concept": {
+      "domains": [
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "classical_mechanics_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "classical_music_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "classification_and_taxonomy_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "claude_shannon_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "climate_history_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "climate_science_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "clinical_trials_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cliometrics_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cloud_computing_concept": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "coevolution_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_architecture_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_bias_concept": {
+      "domains": [
+        "BIO",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_development_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_linguistics_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_modeling_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cognitive_science_field": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "field"
+    },
+    "cold_war_concept": {
+      "domains": [
+        "HIS",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cold_war_science_concept": {
+      "domains": [
+        "HIS",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "collective_action_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "colloid_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "colonialism_legacy_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "color_theory_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "combinatorics_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "combustion_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "communication_networks_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "comparative_literature_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "comparative_mythology_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "comparative_politics_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "comparative_religion_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "complex_systems_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "composition_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "computation_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "computational_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "computational_linguistics_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "computer_networks_concept": {
+      "domains": [
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "computer_science_field": {
+      "domains": [
+        "MAT",
+        "TEC"
+      ],
+      "type": "field"
+    },
+    "computer_vision_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "condensed_matter_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "confucianism_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "connected_history_concept": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "consciousness_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "conservation_biology_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "conservation_laws_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "conservation_principles_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "constraint_satisfaction_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "control_theory_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "coordination_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE"
+      ],
+      "type": "concept"
+    },
+    "copernican_revolution_event": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "cosmology_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "counterfactual_history_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "counterpoint_concept": {
+      "domains": [
+        "ART",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "creativity_concept": {
+      "domains": [
+        "ART",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "crispr_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cross_cultural_exchange_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cryptography_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "crystal_structure_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "cubism_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "cultural_anthropology_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cultural_heritage_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cultural_relativism_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "cybersecurity_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "cybersecurity_engineering_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "dance_notation_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "dark_matter_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "darwinian_synthesis_event": {
+      "domains": [
+        "BIO",
+        "MAT"
+      ],
+      "type": "event"
+    },
+    "data_science_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "data_structures_concept": {
+      "domains": [
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "database_systems_concept": {
+      "domains": [
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "decision_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "decolonization_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "decolonization_historiography_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "deep_learning_concept": {
+      "domains": [
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "democracy_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "demography_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "derivative_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "development_of_internet_event": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "developmental_biology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "deviance_and_social_control_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "diagnostic_reasoning_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "differential_equations_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "differential_geometry_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "diffusion_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "digital_art_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "digital_humanities_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "digital_sociology_concept": {
+      "domains": [
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "digital_twin_concept": {
+      "domains": [
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "dimensional_analysis_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "diplomatic_history_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "discourse_analysis_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "discovery_of_dna_structure_event": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "event"
+    },
+    "discovery_of_penicillin_event": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "event"
+    },
+    "distributed_computing_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "distributed_systems_concept": {
+      "domains": [
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "dmitri_mendeleev_person": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "dna_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "documentary_film_concept": {
+      "domains": [
+        "ART",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "documentary_tradition_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "dorothy_hodgkin_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "person"
+    },
+    "drug_resistance_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "duality_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "dynamical_systems_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "ecology_field": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "field"
+    },
+    "economic_development_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "economic_history_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "economics_field": {
+      "domains": [
+        "MAT",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "econophysics_concept": {
+      "domains": [
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "ecosystem_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "edge_computing_concept": {
+      "domains": [
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "electrochemistry_applications_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "electrochemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "electromagnetic_radiation_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "electromagnetic_theory_concept": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "electromagnetism_field": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "electronic_music_concept": {
+      "domains": [
+        "ART",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "electrostatics_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "emergence_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "emergency_medicine_concept": {
+      "domains": [
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "emmy_noether_person": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "empire_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "empiricism_concept": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "endocrinology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "energy_transformation_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "engineering_field": {
+      "domains": [
+        "ENG"
+      ],
+      "type": "field"
+    },
+    "enlightenment_event": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "entropy_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "environmental_economics_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "environmental_engineering_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "environmental_history_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "environmental_science_field": {
+      "domains": [
+        "BIO",
+        "CHE"
+      ],
+      "type": "field"
+    },
+    "epidemiological_modeling_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "epidemiological_transition_concept": {
+      "domains": [
+        "HIS",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "epidemiology_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "epigenetics_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "epistemology_concept": {
+      "domains": [
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "epistemology_field": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "field"
+    },
+    "equilibrium_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "ethical_frameworks_concept": {
+      "domains": [
+        "HIS",
+        "MED",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "ethics_concept": {
+      "domains": [
+        "MED",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "ethics_field": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "field"
+    },
+    "ethics_of_care_concept": {
+      "domains": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "ethnomusicology_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "euclid_person": {
+      "domains": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "person"
+    },
+    "evidence_based_medicine_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "evolution_field": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "field"
+    },
+    "evolution_of_cooperation_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "evolutionary_developmental_biology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "existentialism_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "expressionism_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "feedback_control_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "feedback_loops_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "film_language_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "finite_element_method_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "first_wave_feminism_event": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "fluid_dynamics_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "fluid_mechanics_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "food_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "food_culture_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "forensic_science_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "formal_logic_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "fourier_analysis_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "free_will_concept": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "french_revolution_event": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "fundamental_theorem_of_calculus_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "galileo_galilei_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "game_art_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "game_theory_applications_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "game_theory_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "game_theory_field": {
+      "domains": [
+        "MAT",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "gender_studies_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "gene_expression_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "genetic_engineering_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "genetic_regulation_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "genetics_field": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "field"
+    },
+    "genomics_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "geographic_information_systems_concept": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "geometry_field": {
+      "domains": [
+        "MAT"
+      ],
+      "type": "field"
+    },
+    "geomorphology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "HIS",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "geriatrics_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "germ_theory_acceptance_event": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "event"
+    },
+    "germ_theory_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "global_health_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "globalization_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "golden_ratio_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "gothic_architecture_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "gottfried_leibniz_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "graph_theory_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "gravitational_force_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "greek_golden_age_event": {
+      "domains": [
+        "ART",
+        "HIS",
+        "MAT",
+        "PHI"
+      ],
+      "type": "event"
+    },
+    "green_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "gregor_mendel_person": {
+      "domains": [
+        "BIO",
+        "MAT"
+      ],
+      "type": "person"
+    },
+    "group_theory_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "harmony_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "hermeneutics_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "hippocrates_person": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI"
+      ],
+      "type": "person"
+    },
+    "historical_materialism_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "historical_method_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "historiographical_schools_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "historiography_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "historiography_field": {
+      "domains": [
+        "HIS"
+      ],
+      "type": "field"
+    },
+    "history_field": {
+      "domains": [
+        "HIS"
+      ],
+      "type": "field"
+    },
+    "history_from_below_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "history_of_emotions_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "history_of_mathematics_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "history_of_medicine_concept": {
+      "domains": [
+        "HIS",
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "history_of_science_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "history_of_technology_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "homeostasis_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "human_computer_interaction_concept": {
+      "domains": [
+        "ART",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "human_genome_project_event": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "humanities_field": {
+      "domains": [
+        "HUM"
+      ],
+      "type": "field"
+    },
+    "hydraulic_engineering_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "ibn_khaldun_person": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "iconography_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "identity_politics_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "immanuel_kant_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "immune_system_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "immunology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "immunotherapy_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "impressionism_concept": {
+      "domains": [
+        "ART",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "improvisation_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "indigenous_knowledge_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "industrial_revolution_event": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "SOC",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "infectious_disease_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "information_asymmetry_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "information_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "information_theory_field": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "field"
+    },
+    "information_theory_founding_event": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "informed_consent_concept": {
+      "domains": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "inorganic_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "institutional_economics_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "integral_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "intellectual_history_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "interdisciplinarity_concept": {
+      "domains": [
+        "HUM",
+        "MED",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "internet_of_things_concept": {
+      "domains": [
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "intertextuality_concept": {
+      "domains": [
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "invention_of_calculus_event": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "invention_of_computer_event": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "invention_of_printing_press_event": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "isaac_newton_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "islamic_golden_age_event": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "MED",
+        "PHI"
+      ],
+      "type": "event"
+    },
+    "james_clerk_maxwell_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "jazz_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "johann_sebastian_bach_person": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHI"
+      ],
+      "type": "person"
+    },
+    "john_maynard_keynes_person": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "john_von_neumann_person": {
+      "domains": [
+        "MAT",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "karl_marx_person": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "labor_economics_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "landscape_architecture_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "landscape_painting_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "language_and_thought_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "language_endangerment_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "laser_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "law_field": {
+      "domains": [
+        "PHI",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "learning_theory_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "leonardo_da_vinci_person": {
+      "domains": [
+        "ART",
+        "BIO",
+        "ENG",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "leonhard_euler_person": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "limit_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "linear_algebra_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "linearity_and_nonlinearity_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "linguistics_field": {
+      "domains": [
+        "HUM",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "literary_criticism_concept": {
+      "domains": [
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "logic_field": {
+      "domains": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "field"
+    },
+    "longue_duree_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "louis_pasteur_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "person"
+    },
+    "ludwig_wittgenstein_person": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "PHI"
+      ],
+      "type": "person"
+    },
+    "machine_learning_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "manhattan_project_event": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "marie_curie_person": {
+      "domains": [
+        "CHE",
+        "MED",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "mass_spectrometry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "material_culture_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "materiality_in_art_concept": {
+      "domains": [
+        "ART",
+        "CHE",
+        "ENG",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "materials_by_design_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "materials_characterization_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "materials_engineering_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "materials_science_field": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "mathematical_biology_concept": {
+      "domains": [
+        "BIO",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "mathematical_logic_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "mathematical_music_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "mathematical_proof_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "mathematics_field": {
+      "domains": [
+        "MAT"
+      ],
+      "type": "field"
+    },
+    "max_weber_person": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "measure_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "measurement_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "mechatronics_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "media_theory_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "medical_anthropology_concept": {
+      "domains": [
+        "HUM",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "medical_ethics_concept": {
+      "domains": [
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "medical_imaging_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "medicinal_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "medicine_field": {
+      "domains": [
+        "MED"
+      ],
+      "type": "field"
+    },
+    "medieval_period_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "meiji_restoration_concept": {
+      "domains": [
+        "HIS",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "memory_studies_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "mereology_concept": {
+      "domains": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "metabolism_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "michel_foucault_person": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "microbiology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "microbiome_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "microelectromechanical_systems_concept": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "microhistory_concept": {
+      "domains": [
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "military_history_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "mimesis_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "minimalism_art_concept": {
+      "domains": [
+        "ART",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "modal_logic_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "modeling_and_simulation_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "modernism_art_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "modernization_theory_concept": {
+      "domains": [
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "modularity_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "molecular_structure_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "mongol_empire_concept": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "mosaic_art_concept": {
+      "domains": [
+        "ART",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "muhammad_al_khwarizmi_person": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "museum_studies_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "museum_theory_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "music_cognition_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "music_theory_field": {
+      "domains": [
+        "ART",
+        "MAT"
+      ],
+      "type": "field"
+    },
+    "musical_form_concept": {
+      "domains": [
+        "ART",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "mythology_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "nanotechnology_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "narrative_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "narrative_theory_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "narratology_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "nationalism_concept": {
+      "domains": [
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "natural_language_processing_applications_concept": {
+      "domains": [
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "natural_language_processing_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "natural_selection_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "nature_vs_nurture_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "neolithic_revolution_event": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "network_effects_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "network_theory_concept": {
+      "domains": [
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "neuroaesthetics_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "neurodegenerative_disease_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "neuroimaging_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "neuroplasticity_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "neuroscience_concepts_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "neuroscience_field": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "field"
+    },
+    "neurotransmission_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "niels_bohr_person": {
+      "domains": [
+        "CHE",
+        "PHI",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "niklas_luhmann_person": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "nikola_tesla_person": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "noam_chomsky_person": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "PHI",
+        "TEC"
+      ],
+      "type": "person"
+    },
+    "non_euclidean_geometry_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "nonlinear_dynamics_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "novel_form_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "nuclear_chemistry_applications_concept": {
+      "domains": [
+        "CHE",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "nuclear_engineering_concept": {
+      "domains": [
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "nuclear_fission_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "nuclear_physics_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "number_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "numerical_analysis_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "numerical_methods_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "nutrition_science_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "oncology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "opera_concept": {
+      "domains": [
+        "ART",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "operating_systems_concept": {
+      "domains": [
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "optics_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "optimization_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "oral_history_methodology_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "oral_poetry_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "oral_tradition_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "orchestration_concept": {
+      "domains": [
+        "ART",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "organic_chemistry_concept": {
+      "domains": [
+        "CHE"
+      ],
+      "type": "concept"
+    },
+    "organic_synthesis_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "oscillations_and_waves_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "ottoman_empire_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "pain_science_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "palliative_care_concept": {
+      "domains": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "pandemic_dynamics_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "paradigm_shifts_concept": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "particle_physics_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "pathology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "pathophysiology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "patronage_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "pattern_recognition_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "pediatrics_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "performance_art_concept": {
+      "domains": [
+        "ART",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "periodic_law_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "periodization_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "perspective_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "perspective_drawing_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "petrochemistry_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "pharmacology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "phase_transitions_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "phenomenology_concept": {
+      "domains": [
+        "HUM",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "philology_concept": {
+      "domains": [
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "philosophy_field": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "field"
+    },
+    "philosophy_of_art_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_biology_concept": {
+      "domains": [
+        "BIO",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_economics_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_history_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_language_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_mathematics_concept": {
+      "domains": [
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_mind_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "philosophy_of_science_field": {
+      "domains": [
+        "HIS",
+        "PHI"
+      ],
+      "type": "field"
+    },
+    "philosophy_of_technology_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "phonology_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "photochemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "photography_history_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "photosynthesis_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "photovoltaics_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "physics_field": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "physiology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "placebo_effect_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "plague_history_concept": {
+      "domains": [
+        "HIS",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "plasma_physics_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "plate_tectonics_concept": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "plato_person": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "poetics_concept": {
+      "domains": [
+        "ART",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "political_philosophy_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "political_polarization_concept": {
+      "domains": [
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "political_science_field": {
+      "domains": [
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "polymer_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "polymer_science_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "population_dynamics_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "postcolonial_literature_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "postcolonial_theory_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "postmodernism_art_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "power_structures_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "power_systems_concept": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "pragmatics_concept": {
+      "domains": [
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "pragmatism_concept": {
+      "domains": [
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "precision_medicine_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "primary_sources_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "printing_revolution_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "printmaking_history_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "probability_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "protein_structure_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "proteomics_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "psychiatry_concept": {
+      "domains": [
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "psychology_field": {
+      "domains": [
+        "BIO",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "public_health_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "public_history_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "publication_of_origin_of_species_event": {
+      "domains": [
+        "BIO",
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "event"
+    },
+    "publication_of_principia_event": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "quantum_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "quantum_computing_concept": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "quantum_entanglement_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "quantum_field_theory_concept": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "quantum_mechanics_field": {
+      "domains": [
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "quantum_revolution_event": {
+      "domains": [
+        "CHE",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "rachel_carson_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "radioactivity_concept": {
+      "domains": [
+        "CHE",
+        "MED",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "randomized_controlled_trial_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "randomness_and_determinism_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "rationalism_concept": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "reaction_kinetics_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "real_analysis_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "recursion_concept": {
+      "domains": [
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "redox_reactions_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "reductionism_vs_holism_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "regenerative_medicine_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "rehabilitation_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "relativity_general_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "religion_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "renaissance_event": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "event"
+    },
+    "renewable_energy_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "representation_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "research_methodology_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "resilience_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "restoration_and_conservation_concept": {
+      "domains": [
+        "ART",
+        "CHE",
+        "ENG",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "restorative_justice_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "rhetoric_classical_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "rhetoric_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "robotics_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "robotics_engineering_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "romanticism_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "rosalind_franklin_person": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY"
+      ],
+      "type": "person"
+    },
+    "scale_invariance_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "science_and_religion_concept": {
+      "domains": [
+        "HIS",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "science_and_technology_studies_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "science_communication_concept": {
+      "domains": [
+        "HUM",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "science_field": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "scientific_method_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "scientific_revolution_event": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "sculpture_concept": {
+      "domains": [
+        "ART",
+        "ENG"
+      ],
+      "type": "concept"
+    },
+    "self_organization_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "semantics_concept": {
+      "domains": [
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "semiconductor_concept": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "semiconductor_physics_concept": {
+      "domains": [
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "semiotics_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "sensory_systems_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "set_theory_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "sigmund_freud_person": {
+      "domains": [
+        "ART",
+        "MED",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "signal_and_noise_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHY",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "signal_processing_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "silk_road_concept": {
+      "domains": [
+        "ENG",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "social_contract_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "social_movements_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "social_network_analysis_concept": {
+      "domains": [
+        "HUM",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "social_network_theory_concept": {
+      "domains": [
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "social_science_field": {
+      "domains": [
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "social_stratification_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "socialism_concept": {
+      "domains": [
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "socialization_concept": {
+      "domains": [
+        "BIO",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "sociolinguistics_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "sociology_field": {
+      "domains": [
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "software_architecture_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "solid_state_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "solid_state_physics_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "sonata_form_concept": {
+      "domains": [
+        "ART",
+        "MAT"
+      ],
+      "type": "concept"
+    },
+    "sound_design_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "spatial_reasoning_concept": {
+      "domains": [
+        "ART",
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "special_relativity_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "spectroscopy_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "sport_science_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "stability_and_instability_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "standard_model_concept": {
+      "domains": [
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "statistical_inference_concept": {
+      "domains": [
+        "MAT",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "statistical_mechanics_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "statistics_field": {
+      "domains": [
+        "MAT",
+        "SOC"
+      ],
+      "type": "field"
+    },
+    "stem_cell_biology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "stem_cells_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "stereochemistry_concept": {
+      "domains": [
+        "CHE"
+      ],
+      "type": "concept"
+    },
+    "stochastic_processes_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MAT",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "street_art_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "structural_engineering_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "structural_mechanics_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "structuralism_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "sublime_concept": {
+      "domains": [
+        "ART",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "superconductivity_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "supply_and_demand_concept": {
+      "domains": [
+        "HIS",
+        "MAT",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "supramolecular_chemistry_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MAT",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "surface_chemistry_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "surgery_history_concept": {
+      "domains": [
+        "ENG",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "surgical_principles_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "surrealism_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "symbiosis_concept": {
+      "domains": [
+        "BIO",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "symmetry_concept": {
+      "domains": [
+        "ART",
+        "CHE",
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "syntax_concept": {
+      "domains": [
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "synthetic_biology_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "systems_biology_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "systems_engineering_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "systems_thinking_concept": {
+      "domains": [
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "taxonomy_concept": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "concept"
+    },
+    "technology_field": {
+      "domains": [
+        "TEC"
+      ],
+      "type": "field"
+    },
+    "telecommunications_concept": {
+      "domains": [
+        "ENG",
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "telecommunications_engineering_concept": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "telemedicine_concept": {
+      "domains": [
+        "MED",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "textile_engineering_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "HIS"
+      ],
+      "type": "concept"
+    },
+    "theater_performance_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "theory_of_relativity_event": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY"
+      ],
+      "type": "event"
+    },
+    "thermochemistry_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "thermodynamic_efficiency_concept": {
+      "domains": [
+        "ENG",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "thermodynamics_field": {
+      "domains": [
+        "CHE",
+        "PHY"
+      ],
+      "type": "field"
+    },
+    "thermodynamics_laws_concept": {
+      "domains": [
+        "CHE",
+        "ENG",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "thought_experiments_concept": {
+      "domains": [
+        "MAT",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "tissue_engineering_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "tonality_concept": {
+      "domains": [
+        "ART",
+        "MAT",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "topology_concept": {
+      "domains": [
+        "MAT",
+        "PHY",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "toxicology_concept": {
+      "domains": [
+        "BIO",
+        "CHE",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "tragedy_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "translation_studies_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "translation_theory_concept": {
+      "domains": [
+        "HUM",
+        "PHI",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "triage_concept": {
+      "domains": [
+        "MED",
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "typography_history_concept": {
+      "domains": [
+        "ART",
+        "HUM",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "ukiyo_e_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "universality_concept": {
+      "domains": [
+        "BIO",
+        "MAT",
+        "PHI",
+        "PHY",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "urbanization_concept": {
+      "domains": [
+        "BIO",
+        "ENG",
+        "HIS",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "utilitarianism_concept": {
+      "domains": [
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "vaccination_invention_event": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "event"
+    },
+    "vaccination_science_concept": {
+      "domains": [
+        "BIO",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "virology_concept": {
+      "domains": [
+        "BIO",
+        "MED"
+      ],
+      "type": "concept"
+    },
+    "virtue_ethics_concept": {
+      "domains": [
+        "PHI"
+      ],
+      "type": "concept"
+    },
+    "visualization_concept": {
+      "domains": [
+        "ART",
+        "ENG",
+        "MAT",
+        "MED",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "wave_particle_duality_concept": {
+      "domains": [
+        "PHI",
+        "PHY"
+      ],
+      "type": "concept"
+    },
+    "william_shakespeare_person": {
+      "domains": [
+        "ART",
+        "HUM",
+        "PHI",
+        "SOC"
+      ],
+      "type": "person"
+    },
+    "womens_health_concept": {
+      "domains": [
+        "HIS",
+        "MED",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "world_literature_concept": {
+      "domains": [
+        "ART",
+        "HIS",
+        "HUM"
+      ],
+      "type": "concept"
+    },
+    "world_systems_theory_concept": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC"
+      ],
+      "type": "concept"
+    },
+    "world_war_one_concept": {
+      "domains": [
+        "HIS",
+        "SOC",
+        "TEC"
+      ],
+      "type": "concept"
+    },
+    "world_war_two_event": {
+      "domains": [
+        "HIS",
+        "PHI",
+        "SOC",
+        "TEC"
+      ],
+      "type": "event"
+    },
+    "zoology_concept": {
+      "domains": [
+        "BIO"
+      ],
+      "type": "concept"
+    }
+  },
+  "layoutInputsFingerprint": "sha256:4436efd532e5aad8c90ca2f42198d9e0a3b0bd27fb7d9661d09cb9dfea17ca8a",
+  "layoutVersion": "main-2.0.0",
+  "nodeSetFingerprint": "sha256:1ba18add14deb45d955aa4604ac1234ad32f251c4ab3600c7564e89dcb205818",
+  "nodes": {
+    "abolition_of_slavery_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -596.02,
+      "y": 399.07
+    },
+    "abstract_algebra_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -36.29,
+      "y": 9.44
+    },
+    "abstraction_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -408.1,
+      "y": 247.6
+    },
+    "acid_base_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 834.15,
+      "y": 127.45
+    },
+    "acid_base_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 972.45,
+      "y": 11.98
+    },
+    "acoustics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 48.49,
+      "y": 19.24
+    },
+    "ada_lovelace_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -308.15,
+      "y": 370.85
+    },
+    "adam_smith_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -275.82,
+      "y": 477.11
+    },
+    "adaptation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 330.53,
+      "y": 547.61
+    },
+    "additive_manufacturing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 617.01,
+      "y": 530.96
+    },
+    "aerospace_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 319.87,
+      "y": 376.85
+    },
+    "aesthetic_experience_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -856.71,
+      "y": 363.23
+    },
+    "aesthetic_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -623.94,
+      "y": 385.47
+    },
+    "aesthetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -550.2,
+      "y": 219.04
+    },
+    "age_of_revolutions_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -793.09,
+      "y": 77.44
+    },
+    "agricultural_revolution_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 98.12,
+      "y": -16.2
+    },
+    "alan_turing_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -245.24,
+      "y": 457.39
+    },
+    "albert_einstein_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -104.19,
+      "y": -134.44
+    },
+    "alexander_fleming_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 845.55,
+      "y": 240.4
+    },
+    "alexander_von_humboldt_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 505.72,
+      "y": -89.22
+    },
+    "algebra_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -128.95,
+      "y": -192.61
+    },
+    "algebraic_topology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -81.93,
+      "y": -158.24
+    },
+    "algorithm_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -209.13,
+      "y": 404.22
+    },
+    "allegory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -900.49,
+      "y": 466.23
+    },
+    "analogy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -280.11,
+      "y": 534.65
+    },
+    "analytical_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 686.63,
+      "y": 142.14
+    },
+    "analytical_method_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 841.54,
+      "y": -67.81
+    },
+    "anatomy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 738.23,
+      "y": 374.88
+    },
+    "ancient_china_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -624.36,
+      "y": -50.71
+    },
+    "ancient_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 249.33,
+      "y": 222.98
+    },
+    "ancient_rome_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -557.19,
+      "y": -14.66
+    },
+    "anesthesia_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1005.86,
+      "y": 145.48
+    },
+    "animation_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -729.2,
+      "y": 222.54
+    },
+    "annales_school_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -429.07,
+      "y": 168.63
+    },
+    "anthropology_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -240.53,
+      "y": 260.67
+    },
+    "antibiotic_resistance_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 696.68,
+      "y": 479.67
+    },
+    "antisepsis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 967.92,
+      "y": 119.51
+    },
+    "antoine_lavoisier_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 639.4,
+      "y": -139.74
+    },
+    "apollo_program_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 279,
+      "y": 595.47
+    },
+    "archaeometry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 251.11,
+      "y": -387.85
+    },
+    "archimedes_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 143.19,
+      "y": 76.66
+    },
+    "architectural_design_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -128.26,
+      "y": 500.26
+    },
+    "architectural_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -474.45,
+      "y": 251.85
+    },
+    "architecture_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -328.39,
+      "y": 89.02
+    },
+    "archival_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -441.15,
+      "y": 581.85
+    },
+    "aristotle_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -487.1,
+      "y": 302.94
+    },
+    "art_and_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -154.99,
+      "y": -164.93
+    },
+    "art_education_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -756.14,
+      "y": 334.96
+    },
+    "art_history_methodology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -922.31,
+      "y": 222.22
+    },
+    "art_market_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -906.37,
+      "y": 62.6
+    },
+    "art_nouveau_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -537.75,
+      "y": 126.04
+    },
+    "art_therapy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -165.23,
+      "y": 226.18
+    },
+    "artificial_intelligence_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -167.55,
+      "y": 630.47
+    },
+    "artistic_movements_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -832.49,
+      "y": 112.08
+    },
+    "arts_field": {
+      "lock": "hard",
+      "x": -900,
+      "y": -100
+    },
+    "astrochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 489.38,
+      "y": -302.57
+    },
+    "astronomy_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 148.87,
+      "y": -170.58
+    },
+    "atlantic_slave_trade_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -748.61,
+      "y": 63.25
+    },
+    "atmospheric_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 540.54,
+      "y": -57.66
+    },
+    "augmented_reality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 155.81,
+      "y": 630.66
+    },
+    "automation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 200.97,
+      "y": 747.51
+    },
+    "autonomous_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -13.86,
+      "y": 819.08
+    },
+    "autonomous_vehicles_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 255.89,
+      "y": 853.98
+    },
+    "axiomatic_system_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -522.22,
+      "y": 174.56
+    },
+    "baroque_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -858,
+      "y": -203.55
+    },
+    "battery_technology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 713.65,
+      "y": 200.75
+    },
+    "bauhaus_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -554.63,
+      "y": 322.87
+    },
+    "behavioral_ecology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 330.67,
+      "y": 302.28
+    },
+    "behavioral_economics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -170.46,
+      "y": 518.04
+    },
+    "behavioral_genetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 427.72,
+      "y": 444.26
+    },
+    "big_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 54.89,
+      "y": -271.28
+    },
+    "bioarchaeology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 63.01,
+      "y": -64.47
+    },
+    "bioethics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 308.61,
+      "y": 475.05
+    },
+    "biogeochemical_cycles_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 690.82,
+      "y": 117.66
+    },
+    "bioinformatics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 509.66,
+      "y": 311.87
+    },
+    "biology_field": {
+      "lock": "hard",
+      "x": 930,
+      "y": 150
+    },
+    "biomechanics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 548.1,
+      "y": 358.97
+    },
+    "biomedical_devices_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 637.98,
+      "y": 815.2
+    },
+    "biomedical_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 668.37,
+      "y": 662.52
+    },
+    "biomedical_imaging_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 515.38,
+      "y": 516.02
+    },
+    "biomimicry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 370.14,
+      "y": 253.42
+    },
+    "black_hole_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 70.17,
+      "y": -218.82
+    },
+    "blockchain_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -6.87,
+      "y": 678.71
+    },
+    "book_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -507.27,
+      "y": 483.33
+    },
+    "botany_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1031.02,
+      "y": 168.39
+    },
+    "boundary_conditions_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 163.17,
+      "y": 185.35
+    },
+    "bureaucracy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -354.23,
+      "y": 764.96
+    },
+    "byzantine_empire_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -614.02,
+      "y": -20.21
+    },
+    "calculus_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -37.15,
+      "y": -61.29
+    },
+    "calligraphy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -917.01,
+      "y": 14.66
+    },
+    "canon_formation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -688.67,
+      "y": 745.62
+    },
+    "capitalism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -439.5,
+      "y": 289.85
+    },
+    "cardiology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 844.26,
+      "y": 664.7
+    },
+    "carl_friedrich_gauss_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 36.74,
+      "y": 91.93
+    },
+    "catalysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 864.33,
+      "y": 85.25
+    },
+    "category_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -284.52,
+      "y": 209.25
+    },
+    "causality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -169.24,
+      "y": 389.73
+    },
+    "causation_in_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -515.08,
+      "y": 106.52
+    },
+    "cell_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1036.15,
+      "y": 202.05
+    },
+    "cell_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 399.09,
+      "y": 298.21
+    },
+    "ceramics_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -271.49,
+      "y": -323.32
+    },
+    "chaos_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 52.11,
+      "y": -4.49
+    },
+    "charles_darwin_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 250.27,
+      "y": 293.58
+    },
+    "chemical_bonding_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 679.92,
+      "y": -160.18
+    },
+    "chemical_ecology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 892.75,
+      "y": -143.53
+    },
+    "chemical_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 564.88,
+      "y": 304.58
+    },
+    "chemical_equilibrium_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 593.26,
+      "y": 66.36
+    },
+    "chemical_safety_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 670.54,
+      "y": 226.22
+    },
+    "chemical_thermodynamics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 582.88,
+      "y": -189.47
+    },
+    "chemistry_field": {
+      "lock": "hard",
+      "x": 720,
+      "y": -260
+    },
+    "chiaroscuro_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -539.56,
+      "y": -200.42
+    },
+    "chinese_invention_of_paper_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -379.72,
+      "y": 280.2
+    },
+    "chirality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 886.54,
+      "y": -53.85
+    },
+    "cinema_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -687.13,
+      "y": 440.12
+    },
+    "civil_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 308.08,
+      "y": 319.86
+    },
+    "classical_mechanics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 186.59,
+      "y": 2.5
+    },
+    "classical_music_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -875.99,
+      "y": -224.6
+    },
+    "classification_and_taxonomy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -84.26,
+      "y": 303.82
+    },
+    "claude_shannon_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 75.78,
+      "y": 345.97
+    },
+    "climate_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -144.86,
+      "y": -296.93
+    },
+    "climate_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 435.17,
+      "y": 11.14
+    },
+    "clinical_trials_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 112.88,
+      "y": 551.76
+    },
+    "cliometrics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -428.11,
+      "y": -50.95
+    },
+    "cloud_computing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 61.82,
+      "y": 906.93
+    },
+    "coevolution_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 364.94,
+      "y": 353.33
+    },
+    "cognitive_architecture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 36.34,
+      "y": 703.06
+    },
+    "cognitive_bias_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -101.24,
+      "y": 658.31
+    },
+    "cognitive_development_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -90.68,
+      "y": 608.81
+    },
+    "cognitive_linguistics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -298.64,
+      "y": 664.55
+    },
+    "cognitive_modeling_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -41.82,
+      "y": 682.3
+    },
+    "cognitive_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -28.1,
+      "y": 599.4
+    },
+    "cold_war_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -275.67,
+      "y": 299.56
+    },
+    "cold_war_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -115.61,
+      "y": 86.31
+    },
+    "collective_action_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -254.48,
+      "y": 425.66
+    },
+    "colloid_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 952.81,
+      "y": -34.59
+    },
+    "colonialism_legacy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -691.75,
+      "y": 188.88
+    },
+    "color_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -12.16,
+      "y": 54.08
+    },
+    "combinatorics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 114.34,
+      "y": 155.46
+    },
+    "combustion_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 703.65,
+      "y": 61.34
+    },
+    "communication_networks_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 78.68,
+      "y": 706.98
+    },
+    "comparative_literature_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -770.86,
+      "y": 489.46
+    },
+    "comparative_mythology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -787.35,
+      "y": 759.81
+    },
+    "comparative_politics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -500.13,
+      "y": 507.99
+    },
+    "comparative_religion_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -829.77,
+      "y": 254.31
+    },
+    "complex_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 187.09,
+      "y": 337.99
+    },
+    "composition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -655.25,
+      "y": 27.12
+    },
+    "computation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -9.23,
+      "y": 446.89
+    },
+    "computational_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 374.14,
+      "y": -18.84
+    },
+    "computational_linguistics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -285.67,
+      "y": 717.64
+    },
+    "computer_networks_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 64.12,
+      "y": 787.06
+    },
+    "computer_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -92.69,
+      "y": 513.63
+    },
+    "computer_vision_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 326.48,
+      "y": 627.49
+    },
+    "condensed_matter_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 381.17,
+      "y": -95.26
+    },
+    "confucianism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -738.75,
+      "y": 145.11
+    },
+    "connected_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -656.9,
+      "y": -90.38
+    },
+    "consciousness_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -49.24,
+      "y": 525.35
+    },
+    "conservation_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 603.71,
+      "y": 475.88
+    },
+    "conservation_laws_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 334.5,
+      "y": -124.35
+    },
+    "conservation_principles_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 283.35,
+      "y": -117.85
+    },
+    "constraint_satisfaction_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -85.51,
+      "y": 327.79
+    },
+    "control_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 398.19,
+      "y": 590.98
+    },
+    "coordination_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 954.54,
+      "y": -211.21
+    },
+    "copernican_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -334.7,
+      "y": -199.52
+    },
+    "cosmology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -75.91,
+      "y": -214.78
+    },
+    "counterfactual_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -504.18,
+      "y": -6.88
+    },
+    "counterpoint_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -616.59,
+      "y": -188.16
+    },
+    "creativity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -451.94,
+      "y": 380.77
+    },
+    "crispr_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 857.61,
+      "y": 507.21
+    },
+    "cross_cultural_exchange_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -727.95,
+      "y": 179.27
+    },
+    "cryptography_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -232.25,
+      "y": 221.82
+    },
+    "crystal_structure_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 752.47,
+      "y": -96.82
+    },
+    "cubism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -849.25,
+      "y": 2.62
+    },
+    "cultural_anthropology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -579.39,
+      "y": 710.36
+    },
+    "cultural_heritage_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -572.09,
+      "y": 340.85
+    },
+    "cultural_relativism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -733.15,
+      "y": 533.58
+    },
+    "cybersecurity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 65.15,
+      "y": 729.44
+    },
+    "cybersecurity_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 177.38,
+      "y": 641.18
+    },
+    "dance_notation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -786.56,
+      "y": -3.04
+    },
+    "dark_matter_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 105.71,
+      "y": -259.61
+    },
+    "darwinian_synthesis_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 329.46,
+      "y": 71.14
+    },
+    "data_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 84.89,
+      "y": 602.86
+    },
+    "data_structures_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -56.6,
+      "y": 333.49
+    },
+    "database_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 32.42,
+      "y": 732.87
+    },
+    "decision_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -305.15,
+      "y": 551.51
+    },
+    "decolonization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -677.02,
+      "y": 59.43
+    },
+    "decolonization_historiography_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -811.43,
+      "y": 190.41
+    },
+    "deep_learning_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 72.88,
+      "y": 539.57
+    },
+    "democracy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -647.07,
+      "y": 227.09
+    },
+    "demography_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 16.61,
+      "y": 400.21
+    },
+    "derivative_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 151.51,
+      "y": 37.34
+    },
+    "development_of_internet_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 36.02,
+      "y": 794.23
+    },
+    "developmental_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 645.7,
+      "y": 123.3
+    },
+    "deviance_and_social_control_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -500.07,
+      "y": 450.52
+    },
+    "diagnostic_reasoning_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 348.65,
+      "y": 517.56
+    },
+    "differential_equations_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 437.64,
+      "y": 191.02
+    },
+    "differential_geometry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -32.94,
+      "y": -141.04
+    },
+    "diffusion_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 252.68,
+      "y": 144.62
+    },
+    "digital_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -502.23,
+      "y": 198.8
+    },
+    "digital_humanities_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -427.38,
+      "y": 542.54
+    },
+    "digital_sociology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -151.51,
+      "y": 967.33
+    },
+    "digital_twin_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 426.91,
+      "y": 853.1
+    },
+    "dimensional_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 382.44,
+      "y": -41.36
+    },
+    "diplomatic_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -473.78,
+      "y": 108.38
+    },
+    "discourse_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -790.47,
+      "y": 707.07
+    },
+    "discovery_of_dna_structure_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 949.89,
+      "y": 32.69
+    },
+    "discovery_of_penicillin_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 998.74,
+      "y": 299.15
+    },
+    "distributed_computing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 158.45,
+      "y": 681.7
+    },
+    "distributed_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 229.32,
+      "y": 752.7
+    },
+    "dmitri_mendeleev_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 353.84,
+      "y": -206.33
+    },
+    "dna_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 677.06,
+      "y": 280.22
+    },
+    "documentary_film_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -631.72,
+      "y": 535.38
+    },
+    "documentary_tradition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -924.49,
+      "y": 374.84
+    },
+    "dorothy_hodgkin_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 948.75,
+      "y": -71.35
+    },
+    "drug_resistance_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 647.19,
+      "y": 555.39
+    },
+    "duality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -136.42,
+      "y": 122.3
+    },
+    "dynamical_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 330.15,
+      "y": 196.52
+    },
+    "ecology_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 611.73,
+      "y": 208.84
+    },
+    "economic_development_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -359.15,
+      "y": 481.36
+    },
+    "economic_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -407.77,
+      "y": 54.21
+    },
+    "economics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -192.55,
+      "y": 280.73
+    },
+    "econophysics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 44.17,
+      "y": 134.62
+    },
+    "ecosystem_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 214.91,
+      "y": 255.91
+    },
+    "edge_computing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 294.89,
+      "y": 935.95
+    },
+    "electrochemistry_applications_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 653.18,
+      "y": 290.88
+    },
+    "electrochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 723.49,
+      "y": 277.32
+    },
+    "electromagnetic_radiation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 535.61,
+      "y": 332.24
+    },
+    "electromagnetic_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 367.83,
+      "y": 98.98
+    },
+    "electromagnetism_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 397.37,
+      "y": 28.6
+    },
+    "electronic_music_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -220.11,
+      "y": 113.52
+    },
+    "electrostatics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 571.47,
+      "y": -6.5
+    },
+    "emergence_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -9.04,
+      "y": 421.72
+    },
+    "emergency_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 809.85,
+      "y": 757.39
+    },
+    "emmy_noether_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 20.71,
+      "y": -253.98
+    },
+    "empire_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -708.16,
+      "y": 25.31
+    },
+    "empiricism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -531.31,
+      "y": 311.23
+    },
+    "endocrinology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 977.14,
+      "y": 265.8
+    },
+    "energy_transformation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 583.51,
+      "y": 98.28
+    },
+    "engineering_field": {
+      "lock": "hard",
+      "x": 520,
+      "y": 680
+    },
+    "enlightenment_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -728.13,
+      "y": 383.2
+    },
+    "entropy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 189.52,
+      "y": 98.23
+    },
+    "environmental_economics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 489.75,
+      "y": 445.3
+    },
+    "environmental_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 657.08,
+      "y": 446.36
+    },
+    "environmental_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -14.21,
+      "y": -91.58
+    },
+    "environmental_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 636.46,
+      "y": 86.44
+    },
+    "epidemiological_modeling_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 486.45,
+      "y": 542.5
+    },
+    "epidemiological_transition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 201.05,
+      "y": 168.72
+    },
+    "epidemiology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 479.47,
+      "y": 480.84
+    },
+    "epigenetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 917.45,
+      "y": 362.22
+    },
+    "epistemology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -322.96,
+      "y": 505.26
+    },
+    "epistemology_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -706.4,
+      "y": 113.52
+    },
+    "equilibrium_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 466.63,
+      "y": 205.31
+    },
+    "ethical_frameworks_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -167.4,
+      "y": 459.57
+    },
+    "ethics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -55.47,
+      "y": 639.25
+    },
+    "ethics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -315.79,
+      "y": 467.94
+    },
+    "ethics_of_care_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -331.99,
+      "y": 622.57
+    },
+    "ethnomusicology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -827.67,
+      "y": 374.39
+    },
+    "euclid_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -542.91,
+      "y": 10.73
+    },
+    "evidence_based_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 128.01,
+      "y": 376.5
+    },
+    "evolution_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 562.1,
+      "y": 224.93
+    },
+    "evolution_of_cooperation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 78.71,
+      "y": 399.83
+    },
+    "evolutionary_developmental_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 502.85,
+      "y": -48.03
+    },
+    "existentialism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -699.68,
+      "y": 516.22
+    },
+    "expressionism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -857.29,
+      "y": 156.04
+    },
+    "feedback_control_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 347.62,
+      "y": 467.34
+    },
+    "feedback_loops_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 426.67,
+      "y": 534.88
+    },
+    "film_language_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -797.42,
+      "y": 379.7
+    },
+    "finite_element_method_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 256.6,
+      "y": 344.55
+    },
+    "first_wave_feminism_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -629.16,
+      "y": 471.04
+    },
+    "fluid_dynamics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 434.34,
+      "y": 125.99
+    },
+    "fluid_mechanics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 274.39,
+      "y": 110.8
+    },
+    "food_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 831.18,
+      "y": 47.78
+    },
+    "food_culture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -448.49,
+      "y": 250.86
+    },
+    "forensic_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 476.31,
+      "y": 128.13
+    },
+    "formal_logic_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -403.53,
+      "y": 381.84
+    },
+    "fourier_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 132.41,
+      "y": 225.68
+    },
+    "free_will_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -417.64,
+      "y": 464.06
+    },
+    "french_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -731.01,
+      "y": 314.52
+    },
+    "fundamental_theorem_of_calculus_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 105.83,
+      "y": -181.82
+    },
+    "galileo_galilei_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -72.32,
+      "y": 14.53
+    },
+    "game_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -706.09,
+      "y": 364.36
+    },
+    "game_theory_applications_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 138.21,
+      "y": 558.14
+    },
+    "game_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -2.68,
+      "y": 361.23
+    },
+    "game_theory_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -157.83,
+      "y": 345.29
+    },
+    "gender_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -780.9,
+      "y": 561.93
+    },
+    "gene_expression_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1003.63,
+      "y": 385.47
+    },
+    "genetic_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 659.09,
+      "y": 523.35
+    },
+    "genetic_regulation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 701.3,
+      "y": 298.3
+    },
+    "genetics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 862.13,
+      "y": 199.68
+    },
+    "genomics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 746.89,
+      "y": 446.37
+    },
+    "geographic_information_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 167.24,
+      "y": 842.01
+    },
+    "geometry_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -362.12,
+      "y": -127.74
+    },
+    "geomorphology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 526.36,
+      "y": -196.94
+    },
+    "geriatrics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 665.61,
+      "y": 588.34
+    },
+    "germ_theory_acceptance_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 835.78,
+      "y": 278.35
+    },
+    "germ_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 667.08,
+      "y": 310.44
+    },
+    "global_health_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 434.21,
+      "y": 655.16
+    },
+    "globalization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -356.22,
+      "y": 513.09
+    },
+    "golden_ratio_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -366.66,
+      "y": -203.15
+    },
+    "gothic_architecture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -481.95,
+      "y": -73.85
+    },
+    "gottfried_leibniz_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -231.64,
+      "y": 300.69
+    },
+    "graph_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 34.34,
+      "y": 441.61
+    },
+    "gravitational_force_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 185.28,
+      "y": 26.47
+    },
+    "greek_golden_age_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -709.58,
+      "y": -26.83
+    },
+    "green_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 526.82,
+      "y": 210.81
+    },
+    "gregor_mendel_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 387.71,
+      "y": 76.89
+    },
+    "group_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 214.68,
+      "y": -224.64
+    },
+    "harmony_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -230.85,
+      "y": -119.77
+    },
+    "hermeneutics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -699.67,
+      "y": 646.16
+    },
+    "hippocrates_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 312.82,
+      "y": 435.41
+    },
+    "historical_materialism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -766.09,
+      "y": 145.1
+    },
+    "historical_method_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -675.25,
+      "y": 295.77
+    },
+    "historiographical_schools_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -580.17,
+      "y": 269.03
+    },
+    "historiography_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -808.02,
+      "y": -76.79
+    },
+    "historiography_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -733.44,
+      "y": -198.78
+    },
+    "history_field": {
+      "lock": "hard",
+      "x": -600,
+      "y": -420
+    },
+    "history_from_below_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -648.7,
+      "y": 172.59
+    },
+    "history_of_emotions_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -308.53,
+      "y": 162.98
+    },
+    "history_of_mathematics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -471.06,
+      "y": -180.79
+    },
+    "history_of_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -155.13,
+      "y": 179.85
+    },
+    "history_of_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -187.22,
+      "y": 16.56
+    },
+    "history_of_technology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -134.02,
+      "y": 201.56
+    },
+    "homeostasis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 797.29,
+      "y": 419.54
+    },
+    "human_computer_interaction_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -277.12,
+      "y": 623.42
+    },
+    "human_genome_project_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 675.39,
+      "y": 499.36
+    },
+    "humanities_field": {
+      "lock": "hard",
+      "x": -600,
+      "y": 620
+    },
+    "hydraulic_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 254.26,
+      "y": 191.65
+    },
+    "ibn_khaldun_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -641.31,
+      "y": 71.01
+    },
+    "iconography_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -899.04,
+      "y": 136.56
+    },
+    "identity_politics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -662.22,
+      "y": 497.45
+    },
+    "immanuel_kant_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -623.59,
+      "y": 427.17
+    },
+    "immune_system_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 864.58,
+      "y": 270.28
+    },
+    "immunology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 989.05,
+      "y": 351.11
+    },
+    "immunotherapy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 764.48,
+      "y": 315.84
+    },
+    "impressionism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -545.47,
+      "y": -160.3
+    },
+    "improvisation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -289.3,
+      "y": 232.77
+    },
+    "indigenous_knowledge_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -393.06,
+      "y": 315.2
+    },
+    "industrial_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -64.39,
+      "y": 447.32
+    },
+    "infectious_disease_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 754.89,
+      "y": 244.95
+    },
+    "information_asymmetry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -66.01,
+      "y": 596.79
+    },
+    "information_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 30.75,
+      "y": 362.75
+    },
+    "information_theory_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -36.42,
+      "y": 378.72
+    },
+    "information_theory_founding_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 189.07,
+      "y": 430.46
+    },
+    "informed_consent_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 83.72,
+      "y": 654.37
+    },
+    "inorganic_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 719.17,
+      "y": -112.66
+    },
+    "institutional_economics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -333.67,
+      "y": 422.76
+    },
+    "integral_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 294.56,
+      "y": 97.79
+    },
+    "intellectual_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -580.81,
+      "y": 233.35
+    },
+    "interdisciplinarity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -305.16,
+      "y": 604.3
+    },
+    "internet_of_things_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 215.8,
+      "y": 907.65
+    },
+    "intertextuality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -767.84,
+      "y": 662.85
+    },
+    "invention_of_calculus_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -6.39,
+      "y": -181.86
+    },
+    "invention_of_computer_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 46.04,
+      "y": 617.02
+    },
+    "invention_of_printing_press_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -400.22,
+      "y": 435.12
+    },
+    "isaac_newton_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -116.56,
+      "y": -53.09
+    },
+    "islamic_golden_age_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -230.48,
+      "y": 51.27
+    },
+    "james_clerk_maxwell_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 254.9,
+      "y": 61.58
+    },
+    "jazz_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -709.34,
+      "y": -67.76
+    },
+    "johann_sebastian_bach_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -579.03,
+      "y": -120.34
+    },
+    "john_maynard_keynes_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -387.72,
+      "y": 527.4
+    },
+    "john_von_neumann_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 119.72,
+      "y": 341.15
+    },
+    "karl_marx_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -560.04,
+      "y": 393.69
+    },
+    "labor_economics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -295.84,
+      "y": 340.64
+    },
+    "landscape_architecture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -287.29,
+      "y": 273.48
+    },
+    "landscape_painting_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -979.92,
+      "y": 81.31
+    },
+    "language_and_thought_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -380.21,
+      "y": 695.81
+    },
+    "language_endangerment_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -736.18,
+      "y": 465.14
+    },
+    "laser_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 421.83,
+      "y": 242.89
+    },
+    "law_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -558.88,
+      "y": 472.35
+    },
+    "learning_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 40.55,
+      "y": 588.54
+    },
+    "leonardo_da_vinci_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -162.42,
+      "y": 36.16
+    },
+    "leonhard_euler_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 70.57,
+      "y": 124.92
+    },
+    "limit_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1.73,
+      "y": -219.27
+    },
+    "linear_algebra_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 111.32,
+      "y": 393.75
+    },
+    "linearity_and_nonlinearity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 268.01,
+      "y": 250.8
+    },
+    "linguistics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -459.45,
+      "y": 736.82
+    },
+    "literary_criticism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -874.18,
+      "y": 614.71
+    },
+    "logic_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -614.04,
+      "y": 251.8
+    },
+    "longue_duree_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -182.06,
+      "y": -17.51
+    },
+    "louis_pasteur_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1053.74,
+      "y": 153.8
+    },
+    "ludwig_wittgenstein_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -620.64,
+      "y": 501.89
+    },
+    "machine_learning_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 275.98,
+      "y": 507.2
+    },
+    "manhattan_project_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -38.64,
+      "y": 74.59
+    },
+    "marie_curie_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 606.93,
+      "y": -116.52
+    },
+    "mass_spectrometry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 847.54,
+      "y": -139.26
+    },
+    "material_culture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -572.4,
+      "y": 34.32
+    },
+    "materiality_in_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -254.16,
+      "y": 71.29
+    },
+    "materials_by_design_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 626,
+      "y": 244.06
+    },
+    "materials_characterization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 711.58,
+      "y": 160.56
+    },
+    "materials_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 593.17,
+      "y": 263.3
+    },
+    "materials_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 624.93,
+      "y": 32.54
+    },
+    "mathematical_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 419.78,
+      "y": -22.3
+    },
+    "mathematical_logic_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -342.31,
+      "y": 318.52
+    },
+    "mathematical_music_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -240.36,
+      "y": -263.05
+    },
+    "mathematical_proof_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -431.48,
+      "y": 212.95
+    },
+    "mathematics_field": {
+      "lock": "hard",
+      "x": -260,
+      "y": 0
+    },
+    "max_weber_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -562.57,
+      "y": 431.52
+    },
+    "measure_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -38.85,
+      "y": -104.36
+    },
+    "measurement_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 177.48,
+      "y": 256.25
+    },
+    "mechatronics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 363.67,
+      "y": 661.48
+    },
+    "media_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -517.15,
+      "y": 742.13
+    },
+    "medical_anthropology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 91.25,
+      "y": 838.53
+    },
+    "medical_ethics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 292.94,
+      "y": 629.34
+    },
+    "medical_imaging_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 639.31,
+      "y": 419.6
+    },
+    "medicinal_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1031.26,
+      "y": 72.49
+    },
+    "medicine_field": {
+      "lock": "hard",
+      "x": 800,
+      "y": 520
+    },
+    "medieval_period_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -693.94,
+      "y": -148.63
+    },
+    "meiji_restoration_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -434.71,
+      "y": 123.51
+    },
+    "memory_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -641.13,
+      "y": 140.44
+    },
+    "mereology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -509.35,
+      "y": 222.01
+    },
+    "metabolism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1007.52,
+      "y": 75.96
+    },
+    "michel_foucault_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -811.43,
+      "y": 429.14
+    },
+    "microbiology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 858.93,
+      "y": 319.7
+    },
+    "microbiome_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1061.04,
+      "y": 404.26
+    },
+    "microelectromechanical_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 519.62,
+      "y": 458.91
+    },
+    "microhistory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -686.75,
+      "y": -8.95
+    },
+    "military_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -251.03,
+      "y": 179.31
+    },
+    "mimesis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -973.93,
+      "y": 223.02
+    },
+    "minimalism_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -991.46,
+      "y": 29.69
+    },
+    "modal_logic_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -483.83,
+      "y": 382
+    },
+    "modeling_and_simulation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 111.19,
+      "y": 315.54
+    },
+    "modernism_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -932.99,
+      "y": 134.2
+    },
+    "modernization_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -397.61,
+      "y": 751.35
+    },
+    "modularity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 108.94,
+      "y": 505.58
+    },
+    "molecular_structure_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 704.2,
+      "y": -10.92
+    },
+    "mongol_empire_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -631.04,
+      "y": -113.19
+    },
+    "mosaic_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -849.78,
+      "y": -322.2
+    },
+    "muhammad_al_khwarizmi_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -358.5,
+      "y": 19.07
+    },
+    "museum_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -689.77,
+      "y": 321.08
+    },
+    "museum_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -851.04,
+      "y": 516.01
+    },
+    "music_cognition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -455.43,
+      "y": -107.06
+    },
+    "music_theory_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -520.82,
+      "y": -126.32
+    },
+    "musical_form_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -643.3,
+      "y": -288.23
+    },
+    "mythology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -873.94,
+      "y": 428.24
+    },
+    "nanotechnology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 731.1,
+      "y": 85.82
+    },
+    "narrative_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -383.23,
+      "y": 461.37
+    },
+    "narrative_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -913.99,
+      "y": 504.28
+    },
+    "narratology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -627.02,
+      "y": 731.32
+    },
+    "nationalism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -547.59,
+      "y": 266.93
+    },
+    "natural_language_processing_applications_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -200.29,
+      "y": 883
+    },
+    "natural_language_processing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -178.16,
+      "y": 663.36
+    },
+    "natural_selection_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 114.2,
+      "y": 208.38
+    },
+    "nature_vs_nurture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 91.02,
+      "y": 454.32
+    },
+    "neolithic_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 93.28,
+      "y": 239.38
+    },
+    "network_effects_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 125.99,
+      "y": 687.24
+    },
+    "network_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 27.94,
+      "y": 522.97
+    },
+    "neuroaesthetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -358.32,
+      "y": 151.08
+    },
+    "neurodegenerative_disease_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 957.34,
+      "y": 310.41
+    },
+    "neuroimaging_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 771.91,
+      "y": 610.51
+    },
+    "neuroplasticity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 869.24,
+      "y": 454.86
+    },
+    "neuroscience_concepts_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 612.69,
+      "y": 580.21
+    },
+    "neuroscience_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 467.9,
+      "y": 396.22
+    },
+    "neurotransmission_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 763.45,
+      "y": 272.53
+    },
+    "niels_bohr_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 58.54,
+      "y": -102.76
+    },
+    "niklas_luhmann_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -53.67,
+      "y": 555.59
+    },
+    "nikola_tesla_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 471.78,
+      "y": 569.46
+    },
+    "noam_chomsky_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -235.18,
+      "y": 669.78
+    },
+    "non_euclidean_geometry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -96.12,
+      "y": -15.46
+    },
+    "nonlinear_dynamics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 406.6,
+      "y": 134.83
+    },
+    "novel_form_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -844.57,
+      "y": 391.43
+    },
+    "nuclear_chemistry_applications_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 805.04,
+      "y": -75.06
+    },
+    "nuclear_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 511.33,
+      "y": 401.49
+    },
+    "nuclear_fission_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 561.89,
+      "y": 135.58
+    },
+    "nuclear_physics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 501.03,
+      "y": 106.55
+    },
+    "number_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -287.96,
+      "y": 116.49
+    },
+    "numerical_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 175.51,
+      "y": 456.1
+    },
+    "numerical_methods_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 167.58,
+      "y": 228.71
+    },
+    "nutrition_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 959.58,
+      "y": 282.54
+    },
+    "oncology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1038.64,
+      "y": 275.62
+    },
+    "opera_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -935.78,
+      "y": 97.27
+    },
+    "operating_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 6.33,
+      "y": 737.56
+    },
+    "optics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 40.73,
+      "y": 43.79
+    },
+    "optimization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 168.2,
+      "y": 382.79
+    },
+    "oral_history_methodology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -674.37,
+      "y": 83.28
+    },
+    "oral_poetry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -638.83,
+      "y": 665.25
+    },
+    "oral_tradition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -656.83,
+      "y": 358.18
+    },
+    "orchestration_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -453.54,
+      "y": -262.73
+    },
+    "organic_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 915.67,
+      "y": -107.5
+    },
+    "organic_synthesis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 788.14,
+      "y": 110.59
+    },
+    "oscillations_and_waves_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 313.58,
+      "y": 137.12
+    },
+    "ottoman_empire_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -668.52,
+      "y": -172.31
+    },
+    "pain_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 539.01,
+      "y": 402.51
+    },
+    "palliative_care_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -9,
+      "y": 639.79
+    },
+    "pandemic_dynamics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 398.66,
+      "y": 492.08
+    },
+    "paradigm_shifts_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -231.7,
+      "y": 165.09
+    },
+    "particle_physics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 230.39,
+      "y": -157.27
+    },
+    "pathology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 991.66,
+      "y": 453.5
+    },
+    "pathophysiology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 886.21,
+      "y": 352.53
+    },
+    "patronage_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -674.84,
+      "y": -55.84
+    },
+    "pattern_recognition_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -61.53,
+      "y": 417.36
+    },
+    "pediatrics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 685.34,
+      "y": 619.43
+    },
+    "performance_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -769.48,
+      "y": 270.96
+    },
+    "periodic_law_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 390.12,
+      "y": -248.77
+    },
+    "periodization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -740.58,
+      "y": -29.37
+    },
+    "perspective_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -571.76,
+      "y": 125.8
+    },
+    "perspective_drawing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -413.33,
+      "y": -233.92
+    },
+    "petrochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 720.79,
+      "y": 108.8
+    },
+    "pharmacology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 906.61,
+      "y": 205.76
+    },
+    "phase_transitions_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 286.97,
+      "y": -65.47
+    },
+    "phenomenology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -304.46,
+      "y": 397.6
+    },
+    "philology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -707.11,
+      "y": 151.51
+    },
+    "philosophy_field": {
+      "lock": "hard",
+      "x": -830,
+      "y": 300
+    },
+    "philosophy_of_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -1015.31,
+      "y": 291.67
+    },
+    "philosophy_of_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -112.62,
+      "y": 215.14
+    },
+    "philosophy_of_economics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -441.77,
+      "y": 340.88
+    },
+    "philosophy_of_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -629.88,
+      "y": 329.75
+    },
+    "philosophy_of_language_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -568.34,
+      "y": 576.53
+    },
+    "philosophy_of_mathematics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -549.87,
+      "y": 243.04
+    },
+    "philosophy_of_mind_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -98.95,
+      "y": 560.46
+    },
+    "philosophy_of_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -390.86,
+      "y": -13.22
+    },
+    "philosophy_of_technology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -475.24,
+      "y": 550.29
+    },
+    "phonology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -203.1,
+      "y": 505.29
+    },
+    "photochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 765.57,
+      "y": -150.9
+    },
+    "photography_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -681.86,
+      "y": 218.53
+    },
+    "photosynthesis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 828.26,
+      "y": 91.74
+    },
+    "photovoltaics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 531.96,
+      "y": 126.11
+    },
+    "physics_field": {
+      "lock": "hard",
+      "x": 260,
+      "y": 0
+    },
+    "physiology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 908.68,
+      "y": 329.42
+    },
+    "placebo_effect_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 455.14,
+      "y": 505.07
+    },
+    "plague_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 140.8,
+      "y": 174.63
+    },
+    "plasma_physics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 561.57,
+      "y": 28.92
+    },
+    "plate_tectonics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 350.12,
+      "y": -246.92
+    },
+    "plato_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -765.32,
+      "y": 244.28
+    },
+    "poetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -711.12,
+      "y": 439.8
+    },
+    "political_philosophy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -624.08,
+      "y": 355.89
+    },
+    "political_polarization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -622.09,
+      "y": 849.22
+    },
+    "political_science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -454.96,
+      "y": 478.44
+    },
+    "polymer_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 816.41,
+      "y": 176.01
+    },
+    "polymer_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 849.46,
+      "y": -7.04
+    },
+    "population_dynamics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 432.26,
+      "y": 337.45
+    },
+    "postcolonial_literature_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -818.73,
+      "y": 502
+    },
+    "postcolonial_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -712.49,
+      "y": 474.86
+    },
+    "postmodernism_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -1036.83,
+      "y": 204.79
+    },
+    "power_structures_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -585.23,
+      "y": 513.52
+    },
+    "power_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 320.61,
+      "y": 685.62
+    },
+    "pragmatics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -514.31,
+      "y": 787.99
+    },
+    "pragmatism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -457.86,
+      "y": 640.53
+    },
+    "precision_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 707.41,
+      "y": 365.55
+    },
+    "primary_sources_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -466.89,
+      "y": 201.15
+    },
+    "printing_revolution_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -537.03,
+      "y": 85.89
+    },
+    "printmaking_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -707.77,
+      "y": -91.71
+    },
+    "probability_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 13.22,
+      "y": 227.71
+    },
+    "protein_structure_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 790.6,
+      "y": 247.45
+    },
+    "proteomics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 894.11,
+      "y": 105.06
+    },
+    "psychiatry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 229.05,
+      "y": 597.11
+    },
+    "psychology_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 171.31,
+      "y": 530.99
+    },
+    "public_health_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 338.72,
+      "y": 576.45
+    },
+    "public_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -527.39,
+      "y": 357.98
+    },
+    "publication_of_origin_of_species_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 28.03,
+      "y": 177.35
+    },
+    "publication_of_principia_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -183.91,
+      "y": -167.16
+    },
+    "quantum_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 418.55,
+      "y": -209.46
+    },
+    "quantum_computing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 138.52,
+      "y": 283.8
+    },
+    "quantum_entanglement_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -44.33,
+      "y": 176.1
+    },
+    "quantum_field_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 123.09,
+      "y": -198.5
+    },
+    "quantum_mechanics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 227.41,
+      "y": -71.83
+    },
+    "quantum_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -12.44,
+      "y": -120.53
+    },
+    "rachel_carson_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 493.56,
+      "y": 257.07
+    },
+    "radioactivity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 664.96,
+      "y": -33.8
+    },
+    "randomized_controlled_trial_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 250.85,
+      "y": 549.94
+    },
+    "randomness_and_determinism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -26.38,
+      "y": 125.09
+    },
+    "rationalism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -749.46,
+      "y": 288.31
+    },
+    "reaction_kinetics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 800.86,
+      "y": 141.63
+    },
+    "real_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -116.34,
+      "y": -91.91
+    },
+    "recursion_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -223.14,
+      "y": 339.66
+    },
+    "redox_reactions_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 792.53,
+      "y": -50.84
+    },
+    "reductionism_vs_holism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 49.71,
+      "y": 265.85
+    },
+    "regenerative_medicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 970.22,
+      "y": 612.95
+    },
+    "rehabilitation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 422.22,
+      "y": 712.25
+    },
+    "relativity_general_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -141.07,
+      "y": -64.41
+    },
+    "religion_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -640.97,
+      "y": 403.25
+    },
+    "renaissance_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -738.4,
+      "y": 34.83
+    },
+    "renewable_energy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 453.36,
+      "y": 326.01
+    },
+    "representation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -657.5,
+      "y": 385.85
+    },
+    "research_methodology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -364.73,
+      "y": 446.09
+    },
+    "resilience_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 546.97,
+      "y": 571.56
+    },
+    "restoration_and_conservation_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -248.24,
+      "y": -75.29
+    },
+    "restorative_justice_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -595.74,
+      "y": 458.92
+    },
+    "rhetoric_classical_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -780.86,
+      "y": 511.28
+    },
+    "rhetoric_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -701.69,
+      "y": 573.55
+    },
+    "robotics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 438.73,
+      "y": 562.11
+    },
+    "robotics_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 276.14,
+      "y": 757.06
+    },
+    "romanticism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -992.58,
+      "y": 178.82
+    },
+    "rosalind_franklin_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 648.27,
+      "y": -69.17
+    },
+    "scale_invariance_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 93.55,
+      "y": 79.53
+    },
+    "science_and_religion_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -737.76,
+      "y": 5.84
+    },
+    "science_and_technology_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -564.95,
+      "y": 296.72
+    },
+    "science_communication_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -380.26,
+      "y": 851.41
+    },
+    "science_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -165.35,
+      "y": -128.37
+    },
+    "scientific_method_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -61.01,
+      "y": 277.5
+    },
+    "scientific_revolution_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -326.33,
+      "y": -68.55
+    },
+    "sculpture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -480.53,
+      "y": 34.98
+    },
+    "self_organization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 404.32,
+      "y": 216.75
+    },
+    "semantics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -692.1,
+      "y": 679.27
+    },
+    "semiconductor_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 352.18,
+      "y": 421.04
+    },
+    "semiconductor_physics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 491.39,
+      "y": 287.93
+    },
+    "semiotics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -725.71,
+      "y": 556.4
+    },
+    "sensory_systems_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 313.56,
+      "y": 274.55
+    },
+    "set_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -342.79,
+      "y": 183.9
+    },
+    "sigmund_freud_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -246.57,
+      "y": 524.16
+    },
+    "signal_and_noise_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 293.85,
+      "y": 381.9
+    },
+    "signal_processing_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 304.22,
+      "y": 506.65
+    },
+    "silk_road_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -443.3,
+      "y": 24.96
+    },
+    "social_contract_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -504.8,
+      "y": 349.18
+    },
+    "social_movements_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -466.16,
+      "y": 421.31
+    },
+    "social_network_analysis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -159.05,
+      "y": 594.67
+    },
+    "social_network_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -76.13,
+      "y": 748.27
+    },
+    "social_science_field": {
+      "lock": "hard",
+      "x": -240,
+      "y": 760
+    },
+    "social_stratification_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -497.61,
+      "y": 422.89
+    },
+    "socialism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -623.75,
+      "y": 558.01
+    },
+    "socialization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -235.75,
+      "y": 696.78
+    },
+    "sociolinguistics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -595.14,
+      "y": 687.54
+    },
+    "sociology_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -169.54,
+      "y": 758.22
+    },
+    "software_architecture_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 69.9,
+      "y": 673.99
+    },
+    "solid_state_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 720.78,
+      "y": -53.34
+    },
+    "solid_state_physics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 443.77,
+      "y": 35.16
+    },
+    "sonata_form_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -650.64,
+      "y": -207.13
+    },
+    "sound_design_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -49.5,
+      "y": 223.86
+    },
+    "spatial_reasoning_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -196.4,
+      "y": 205.84
+    },
+    "special_relativity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -18.21,
+      "y": 95.17
+    },
+    "spectroscopy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 583.64,
+      "y": -65.7
+    },
+    "sport_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 991.5,
+      "y": 481.74
+    },
+    "stability_and_instability_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 465.63,
+      "y": 435.62
+    },
+    "standard_model_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 138.29,
+      "y": -276.4
+    },
+    "statistical_inference_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 81.05,
+      "y": 432.06
+    },
+    "statistical_mechanics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 361.42,
+      "y": -108.9
+    },
+    "statistics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 130.43,
+      "y": 426.6
+    },
+    "stem_cell_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 896.01,
+      "y": 413.52
+    },
+    "stem_cells_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 714.17,
+      "y": 427.84
+    },
+    "stereochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 826.2,
+      "y": -121.93
+    },
+    "stochastic_processes_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 235.8,
+      "y": 267.72
+    },
+    "street_art_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -975.12,
+      "y": 299.49
+    },
+    "structural_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 212.83,
+      "y": 297.73
+    },
+    "structural_mechanics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 324.42,
+      "y": 242.34
+    },
+    "structuralism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -494.27,
+      "y": 601.82
+    },
+    "sublime_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -849.06,
+      "y": 196.36
+    },
+    "superconductivity_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 323.57,
+      "y": 99.53
+    },
+    "supply_and_demand_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -153.79,
+      "y": 265.33
+    },
+    "supramolecular_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 757.95,
+      "y": 4.89
+    },
+    "surface_chemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 758.29,
+      "y": -19.1
+    },
+    "surgery_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 703.84,
+      "y": 723.89
+    },
+    "surgical_principles_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 889.22,
+      "y": 478.31
+    },
+    "surrealism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -893.26,
+      "y": 218.07
+    },
+    "symbiosis_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 387.87,
+      "y": 416.03
+    },
+    "symmetry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 65.33,
+      "y": -173.1
+    },
+    "syntax_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -596.59,
+      "y": 781.62
+    },
+    "synthetic_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 727.77,
+      "y": 604.51
+    },
+    "systems_biology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 604.8,
+      "y": 395.78
+    },
+    "systems_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 234.39,
+      "y": 651.51
+    },
+    "systems_thinking_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 10.83,
+      "y": 595.51
+    },
+    "taxonomy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 586.89,
+      "y": 134.35
+    },
+    "technology_field": {
+      "lock": "hard",
+      "x": 160,
+      "y": 760
+    },
+    "telecommunications_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 306.6,
+      "y": 549.53
+    },
+    "telecommunications_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 394.05,
+      "y": 768.32
+    },
+    "telemedicine_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 352.98,
+      "y": 818.04
+    },
+    "textile_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 177.04,
+      "y": -23.95
+    },
+    "theater_performance_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -946.07,
+      "y": 348.84
+    },
+    "theory_of_relativity_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -206.28,
+      "y": -141.55
+    },
+    "thermochemistry_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 688.52,
+      "y": -29.19
+    },
+    "thermodynamic_efficiency_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 400.44,
+      "y": 383.2
+    },
+    "thermodynamics_field": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 473.82,
+      "y": 4.03
+    },
+    "thermodynamics_laws_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 539.09,
+      "y": 77.51
+    },
+    "thought_experiments_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -347.21,
+      "y": 230.96
+    },
+    "tissue_engineering_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 935.59,
+      "y": 568.02
+    },
+    "tonality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -262.84,
+      "y": -221.05
+    },
+    "topology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -75.18,
+      "y": 200
+    },
+    "toxicology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1014.28,
+      "y": 247.72
+    },
+    "tragedy_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -930.85,
+      "y": 282.25
+    },
+    "translation_studies_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -567.23,
+      "y": 752.88
+    },
+    "translation_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -528.21,
+      "y": 607.94
+    },
+    "triage_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 162.46,
+      "y": 595.78
+    },
+    "typography_history_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -723.98,
+      "y": 255.53
+    },
+    "ukiyo_e_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -840.67,
+      "y": -120.67
+    },
+    "universality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 62.52,
+      "y": 54.96
+    },
+    "urbanization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 43.88,
+      "y": 547.38
+    },
+    "utilitarianism_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -472.4,
+      "y": 621.43
+    },
+    "vaccination_invention_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 934.42,
+      "y": 451.02
+    },
+    "vaccination_science_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 731.87,
+      "y": 551.29
+    },
+    "virology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 1044.18,
+      "y": 367.05
+    },
+    "virtue_ethics_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -370.85,
+      "y": 554.73
+    },
+    "visualization_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -154.64,
+      "y": 307.43
+    },
+    "wave_particle_duality_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -176.01,
+      "y": 115.74
+    },
+    "william_shakespeare_person": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -848.25,
+      "y": 436.54
+    },
+    "womens_health_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 163.21,
+      "y": 482.32
+    },
+    "world_literature_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -906.05,
+      "y": 258.04
+    },
+    "world_systems_theory_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -566.18,
+      "y": 168.25
+    },
+    "world_war_one_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -488.79,
+      "y": 133.41
+    },
+    "world_war_two_event": {
+      "lock": "soft",
+      "radius": 90,
+      "x": -371.18,
+      "y": 247.28
+    },
+    "zoology_concept": {
+      "lock": "soft",
+      "radius": 90,
+      "x": 923.97,
+      "y": 254.12
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "main-anchored-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  }
+}
