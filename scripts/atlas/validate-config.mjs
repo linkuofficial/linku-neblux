@@ -116,7 +116,7 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
         }
         const validateRegion = (region, path, wonder = false) => {
             const allowed = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : ['title', 'summary'])];
-            const required = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : [])];
+            const required = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : ['title', 'summary'])];
             if (!isObject(region)) { issues.push(issue(file, path, 'must be an object')); return; }
             unknownProperties(region, allowed, file, path, issues, compatibility);
             for (const key of required) if (!Object.hasOwn(region, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
@@ -139,7 +139,10 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
         if (!isObject(value.wonders)) issues.push(issue(file, '$.wonders', 'must be an object'));
         else for (const [id, region] of Object.entries(value.wonders)) validateRegion(region, `$.wonders.${id}`, true);
         if (!Array.isArray(value.roads)) issues.push(issue(file, '$.roads', 'must be an array'));
-        else value.roads.forEach((road, index) => {
+        else {
+            const configuredWonderIds = new Set(Object.keys(isObject(value.wonders) ? value.wonders : {}));
+            const roadIds = new Set();
+            value.roads.forEach((road, index) => {
             const path = `$.roads[${index}]`;
             const allowed = ['id', 'from', 'to', 'via', 'strengthClass', 'approved'];
             if (!isObject(road)) { issues.push(issue(file, path, 'must be an object')); return; }
@@ -149,12 +152,20 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
             for (const key of ['from', 'to']) {
                 if (typeof road[key] === 'string' && !(/^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$/).test(road[key])) {
                     issues.push(issue(file, `${path}.${key}`, 'must be main or a wonder:<id> reference'));
+                } else if (typeof road[key] === 'string' && road[key].startsWith('wonder:')) {
+                    const wonderId = road[key].slice('wonder:'.length);
+                    if (!configuredWonderIds.has(wonderId)) issues.push(issue(file, `${path}.${key}`, `must reference a configured Wonder region; ${wonderId} is not published`));
                 }
+            }
+            if (typeof road.id === 'string' && road.id) {
+                if (roadIds.has(road.id)) issues.push(issue(file, `${path}.id`, `duplicate road id ${road.id}`));
+                roadIds.add(road.id);
             }
             if (road.from && road.from === road.to) issues.push(issue(file, path, 'road endpoints must be different'));
             enumCheck(road.strengthClass, ['weak', 'standard', 'strong'], file, `${path}.strengthClass`, issues);
             if (typeof road.approved !== 'boolean') issues.push(issue(file, `${path}.approved`, 'must be boolean'));
-        });
+            });
+        }
     }
     return sortIssues(issues);
 }

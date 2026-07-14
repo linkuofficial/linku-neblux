@@ -44,7 +44,7 @@
     "region": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["x", "y", "visualRadius", "hitRadius", "route"],
+      "required": ["x", "y", "visualRadius", "hitRadius", "route", "title", "summary"],
       "properties": {
         "x": { "type": "number" },
         "y": { "type": "number" },

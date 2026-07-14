@@ -36,10 +36,10 @@
             <section id="atlas-stage" class="atlas-stage" aria-label="Graph Atlas visual map">
                 <canvas id="atlas-canvas" aria-label="Interactive Graph Atlas. Drag to pan, scroll to zoom, or use the directory."></canvas>
                 <div id="atlas-tooltip" class="atlas-tooltip" role="tooltip" hidden></div>
-                <div class="atlas-controls" role="group" aria-label="Atlas controls">
-                    <button id="atlas-zoom-out" type="button" aria-label="Zoom out">−</button>
-                    <button id="atlas-reset" type="button" aria-label="Reset view">◎</button>
-                    <button id="atlas-zoom-in" type="button" aria-label="Zoom in">+</button>
+                <div class="atlas-controls" role="group" aria-label="Atlas controls" data-atlas-aria="controls">
+                    <button id="atlas-zoom-out" type="button" aria-label="Zoom out" data-atlas-aria="zoomOut">−</button>
+                    <button id="atlas-reset" type="button" aria-label="Reset view" data-atlas-aria="reset">◎</button>
+                    <button id="atlas-zoom-in" type="button" aria-label="Zoom in" data-atlas-aria="zoomIn">+</button>
                 </div>
             </section>
             <aside id="atlas-directory" class="atlas-directory">

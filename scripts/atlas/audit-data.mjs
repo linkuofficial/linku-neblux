@@ -64,7 +64,7 @@ export function auditGeneratedData(root = ATLAS_DATA_ROOT, inputs = loadArtifact
         if (!value) continue;
         parsed.set(path, value);
         issues.push(...forbiddenMetadata(value, resolve(root, path)));
-        issues.push(...validateAtlasIndex(value, inputs.wonderIds, resolve(root, path)));
+        issues.push(...validateAtlasIndex(value, inputs.wonderIds, resolve(root, path), { graphIds: inputs.graphIds }));
     }
 
     for (const wonder of inputs.wonders) {

@@ -22,8 +22,10 @@ function seededUnit(seed) {
 }
 
 export function createAtlasRenderer(canvas, getState) {
-    const context = canvas.getContext?.('2d');
+    let context = null;
+    try { context = canvas.getContext?.('2d') || null; } catch { /* DOM directory remains the fallback */ }
     const metrics = { width: 0, height: 0, dpr: 1, scale: 1, centerX: 0, centerY: 0 };
+    let appliedDpr = 0;
     let redrawCount = 0;
 
     function resize() {
@@ -33,9 +35,16 @@ export function createAtlasRenderer(canvas, getState) {
         metrics.width = Math.max(1, rect.width);
         metrics.height = Math.max(1, rect.height);
         metrics.dpr = dpr;
-        canvas.width = Math.round(metrics.width * dpr);
-        canvas.height = Math.round(metrics.height * dpr);
+        const bufferWidth = Math.round(metrics.width * dpr);
+        const bufferHeight = Math.round(metrics.height * dpr);
+        const bufferChanged = canvas.width !== bufferWidth || canvas.height !== bufferHeight;
+        if (!bufferChanged && appliedDpr === dpr) return false;
+        if (bufferChanged) {
+            canvas.width = bufferWidth;
+            canvas.height = bufferHeight;
+        }
         context.setTransform(dpr, 0, 0, dpr, 0, 0);
+        appliedDpr = dpr;
         return true;
     }
 
@@ -163,5 +172,33 @@ export function createAtlasRenderer(canvas, getState) {
         return screenPoint(region, getState());
     }
 
-    return { available: Boolean(context), resize, draw, hitTest, regionScreenPosition, get redrawCount() { return redrawCount; } };
+    function clampCamera() {
+        if (!context) return;
+        const state = getState();
+        setCameraMetrics(state);
+        const main = state.index.mainGalaxy || { x: 0, y: 0 };
+        // Keep the Main Galaxy's centre inside the viewport with one 44px touch
+        // target of breathing room. The user can explore freely without ever
+        // losing every route beyond recovery.
+        const inset = 44;
+        const maxOffsetX = Math.max(0, (metrics.width / 2 - inset) / Math.max(metrics.scale, 0.001));
+        const maxOffsetY = Math.max(0, (metrics.height / 2 - inset) / Math.max(metrics.scale, 0.001));
+        state.camera.x = Math.min(-main.x + maxOffsetX, Math.max(-main.x - maxOffsetX, state.camera.x));
+        state.camera.y = Math.min(-main.y + maxOffsetY, Math.max(-main.y - maxOffsetY, state.camera.y));
+    }
+
+    function panByScreenDelta(deltaX, deltaY) {
+        if (!context) return;
+        const state = getState();
+        setCameraMetrics(state);
+        state.camera.x += deltaX / Math.max(metrics.scale, 0.001);
+        state.camera.y += deltaY / Math.max(metrics.scale, 0.001);
+        clampCamera();
+    }
+
+    return {
+        available: Boolean(context), resize, draw, hitTest, regionScreenPosition,
+        clampCamera, panByScreenDelta,
+        get redrawCount() { return redrawCount; },
+    };
 }

@@ -9,6 +9,9 @@ export function syncStaticCopy(root, lang) {
         const active = button.dataset.atlasLang === lang;
         button.setAttribute('aria-pressed', String(active));
     });
+    root.querySelectorAll('[data-atlas-aria]').forEach((element) => {
+        element.setAttribute('aria-label', t(lang, element.dataset.atlasAria));
+    });
     document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : lang;
 }
 
@@ -38,7 +41,5 @@ export function setActiveRegion(root, regionId) {
     root.querySelectorAll('[data-region-id]').forEach((link) => {
         const active = link.dataset.regionId === regionId;
         link.classList.toggle('is-active', active);
-        if (active) link.setAttribute('aria-current', 'true');
-        else link.removeAttribute('aria-current');
     });
 }

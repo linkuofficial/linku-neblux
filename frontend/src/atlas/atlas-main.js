@@ -15,6 +15,7 @@ let drag = null;
 
 function draw() {
     renderer.resize();
+    renderer.clampCamera();
     renderer.draw();
 }
 
@@ -33,17 +34,20 @@ function showTooltip(region, event) {
     const link = root.querySelector(`[data-region-id="${region.id}"]`);
     const title = link?.querySelector('[data-region-title]')?.textContent || region.id;
     tooltip.textContent = title;
-    tooltip.style.left = `${event.clientX - stage.getBoundingClientRect().left + 14}px`;
-    tooltip.style.top = `${event.clientY - stage.getBoundingClientRect().top + 14}px`;
     tooltip.hidden = false;
+    const stageRect = stage.getBoundingClientRect();
+    const x = Math.min(stageRect.width - tooltip.offsetWidth - 8, Math.max(8, event.clientX - stageRect.left + 14));
+    const y = Math.min(stageRect.height - tooltip.offsetHeight - 8, Math.max(8, event.clientY - stageRect.top + 14));
+    tooltip.style.left = `${x}px`;
+    tooltip.style.top = `${y}px`;
     setActiveRegion(root, region.id);
 }
 
 function handlePointerMove(event) {
     if (drag) {
-        state.camera.x += (event.clientX - drag.x) / Math.max(0.001, drag.scale);
-        state.camera.y += (event.clientY - drag.y) / Math.max(0.001, drag.scale);
-        drag = { x: event.clientX, y: event.clientY, scale: drag.scale, moved: true };
+        renderer.panByScreenDelta(event.clientX - drag.x, event.clientY - drag.y);
+        const moved = drag.moved || Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) > 4;
+        drag = { ...drag, x: event.clientX, y: event.clientY, moved };
         draw();
         return;
     }
@@ -65,7 +69,7 @@ function attachCanvasInteraction() {
     }
     canvas.addEventListener('pointerdown', (event) => {
         canvas.setPointerCapture(event.pointerId);
-        drag = { x: event.clientX, y: event.clientY, scale: 1, moved: false };
+        drag = { x: event.clientX, y: event.clientY, startX: event.clientX, startY: event.clientY, moved: false };
         canvas.style.cursor = 'grabbing';
     });
     canvas.addEventListener('pointermove', handlePointerMove);
@@ -77,6 +81,10 @@ function attachCanvasInteraction() {
             const region = renderer.hitTest(event.clientX, event.clientY);
             if (region) window.location.assign(region.route);
         }
+    });
+    canvas.addEventListener('pointercancel', () => {
+        drag = null;
+        canvas.style.cursor = 'grab';
     });
     canvas.addEventListener('pointerleave', () => {
         if (!drag) {
@@ -123,10 +131,22 @@ function setLanguage(lang) {
 }
 
 function initControls() {
-    root.querySelector('#atlas-zoom-in').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 1.16); draw(); });
-    root.querySelector('#atlas-zoom-out').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 0.86); draw(); });
+    root.querySelector('#atlas-zoom-in').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 1.16); renderer.clampCamera(); draw(); });
+    root.querySelector('#atlas-zoom-out').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 0.86); renderer.clampCamera(); draw(); });
     root.querySelector('#atlas-reset').addEventListener('click', () => { resetCamera(state); draw(); });
     root.querySelectorAll('[data-atlas-lang]').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.atlasLang)));
+    root.querySelectorAll('[data-region-id]').forEach((link) => {
+        link.addEventListener('focus', () => {
+            state.hoveredRegionId = link.dataset.regionId;
+            setActiveRegion(root, state.hoveredRegionId);
+            draw();
+        });
+        link.addEventListener('blur', () => {
+            state.hoveredRegionId = null;
+            setActiveRegion(root, null);
+            draw();
+        });
+    });
     window.addEventListener('resize', draw, { passive: true });
 }
 

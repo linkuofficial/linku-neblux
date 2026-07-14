@@ -1,5 +1,5 @@
 import { isDepthPublishable } from '../../neblux-depth/depth-contract.mjs';
-import { issue, pairKey, sortIssues } from './contract.mjs';
+import { DOMAIN_CODES, issue, pairKey, sortIssues } from './contract.mjs';
 import { MAIN_LAYOUT_VERSION, RENDERER_CONTRACT_VERSION } from './layout/policy.mjs';
 import { auditArtifactEnvelope } from './audit-artifacts.mjs';
 
@@ -219,7 +219,8 @@ export function buildAtlasIndex(config, wonderSummaries = {}) {
     if (!config || typeof config !== 'object') throw new Error('Atlas presentation config is required');
     const wonders = {};
     for (const id of Object.keys(config.wonders || {}).sort()) {
-        wonders[id] = { ...config.wonders[id], ...(wonderSummaries[id] || {}) };
+        const copy = wonderSummaries[id] || {};
+        wonders[id] = { ...config.wonders[id], title: copy.title, summary: copy.summary };
     }
     return {
         ...envelope(config.layoutVersion),
@@ -331,15 +332,78 @@ function parseRegionReference(value) {
     return null;
 }
 
+function validateAtlasLocalizedText(value, file, path, issues) {
+    if (!isObject(value)) {
+        issues.push(issue(file, path, 'must contain en, zh and ja strings'));
+        return;
+    }
+    for (const locale of ARTIFACT_LOCALES) {
+        if (typeof value[locale] !== 'string' || !value[locale].trim()) issues.push(issue(file, `${path}.${locale}`, 'must be a non-empty string'));
+    }
+    for (const key of Object.keys(value)) if (!ARTIFACT_LOCALES.includes(key)) issues.push(issue(file, `${path}.${key}`, 'unknown localized copy field'));
+}
+
+function rejectAtlasUnknownProperties(value, allowed, file, path, issues) {
+    if (!isObject(value)) return;
+    for (const key of Object.keys(value)) if (!allowed.includes(key)) issues.push(issue(file, `${path}.${key}`, 'unknown Atlas presentation field'));
+}
+
+function validateAtlasRegion(region, file, path, issues, wonder = false) {
+    if (!isObject(region)) {
+        issues.push(issue(file, path, 'must be an object'));
+        return;
+    }
+    rejectAtlasUnknownProperties(region, [
+        'x', 'y', 'visualRadius', 'hitRadius', 'route', 'title', 'summary',
+        ...(wonder ? ['dominantDomains', 'visualScale'] : []),
+    ], file, path, issues);
+    if (!Number.isFinite(region.x)) issues.push(issue(file, `${path}.x`, 'must be a finite number'));
+    if (!Number.isFinite(region.y)) issues.push(issue(file, `${path}.y`, 'must be a finite number'));
+    if (!Number.isFinite(region.visualRadius) || region.visualRadius <= 0) issues.push(issue(file, `${path}.visualRadius`, 'must be a positive finite number'));
+    if (!Number.isFinite(region.hitRadius) || region.hitRadius <= region.visualRadius) issues.push(issue(file, `${path}.hitRadius`, 'must be greater than visualRadius'));
+    if (typeof region.route !== 'string' || !region.route.startsWith('/')) issues.push(issue(file, `${path}.route`, 'must be a root-relative route'));
+    validateAtlasLocalizedText(region.title, file, `${path}.title`, issues);
+    validateAtlasLocalizedText(region.summary, file, `${path}.summary`, issues);
+    if (wonder) {
+        if (!Array.isArray(region.dominantDomains) || region.dominantDomains.length === 0) issues.push(issue(file, `${path}.dominantDomains`, 'must be a non-empty array'));
+        else for (const [index, domain] of region.dominantDomains.entries()) if (!DOMAIN_CODES.includes(domain)) issues.push(issue(file, `${path}.dominantDomains[${index}]`, `must be one of ${DOMAIN_CODES.join(', ')}`));
+        if (!['small', 'medium', 'large'].includes(region.visualScale)) issues.push(issue(file, `${path}.visualScale`, 'must be small, medium or large'));
+    }
+}
+
 export function validateAtlasIndex(index, wonderIds, file = 'index.json', { graphIds = new Set() } = {}) {
     const issues = [...auditArtifactEnvelope(index, new Set(), file)];
+    rejectAtlasUnknownProperties(index, [
+        'schemaVersion', 'layoutVersion', 'rendererContractVersion',
+        'coordinateSystem', 'mainGalaxy', 'wonders', 'roads',
+    ], file, '$', issues);
     if (!isObject(index?.coordinateSystem) || !isObject(index?.mainGalaxy) || !isObject(index?.wonders) || !Array.isArray(index?.roads)) {
         issues.push(issue(file, '$', 'must contain coordinateSystem, mainGalaxy, wonders and roads'));
     }
-    for (const id of Object.keys(index?.wonders || {})) if (!wonderIds.has(id)) issues.push(issue(file, `$.wonders.${id}`, 'Wonder does not exist'));
-    for (const [roadIndex, road] of (index?.roads || []).entries()) {
+    if (isObject(index?.coordinateSystem)) {
+        rejectAtlasUnknownProperties(index.coordinateSystem, ['width', 'height', 'origin'], file, '$.coordinateSystem', issues);
+        if (!Number.isFinite(index.coordinateSystem.width) || index.coordinateSystem.width <= 0) issues.push(issue(file, '$.coordinateSystem.width', 'must be a positive finite number'));
+        if (!Number.isFinite(index.coordinateSystem.height) || index.coordinateSystem.height <= 0) issues.push(issue(file, '$.coordinateSystem.height', 'must be a positive finite number'));
+        if (index.coordinateSystem.origin !== 'center') issues.push(issue(file, '$.coordinateSystem.origin', 'must be center'));
+    }
+    validateAtlasRegion(index?.mainGalaxy, file, '$.mainGalaxy', issues);
+    const publishedWonders = isObject(index?.wonders) ? index.wonders : {};
+    for (const [id, region] of Object.entries(publishedWonders)) {
+        if (!wonderIds.has(id)) issues.push(issue(file, `$.wonders.${id}`, 'Wonder does not exist'));
+        validateAtlasRegion(region, file, `$.wonders.${id}`, issues, true);
+    }
+    const roadIds = new Set();
+    const roads = Array.isArray(index?.roads) ? index.roads : [];
+    for (const [roadIndex, road] of roads.entries()) {
         const path = `$.roads[${roadIndex}]`;
+        if (!isObject(road)) { issues.push(issue(file, path, 'must be an object')); continue; }
+        rejectAtlasUnknownProperties(road, ['id', 'from', 'to', 'via', 'strengthClass', 'approved'], file, path, issues);
         if (road.approved !== true) issues.push(issue(file, `${path}.approved`, 'only approved roads may be published'));
+        if (typeof road.id !== 'string' || !road.id) issues.push(issue(file, `${path}.id`, 'must be a non-empty string'));
+        else {
+            if (roadIds.has(road.id)) issues.push(issue(file, `${path}.id`, `duplicate road id ${road.id}`));
+            roadIds.add(road.id);
+        }
         const from = parseRegionReference(road.from);
         const to = parseRegionReference(road.to);
         if (!from) issues.push(issue(file, `${path}.from`, 'must be main or a wonder:<id> reference'));
@@ -347,9 +411,13 @@ export function validateAtlasIndex(index, wonderIds, file = 'index.json', { grap
         if (from && to) {
             if (from.type === 'wonder' && !wonderIds.has(from.id)) issues.push(issue(file, `${path}.from`, `Wonder ${from.id} does not exist`));
             if (to.type === 'wonder' && !wonderIds.has(to.id)) issues.push(issue(file, `${path}.to`, `Wonder ${to.id} does not exist`));
+            if (from.type === 'wonder' && !Object.hasOwn(publishedWonders, from.id)) issues.push(issue(file, `${path}.from`, `Wonder ${from.id} is not published in this Atlas index`));
+            if (to.type === 'wonder' && !Object.hasOwn(publishedWonders, to.id)) issues.push(issue(file, `${path}.to`, `Wonder ${to.id} is not published in this Atlas index`));
             if (from.id === to.id) issues.push(issue(file, path, 'road endpoints must be different'));
         }
+        if (typeof road.via !== 'string' || !road.via) issues.push(issue(file, `${path}.via`, 'must be a non-empty string'));
         if (graphIds.size && !graphIds.has(road.via)) issues.push(issue(file, `${path}.via`, `canonical node ${String(road.via)} does not exist`));
+        if (!['weak', 'standard', 'strong'].includes(road.strengthClass)) issues.push(issue(file, `${path}.strengthClass`, 'must be weak, standard or strong'));
     }
     return sortIssues(issues);
 }

@@ -18,6 +18,11 @@ import { buildTourIndex } from '../../scripts/build_tour_index.mjs';
 
 const root = resolve(import.meta.dirname, '..', '..');
 const fixture = (name) => JSON.parse(readFileSync(resolve(import.meta.dirname, 'fixtures', name), 'utf8'));
+const atlasSummaries = (config, extras = {}) => Object.fromEntries(Object.keys(config.wonders).map((id) => [id, {
+    title: { en: id, zh: id, ja: id },
+    summary: { en: id, zh: id, ja: id },
+    ...(extras[id] || {}),
+}]));
 
 function files(rootPath, current = rootPath) {
     const result = [];
@@ -172,13 +177,45 @@ test('Constellation wrapper preserves all legacy v1 semantics exactly', () => {
 test('Atlas fixture validates and index publishes only approved roads', () => {
     const config = fixture('atlas-layout.json');
     assert.deepEqual(validateConfig('atlas-layout', config, 'atlas-layout.json'), []);
-    const index = buildAtlasIndex(config, { light: { preview: 'light.webp' } });
+    const summaries = atlasSummaries(config, { light: { ignored: 'not-public.json' } });
+    const index = buildAtlasIndex(config, summaries);
     assert.equal(index.roads.length, 1);
     assert.equal(index.roads[0].id, 'light-quantum');
-    assert.equal(index.wonders.light.preview, 'light.webp');
+    assert.equal(index.wonders.light.ignored, undefined);
     assert.deepEqual(validateAtlasIndex(index, new Set(['light', 'quantum', 'edge-ai']), 'fixture', {
         graphIds: new Set(['wave_particle_duality_concept']),
     }), []);
+});
+
+test('Atlas presentation contract rejects incomplete copy, off-map roads and duplicate road ids', () => {
+    const config = fixture('atlas-layout.json');
+    const missingCopy = structuredClone(config);
+    delete missingCopy.mainGalaxy.title;
+    assert.match(validateConfig('atlas-layout', missingCopy, 'missing-copy.json').map((value) => value.message).join('\n'), /required property is missing/);
+
+    const badConfig = structuredClone(config);
+    badConfig.roads.push({ ...badConfig.roads[0], from: 'wonder:markets' });
+    const configMessages = validateConfig('atlas-layout', badConfig, 'bad-roads.json').map((value) => value.message).join('\n');
+    assert.match(configMessages, /not published/);
+    assert.match(configMessages, /duplicate road id/);
+
+    const index = buildAtlasIndex(config, atlasSummaries(config));
+    index.roads.push({ ...index.roads[0], from: 'wonder:markets' });
+    index.nodes = [{ id: 'must-not-leak' }];
+    index.wonders.light.description = 'must not leak';
+    delete index.mainGalaxy.summary.zh;
+    const indexMessages = validateAtlasIndex(index, new Set([...Object.keys(config.wonders), 'markets']), 'bad-index.json', {
+        graphIds: new Set(['wave_particle_duality_concept']),
+    }).map((value) => value.message).join('\n');
+    assert.match(indexMessages, /non-empty string/);
+    assert.match(indexMessages, /not published in this Atlas index/);
+    assert.match(indexMessages, /duplicate road id/);
+    assert.match(indexMessages, /unknown Atlas presentation field/);
+
+    const malformed = structuredClone(index);
+    malformed.roads = {};
+    assert.doesNotThrow(() => validateAtlasIndex(malformed, new Set(Object.keys(config.wonders)), 'malformed.json'));
+    assert.match(validateAtlasIndex(malformed, new Set(Object.keys(config.wonders)), 'malformed.json').map((value) => value.message).join('\n'), /must contain/);
 });
 
 test('build-data is deterministic, removes stale files and audits the exact artifact set', () => {
@@ -204,7 +241,8 @@ test('optional Atlas index is audited and survives atomic data rebuilds', () => 
     try {
         buildData(target);
         const indexPath = resolve(target, 'index.json');
-        const indexText = stableJson(buildAtlasIndex(fixture('atlas-layout.json')));
+        const config = fixture('atlas-layout.json');
+        const indexText = stableJson(buildAtlasIndex(config, atlasSummaries(config)));
         writeFileSync(indexPath, indexText, 'utf8');
         writeFileSync(resolve(target, 'stale.json'), '{}', 'utf8');
 
