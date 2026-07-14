@@ -6,7 +6,7 @@
 
 > 本文件把長期主計畫拆成可獨立審查、測試、回滾的工程工作包。任何工作包都不自動授權下一包。
 
-進度（2026-07-14）：WP0、WP0.5、WP1、WP2、WP3 完成；WP3 standalone artifacts、cross-family review、atomic swap follow-up 與完整 regression 已收斂。WP4 尚未授權，需另開 brief。
+進度（2026-07-14）：WP0、WP0.5、WP1、WP2、WP3 完成；WP3 standalone artifacts、cross-family review、atomic swap follow-up 與完整 regression 已收斂。WP4 已授權並進入 implementation，branch `codex/graph-atlas-wp4`，base `2659c23`。
 
 ## 1. Critical path
 
@@ -240,6 +240,8 @@ frontend/public/data/atlas/       # gitignored build artifacts
 未掛 Vite 前刪除 artifacts；掛入後可移除 plugin／script，舊 data copy 仍存在。
 
 ## 7. WP4 — Atlas Prototype
+
+狀態：in-progress（2026-07-14）。實作邊界與驗收見 `docs/tasks/2026-07-14-graph-atlas-wp4-prototype.md`；本工作包不自動授權 WP5。
 
 ### 目標
 
