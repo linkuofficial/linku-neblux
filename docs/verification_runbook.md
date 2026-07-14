@@ -1,97 +1,27 @@
 # Verification Runbook
 
-> ⚠️ **（2026-07-06）本檔內容嚴重過期，勿照做。** 全文為 Nodus 時代的 Python 後端流程（pytest／uvicorn／Neo4j），與現行「零後端」Neblux 不符，路徑也指向已不存在的位置。
-> **現行驗證＝`npm run verify`（build + E2E），詳見 `AGENTS.md` 驗證門檻節與 `docs/playbooks/`。** 本檔待重寫或裁撤（已記入 AGENTS.md 技術債台帳）。
+> 2026-07-13 依凜空指示清償技術債：舊版（Nodus 時代 Python 後端流程：pytest／uvicorn／Neo4j）全文裁撤，重寫為現行流程。
+> 規則的**單一事實來源仍是 `AGENTS.md`**（30 秒硬規則＋驗證門檻節）；本檔只保留「跑什麼、什麼時候跑」的最短路徑，常見任務 SOP 見 `docs/playbooks/`。若本檔與 AGENTS.md 衝突，以 AGENTS.md 為準並回報。
 
-此文件用於快速確認 Nodus 專案在本機是否處於可交付狀態。
+## 平常改動（宣稱完成前必跑）
 
-## 1. Python tests
+```bash
+npm run verify   # = npm run build + npm run test:depth-build + npm run test:e2e
+```
 
-Command:
+- 視覺改動另需 `npm run dev` 開瀏覽器實看（圖是 Canvas 渲染，DOM 斷言無效）——SOP 見 `docs/playbooks/visual-change.md`。
+- E2E 第一次跑之前：`npm run test:e2e:install`（裝 Chromium）。
 
-d:/Code_Space/Nodus/.venv/Scripts/python.exe -m pytest
+## 分區補充守門（碰到對應區域才跑）
 
-Expected:
-- 結果含 48 passed
-- test_api_integration 在 API 未啟動時可能為 1 skipped（屬正常）
+| 改到什麼 | 追加命令 |
+|---|---|
+| `depth/` 頁面或 `neblux-depth/depth_manifest.json` | `node neblux-depth/validate-depth.mjs` |
+| depth 頁的公式／數值敘述（claim-source 表相關） | `node depth/sine-wave-claim-check.mjs`、`node depth/fourier-series-claim-check.mjs`、`node depth/transformer-claim-check.mjs`、`node depth/s-plane-claim-check.mjs`（各自對應 `depth/<page>-claim-sources.md` 的 [V] 欄） |
+| `config/atlas/`、`scripts/atlas/` | `npm run test:atlas`＋`npm run atlas:validate`；layout 相關另有唯讀 gates：`npm run atlas:layout:check`／`atlas:layout:diff`／`atlas:layout:debt`（授權範圍見 `docs/tasks/2026-07-12-graph-atlas-wp2-stable-layout.md`） |
+| tour 資料 `data/wonders/*.json` | 照 `docs/playbooks/edit-tour-data.md` |
 
-## 2. Frontend production build
+## 這個 repo 沒有的東西（防止照舊筆記誤跑）
 
-Command:
-
-npm run build
-
-Expected:
-- Vite build success
-- dist 產出 app.html, index.html, explorer.html
-
-## 3. Optional API integration smoke
-
-先啟動 API：
-
-d:/Code_Space/Nodus/.venv/Scripts/python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
-
-再執行：
-
-d:/Code_Space/Nodus/.venv/Scripts/python.exe -m pytest tests/test_api_integration.py -q
-
-Expected:
-- test_api_integration pass
-- /api/learning-path, /api/admin, /api/graph, /api/search 皆可回應 200
-
-## 4. Environment sanity
-
-建議至少確認：
-- ADMIN_API_KEY（生產環境務必設定）
-- CORS_ORIGINS（生產環境避免使用 *）
-- ADMIN_TRIGGER_MAX_REQUESTS / ADMIN_TRIGGER_WINDOW_SECONDS
-- ADMIN_ALERT_PER_MINUTE / ADMIN_ALERT_PER_DAY
-- NEO4J_URI / NEO4J_USER / NEO4J_PASSWORD
-
-## 5. Notification smoke (release pre-check)
-
-Command:
-
-npm run smoke:notify
-
-Expected:
-- 顯示 `[smoke] result=PASS`
-- 包含 health/metrics/admin trigger 檢查結果
-- 若 `ALERT_WEBHOOK_URL` 已設定，回傳 webhook probe 2xx
-
-## 6. Common issues
-
-1. No module named pytest/uvicorn
-- 先安裝 requirements 或最小必要套件。
-
-2. Integration test connect error
-- 確認 API 正在 127.0.0.1:8000 運行。
-
-3. 測試裡 integration 被 skip
-- 代表 API 未啟動，非失敗。
-
-## 7. Baseline snapshot (Wave planning)
-
-Command:
-
-d:/LINKU/Nodus/.venv/Scripts/python.exe scripts/baseline_report.py
-
-Expected:
-- 在 `docs/baselines/` 產生 timestamped JSON/MD
-- 同步更新 `latest_baseline.json` 與 `latest_baseline.md`
-- 包含：A/B/C 分佈、診斷分佈、EN/ZH/JA i18n coverage
-
-## 8. Wave gate runner (Balanced execution)
-
-Command:
-
-d:/LINKU/Nodus/.venv/Scripts/python.exe scripts/wave_gate_runner.py --run-tests
-
-Expected:
-- 終端顯示 `wave_gate_overall: pass`
-- 產生 `docs/gates/latest_wave_gate.json`
-- 若任何 gate 失敗，腳本以非 0 結束並列出 failing checks
-
-Optional benchmark gate:
-
-d:/LINKU/Nodus/.venv/Scripts/python.exe scripts/wave_gate_runner.py --run-tests --benchmark-current docs/benchmarks/latest.json --benchmark-baseline docs/benchmarks/baseline.json
+- **零後端**：沒有 pytest、uvicorn、Neo4j、smoke:notify——那些屬已淘汰的 Nodus 時代流程，任何舊筆記出現一律不要照做。
+- 部署驗證：Cloudflare Pages 直接用 `npm run build`（output `dist/`），沒有額外 runbook 步驟；部署設定屬禁區，動之前先開 brief 走交叉審查。

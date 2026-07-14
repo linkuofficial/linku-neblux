@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "1.0.0",
+  "layoutVersion": "2.0.0",
+  "rendererContractVersion": "2.0.0",
+  "refs": ["core_alpha"],
+  "fixtureValidRefs": ["core_alpha"],
+  "draftPayload": { "future": true }
+}

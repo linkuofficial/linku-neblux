@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "layoutVersion": "atlas-prototype-1.0.0",
+  "coordinateSystem": { "width": 2400, "height": 1600, "origin": "center" },
+  "mainGalaxy": { "x": 0, "y": 0, "visualRadius": 260, "hitRadius": 300, "route": "/app.html" },
+  "wonders": {
+    "edge-ai": { "x": 650, "y": 360, "visualRadius": 110, "hitRadius": 140, "route": "/wonders.html?w=edge-ai", "dominantDomains": ["TEC", "ENG"], "visualScale": "medium" },
+    "light": { "x": -700, "y": -250, "visualRadius": 120, "hitRadius": 150, "route": "/wonders.html?w=light", "dominantDomains": ["PHY"], "visualScale": "medium" },
+    "quantum": { "x": -350, "y": 500, "visualRadius": 115, "hitRadius": 145, "route": "/wonders.html?w=quantum", "dominantDomains": ["PHY", "MAT"], "visualScale": "medium" }
+  },
+  "roads": [
+    { "id": "light-quantum", "from": "light", "to": "quantum", "via": "wave_particle_duality_concept", "strengthClass": "strong", "approved": true },
+    { "id": "quantum-edge-ai-draft", "from": "quantum", "to": "edge-ai", "via": "quantization_concept", "strengthClass": "weak", "approved": false }
+  ]
+}

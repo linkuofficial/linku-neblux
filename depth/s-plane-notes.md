@@ -6,17 +6,20 @@ Status: M2 candidate page — pending control-theory correctness gate before `pu
 
 ## Reference Notes
 
-- Ogata, *Modern Control Engineering* — chapter on transient response of second-order systems: the
-  prototype `H(s) = ωn² / (s² + 2ζωn s + ωn²)`, the underdamped unit-step response closed form, the
-  peak overshoot `M_p` and peak time `t_p` formulas, and the `t_s ≈ 4/(ζωn)` settling-time
-  approximation. Exact edition/section to be confirmed by Riku against his copy.
-- Nise, *Control Systems Engineering* — "Time Response" chapter: percent overshoot (%OS) vs. ζ,
-  peak-time/settling-time definitions, and the s-plane geometry used on this page (poles sitting on
-  a radius-ωn circle, constant-ζ lines as rays from the origin, `ζ = cos θ` measured from the
-  negative real axis). Exact edition/section to be confirmed by Riku against his copy.
-- Optional cross-check: Franklin, Powell & Emami-Naeini, *Feedback Control of Dynamic Systems* —
-  same prototype second-order transfer function and step-response formulas, useful as a second
-  source if Ogata/Nise wording differs. Not required if the two above are confirmed sufficient.
+Verification basis updated 2026-07-13 (Riku's ruling: no textbook framing — he owns no
+control-theory textbook and doesn't need one; online authoritative sources are the basis, and the
+residual concern is zh-Hant terminology, not source access):
+
+- **The operative source list lives in `depth/s-plane-claim-sources.md`** — every formula and
+  claim on this page is pinned there to openly accessible primary sources with printed equation
+  numbers: MIT 2.14 handout “Understanding Poles and Zeros” (Eq. (2)/(4), (13)–(15), Fig. 4,
+  §1.2–§1.3), Hallauer *Introduction to Linear Time-Invariant Dynamic Systems* (LibreTexts)
+  §9.2/§9.6/§9.8 (Eq. (9.13), (9.29), (9.36), (9.37), (9.40)), OpenStax *University Physics*
+  Vol. 1 §15.5, the official TAIPEI 101 observatory page, and TI SLVA301. A zh-Hant↔EN
+  terminology table for the translation check sits at the end of that file.
+- Ogata / Nise / Franklin are standard literature where the same prototype results appear, but
+  they are **not** part of the verification path (no personal copies; superseded by the pinned
+  open sources above).
 
 ## Formula Walkthrough
 
@@ -72,7 +75,7 @@ This page teaches the standard LTI second-order prototype's step response only. 
 - the right-half-plane / unstable case — the page restricts the slider to `ζ ≥ 0` (closed left
   half-plane only); RHP poles are out of scope.
 - exact settling time: the page deliberately does **not** draw a settling-time marker. `t_s ≈
-  4/(ζωn)` is a 2%-band *approximation* (Ogata), not an exact closed form, and presenting it as a
+  4/(ζωn)` is a 2%-band *approximation* (Hallauer Eq. (9.40)), not an exact closed form, and presenting it as a
   precise on-canvas marker would misrepresent it as exact. Instead the canvas keeps the ±2% band
   (drawn directly from the `y=0.98..1.02` data window) and the envelope curves, which are exact and
   let the viewer eyeball settling without a fabricated-precision marker.
@@ -179,9 +182,15 @@ Run against the exact `stepResponse`/`overshootPct` functions copied out of `s-p
 
 ## Riku Review
 
-- Pending: five-minute student test, **and** Riku's line-by-line verification of every formula in
-  the formal section against his own control-theory course material — this page sits on his core
-  academic track, so that review is a hard blocker, not a formality.
-- Until both are done, keep `public: false`; this page is not wired into Neblux navigation.
+- Pending: Riku's line-by-line verification of every formula in the formal section — this page
+  sits on his core academic track, so that review is a hard blocker, not a formality. Basis
+  (updated 2026-07-13): row-by-row against the pinned open primary sources in
+  `depth/s-plane-claim-sources.md` (with its zh-Hant↔EN terminology table), **not** a paper
+  textbook. The numeric layer is already locked by `node depth/s-plane-claim-check.mjs`
+  (24 checks, all passing).
+- Status note: the 2026-07-12 triage published this page (`public: true`) with the unfinished
+  line-by-line check knowingly accepted and logged in `depth/files/BACKLOG.md`; the pre-triage
+  guidance to keep `public: false` until review is superseded by that decision. The page still has
+  no in-site navigation entry.
 - Do not widen scope (higher-order systems, root locus, frequency domain, etc.) from this result
   without an explicit new task — see Scope Note above for what is intentionally out.

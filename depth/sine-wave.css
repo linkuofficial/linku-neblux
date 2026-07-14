@@ -8,7 +8,8 @@
   --panel-2: #121b29;
   --amp: #70e0c2;
   --freq: #f0c15a;
-  --phase: #ef7f72;
+  --speed: #9bbcff;
+  --phase: #ef8f83;
   --link: #9bbcff;
 }
 
@@ -82,7 +83,7 @@ h1 {
   color: var(--ink);
   font-size: clamp(2rem, 7vw, 4.7rem);
   line-height: 1.04;
-  letter-spacing: 0;
+  letter-spacing: -0.025em;
 }
 
 h2 {
@@ -135,8 +136,9 @@ h2 {
 .m-wave { fill: none; stroke: var(--ink); stroke-width: 2.5; }
 .m-amp { stroke: var(--amp); stroke-width: 2.5; }
 .m-amp-dot { fill: var(--amp); }
-.m-phase { stroke: var(--phase); stroke-width: 2; }
-.m-freq line { stroke: var(--freq); stroke-width: 2; }
+.m-label { fill: #dce4f2; font: 600 10px system-ui, sans-serif; }
+.m-period line { stroke: var(--freq); stroke-width: 2; }
+.m-period text { fill: var(--freq); font: 700 10px system-ui, sans-serif; }
 
 /* ---- 步驟鏈（SPEC C7）：玩 → 觀察 → 式子 ---- */
 .step-no {
@@ -163,6 +165,7 @@ h2 {
 
 .chip-amp { background: var(--amp); }
 .chip-freq { background: var(--freq); }
+.chip-speed { background: var(--speed); }
 .chip-phase { background: var(--phase); }
 
 /* ---- 公式預設收合（SPEC C7）：先玩、再觀察、想看再打開 ---- */
@@ -207,17 +210,19 @@ h2 {
 }
 
 .lab-surface {
-  padding: 22px;
-  border: 1px solid var(--line);
-  background: var(--panel);
+  padding: 28px 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
 }
 
 .surface-copy {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: baseline;
-  margin-bottom: 14px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.surface-copy h2 {
+  font-size: 1.35rem;
 }
 
 .canvas-wrap {
@@ -236,9 +241,9 @@ canvas {
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
 }
 
 .control {
@@ -247,9 +252,10 @@ canvas {
   gap: 8px 12px;
   align-items: center;
   min-width: 0;
-  padding: 12px;
-  border: 1px solid var(--line);
-  background: var(--panel-2);
+  padding: 12px 0 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: transparent;
 }
 
 .control span,
@@ -282,6 +288,22 @@ canvas {
 
 .control-phase {
   color: var(--phase);
+  background: transparent;
+}
+
+.control-speed {
+  color: var(--speed);
+}
+
+.control-phase em {
+  margin-left: 6px;
+  padding: 0;
+  border: 0;
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
 
 .tasks,
@@ -337,6 +359,10 @@ canvas {
 
 .sym.freq {
   color: var(--freq);
+}
+
+.sym.speed {
+  color: var(--speed);
 }
 
 .sym.phase {
@@ -405,6 +431,22 @@ canvas {
   line-height: 1.5;
 }
 
+.scope-note {
+  max-width: 760px;
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--muted);
+  background: rgba(238, 244, 255, 0.035);
+  color: #ced8ea;
+  line-height: 1.6;
+}
+
+.formula-inline {
+  color: var(--ink);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .sym-tip {
   position: fixed;
   z-index: 40;
@@ -453,7 +495,7 @@ canvas {
   }
 
   .lab-surface {
-    padding: 14px;
+    padding: 26px 0 0;
   }
 
   .surface-copy {
@@ -466,7 +508,16 @@ canvas {
   }
 
   .controls {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .control {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
   }
 
   .control span,

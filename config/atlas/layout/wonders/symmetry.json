@@ -1,0 +1,58 @@
+{
+  "algorithmParamsHash": "sha256:403ab74765e26afd5ea4348194478c99718a49334d6fe95a9f4d998515499c24",
+  "layoutInputsFingerprint": "sha256:b192e40fd26b68212b7eb8679ce63c7c708226d830f178abbb013399db94a02a",
+  "layoutVersion": "wonder-symmetry-1.0.0",
+  "membersFingerprint": "sha256:b192e40fd26b68212b7eb8679ce63c7c708226d830f178abbb013399db94a02a",
+  "nodes": {
+    "conservation_laws_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 4,
+      "x": 85,
+      "y": 29.15
+    },
+    "emmy_noether_person": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 3,
+      "x": -85,
+      "y": -29.15
+    },
+    "group_theory_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 2,
+      "x": -255,
+      "y": -73.73
+    },
+    "particle_physics_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 5,
+      "x": 255,
+      "y": 73.73
+    },
+    "standard_model_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 6,
+      "x": 425,
+      "y": 83.64
+    },
+    "symmetry_concept": {
+      "lock": "hard",
+      "role": "spine",
+      "step": 1,
+      "x": -425,
+      "y": -83.64
+    }
+  },
+  "rendererContractVersion": "2.0.0",
+  "schemaVersion": "1.0.0",
+  "solverVersion": "wonder-spine-1.0.0",
+  "toolchain": {
+    "d3Version": "7.9.0",
+    "nodeMajor": 24
+  },
+  "wonderId": "symmetry"
+}

@@ -1,14 +1,15 @@
 # Neblux 程式碼地圖（給接手的模型）
 
-> 迷路時讀這份。行號會漂移，請以符號名搜尋。最後校準：2026-07-04。
+> 迷路時讀這份。行號會漂移，請以符號名搜尋。最後校準：2026-07-14。
+> Graph Atlas WP0–WP2 已建立 contracts／validators／stable locks，但**尚未接入任何 production entry、Vite build 或 runtime**；現行四頁仍走下列 legacy runtime。
 
 ## 四個入口
 
 | 頁 | 主 JS | 用途 |
 |----|-------|------|
 | `frontend/index.html` | `src/landing-main.js` | 落地頁。粒子背景、搜尋、建議 pills、雙 CTA |
-| `frontend/wonders.html` | `src/wonders-main.js`（~800 行） | **產品核心**。picker → intro → 敘事面板＋星空子圖 |
-| `frontend/app.html` | `src/app-main.js`（~1900 行） | 全圖 687 節點。搜尋、detail card、Learning Path |
+| `frontend/wonders.html` | `src/wonders-main.js` | **產品核心**。picker → intro → 敘事面板＋星空子圖 |
+| `frontend/app.html` | `src/app-main.js` | 全圖 687 節點。搜尋、detail card、Learning Path |
 | `frontend/explorer.html` | `src/explorer-main.js` | 漸進展開。轉型中（見 explorer-to-topics-plan.md），少動 |
 
 ## wonders-main.js 關鍵符號
@@ -20,7 +21,7 @@
 - `goToStep(k)`：換站（0-based）。進度點、星空高亮、鏡頭 `centerViewOnNode()` 都在這條路上。
 - `buildSubgraph()`：只載該 tour 的 6–8 節點；spine edges 來自 tour JSON，organic edges 從節點 `connections` 衍生。
 - `setStepVisuals()`：視覺狀態走 `node.vis` / `edge.vis` 旗標（selected / related / dimmed / highlight）——全站圖引擎同一模式。
-- 最後一站：next 鈕變「探索其他主題」、`#wp-alt`（進入圖譜）現形、`outward` 文字目前渲染為 `.is-outward` 灰色禁用樣式。
+- 最後一站：next 鈕變「探索其他主題」、`#wp-alt`（進入圖譜）現形；有核可 `outward_links` 的 tour 會把指定文句變成可操作 graph link，無設定者維持純文字。
 
 ## app-main.js 關鍵事實
 
@@ -33,17 +34,28 @@
 
 `canvas-renderer.js`（Deep Field 場景）＋ `star-sprites.js`（離屏星體）＋ `atmosphere.js`（星雲/vignette）＋ `theme.js`（design tokens）＋ `layout.js`（力導向，**座標 build 時預烘焙，勿動**）＋ `geometry.js`（邊曲線、色彩）。物理 d3-force、D3 走 npm import。域色在 `neblux-tokens.js` 的 `DOMAIN_COLORS`。
 
+## Graph Atlas WP0–WP2（尚未接 runtime）
+
+- `config/atlas/`：12-domain anchors、Main 687-node lock、19 份 Wonder locks、schemas 與 `main-v1` blessing baseline；全部是 tracked source/config，不是 production build artifact。
+- `scripts/atlas/`：source/config validators、fixture audits、explicit layout bake/add/check/diff/debt/bless CLI。普通 `npm run build` 不執行這些 solver，也不讀 WP2 locks。
+- `tests/atlas/`：schema、topology、publication predicate、Windows path／CLI、determinism、atomic write 與 layout gates。
+- 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式切換要等 WP5／WP6，不得把 locks 存在誤作 runtime 已使用。
+- WP3 會先產生 gitignored `/data/atlas/*` standalone artifacts；在另開禁區 brief 前不掛進 Vite／production。
+- WP3 standalone 產生 79 個 base artifacts；`index.json` 是可選 companion artifact，存在時由 audit 驗證並在 `build-data` atomic swap 中保留。
+- Windows 操作：執行 `atlas:build-data` 前先停止 dev server；本機若先生成 Atlas artifacts 再執行 Vite build，未引用 JSON 可能被複製進 dist，但目前 production 不消費它們。
+
 ## 資料
 
 - `data/all_nodes.json`：687 節點。欄位：`id, label, type(concept|person|field|event), domain[], display_tags[], description, sections{lead, core, impact, links[], works[]}, era, connections[]`。邊欄位：`target, relation_type(logical|applied|conceptual|historical|causal), relation(一句描述), directed, learning_prerequisite`。
 - `data/wonders/<id>.json`：tour。schema 見 `tour-authoring.md`。
 - `data/i18n/`：`{lang}.json`（標籤+UI）、`{lang}_descriptions.json`、`{lang}_sections.json`。執行期載入鏈在 `src/api.js`（fallback → en）。
-- build（`vite.config.ts`）：兩個 buildStart plugin。`copyDataPlugin` 複製 `data/` → `frontend/public/data/`、拆 `all_nodes.json` 為 slim topology ＋ `descriptions.json`（非阻塞 streaming）、預烘焙 layout、生成 `tour-index.json`；`isJunk` 過濾備份產物。`staticHtmlPlugin` 呼叫 `scripts/build_static_html.mjs`（＋`static_content.mjs`）生成**靜態可發現層**：`/concepts/<id>.html` 687×3 語、About/Methodology/Sources 三語、`sitemap.xml`、`data/graph.json`。
+- build（`vite.config.ts`）：兩個 buildStart plugin。`copyDataPlugin` 複製 `data/` → `frontend/public/data/`、拆 `all_nodes.json` 為 slim topology ＋ `descriptions.json`／`sections.json`（非阻塞 streaming）、以 legacy `engine/layout.js` 預烘焙座標、生成 v1 `tour-index.json`；`isJunk` 過濾備份產物。`staticHtmlPlugin` 先依 manifest publication predicate 發布 Depth，再呼叫 `scripts/build_static_html.mjs` 生成**靜態可發現層**：`/concepts/<id>.html` 687×3 語、About/Methodology/Sources 三語、`sitemap.xml`、`data/graph.json`。
 - **靜態可發現層＝gitignore 的 build artifact**：寫進 `frontend/public/`（`concepts/`、`zh/`、`ja/`、`about|methodology|sources.html`、`sitemap.xml`），dev server 也服務（故 e2e 測得到），`vite build` 複製到 dist。**別找 `build_concept_pages.mjs`/`build_sitemap.mjs`——不存在，全在 `build_static_html.mjs`。** 生成失敗會讓 build fail（非 warn）。守門：`tests/e2e/discoverability.spec.ts`、`tests/e2e/api-failure.spec.ts`（API 全滅站照常，鐵律）。`llms.txt` 為手寫靜態檔（非生成）。
 
 ## 測試
 
 - `npm run test:e2e`（Playwright）。圖斷言走 `window.__nebluxApp` / `window.__nebluxExplorer` hook ＋ 真實滑鼠 ＋ 像素取樣，**不是 DOM 選擇器**。勿改 hook 名。
+- `npm run test:atlas`：Atlas contracts／layout tooling；`npm run atlas:validate`：真實 source/schema；`npm run atlas:layout:check`：687 Main locks＋19 Wonder locks。
 - `tests/e2e/wonders.spec.ts:13` 斷言 picker 卡片 `toHaveCount(19)` ——**新增 tour 必改**。
 - `visual-styles.spec.ts` 有平台基準檔（`*-chromium-win32.json`）：視覺變更會 fail，確認刻意才更新基準。
 
@@ -55,3 +67,4 @@
 - `scripts/*.py` 是離線管線（Neo4j＋Claude API），線上站**不依賴**；改線上資料 = 改 `data/*.json` ＋ 重 build。
 - Node 22+；Windows 開發環境，git 會噴 CRLF 警告（無害）。
 - 部署：Cloudflare Pages，build `npm run build`、output `dist`。
+- Runtime flags：`API_ENABLED` 維持 false；正式 Echo 只由獨立 `VITE_ECHO_ENABLED`／`ECHO_ENABLED` 控制，禁止照舊 brief 把全域 API flag 打開。

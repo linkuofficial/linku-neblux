@@ -21,7 +21,7 @@ import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync, existsSync
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const ORIGIN = 'https://neblux.linku.tech';
+export const ORIGIN = 'https://neblux.linku.tech';
 const LANGS = ['en', 'zh', 'ja'];
 const HTMLLANG = { en: 'en', zh: 'zh-Hant', ja: 'ja' };
 
@@ -282,7 +282,7 @@ ${c.html}
 }
 
 // ── sitemap + graph.json ────────────────────────────────────────────────────
-function buildSitemap(D) {
+function buildSitemap(D, extraUrls = []) {
     const today = new Date().toISOString().slice(0, 10);
     const urls = [];
     const add = (loc, alts) => urls.push({ loc, alts });
@@ -300,6 +300,8 @@ function buildSitemap(D) {
         const alts = { en: `/concepts/${n.id}.html`, zh: `/zh/concepts/${n.id}.html`, ja: `/ja/concepts/${n.id}.html` };
         for (const l of LANGS) add(alts[l], alts);
     }
+    // published Depth pages (zh-Hant single-URL, no alternates until en exists)
+    for (const u of extraUrls) add(u, null);
     const body = urls.map(({ loc, alts }) => {
         const altTags = alts ? LANGS.map(l => `<xhtml:link rel="alternate" hreflang="${HTMLLANG[l]}" href="${ORIGIN}${alts[l]}"/>`).join('') : '';
         return `<url><loc>${ORIGIN}${loc}</loc><lastmod>${today}</lastmod>${altTags}</url>`;
@@ -329,7 +331,7 @@ function buildGraphJson(D) {
 }
 
 // ── main ────────────────────────────────────────────────────────────────────
-export function buildStaticHtml(dataDir, publicDir) {
+export function buildStaticHtml(dataDir, publicDir, { extraSitemapUrls = [] } = {}) {
     const D = loadData(dataDir);
     // clean generated dirs (stale nodes) — these are gitignored artifacts
     for (const d of ['concepts', 'zh', 'ja']) rmSync(resolve(publicDir, d), { recursive: true, force: true });
@@ -349,7 +351,7 @@ export function buildStaticHtml(dataDir, publicDir) {
             w(`${dir}${key}.html`, trustPage(D, lang, key));
         }
     }
-    w('sitemap.xml', buildSitemap(D));
+    w('sitemap.xml', buildSitemap(D, extraSitemapUrls));
     mkdirSync(resolve(publicDir, 'data'), { recursive: true });
     w('data/graph.json', buildGraphJson(D));
     return { concepts: n, pages: n * 3 };

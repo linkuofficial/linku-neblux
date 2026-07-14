@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neblux.linku.tech/schemas/layout-1.0.0.json",
+  "title": "Neblux Locked Node Layout",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "solverVersion", "algorithmParamsHash", "toolchain", "layoutInputsFingerprint", "nodes"],
+  "anyOf": [
+    { "required": ["nodeSetFingerprint", "anchorConfigFingerprint"] },
+    { "required": ["wonderId", "membersFingerprint"] }
+  ],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "layoutVersion": { "type": "string", "minLength": 1 },
+    "rendererContractVersion": { "const": "2.0.0" },
+    "solverVersion": { "type": "string", "minLength": 1 },
+    "algorithmParamsHash": { "type": "string", "pattern": "^sha256:" },
+    "toolchain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodeMajor", "d3Version"],
+      "properties": {
+        "nodeMajor": { "type": "integer", "minimum": 22 },
+        "d3Version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+      }
+    },
+    "layoutInputsFingerprint": { "type": "string", "pattern": "^sha256:" },
+    "layoutInputSnapshot": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["domains", "type"],
+        "properties": {
+          "domains": { "type": "array", "items": { "type": "string" } },
+          "type": { "type": "string" }
+        }
+      }
+    },
+    "nodeSetFingerprint": { "type": "string", "pattern": "^sha256:" },
+    "anchorConfigFingerprint": { "type": "string", "pattern": "^sha256:" },
+    "wonderId": { "type": "string", "minLength": 1 },
+    "membersFingerprint": { "type": "string", "pattern": "^sha256:" },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["x", "y", "lock"],
+        "properties": {
+          "x": { "type": "number" }, "y": { "type": "number" },
+          "lock": { "enum": ["hard", "soft", "new"] },
+          "radius": { "type": "number", "minimum": 0 },
+          "role": { "enum": ["spine", "context", "local"] },
+          "step": { "type": "integer", "minimum": 1 }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neblux.linku.tech/schemas/atlas-artifact-1.0.0.json",
+  "title": "Neblux Graph Atlas Generated Artifact",
+  "$comment": "Build-time enforcement is implemented by the Atlas artifact audit and contract validators until a JSON Schema compiler is authorized.",
+  "x-neblux-enforced-by": [
+    "scripts/atlas/audit-data.mjs",
+    "scripts/atlas/artifact-contract.mjs"
+  ],
+  "oneOf": [
+    { "$ref": "#/$defs/wonderCore" },
+    { "$ref": "#/$defs/wonderLocale" },
+    { "$ref": "#/$defs/depthIndex" },
+    { "$ref": "#/$defs/portalIndex" },
+    { "$ref": "#/$defs/constellationIndex" },
+    { "$ref": "#/$defs/atlasIndex" }
+  ],
+  "$defs": {
+    "envelope": {
+      "type": "object",
+      "required": ["schemaVersion", "layoutVersion", "rendererContractVersion"],
+      "properties": {
+        "schemaVersion": { "const": "1.0.0" },
+        "layoutVersion": { "type": "string", "pattern": "(?:^|-)\\d+\\.\\d+\\.\\d+$" },
+        "rendererContractVersion": { "const": "2.0.0" }
+      }
+    },
+    "wonderCore": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "wonderId", "nodes", "spineEdges", "graphEdges", "guided"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "wonderId": { "type": "string", "minLength": 1 },
+            "nodes": { "type": "array", "items": { "$ref": "#/$defs/wonderNode" } },
+            "spineEdges": { "type": "array", "items": { "$ref": "#/$defs/spineEdge" } },
+            "graphEdges": { "type": "array", "items": { "$ref": "#/$defs/edge" } },
+            "guided": {
+              "type": "object", "additionalProperties": false, "required": ["stepNodeIds"],
+              "properties": { "stepNodeIds": { "type": "array", "items": { "type": "string" } } }
+            }
+          }
+        }
+      ]
+    },
+    "wonderNode": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "type", "domain", "x", "y", "roles"],
+      "properties": {
+        "id": { "type": "string" }, "type": { "enum": ["field", "concept", "person", "event"] },
+        "domain": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "x": { "type": "number" }, "y": { "type": "number" },
+        "roles": { "type": "array", "minItems": 1, "items": { "enum": ["spine", "context", "local", "portal"] } },
+        "step": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "edge": {
+      "type": "object", "additionalProperties": false, "required": ["source", "target"],
+      "properties": { "source": { "type": "string" }, "target": { "type": "string" } }
+    },
+    "spineEdge": {
+      "type": "object", "additionalProperties": false, "required": ["source", "target", "relation_type"],
+      "properties": {
+        "source": { "type": "string" }, "target": { "type": "string" },
+        "relation_type": { "enum": ["applied", "logical", "conceptual", "historical", "causal"] }
+      }
+    },
+    "wonderLocale": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "wonderId", "locale", "title", "intro", "outward", "reflect", "guided", "nodes"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "wonderId": { "type": "string" }, "locale": { "enum": ["en", "zh", "ja"] },
+            "title": { "type": "string" }, "intro": { "type": "string" }, "outward": { "type": "string" },
+            "reflect": { "type": "array", "items": { "type": "string" } },
+            "guided": {
+              "type": "object", "additionalProperties": false, "required": ["steps"],
+              "properties": { "steps": { "type": "array", "items": { "$ref": "#/$defs/guidedStep" } } }
+            },
+            "nodes": { "type": "object", "additionalProperties": { "$ref": "#/$defs/localizedNode" } }
+          }
+        }
+      ]
+    },
+    "guidedStep": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "hook", "reveal", "example", "surprise", "thread"],
+      "properties": {
+        "id": { "type": "string" }, "hook": { "type": "string" }, "reveal": { "type": "string" },
+        "example": { "type": "string" }, "surprise": { "type": "string" }, "thread": { "type": "string" }
+      }
+    },
+    "localizedNode": {
+      "type": "object", "additionalProperties": false, "required": ["label"],
+      "properties": { "label": { "type": "string" }, "description": { "type": "string" }, "sections": { "type": "object" } }
+    },
+    "depthIndex": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "nodes"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "nodes": { "type": "object", "additionalProperties": { "type": "array", "items": { "$ref": "#/$defs/depthEntry" } } }
+          }
+        }
+      ]
+    },
+    "depthEntry": {
+      "type": "object", "additionalProperties": false, "required": ["id", "path", "focus", "locales"],
+      "properties": {
+        "id": { "type": "string" }, "path": { "type": "string", "pattern": "^/depth/" },
+        "focus": { "type": "string" }, "locales": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "portalIndex": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "nodes"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "nodes": { "type": "object", "additionalProperties": { "$ref": "#/$defs/portalNode" } }
+          }
+        }
+      ]
+    },
+    "portalNode": {
+      "type": "object", "additionalProperties": false, "required": ["destinations"],
+      "properties": { "destinations": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/destination" } } }
+    },
+    "destination": {
+      "type": "object", "additionalProperties": false, "required": ["view", "route"],
+      "properties": {
+        "view": { "enum": ["main", "wonder", "depth"] }, "id": { "type": "string" },
+        "route": { "type": "string", "pattern": "^/" }, "focus": { "type": "string" }
+      }
+    },
+    "constellationIndex": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "tours", "nodes", "related"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "tours": { "type": "object" }, "nodes": { "type": "object" }, "related": { "type": "object" }
+          }
+        }
+      ]
+    },
+    "atlasIndex": {
+      "allOf": [
+        { "$ref": "#/$defs/envelope" },
+        {
+          "type": "object", "additionalProperties": false,
+          "required": ["schemaVersion", "layoutVersion", "rendererContractVersion", "coordinateSystem", "mainGalaxy", "wonders", "roads"],
+          "properties": {
+            "schemaVersion": true, "layoutVersion": true, "rendererContractVersion": true,
+            "coordinateSystem": { "type": "object" }, "mainGalaxy": { "type": "object" },
+            "wonders": { "type": "object" }, "roads": { "type": "array" }
+          }
+        }
+      ]
+    }
+  }
+}

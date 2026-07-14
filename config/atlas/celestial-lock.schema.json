@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://neblux.linku.tech/schemas/celestial-lock-1.0.0.json",
+  "title": "Neblux Celestial Classification Lock",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "classificationVersion", "nodes"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "classificationVersion": { "type": "string", "minLength": 1 },
+    "nodes": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["archetype", "visualMagnitudeClass", "layoutMassClass", "labelPriorityClass", "reason"],
+        "properties": {
+          "archetype": { "enum": ["galactic_nucleus", "domain_core", "subfield_giant", "concept_star", "bridge_star", "beacon_star", "event_remnant", "local_protostar"] },
+          "visualMagnitudeClass": { "enum": ["faint", "standard", "bright", "landmark"] },
+          "layoutMassClass": { "enum": ["light", "standard", "heavy", "bridge", "nucleus"] },
+          "labelPriorityClass": { "enum": ["low", "standard", "high", "critical"] },
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

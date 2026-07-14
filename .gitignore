@@ -26,6 +26,10 @@ frontend/public/methodology.html
 frontend/public/sources.html
 frontend/public/sitemap.xml
 
+# Published Depth pages copied at build time from depth/ (scripts/build_depth_pages.mjs;
+# publication gated by neblux-depth/depth_manifest.json — public/live/published + QA keys)
+frontend/public/depth/
+
 # Content-pipeline scratch: scores, worklists, batch rewrites, specs, temp dumps
 data/_*
 data/all_nodes_backup_*.json
