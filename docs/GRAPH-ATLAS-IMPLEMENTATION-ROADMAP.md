@@ -6,7 +6,7 @@
 
 > 本文件把長期主計畫拆成可獨立審查、測試、回滾的工程工作包。任何工作包都不自動授權下一包。
 
-進度（2026-07-14）：WP0、WP0.5、WP1、WP2、WP3 完成；WP3 standalone artifacts、cross-family review、atomic swap follow-up 與完整 regression 已收斂。WP4 已授權並進入 implementation，branch `codex/graph-atlas-wp4`，base `2659c23`。
+進度（2026-07-14）：WP0、WP0.5、WP1、WP2、WP3 完成；WP3 standalone artifacts、cross-family review、atomic swap follow-up 與完整 regression 已收斂。WP4 已實作、自審並通過完整驗證，待一輪 cross-family review。WP5 preflight 已完成，branch `codex/graph-atlas-wp5`、brief `docs/tasks/2026-07-14-graph-atlas-wp5-renderer-v2-core.md`；WP4 review gate 關閉後才開始 implementation。
 
 ## 1. Critical path
 
@@ -290,6 +290,8 @@ tests/e2e/atlas.spec.ts
 Atlas v2 仍是內部入口；`index.html` 不變。
 
 ## 8. WP5 — Renderer v2 Core
+
+狀態：ready / gated（2026-07-14）。實作 brief、normalized scene contract、module boundary、no-bundling gate、效能與視覺矩陣已備妥；待 WP4 cross-family review closeout 後由 `codex/graph-atlas-wp5` 開工。
 
 ### 目標
 
