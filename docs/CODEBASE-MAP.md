@@ -42,7 +42,7 @@
 - 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式 Main 切換要等 WP5.5／WP6／RG-B，不得把 locks 存在誤作 runtime 已使用。
 - WP3／WP4 在 build 時產生 gitignored `/data/atlas/*`：79 個 base artifacts 加上 `/data/atlas/index.json` presentation index。`build-data` 的 atomic swap 會保留／復原上一份有效輸出。
 - `frontend/atlas-v2.html` 與 `src/atlas/` 是獨立 Canvas2D pilot：只讀小型 Atlas index、Main＋Light／Quantum／Edge AI，並有等價 DOM directory 與 19 Wonders static fallback；不得載入完整 graph 或改用 `src/engine/`。
-- `frontend/src/engine-v2/` 與 `renderer-v2-lab.html` 是 WP5 的 page-agnostic Renderer v2 core／deterministic 1,000／7,000 lab；production pages 尚未 import。真實 687-node celestial lock／scene mapping 留在 WP5.5，Main page adapter 留在 WP6。
+- `frontend/src/engine-v2/` 與 `renderer-v2-lab.html` 是 WP5 的 page-agnostic Renderer v2 core／deterministic 1,000／7,000 lab；production pages 尚未 import。真實 687-node celestial lock／scene mapping 已由 WP5.5 的 `scripts/atlas/canonical-scene.mjs` 收斂並受 `atlas:validate` 保護；Main page adapter 留在 WP6。
 - Windows 操作：生成／build 前先停止 dev server；artifact replacement 遇到 `EPERM`／`EBUSY`／`EACCES` 會拒絕覆蓋並提示停止占用程序。這是資料完整性 gate，不可繞過。
 
 ## 資料

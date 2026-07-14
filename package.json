@@ -17,6 +17,7 @@
     "test:e2e:install": "playwright install --with-deps chromium",
     "atlas:validate": "node scripts/atlas/validate.mjs",
     "atlas:scene": "node -e \"import('./scripts/atlas/canonical-scene.mjs').then(({buildCanonicalSceneFromRepo})=>console.log(JSON.stringify(buildCanonicalSceneFromRepo().metadata,null,2)))\"",
+    "atlas:classification:audit": "node scripts/atlas/audit-celestial-lock.mjs",
     "test:atlas": "node --test tests/atlas/validators.test.mjs tests/atlas/layout.test.mjs tests/atlas/artifacts.test.mjs tests/atlas/wonder-titles.test.mjs tests/atlas/canonical-scene.test.mjs",
     "test:renderer-v2": "node --test tests/renderer-v2/*.test.mjs",
     "atlas:build-data": "node scripts/atlas/build-data.mjs",

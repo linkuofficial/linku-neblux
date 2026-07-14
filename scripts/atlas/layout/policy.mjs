@@ -22,6 +22,12 @@ export const LOCAL_SOLVER_PARAMS = Object.freeze({
     collisionIterations: 3, velocityDecay: 0.5,
 });
 export const WONDER_SOLVER_PARAMS = Object.freeze({ spineSpacing: 170, spineWave: 0.7, spineAmplitude: 85 });
+export const CELESTIAL_CLASSIFICATION_POLICY = Object.freeze({
+    version: '1.0.0',
+    bridgeMinDomains: 3,
+    bridgeMinActiveDegree: 12,
+    brightMinActiveDegree: 20,
+});
 
 export function round(value, digits = 2) {
     const scale = 10 ** digits;
@@ -65,6 +71,14 @@ export function anchorFingerprint(anchorConfig) {
 
 export function relationFingerprint(records) {
     return fingerprint(projectTopology(records).map((pair) => [pair.source, pair.target]));
+}
+
+export function classificationInputsFingerprint(nodes, records) {
+    return fingerprint({
+        nodes: nodes.map((node) => [node.id, node.type, [...(node.domain || [])].sort()]).sort(([a], [b]) => a.localeCompare(b)),
+        activePairs: projectTopology(records).map((pair) => [pair.source, pair.target]),
+        policy: CELESTIAL_CLASSIFICATION_POLICY,
+    });
 }
 
 function hashNumbers(id) {
@@ -368,7 +382,9 @@ export function classifyProposal(rawNodes, records, anchorConfig = null) {
     return Object.fromEntries([...rawNodes].sort((a, b) => a.id.localeCompare(b.id)).map((node) => {
         const domains = node.domain?.length || 0; const value = degree.get(node.id) || 0; const anchor = hard.get(node.id);
         if (anchor) return [node.id, { archetype: anchor.archetype, visualMagnitudeClass: anchor.massClass === 'nucleus' ? 'landmark' : 'bright', layoutMassClass: anchor.massClass, labelPriorityClass: anchor.massClass === 'nucleus' ? 'critical' : 'high', reason: 'proposal:explicit-domain-anchor' }];
-        const archetype = node.type === 'field' ? 'subfield_giant' : node.type === 'person' ? 'beacon_star' : node.type === 'event' ? 'event_remnant' : domains >= 3 ? 'bridge_star' : 'concept_star';
-        return [node.id, { archetype, visualMagnitudeClass: value >= 20 ? 'bright' : 'standard', layoutMassClass: domains >= 3 ? 'bridge' : 'standard', labelPriorityClass: value >= 20 ? 'high' : 'standard', reason: `proposal:type=${node.type};degree=${value};domains=${domains}` }];
+        const bridge = node.type === 'concept' && domains >= CELESTIAL_CLASSIFICATION_POLICY.bridgeMinDomains && value >= CELESTIAL_CLASSIFICATION_POLICY.bridgeMinActiveDegree;
+        const archetype = node.type === 'field' ? 'subfield_giant' : node.type === 'person' ? 'beacon_star' : node.type === 'event' ? 'event_remnant' : bridge ? 'bridge_star' : 'concept_star';
+        const bright = value >= CELESTIAL_CLASSIFICATION_POLICY.brightMinActiveDegree;
+        return [node.id, { archetype, visualMagnitudeClass: bright ? 'bright' : 'standard', layoutMassClass: bridge ? 'bridge' : 'standard', labelPriorityClass: bright ? 'high' : 'standard', reason: `proposal:policy=${CELESTIAL_CLASSIFICATION_POLICY.version};type=${node.type};degree=${value};domains=${domains}` }];
     }));
 }

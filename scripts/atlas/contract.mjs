@@ -30,8 +30,8 @@ export const SCHEMA_CONTRACTS = Object.freeze({
     },
     'celestial-lock': {
         version: '1.0.0',
-        required: ['schemaVersion', 'classificationVersion', 'adapterVersion', 'nodes'],
-        allowed: ['schemaVersion', 'classificationVersion', 'adapterVersion', 'nodes'],
+        required: ['schemaVersion', 'classificationVersion', 'adapterVersion', 'nodeSetFingerprint', 'classificationInputsFingerprint', 'anchorConfigFingerprint', 'nodes'],
+        allowed: ['schemaVersion', 'classificationVersion', 'adapterVersion', 'nodeSetFingerprint', 'classificationInputsFingerprint', 'anchorConfigFingerprint', 'nodes'],
         enums: {
             '/nodes/*/archetype': [...CELESTIAL_ARCHETYPES],
             '/nodes/*/visualMagnitudeClass': [...VISUAL_MAGNITUDE_CLASSES],

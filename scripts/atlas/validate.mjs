@@ -1,6 +1,7 @@
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { REPO_ROOT, exitCodeFor, printIssues, readJson, sortIssues } from './contract.mjs';
+import { REPO_ROOT, exitCodeFor, issue, printIssues, readJson, sortIssues } from './contract.mjs';
+import { buildCanonicalSceneFromRepo } from './canonical-scene.mjs';
 import { validateAllSchemas, validateConfig } from './validate-config.mjs';
 import { validateRealSources } from './validate-sources.mjs';
 
@@ -12,6 +13,7 @@ export function validateAtlas({ configFile = ATLAS_PRESENTATION_CONFIG } = {}) {
     const graphIds = new Set(sourceResult.graph.nodes.map((node) => node?.id).filter(Boolean));
     const issues = [...sourceResult.issues, ...validateAllSchemas(), ...configRead.issues];
     if (configRead.value) issues.push(...validateConfig('atlas-layout', configRead.value, configFile, { graphIds }));
+    try { buildCanonicalSceneFromRepo(); } catch (error) { issues.push(issue('config/atlas/celestial-lock.json', '$', error.message)); }
     return { issues: sortIssues(issues), sourceResult };
 }
 
@@ -21,7 +23,7 @@ function main() {
     const code = exitCodeFor(result.issues);
     if (code === 0) {
         const { graph } = result.sourceResult;
-        process.stdout.write(`atlas validation: PASS nodes=${graph.nodes.length} records=${graph.records.length} activePairs=${graph.topology.length} schemas=4 atlasConfig=validated\n`);
+        process.stdout.write(`atlas validation: PASS nodes=${graph.nodes.length} records=${graph.records.length} activePairs=${graph.topology.length} schemas=4 atlasConfig=validated celestialLock=validated\n`);
     }
     process.exitCode = code;
 }

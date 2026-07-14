@@ -390,7 +390,7 @@ Atlas v2 仍是內部入口；`index.html` 不變。
 
 ## 8.5 WP5.5 — Canonical Scene Input Closure
 
-狀態：in-progress（2026-07-15；brief 見 `docs/tasks/2026-07-15-graph-atlas-wp5-5-canonical-scene-input.md`）；依賴 G0，不依賴 RG-A 是否已外部部署。
+狀態：implementation verified／combined review pending（2026-07-15；brief 見 `docs/tasks/2026-07-15-graph-atlas-wp5-5-canonical-scene-input.md`）。687-node lock、scene adapter、正式 validation 與完整 verify 已完成；依凜空指示，跨模型對抗審查延後至 WP6 完成後合併執行。依賴 G0，不依賴 RG-A 是否已外部部署。
 
 ### 目標
 
@@ -416,7 +416,7 @@ Atlas v2 仍是內部入口；`index.html` 不變。
 
 ## 9. WP6 — Main Galaxy v2
 
-狀態：pending；只可從通過 G0＋WP5.5 的共同基線開工。
+狀態：pending；可從通過 G0 且 WP5.5 implementation verified 的共同基線開工，並在 WP6 完成後與 WP5.5 合併跨模型審查。
 
 ### 目標
 

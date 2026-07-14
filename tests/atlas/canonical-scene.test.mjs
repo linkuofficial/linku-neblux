@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { buildCanonicalSceneFromRepo, mapClassification } from '../../scripts/atlas/canonical-scene.mjs';
+import { buildCanonicalSceneFromRepo, mapClassification, readCanonicalLock } from '../../scripts/atlas/canonical-scene.mjs';
 
 test('canonical scene deterministically joins the 687-node graph, layout and celestial lock', () => {
     const first = buildCanonicalSceneFromRepo();
@@ -9,10 +9,37 @@ test('canonical scene deterministically joins the 687-node graph, layout and cel
     assert.equal(first.scene.edges.length, 3138);
     assert.deepEqual(first.scene, second.scene);
     assert.deepEqual(first.metadata, second.metadata);
-    assert.equal(first.metadata.sceneHash, '09fb8f3c');
+    assert.equal(first.metadata.sceneHash, '13784a17');
+    assert.match(first.metadata.sceneLayoutHash, /^sha256:[a-f0-9]{64}$/);
     assert.equal(new Set(first.scene.nodes.map((node) => node.archetype)).has('concept_star'), true);
     assert.equal(first.scene.nodes.filter((node) => node.archetype === 'galactic_nucleus').length, 2);
     assert.equal(first.scene.nodes.some((node) => node.archetype === 'future'), false);
+
+    const restyledLock = structuredClone(readCanonicalLock());
+    const restyledEntry = Object.values(restyledLock.nodes).find((entry) => entry.archetype === 'concept_star');
+    restyledEntry.visualMagnitudeClass = restyledEntry.visualMagnitudeClass === 'faint' ? 'standard' : 'faint';
+    const restyled = buildCanonicalSceneFromRepo(restyledLock);
+    assert.equal(restyled.metadata.sceneLayoutHash, first.metadata.sceneLayoutHash);
+    assert.notEqual(restyled.metadata.sceneHash, first.metadata.sceneHash);
+});
+
+test('celestial lock retains sparse bridge semantics and source fingerprints', () => {
+    const lock = readCanonicalLock();
+    const entries = Object.values(lock.nodes);
+    assert.equal(entries.length, 687);
+    assert.equal(entries.filter((entry) => entry.archetype === 'bridge_star').length, 81);
+    assert.equal(entries.filter((entry) => entry.layoutMassClass === 'bridge').length, 81);
+    assert.equal(entries.filter((entry) => entry.archetype === 'local_protostar').length, 0);
+    for (const key of ['nodeSetFingerprint', 'classificationInputsFingerprint', 'anchorConfigFingerprint']) assert.match(lock[key], /^sha256:[a-f0-9]{64}$/);
+});
+
+test('canonical scene fails before normalization on stale inputs or incompatible adapter majors', () => {
+    const stale = structuredClone(readCanonicalLock());
+    stale.classificationInputsFingerprint = 'sha256:0000000000000000000000000000000000000000000000000000000000000000';
+    assert.throws(() => buildCanonicalSceneFromRepo(stale), /classification inputs fingerprint is stale/);
+    const incompatible = structuredClone(readCanonicalLock());
+    incompatible.adapterVersion = '2.0.0';
+    assert.throws(() => buildCanonicalSceneFromRepo(incompatible), /unsupported celestial adapter major version/);
 });
 
 test('celestial adapter maps lock enums explicitly and rejects unsupported values', () => {
