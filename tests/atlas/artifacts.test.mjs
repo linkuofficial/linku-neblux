@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -12,7 +12,7 @@ import {
     validateAtlasIndex, validateWonderCore, validateWonderLocale,
 } from '../../scripts/atlas/artifact-contract.mjs';
 import { auditGeneratedData } from '../../scripts/atlas/audit-data.mjs';
-import { buildData } from '../../scripts/atlas/build-data.mjs';
+import { buildData, replaceDirectory } from '../../scripts/atlas/build-data.mjs';
 import { buildArtifactMap, expectedArtifactPaths, loadArtifactInputs } from '../../scripts/atlas/artifact-sources.mjs';
 import { buildTourIndex } from '../../scripts/build_tour_index.mjs';
 
@@ -230,6 +230,55 @@ test('failed staged generation leaves the previous valid target untouched', () =
         inputs.layouts.delete('light');
         assert.throws(() => buildData(target, inputs));
         assert.deepEqual(hashes(target), before);
+    } finally { rmSync(parent, { recursive: true, force: true }); }
+});
+
+test('a lock on the existing target preserves it and reports an actionable recovery', () => {
+    const parent = mkdtempSync(join(tmpdir(), 'neblux-wp3-target-lock-'));
+    const target = resolve(parent, 'atlas');
+    const staging = resolve(parent, 'staging');
+    try {
+        mkdirSync(target);
+        mkdirSync(staging);
+        writeFileSync(resolve(target, 'old.json'), '{"version":"old"}', 'utf8');
+        writeFileSync(resolve(staging, 'new.json'), '{"version":"new"}', 'utf8');
+        const locked = Object.assign(new Error('directory is locked'), { code: 'EPERM' });
+
+        assert.throws(
+            () => replaceDirectory(staging, target, { rename: () => { throw locked; } }),
+            /Stop the Vite dev server/,
+        );
+        assert.equal(readFileSync(resolve(target, 'old.json'), 'utf8'), '{"version":"old"}');
+        assert.equal(existsSync(resolve(target, 'new.json')), false);
+        assert.equal(existsSync(staging), false);
+    } finally { rmSync(parent, { recursive: true, force: true }); }
+});
+
+test('a lock while installing staging restores the previous target', () => {
+    const parent = mkdtempSync(join(tmpdir(), 'neblux-wp3-install-lock-'));
+    const target = resolve(parent, 'atlas');
+    const staging = resolve(parent, 'staging');
+    let renameCount = 0;
+    try {
+        mkdirSync(target);
+        mkdirSync(staging);
+        writeFileSync(resolve(target, 'old.json'), '{"version":"old"}', 'utf8');
+        writeFileSync(resolve(staging, 'new.json'), '{"version":"new"}', 'utf8');
+        const locked = Object.assign(new Error('directory is locked'), { code: 'EBUSY' });
+
+        assert.throws(
+            () => replaceDirectory(staging, target, {
+                rename: (source, destination) => {
+                    renameCount += 1;
+                    if (renameCount === 2) throw locked;
+                    renameSync(source, destination);
+                },
+            }),
+            /Stop the Vite dev server/,
+        );
+        assert.equal(readFileSync(resolve(target, 'old.json'), 'utf8'), '{"version":"old"}');
+        assert.equal(existsSync(resolve(target, 'new.json')), false);
+        assert.equal(existsSync(staging), false);
     } finally { rmSync(parent, { recursive: true, force: true }); }
 });
 

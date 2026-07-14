@@ -42,7 +42,7 @@
 - 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式切換要等 WP5／WP6，不得把 locks 存在誤作 runtime 已使用。
 - WP3 會先產生 gitignored `/data/atlas/*` standalone artifacts；在另開禁區 brief 前不掛進 Vite／production。
 - WP3 standalone 產生 79 個 base artifacts；`index.json` 是可選 companion artifact，存在時由 audit 驗證並在 `build-data` atomic swap 中保留。
-- Windows 操作：執行 `atlas:build-data` 前先停止 dev server；本機若先生成 Atlas artifacts 再執行 Vite build，未引用 JSON 可能被複製進 dist，但目前 production 不消費它們。
+- Windows 操作：執行 `atlas:build-data` 前先停止 dev server；atomic swap 會依完成階段保留／復原上一份有效輸出，並在 `EPERM`／`EBUSY`／`EACCES` 時提示停止占用程序。本機若先生成 Atlas artifacts 再執行 Vite build，未引用 JSON 可能被複製進 dist，但目前 production 不消費它們。
 
 ## 資料
 

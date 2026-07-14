@@ -8,23 +8,56 @@ import { exitCodeFor } from './contract.mjs';
 
 let stagingSequence = 0;
 
-export function replaceDirectory(staging, target) {
+const LOCK_ERROR_CODES = new Set(['EACCES', 'EBUSY', 'EPERM']);
+
+function actionableReplacementError(error, target) {
+    if (!LOCK_ERROR_CODES.has(error?.code)) return error;
+    const wrapped = new Error(
+        `Atlas artifact replacement could not update ${target} because the directory is locked or access was denied. `
+        + 'Stop the Vite dev server and any process using the Atlas artifacts, then rerun atlas:build-data.',
+        { cause: error },
+    );
+    wrapped.code = error.code;
+    return wrapped;
+}
+
+export function replaceDirectory(staging, target, overrides = {}) {
+    const operations = {
+        exists: existsSync,
+        rename: renameSync,
+        remove: rmSync,
+        ...overrides,
+    };
     const backup = `${target}.backup-${process.pid}-${stagingSequence += 1}`;
-    const hadTarget = existsSync(target);
+    const hadTarget = operations.exists(target);
+    let previousMoved = false;
+    let stagedInstalled = false;
     try {
-        if (hadTarget) renameSync(target, backup);
-        renameSync(staging, target);
-        if (hadTarget) rmSync(backup, { recursive: true, force: true });
+        if (hadTarget) {
+            operations.rename(target, backup);
+            previousMoved = true;
+        }
+        operations.rename(staging, target);
+        stagedInstalled = true;
+        if (previousMoved) operations.remove(backup, { recursive: true, force: true });
     } catch (error) {
         try {
-            if (existsSync(target)) rmSync(target, { recursive: true, force: true });
-            if (hadTarget && existsSync(backup)) renameSync(backup, target);
+            // Only remove target after staging was actually installed. If the first
+            // rename failed, target is still the previous valid artifact directory.
+            if (stagedInstalled && operations.exists(target)) {
+                operations.remove(target, { recursive: true, force: true });
+            }
+            if (previousMoved && operations.exists(backup)) operations.rename(backup, target);
         } catch (rollbackError) {
-            throw new AggregateError([error, rollbackError], `Atlas artifact replacement failed and backup remains at ${backup}`);
+            throw new AggregateError(
+                [error, rollbackError],
+                `Atlas artifact replacement and rollback failed; backup remains at ${backup}. `
+                + 'Stop the Vite dev server and restore the backup before retrying.',
+            );
         }
-        throw error;
+        throw actionableReplacementError(error, target);
     } finally {
-        if (existsSync(staging)) rmSync(staging, { recursive: true, force: true });
+        if (operations.exists(staging)) operations.remove(staging, { recursive: true, force: true });
     }
 }
 

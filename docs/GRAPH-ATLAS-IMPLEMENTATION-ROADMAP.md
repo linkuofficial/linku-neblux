@@ -6,7 +6,7 @@
 
 > 本文件把長期主計畫拆成可獨立審查、測試、回滾的工程工作包。任何工作包都不自動授權下一包。
 
-進度（2026-07-12）：WP0、WP0.5、WP1、WP2 完成；WP2 的 cross-family findings 已全數修正並完成 v1 blessing。WP3 尚未授權。
+進度（2026-07-14）：WP0、WP0.5、WP1、WP2、WP3 完成；WP3 standalone artifacts、cross-family review、atomic swap follow-up 與完整 regression 已收斂。WP4 尚未授權，需另開 brief。
 
 ## 1. Critical path
 
@@ -200,6 +200,8 @@ scripts/atlas/layout/
 保留現有 `engine/layout.js` 與 bake；v2 locks 尚未接 runtime。
 
 ## 6. WP3 — Bundles & Indices
+
+狀態：done（2026-07-14）。實作、cross-family review、follow-up 修正與驗證見 `docs/tasks/2026-07-14-graph-atlas-wp3-bundles-indices.md`。
 
 ### 目標
 
