@@ -5,6 +5,8 @@ import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFi
 import { buildTourIndex } from './scripts/build_tour_index.mjs';
 import { buildStaticHtml } from './scripts/build_static_html.mjs';
 import { publishDepthPages } from './scripts/build_depth_pages.mjs';
+import { buildData } from './scripts/atlas/build-data.mjs';
+import { buildIndexFromSources } from './scripts/atlas/build-index.mjs';
 
 function copyDataPlugin() {
     return {
@@ -104,6 +106,13 @@ function copyDataPlugin() {
                 // product foundation, not an optional extra. Fail the build loud.
                 this.error(`tour-index failed to generate: ${(err as Error).message}`);
             }
+
+            try {
+                buildData(resolve(destDir, 'atlas'));
+                buildIndexFromSources(resolve(destDir, 'atlas', 'index.json'));
+            } catch (err) {
+                this.error(`Atlas prototype data failed to generate: ${(err as Error).message}`);
+            }
         },
     };
 }
@@ -156,6 +165,7 @@ export default defineConfig({
                 app: resolve(__dirname, 'frontend/app.html'),
                 explorer: resolve(__dirname, 'frontend/explorer.html'),
                 wonders: resolve(__dirname, 'frontend/wonders.html'),
+                atlas: resolve(__dirname, 'frontend/atlas-v2.html'),
             },
         },
     },

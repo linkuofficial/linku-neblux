@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/lang-init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#040713">
+    <meta name="color-scheme" content="dark">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Graph Atlas Prototype — Neblux</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/neblux-fonts.css">
+    <link rel="stylesheet" href="/neblux-theme.css">
+    <link rel="stylesheet" href="/src/styles/pages/atlas.css">
+    <script type="module" src="/src/atlas/atlas-main.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#atlas-directory">Skip to Atlas directory</a>
+    <main class="atlas-shell">
+        <header class="atlas-header">
+            <div>
+                <p class="atlas-wordmark">NEBLUX / GRAPH ATLAS</p>
+                <p class="atlas-eyebrow" data-atlas-copy="eyebrow">NAVIGATION FIRST</p>
+                <h1 class="atlas-title" data-atlas-copy="title">Graph Atlas</h1>
+                <p class="atlas-subtitle" data-atlas-copy="subtitle">A quiet map for tracing how fields and ideas meet.</p>
+            </div>
+            <div class="atlas-language" aria-label="Language">
+                <button type="button" data-atlas-lang="en" aria-pressed="true">EN</button>
+                <button type="button" data-atlas-lang="zh" aria-pressed="false">中</button>
+                <button type="button" data-atlas-lang="ja" aria-pressed="false">日</button>
+            </div>
+        </header>
+        <p id="atlas-status" role="status" aria-live="polite"></p>
+        <p id="atlas-fallback" class="atlas-fallback" hidden>Atlas data is unavailable. The static Wonder directory remains available.</p>
+        <div class="atlas-grid">
+            <section id="atlas-stage" class="atlas-stage" aria-label="Graph Atlas visual map">
+                <canvas id="atlas-canvas" aria-label="Interactive Graph Atlas. Drag to pan, scroll to zoom, or use the directory."></canvas>
+                <div id="atlas-tooltip" class="atlas-tooltip" role="tooltip" hidden></div>
+                <div class="atlas-controls" role="group" aria-label="Atlas controls">
+                    <button id="atlas-zoom-out" type="button" aria-label="Zoom out">−</button>
+                    <button id="atlas-reset" type="button" aria-label="Reset view">◎</button>
+                    <button id="atlas-zoom-in" type="button" aria-label="Zoom in">+</button>
+                </div>
+            </section>
+            <aside id="atlas-directory" class="atlas-directory">
+                <h2 data-atlas-copy="directory">Atlas directory</h2>
+                <h3 data-atlas-copy="regions">Pilot regions</h3>
+                <nav class="atlas-region-list" aria-label="Pilot Atlas regions">
+                    <a class="atlas-region-link" data-region-id="main" href="/app.html"><span class="atlas-region-title" data-region-title>Main Galaxy</span><span class="atlas-region-summary" data-region-summary>A navigable map of how fields and ideas connect.</span></a>
+                    <a class="atlas-region-link" data-region-id="light" href="/wonders.html?w=light"><span class="atlas-region-title" data-region-title>Light</span><span class="atlas-region-summary" data-region-summary>A journey through waves, colour, and observation.</span></a>
+                    <a class="atlas-region-link" data-region-id="quantum" href="/wonders.html?w=quantum"><span class="atlas-region-title" data-region-title>Quantum Reality</span><span class="atlas-region-summary" data-region-summary>Where measurement changes what can be known.</span></a>
+                    <a class="atlas-region-link" data-region-id="edge-ai" href="/wonders.html?w=edge-ai"><span class="atlas-region-title" data-region-title>Edge AI</span><span class="atlas-region-summary" data-region-summary>Intelligence close to the world it serves.</span></a>
+                </nav>
+                <h3 data-atlas-copy="allWonders">All Wonder routes</h3>
+                <nav class="atlas-wonder-directory" aria-label="All Wonder routes">
+                    <a class="atlas-wonder-link" href="/wonders.html?w=arrow-of-time">The Arrow of Time</a><a class="atlas-wonder-link" href="/wonders.html?w=black-holes">Black Holes</a><a class="atlas-wonder-link" href="/wonders.html?w=chaos">Chaos</a><a class="atlas-wonder-link" href="/wonders.html?w=computation">Computation</a><a class="atlas-wonder-link" href="/wonders.html?w=edge-ai">Edge AI</a><a class="atlas-wonder-link" href="/wonders.html?w=emergence">Emergence</a><a class="atlas-wonder-link" href="/wonders.html?w=germs">Germs</a><a class="atlas-wonder-link" href="/wonders.html?w=ideas-that-spread">Ideas That Spread</a><a class="atlas-wonder-link" href="/wonders.html?w=infinity">Infinity</a><a class="atlas-wonder-link" href="/wonders.html?w=language">Language</a><a class="atlas-wonder-link" href="/wonders.html?w=light">Light</a><a class="atlas-wonder-link" href="/wonders.html?w=markets">Markets</a><a class="atlas-wonder-link" href="/wonders.html?w=music">Music</a><a class="atlas-wonder-link" href="/wonders.html?w=networks">Networks</a><a class="atlas-wonder-link" href="/wonders.html?w=quantum">Quantum Reality</a><a class="atlas-wonder-link" href="/wonders.html?w=symmetry">Symmetry</a><a class="atlas-wonder-link" href="/wonders.html?w=the-atom">The Atom</a><a class="atlas-wonder-link" href="/wonders.html?w=the-gene">The Gene</a><a class="atlas-wonder-link" href="/wonders.html?w=the-mind">The Mind</a>
+                </nav>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

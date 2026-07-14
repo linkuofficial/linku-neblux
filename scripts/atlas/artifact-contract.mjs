@@ -325,12 +325,31 @@ export function validateConstellationIndex(index, wonderIds, file = 'constellati
     return sortIssues(issues);
 }
 
-export function validateAtlasIndex(index, wonderIds, file = 'index.json') {
+function parseRegionReference(value) {
+    if (value === 'main') return { type: 'main', id: 'main' };
+    if (typeof value === 'string' && value.startsWith('wonder:')) return { type: 'wonder', id: value.slice('wonder:'.length) };
+    return null;
+}
+
+export function validateAtlasIndex(index, wonderIds, file = 'index.json', { graphIds = new Set() } = {}) {
     const issues = [...auditArtifactEnvelope(index, new Set(), file)];
     if (!isObject(index?.coordinateSystem) || !isObject(index?.mainGalaxy) || !isObject(index?.wonders) || !Array.isArray(index?.roads)) {
         issues.push(issue(file, '$', 'must contain coordinateSystem, mainGalaxy, wonders and roads'));
     }
     for (const id of Object.keys(index?.wonders || {})) if (!wonderIds.has(id)) issues.push(issue(file, `$.wonders.${id}`, 'Wonder does not exist'));
-    for (const [roadIndex, road] of (index?.roads || []).entries()) if (road.approved !== true) issues.push(issue(file, `$.roads[${roadIndex}].approved`, 'only approved roads may be published'));
+    for (const [roadIndex, road] of (index?.roads || []).entries()) {
+        const path = `$.roads[${roadIndex}]`;
+        if (road.approved !== true) issues.push(issue(file, `${path}.approved`, 'only approved roads may be published'));
+        const from = parseRegionReference(road.from);
+        const to = parseRegionReference(road.to);
+        if (!from) issues.push(issue(file, `${path}.from`, 'must be main or a wonder:<id> reference'));
+        if (!to) issues.push(issue(file, `${path}.to`, 'must be main or a wonder:<id> reference'));
+        if (from && to) {
+            if (from.type === 'wonder' && !wonderIds.has(from.id)) issues.push(issue(file, `${path}.from`, `Wonder ${from.id} does not exist`));
+            if (to.type === 'wonder' && !wonderIds.has(to.id)) issues.push(issue(file, `${path}.to`, `Wonder ${to.id} does not exist`));
+            if (from.id === to.id) issues.push(issue(file, path, 'road endpoints must be different'));
+        }
+        if (graphIds.size && !graphIds.has(road.via)) issues.push(issue(file, `${path}.via`, `canonical node ${String(road.via)} does not exist`));
+    }
     return sortIssues(issues);
 }

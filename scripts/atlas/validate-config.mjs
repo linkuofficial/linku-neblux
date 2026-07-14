@@ -21,6 +21,18 @@ function unknownProperties(value, allowed, file, path, issues, compatibility) {
     }
 }
 
+function validateLocalizedText(value, file, path, issues) {
+    if (!isObject(value)) {
+        issues.push(issue(file, path, 'must be an object with en, zh and ja strings'));
+        return;
+    }
+    for (const locale of ['en', 'zh', 'ja']) {
+        if (typeof value[locale] !== 'string' || !value[locale].trim()) {
+            issues.push(issue(file, `${path}.${locale}`, 'must be a non-empty string'));
+        }
+    }
+}
+
 function validateAnchor(anchor, file, path, issues, compatibility) {
     if (!isObject(anchor)) {
         issues.push(issue(file, path, 'must be an object'));
@@ -103,15 +115,20 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
             enumCheck(coordinate.origin, ['center'], file, '$.coordinateSystem.origin', issues);
         }
         const validateRegion = (region, path, wonder = false) => {
-            const allowed = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : [])];
+            const allowed = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : ['title', 'summary'])];
+            const required = ['x', 'y', 'visualRadius', 'hitRadius', 'route', ...(wonder ? ['dominantDomains', 'visualScale'] : [])];
             if (!isObject(region)) { issues.push(issue(file, path, 'must be an object')); return; }
             unknownProperties(region, allowed, file, path, issues, compatibility);
-            for (const key of allowed) if (!Object.hasOwn(region, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
+            for (const key of required) if (!Object.hasOwn(region, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
             if (!Number.isFinite(region.x)) issues.push(issue(file, `${path}.x`, 'must be a finite number'));
             if (!Number.isFinite(region.y)) issues.push(issue(file, `${path}.y`, 'must be a finite number'));
             if (!Number.isFinite(region.visualRadius) || region.visualRadius <= 0) issues.push(issue(file, `${path}.visualRadius`, 'must be a positive finite number'));
             if (!Number.isFinite(region.hitRadius) || region.hitRadius <= region.visualRadius) issues.push(issue(file, `${path}.hitRadius`, 'must be greater than visualRadius'));
             if (typeof region.route !== 'string' || !region.route.startsWith('/')) issues.push(issue(file, `${path}.route`, 'must be a root-relative route'));
+            if (!wonder) {
+                if (region.title !== undefined) validateLocalizedText(region.title, file, `${path}.title`, issues);
+                if (region.summary !== undefined) validateLocalizedText(region.summary, file, `${path}.summary`, issues);
+            }
             if (wonder) {
                 if (!Array.isArray(region.dominantDomains) || region.dominantDomains.length === 0) issues.push(issue(file, `${path}.dominantDomains`, 'must be a non-empty array'));
                 else region.dominantDomains.forEach((domain, index) => enumCheck(domain, DOMAIN_CODES, file, `${path}.dominantDomains[${index}]`, issues));
@@ -129,6 +146,12 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
             unknownProperties(road, allowed, file, path, issues, compatibility);
             for (const key of allowed) if (!Object.hasOwn(road, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
             for (const key of ['id', 'from', 'to', 'via']) if (typeof road[key] !== 'string' || !road[key]) issues.push(issue(file, `${path}.${key}`, 'must be a non-empty string'));
+            for (const key of ['from', 'to']) {
+                if (typeof road[key] === 'string' && !(/^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$/).test(road[key])) {
+                    issues.push(issue(file, `${path}.${key}`, 'must be main or a wonder:<id> reference'));
+                }
+            }
+            if (road.from && road.from === road.to) issues.push(issue(file, path, 'road endpoints must be different'));
             enumCheck(road.strengthClass, ['weak', 'standard', 'strong'], file, `${path}.strengthClass`, issues);
             if (typeof road.approved !== 'boolean') issues.push(issue(file, `${path}.approved`, 'must be boolean'));
         });

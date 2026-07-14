@@ -9,7 +9,7 @@
     "quantum": { "x": -350, "y": 500, "visualRadius": 115, "hitRadius": 145, "route": "/wonders.html?w=quantum", "dominantDomains": ["PHY", "MAT"], "visualScale": "medium" }
   },
   "roads": [
-    { "id": "light-quantum", "from": "light", "to": "quantum", "via": "wave_particle_duality_concept", "strengthClass": "strong", "approved": true },
-    { "id": "quantum-edge-ai-draft", "from": "quantum", "to": "edge-ai", "via": "quantization_concept", "strengthClass": "weak", "approved": false }
+    { "id": "light-quantum", "from": "wonder:light", "to": "wonder:quantum", "via": "wave_particle_duality_concept", "strengthClass": "strong", "approved": true },
+    { "id": "quantum-edge-ai-draft", "from": "wonder:quantum", "to": "wonder:edge-ai", "via": "quantization_concept", "strengthClass": "weak", "approved": false }
   ]
 }

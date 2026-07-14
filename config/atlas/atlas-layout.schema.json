@@ -31,8 +31,8 @@
         "required": ["id", "from", "to", "via", "strengthClass", "approved"],
         "properties": {
           "id": { "type": "string", "minLength": 1 },
-          "from": { "type": "string", "minLength": 1 },
-          "to": { "type": "string", "minLength": 1 },
+          "from": { "type": "string", "pattern": "^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$" },
+          "to": { "type": "string", "pattern": "^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$" },
           "via": { "type": "string", "minLength": 1 },
           "strengthClass": { "enum": ["weak", "standard", "strong"] },
           "approved": { "type": "boolean" }
@@ -50,7 +50,19 @@
         "y": { "type": "number" },
         "visualRadius": { "type": "number", "exclusiveMinimum": 0 },
         "hitRadius": { "type": "number", "exclusiveMinimum": 0 },
-        "route": { "type": "string", "minLength": 1 }
+        "route": { "type": "string", "minLength": 1 },
+        "title": { "$ref": "#/$defs/localizedText" },
+        "summary": { "$ref": "#/$defs/localizedText" }
+      }
+    },
+    "localizedText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "zh", "ja"],
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "zh": { "type": "string", "minLength": 1 },
+        "ja": { "type": "string", "minLength": 1 }
       }
     },
     "wonderRegion": {

@@ -241,7 +241,7 @@ frontend/public/data/atlas/       # gitignored build artifacts
 
 ## 7. WP4 — Atlas Prototype
 
-狀態：in-progress（2026-07-14）。實作邊界與驗收見 `docs/tasks/2026-07-14-graph-atlas-wp4-prototype.md`；本工作包不自動授權 WP5。
+狀態：review（2026-07-14）。實作與驗證完成，待一輪跨家族 review；紀錄見 `docs/tasks/2026-07-14-graph-atlas-wp4-prototype.md`。本工作包不自動授權 WP5。
 
 ### 目標
 
@@ -264,6 +264,7 @@ frontend/src/atlas/
   atlas-renderer.js
   atlas-state.js
   atlas-accessibility.js
+  atlas-i18n.js
 frontend/src/styles/pages/atlas.css
 tests/e2e/atlas.spec.ts
 ```

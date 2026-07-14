@@ -1,7 +1,7 @@
 # Neblux 程式碼地圖（給接手的模型）
 
 > 迷路時讀這份。行號會漂移，請以符號名搜尋。最後校準：2026-07-14。
-> Graph Atlas WP0–WP2 已建立 contracts／validators／stable locks，但**尚未接入任何 production entry、Vite build 或 runtime**；現行四頁仍走下列 legacy runtime。
+> Graph Atlas WP0–WP3 已建立 contracts／validators／stable locks 與靜態 artifact；WP4 已接入 Vite 的**內部** `/atlas-v2.html` prototype。它不改 production 首頁與既有四頁 runtime，正式切換仍待後續 gate。
 
 ## 四個入口
 
@@ -34,15 +34,15 @@
 
 `canvas-renderer.js`（Deep Field 場景）＋ `star-sprites.js`（離屏星體）＋ `atmosphere.js`（星雲/vignette）＋ `theme.js`（design tokens）＋ `layout.js`（力導向，**座標 build 時預烘焙，勿動**）＋ `geometry.js`（邊曲線、色彩）。物理 d3-force、D3 走 npm import。域色在 `neblux-tokens.js` 的 `DOMAIN_COLORS`。
 
-## Graph Atlas WP0–WP2（尚未接 runtime）
+## Graph Atlas WP0–WP4（內部 prototype，尚未切 production）
 
 - `config/atlas/`：12-domain anchors、Main 687-node lock、19 份 Wonder locks、schemas 與 `main-v1` blessing baseline；全部是 tracked source/config，不是 production build artifact。
-- `scripts/atlas/`：source/config validators、fixture audits、explicit layout bake/add/check/diff/debt/bless CLI。普通 `npm run build` 不執行這些 solver，也不讀 WP2 locks。
+- `scripts/atlas/`：source/config validators、fixture audits、explicit layout bake/add/check/diff/debt/bless CLI。普通 `npm run build` 不執行 solver 或讀 WP2 locks，但會 fail-fast 生成／audit WP3 artifact 與 WP4 presentation index。
 - `tests/atlas/`：schema、topology、publication predicate、Windows path／CLI、determinism、atomic write 與 layout gates。
 - 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式切換要等 WP5／WP6，不得把 locks 存在誤作 runtime 已使用。
-- WP3 會先產生 gitignored `/data/atlas/*` standalone artifacts；在另開禁區 brief 前不掛進 Vite／production。
-- WP3 standalone 產生 79 個 base artifacts；`index.json` 是可選 companion artifact，存在時由 audit 驗證並在 `build-data` atomic swap 中保留。
-- Windows 操作：執行 `atlas:build-data` 前先停止 dev server；atomic swap 會依完成階段保留／復原上一份有效輸出，並在 `EPERM`／`EBUSY`／`EACCES` 時提示停止占用程序。本機若先生成 Atlas artifacts 再執行 Vite build，未引用 JSON 可能被複製進 dist，但目前 production 不消費它們。
+- WP3／WP4 在 build 時產生 gitignored `/data/atlas/*`：79 個 base artifacts 加上 `/data/atlas/index.json` presentation index。`build-data` 的 atomic swap 會保留／復原上一份有效輸出。
+- `frontend/atlas-v2.html` 與 `src/atlas/` 是獨立 Canvas2D pilot：只讀小型 Atlas index、Main＋Light／Quantum／Edge AI，並有等價 DOM directory 與 19 Wonders static fallback；不得載入完整 graph 或改用 `src/engine/`。
+- Windows 操作：生成／build 前先停止 dev server；artifact replacement 遇到 `EPERM`／`EBUSY`／`EACCES` 會拒絕覆蓋並提示停止占用程序。這是資料完整性 gate，不可繞過。
 
 ## 資料
 

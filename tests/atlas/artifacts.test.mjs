@@ -176,7 +176,9 @@ test('Atlas fixture validates and index publishes only approved roads', () => {
     assert.equal(index.roads.length, 1);
     assert.equal(index.roads[0].id, 'light-quantum');
     assert.equal(index.wonders.light.preview, 'light.webp');
-    assert.deepEqual(validateAtlasIndex(index, new Set(['light', 'quantum', 'edge-ai'])), []);
+    assert.deepEqual(validateAtlasIndex(index, new Set(['light', 'quantum', 'edge-ai']), 'fixture', {
+        graphIds: new Set(['wave_particle_duality_concept']),
+    }), []);
 });
 
 test('build-data is deterministic, removes stale files and audits the exact artifact set', () => {
@@ -302,9 +304,16 @@ test('artifact schema is draft 2020-12 and forbids generated timestamps by contr
     } finally { rmSync(parent, { recursive: true, force: true }); }
 });
 
-test('real Atlas index CLI refuses to invent missing presentation config', () => {
-    const result = spawnSync(process.execPath, ['scripts/atlas/build-index.mjs'], { cwd: root, encoding: 'utf8' });
-    assert.equal(result.status, 1);
-    assert.match(result.stderr, /not authorized yet/);
-    assert.equal(existsSync(resolve(root, 'frontend/public/data/atlas/index.json')), false);
+test('real Atlas index CLI derives pilot summaries and publishes only approved roads', () => {
+    const output = resolve(root, 'frontend/public/data/atlas/index.json');
+    rmSync(output, { force: true });
+    try {
+        const result = spawnSync(process.execPath, ['scripts/atlas/build-index.mjs'], { cwd: root, encoding: 'utf8' });
+        assert.equal(result.status, 0, result.stderr);
+        const index = JSON.parse(readFileSync(output, 'utf8'));
+        assert.deepEqual(Object.keys(index.wonders).sort(), ['edge-ai', 'light', 'quantum']);
+        assert.equal(index.wonders.light.title.en, 'Light');
+        assert.equal(index.wonders.light.summary.en.startsWith('The thing you see'), true);
+        assert.deepEqual(index.roads.map((road) => road.id), ['light-quantum']);
+    } finally { rmSync(output, { force: true }); }
 });

@@ -1,5 +1,5 @@
 # TASK: graph-atlas-wp4-prototype
-狀態: in-progress
+狀態: review
 建立: 2026-07-14 ｜ 實作層: Codex
 Repo: Neblux
 Branch: `codex/graph-atlas-wp4`
@@ -93,14 +93,18 @@ docs/ROADMAP.md
 
 ## HANDOFF（Codex 完成或卡住後填）
 
-- Branch:
-- Base commit:
-- Summary:
-- Changed files:
-- Contract changes:
-- Build／rollback:
-- Automated verification:
-- Browser／device verification:
-- Performance／network delta:
-- Remaining risks:
+- Branch: `codex/graph-atlas-wp4`
+- Base commit: `2659c23`
+- Summary: internal `/atlas-v2.html` Canvas2D prototype is built: Main + Light/Quantum/Edge AI, one approved Light–Quantum road, DOM mirror, 19-Wonder static directory, i18n, pan/zoom/reset, noindex and `window.__nebluxAtlas` test hook. No production entry or legacy renderer changed.
+- Changed files: Atlas presentation config/schema/contract/index builder/Vite integration, the new Atlas route/modules/styles, Atlas artifact tests and 6 Atlas E2E cases, roadmap/codebase docs.
+- Contract changes: presentation config accepts validated three-language Main copy; roads require `main` or `wonder:<id>` endpoint namespaces and a canonical `via`. The generated index remains compact and only contains approved presentation data.
+- Build／rollback: `npm run build` creates `dist/atlas-v2.html` and fail-fast generates Atlas artifacts. Rollback is removal of the internal Vite entry/route; `index.html` remains untouched. Atomic replacement correctly rejected a build while the dev server locked `frontend/public/data/atlas`.
+- Automated verification: `npm run test:atlas` 44/44; `npm run atlas:validate` PASS (687 nodes/3381 records/3138 active pairs); `npm run atlas:audit-data` PASS (80 files); `npm run atlas:layout:check` PASS (687 nodes/19 Wonders/0 overlaps); `npm run verify` PASS (build + depth 4/4 + E2E 78/78); Chinese character checks PASS (0 error, 21 existing review characters).
+- Browser／device verification: Playwright Chromium E2E covers normal/index 404/Canvas unavailable/keyboard/mobile reduced-motion/pointer controls. Desktop and 390×844 full-page screenshots visually checked: labels, controls, hierarchy and no horizontal overflow are sound. `agent-browser` executable is unavailable in this environment, so visual verification used the installed Playwright Chromium CLI instead.
+- Performance／network delta: `/data/atlas/index.json` is 4,462 bytes raw / 2,238 bytes gzip (<250 KB). Network E2E rejects full graph, Wonder bundles, portal/depth indices and `/api/*`; no continuous render loop (reduced-motion idle redraw test passes).
+- Remaining risks: cross-family review has not yet been performed. Packet generated at `C:\Users\Riku\AppData\Local\Temp\neblux-wp4-xfire-packet.txt` for a clean Claude/Luna review; `codex exec review` inner-review attempt timed out after 124 seconds and produced no findings. Do not claim WP4 done until the review result is added below and accepted.
 - WP5 gate: not automatically authorized
+
+## Review
+
+- Pending: paste `C:\Users\Riku\AppData\Local\Temp\neblux-wp4-xfire-packet.txt` into a clean cross-family reviewer. Reviewer scope is acceptance criteria only; put findings here without implementer/model debate.
