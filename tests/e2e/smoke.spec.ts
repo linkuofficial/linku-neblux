@@ -1,15 +1,12 @@
 import { test, expect } from "@playwright/test";
 
-test("index page loads with a featured tour front and centre", async ({ page }) => {
+test("index page loads the production Atlas route", async ({ page }) => {
     await page.goto("/");
     await expect(page).toHaveTitle(/Neblux/);
-    // The landing headlines a specific tour that links into Wonders.
-    const featured = page.locator("#featuredCard");
-    await expect(featured).toBeVisible();
-    await expect(featured).toHaveAttribute("href", /wonders\.html\?w=light/);
-    await expect(page.locator("#featuredTitle")).not.toBeEmpty();
-    // The old NODES · EDGES · DOMAINS stat line is gone.
-    await expect(page.locator("#nodeCount")).toHaveCount(0);
+    await expect.poll(() => page.evaluate(() => !!(window as any).__nebluxAtlas?.ready())).toBeTruthy();
+    await expect(page.locator("#atlas-canvas")).toBeVisible();
+    await expect(page.locator("[data-region-id=main]")).toHaveAttribute("href", "/app.html");
+    await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);
 });
 
 test("app page loads and shows graph container", async ({ page }) => {

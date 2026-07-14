@@ -16,7 +16,7 @@
     "test:e2e:visual": "playwright test --grep @visual",
     "test:e2e:install": "playwright install --with-deps chromium",
     "atlas:validate": "node scripts/atlas/validate.mjs",
-    "test:atlas": "node --test tests/atlas/validators.test.mjs tests/atlas/layout.test.mjs tests/atlas/artifacts.test.mjs",
+    "test:atlas": "node --test tests/atlas/validators.test.mjs tests/atlas/layout.test.mjs tests/atlas/artifacts.test.mjs tests/atlas/wonder-titles.test.mjs",
     "test:renderer-v2": "node --test tests/renderer-v2/*.test.mjs",
     "atlas:build-data": "node scripts/atlas/build-data.mjs",
     "atlas:audit-data": "node scripts/atlas/audit-data.mjs",

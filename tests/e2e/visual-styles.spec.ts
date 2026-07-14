@@ -58,10 +58,10 @@ test("index.html chrome computed styles", { tag: "@visual" }, async ({ page }) =
     await page.waitForLoadState("networkidle");
     await freezeMotion(page);
     const sels = [
-        "body", ".glass-pane", "#heroKicker", "#heroTitle", "#heroSubtitle",
-        "#ctaExplore", "#ctaSearch", ".pill-btn", ".pill-domain", ".pill-label",
-        ".pill-tooltip-title", ".pill-tooltip-domain", ".pill-tooltip-body",
-        ".footer-nav", ".footer-nav a", ".lang-btn", "#nodeCount", ".hairline-border",
+        "body", ".atlas-shell", ".atlas-header", ".atlas-wordmark", ".atlas-title",
+        ".atlas-subtitle", ".atlas-language", ".atlas-language button", ".atlas-stage",
+        ".atlas-controls", ".atlas-controls button", ".atlas-directory", ".atlas-region-link",
+        ".atlas-wonder-link", ".atlas-footer", ".atlas-footer a", ".skip-link",
     ];
     expect(asSnapshot("index", await snap(page, sels))).toMatchSnapshot("index-styles.json");
 });

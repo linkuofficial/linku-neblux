@@ -7,7 +7,7 @@
 
 | 頁 | 主 JS | 用途 |
 |----|-------|------|
-| `frontend/index.html` | `src/landing-main.js` | 落地頁。粒子背景、搜尋、建議 pills、雙 CTA |
+| `frontend/index.html` | `src/atlas/atlas-main.js` | production Atlas 首頁；Main／19 Wonders 靜態導航與 fallback |
 | `frontend/wonders.html` | `src/wonders-main.js` | **產品核心**。picker → intro → 敘事面板＋星空子圖 |
 | `frontend/app.html` | `src/app-main.js` | 全圖 687 節點。搜尋、detail card、Learning Path |
 | `frontend/explorer.html` | `src/explorer-main.js` | 漸進展開。轉型中（見 explorer-to-topics-plan.md），少動 |
@@ -34,7 +34,7 @@
 
 `canvas-renderer.js`（Deep Field 場景）＋ `star-sprites.js`（離屏星體）＋ `atmosphere.js`（星雲/vignette）＋ `theme.js`（design tokens）＋ `layout.js`（力導向，**座標 build 時預烘焙，勿動**）＋ `geometry.js`（邊曲線、色彩）。物理 d3-force、D3 走 npm import。域色在 `neblux-tokens.js` 的 `DOMAIN_COLORS`。
 
-## Graph Atlas WP0–WP5（內部 prototype／core，尚未切 production）
+## Graph Atlas WP0–WP5（已整合；RG-A 已切 repo 內 production `/` route，尚未部署）
 
 - `config/atlas/`：12-domain anchors、Main 687-node lock、19 份 Wonder locks、schemas 與 `main-v1` blessing baseline；全部是 tracked source/config，不是 production build artifact。
 - `scripts/atlas/`：source/config validators、fixture audits、explicit layout bake/add/check/diff/debt/bless CLI。普通 `npm run build` 不執行 solver 或讀 WP2 locks，但會 fail-fast 生成／audit WP3 artifact 與 WP4 presentation index。

@@ -1,5 +1,5 @@
 # TASK: graph-atlas-rg-a-atlas-route-release
-狀態: in-progress
+狀態: review
 建立: 2026-07-15 ｜ 秘書層: Codex ｜ 實作層: Luna
 Repo: Neblux
 Base: `91e147e`（`codex/graph-atlas-integration` G0 baseline；實作 branch 從此 commit 建立）
@@ -24,17 +24,17 @@ Required verification: `npm run verify`＋`npm run test:e2e:visual`＋`npm run a
 
 ## 驗收條件
 
-- [ ] `/` 載入 Atlas，`window.__nebluxAtlas.ready()` 成立；`/atlas-v2.html` 仍可獨立載入且保持 noindex。
-- [ ] `/` 的 `<title>`／description／canonical／OG／Twitter／WebSite JSON-LD／SearchAction／favicon／manifest 通過 E2E；頁面沒有 `noindex`、`Prototype`、`Pilot regions` 或其他內部文案。
-- [ ] Atlas index 正常、404、invalid shape、Canvas unavailable 四種狀態下，Main＋19 Wonders 普通連結都可用；Atlas index failure 不改載入完整 graph 補救。
-- [ ] Network 守門證明 `/` 不請求 `/data/all_nodes.json`、Wonder bundles、portal／Depth indices或 `/api/*`；只使用 compact Atlas presentation data 與靜態 assets。
-- [ ] Desktop 第一屏清楚顯示 Main Galaxy 與可直接進入的 Wonder names；390×844 第一屏至少可辨識 Main 與兩個 Wonder entries，Main 不以亮度／CTA 把 Wonders 壓成裝飾。
-- [ ] en／zh／ja 的 production UI、featured region copy 與 19 Wonder directory titles 正確切換；語言仍沿用 `localStorage['neblux-lang']`。
-- [ ] keyboard focus、skip link、44×44 controls、DOM／Canvas route equivalence、reduced-motion、DPR 1／2、no-JS fallback 全過。
-- [ ] 現有 root smoke 與 API-failure tests 改守 Atlas production contract；`tests/e2e/atlas.spec.ts` 繼續守 internal route，並補 `/` 的 production metadata／fallback／network assertions。
-- [ ] 舊 `landing-main.js` 與 landing styles/assets 未刪；rollback 可用單一 RG-A commit 還原 `index.html` 與相關 production-only調整。
-- [ ] `npm run verify`、`npm run test:e2e:visual`、Atlas validate／audit、繁簡檢查全綠；desktop／mobile／reduced-motion 截圖已人工實看。
-- [ ] HANDOFF 明確填 branch、changed files、production metadata差異、network結果、browser QA、rollback與未部署狀態。
+- [x] `/` 載入 Atlas，`window.__nebluxAtlas.ready()` 成立；`/atlas-v2.html` 仍可獨立載入且保持 noindex。
+- [x] `/` 的 `<title>`／description／canonical／OG／Twitter／WebSite JSON-LD／SearchAction／favicon／manifest 通過 E2E；頁面沒有 `noindex`、`Prototype`、`Pilot regions` 或其他內部文案。
+- [x] Atlas index 正常、404、invalid shape、Canvas unavailable 四種狀態下，Main＋19 Wonders 普通連結都可用；Atlas index failure 不改載入完整 graph 補救。
+- [x] Network 守門證明 `/` 不請求 `/data/all_nodes.json`、Wonder bundles、portal／Depth indices或 `/api/*`；只使用 compact Atlas presentation data 與靜態 assets。
+- [x] Desktop 第一屏清楚顯示 Main Galaxy 與可直接進入的 Wonder names；390×844 第一屏至少可辨識 Main 與兩個 Wonder entries，Main 不以亮度／CTA 把 Wonders 壓成裝飾。
+- [x] en／zh／ja 的 production UI、featured region copy 與 19 Wonder directory titles 正確切換；語言仍沿用 `localStorage['neblux-lang']`。
+- [x] keyboard focus、skip link、44×44 controls、DOM／Canvas route equivalence、reduced-motion、DPR 1／2、no-JS fallback 全過。
+- [x] 現有 root smoke 與 API-failure tests 改守 Atlas production contract；`tests/e2e/atlas.spec.ts` 繼續守 internal route，並補 `/` 的 production metadata／fallback／network assertions。
+- [x] 舊 `landing-main.js` 與 landing styles/assets 未刪；rollback 可用單一 RG-A commit 還原 `index.html` 與相關 production-only調整。
+- [x] `npm run verify`、`npm run test:e2e:visual`、Atlas validate／audit、繁簡檢查全綠；desktop／mobile／reduced-motion 截圖已人工實看。
+- [x] HANDOFF 明確填 branch、changed files、production metadata差異、network結果、browser QA、rollback與未部署狀態。
 
 ## 建議檔案範圍
 
@@ -92,10 +92,10 @@ frontend/public/_headers
 
 ## HANDOFF（實作層完成或卡住後填）
 
-- Branch:
-- Summary:
-- Verification:
-- Remaining risks:
+- Branch: `codex/graph-atlas-integration`（未 commit／未 push）
+- Summary: `frontend/index.html` 已切為 production Atlas shell；`/atlas-v2.html` 保留 internal noindex。Main 維持 `/app.html`、19 Wonders 維持 `/wonders.html?w=<id>`。新增三語 Wonder source title 對帳 map、production metadata/network/fallback/i18n E2E 與 Atlas visual baseline；legacy landing JS/CSS/assets 未刪。
+- Verification: `npm run verify` 全綠（build、renderer 15/15、depth 4/4、E2E 86/86、Atlas 47/47）；`npm run test:e2e:visual` 4/4；`npm run atlas:validate` PASS；`npm run atlas:audit-data` PASS（80 files）；`python scripts/check_simplified.py` 0 ERROR。實際瀏覽器 desktop/mobile screenshot 檢查通過；mobile 390×844 無 horizontal overflow，第一屏可見 Main 與 3 個 featured Wonder entries。
+- Remaining risks: 尚未做真實 Cloudflare deploy／production smoke；RG-A commit、push、deploy 仍待 Riku 明確核可。reduced-motion 已由 E2E gate 覆蓋，未宣稱跨硬體 FPS。
 
 ## Review（審查層填；盡量用與實作層不同的模型家族）
 

@@ -20,7 +20,7 @@ export function syncDirectory(root, index, lang) {
     pilotLinks.forEach((link) => {
         const region = allRegions(index).find((entry) => entry.id === link.dataset.regionId);
         if (!region) return;
-        const fallback = region.id === 'main' ? t(lang, 'main') : WONDER_FALLBACKS[region.id] || region.id;
+        const fallback = region.id === 'main' ? t(lang, 'main') : localizedText(WONDER_FALLBACKS[region.id], lang, region.id);
         const title = localizedText(region.title, lang, fallback);
         const summary = localizedText(region.summary, lang, '');
         link.href = region.route;
@@ -28,6 +28,11 @@ export function syncDirectory(root, index, lang) {
         const summaryElement = link.querySelector('[data-region-summary]');
         if (titleElement) titleElement.textContent = title;
         if (summaryElement) summaryElement.textContent = summary;
+        link.setAttribute('aria-label', `${title} — ${t(lang, 'open')}`);
+    });
+    root.querySelectorAll('[data-wonder-id]').forEach((link) => {
+        const title = localizedText(WONDER_FALLBACKS[link.dataset.wonderId], lang, link.dataset.wonderId);
+        link.textContent = title;
         link.setAttribute('aria-label', `${title} — ${t(lang, 'open')}`);
     });
 }
