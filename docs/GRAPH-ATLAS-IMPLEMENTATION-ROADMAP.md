@@ -390,7 +390,7 @@ Atlas v2 仍是內部入口；`index.html` 不變。
 
 ## 8.5 WP5.5 — Canonical Scene Input Closure
 
-狀態：pending；依賴 G0，不依賴 RG-A 是否已外部部署。
+狀態：in-progress（2026-07-15；brief 見 `docs/tasks/2026-07-15-graph-atlas-wp5-5-canonical-scene-input.md`）；依賴 G0，不依賴 RG-A 是否已外部部署。
 
 ### 目標
 

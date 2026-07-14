@@ -1,0 +1,4816 @@
+{
+  "adapterVersion": "1.0.0",
+  "classificationVersion": "1.0.0",
+  "nodes": {
+    "abolition_of_slavery_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "abstract_algebra_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "abstraction_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "acid_base_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "acid_base_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "acoustics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "ada_lovelace_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "adam_smith_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "adaptation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "additive_manufacturing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "aerospace_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "aesthetic_experience_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "aesthetic_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "aesthetics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "age_of_revolutions_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "agricultural_revolution_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "alan_turing_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "albert_einstein_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "alexander_fleming_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "alexander_von_humboldt_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "algebra_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=5;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "algebraic_topology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "algorithm_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=27;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "allegory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "analogy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "analytical_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "analytical_method_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "anatomy_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=9;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "ancient_china_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ancient_medicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ancient_rome_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "anesthesia_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "animation_art_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "annales_school_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "anthropology_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=13;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "antibiotic_resistance_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "antisepsis_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "antoine_lavoisier_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "apollo_program_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "archaeometry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "archimedes_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "architectural_design_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "architectural_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "architecture_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "archival_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "aristotle_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_and_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_education_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_history_methodology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_market_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_nouveau_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "art_therapy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "artificial_intelligence_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=17;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "artistic_movements_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "arts_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "astrochemistry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "astronomy_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=7;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "atlantic_slave_trade_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "atmospheric_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "augmented_reality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "automation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "autonomous_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "autonomous_vehicles_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "axiomatic_system_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "baroque_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "battery_technology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "bauhaus_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "behavioral_ecology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "behavioral_economics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "behavioral_genetics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "big_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "bioarchaeology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "bioethics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "biogeochemical_cycles_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "bioinformatics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "biology_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "biomechanics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "biomedical_devices_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "biomedical_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "biomedical_imaging_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "biomimicry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "black_hole_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "blockchain_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "book_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "botany_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "boundary_conditions_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "bureaucracy_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "byzantine_empire_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "calculus_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=11;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "calligraphy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "canon_formation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "capitalism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "cardiology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "carl_friedrich_gauss_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "catalysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "category_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "causality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "causation_in_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cell_biology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=14;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "cell_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ceramics_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chaos_theory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "charles_darwin_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_bonding_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_ecology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_equilibrium_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_safety_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemical_thermodynamics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "chemistry_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "chiaroscuro_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "chinese_invention_of_paper_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "chirality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cinema_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "civil_engineering_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "classical_mechanics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=9;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "classical_music_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "classification_and_taxonomy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "claude_shannon_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "climate_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "climate_science_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "clinical_trials_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "cliometrics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cloud_computing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "coevolution_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_architecture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_bias_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_development_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_linguistics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_modeling_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "cognitive_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=field;degree=17;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cold_war_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cold_war_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "collective_action_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "colloid_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "colonialism_legacy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "color_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "combinatorics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "combustion_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "communication_networks_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "comparative_literature_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "comparative_mythology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "comparative_politics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "comparative_religion_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "complex_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=18;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "composition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "computation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=20;domains=5",
+      "visualMagnitudeClass": "bright"
+    },
+    "computational_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "computational_linguistics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "computer_networks_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "computer_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=31;domains=2",
+      "visualMagnitudeClass": "bright"
+    },
+    "computer_vision_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "condensed_matter_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "confucianism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "connected_history_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "consciousness_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "conservation_biology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "conservation_laws_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "conservation_principles_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "constraint_satisfaction_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "control_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=17;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "coordination_chemistry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "copernican_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cosmology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "counterfactual_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "counterpoint_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "creativity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "crispr_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cross_cultural_exchange_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=19;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "cryptography_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "crystal_structure_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cubism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cultural_anthropology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cultural_heritage_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cultural_relativism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "cybersecurity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "cybersecurity_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "dance_notation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "dark_matter_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "darwinian_synthesis_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=event;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "data_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "data_structures_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "database_systems_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "decision_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "decolonization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "decolonization_historiography_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "deep_learning_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "democracy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "demography_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "derivative_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "development_of_internet_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=11;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "developmental_biology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "deviance_and_social_control_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "diagnostic_reasoning_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "differential_equations_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=23;domains=4",
+      "visualMagnitudeClass": "bright"
+    },
+    "differential_geometry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=10;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "diffusion_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "digital_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "digital_humanities_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "digital_sociology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "digital_twin_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "dimensional_analysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "diplomatic_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "discourse_analysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "discovery_of_dna_structure_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "discovery_of_penicillin_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "distributed_computing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "distributed_systems_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=11;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "dmitri_mendeleev_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "dna_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=23;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "documentary_film_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "documentary_tradition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "dorothy_hodgkin_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "drug_resistance_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "duality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "dynamical_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "ecology_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=15;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "economic_development_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "economic_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "economics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=25;domains=2",
+      "visualMagnitudeClass": "bright"
+    },
+    "econophysics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ecosystem_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=18;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "edge_computing_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "electrochemistry_applications_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "electrochemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "electromagnetic_radiation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "electromagnetic_theory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "electromagnetism_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "electronic_music_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "electrostatics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "emergence_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "emergency_medicine_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "emmy_noether_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=person;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "empire_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "empiricism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "endocrinology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "energy_transformation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "engineering_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "enlightenment_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "entropy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "environmental_economics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "environmental_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "environmental_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "environmental_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "epidemiological_modeling_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "epidemiological_transition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "epidemiology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "epigenetics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "epistemology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=31;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "epistemology_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=11;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "equilibrium_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "ethical_frameworks_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=26;domains=5",
+      "visualMagnitudeClass": "bright"
+    },
+    "ethics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ethics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=15;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "ethics_of_care_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ethnomusicology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "euclid_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=person;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "evidence_based_medicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "evolution_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=13;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "evolution_of_cooperation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "evolutionary_developmental_biology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "existentialism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "expressionism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "feedback_control_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "feedback_loops_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "film_language_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "finite_element_method_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "first_wave_feminism_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "fluid_dynamics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "fluid_mechanics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "food_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "food_culture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "forensic_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "formal_logic_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=23;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "fourier_analysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "free_will_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "french_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "fundamental_theorem_of_calculus_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "galileo_galilei_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "game_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "game_theory_applications_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "game_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=20;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "game_theory_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "gender_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "gene_expression_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "genetic_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "genetic_regulation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "genetics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=17;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "genomics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "geographic_information_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=3;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "geometry_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=7;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "geomorphology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "geriatrics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "germ_theory_acceptance_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "germ_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "global_health_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "globalization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "golden_ratio_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "gothic_architecture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "gottfried_leibniz_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "graph_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "gravitational_force_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "greek_golden_age_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "green_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "gregor_mendel_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=person;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "group_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "harmony_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "hermeneutics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "hippocrates_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "historical_materialism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "historical_method_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "historiographical_schools_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "historiography_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "historiography_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=14;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "history_from_below_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_of_emotions_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_of_mathematics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_of_medicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_of_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "history_of_technology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "homeostasis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "human_computer_interaction_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "human_genome_project_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "humanities_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "hydraulic_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ibn_khaldun_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "iconography_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "identity_politics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "immanuel_kant_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "immune_system_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "immunology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=9;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "immunotherapy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "impressionism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "improvisation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "indigenous_knowledge_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "industrial_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=15;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "infectious_disease_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "information_asymmetry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "information_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=19;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "information_theory_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=field;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "information_theory_founding_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "informed_consent_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "inorganic_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "institutional_economics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "integral_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "intellectual_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "interdisciplinarity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "internet_of_things_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "intertextuality_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "invention_of_calculus_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=event;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "invention_of_computer_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "invention_of_printing_press_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "isaac_newton_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "islamic_golden_age_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "james_clerk_maxwell_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "jazz_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "johann_sebastian_bach_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "john_maynard_keynes_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "john_von_neumann_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "karl_marx_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "labor_economics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "landscape_architecture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "landscape_painting_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "language_and_thought_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "language_endangerment_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "laser_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "law_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=14;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "learning_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "leonardo_da_vinci_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "leonhard_euler_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "limit_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "linear_algebra_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "linearity_and_nonlinearity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "linguistics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=16;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "literary_criticism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "logic_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "longue_duree_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "louis_pasteur_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ludwig_wittgenstein_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "machine_learning_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=25;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "manhattan_project_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "marie_curie_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mass_spectrometry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "material_culture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "materiality_in_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "materials_by_design_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "materials_characterization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "materials_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "materials_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=field;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mathematical_biology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "mathematical_logic_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mathematical_music_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mathematical_proof_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mathematics_field": {
+      "archetype": "galactic_nucleus",
+      "labelPriorityClass": "critical",
+      "layoutMassClass": "nucleus",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "landmark"
+    },
+    "max_weber_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "measure_theory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "measurement_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "mechatronics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "media_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "medical_anthropology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "medical_ethics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "medical_imaging_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "medicinal_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "medicine_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "medieval_period_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "meiji_restoration_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "memory_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mereology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "metabolism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "michel_foucault_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "microbiology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=17;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "microbiome_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "microelectromechanical_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "microhistory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "military_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "mimesis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "minimalism_art_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "modal_logic_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "modeling_and_simulation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "modernism_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "modernization_theory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "modularity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "molecular_structure_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "mongol_empire_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "mosaic_art_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "muhammad_al_khwarizmi_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "museum_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "museum_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "music_cognition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "music_theory_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=9;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "musical_form_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "mythology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "nanotechnology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "narrative_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=21;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "narrative_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "narratology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "nationalism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "natural_language_processing_applications_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "natural_language_processing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "natural_selection_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=29;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "nature_vs_nurture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "neolithic_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "network_effects_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "network_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=18;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "neuroaesthetics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "neurodegenerative_disease_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "neuroimaging_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "neuroplasticity_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "neuroscience_concepts_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "neuroscience_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=20;domains=2",
+      "visualMagnitudeClass": "bright"
+    },
+    "neurotransmission_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "niels_bohr_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "niklas_luhmann_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "nikola_tesla_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "noam_chomsky_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "non_euclidean_geometry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=9;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "nonlinear_dynamics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "novel_form_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "nuclear_chemistry_applications_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "nuclear_engineering_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "nuclear_fission_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "nuclear_physics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "number_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "numerical_analysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "numerical_methods_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "nutrition_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "oncology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "opera_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "operating_systems_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "optics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "optimization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=17;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "oral_history_methodology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "oral_poetry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "oral_tradition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "orchestration_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "organic_chemistry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=9;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "organic_synthesis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "oscillations_and_waves_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "ottoman_empire_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "pain_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "palliative_care_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "pandemic_dynamics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "paradigm_shifts_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "particle_physics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "pathology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "pathophysiology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "patronage_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "pattern_recognition_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "pediatrics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "performance_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "periodic_law_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=11;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "periodization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "perspective_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "perspective_drawing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "petrochemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "pharmacology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=19;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "phase_transitions_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "phenomenology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "philology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "philosophy_of_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_biology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_economics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_language_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_mathematics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=10;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_mind_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "philosophy_of_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=20;domains=2",
+      "visualMagnitudeClass": "bright"
+    },
+    "philosophy_of_technology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "phonology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "photochemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "photography_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "photosynthesis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "photovoltaics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "physics_field": {
+      "archetype": "galactic_nucleus",
+      "labelPriorityClass": "critical",
+      "layoutMassClass": "nucleus",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "landmark"
+    },
+    "physiology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "placebo_effect_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "plague_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "plasma_physics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "plate_tectonics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "plato_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "poetics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "political_philosophy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "political_polarization_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=2;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "political_science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=13;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "polymer_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "polymer_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "population_dynamics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "postcolonial_literature_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "postcolonial_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=18;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "postmodernism_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "power_structures_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=23;domains=4",
+      "visualMagnitudeClass": "bright"
+    },
+    "power_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "pragmatics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "pragmatism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "precision_medicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "primary_sources_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "printing_revolution_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "printmaking_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "probability_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=19;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "protein_structure_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "proteomics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "psychiatry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "psychology_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=19;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "public_health_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "public_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "publication_of_origin_of_species_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "publication_of_principia_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "quantum_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "quantum_computing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "quantum_entanglement_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "quantum_field_theory_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "quantum_mechanics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=30;domains=1",
+      "visualMagnitudeClass": "bright"
+    },
+    "quantum_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "rachel_carson_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "radioactivity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "randomized_controlled_trial_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "randomness_and_determinism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "rationalism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "reaction_kinetics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "real_analysis_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "recursion_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "redox_reactions_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "reductionism_vs_holism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "regenerative_medicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "rehabilitation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "relativity_general_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "religion_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "renaissance_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=10;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "renewable_energy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "representation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "research_methodology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "resilience_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "restoration_and_conservation_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "restorative_justice_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "rhetoric_classical_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "rhetoric_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=15;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "robotics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "robotics_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "romanticism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "rosalind_franklin_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "scale_invariance_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "science_and_religion_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "science_and_technology_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "science_communication_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "science_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=field;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "scientific_method_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=25;domains=5",
+      "visualMagnitudeClass": "bright"
+    },
+    "scientific_revolution_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=12;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "sculpture_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "self_organization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "semantics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "semiconductor_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "semiconductor_physics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "semiotics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "sensory_systems_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "set_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "sigmund_freud_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "signal_and_noise_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "signal_processing_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=22;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "silk_road_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "social_contract_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=21;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "social_movements_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "social_network_analysis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "social_network_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "social_science_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "social_stratification_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=16;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "socialism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "socialization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "sociolinguistics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "sociology_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=9;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "software_architecture_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "solid_state_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "solid_state_physics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "sonata_form_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "sound_design_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "spatial_reasoning_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "special_relativity_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=10;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "spectroscopy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=17;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "sport_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "stability_and_instability_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "standard_model_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "statistical_inference_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=25;domains=3",
+      "visualMagnitudeClass": "bright"
+    },
+    "statistical_mechanics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "statistics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=16;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "stem_cell_biology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "stem_cells_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "stereochemistry_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "stochastic_processes_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "street_art_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "structural_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "structural_mechanics_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "structuralism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "sublime_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "superconductivity_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "supply_and_demand_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=19;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "supramolecular_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "surface_chemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "surgery_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "surgical_principles_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "surrealism_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "symbiosis_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "symmetry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=25;domains=5",
+      "visualMagnitudeClass": "bright"
+    },
+    "syntax_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=5;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "synthetic_biology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "systems_biology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "systems_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "systems_thinking_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "taxonomy_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=10;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "technology_field": {
+      "archetype": "domain_core",
+      "labelPriorityClass": "high",
+      "layoutMassClass": "heavy",
+      "reason": "proposal:explicit-domain-anchor",
+      "visualMagnitudeClass": "bright"
+    },
+    "telecommunications_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "telecommunications_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=3;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "telemedicine_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "textile_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "theater_performance_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "theory_of_relativity_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "thermochemistry_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "thermodynamic_efficiency_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "thermodynamics_field": {
+      "archetype": "subfield_giant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=field;degree=10;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "thermodynamics_laws_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=12;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "thought_experiments_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "tissue_engineering_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "tonality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "topology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=14;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "toxicology_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "tragedy_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=8;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "translation_studies_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "translation_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=9;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "triage_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=4;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "typography_history_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "ukiyo_e_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "universality_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "urbanization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=11;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "utilitarianism_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "vaccination_invention_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=event;degree=7;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "vaccination_science_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "virology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "virtue_ethics_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    },
+    "visualization_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=13;domains=5",
+      "visualMagnitudeClass": "standard"
+    },
+    "wave_particle_duality_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=8;domains=2",
+      "visualMagnitudeClass": "standard"
+    },
+    "william_shakespeare_person": {
+      "archetype": "beacon_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=person;degree=7;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "womens_health_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=4;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "world_literature_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=5;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "world_systems_theory_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=10;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "world_war_one_concept": {
+      "archetype": "bridge_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=concept;degree=6;domains=3",
+      "visualMagnitudeClass": "standard"
+    },
+    "world_war_two_event": {
+      "archetype": "event_remnant",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "bridge",
+      "reason": "proposal:type=event;degree=8;domains=4",
+      "visualMagnitudeClass": "standard"
+    },
+    "zoology_concept": {
+      "archetype": "concept_star",
+      "labelPriorityClass": "standard",
+      "layoutMassClass": "standard",
+      "reason": "proposal:type=concept;degree=6;domains=1",
+      "visualMagnitudeClass": "standard"
+    }
+  },
+  "schemaVersion": "1.0.0"
+}

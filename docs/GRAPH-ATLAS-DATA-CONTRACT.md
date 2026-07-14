@@ -238,6 +238,7 @@ Top-level anchors 必須明列，不以 `*_field` 命名規則自動猜測。新
 {
   "schemaVersion": "1.0.0",
   "classificationVersion": "1.0.0",
+  "adapterVersion": "1.0.0",
   "nodes": {
     "fourier_analysis_concept": {
       "archetype": "bridge_star",
@@ -249,6 +250,8 @@ Top-level anchors 必須明列，不以 `*_field` 命名規則自動猜測。新
   }
 }
 ```
+
+`adapterVersion` fixes the explicit mapping from lock enums to Renderer v2 scene enums: `landmark → nucleus`, `faint|standard|bright → same-named magnitude`, and `low|standard|high|critical → same-named label priority`. `layoutMassClass` remains a build-time classification/audit input and is not injected into renderer node payloads. A major adapter mismatch must fail before scene normalization.
 
 未知 node 使用安全預設：
 

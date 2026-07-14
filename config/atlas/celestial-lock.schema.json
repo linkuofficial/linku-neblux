@@ -4,10 +4,11 @@
   "title": "Neblux Celestial Classification Lock",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "classificationVersion", "nodes"],
+  "required": ["schemaVersion", "classificationVersion", "adapterVersion", "nodes"],
   "properties": {
     "schemaVersion": { "const": "1.0.0" },
     "classificationVersion": { "type": "string", "minLength": 1 },
+    "adapterVersion": { "const": "1.0.0" },
     "nodes": {
       "type": "object",
       "additionalProperties": {
