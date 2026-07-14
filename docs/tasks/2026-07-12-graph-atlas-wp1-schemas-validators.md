@@ -122,5 +122,5 @@ neblux-depth/
 
 ## 裁決（凜空）
 
-- 決定:
-- 日期:
+- 決定: 接受 WP1 schema／validators 現行實作並關閉工作包；review findings 已全數處理，2026-07-14 baseline 重驗為 Atlas tests 30／30、real-source validation PASS。此裁決不授權 WP3 production build integration。
+- 日期: 2026-07-14

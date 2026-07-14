@@ -2,11 +2,14 @@ import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { REPO_ROOT, exitCodeFor, issue, printIssues, readJson, repoPath, sortIssues, versionCompatibility } from './contract.mjs';
 
-const SUPPORTED = Object.freeze({ schemaVersion: '1.0.0', layoutVersion: '2.0.0', rendererContractVersion: '2.0.0' });
+const SUPPORTED = Object.freeze({ schemaVersion: '1.0.0', rendererContractVersion: '2.0.0' });
 
 export function auditArtifactEnvelope(artifact, validRefs = new Set(), file = 'artifact.json') {
     const issues = [];
     if (!artifact || typeof artifact !== 'object' || Array.isArray(artifact)) return [issue(file, '$', 'must be an object')];
+    if (typeof artifact.layoutVersion !== 'string' || !/(?:^|-)\d+\.\d+\.\d+$/.test(artifact.layoutVersion)) {
+        issues.push(issue(file, '$.layoutVersion', 'must end in semantic version X.Y.Z'));
+    }
     for (const [key, supported] of Object.entries(SUPPORTED)) {
         const compatibility = versionCompatibility(artifact[key], supported);
         if (compatibility === 'invalid') issues.push(issue(file, `$.${key}`, 'must be semantic version X.Y.Z'));

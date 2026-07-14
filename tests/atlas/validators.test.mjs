@@ -140,6 +140,8 @@ test('portal and artifact envelope audits validate refs without freezing draft p
     assert.equal(exitCodeFor(auditArtifactEnvelope(future, new Set(['core_alpha']))), 0);
     const major = { ...artifact, schemaVersion: '2.0.0' };
     assert.equal(exitCodeFor(auditArtifactEnvelope(major, new Set(['core_alpha']))), 1);
+    const unversioned = { ...artifact, layoutVersion: 'main-current' };
+    assert.match(auditArtifactEnvelope(unversioned)[0].message, /semantic version/);
 });
 
 test('JSON reader strips BOM and maps parse errors; issue sorting is numeric', () => {

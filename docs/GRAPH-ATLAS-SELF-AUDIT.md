@@ -4,6 +4,8 @@
 日期：2026-07-12
 範圍：planning documents only；未驗證尚未實作的效能與視覺結果
 
+> **歷史狀態（2026-07-14 補註）：**本檔記錄 WP0 前的 planning self-audit。下列「尚未 ready-for-implementation」前置已由 WP0／WP0.5／WP1／WP2 完成；現行工程狀態以 `GRAPH-ATLAS-IMPLEMENTATION-ROADMAP.md` 與各 WP brief 為準。本檔保留原文作審查軌跡，不再作開工判斷。
+
 ## Round 1 — Internal contract consistency
 
 ### Findings and corrections
