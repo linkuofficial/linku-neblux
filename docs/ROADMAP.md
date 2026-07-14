@@ -3,7 +3,7 @@
 > 規則在 `DIRECTION.md`（鐵律，衝突時以它為準）。程式碼定位查 `CODEBASE-MAP.md`。寫 tour 讀 `tour-authoring.md`。改文案讀 `brand-voice.md`。
 > 本檔可修改：完成打勾並更新日期；Phase 全完成可刪該段。
 > **2026-07-12 方向更新：**目前前端架構主線改為 Graph Atlas WP0–WP10，工程順序以 `docs/GRAPH-ATLAS-IMPLEMENTATION-ROADMAP.md` 為準。下列既有 Phase 0–4 保留作已交付功能與後端／教育債台帳，不再決定 Atlas 實作順序；未明確授權的 backend 項目仍不得順手執行。
-> **2026-07-14 工程基線：**Graph Atlas WP0／WP0.5／WP1／WP2／WP3／WP4／WP5 已完成並完成 WP4＋WP5 合併跨家族 closeout。現行 gate：Atlas 46／46、Renderer v2 15／15、全站非視覺 E2E 84／84、視覺 E2E 4／4；來源驗證（687 nodes／3,138 active pairs）、80 Atlas artifacts、19 Wonders／0 layout overlap 全綠。現行 production entries 仍使用 legacy runtime 與 `frontend/src/engine/`；WP4 只建內部 `/atlas-v2.html`，WP5 只建並存 core/lab，不先切 production。實體中階手機效能仍需 field validation；WP6 必須另開 brief。
+> **2026-07-15 整合基線：**Graph Atlas WP0／WP0.5／WP1／WP2／WP3／WP4／WP5 已 branch complete 並完成跨家族 closeout；G0 已收斂到共同基線 `codex/graph-atlas-integration`。`master` 仍停在 `1b035ae`，尚未 route active／deployed。現行 gate：Atlas 46／46、Renderer v2 15／15、全站非視覺 E2E 84／84、視覺 E2E 4／4；來源驗證（687 nodes／3,138 active pairs）、80 Atlas artifacts、19 Wonders／0 layout overlap 全綠。Luna 下一步是 RG-A Atlas 首頁分段切換；Main WP6 前仍先做 WP5.5 celestial lock／canonical scene closure。完整順序與狀態語意以 `docs/GRAPH-ATLAS-IMPLEMENTATION-ROADMAP.md` v0.2 為準。
 > 最後更新：2026-07-08（**P1-3 級3 遙測程式已 land**：改採 D1 `event_count` 匿名聚合，前端 beacon 受 `VITE_TELEMETRY_ENABLED` gate，查詢範本 `docs/telemetry-queries.md`；待 `[人工]` 套最新 schema 到 prod D1 並設 env。**P2-1 reflect authoring 完成**：19 趟三語各 2 題，commit `7d91d37`。P1-2 線上啟用已完成；KV `THROTTLE` 未建仍是債。）
 > 2026-07-04 追加：修好 e2e flaky 門（`playwright.config` 本機 workers 上限+retry，「test:e2e 全綠」定義才可信）；P0-4 outward 活連結由 3 趟擴到 **13/19**；另起「可發現性/AI 友善度」工作線並完成 M1–M3（llms.txt、入口頁定位、687×3 概念頁、About/Methodology/Sources、sitemap、graph.json、noscript、e2e 守門）——規格見 `docs/ai-discoverability-plan.md`。
 > 2026-07-06 歷史紀錄：P0 hardening——永久「API 全滅站照常」守門 `tests/e2e/api-failure.spec.ts`（鐵律入 CI）；必要 build 產物（概念頁/sitemap/graph.json/tour-index）改 fail-fast（`this.error`），layout bake 維持 warn；文件與實作命名對齊。P0-B spark 機制完成、內容擱置（見下）。當時下一步為 P1 後端；此順序已由 2026-07-12 Graph Atlas 主線取代。e2e 當時 43 綠。
@@ -13,7 +13,7 @@
 1. **依序、一次一項。** 不重構規格外的程式、不升級依賴、不動 `engine/layout.js` 預烘焙、不改 `window.__nebluxApp`/`__nebluxExplorer` hook 名。
 2. **完成定義** = 該項驗收全過 ＋ `npm run build` 成功 ＋ `npm run test:e2e` 全綠。
 3. 視覺變更使 `visual-styles` 基準失敗時：先確認變更是規格要求的，才更新基準；否則停下。
-4. 中文一律繁體，改完跑 `python scripts/check_simplified.py`。
+4. 中文一律台灣繁體，改完跑 `python scripts/check_simplified.py`。
 5. **禁止** inline `<script>`（CSP）、外部網域資源。新增依賴需使用者同意——本檔已預先核准的例外：`sharp`（P0-2 build 用）、`workers-og`（P1-1）。
 6. 規格與現況衝突、或需要規格外的決策 → **停下回報使用者，不即興**。
 7. `[人工]` 任務模型不可代做：提醒使用者後跳過，繼續下一個可做項。

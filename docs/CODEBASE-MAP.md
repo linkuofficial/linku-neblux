@@ -1,7 +1,7 @@
 # Neblux 程式碼地圖（給接手的模型）
 
 > 迷路時讀這份。行號會漂移，請以符號名搜尋。最後校準：2026-07-14。
-> Graph Atlas WP0–WP3 已建立 contracts／validators／stable locks 與靜態 artifact；WP4 已接入 Vite 的**內部** `/atlas-v2.html` prototype。它不改 production 首頁與既有四頁 runtime，正式切換仍待後續 gate。
+> Graph Atlas WP0–WP5 已 branch complete，G0 共同基線是 `codex/graph-atlas-integration`：contracts／validators／stable locks、靜態 artifacts、內部 `/atlas-v2.html` 與 page-agnostic Renderer v2 core／lab 均存在。`master` 與 production 首頁／既有四頁 runtime 仍未切換；Luna 下一步依 RG-A brief 執行，滾動順序見 Implementation Roadmap v0.2。
 
 ## 四個入口
 
@@ -34,14 +34,15 @@
 
 `canvas-renderer.js`（Deep Field 場景）＋ `star-sprites.js`（離屏星體）＋ `atmosphere.js`（星雲/vignette）＋ `theme.js`（design tokens）＋ `layout.js`（力導向，**座標 build 時預烘焙，勿動**）＋ `geometry.js`（邊曲線、色彩）。物理 d3-force、D3 走 npm import。域色在 `neblux-tokens.js` 的 `DOMAIN_COLORS`。
 
-## Graph Atlas WP0–WP4（內部 prototype，尚未切 production）
+## Graph Atlas WP0–WP5（內部 prototype／core，尚未切 production）
 
 - `config/atlas/`：12-domain anchors、Main 687-node lock、19 份 Wonder locks、schemas 與 `main-v1` blessing baseline；全部是 tracked source/config，不是 production build artifact。
 - `scripts/atlas/`：source/config validators、fixture audits、explicit layout bake/add/check/diff/debt/bless CLI。普通 `npm run build` 不執行 solver 或讀 WP2 locks，但會 fail-fast 生成／audit WP3 artifact 與 WP4 presentation index。
 - `tests/atlas/`：schema、topology、publication predicate、Windows path／CLI、determinism、atomic write 與 layout gates。
-- 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式切換要等 WP5／WP6，不得把 locks 存在誤作 runtime 已使用。
+- 現行 `vite.config.ts` 仍從 `frontend/src/engine/layout.js` 預烘焙 legacy positions；`app-main.js` 仍 import 同一 legacy layout。正式 Main 切換要等 WP5.5／WP6／RG-B，不得把 locks 存在誤作 runtime 已使用。
 - WP3／WP4 在 build 時產生 gitignored `/data/atlas/*`：79 個 base artifacts 加上 `/data/atlas/index.json` presentation index。`build-data` 的 atomic swap 會保留／復原上一份有效輸出。
 - `frontend/atlas-v2.html` 與 `src/atlas/` 是獨立 Canvas2D pilot：只讀小型 Atlas index、Main＋Light／Quantum／Edge AI，並有等價 DOM directory 與 19 Wonders static fallback；不得載入完整 graph 或改用 `src/engine/`。
+- `frontend/src/engine-v2/` 與 `renderer-v2-lab.html` 是 WP5 的 page-agnostic Renderer v2 core／deterministic 1,000／7,000 lab；production pages 尚未 import。真實 687-node celestial lock／scene mapping 留在 WP5.5，Main page adapter 留在 WP6。
 - Windows 操作：生成／build 前先停止 dev server；artifact replacement 遇到 `EPERM`／`EBUSY`／`EACCES` 會拒絕覆蓋並提示停止占用程序。這是資料完整性 gate，不可繞過。
 
 ## 資料
