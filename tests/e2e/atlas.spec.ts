@@ -13,6 +13,7 @@ test("Atlas prototype renders only its presentation index and exposes matching r
     await page.goto("/atlas-v2.html");
     await atlasReady(page);
 
+    expect(await page.evaluate(() => (window as any).__nebluxAtlas.ready())).toBe(true);
     await expect(page.locator("#atlas-canvas")).toBeVisible();
     await expect(page.locator("[data-region-id]")).toHaveCount(4);
     await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);

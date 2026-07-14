@@ -128,10 +128,12 @@ test('label-only local Wonder members fail with an explicit type/domain contract
 });
 
 test('Wonder induced graph excludes pending-only pairs through the canonical topology projection', () => {
-    const raw = { nodes: [
-        { id: 'a', label: 'A', type: 'concept', domain: ['MAT'], connections: [{ target: 'b', relation_type: 'logical', relation: 'pending', pending: true }] },
-        { id: 'b', label: 'B', type: 'concept', domain: ['MAT'], connections: [] },
-    ] };
+    const raw = {
+        nodes: [
+            { id: 'a', label: 'A', type: 'concept', domain: ['MAT'], connections: [{ target: 'b', relation_type: 'logical', relation: 'pending', pending: true }] },
+            { id: 'b', label: 'B', type: 'concept', domain: ['MAT'], connections: [] },
+        ]
+    };
     const graph = validateGraph(raw, 'fixture.json');
     const wonder = {
         id: 'pending', title: { en: 'P', zh: 'P', ja: 'P' }, intro: { en: 'I', zh: 'I', ja: 'I' },
@@ -198,6 +200,13 @@ test('Atlas presentation contract rejects incomplete copy, off-map roads and dup
     const configMessages = validateConfig('atlas-layout', badConfig, 'bad-roads.json').map((value) => value.message).join('\n');
     assert.match(configMessages, /not published/);
     assert.match(configMessages, /duplicate road id/);
+
+    const badViaConfig = structuredClone(config);
+    badViaConfig.roads[0] = { ...badViaConfig.roads[0], via: 'nonexistent_concept' };
+    const viaMessages = validateConfig('atlas-layout', badViaConfig, 'bad-via.json', {
+        graphIds: new Set(['wave_particle_duality_concept']),
+    }).map((value) => value.message).join('\n');
+    assert.match(viaMessages, /does not exist/);
 
     const index = buildAtlasIndex(config, atlasSummaries(config));
     index.roads.push({ ...index.roads[0], from: 'wonder:markets' });

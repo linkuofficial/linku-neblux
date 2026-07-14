@@ -15,7 +15,7 @@ export function buildIndex(config, wonderSummaries = {}) {
 export function buildIndexFromSources(output = resolve(REPO_ROOT, 'frontend/public/data/atlas/index.json')) {
     const inputs = loadArtifactInputs();
     const config = JSON.parse(readFileSync(ATLAS_PRESENTATION_CONFIG, 'utf8'));
-    const configIssues = validateConfig('atlas-layout', config, ATLAS_PRESENTATION_CONFIG);
+    const configIssues = validateConfig('atlas-layout', config, ATLAS_PRESENTATION_CONFIG, { graphIds: inputs.graphIds });
     if (exitCodeFor(configIssues) !== 0) throw new Error(configIssues.map(formatIssue).join('\n'));
     const configuredWonderIds = new Set(Object.keys(config.wonders || {}));
     const wonderSummaries = Object.fromEntries(inputs.wonders

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Renderer v2 lab</title>
+  <link rel="stylesheet" href="/src/styles/pages/renderer-v2-lab.css">
+</head>
+<body>
+  <main class="renderer-lab" aria-labelledby="lab-title">
+    <header class="renderer-lab__header">
+      <div>
+        <p class="eyebrow">Neblux / internal lab</p>
+        <h1 id="lab-title">Renderer v2 core</h1>
+        <p>Deterministic 1,000-node / 7,000-edge scene. No canonical graph or API requests.</p>
+      </div>
+      <div class="renderer-lab__controls" aria-label="Camera controls">
+        <button id="renderer-zoom-in" type="button" aria-label="Zoom in">+</button>
+        <button id="renderer-zoom-out" type="button" aria-label="Zoom out">−</button>
+        <button id="renderer-reset" type="button">Reset</button>
+      </div>
+    </header>
+    <section class="renderer-lab__stage" aria-label="Renderer canvas">
+      <canvas id="renderer-v2-canvas" aria-label="Interactive renderer v2 test scene"></canvas>
+      <p id="renderer-status" class="renderer-lab__status" role="status">Preparing deterministic scene…</p>
+    </section>
+    <dl class="renderer-lab__stats" aria-label="Renderer debug statistics">
+      <div><dt>Mode</dt><dd id="renderer-mode">—</dd></div>
+      <div><dt>Nodes</dt><dd id="renderer-nodes">—</dd></div>
+      <div><dt>Edges</dt><dd id="renderer-edges">—</dd></div>
+      <div><dt>Candidates</dt><dd id="renderer-candidates">—</dd></div>
+      <div><dt>Scheduler</dt><dd id="renderer-scheduler">—</dd></div>
+    </dl>
+  </main>
+  <script type="module" src="/src/renderer-v2-lab.js"></script>
+</body>
+</html>

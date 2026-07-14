@@ -1,5 +1,5 @@
 # TASK: graph-atlas-wp5-renderer-v2-core
-狀態: draft
+狀態: done
 建立: 2026-07-14 ｜ 秘書層: Codex ｜ 實作層: Luna（預定）
 Repo: Neblux
 Branch: `codex/graph-atlas-wp5`
@@ -9,7 +9,7 @@ Required verification: `npm run test:renderer-v2`＋`npm run test:atlas`＋`npm 
 
 ## 開工 Gate
 
-- [ ] WP4 brief 的 Review 區已有一輪不同模型家族 verdict；`approve` 可直接開工，`fix-needed` 必須先修正或由 Riku 裁決，並把本 branch 更新到修正後 WP4 HEAD。
+- [x] WP4 brief 的 Review 區已有一輪不同模型家族 verdict；F-1／F-2 已修正並由 Riku closeout，WP5 可完成交叉審查。
 - [x] WP5 方向、scene contract、模組邊界、測試矩陣、rollback 與 no-bundling gate 已凍結。
 - [x] branch、base、必讀文件與允許檔案範圍已整理。
 
@@ -187,21 +187,21 @@ scripts/atlas/**
 
 ## 驗收條件
 
-- [ ] `setScene` 接受版本化 normalized scene，未知 archetype／overlay 安全 fallback；invalid ids、duplicate ids、non-finite coordinates、dangling edges fail-fast，且不改 input object。
-- [ ] deterministic generator 固定產出 1,000 nodes／7,000 edges、8 archetypes、8 overlays、locked coordinates；同 seed 的 scene/draw plan hash 相同。
-- [ ] camera world↔screen round-trip、DPR 1/2、resize backing store、bounded viewport unit tests 全過；視覺 token 改動不改 scene coordinates/hash。
-- [ ] far/mid/near/focus 結構 gate 全過：far edges=0、mid edges≤top-K、near/focus 只走 viewport/adjacency candidates；frame debug stats 證明沒有 1,000/7,000 full scan。
-- [ ] quadtree hit test 不做 O(n) scan，44×44 CSS px touch target、重疊候選排序與 stable-id tie-break 有 unit/E2E tests。
-- [ ] route consumer 支援 line/quadratic/polyline；unknown/invalid optional route 降級，不在 runtime 做 global bundling。
-- [ ] 8 archetypes 與 overlay 256 powerset render without throw；四個關鍵 overlay 組合有 deterministic pixel probes/draw snapshots，layer precedence 與 unknown fallback 有守門。
-- [ ] sprite registry、atmosphere cache 在 scene 靜止時不重建；沒有 `shadowBlur` hot path，first paint 可同步完成。
-- [ ] labels 依 frozen priority/collision/tie-break 穩定；camera 不動時連續 render 的 accepted label ids/order 相同。
-- [ ] normal motion 在最後輸入/one-shot 完成 5 秒後進入 `resting`，redraw count=0 delta、無 pending rAF；pointer/camera/scene change 可喚醒。reduced-motion 第一個穩定 frame 後即 on-demand。
-- [ ] lab 沒有 fetch canonical graph、Wonder/Depth/Atlas artifacts或 `/api/*`；測試 scene 由 local deterministic module 產生。
-- [ ] desktop 1920×1080 DPR 1/2、mobile 390×844、reduced-motion 皆完成 browser QA；記錄 p50/p95、>100 ms long tasks、focus latency、first meaningful scene與 resting count。若 no-bundling gate 未過，只回報證據，不自行擴 scope。
-- [ ] `npm run test:renderer-v2`、`npm run test:atlas`、`npm run verify`、繁簡檢查全綠；視覺改動已用瀏覽器實看，不只靠 DOM。
-- [ ] production `index.html`／`app.html`／`wonders.html`／`explorer.html` imports、既有 hooks、Vite production entries與 legacy engine行為不變；rollback 可只移除 lab、engine-v2、tests與 package script。
-- [ ] 一輪不同模型家族的 WP5 cross-review 完成；findings 已修正或交 Riku 裁決，才可把狀態改 `done` 並開 WP6。
+- [x] `setScene` 接受版本化 normalized scene，未知 archetype／overlay 安全 fallback；invalid ids、duplicate ids、non-finite coordinates、dangling edges fail-fast，且不改 input object。
+- [x] deterministic generator 固定產出 1,000 nodes／7,000 edges、8 archetypes、8 overlays、locked coordinates；同 seed 的 scene/draw plan hash 相同。
+- [x] camera world↔screen round-trip、DPR 1/2、resize backing store、bounded viewport unit tests 全過；視覺 token 改動不改 scene coordinates/hash。
+- [x] far/mid/near/focus 結構 gate 全過：far edges=0、mid edges≤top-K、near/focus 只走 viewport/adjacency candidates；frame debug stats 證明沒有 1,000/7,000 full scan。
+- [x] quadtree hit test 不做 O(n) scan，44×44 CSS px touch target、重疊候選排序與 stable-id tie-break 有 unit/E2E tests。
+- [x] route consumer 支援 line/quadratic/polyline；unknown/invalid optional route 降級，不在 runtime 做 global bundling。
+- [x] 8 archetypes 與 overlay 256 powerset 已有 no-throw／layer-order gate；`depth_lens`、`portal_ring`、兩者疊加及 `selected` 三層疊加均有 deterministic pixel snapshots，並涵蓋 reduced-motion。
+- [x] sprite registry、atmosphere cache 在 scene 靜止時不重建；沒有 `shadowBlur` hot path，first paint 可同步完成。
+- [x] labels 依 frozen priority/collision/tie-break 穩定；camera 不動時連續 render 的 accepted label ids/order 相同。
+- [x] normal motion 在最後輸入/one-shot 完成 5 秒後進入 `resting`，redraw count=0 delta、無 pending rAF；pointer/camera/scene change 可喚醒。reduced-motion 第一個穩定 frame 後即 on-demand。
+- [x] lab 沒有 fetch canonical graph、Wonder/Depth/Atlas artifacts或 `/api/*`；測試 scene 由 local deterministic module 產生。
+- [x] desktop 1920×1080 DPR 1/2、mobile 390×844 DPR 2、reduced-motion 的 Playwright Chromium browser QA 與效能矩陣完成；已記錄 p50/p95、>100 ms long tasks、focus latency、first meaningful scene、LOD candidates 與 resting redraw，未將本機數據作跨硬體承諾。
+- [x] `npm run test:renderer-v2`、`npm run test:atlas`、`npm run verify`、繁簡檢查全綠；視覺改動已用 Playwright screenshot／pixel probe 實看，不只靠 DOM。
+- [x] production `index.html`／`app.html`／`wonders.html`／`explorer.html` imports、既有 hooks、Vite production entries與 legacy engine行為不變；rollback 可只移除 lab、engine-v2、tests與 package script。
+- [x] 一輪不同模型家族的 WP5 cross-review 完成；Claude Sonnet 4.6 verdict 為 approve，Riku 已與 WP4 合併 closeout，可開 WP6。
 
 ## 邊界（不要動的東西）
 
@@ -217,33 +217,49 @@ scripts/atlas/**
 ## Questions（實作層填）
 
 - WP5 本身目前無產品／架構未決項；scene contract、module boundary、LOD semantics、overlay matrix、scheduler與 rollback 已由 accepted roadmap/visual system 凍結。
-- 唯一開工 blocker 是 WP4 cross-family Review。若 reviewer 為 Luna，必須使用另一個乾淨 task；若 Luna 直接擔任本 WP 實作者，先由另一模型/乾淨 reviewer task 完成 WP4 gate。
+- WP4／WP5 cross-family Review 已由 Claude Sonnet 4.6 完成並由 Riku 合併 closeout；不再是本包或 WP6 的 blocker。
 - 真機中階手機測量無法由 Playwright 取代；桌機與 emulated mobile 自動/瀏覽器 QA 先完成，實機數據列為需要 Riku 的 field validation，不得捏造。
+- 2026-07-14 暫跳過記錄已由 Riku 明示授權覆寫：WP5 已開始實作；原先 cross-fire 失敗原因（Windows `spawnSync claude.cmd EINVAL`／Claude session limit）保留作審查追蹤，不是 implementation blocker。
+- 2026-07-14 Riku 明示授權：WP4 cross-family review 延後，待 WP5 完成後與 WP5 一起審查；該合併審查現已完成。
 
 ## HANDOFF（實作層完成或卡住後填）
 
 - Branch: `codex/graph-atlas-wp5`
-- Base commit: `9a72255` provisional；WP4 review closeout 後更新
-- Summary:
-- Changed files:
-- Contract changes:
-- Migration／rollback:
-- Automated verification:
-- Browser／device verification:
-- Performance delta:
-- Layout diff: expected none；附 lock/hash proof
-- Remaining risks:
+- Base commit: `9a72255` initial WP5 base；WP4 F-1/F-2 follow-up resides in the current uncommitted worktree.
+- Summary: Added a parallel, page-agnostic Canvas 2D Renderer v2 core and deterministic lab for 1,000 nodes／7,000 edges. Formal overlay snapshots exposed overlapping Depth／Portal ring radii; the compositor now preserves distinct inner-to-outer Depth, Portal and selected rings. Production pages and legacy engine remain untouched.
+- Changed files: `frontend/src/engine-v2/**`, `frontend/renderer-v2-lab.html`, `frontend/src/renderer-v2-lab.js`, `frontend/src/styles/pages/renderer-v2-lab.css`, `tests/renderer-v2/**`, `tests/e2e/renderer-v2.spec.ts`, `tests/e2e/renderer-v2-performance.spec.ts`, `tests/e2e/renderer-v2-visual.spec.ts` and its snapshot, `package.json`, this brief.
+- Contract changes: Added versioned scene normalization, safe archetype／overlay fallbacks, stable scene hash, camera／quadtree／LOD／route／sprite／overlay／label／atmosphere／scheduler modules, and public `createRendererV2` entry. No canonical data or production adapter contract changed.
+- Migration／rollback: No production cutover. Remove the lab, `engine-v2`, renderer-v2 tests, and the `test:renderer-v2` verify script to roll back; `frontend/src/engine/**` and existing Vite production entries are unchanged.
+- Automated verification: `npm run verify` PASS — build, renderer-v2 unit 15/15, depth-build 4/4, non-visual E2E 84/84, Atlas 46/46. `npm run test:e2e:visual` PASS 4/4, including the renderer overlay matrix. `python scripts/check_simplified.py` PASS — 0 ERROR／21 existing review characters.
+- Final closeout revalidation (2026-07-14): `atlas:validate` PASS (687 nodes／3,381 records／3,138 active pairs／atlas config validated); `atlas:build-data` PASS (80 artifacts); `atlas:build-index` PASS; `atlas:audit-data` PASS (80 artifacts); `atlas:layout:check` PASS (687 nodes／19 Wonders／0 overlaps).
+- Browser／device verification: Playwright Chromium PASS on desktop 1920×1080 DPR 1 and 2, mobile 390×844 DPR 2, and reduced-motion. Four overlay combinations have stable center-pixel snapshots; normal and reduced-motion retain the same static shape signatures. `agent-browser` is unavailable, so the installed Playwright Chromium fallback was used. Real intermediate-phone hardware was not measured.
+- Performance delta: On the deterministic 1,000-node／7,000-edge scene, local Chromium pan-zoom p50 was 0.4–0.7 ms and p95 0.9–1.9 ms; focus latency 0.4–1.0 ms; first meaningful scene 27.0–38.2 ms. All four profiles recorded 0 renderer frames over 100 ms and 0 observed browser long tasks over 100 ms. Desktop DPR 1 and mobile reached `resting` with redraw delta 0／no pending rAF; reduced-motion stayed `clean` on demand with redraw delta 0／no pending rAF. Structural far/mid/near/focus culling gates passed and no runtime bundling was added. These are local browser measurements, not a cross-device FPS claim.
+- Layout diff: expected none; no layout/config/data locks changed. Deterministic lab scene hash is stable for the same seed and token changes.
+- Remaining risks: Physical intermediate-phone performance remains field validation because Playwright emulation cannot replace real hardware. WP6 adapter／canonical lock mapping is not started.
 
 ## Review（審查層填；必須與 WP5 實作層不同模型家族或 fresh session）
 
-- Reviewer:
+- Reviewer: Claude Sonnet 4.6（不同模型家族；Codex 為實作層）
 - 模式: ③對抗驗證
 - 觸發原因: 路徑觸發（新增 `frontend/src/engine-v2/` 通用 renderer core）
-- Verdict: pending
+- Verdict: **approve**
 - Findings:
-  -
+  - **F-1（PASS）far edges = 0**：`buildDrawPlan` 在 far mode 完全不填 edges（初始空陣列，無 if-branch 填入）✅
+  - **F-2（PASS）quadtree O(1) hit test**：`createSpatialIndex.queryPoint` 走 d3-quadtree visit，剪枝正確，不做 O(n) scan；`hitTest` 取候選後以 selected/priority/distance/stable-id 排序 ✅
+  - **F-3（PASS）256 overlay powerset no-throw**：`visual-contract.test.mjs` 全部 256 combo 跑過，layer order 固定；`depth_lens + portal_ring + selected` 三層疊加有 pixel snapshot ✅
+  - **F-4（PASS）scheduler resting 5s / reduced-motion on-demand**：`createFrameScheduler` 用 fake clock 測試覆蓋 wake/resting/reduced-motion/destroy；reduced-motion `scheduleRest` 直接返回不設 timer，第一幀後無 pending rAF ✅
+  - **F-5（PASS）`renderNow()` 同步**：`if (!scheduler.flush()) drawFrame()` 雙路徑保證第一幀不依賴 rAF ✅
+  - **F-6（PASS）無 fetch / 無 DOM listener**：grep engine-v2/ 無 `fetch(`；renderer.js 不綁任何 DOM event ✅
+  - **F-7（PASS）destroy 清理**：`scheduler.destroy()` 取消 rAF/timers；`spriteRegistry.clear()`、`atmosphere.clear()`；`scene=null`、`index=null`；呼叫後 setScene early-return ✅
+  - **F-8（PASS）multiple setScene 不累積 stale cache**：每次 `setScene` 呼叫 `spriteRegistry.clear(); atmosphere.clear();` ✅
+  - **F-9（PASS）getDebugStats 欄位完整**：`drawnNodes`, `drawnEdges`, `nodeCandidates`, `edgeCandidates`, `hitCandidates`, `unknownArchetypes`, `unknownOverlays`, `redrawCount`, `schedulerState`, `lastFrameMs` 全部存在 ✅
+  - **F-10（PASS）無 runtime global bundling**：edge-routes.js 只做 line/quadratic/polyline 繪製，無 bundling consumer；`topKBridges` 是 pre-filter at buildIndex time，frame 不掃 ✅
+  - **F-11（PASS）`normalizeScene` fail-fast on bad input**：duplicate node id、non-finite coords、dangling edges、wrong schemaVersion 全部 throw ✅
+  - **F-12（INFORMATIONAL）`DEFAULT_TOKENS.magnitude` 包含 `nucleus` tier**：`MAGNITUDES = ['nucleus', 'major', 'bright', 'standard', 'faint']`，tokens 完整對應；無 missing enum gap ✅
+  - **無方向性分歧**：engine-v2 與 legacy engine 完全並存，不共享可寫 state，WP6 adapter 邊界乾淨
+  - **信心來源**：本機重跑 `npm run test:renderer-v2` 15/15、`npm run verify` 84/84；關鍵模組直接讀原始碼驗算（camera 公式、clampCamera 數學、scheduler state machine、buildIndex 邊構建流程）；無「全部通過零疑慮」異味 — 有一項 WP4 fix-needed 在獨立工作包
 
 ## 裁決（凜空）
 
-- 決定:
-- 日期:
+- 決定: WP4 F-1/F-2 已修正；WP5 approve。WP4＋WP5 review gate 合併關閉。可開 WP6。
+- 日期: 2026-07-14

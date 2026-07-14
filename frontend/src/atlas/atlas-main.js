@@ -151,6 +151,7 @@ function initControls() {
 }
 
 window.__nebluxAtlas = {
+    ready: () => state.loadState === 'ready',
     loadState: () => state.loadState,
     regionIds: () => [state.index.mainGalaxy, ...state.index.wonders].map((region) => region.id),
     screenRegion: (id) => renderer.regionScreenPosition(id),

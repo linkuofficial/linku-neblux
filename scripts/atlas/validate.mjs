@@ -1,12 +1,29 @@
-import { exitCodeFor, printIssues } from './contract.mjs';
-import { validateAllSchemas } from './validate-config.mjs';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { REPO_ROOT, exitCodeFor, printIssues, readJson, sortIssues } from './contract.mjs';
+import { validateAllSchemas, validateConfig } from './validate-config.mjs';
 import { validateRealSources } from './validate-sources.mjs';
 
-const sourceResult = validateRealSources();
-const issues = [...sourceResult.issues, ...validateAllSchemas()];
-printIssues(issues);
-const code = exitCodeFor(issues);
-if (code === 0) {
-    process.stdout.write(`atlas validation: PASS nodes=${sourceResult.graph.nodes.length} records=${sourceResult.graph.records.length} activePairs=${sourceResult.graph.topology.length} schemas=4\n`);
+export const ATLAS_PRESENTATION_CONFIG = resolve(REPO_ROOT, 'config', 'atlas', 'atlas-layout.json');
+
+export function validateAtlas({ configFile = ATLAS_PRESENTATION_CONFIG } = {}) {
+    const sourceResult = validateRealSources();
+    const configRead = readJson(configFile);
+    const graphIds = new Set(sourceResult.graph.nodes.map((node) => node?.id).filter(Boolean));
+    const issues = [...sourceResult.issues, ...validateAllSchemas(), ...configRead.issues];
+    if (configRead.value) issues.push(...validateConfig('atlas-layout', configRead.value, configFile, { graphIds }));
+    return { issues: sortIssues(issues), sourceResult };
 }
-process.exitCode = code;
+
+function main() {
+    const result = validateAtlas();
+    printIssues(result.issues);
+    const code = exitCodeFor(result.issues);
+    if (code === 0) {
+        const { graph } = result.sourceResult;
+        process.stdout.write(`atlas validation: PASS nodes=${graph.nodes.length} records=${graph.records.length} activePairs=${graph.topology.length} schemas=4 atlasConfig=validated\n`);
+    }
+    process.exitCode = code;
+}
+
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();

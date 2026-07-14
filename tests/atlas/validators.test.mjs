@@ -9,7 +9,8 @@ import {
     readJson, sortIssues,
 } from '../../scripts/atlas/contract.mjs';
 import { validateAllSchemas, validateConfig, validateSchemaContract } from '../../scripts/atlas/validate-config.mjs';
-import { sourceFiles, validateDepthManifest, validateGraph, validateWonder } from '../../scripts/atlas/validate-sources.mjs';
+import { sourceFiles, validateDepthManifest, validateGraph, validateRealSources, validateWonder } from '../../scripts/atlas/validate-sources.mjs';
+import { validateAtlas } from '../../scripts/atlas/validate.mjs';
 import { auditDomains } from '../../scripts/atlas/audit-domains.mjs';
 import { auditPortals } from '../../scripts/atlas/audit-portals.mjs';
 import { auditArtifactEnvelope } from '../../scripts/atlas/audit-artifacts.mjs';
@@ -118,6 +119,21 @@ test('same-version unknown fields fail, future minor warns, future major fails',
     assert.equal(exitCodeFor(futureIssues), 0);
     assert.equal(futureIssues.find((value) => value.path === '$.extra').severity, 'warning');
     assert.equal(exitCodeFor(validateConfig('domain-anchors', major)), 1);
+});
+
+test('atlas validation CLI contract rejects a road via outside the canonical graph', () => {
+    const directory = mkdtempSync(join(tmpdir(), 'neblux-atlas-config-'));
+    try {
+        const configFile = join(directory, 'atlas-layout.json');
+        const config = JSON.parse(readFileSync(resolve(root, 'config/atlas/atlas-layout.json'), 'utf8'));
+        config.roads[0].via = 'nonexistent_concept';
+        writeFileSync(configFile, JSON.stringify(config), 'utf8');
+
+        const result = validateAtlas({ configFile });
+        assert.equal(exitCodeFor(result.issues), 1);
+        assert.match(result.issues.map((value) => value.message).join('\n'), /canonical node nonexistent_concept does not exist/);
+        assert.equal(result.sourceResult.graph.nodes.length > 0, true);
+    } finally { rmSync(directory, { recursive: true, force: true }); }
 });
 
 test('domain audit uses explicit mapping and accepts a non *_field anchor id', () => {

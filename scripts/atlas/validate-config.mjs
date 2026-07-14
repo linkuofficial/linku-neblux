@@ -49,7 +49,7 @@ function validateAnchor(anchor, file, path, issues, compatibility) {
     enumCheck(anchor.archetype, CELESTIAL_ARCHETYPES, file, `${path}.archetype`, issues);
 }
 
-export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}.json`) {
+export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}.json`, { graphIds = new Set() } = {}) {
     const issues = [];
     if (!SCHEMA_CONTRACTS[kind]) return [issue(file, '$', `unknown config kind ${kind}`, 'error', 'usage')];
     if (!isObject(value)) return [issue(file, '$', 'must be an object')];
@@ -143,27 +143,28 @@ export function validateConfig(kind, value, file = `tests/atlas/fixtures/${kind}
             const configuredWonderIds = new Set(Object.keys(isObject(value.wonders) ? value.wonders : {}));
             const roadIds = new Set();
             value.roads.forEach((road, index) => {
-            const path = `$.roads[${index}]`;
-            const allowed = ['id', 'from', 'to', 'via', 'strengthClass', 'approved'];
-            if (!isObject(road)) { issues.push(issue(file, path, 'must be an object')); return; }
-            unknownProperties(road, allowed, file, path, issues, compatibility);
-            for (const key of allowed) if (!Object.hasOwn(road, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
-            for (const key of ['id', 'from', 'to', 'via']) if (typeof road[key] !== 'string' || !road[key]) issues.push(issue(file, `${path}.${key}`, 'must be a non-empty string'));
-            for (const key of ['from', 'to']) {
-                if (typeof road[key] === 'string' && !(/^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$/).test(road[key])) {
-                    issues.push(issue(file, `${path}.${key}`, 'must be main or a wonder:<id> reference'));
-                } else if (typeof road[key] === 'string' && road[key].startsWith('wonder:')) {
-                    const wonderId = road[key].slice('wonder:'.length);
-                    if (!configuredWonderIds.has(wonderId)) issues.push(issue(file, `${path}.${key}`, `must reference a configured Wonder region; ${wonderId} is not published`));
+                const path = `$.roads[${index}]`;
+                const allowed = ['id', 'from', 'to', 'via', 'strengthClass', 'approved'];
+                if (!isObject(road)) { issues.push(issue(file, path, 'must be an object')); return; }
+                unknownProperties(road, allowed, file, path, issues, compatibility);
+                for (const key of allowed) if (!Object.hasOwn(road, key)) issues.push(issue(file, `${path}.${key}`, 'required property is missing'));
+                for (const key of ['id', 'from', 'to', 'via']) if (typeof road[key] !== 'string' || !road[key]) issues.push(issue(file, `${path}.${key}`, 'must be a non-empty string'));
+                for (const key of ['from', 'to']) {
+                    if (typeof road[key] === 'string' && !(/^(main|wonder:[a-z0-9]+(?:-[a-z0-9]+)*)$/).test(road[key])) {
+                        issues.push(issue(file, `${path}.${key}`, 'must be main or a wonder:<id> reference'));
+                    } else if (typeof road[key] === 'string' && road[key].startsWith('wonder:')) {
+                        const wonderId = road[key].slice('wonder:'.length);
+                        if (!configuredWonderIds.has(wonderId)) issues.push(issue(file, `${path}.${key}`, `must reference a configured Wonder region; ${wonderId} is not published`));
+                    }
                 }
-            }
-            if (typeof road.id === 'string' && road.id) {
-                if (roadIds.has(road.id)) issues.push(issue(file, `${path}.id`, `duplicate road id ${road.id}`));
-                roadIds.add(road.id);
-            }
-            if (road.from && road.from === road.to) issues.push(issue(file, path, 'road endpoints must be different'));
-            enumCheck(road.strengthClass, ['weak', 'standard', 'strong'], file, `${path}.strengthClass`, issues);
-            if (typeof road.approved !== 'boolean') issues.push(issue(file, `${path}.approved`, 'must be boolean'));
+                if (typeof road.id === 'string' && road.id) {
+                    if (roadIds.has(road.id)) issues.push(issue(file, `${path}.id`, `duplicate road id ${road.id}`));
+                    roadIds.add(road.id);
+                }
+                if (road.from && road.from === road.to) issues.push(issue(file, path, 'road endpoints must be different'));
+                enumCheck(road.strengthClass, ['weak', 'standard', 'strong'], file, `${path}.strengthClass`, issues);
+                if (typeof road.approved !== 'boolean') issues.push(issue(file, `${path}.approved`, 'must be boolean'));
+                if (graphIds.size && typeof road.via === 'string' && road.via && !graphIds.has(road.via)) issues.push(issue(file, `${path}.via`, `canonical node ${road.via} does not exist`));
             });
         }
     }

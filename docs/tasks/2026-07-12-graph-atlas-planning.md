@@ -1,5 +1,5 @@
 # TASK: graph-atlas-planning
-狀態: review
+狀態: done
 
 ## 目標
 
@@ -52,3 +52,15 @@
 - Summary: 完成 Graph Atlas v0.2 review package：四級靜態架構、精確資料契約、天體視覺系統、雙核心引力、穩定 layout、蟲洞、static bundles、WP0–WP10 路線、Fable 5 審查包與三輪自查。
 - Verification: 7 份 planning 文件共 2,471 行／60,553 字元；Markdown fences、二級標題、EOF、trailing whitespace 結構檢查通過；14 項跨文件契約斷言通過；Fable review packet 的 17 個輸入路徑存在；新文件 zh-TW 常見簡體詞掃描零命中；`python scripts/check_simplified.py` 通過（既有 i18n：0 ERROR、21 個台灣可接受字形 REVIEW）；working tree 只有本輪 7 個未追蹤 docs。Docs-only，未執行 `npm run verify`。
 - Remaining risks: 本計畫涉及引擎、資料 schema 與 build 禁區；進入 Phase A/B 前必須經 Riku 裁決與跨家族審查，並另開實作 brief。
+
+## Review（事後歸檔）
+
+- Reviewer: Fable 5（不同模型家族）
+- 模式: 規劃交叉審查
+- Verdict: fix-needed（0×P0、4×P1、7×P2）；完整 findings 見 `docs/GRAPH-ATLAS-FABLE-REVIEW.md`，修正計畫與 WP0.5 GO 見 `docs/tasks/2026-07-12-graph-atlas-review-fixes.md`。
+- Resolution: findings 已在 Direction Freeze、schema／validator、stable-layout、bundles／indices、Atlas prototype 與 renderer-v2 work packages 逐包關閉。
+
+## Closeout（2026-07-14）
+
+- WP0–WP5 已依本計畫完成獨立 brief、驗收與交叉審查；本 planning task 的 original review gate 已有可追溯 verdict 與 findings resolution。
+- 原始 Remaining risks 屬進入實作前的風險，已由後續各 WP 的 scope gate 取代；未來 WP6–WP10 仍須各自另開 brief，不因本 closeout 自動授權。
