@@ -42,4 +42,60 @@ test('reduced motion has no resting timer and remains on-demand', () => {
     assert.equal(scheduled, 1);
     assert.equal(timers, 0);
     assert.equal(scheduler.pending(), false);
+    assert.equal(scheduler.setAnimation('ambient', true, 24), false);
+    assert.deepEqual(scheduler.activeAnimations(), []);
+});
+
+test('scheduler animation leases redraw at the requested cadence and release to rest', () => {
+    const callbacks = []; let frames = 0; let timerCallback;
+    const scheduler = createFrameScheduler({
+        onFrame: () => { frames += 1; },
+        raf: (callback) => { callbacks.push(callback); return callbacks.length; },
+        caf: () => {},
+        setTimeoutFn: (callback) => { timerCallback = callback; return 10; },
+        clearTimeoutFn: () => {},
+    });
+    assert.equal(scheduler.setAnimation('ambient', true, 24), true);
+    assert.deepEqual(scheduler.activeAnimations(), ['ambient']);
+    callbacks.shift()(0);
+    assert.equal(frames, 1);
+    callbacks.shift()(10);
+    assert.equal(frames, 1);
+    callbacks.shift()(50);
+    assert.equal(frames, 2);
+    assert.equal(scheduler.state(), 'animating');
+    assert.equal(scheduler.setAnimation('ambient', false), false);
+    timerCallback();
+    assert.equal(scheduler.state(), 'resting');
+});
+
+test('multiple animation leases use the highest requested cadence until each owner releases', () => {
+    const callbacks = []; const cancelled = []; let frames = 0;
+    const scheduler = createFrameScheduler({
+        onFrame: () => { frames += 1; },
+        raf: (callback) => { callbacks.push(callback); return callbacks.length; },
+        caf: (id) => { cancelled.push(id); },
+        setTimeoutFn: () => 90,
+        clearTimeoutFn: () => {},
+    });
+    scheduler.setAnimation('ambient', true, 20);
+    scheduler.setAnimation('focus', true, 30);
+    assert.deepEqual(scheduler.activeAnimations(), ['ambient', 'focus']);
+    callbacks.shift()(0);
+    callbacks.shift()(20);
+    assert.equal(frames, 1);
+    callbacks.shift()(34);
+    assert.equal(frames, 2);
+
+    scheduler.setAnimation('focus', false);
+    assert.deepEqual(scheduler.activeAnimations(), ['ambient']);
+    callbacks.shift()(60);
+    assert.equal(frames, 2);
+    callbacks.shift()(85);
+    assert.equal(frames, 3);
+
+    scheduler.setAnimation('ambient', false);
+    assert.deepEqual(scheduler.activeAnimations(), []);
+    assert.equal(scheduler.state(), 'clean');
+    assert.ok(cancelled.length >= 1);
 });

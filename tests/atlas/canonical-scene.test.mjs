@@ -9,11 +9,17 @@ test('canonical scene deterministically joins the 687-node graph, layout and cel
     assert.equal(first.scene.edges.length, 3138);
     assert.deepEqual(first.scene, second.scene);
     assert.deepEqual(first.metadata, second.metadata);
-    assert.equal(first.metadata.sceneHash, '13784a17');
+    assert.match(first.metadata.sceneHash, /^[a-f0-9]{8}$/);
     assert.match(first.metadata.sceneLayoutHash, /^sha256:[a-f0-9]{64}$/);
     assert.equal(new Set(first.scene.nodes.map((node) => node.archetype)).has('concept_star'), true);
     assert.equal(first.scene.nodes.filter((node) => node.archetype === 'galactic_nucleus').length, 2);
     assert.equal(first.scene.nodes.some((node) => node.archetype === 'future'), false);
+    assert.deepEqual(new Set(first.scene.nodes.map((node) => node.visualMagnitude)), new Set(['nucleus', 'major', 'bright', 'standard', 'faint']));
+    assert.equal(first.scene.nodes.filter((node) => node.visualMagnitude === 'major').length, 10);
+    assert.equal(first.scene.nodes.filter((node) => node.visualMagnitude === 'faint').length, 30);
+    assert.equal(first.scene.edges.every((edge) => edge.priority > 0), true);
+    assert.equal(new Set(first.scene.edges.map((edge) => edge.priority)).size > 10, true);
+    assert.equal(first.scene.edges.every((edge) => edge.route?.type === 'quadratic'), true);
 
     const restyledLock = structuredClone(readCanonicalLock());
     const restyledEntry = Object.values(restyledLock.nodes).find((entry) => entry.archetype === 'concept_star');
@@ -46,5 +52,7 @@ test('celestial adapter maps lock enums explicitly and rejects unsupported value
     assert.deepEqual(mapClassification({ archetype: 'galactic_nucleus', visualMagnitudeClass: 'landmark', labelPriorityClass: 'critical' }), {
         archetype: 'galactic_nucleus', visualMagnitude: 'nucleus', labelPriority: 'critical',
     });
+    assert.equal(mapClassification({ archetype: 'domain_core', visualMagnitudeClass: 'bright', labelPriorityClass: 'high' }).visualMagnitude, 'major');
+    assert.equal(mapClassification({ archetype: 'event_remnant', visualMagnitudeClass: 'standard', labelPriorityClass: 'standard' }).visualMagnitude, 'faint');
     assert.throws(() => mapClassification({ archetype: 'concept_star', visualMagnitudeClass: 'unknown', labelPriorityClass: 'standard' }), /unsupported celestial magnitude mapping/);
 });

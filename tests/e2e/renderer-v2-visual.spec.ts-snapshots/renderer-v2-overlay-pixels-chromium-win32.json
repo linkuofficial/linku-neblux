@@ -1,54 +1,54 @@
 {
   "normal": {
     "depth-lens": {
-      "hash": "a2c5bb60",
+      "hash": "89709e6c",
       "opaquePixels": 32400,
-      "brightPixels": 608,
-      "rgbSum": 1365647
+      "brightPixels": 445,
+      "rgbSum": 1270087
     },
     "portal-ring": {
-      "hash": "573e9e35",
+      "hash": "17c91028",
       "opaquePixels": 32400,
-      "brightPixels": 588,
-      "rgbSum": 1360306
+      "brightPixels": 433,
+      "rgbSum": 1267791
     },
     "depth-portal": {
-      "hash": "41337f6f",
+      "hash": "cd818a79",
       "opaquePixels": 32400,
-      "brightPixels": 800,
-      "rgbSum": 1469872
+      "brightPixels": 640,
+      "rgbSum": 1374988
     },
     "selected-depth-portal": {
-      "hash": "b19aabe1",
+      "hash": "6e6f7cab",
       "opaquePixels": 32400,
-      "brightPixels": 1337,
-      "rgbSum": 1803458
+      "brightPixels": 1162,
+      "rgbSum": 2033798
     }
   },
   "reduced": {
     "depth-lens": {
-      "hash": "a2c5bb60",
+      "hash": "2d399ef1",
       "opaquePixels": 32400,
-      "brightPixels": 608,
-      "rgbSum": 1365647
+      "brightPixels": 445,
+      "rgbSum": 1271092
     },
     "portal-ring": {
-      "hash": "573e9e35",
+      "hash": "1b595e21",
       "opaquePixels": 32400,
-      "brightPixels": 588,
-      "rgbSum": 1360306
+      "brightPixels": 433,
+      "rgbSum": 1268796
     },
     "depth-portal": {
-      "hash": "41337f6f",
+      "hash": "f1571964",
       "opaquePixels": 32400,
-      "brightPixels": 800,
-      "rgbSum": 1469872
+      "brightPixels": 640,
+      "rgbSum": 1375993
     },
     "selected-depth-portal": {
-      "hash": "b19aabe1",
+      "hash": "740a774e",
       "opaquePixels": 32400,
-      "brightPixels": 1337,
-      "rgbSum": 1803458
+      "brightPixels": 1646,
+      "rgbSum": 2181817
     }
   }
 }

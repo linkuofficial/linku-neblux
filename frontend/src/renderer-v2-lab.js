@@ -100,6 +100,17 @@ async function benchmark({ samples = 30 } = {}) {
         renderer.setInteraction({ focusedNodeId: focusNode.id });
         renderer.renderNow();
         focusLatencyMs = performance.now() - focusStarted;
+        // Keep the historical performance-matrix key while the renderer now
+        // exposes the richer semantic mode vocabulary. This captures the
+        // actual focused local-plan frame rather than inferring it from zoom.
+        const focusStats = renderer.getDebugStats();
+        const focusSample = lodSamples.focus || { samples: 0, maxDrawnNodes: 0, maxDrawnEdges: 0, maxNodeCandidates: 0, maxEdgeCandidates: 0 };
+        focusSample.samples += 1;
+        focusSample.maxDrawnNodes = Math.max(focusSample.maxDrawnNodes, focusStats.drawnNodes);
+        focusSample.maxDrawnEdges = Math.max(focusSample.maxDrawnEdges, focusStats.drawnEdges);
+        focusSample.maxNodeCandidates = Math.max(focusSample.maxNodeCandidates, focusStats.nodeCandidates);
+        focusSample.maxEdgeCandidates = Math.max(focusSample.maxEdgeCandidates, focusStats.edgeCandidates);
+        lodSamples.focus = focusSample;
         resolve();
     }));
     await new Promise((resolve) => requestAnimationFrame(() => {
@@ -156,6 +167,7 @@ window.__nebluxRendererV2 = Object.freeze({
     camera: () => renderer.getCamera(),
     hitTest: (point) => renderer.hitTest(point)?.id || null,
     setOverlayCase: (overlays) => {
+        renderer.setAmbientAnimation(false);
         renderer.setScene(overlayScene(overlays));
         renderer.setInteraction({ hoveredNodeId: null, focusedNodeId: null, keyboardNodeId: null });
         renderer.setCamera({ x: 0, y: 0, zoom: 2.8 });

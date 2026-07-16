@@ -1,0 +1,563 @@
+/* Main Galaxy v2 (internal route) — chrome aligned to the canonical Neblux
+   design system. Every recipe below mirrors the production app chrome:
+   tokens from neblux-theme.css + components/tokens.css, the rail glass
+   (Recipe B segmented rail), ghost buttons (Recipe C) and the domain-lit
+   glass detail panel. Layout is the same full-screen HUD as app.html:
+   the canvas fills the viewport and chrome floats above it, fixed. */
+
+@import '../components/tokens.css';
+
+/* ── base (mirrors components/_base.css for this standalone page) ─────── */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+*:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+html { color-scheme: dark; }
+body {
+    background:
+        radial-gradient(900px 700px at 20% 15%, rgba(60, 40, 120, 0.08), transparent 70%),
+        radial-gradient(700px 600px at 80% 75%, rgba(30, 50, 100, 0.06), transparent 70%),
+        radial-gradient(500px 400px at 60% 30%, rgba(80, 30, 100, 0.05), transparent 65%),
+        radial-gradient(600px 500px at 35% 80%, rgba(20, 40, 90, 0.06), transparent 68%),
+        linear-gradient(160deg, var(--bg-0), var(--bg-1) 50%, var(--bg-2));
+    color: var(--ink-main);
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    letter-spacing: 0.01em;
+}
+body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35) 100%);
+    pointer-events: none;
+    z-index: 0;
+}
+button, input { font: inherit; }
+a { color: var(--accent); }
+/* The page toggles the [hidden] attribute from JS; any display set below
+   must never resurrect a hidden element. */
+[hidden] { display: none !important; }
+.sr-only {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* HUD layout: the containers impose no flow of their own — every piece of
+   chrome positions itself against the viewport, exactly like app.html. */
+.galaxy-v2, .galaxy-v2__header { display: contents; }
+
+/* ── header pill (top-left rail glass, same recipe as #hdr) ───────────── */
+.v2-brand {
+    position: fixed; left: 20px; top: 20px;
+    z-index: 6;
+    display: flex; flex-direction: row; align-items: center; gap: 11px;
+    padding: 11px 15px;
+    font-family: var(--font-label);
+    border-radius: var(--radius-md);
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+}
+#galaxy-v2-title {
+    order: 1;
+    font-size: 15px;
+    font-weight: 400;
+    color: #d7e3f0;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+.eyebrow {
+    order: 2;
+    font-size: 11px;
+    color: var(--ink-soft);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    padding-left: 11px;
+    border-left: 0.5px solid var(--rail-divider);
+}
+
+/* ── search (center-top capsule, merged card with the domain rail) ────── */
+.v2-search {
+    position: fixed; top: 20px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 12;
+    width: min(460px, 94vw);
+}
+.v2-search-ico {
+    position: absolute; left: 16px; top: 15px;
+    width: 16px; height: 16px;
+    color: var(--ink-faint);
+    pointer-events: none;
+    z-index: 1;
+}
+#v2-search-input {
+    width: 100%;
+    min-height: 46px;
+    padding: 13px 18px 13px 42px;
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
+    border-bottom: 0;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    color: #d4dfed;
+    font-family: var(--font-label);
+    font-size: 13px;
+    outline: none;
+    backdrop-filter: blur(12px);
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+#v2-search-input::placeholder { color: #90a2bb; }
+#v2-search-input:focus {
+    border-color: rgba(196, 214, 235, 0.45);
+    background: rgba(15, 27, 48, 0.95);
+}
+/* The production search has no visible submit button — Enter submits. The
+   button stays in the DOM for the page adapter, visually removed. */
+.v2-search button[type="submit"] {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0; padding: 0;
+}
+#v2-search-results {
+    position: absolute; top: 52px; left: 0;
+    width: 100%;
+    background: rgba(10, 20, 37, 0.94);
+    border: 1px solid var(--line-subtle);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(16px);
+    max-height: 300px;
+    overflow-y: auto;
+    box-shadow: var(--shadow-soft);
+    z-index: 2;
+}
+#v2-search-results button {
+    display: flex; align-items: center; gap: 9px;
+    width: 100%;
+    padding: 10px 14px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-main);
+    font-family: var(--font-label);
+    font-size: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+#v2-search-results button:hover,
+#v2-search-results button[aria-selected="true"] { background: rgba(191, 212, 236, 0.12); }
+
+/* ── domain filter (Recipe B segmented rail, flush under the search) ──── */
+#v2-domains {
+    position: fixed; top: 66px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: min(460px, 94vw);
+    display: flex; gap: 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
+    border-top: 0.5px solid var(--rail-divider);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+#v2-domains button {
+    display: inline-flex; align-items: center;
+    min-height: 30px;
+    padding: 5px 8px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-soft);
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+#v2-domains button + button { border-left: 0.5px solid var(--rail-divider); }
+#v2-domains button:hover { background: var(--seg-hover); color: var(--ink-main); }
+#v2-domains button.is-active { background: var(--seg-active); color: var(--accent); }
+#v2-domains button:focus-visible {
+    outline: 2px solid rgba(240, 192, 80, 0.78);
+    outline-offset: -2px;
+}
+
+/* ── language toggle (top-right, chrome-free, '/' separators) ─────────── */
+#v2-languages {
+    position: fixed; right: 20px; top: 20px;
+    z-index: 6;
+    display: flex; align-items: center; gap: 0;
+    font-family: var(--font-label);
+}
+#v2-languages button {
+    position: relative;
+    min-width: 44px; min-height: 44px;
+    padding: 10px 12px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 0;
+    background: transparent;
+    color: rgba(150, 169, 193, 0.82);
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+#v2-languages button + button::before {
+    content: '/';
+    position: absolute; left: -4px;
+    color: rgba(214, 230, 248, 0.52);
+    pointer-events: none;
+}
+#v2-languages button.is-active { color: #dbe7f6; }
+#v2-languages button:hover { color: rgba(219, 231, 246, 0.88); }
+/* A detail card occupies the top-right corner. Keep the language control in
+   the unobscured left rail instead of leaving a visible-but-unclickable UI. */
+body.v2-panel-open #v2-languages {
+    left: 20px;
+    right: auto;
+    top: 78px;
+    z-index: 12;
+}
+
+/* ── camera controls (Recipe C ghost cluster, bottom-right) ───────────── */
+.v2-controls {
+    position: fixed; right: 20px; bottom: 20px;
+    z-index: 6;
+    display: flex; gap: 4px; align-items: center;
+    font-family: var(--font-label);
+}
+.v2-controls button {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 40px; min-height: 34px;
+    padding: 7px 12px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--ink-soft);
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+.v2-controls button:hover { background: var(--seg-hover); color: var(--ink-main); }
+.v2-controls button.is-active {
+    background: rgba(240, 192, 80, 0.14);
+    color: #d8b25d;
+}
+/* The detail slab owns the right edge. Keep camera controls in the exposed
+   rail instead of putting functional buttons behind the card. */
+body.v2-panel-open .v2-controls {
+    right: 368px;
+    z-index: 12;
+}
+
+/* ── stage: canvas fills the viewport ─────────────────────────────────── */
+.v2-stage { position: fixed; inset: 0; z-index: 1; }
+#v2-canvas {
+    display: block;
+    width: 100vw; height: 100vh;
+    cursor: grab;
+    touch-action: none;
+}
+#v2-canvas:active { cursor: grabbing; }
+
+/* ── status line / retry / fallback (bottom-left) ─────────────────────── */
+.v2-status {
+    position: fixed; left: 20px; bottom: 18px;
+    z-index: 6;
+    max-width: min(60vw, 520px);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: #94a7bf;
+    pointer-events: none;
+}
+#v2-fallback { bottom: 44px; pointer-events: auto; }
+#v2-retry {
+    position: fixed; left: 20px; bottom: 78px;
+    z-index: 6;
+    padding: 8px 14px;
+    font-family: var(--font-label);
+    font-size: 12px;
+    color: var(--ink-soft);
+    background: var(--rail-bg);
+    border: 0.5px solid var(--rail-border);
+    border-radius: var(--radius-md);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-soft);
+    cursor: pointer;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+#v2-retry:hover { background: var(--seg-hover); color: var(--ink-main); }
+
+/* ── detail card: the domain-lit glass slab (same recipe as #panel) ───── */
+#v2-card {
+    position: fixed; right: 16px; top: 16px; bottom: 16px;
+    width: 332px;
+    background:
+        radial-gradient(150% 120px at 50% -24px,
+            color-mix(in srgb, var(--node-accent, transparent) 18%, transparent),
+            transparent 72%),
+        var(--panel-bg);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    backdrop-filter: blur(16px) saturate(1.3);
+    border: 1px solid var(--neblux-glass-border);
+    border-top: 1px solid color-mix(in srgb, var(--node-accent, transparent) 55%, var(--neblux-glass-border));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-strong), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+    padding: 24px 20px 20px;
+    overflow-y: auto;
+    z-index: 11;
+    color: var(--panel-ink);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(148, 163, 184, 0.18) transparent;
+}
+#v2-card::-webkit-scrollbar { width: 3px; }
+#v2-card::-webkit-scrollbar-track { background: transparent; }
+#v2-card::-webkit-scrollbar-thumb { background: rgba(148, 163, 184, 0.18); border-radius: 2px; }
+
+.v2-card__close {
+    position: absolute; top: 12px; right: 12px;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    background: transparent;
+    border: 0;
+    border-radius: 999px;
+    color: var(--panel-faint);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.v2-card__close:hover { color: var(--panel-ink); background: var(--seg-hover-light); }
+
+/* eyebrow inside the card follows the panel recipe, not the header one */
+#v2-card-domain {
+    order: 0;
+    border: 0;
+    padding: 0;
+    opacity: 1;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    color: color-mix(in srgb, var(--node-accent, var(--panel-faint)) 58%, var(--panel-faint));
+}
+#v2-card-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 34px 8px 0;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    color: var(--panel-ink);
+}
+#v2-card-type {
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 1.25px;
+    color: color-mix(in srgb, var(--node-accent, var(--panel-faint)) 60%, var(--panel-faint));
+    margin-bottom: 12px;
+}
+.v2-card-description {
+    font-size: 12px;
+    line-height: 1.72;
+    color: var(--panel-soft);
+    margin-bottom: 16px;
+}
+.v2-description-lead { margin: 0 0 12px; }
+.v2-description-spark { color: var(--panel-ink); }
+.v2-description-section { border-top: 0.5px solid rgba(100, 116, 139, 0.18); }
+.v2-description-section summary {
+    padding: 9px 0;
+    color: var(--panel-faint);
+    cursor: pointer;
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 0.8px;
+}
+.v2-description-section__body { padding: 0 0 10px; }
+.v2-description-section__body p { margin: 0; }
+.v2-description-section__body ul { margin: 0; padding-left: 17px; }
+.v2-description-section__body li + li { margin-top: 7px; }
+.v2-description-domain { font-family: var(--font-label); font-size: 10px; letter-spacing: 0.55px; }
+.v2-card-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 0;
+    margin: 0 36px 10px 0;
+    color: var(--panel-faint);
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 0.25px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.v2-card-breadcrumb button {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+}
+.v2-card-breadcrumb button:hover { color: var(--panel-ink); }
+.v2-card-breadcrumb button[aria-current="page"] { color: var(--panel-soft); cursor: default; }
+.v2-card-tags {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+.v2-card-tags span {
+    font-family: var(--font-label);
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: rgba(148, 163, 184, 0.1);
+    border: 0.5px solid rgba(148, 163, 184, 0.22);
+    color: var(--panel-soft);
+}
+.v2-card-era {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: var(--panel-faint);
+    margin-bottom: 12px;
+}
+#v2-learning-toggle {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+    min-height: 48px;
+    background: rgba(240, 192, 80, 0.12);
+    border: 1px solid rgba(240, 192, 80, 0.45);
+    color: #d8b25d;
+    font-family: var(--font-label);
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+}
+#v2-learning-toggle:hover { background: rgba(240, 192, 80, 0.2); }
+#v2-learning-toggle:disabled { opacity: 0.45; cursor: default; }
+#v2-learning-toggle:disabled:hover { background: rgba(240, 192, 80, 0.12); }
+#v2-learning-next {
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(148, 163, 184, 0.08);
+    color: var(--panel-faint);
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+}
+
+/* card sections (stations / prereqs / unlocks / connections / depth / portals) */
+#v2-card section {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 0.5px solid rgba(100, 116, 139, 0.22);
+}
+#v2-card section h3 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #8fa0b8;
+    margin-bottom: 8px;
+}
+#v2-card-prereqs h3,
+#v2-card-unlocks h3 { color: #c1912f; font-size: 9px; }
+#v2-card section ul { list-style: none; margin: 0; padding: 0; }
+#v2-card section li button {
+    display: flex; align-items: center; gap: 9px;
+    width: 100%;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: var(--panel-soft);
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: background 0.18s ease, color 0.18s ease;
+}
+#v2-card section li button:hover { color: var(--panel-ink); background: var(--seg-hover-light); }
+#v2-card-prereqs li button {
+    border-left: 2px solid var(--accent);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding-left: 8px;
+}
+
+/* ── responsive (breakpoints mirror app/loading.css + panel-mobile.css) ── */
+@media (max-width: 1080px) {
+    .v2-search, #v2-domains { width: min(320px, 94vw); }
+    #v2-card { width: 304px; padding: 22px 18px 18px; }
+    #v2-card-title { font-size: 28px; }
+    body.v2-panel-open .v2-controls { right: 340px; }
+}
+@media (max-width: 760px) {
+    .v2-brand {
+        left: 12px; top: 12px;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    #galaxy-v2-title { font-size: 12px; letter-spacing: 1.2px; }
+    .eyebrow { display: none; }
+    .v2-search { top: 62px; left: 12px; right: 12px; transform: none; width: auto; }
+    #v2-domains {
+        top: 108px; left: 12px; right: 12px;
+        transform: none;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+    #v2-languages { right: 12px; top: 12px; }
+    body.v2-panel-open #v2-languages { left: auto; right: 12px; top: 12px; }
+    .v2-controls { right: 12px; bottom: 16px; }
+    /* On phones the card is a bottom sheet. Lift the controls above its
+       maximum height, so zoom/reset remain reachable while reading. */
+    body.v2-panel-open .v2-controls {
+        right: 12px;
+        bottom: calc(min(58vh, 520px) + 16px);
+    }
+    .v2-status { left: 12px; bottom: 14px; max-width: calc(100vw - 120px); }
+    #v2-fallback { bottom: 40px; }
+    #v2-retry { left: 12px; bottom: 72px; }
+    #v2-card {
+        right: 0; left: 0; top: auto; bottom: 0;
+        width: auto;
+        max-height: min(58vh, 520px);
+        border: none;
+        border-top: 2px solid var(--node-accent, rgba(148, 163, 184, 0.26));
+        border-radius: 18px 18px 0 0;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+    #v2-card-title { font-size: 28px; }
+}

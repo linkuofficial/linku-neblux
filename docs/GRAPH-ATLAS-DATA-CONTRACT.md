@@ -228,9 +228,40 @@ AND qa.mobile_canvas_check === true
 }
 ```
 
+### 4.3 `main-presentation.json`
+
+由 build 從 canonical Main scene、已鎖定的 domain anchors 與 `atlas-layout.json` 衍生；它是純靜態 LOD 呈現資料，不能成為新的知識來源：
+
+```json
+{
+  "schemaVersion": "1.0.0",
+  "presentationVersion": "main-presentation-1.0.0",
+  "layoutVersion": "main-2.0.0",
+  "rendererContractVersion": "2.0.0-alpha.1",
+  "bundles": [{
+    "id": "bundle:MAT-PHY",
+    "source": "mathematics_field",
+    "target": "physics_field",
+    "domains": ["MAT", "PHY"],
+    "count": 12,
+    "route": { "type": "quadratic", "cx": 20.4, "cy": -81.2 }
+  }],
+  "atlas": { "roads": [] }
+}
+```
+
+規則：
+
+- `bundles` 只聚合 active canonical edge 的跨 domain 關係，使用 domain anchor 作端點；`pending` 與 inactive edge 一律排除。
+- `count` 與 `canonicalEdgeIds` 僅供驗證／視覺權重；bundle 不可用於 focus、學習路徑、搜尋結果或知識事實展示。
+- artifact 不可嵌入 canonical `scene` 或 semantic records；Main 只從獨立的 `main-scene.json`／`main-interaction.json` 取得那些資料，避免重複傳輸與責任漂移。
+- quadratic route 必須 deterministic；瀏覽器不可重新計算 bundle 幾何或 layout。
+- `atlas.roads` 只保留人工核可的 Atlas 座標／導航 metadata。它們不會進入 Main `scene.edges`、不會被 renderer 視為知識 edge，也不會因此出現在 bundle。
+- Main renderer 僅在 mid LOD 畫 bundle；被選中的 Wonder constellation 另以導覽 spine 呈現，接近節點時回到 canonical edge／node 互動。
+
 Top-level anchors 必須明列，不以 `*_field` 命名規則自動猜測。新增 domain 是 major layout migration。
 
-### 4.3 `celestial-lock.json`
+### 4.4 `celestial-lock.json`
 
 天體分類普通 build 不重算。分類工具只產生 proposal，人工核可後寫入 lock：
 

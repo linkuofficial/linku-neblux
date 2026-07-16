@@ -10,7 +10,7 @@ import { ARCHETYPES } from '../../frontend/src/engine-v2/tokens.js';
 
 export const CELESTIAL_LOCK_PATH = resolve(REPO_ROOT, 'config/atlas/celestial-lock.json');
 export const CANONICAL_SCENE_LAYOUT_VERSION = 'main-2.0.0';
-export const CELESTIAL_ADAPTER_VERSION = '1.0.0';
+export const CELESTIAL_ADAPTER_VERSION = '1.1.0';
 
 const magnitudeMap = Object.freeze({ landmark: 'nucleus', faint: 'faint', standard: 'standard', bright: 'bright' });
 const priorityMap = Object.freeze({ low: 'low', standard: 'standard', high: 'high', critical: 'critical' });
@@ -34,11 +34,44 @@ export function mapClassification(classification) {
     if (!classification || !archetypeSet.has(classification.archetype)) throw new Error('unsupported celestial archetype mapping');
     if (!classification || !magnitudeMap[classification.visualMagnitudeClass]) throw new Error('unsupported celestial magnitude mapping');
     if (!priorityMap[classification.labelPriorityClass]) throw new Error('unsupported celestial label priority mapping');
+    let visualMagnitude = magnitudeMap[classification.visualMagnitudeClass];
+    // The lock intentionally stores layout-oriented classes. The renderer needs
+    // a little more visual contrast without allowing degree changes to move the
+    // permanent layout: domain cores become major stars and event remnants form
+    // the faint background tier. Both decisions are derived from locked enums.
+    if (classification.archetype === 'domain_core' && visualMagnitude === 'bright') visualMagnitude = 'major';
+    if (classification.archetype === 'event_remnant' && visualMagnitude === 'standard') visualMagnitude = 'faint';
     return {
         archetype: classification.archetype,
-        visualMagnitude: magnitudeMap[classification.visualMagnitudeClass],
+        visualMagnitude,
         labelPriority: priorityMap[classification.labelPriorityClass],
     };
+}
+
+function curveDirection(source, target) {
+    const key = source < target ? `${source}|${target}` : `${target}|${source}`;
+    let hash = 0;
+    for (let index = 0; index < key.length; index += 1) hash = ((hash << 5) - hash + key.charCodeAt(index)) | 0;
+    return hash % 2 === 0 ? 1 : -1;
+}
+
+function quadraticRoute(sourceNode, targetNode) {
+    const dx = targetNode.x - sourceNode.x;
+    const dy = targetNode.y - sourceNode.y;
+    const distance = Math.hypot(dx, dy) || 1;
+    const offset = Math.min(42, Math.max(10, distance * 0.18)) * curveDirection(sourceNode.id, targetNode.id);
+    return {
+        type: 'quadratic',
+        cx: Number((((sourceNode.x + targetNode.x) / 2) + (-dy / distance) * offset).toFixed(3)),
+        cy: Number((((sourceNode.y + targetNode.y) / 2) + (dx / distance) * offset).toFixed(3)),
+    };
+}
+
+const magnitudeWeight = Object.freeze({ nucleus: 500, major: 400, bright: 300, standard: 200, faint: 100 });
+const labelWeight = Object.freeze({ critical: 40, high: 30, standard: 20, low: 10 });
+
+function nodeImportance(node, degree) {
+    return (magnitudeWeight[node.visualMagnitude] || 0) + (labelWeight[node.labelPriority] || 0) + Math.min(99, degree || 0);
 }
 
 export function validateCelestialLock({ graph, records, anchors, lock }) {
@@ -78,9 +111,30 @@ export function buildCanonicalScene({ graph, records, anchors, layout, lock }) {
         const mapped = mapClassification(classification);
         return { id: node.id, x: position.x, y: position.y, label: node.label, domains: [...(node.domain || [])], ...mapped, overlays: [] };
     });
-    const edges = projectTopology(records).map((pair) => {
+    const topology = projectTopology(records);
+    const degree = new Map(nodes.map((node) => [node.id, 0]));
+    for (const pair of topology) {
+        degree.set(pair.source, (degree.get(pair.source) || 0) + 1);
+        degree.set(pair.target, (degree.get(pair.target) || 0) + 1);
+    }
+    const nodeById = new Map(nodes.map((node) => [node.id, node]));
+    const edges = topology.map((pair) => {
         if (!sourceIds.has(pair.source) || !sourceIds.has(pair.target)) throw new Error(`active topology has dangling endpoint ${pair.source}/${pair.target}`);
-        return { id: `${pair.source}::${pair.target}`, source: pair.source, target: pair.target, priority: 0, lodClass: 'standard', directed: false, styleToken: 'default', overlays: [] };
+        const sourceNode = nodeById.get(pair.source);
+        const targetNode = nodeById.get(pair.target);
+        return {
+            id: `${pair.source}::${pair.target}`,
+            source: pair.source,
+            target: pair.target,
+            // The weaker endpoint decides focus priority, so a super-hub does
+            // not make every incident edge equally important.
+            priority: Math.min(nodeImportance(sourceNode, degree.get(pair.source)), nodeImportance(targetNode, degree.get(pair.target))),
+            lodClass: 'standard',
+            directed: false,
+            styleToken: 'default',
+            route: quadraticRoute(sourceNode, targetNode),
+            overlays: [],
+        };
     });
     const raw = {
         schemaVersion: SCENE_SCHEMA_VERSION,

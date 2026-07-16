@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0e27">
+  <title>Neblux Main Galaxy v2 — internal</title>
+  <link rel="stylesheet" href="/neblux-fonts.css">
+  <link rel="stylesheet" href="/neblux-theme.css">
+  <link rel="stylesheet" href="/src/styles/pages/app-v2.css">
+</head>
+<body>
+  <main class="galaxy-v2" aria-labelledby="galaxy-v2-title">
+    <header class="galaxy-v2__header">
+      <div class="v2-brand">
+        <p class="eyebrow">Neblux / internal route</p>
+        <h1 id="galaxy-v2-title">Main Galaxy v2</h1>
+      </div>
+      <form id="v2-search" class="v2-search" role="search">
+        <svg class="v2-search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.34-4.34"/></svg>
+        <label class="sr-only" for="v2-search-input">Find a concept</label>
+        <input id="v2-search-input" autocomplete="off" aria-controls="v2-search-results" aria-expanded="false" placeholder="Find a concept">
+        <button type="submit">Find</button>
+        <div id="v2-search-results" class="v2-search-results" role="listbox" hidden></div>
+      </form>
+      <div id="v2-languages" class="v2-languages" aria-label="Language"></div>
+      <div class="v2-controls" aria-label="View controls">
+        <button id="v2-learning-mode" type="button" aria-pressed="false">Learning Path</button>
+        <button id="v2-zoom-in" type="button" aria-label="Zoom in">+</button>
+        <button id="v2-zoom-out" type="button" aria-label="Zoom out">−</button>
+        <button id="v2-reset" type="button">Reset</button>
+      </div>
+    </header>
+    <div id="v2-domains" class="v2-domains" aria-label="Filter by domain"></div>
+    <section class="v2-stage" aria-label="Main Galaxy v2 canvas">
+      <canvas id="v2-canvas" tabindex="0" role="img" aria-label="Interactive Main Galaxy knowledge map"></canvas>
+      <p id="v2-status" class="v2-status" role="status">Loading canonical scene…</p>
+      <button id="v2-retry" class="v2-retry" type="button" hidden>Retry</button>
+      <p id="v2-fallback" class="v2-status" hidden>Try the <a href="/app.html">current graph</a>, <a href="/">Atlas</a>, or <a href="/wonders.html">Wonders</a>.</p>
+    </section>
+    <aside id="v2-card" class="v2-card" hidden aria-live="polite">
+      <button id="v2-card-close" type="button" class="v2-card__close" aria-label="Close details">×</button>
+      <nav id="v2-card-breadcrumb" class="v2-card-breadcrumb" aria-label="Recent nodes" hidden></nav>
+      <p id="v2-card-domain" class="eyebrow"></p>
+      <h2 id="v2-card-title"></h2>
+      <p id="v2-card-type" class="v2-card-type"></p>
+      <div id="v2-card-description" class="v2-card-description">Loading description…</div>
+      <div id="v2-card-tags" class="v2-card-tags"></div>
+      <div id="v2-card-era" class="v2-card-era"></div>
+      <button id="v2-learning-toggle" type="button" hidden></button>
+      <p id="v2-learning-next" class="v2-card-era" hidden></p>
+      <div id="v2-card-stations" hidden></div>
+      <div id="v2-card-prereqs" hidden></div>
+      <div id="v2-card-unlocks" hidden></div>
+      <div id="v2-card-connections" hidden></div>
+      <div id="v2-card-depth" hidden></div>
+      <div id="v2-card-portals" hidden></div>
+    </aside>
+    <nav id="v2-node-mirror" class="sr-only" aria-label="Knowledge nodes"></nav>
+  </main>
+  <script src="/neblux-tokens.js"></script>
+  <script type="module" src="/src/app-v2-main.js"></script>
+</body>
+</html>

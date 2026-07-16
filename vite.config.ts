@@ -7,6 +7,8 @@ import { buildStaticHtml } from './scripts/build_static_html.mjs';
 import { publishDepthPages } from './scripts/build_depth_pages.mjs';
 import { buildData } from './scripts/atlas/build-data.mjs';
 import { buildIndexFromSources } from './scripts/atlas/build-index.mjs';
+import { buildCanonicalSceneFromRepo } from './scripts/atlas/canonical-scene.mjs';
+import { writeMainPresentationFromRepo } from './scripts/atlas/main-presentation.mjs';
 
 function copyDataPlugin() {
     return {
@@ -110,6 +112,36 @@ function copyDataPlugin() {
             try {
                 buildData(resolve(destDir, 'atlas'));
                 buildIndexFromSources(resolve(destDir, 'atlas', 'index.json'));
+                // WP6 internal Main adapter consumes the exact scene validated by
+                // WP5.5. This remains a build-time artifact: no browser layout or
+                // celestial classification is recalculated at runtime.
+                writeFileSync(resolve(destDir, 'atlas', 'main-scene.json'), JSON.stringify(buildCanonicalSceneFromRepo()));
+                // Presentation aggregation is intentionally derived at build time.
+                // Its bundles are visual LOD only; approved Atlas roads remain
+                // isolated navigation metadata and never become Main edges.
+                writeMainPresentationFromRepo(resolve(destDir, 'atlas', 'main-presentation.json'));
+                // Page-owned Main interactions need canonical semantic records
+                // (relations, types, tags and era), but never descriptions or
+                // layout decisions. Keep this separately streamable from the
+                // Renderer scene so visual and content contracts stay distinct.
+                const interactionNodes = nodes.map((node: any) => ({
+                    id: node.id,
+                    label: node.label,
+                    type: node.type,
+                    domain: Array.isArray(node.domain) ? node.domain : [],
+                    display_tags: Array.isArray(node.display_tags) ? node.display_tags : [],
+                    era: node.era || null,
+                    connections: Array.isArray(node.connections) ? node.connections.map((connection: any) => ({
+                        target: connection.target,
+                        relation_type: connection.relation_type,
+                        relation: connection.relation,
+                        directed: Boolean(connection.directed),
+                        learning_prerequisite: Boolean(connection.learning_prerequisite),
+                        parallel_development: Boolean(connection.parallel_development),
+                        pending: Boolean(connection.pending),
+                    })) : [],
+                }));
+                writeFileSync(resolve(destDir, 'atlas', 'main-interaction.json'), JSON.stringify({ schemaVersion: '1.0.0', layoutVersion: 'main-2.0.0', rendererContractVersion: '2.0.0-alpha.1', nodes: interactionNodes }));
             } catch (err) {
                 this.error(`Atlas prototype data failed to generate: ${(err as Error).message}`);
             }
@@ -164,6 +196,7 @@ export default defineConfig({
                 main: resolve(__dirname, 'frontend/index.html'),
                 app: resolve(__dirname, 'frontend/app.html'),
                 explorer: resolve(__dirname, 'frontend/explorer.html'),
+                appV2: resolve(__dirname, 'frontend/app-v2.html'),
                 wonders: resolve(__dirname, 'frontend/wonders.html'),
                 atlas: resolve(__dirname, 'frontend/atlas-v2.html'),
             },

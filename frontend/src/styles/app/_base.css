@@ -7,13 +7,15 @@
     transform: translateY(-120%);
     z-index: 30;
     padding: 8px 12px;
-    background: #e2e8f0;
-    color: #0f172a;
-    border-radius: 8px;
-    border: 1px solid #94a3b8;
+    background: var(--rail-bg);
+    backdrop-filter: blur(12px);
+    color: var(--accent);
+    border-radius: var(--radius-sm);
+    border: 0.5px solid var(--rail-border);
     text-decoration: none;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: var(--font-label);
     font-size: 11px;
+    transition: transform 0.2s var(--neblux-ease-ui);
 }
 
 .skip-link:focus {

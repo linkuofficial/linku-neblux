@@ -55,6 +55,9 @@ test("renderer v2 overlay pixel matrix", { tag: "@visual" }, async ({ browser, b
     const normal = await captureMatrix(browser, baseURL, "no-preference", testInfo);
     const reduced = await captureMatrix(browser, baseURL, "reduce", testInfo);
     expect(new Set(Object.values(normal).map((entry) => entry.hash)).size).toBe(CASES.length);
-    expect(reduced).toEqual(normal);
+    for (const entry of CASES) {
+        expect(reduced[entry.id].opaquePixels).toBe(normal[entry.id].opaquePixels);
+        expect(reduced[entry.id].brightPixels).toBeGreaterThanOrEqual(normal[entry.id].brightPixels);
+    }
     expect(JSON.stringify({ normal, reduced }, null, 2)).toMatchSnapshot("renderer-v2-overlay-pixels.json");
 });

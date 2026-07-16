@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createDeterministicLabScene } from '../../frontend/src/engine-v2/lab-scene.js';
 import { createRendererV2 } from '../../frontend/src/engine-v2/index.js';
+import { resolvePresentationAccent } from '../../frontend/src/engine-v2/renderer.js';
 import { normalizeScene, stableSceneHash } from '../../frontend/src/engine-v2/contract.js';
 import { mergeTokens } from '../../frontend/src/engine-v2/tokens.js';
 import { readFileSync } from 'node:fs';
@@ -52,4 +53,29 @@ test('visual tokens do not alter the locked scene hash and quadtree hit test use
     renderer.setViewport({ width: 400, height: 300, dpr: 1 }); renderer.setScene(scene); renderer.renderNow();
     assert.equal(renderer.hitTest({ x: 200, y: 150, pointerType: 'touch' }).id, 'a');
     renderer.destroy();
+});
+
+test('presentation-only bundles and guided segments are accepted without changing the scene contract', () => {
+    const renderer = createRendererV2({ canvas: fakeCanvas(), reducedMotion: true, schedulerOptions: { raf: (callback) => { callback(); return 1; }, caf: () => {} } });
+    renderer.setViewport({ width: 400, height: 300, dpr: 1 });
+    renderer.setScene(createDeterministicLabScene(7));
+    renderer.setCamera({ zoom: 0.7 });
+    renderer.setPresentation({
+        bundles: [{ source: 'node-000', target: 'node-001', count: 4, route: { cx: 120, cy: -80 } }],
+        guidedSegments: [{ source: 'node-001', target: 'node-002' }],
+    });
+    renderer.renderNow();
+    const stats = renderer.getDebugStats();
+    assert.equal(stats.sceneHash.length, 8);
+    assert.ok(stats.bundlesDrawn <= 1);
+    assert.ok(stats.guidedSegmentsDrawn <= 1);
+    renderer.destroy();
+});
+
+test('Wonder presentation resolves domain-code accents without accepting invalid Canvas identifiers', () => {
+    assert.equal(resolvePresentationAccent('PHY'), '#c97a5b');
+    assert.equal(resolvePresentationAccent('phy'), '#c97a5b');
+    assert.equal(resolvePresentationAccent('#123456'), '#123456');
+    assert.equal(resolvePresentationAccent('not-a-colour'), mergeTokens().guided);
+    assert.equal(resolvePresentationAccent(null), mergeTokens().guided);
 });

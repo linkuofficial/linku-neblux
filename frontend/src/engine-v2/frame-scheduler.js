@@ -4,23 +4,38 @@ export function createFrameScheduler({ onFrame, reducedMotion = false, restMs = 
     let restId = null;
     let dirty = false;
     let destroyed = false;
+    let lastAnimationMs = -Infinity;
+    const animations = new Map();
+
+    const animationFps = () => Math.max(1, ...animations.values());
+    const isAnimating = () => !reducedMotion && animations.size > 0;
 
     const scheduleRest = () => {
-        if (reducedMotion || destroyed) { state = reducedMotion ? 'clean' : state; return; }
+        if (reducedMotion || destroyed || isAnimating()) { state = reducedMotion ? 'clean' : state; return; }
         if (restId !== null) clearTimeoutFn(restId);
         restId = setTimeoutFn(() => { restId = null; if (!destroyed && !dirty && frameId === null) state = 'resting'; }, restMs);
     };
     const schedule = () => {
         if (frameId !== null || destroyed || !raf) return;
         let callbackFinished = false;
-        frameId = raf(() => {
+        frameId = raf((timestamp = 0) => {
             frameId = null;
             callbackFinished = true;
-            if (destroyed || !dirty) return;
-            dirty = false;
-            onFrame?.();
-            state = 'clean';
-            scheduleRest();
+            if (destroyed) return;
+            const animating = isAnimating();
+            const animationDue = animating && (timestamp - lastAnimationMs >= (1000 / animationFps()) - 0.5);
+            if (dirty || animationDue) {
+                dirty = false;
+                if (animationDue) lastAnimationMs = timestamp;
+                onFrame?.(timestamp);
+            }
+            if (animating) {
+                state = 'animating';
+                schedule();
+            } else {
+                state = 'clean';
+                scheduleRest();
+            }
         });
         // Test/fallback RAF implementations may invoke synchronously before
         // returning an id. Do not leave a stale pending frame in that case.
@@ -34,20 +49,36 @@ export function createFrameScheduler({ onFrame, reducedMotion = false, restMs = 
             schedule();
             return reason;
         },
+        setAnimation(reason, enabled, fps = 24) {
+            if (destroyed || reducedMotion || !reason) return false;
+            if (enabled) animations.set(reason, Math.max(1, Number(fps) || 24));
+            else animations.delete(reason);
+            if (animations.size) {
+                if (restId !== null) { clearTimeoutFn(restId); restId = null; }
+                state = 'animating';
+                schedule();
+            } else {
+                if (!dirty && frameId !== null && caf) { caf(frameId); frameId = null; }
+                state = 'clean';
+                scheduleRest();
+            }
+            return animations.has(reason);
+        },
         flush() {
             if (destroyed || !dirty) return false;
             if (frameId !== null && caf) caf(frameId);
             frameId = null;
             dirty = false;
-            onFrame?.();
-            state = 'clean';
-            scheduleRest();
+            onFrame?.(0);
+            state = isAnimating() ? 'animating' : 'clean';
+            if (isAnimating()) schedule(); else scheduleRest();
             return true;
         },
         state() { return state; },
+        activeAnimations() { return [...animations.keys()].sort(); },
         pending() { return frameId !== null || restId !== null; },
         destroy() {
-            destroyed = true; dirty = false; state = 'destroyed';
+            destroyed = true; dirty = false; state = 'destroyed'; animations.clear();
             if (frameId !== null && caf) caf(frameId);
             if (restId !== null) clearTimeoutFn(restId);
             frameId = null; restId = null;
