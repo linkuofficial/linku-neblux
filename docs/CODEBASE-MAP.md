@@ -7,7 +7,7 @@
 
 | 頁 | 主 JS | 用途 |
 |----|-------|------|
-| `frontend/index.html` | `src/atlas/atlas-main.js` | production Atlas 首頁；Main／19 Wonders 靜態導航與 fallback |
+| `frontend/index.html` | `src/landing-main.js` | 落地頁。粒子背景、搜尋、建議 pills、雙 CTA（2026-07-16 自 RG-A Atlas 首頁回退；Atlas 改列第二頁，暫僅 internal `/atlas-v2.html`） |
 | `frontend/wonders.html` | `src/wonders-main.js` | **產品核心**。picker → intro → 敘事面板＋星空子圖 |
 | `frontend/app.html` | `src/app-main.js` | 全圖 687 節點。搜尋、detail card、Learning Path |
 | `frontend/explorer.html` | `src/explorer-main.js` | 漸進展開。轉型中（見 explorer-to-topics-plan.md），少動 |

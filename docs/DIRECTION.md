@@ -16,14 +16,17 @@
 4. 禁止遊戲化：無徽章、點數、streak、排行榜、成就彈窗。計數展示只用一行小字。
 5. 使用者文案語態遵守 `docs/brand-voice.md`。
 
-## Graph Atlas 產品架構（2026-07-12 定案）
+## Graph Atlas 產品架構（2026-07-12 定案；Atlas 定位 2026-07-16 修訂）
 
-### 1. Atlas 首頁
+### 1. Atlas 第二頁轉接頁（2026-07-16 凜空裁決）
 
-- 首頁改為宇宙地圖入口：中央是視覺尺度最大的 Main Galaxy，周圍是可辨識、可直接進入的 Wonder clusters。
-- 首頁的星系與星團 preview 主要負責方位、氣氛與跳轉，不承載完整知識操作，也不載入完整 graph。
+- Atlas 是**第二頁的純視覺轉接頁**，不是首頁：宇宙地圖入口，中央是視覺尺度最大的 Main Galaxy，周圍是可辨識、可直接進入的 Wonder clusters。
+- 首頁 `index.html` 維持現行 legacy landing（2026-07-03 方向的落地頁），暫不更新；未來首頁如何導向 Atlas 由後續 brief 另定。
+- Atlas 頁的星系與星團 preview 主要負責方位、氣氛與跳轉，不承載完整知識操作，也不載入完整 graph。
 - Main 可以最大，但不能以亮度、CTA 或排版把 Wonders 降成裝飾；第一屏必須看得見 Wonder 名稱與入口，可保留 featured Wonder 強調位。
-- 本條取代 2026-07-03「landing 只主推 featured Wonder、圖譜降為次要入口」的舊方向。切換 production `index.html` 仍需 WP4／WP10 gates，不因本文件定案而直接上線。
+- 修訂紀錄：2026-07-12 曾定案「首頁改為宇宙地圖」並取代 2026-07-03 舊方向；2026-07-15 RG-A 曾在 repo 內把 `/` 切為 Atlas（未部署）。2026-07-16 凜空裁決改回：**首頁＝legacy landing、Atlas＝第二頁**，RG-A 的 `/` cutover 已在工作樹回退。Atlas 目前僅有 internal route `/atlas-v2.html`（noindex）。
+- 正式第二頁路由**定案 `/atlas.html`**（2026-07-16）。入口動線**定案方案 A**（2026-07-16）：landing 的「OPEN THE GRAPH」CTA 與 footer「Graph」改指 `/atlas.html`，由 Atlas 的 Main Galaxy 節點進 `app.html`；搜尋與建議 pills 維持直達 `app.html?node=<id>`。上線時機需獨立 release brief 與凜空授權。
+- Atlas 視覺**保留現行白模**（prototype renderer），暫不升級（2026-07-16 裁決；上線前再議）。
 
 ### 2. Main Galaxy
 

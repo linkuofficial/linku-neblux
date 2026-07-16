@@ -1,5 +1,5 @@
 # TASK: graph-atlas-rg-a-atlas-route-release
-狀態: review
+狀態: superseded（2026-07-16 凜空裁決：Atlas＝第二頁轉接頁、首頁維持 legacy landing；本包的 `/` cutover 已在工作樹回退，路由無關產出保留。見 `2026-07-16-atlas-route-demote-second-page.md`）
 建立: 2026-07-15 ｜ 秘書層: Codex ｜ 實作層: Luna
 Repo: Neblux
 Base: `91e147e`（`codex/graph-atlas-integration` G0 baseline；實作 branch 從此 commit 建立）
@@ -110,3 +110,9 @@ frontend/public/_headers
 
 - 決定: 已授權 Luna 從 G0 baseline 開始 RG-A；完成後再裁 commit／push／deploy。
 - 日期: 2026-07-15
+
+## 裁決更新（凜空，2026-07-16）
+
+- 決定: 方向修訂——Atlas 是**第二頁的轉接頁**，不是首頁；首頁維持現行未更新的 legacy landing。本包的 `/` → Atlas cutover 撤銷。
+- 執行: `frontend/index.html` 與 `tests/e2e/{smoke,discoverability,api-failure,visual-styles}.spec.ts`（含 index-styles 快照）、`tests/e2e/atlas.spec.ts` 已還原至 `fc8c057` 版。保留與路由無關的產出：atlas-v2 production 文案（Featured regions）、`data-wonder-id` 標記、三語 Wonder title map（atlas-i18n.js）與 `tests/atlas/wonder-titles.test.mjs` 對帳測試、atlas.css 調整。
+- 後續: Atlas 正式第二頁 route release 需重開 brief（暫定路由 `/atlas.html`），含首頁 landing 的入口動線設計；未授權前 Atlas 僅存在於 internal `/atlas-v2.html`。
