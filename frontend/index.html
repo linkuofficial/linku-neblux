@@ -1,19 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <script src="/neblux-tokens.js"></script>
     <script src="/lang-init.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#040713">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="theme-color" content="#0a0e27">
     <meta name="color-scheme" content="dark">
     <title>Neblux — Interactive Science Knowledge Graph</title>
-    <meta name="description" content="Neblux is an interactive science knowledge graph. Follow one spark of curiosity across physics, biology, history, technology and society — or take a guided Wonders tour.">
+    <meta name="description"
+        content="Neblux is an interactive science knowledge graph. Search any concept and follow where it connects — across physics, biology, history, technology and society — or take a guided Wonders tour.">
     <link rel="canonical" href="https://neblux.linku.tech/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Neblux">
     <meta property="og:url" content="https://neblux.linku.tech/">
     <meta property="og:title" content="Neblux — Interactive Science Knowledge Graph">
-    <meta property="og:description" content="Follow one spark of curiosity into a connected map of concepts across every field we know.">
+    <meta property="og:description"
+        content="An interactive science knowledge graph. Follow one spark of curiosity into a connected map of concepts across physics, biology, history, technology and society.">
     <meta property="og:image" content="https://neblux.linku.tech/og-image.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
@@ -24,70 +28,196 @@
     <meta property="og:locale:alternate" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Neblux — Interactive Science Knowledge Graph">
-    <meta name="twitter:description" content="Follow one spark of curiosity into a connected map of everything we know.">
+    <meta name="twitter:description"
+        content="An interactive science knowledge graph — follow one spark of curiosity into a connected map of everything we know.">
     <meta name="twitter:image" content="https://neblux.linku.tech/og-image.png">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","name":"Neblux","alternateName":"Neblux — Interactive Science Knowledge Graph","url":"https://neblux.linku.tech/","description":"Neblux is an interactive science knowledge graph where curiosity tours called Wonders guide learners across connected fields.","inLanguage":["en","zh-Hant","ja"],"potentialAction":{"@type":"SearchAction","target":"https://neblux.linku.tech/app.html?search={search_term_string}","query-input":"required name=search_term_string"}}
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Neblux",
+      "alternateName": "Neblux — Interactive Science Knowledge Graph",
+      "url": "https://neblux.linku.tech/",
+      "description": "Neblux is an interactive science knowledge graph where curiosity tours called Wonders guide learners across physics, biology, history, technology, mathematics and society.",
+      "inLanguage": ["en", "zh-Hant", "ja"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://neblux.linku.tech/app.html?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
     </script>
     <link rel="stylesheet" href="/neblux-fonts.css">
     <link rel="stylesheet" href="/neblux-theme.css">
-    <link rel="stylesheet" href="/src/styles/pages/atlas.css">
+    <link rel="stylesheet" href="/src/index-tailwind.css">
+    <link rel="stylesheet" href="/src/styles/landing.css">
 </head>
-<body>
+
+<body class="text-on-surface min-h-screen relative antialiased hairline-border m-4 rounded-xl">
     <noscript>
-        <div class="atlas-shell">
+        <div style="max-width:820px;margin:0 auto;padding:24px 20px;color:#c9d4ee;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7">
             <h1>Neblux — Interactive Science Knowledge Graph</h1>
-            <p>Neblux maps concepts across connected fields and guides learners with curiosity tours called Wonders.</p>
-            <p><a href="/app.html">Main Galaxy</a> · <a href="/wonders.html">All Wonders</a> · <a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/sources.html">Sources</a> · <a href="/sitemap.xml">Sitemap</a></p>
+            <p>Neblux maps concepts across physics, biology, history, technology, mathematics and society, and guides you through them with curiosity tours called Wonders. The interactive graph needs JavaScript, but every concept has a static page you can read without it:</p>
+            <ul>
+                <li><a href="/concepts/black_hole_concept.html">Black holes</a></li>
+                <li><a href="/concepts/dna_concept.html">DNA</a></li>
+                <li><a href="/concepts/natural_selection_concept.html">Natural selection</a></li>
+                <li><a href="/concepts/artificial_intelligence_concept.html">Artificial intelligence</a></li>
+            </ul>
+            <p><a href="/about.html">About</a> · <a href="/methodology.html">Methodology</a> · <a href="/sources.html">Sources</a> · <a href="/wonders.html">Wonders</a> · <a href="/sitemap.xml">Sitemap</a></p>
         </div>
     </noscript>
-    <a class="skip-link" href="#atlas-directory">Skip to Atlas directory</a>
-    <main class="atlas-shell">
-        <header class="atlas-header">
-            <div>
-                <p class="atlas-wordmark">NEBLUX / GRAPH ATLAS</p>
-                <p class="atlas-eyebrow" data-atlas-copy="eyebrow">NAVIGATION FIRST</p>
-                <h1 class="atlas-title" data-atlas-copy="title">Graph Atlas</h1>
-                <p class="atlas-subtitle" data-atlas-copy="subtitle">A quiet map for tracing how fields and ideas meet.</p>
-            </div>
-            <div class="atlas-language" aria-label="Language">
-                <button type="button" data-atlas-lang="en" aria-pressed="true">EN</button>
-                <button type="button" data-atlas-lang="zh" aria-pressed="false">中</button>
-                <button type="button" data-atlas-lang="ja" aria-pressed="false">日</button>
-            </div>
-        </header>
-        <p id="atlas-status" role="status" aria-live="polite"></p>
-        <p id="atlas-fallback" class="atlas-fallback" hidden>Atlas data is unavailable. The static Wonder directory remains available.</p>
-        <div class="atlas-grid">
-            <section id="atlas-stage" class="atlas-stage" aria-label="Graph Atlas visual map">
-                <canvas id="atlas-canvas" aria-label="Interactive Graph Atlas. Drag to pan, scroll to zoom, or use the directory."></canvas>
-                <div id="atlas-tooltip" class="atlas-tooltip" role="tooltip" hidden></div>
-                <div class="atlas-controls" role="group" aria-label="Atlas controls" data-atlas-aria="controls">
-                    <button id="atlas-zoom-out" type="button" aria-label="Zoom out" data-atlas-aria="zoomOut">−</button>
-                    <button id="atlas-reset" type="button" aria-label="Reset view" data-atlas-aria="reset">◎</button>
-                    <button id="atlas-zoom-in" type="button" aria-label="Zoom in" data-atlas-aria="zoomIn">+</button>
-                </div>
+    <!-- Canvas Background -->
+    <canvas class="absolute inset-0 z-0 w-full h-full rounded-xl" id="particleCanvas"></canvas>
+
+    <!-- Coordinate Markers (Rulers) -->
+    <div class="absolute top-0 left-0 right-0 h-4 ruler-x z-10 pointer-events-none opacity-50 ml-4"></div>
+    <div class="absolute top-0 left-0 bottom-0 w-4 ruler-y z-10 pointer-events-none opacity-50 mt-4"></div>
+
+    <!-- TopAppBar -->
+    <header
+        class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter mx-auto top-0 left-0 right-0">
+        <a href="index.html"
+            class="font-label-code text-label-code opacity-70 tracking-widest text-on-surface hover:opacity-100 transition-opacity duration-300 ml-4 mt-2"
+            style="text-decoration:none;color:inherit;line-height:1.35" aria-label="Neblux home">
+            NEBLUX
+            <span style="display:block;font-size:8px;letter-spacing:0.18em;opacity:0.42;margin-top:2px">DEEP FIELD
+                SURVEY</span>
+        </a>
+        <div id="langToggle"
+            class="font-label-code text-label-code opacity-90 transition-opacity duration-300 mr-4 mt-2"
+            aria-label="Language selector">
+            <button class="lang-btn" data-lang="en" type="button" aria-label="Switch language to English">EN</button>
+            <button class="lang-btn" data-lang="zh" type="button" aria-label="Switch language to Chinese">中</button>
+            <button class="lang-btn" data-lang="ja" type="button" aria-label="Switch language to Japanese">日</button>
+        </div>
+    </header>
+
+    <!-- Main Canvas — asymmetric layout: statement column left, featured docket right
+         (grid areas live in src/styles/landing/layout.css). -->
+    <main
+        class="relative z-10 w-full min-h-screen flex items-center px-margin-mobile md:px-margin-desktop pointer-events-none">
+        <div class="landing-grid w-full mx-auto pointer-events-auto">
+            <!-- Value Proposition -->
+            <section class="landing-hero" aria-labelledby="heroTitle">
+                <p id="heroKicker" class="font-label-code text-label-code text-on-surface/60 tracking-[0.14em] mb-3">
+                    BEGIN ANYWHERE</p>
+                <h1 id="heroTitle"
+                    class="hero-title text-on-surface mb-5">
+                    Everything touches <span class="text-primary">everything</span>
+                </h1>
+                <p id="heroSubtitle" class="hero-subtitle font-body-base text-body-base text-on-surface/80 max-w-xl">
+                    Follow one spark of curiosity into the deep field of everything we know.
+                </p>
             </section>
-            <aside id="atlas-directory" class="atlas-directory">
-                <h2 data-atlas-copy="directory">Atlas directory</h2>
-                <h3 data-atlas-copy="regions">Featured regions</h3>
-                <nav class="atlas-region-list" aria-label="Featured Atlas regions">
-                    <a class="atlas-region-link" data-region-id="main" href="/app.html"><span class="atlas-region-title" data-region-title>Main Galaxy</span><span class="atlas-region-summary" data-region-summary>A navigable map of how fields and ideas connect.</span></a>
-                    <a class="atlas-region-link" data-region-id="light" href="/wonders.html?w=light"><span class="atlas-region-title" data-region-title>Light</span><span class="atlas-region-summary" data-region-summary>A journey through waves, colour, and observation.</span></a>
-                    <a class="atlas-region-link" data-region-id="quantum" href="/wonders.html?w=quantum"><span class="atlas-region-title" data-region-title>Quantum Reality</span><span class="atlas-region-summary" data-region-summary>Where measurement changes what can be known.</span></a>
-                    <a class="atlas-region-link" data-region-id="edge-ai" href="/wonders.html?w=edge-ai"><span class="atlas-region-title" data-region-title>Edge AI</span><span class="atlas-region-summary" data-region-summary>Intelligence close to the world it serves.</span></a>
-                </nav>
-                <h3 data-atlas-copy="allWonders">All Wonder routes</h3>
-                <nav class="atlas-wonder-directory" aria-label="All Wonder routes">
-                    <a class="atlas-wonder-link" data-wonder-id="arrow-of-time" href="/wonders.html?w=arrow-of-time">The Arrow of Time</a><a class="atlas-wonder-link" data-wonder-id="black-holes" href="/wonders.html?w=black-holes">Black Holes &amp; Spacetime</a><a class="atlas-wonder-link" data-wonder-id="chaos" href="/wonders.html?w=chaos">Chaos</a><a class="atlas-wonder-link" data-wonder-id="computation" href="/wonders.html?w=computation">Computation</a><a class="atlas-wonder-link" data-wonder-id="edge-ai" href="/wonders.html?w=edge-ai">Edge AI</a><a class="atlas-wonder-link" data-wonder-id="emergence" href="/wonders.html?w=emergence">Emergence</a><a class="atlas-wonder-link" data-wonder-id="germs" href="/wonders.html?w=germs">Germs</a><a class="atlas-wonder-link" data-wonder-id="ideas-that-spread" href="/wonders.html?w=ideas-that-spread">How Ideas Spread</a><a class="atlas-wonder-link" data-wonder-id="infinity" href="/wonders.html?w=infinity">Infinity</a><a class="atlas-wonder-link" data-wonder-id="language" href="/wonders.html?w=language">Language</a><a class="atlas-wonder-link" data-wonder-id="light" href="/wonders.html?w=light">Light</a><a class="atlas-wonder-link" data-wonder-id="markets" href="/wonders.html?w=markets">Markets</a><a class="atlas-wonder-link" data-wonder-id="music" href="/wonders.html?w=music">Music</a><a class="atlas-wonder-link" data-wonder-id="networks" href="/wonders.html?w=networks">Networks</a><a class="atlas-wonder-link" data-wonder-id="quantum" href="/wonders.html?w=quantum">Quantum Reality</a><a class="atlas-wonder-link" data-wonder-id="symmetry" href="/wonders.html?w=symmetry">Symmetry</a><a class="atlas-wonder-link" data-wonder-id="the-atom" href="/wonders.html?w=the-atom">The Atom</a><a class="atlas-wonder-link" data-wonder-id="the-gene" href="/wonders.html?w=the-gene">The Gene</a><a class="atlas-wonder-link" data-wonder-id="the-mind" href="/wonders.html?w=the-mind">The Mind</a>
+
+            <!-- Featured Wonder (headline tour) — still the primary CTA, but docked to
+                 the side column instead of parking centre stage. -->
+            <aside class="landing-side">
+                <a id="featuredCard" href="wonders.html" hidden
+                    class="featured-card glass-pane w-full text-left">
+                    <span id="featuredEyebrow" class="featured-eyebrow"></span>
+                    <span id="featuredTitle" class="featured-title"></span>
+                    <span id="featuredIntro" class="featured-intro"></span>
+                    <span id="featuredDots" class="featured-dots" aria-hidden="true"></span>
+                    <span id="featuredCta" class="featured-cta"></span>
+                </a>
+
+                <!-- Secondary entrances (graph demoted to a quiet link) -->
+                <nav class="side-links" aria-label="Secondary entrances">
+                    <a id="ctaWonders" class="side-link" href="wonders.html">Browse all wonders</a>
+                    <a id="ctaExplore" class="side-link" href="app.html">Open the graph</a>
                 </nav>
             </aside>
+
+            <!-- Search Container (relative for dropdown positioning) -->
+            <div class="landing-search relative w-full">
+                <div class="relative w-full glass-pane search-shell overflow-hidden flex items-center p-2 search-glow transition-all duration-300"
+                    id="searchContainer">
+                    <span class="ml-4 text-on-surface opacity-50" aria-hidden="true">⌕</span>
+                    <input id="searchInput"
+                        class="w-full bg-transparent border-none text-on-surface placeholder-on-surface/30 focus:ring-0 focus:outline-none px-4 font-body-base h-12"
+                        placeholder="Explore the infinite..." type="text" autocomplete="off" />
+                    <span id="searchSpinner" class="mr-4 text-on-surface opacity-0 animate-spin transition-opacity"
+                        aria-hidden="true">⟳</span>
+                </div>
+                <!-- Search Results Dropdown -->
+                <div id="searchResults" class="search-results glass-pane hidden"></div>
+            </div>
+
+            <!-- Suggestion Pills -->
+            <div id="suggestionPills" class="landing-pills flex flex-wrap gap-3">
+                <button
+                    class="pill-btn inline-flex px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300"
+                    data-query="black hole" data-domain="PHY" data-topic="blackHoles">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse" style="background:#c97a5b"></span>
+                    <span class="pill-label">Black Holes</span>
+                    <span class="pill-domain">PHY</span>
+                </button>
+                <button
+                    class="pill-btn inline-flex px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300"
+                    data-node="evolution_field" data-domain="BIO" data-topic="evolution">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#5bc97a;animation-delay: 0.5s;"></span>
+                    <span class="pill-label">Evolution</span>
+                    <span class="pill-domain">BIO</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300 hidden sm:inline-flex"
+                    data-query="industrial revolution" data-domain="HIS" data-topic="industrialRevolution">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#a07850;animation-delay: 1s;"></span>
+                    <span class="pill-label">Industrial Revolution</span>
+                    <span class="pill-domain">HIS</span>
+                </button>
+                <button
+                    class="pill-btn inline-flex px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300"
+                    data-query="neural network" data-domain="TEC" data-topic="neuralNetworks">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#c95b9b;animation-delay: 1.5s;"></span>
+                    <span class="pill-label">Neural Networks</span>
+                    <span class="pill-domain">TEC</span>
+                </button>
+                <button
+                    class="pill-btn px-4 py-2.5 glass-pane font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors duration-300 hidden md:inline-flex"
+                    data-node="quantum_mechanics_field" data-domain="PHY" data-topic="quantumMechanics">
+                    <span class="w-2 h-2 rounded-full inline-block subtle-pulse"
+                        style="background:#c97a5b;animation-delay: 2s;"></span>
+                    <span class="pill-label">Quantum Mechanics</span>
+                    <span class="pill-domain">PHY</span>
+                </button>
+            </div>
+
+            <div id="pillTooltip" class="pill-tooltip" role="tooltip" aria-hidden="true">
+                <div id="pillTooltipDomain" class="pill-tooltip-domain"></div>
+                <div id="pillTooltipTitle" class="pill-tooltip-title"></div>
+                <div id="pillTooltipBody" class="pill-tooltip-body"></div>
+            </div>
+
         </div>
-        <footer class="atlas-footer"><a href="/about.html">About</a><a href="/methodology.html">Methodology</a><a href="/sources.html">Sources</a><a href="/sitemap.xml">Sitemap</a></footer>
     </main>
-    <script type="module" src="/src/atlas/atlas-main.js"></script>
+
+    <!-- Footer -->
+    <footer
+        class="absolute w-full z-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter bottom-0 left-0 right-0 pointer-events-none">
+        <div id="footerCopy"
+            class="font-label-code text-label-code text-on-surface-variant opacity-40 mb-2 ml-4 hidden md:block">
+            &copy; <span id="copyright-year"></span> NEBLUX. EXPLORE THE INFINITE.
+        </div>
+        <div class="pointer-events-auto mb-2 mx-auto md:absolute md:left-1/2 md:-translate-x-1/2">
+            <nav class="footer-nav font-label-code text-label-code" aria-label="Primary page navigation">
+                <a id="footerGraphLink" href="app.html">Graph</a>
+                <span class="footer-sep" aria-hidden="true"></span>
+                <a id="footerExplorerLink" href="wonders.html">Wonders</a>
+            </nav>
+        </div>
+        <div class="w-[132px] hidden md:block" aria-hidden="true"></div>
+    </footer>
+
+    <script type="module" src="/src/landing-main.js"></script>
 </body>
+
 </html>

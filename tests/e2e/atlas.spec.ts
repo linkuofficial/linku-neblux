@@ -39,33 +39,6 @@ test("Atlas prototype renders only its presentation index and exposes matching r
     expect(errors, `runtime errors during Atlas load:\n${errors.join("\n")}`).toHaveLength(0);
 });
 
-test("production homepage keeps Neblux metadata and Atlas-only network budget", async ({ page }) => {
-    const requests: string[] = [];
-    page.on("request", (request) => requests.push(new URL(request.url()).pathname));
-    await page.goto("/");
-    await atlasReady(page);
-    await expect(page).toHaveTitle("Neblux — Interactive Science Knowledge Graph");
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", "https://neblux.linku.tech/");
-    await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", /Neblux/);
-    await expect(page.locator('meta[property="og:site_name"]')).toHaveAttribute("content", "Neblux");
-    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute("content", "summary_large_image");
-    await expect(page.locator('link[rel="manifest"]')).toHaveAttribute("href", "/site.webmanifest");
-    expect(await page.locator('script[type="application/ld+json"]').textContent()).toContain("SearchAction");
-    expect(await page.locator('meta[name="robots"]').count()).toBe(0);
-    expect(await page.locator("body").textContent()).not.toMatch(/Prototype|Pilot regions|試行區域|試作リージョン/);
-    expect(requests.some((path) => /\/(all_nodes|portal-index|depth-index)\.json$/.test(path))).toBeFalsy();
-    expect(requests.some((path) => path.startsWith("/data/wonders/") || path.startsWith("/api/"))).toBeFalsy();
-});
-
-test("production homepage localizes the static Wonder directory", async ({ page }) => {
-    await page.goto("/");
-    await atlasReady(page);
-    await page.locator('[data-atlas-lang="zh"]').click();
-    await expect(page.locator('[data-wonder-id="black-holes"]')).toHaveText("黑洞與時空");
-    await page.locator('[data-atlas-lang="ja"]').click();
-    await expect(page.locator('[data-wonder-id="black-holes"]')).toHaveText("ブラックホールと時空");
-});
-
 test("Atlas directory remains useful when the index is unavailable", async ({ page }) => {
     await page.route("**/data/atlas/index.json", (route) => route.fulfill({ status: 404, contentType: "application/json", body: "{}" }));
     await page.goto("/atlas-v2.html");

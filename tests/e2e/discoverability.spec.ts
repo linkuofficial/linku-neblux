@@ -30,9 +30,8 @@ test.describe("concept pages are readable without JavaScript", () => {
 
     test("an entry page's noscript fallback is real content, not just 'enable JS'", async ({ page }) => {
         await page.goto("/");
-        // The production route keeps ordinary navigation links when JavaScript is disabled.
-        await expect(page.locator('a[href="/app.html"]').first()).toBeVisible();
-        await expect(page.locator('.atlas-wonder-directory a')).toHaveCount(19);
+        // noscript content is rendered because JS is disabled for this context
+        await expect(page.locator('noscript a[href^="/concepts/"]').first()).toBeVisible();
     });
 });
 

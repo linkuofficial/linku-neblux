@@ -15,12 +15,11 @@ async function killApi(page) {
 }
 
 test.describe("API down — the site still works (ironclad rule 1)", () => {
-    test("Atlas homepage still exposes static routes", async ({ page }) => {
+    test("landing still headlines its featured tour", async ({ page }) => {
         await killApi(page);
         await page.goto("/");
-        await expect.poll(() => page.evaluate(() => !!(window as any).__nebluxAtlas?.ready())).toBeTruthy();
-        await expect(page.locator("[data-region-id=main]")).toBeVisible();
-        await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);
+        await expect(page.locator("#featuredCard")).toBeVisible();
+        await expect(page.locator("#featuredTitle")).not.toBeEmpty();
     });
 
     test("wonders picker still lists every tour", async ({ page }) => {
