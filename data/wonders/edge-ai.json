@@ -12,7 +12,7 @@
       "ref": "edge_computing_concept",
       "hook": {
         "en": "AI lives in giant cloud data centers — so why don't self-driving cars just stream everything up and let the cloud think?",
-        "zh": "AI 明明住在雲端的巨大機房裡，為什麼自駕車、機械臂不把畫面傳上去算就好？",
+        "zh": "AI 明明住在雲端的巨大機房裡，為什麼自駕車不把畫面傳上去算就好？",
         "ja": "AI は巨大なクラウドのデータセンターに住んでいる——なら自動運転車は、映像を全部クラウドへ送って考えさせればいいのでは？"
       },
       "reveal": {

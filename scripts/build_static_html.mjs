@@ -46,9 +46,9 @@ const TYPES = {
     ja: { concept: '概念', person: '人物', field: '分野', event: '出来事' },
 };
 const UI = {
-    en: { eyebrow: 'Neblux Knowledge Graph', overview: 'Overview', why: 'Why it matters', buildsOn: 'What it builds on', leadsTo: 'Where it leads', related: 'Related concepts', inWonders: 'Appears in Wonders', openGraph: 'Open this concept in the interactive graph →', typeLbl: 'Type', domainLbl: 'Domain', eraLbl: 'Era', present: 'present', bce: 'BCE', home: 'Home', wonders: 'Wonders', graph: 'Graph', about: 'About', methodology: 'Methodology', sources: 'Sources', tagline: 'An interactive science knowledge graph by Linku Tech.' },
-    zh: { eyebrow: 'Neblux 知識圖譜', overview: '概觀', why: '為什麼重要', buildsOn: '建立在什麼之上', leadsTo: '通往哪裡', related: '相關概念', inWonders: '出現在這些驚奇之旅', openGraph: '在互動圖譜中打開這個概念 →', typeLbl: '類型', domainLbl: '領域', eraLbl: '年代', present: '至今', bce: '西元前', home: '首頁', wonders: '驚奇之旅', graph: '圖譜', about: '關於', methodology: '方法', sources: '來源', tagline: '由 Linku Tech 打造的互動式科普知識圖譜。' },
-    ja: { eyebrow: 'Neblux 知識グラフ', overview: '概要', why: 'なぜ重要か', buildsOn: '何の上に築かれるか', leadsTo: 'どこへ導くか', related: '関連する概念', inWonders: '登場する Wonders', openGraph: 'この概念をインタラクティブグラフで開く →', typeLbl: 'タイプ', domainLbl: '分野', eraLbl: '年代', present: '現在', bce: '紀元前', home: 'ホーム', wonders: 'Wonders', graph: 'グラフ', about: 'About', methodology: '方法', sources: '出典', tagline: 'Linku Tech によるインタラクティブな科学知識グラフ。' },
+    en: { eyebrow: 'Neblux Knowledge Graph', overview: 'Overview', why: 'Why it matters', buildsOn: 'What it builds on', leadsTo: 'Where it leads', related: 'Related concepts', inWonders: 'Appears in Wonders', openGraph: 'Open this concept in the interactive graph →', typeLbl: 'Type', domainLbl: 'Domain', eraLbl: 'Era', present: 'present', bce: 'BCE', home: 'Home', wonders: 'Wonders', graph: 'Atlas', about: 'About', methodology: 'Methodology', sources: 'Sources', tagline: 'An interactive science knowledge graph by Linku Tech.' },
+    zh: { eyebrow: 'Neblux 知識圖譜', overview: '概觀', why: '為什麼重要', buildsOn: '建立在什麼之上', leadsTo: '通往哪裡', related: '相關概念', inWonders: '出現在這些驚奇之旅', openGraph: '在互動圖譜中打開這個概念 →', typeLbl: '類型', domainLbl: '領域', eraLbl: '年代', present: '至今', bce: '西元前', home: '首頁', wonders: '驚奇之旅', graph: '圖譜星圖', about: '關於', methodology: '方法', sources: '來源', tagline: '由 Linku Tech 打造的互動式科普知識圖譜。' },
+    ja: { eyebrow: 'Neblux 知識グラフ', overview: '概要', why: 'なぜ重要か', buildsOn: '何の上に築かれるか', leadsTo: 'どこへ導くか', related: '関連する概念', inWonders: '登場する Wonders', openGraph: 'この概念をインタラクティブグラフで開く →', typeLbl: 'タイプ', domainLbl: '分野', eraLbl: '年代', present: '現在', bce: '紀元前', home: 'ホーム', wonders: 'Wonders', graph: 'Atlas', about: '概要', methodology: '方法', sources: '出典', tagline: 'Linku Tech によるインタラクティブな科学知識グラフ。' },
 };
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -117,7 +117,7 @@ ${JSON.stringify(jsonld, null, 2)}
   <span class="brand"><a href="/" style="color:inherit">Neblux</a></span>
   <nav>
     <a href="/wonders.html">${esc(u.wonders)}</a>
-    <a href="/app.html">${esc(u.graph)}</a>
+    <a href="/atlas.html">${esc(u.graph)}</a>
     <a href="${base}/about.html">${esc(u.about)}</a>
   </nav>
 </header>
@@ -287,7 +287,7 @@ function buildSitemap(D, extraUrls = []) {
     const urls = [];
     const add = (loc, alts) => urls.push({ loc, alts });
     // entries (single-URL, JS-switched — no per-lang alternates)
-    for (const p of ['/', '/wonders.html', '/app.html', '/explorer.html']) add(p, null);
+    for (const p of ['/', '/atlas.html', '/wonders.html', '/app.html', '/explorer.html']) add(p, null);
     // tour share stubs
     for (const tid of Object.keys(D.tourTitle)) add(`/w/${tid}.html`, null);
     // trust pages (trilingual)

@@ -65,6 +65,15 @@ export const TAG_LABELS = {
         human_geography: '\u4eba\u6587\u5730\u7406',
         historical_context_needed: '\u9700\u88dc\u6b77\u53f2\u8108\u7d61',
         number_theory: '\u6578\u8ad6',
+        middle_eastern: '中東',
+        philosophy_of_language: '語言哲學',
+        philosophy_of_mathematics: '數學哲學',
+        philosophy_of_mind: '心靈哲學',
+        philosophy_of_science: '科學哲學',
+        public_health: '公共衛生',
+        diplomatic_history: '外交史',
+        economic_history: '經濟史',
+        social_history: '社會史',
     },
     ja: {
         foundational: '\u57fa\u790e',
@@ -102,6 +111,16 @@ export const TAG_LABELS = {
         human_geography: '\u4eba\u6587\u5730\u7406\u5b66',
         historical_context_needed: '\u6b74\u53f2\u7684\u80cc\u666f\u304c\u5fc5\u8981',
         number_theory: '\u6570\u8ad6',
+        middle_eastern: '中東',
+        philosophy_of_language: '言語哲学',
+        philosophy_of_mathematics: '数学の哲学',
+        philosophy_of_mind: '心の哲学',
+        philosophy_of_science: '科学哲学',
+        public_health: '公衆衛生',
+        diplomatic_history: '外交史',
+        economic_history: '経済史',
+        social_history: '社会史',
+        industrial_design: '工業デザイン',
     },
 };
 
@@ -146,7 +165,7 @@ export const TAG_TOKEN_ZH = {
     acoustics: '\u8072\u5b78', active: '\u6d3b\u8e8d', aerospace: '\u822a\u592a', aesthetic: '\u7f8e\u5b78',
     aesthetics: '\u7f8e\u5b78', affects: '\u5f71\u97ff', algorithmic: '\u6f14\u7b97\u6cd5', algorithms: '\u6f14\u7b97\u6cd5',
     and: '\u8207', animation: '\u52d5\u756b', anthropology: '\u4eba\u985e\u5b78', archaeology: '\u8003\u53e4\u5b78',
-    architecture: '\u5efa\u7bc9', archival: '\u6a94\u6848', artificial: '\u4eba\u5de5', asian: '\u4e9e\u6d32',
+    architecture: '\u5efa\u7bc9', archival: '\u6a94\u6848', artificial: '\u4eba\u5de5', asian: '\u4e9e',
     astrochemistry: '\u5929\u9ad4\u5316\u5b78', atmospheric: '\u5927\u6c23', augmented: '\u64f4\u589e', behavioral: '\u884c\u70ba',
     biochemistry: '\u751f\u7269\u5316\u5b78', bioethics: '\u751f\u547d\u502b\u7406', bioinformatics: '\u751f\u7269\u8cc7\u8a0a\u5b78',
     biophysics: '\u751f\u7269\u7269\u7406\u5b78', breakthrough: '\u7a81\u7834', bridge: '\u6a4b\u63a5', cell: '\u7d30\u80de',
@@ -189,7 +208,7 @@ export const TAG_TOKEN_ZH = {
     real: '\u5be6', reality: '\u73fe\u5be6', reflects: '\u53cd\u6620', relativity: '\u76f8\u5c0d\u8ad6', requires: '\u9700\u8981',
     research: '\u7814\u7a76', rhetoric: '\u4fee\u8fad\u5b78', robotics: '\u6a5f\u5668\u4eba\u5b78', school: '\u5b78\u6d3e', sculpture: '\u96d5\u5851',
     semiconductor: '\u534a\u5c0e\u9ad4', semiotics: '\u7b26\u865f\u5b78', shapes: '\u5f62\u5851', shift: '\u8f49\u8b8a', sociology: '\u793e\u6703\u5b78',
-    software: '\u8edf\u9ad4', solid: '\u56fa\u614b', solving: '\u6c42\u89e3', sound: '\u8072\u97f3', space: '\u7a7a\u9593',
+    software: '\u8edf\u9ad4', solid: '\u56fa', solving: '\u6c42\u89e3', sound: '\u8072\u97f3', space: '\u7a7a\u9593',
     state: '\u614b', statistical: '\u7d71\u8a08', street: '\u8857\u982d', structural: '\u7d50\u69cb', surgery: '\u5916\u79d1',
     symmetry: '\u5c0d\u7a31', theater: '\u6232\u5287', theorem: '\u5b9a\u7406', thermodynamics: '\u71b1\u529b\u5b78', things: '\u4e8b\u7269',
     thinking: '\u601d\u7dad', thought: '\u601d\u60f3', timescale: '\u6642\u9593\u5c3a\u5ea6', tool: '\u5de5\u5177', transforms: '\u8f49\u5316',
@@ -211,7 +230,7 @@ export const TAG_TOKEN_ZH = {
 export const TAG_TOKEN_JA = {
     age: '\u6642\u4ee3', ancient: '\u53e4\u4ee3', modern: '\u8fd1\u4ee3',
     contemporary: '\u73fe\u4ee3', early: '\u521d\u671f', middle: '\u4e2d\u671f',
-    post: '\u5f8c\u671f', digital: '\u30c7\u30b8\u30bf\u30eb', industrial: '\u7523\u696d',
+    post: '\u5f8c', digital: '\u30c7\u30b8\u30bf\u30eb', industrial: '\u7523\u696d',
     cold: '\u51b7', war: '\u6226\u4e89', exploration: '\u63a2\u7d22',
     revolution: '\u9769\u547d', enlightenment: '\u5553\u8499',
     renaissance: '\u30eb\u30cd\u30b5\u30f3\u30b9', ancient_greek: '\u53e4\u4ee3\u30ae\u30ea\u30b7\u30e3',
@@ -308,3 +327,27 @@ export const TAG_TOKEN_JA = {
     identity: '\u30a2\u30a4\u30c7\u30f3\u30c6\u30a3\u30c6\u30a3', databases: '\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9', botany: '\u690d\u7269\u5b66',
     zoology: '\u52d5\u7269\u5b66', virology: '\u30a6\u30a4\u30eb\u30b9\u5b66', endocrinology: '\u5185\u5206\u6ccc\u5b66',
 };
+
+/** Localize an arbitrary display tag, including generated century/range tags. */
+export function localizeDisplayTag(tag, locale = 'en') {
+    const value = String(tag || '');
+    const humanize = () => value.replaceAll('_', ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+    const mapped = TAG_LABELS[locale]?.[value];
+    if (mapped) return mapped;
+    const century = value.match(/^(\d{1,2})(?:st|nd|rd|th)_century$/);
+    if (century && (locale === 'zh' || locale === 'ja')) return `${century[1]}世紀`;
+    if (locale !== 'zh' && locale !== 'ja') return humanize();
+    const range = value.match(/^(\d+)(bce|ce)_to_(\d+)(bce|ce)$/);
+    if (range) {
+        if (locale === 'zh') {
+            const era = (number, kind) => kind === 'bce' ? `${number}公元前` : `${number}公元`;
+            return `${era(range[1], range[2])}至${era(range[3], range[4])}`;
+        }
+        const era = (number, kind) => kind === 'bce' ? `紀元前${number}年` : `紀元${number}年`;
+        return `${era(range[1], range[2])}から${era(range[3], range[4])}`;
+    }
+    const dictionary = locale === 'zh' ? TAG_TOKEN_ZH : TAG_TOKEN_JA;
+    const tokens = value.split('_').filter(Boolean);
+    const converted = tokens.map((token) => dictionary[token] || token);
+    return converted.every((entry, index) => entry === tokens[index]) ? humanize() : converted.join('');
+}
