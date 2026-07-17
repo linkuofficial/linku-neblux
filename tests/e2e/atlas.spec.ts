@@ -3,17 +3,19 @@ import { test, expect } from "@playwright/test";
 const atlasReady = (page: import("@playwright/test").Page) =>
     expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas?.loadState()), { timeout: 15000 }).toBe("ready");
 
-test("Atlas prototype renders only its presentation index and exposes matching routes", async ({ page }) => {
+test("production Atlas renders only its presentation index through engine-v2", async ({ page }) => {
     const requests: string[] = [];
     const errors: string[] = [];
     page.on("request", (request) => requests.push(new URL(request.url()).pathname));
     page.on("pageerror", (error) => errors.push(String(error)));
     page.on("console", (message) => { if (message.type() === "error") errors.push(message.text()); });
 
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await atlasReady(page);
 
     expect(await page.evaluate(() => (window as any).__nebluxAtlas.ready())).toBe(true);
+    expect(await page.evaluate(() => (window as any).__nebluxAtlas.rendererKind())).toBe("engine-v2");
+    expect(await page.evaluate(() => (window as any).__nebluxAtlas.sceneSize())).toEqual({ nodes: 4, edges: 1 });
     await expect(page.locator("#atlas-canvas")).toBeVisible();
     await expect(page.locator("[data-region-id]")).toHaveCount(4);
     await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);
@@ -41,7 +43,7 @@ test("Atlas prototype renders only its presentation index and exposes matching r
 
 test("Atlas directory remains useful when the index is unavailable", async ({ page }) => {
     await page.route("**/data/atlas/index.json", (route) => route.fulfill({ status: 404, contentType: "application/json", body: "{}" }));
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas?.loadState())).toBe("index-unavailable");
     await expect(page.locator("#atlas-fallback")).toBeVisible();
     await expect(page.locator("[data-region-id]")).toHaveCount(4);
@@ -54,11 +56,16 @@ test("Atlas directory remains useful when the index is unavailable", async ({ pa
     await expect(page.locator("#atlas-fallback")).toBeVisible();
 });
 
+test("internal Atlas duplicate remains noindex during the release window", async ({ page }) => {
+    await page.goto("/atlas-v2.html");
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+});
+
 test("Atlas keeps all static Wonder routes when JavaScript is disabled", async ({ browser, baseURL }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
     try {
-        await page.goto(new URL("/atlas-v2.html", baseURL || "http://127.0.0.1:3000").href);
+        await page.goto(new URL("/atlas.html", baseURL || "http://127.0.0.1:3000").href);
         await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);
         await expect(page.locator('[data-region-id="main"]')).toHaveAttribute("href", "/app.html");
         await expect(page.locator('[data-region-id="edge-ai"]')).toHaveAttribute("href", "/wonders.html?w=edge-ai");
@@ -71,7 +78,7 @@ test("Atlas sizes its Canvas backing store correctly on high-DPI screens", async
     const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 });
     const page = await context.newPage();
     try {
-        await page.goto(new URL("/atlas-v2.html", baseURL || "http://127.0.0.1:3000").href);
+        await page.goto(new URL("/atlas.html", baseURL || "http://127.0.0.1:3000").href);
         await atlasReady(page);
         const scale = await page.locator("#atlas-canvas").evaluate((element) => {
             const canvas = element as HTMLCanvasElement;
@@ -89,14 +96,14 @@ test("Atlas keeps its directory available when Canvas is unsupported", async ({ 
     await page.addInitScript(() => {
         Object.defineProperty(HTMLCanvasElement.prototype, "getContext", { configurable: true, value: () => null });
     });
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas?.loadState())).toBe("canvas-unavailable");
     await expect(page.locator("#atlas-fallback")).toBeVisible();
     await expect(page.locator(".atlas-wonder-directory a")).toHaveCount(19);
 });
 
 test("Atlas keyboard routes are visible and usable", async ({ page }) => {
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await atlasReady(page);
     const light = page.locator('[data-region-id="light"]');
     await light.focus();
@@ -109,7 +116,7 @@ test("Atlas keyboard routes are visible and usable", async ({ page }) => {
 test("Atlas is stable at mobile width and in reduced-motion mode", async ({ page }) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await atlasReady(page);
     await expect(page.locator("#atlas-zoom-in")).toBeVisible();
     await expect(page.locator("#atlas-zoom-out")).toBeVisible();
@@ -129,7 +136,7 @@ test("Atlas is stable at mobile width and in reduced-motion mode", async ({ page
 });
 
 test("Atlas supports wheel zoom, reset and pointer hit testing", async ({ page }) => {
-    await page.goto("/atlas-v2.html");
+    await page.goto("/atlas.html");
     await atlasReady(page);
     const before = await page.evaluate(() => (window as any).__nebluxAtlas.camera().zoom);
     const canvas = page.locator("#atlas-canvas");
@@ -137,7 +144,8 @@ test("Atlas supports wheel zoom, reset and pointer hit testing", async ({ page }
     await page.mouse.wheel(0, -260);
     await expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas.camera().zoom)).toBeGreaterThan(before);
     await page.locator("#atlas-reset").click();
-    await expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas.camera().zoom)).toBe(1);
+    await expect.poll(async () => page.evaluate(() => (window as any).__nebluxAtlas.camera().zoom)).toBeCloseTo(before, 6);
+    const cameraBeforeDrag = await page.evaluate(() => (window as any).__nebluxAtlas.camera());
     const boxBeforeDrag = await canvas.boundingBox();
     expect(boxBeforeDrag).toBeTruthy();
     const center = { x: boxBeforeDrag!.x + boxBeforeDrag!.width / 2, y: boxBeforeDrag!.y + boxBeforeDrag!.height / 2 };
@@ -146,8 +154,7 @@ test("Atlas supports wheel zoom, reset and pointer hit testing", async ({ page }
     await page.mouse.move(center.x + 90, center.y + 50, { steps: 4 });
     await page.mouse.up();
     const panned = await page.evaluate(() => (window as any).__nebluxAtlas.camera());
-    expect(panned.x).toBeGreaterThan(90);
-    expect(panned.y).toBeGreaterThan(50);
+    expect(Math.hypot(panned.x - cameraBeforeDrag.x, panned.y - cameraBeforeDrag.y)).toBeGreaterThan(50);
 
     // Repeated drags hit the camera bound instead of losing every route.
     for (let i = 0; i < 5; i += 1) {
@@ -160,7 +167,7 @@ test("Atlas supports wheel zoom, reset and pointer hit testing", async ({ page }
     expect(boundedMain.x).toBeGreaterThanOrEqual(43);
     expect(boundedMain.x).toBeLessThanOrEqual(boxBeforeDrag!.width - 43);
     await page.locator("#atlas-reset").click();
-    const light = await page.evaluate(() => (window as any).__nebluxAtlas.screenRegion("light"));
+    const light = await page.evaluate(() => (window as any).__nebluxAtlas.screenRegion("main"));
     const box = await canvas.boundingBox();
     expect(light).toBeTruthy();
     expect(box).toBeTruthy();

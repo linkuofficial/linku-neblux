@@ -26,7 +26,7 @@
 - Main 可以最大，但不能以亮度、CTA 或排版把 Wonders 降成裝飾；第一屏必須看得見 Wonder 名稱與入口，可保留 featured Wonder 強調位。
 - 修訂紀錄：2026-07-12 曾定案「首頁改為宇宙地圖」並取代 2026-07-03 舊方向；2026-07-15 RG-A 曾在 repo 內把 `/` 切為 Atlas（未部署）。2026-07-16 凜空裁決改回：**首頁＝legacy landing、Atlas＝第二頁**，RG-A 的 `/` cutover 已在工作樹回退。Atlas 目前僅有 internal route `/atlas-v2.html`（noindex）。
 - 正式第二頁路由**定案 `/atlas.html`**（2026-07-16）。入口動線**定案方案 A**（2026-07-16）：landing 的「OPEN THE GRAPH」CTA 與 footer「Graph」改指 `/atlas.html`，由 Atlas 的 Main Galaxy 節點進 `app.html`；搜尋與建議 pills 維持直達 `app.html?node=<id>`。上線時機需獨立 release brief 與凜空授權。
-- Atlas 視覺**保留現行白模**（prototype renderer），暫不升級（2026-07-16 裁決；上線前再議）。
+- Atlas 視覺基礎統一為 `engine-v2`（2026-07-16 後續裁決）：仍是輕量第二頁、只載 Main＋featured Wonder presentation，但不得以獨立 prototype renderer 建立平行星場／星體／標籤語彙。
 
 ### 2. Main Galaxy
 

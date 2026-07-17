@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用一個互動看懂波函數如何決定量子位置的機率分布。">
+  <title>波函數｜Neblux Depth</title>
+  <link rel="stylesheet" href="./quantum-depth.css?v=4">
+</head>
+<body>
+<header class="site-header" aria-label="Neblux Depth">
+  <a class="brand" href="/">Neblux</a><span>Depth candidate · 01</span>
+</header>
+<main data-quantum-depth="wavefunction">
+  <header class="hero">
+    <p class="eyebrow">Quantum Depth</p>
+    <h1>波函數<span class="topic-en">Wavefunction</span></h1>
+    <p class="deck">它不畫出粒子下一秒一定走哪裡；它告訴你，重複同樣的測量後，結果會在哪些地方聚集。</p>
+    <figure class="metaphor">
+      <svg viewBox="0 0 340 84" role="img" aria-label="手電筒照出的寬光斑與窄光斑">
+        <path d="M22 42 L122 10 L122 74 Z" fill="rgba(94,231,242,.12)" stroke="#5ee7f2"/>
+        <circle cx="22" cy="42" r="8" fill="#f4f7fb"/>
+        <path d="M176 42 L300 28 L300 56 Z" fill="rgba(170,140,255,.16)" stroke="#aa8cff"/>
+        <circle cx="176" cy="42" r="8" fill="#f4f7fb"/>
+      </svg>
+      <figcaption>像光斑一樣，分布可以寬，也可以窄；但波函數描述的是測量結果的可能性，不是藏在霧裡的一條確定路線。</figcaption>
+    </figure>
+  </header>
+
+  <section aria-labelledby="play-title">
+    <p class="section-kicker">1 先動手玩</p>
+    <h2 id="play-title">把波函數壓窄，測量結果會跟著去哪裡？</h2>
+    <p class="intro-copy">拖動唯一的滑桿。上方曲線代表位置的機率密度；下方 80 個點代表把相同狀態重新準備、重新測量 80 次。</p>
+    <div class="lab-surface">
+      <div class="canvas-wrap"><canvas aria-label="波函數寬度與位置測量分布互動圖" role="img"></canvas></div>
+      <ul class="canvas-legend" aria-label="圖例">
+        <li><i class="legend-line legend-violet"></i>波函數幅度 ψ</li>
+        <li><i class="legend-line legend-cyan"></i>機率密度 |ψ|²</li>
+        <li><i class="legend-line legend-dash"></i>重複測量落點</li>
+      </ul>
+      <div class="control-row">
+        <div><label class="control-label" for="wave-width"><span><i class="chip"></i>波包寬度</span><output id="wave-width-value" class="control-value">中等</output></label><span class="control-copy">方向鍵也能微調</span></div>
+        <input id="wave-width" type="range" min="0.45" max="1.8" value="1" step="0.05">
+      </div>
+      <p class="result-line" data-result aria-live="polite"></p>
+      <noscript><div class="static-fallback">
+        <svg viewBox="0 0 640 180" role="img" aria-label="窄波函數對應集中落點，寬波函數對應分散落點"><path d="M20 130 C180 130 240 20 320 20 C400 20 460 130 620 130" fill="none" stroke="#5ee7f2" stroke-width="4"/><g fill="#f4f7fb"><circle cx="275" cy="155" r="4"/><circle cx="300" cy="162" r="4"/><circle cx="320" cy="150" r="4"/><circle cx="342" cy="160" r="4"/><circle cx="365" cy="154" r="4"/></g></svg>
+        <p>靜態圖顯示：機率密度越集中，多次位置測量的落點越集中；它仍不指定單次測量的確定位置。</p>
+      </div></noscript>
+    </div>
+  </section>
+
+  <section aria-labelledby="observe-title">
+    <p class="section-kicker">2 觀察</p>
+    <h2 id="observe-title">曲線預測的是群體，不是下一顆</h2>
+    <p>每一次測量只留下單一位置。把完全相同的狀態重新準備許多次，落點才逐漸顯出 <strong>|ψ(x)|²</strong> 的形狀。波函數本身通常是複數；畫面只挑出與位置機率有關的部分。</p>
+    <p class="takeaway"><strong>一句帶走：</strong>波函數完整描述量子狀態，而它的絕對值平方給出特定測量結果的機率密度。</p>
+    <p class="misconception"><strong>不是：</strong>一團普通物質被磨成霧，也不是粒子其實沿著某條我們尚未發現的確定軌跡前進。</p>
+  </section>
+
+  <section aria-labelledby="use-title">
+    <p class="section-kicker">3 哪裡用得到</p><h2 id="use-title">從原子雲到電子顯微鏡</h2>
+    <ul class="usecase-list"><li><strong>原子軌域</strong>電子在原子中的空間分布由波函數描述。</li><li><strong>半導體</strong>電子波函數在晶格中的允許狀態決定材料能帶。</li><li><strong>量子元件</strong>設計量子井與穿隧結構時，需要計算波函數在不同區域的形狀。</li></ul>
+  </section>
+
+  <details class="formal-details">
+    <summary><span class="section-kicker">4 寫成式子</span><h2>如何從波函數得到位置機率？</h2><span class="summary-hint">玩過了？打開來看最小必要公式</span></summary>
+    <div class="formal-body">
+      <p class="formula"><span class="sym sym-cyan" data-sym="prob" data-tip="在位置 x 附近被測得的機率密度">P(x)</span> = |<span class="sym sym-violet" data-sym="psi" data-tip="描述量子狀態的複數波函數">ψ(x)</span>|²</p>
+      <p>這個式子不是說 ψ 是普通機率；必須先取複數振幅的絕對值平方，結果才是非負的機率密度。完整分布還要滿足總機率為 1。</p>
+      <dl class="symbol-gloss"><dt data-sym="psi"><span class="sym sym-violet">ψ(x)</span></dt><dd>位置表示下的波函數；一般可含實部與虛部。</dd><dt data-sym="prob"><span class="sym sym-cyan">P(x)</span></dt><dd>單位位置範圍內測得粒子的機率密度。</dd></dl>
+      <p class="sym-explainer" aria-live="polite">把游標移到算式符號上（手機點一下），看白話說明。</p><div class="sym-tip" role="tooltip" hidden></div>
+    </div>
+  </details>
+
+  <section class="sources" aria-labelledby="source-title"><p class="section-kicker">來源</p><h2 id="source-title">內容依據</h2><ul><li><a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/resources/mit8_04s13_lec03/">MIT 8.04 Lecture 3: The Wave Function</a></li><li><a href="https://ocw.mit.edu/courses/5-73-quantum-mechanics-i-fall-2018/pages/lecture-notes/">MIT 5.73 Quantum Mechanics I lecture notes</a></li></ul></section>
+</main>
+<footer class="page-footer">Neblux Depth candidate · zh-Hant · v0.1 · 尚未公開審核</footer>
+<script id="node-meta" type="application/json">{"depth_id":"wavefunction","node_id":"quantum_mechanics_field","spec_version":"0.2"}</script>
+<script type="module" src="./quantum-depth.js?v=3"></script><script type="module" src="./sym-tooltip.js?v=2"></script>
+</body>
+</html>

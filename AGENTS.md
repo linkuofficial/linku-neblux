@@ -51,7 +51,7 @@ npm run test:e2e:install  # 首次安裝 Chromium
 3. 常見任務步驟見 `docs/playbooks/`；最短驗證路徑索引見 `docs/verification_runbook.md`（2026-07-13 已重寫為現行流程，與本檔衝突時以本檔為準）。
 
 ## 已知技術債（台帳；「暫不處理」的決定不重開，除非前提改變）
-- Atlas 第二頁渲染器（`frontend/src/atlas/atlas-renderer.js`）是 WP4 prototype 白模：單層徑向漸層節點＋main 裝飾橢圓＋130 顆單層背景點，未用 engine-v2 星場／sprite 方案。**（2026-07-16）凜空裁決：保留白模、暫不處理視覺升級**；`/atlas.html` 正式上線前再議。
+- Atlas 第二頁原 WP4 prototype 白模已被 2026-07-16 後續裁決取代：正式 `/atlas.html` 必須共用 `frontend/src/engine-v2/` 的星場、sprite、camera 與 label 契約；Atlas 仍只載 Main＋featured Wonder presentation，不得載入完整 graph 或另建平行 renderer。
 - HTML 入口資源路徑風格不一致（`index.html` 用絕對 `/src/...`；`app.html`/`explorer.html` 混用相對與絕對）；皆可運作。**（2026-06-10）複查：純 cosmetic、有 build 風險、零收益，暫不處理。**
 - 粒子動畫兩套實作（`src/particles.js`〔app 頁背景，動態 import〕+ `src/landing-main.js`〔index 落地頁〕）。兩者用途不同、各自獨立，整併收益低，暫不處理。
 - app-main 與 explorer-main 有平行的 canvas 接線（findNodeAtScreen、nc/nr、星體 meta、焦點邏輯）。**刻意未抽共用**：兩頁語意不同（app=全圖、explorer=漸進展開），抽離風險高於收益。視為可接受重複。

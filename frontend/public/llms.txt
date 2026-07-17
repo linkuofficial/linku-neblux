@@ -26,6 +26,7 @@ Neblux combines:
 
 ## Important pages
 - Home: https://neblux.linku.tech/
+- Graph Atlas (navigation map): https://neblux.linku.tech/atlas.html
 - Wonders (curiosity tours): https://neblux.linku.tech/wonders.html
 - Explorer: https://neblux.linku.tech/explorer.html
 - Graph app: https://neblux.linku.tech/app.html

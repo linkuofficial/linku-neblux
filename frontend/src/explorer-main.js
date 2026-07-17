@@ -86,7 +86,11 @@ import { API_ENABLED } from "./config.js";
                 typePerson: 'person',
                 typeEvent: 'event',
                 eraBce: 'BCE',
-                eraPresent: 'present'
+                eraPresent: 'present',
+                loadingGraph: 'Loading graph…',
+                loadingLabels: 'Loading labels…',
+                retrying: 'Retrying…',
+                initializationFailed: 'Unable to initialize Explorer.'
             },
             zh: {
                 navHome: '首頁',
@@ -107,7 +111,7 @@ import { API_ENABLED } from "./config.js";
                 btnFitTitle: '將視圖調整至所有可見節點',
                 btnUndoTitle: '復原上一次展開 (Ctrl+Z)',
                 btnFocusTitle: '切換聚焦層級：關閉、1 跳、2 跳',
-                btnHelpTitle: '開啟快捷鍵與 explorer 說明',
+                btnHelpTitle: '開啟快捷鍵與探索器說明',
                 btnGuideTitle: '重播快速指引',
                 focusOff: '無聚焦',
                 focus1: '1 跳聚焦',
@@ -159,7 +163,11 @@ import { API_ENABLED } from "./config.js";
                 typePerson: '人物',
                 typeEvent: '事件',
                 eraBce: '公元前',
-                eraPresent: '至今'
+                eraPresent: '至今',
+                loadingGraph: '正在載入圖譜…',
+                loadingLabels: '正在載入標籤…',
+                retrying: '正在重試…',
+                initializationFailed: '無法初始化探索器。'
             },
             ja: {
                 navHome: 'ホーム',
@@ -180,7 +188,7 @@ import { API_ENABLED } from "./config.js";
                 btnFitTitle: '可視ノード全体が収まるように表示を調整',
                 btnUndoTitle: '直前の展開を元に戻す (Ctrl+Z)',
                 btnFocusTitle: 'フォーカス深度を切替：OFF・1ホップ・2ホップ',
-                btnHelpTitle: 'キーボードショートカットと explorer ヘルプを開く',
+                btnHelpTitle: 'キーボードショートカットとエクスプローラーのヘルプを開く',
                 btnGuideTitle: 'クイックガイドを再生',
                 focusOff: 'フォーカスOFF',
                 focus1: 'フォーカス1ホップ',
@@ -232,7 +240,11 @@ import { API_ENABLED } from "./config.js";
                 typePerson: '人物',
                 typeEvent: '出来事',
                 eraBce: '紀元前',
-                eraPresent: '現在'
+                eraPresent: '現在',
+                loadingGraph: 'グラフを読み込み中…',
+                loadingLabels: 'ラベルを読み込み中…',
+                retrying: '再試行中…',
+                initializationFailed: 'エクスプローラーを初期化できません。'
             }
         };
 
@@ -2079,14 +2091,14 @@ import { API_ENABLED } from "./config.js";
         // ===== INIT =====
         async function init() {
             try {
-                setLoadingState('Loading graph...');
                 LANG = getLang();
                 document.documentElement.lang = LANG === 'zh' ? 'zh-Hant' : LANG;
+                setLoadingState(t('loadingGraph'));
 
                 const rawNodes = await loadData();
                 hydrateGraphData(rawNodes);
 
-                setLoadingState('Loading labels...');
+                setLoadingState(t('loadingLabels'));
                 const maps = await loadLocaleMaps(LANG);
                 labelMap = maps.labels;
                 descriptionMap = maps.descriptions;
@@ -2127,13 +2139,13 @@ import { API_ENABLED } from "./config.js";
                     .catch(() => {});
             } catch (error) {
                 lastLoadError = error;
-                const msg = error && error.message ? error.message : 'Unable to initialize explorer.';
-                setLoadingState(msg, true, true);
+                console.error('explorer initialization failed', error);
+                setLoadingState(t('initializationFailed'), true, true);
                 const retryBtn = document.getElementById('loading-retry');
                 if (retryBtn) {
                     retryBtn.onclick = () => {
                         retryBtn.disabled = true;
-                        setLoadingState('Retrying...', false, false);
+                        setLoadingState(t('retrying'), false, false);
                         init();
                     };
                 }

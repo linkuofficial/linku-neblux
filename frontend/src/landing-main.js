@@ -476,8 +476,8 @@
                     heroTitle: '萬物彼此<span class="text-primary">相連</span>',
                     heroSubtitle: '順著一絲好奇，潛入人類所知的浩瀚星海。',
                     ctaExplore: '打開圖譜',
-                    ctaWonders: '瀏覽所有驚奇',
-                    featuredEyebrow: '精選驚奇',
+                    ctaWonders: '瀏覽所有驚奇之旅',
+                    featuredEyebrow: '精選驚奇之旅',
                     featuredSteps: '步',
                     featuredCta: '開始這趟 →',
                     placeholder: '探索無限知識…',
@@ -497,7 +497,7 @@
                     placeholder: '無限の知識を探索…',
                     footerCopy: `© ${new Date().getFullYear()} NEBLUX. 知のつながりを探索する。`,
                     footerGraph: 'グラフ',
-                    footerExplorer: 'ワンダー',
+                    footerExplorer: 'ツアー',
                 }
             };
 

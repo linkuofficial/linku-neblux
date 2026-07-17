@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <script src="/lang-init.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#040713">
+    <meta name="theme-color" content="#050912">
     <meta name="color-scheme" content="dark">
-    <meta name="robots" content="noindex, nofollow">
-    <title>Graph Atlas Prototype — Neblux</title>
+    <title>Graph Atlas — Neblux</title>
+    <meta name="description" content="Navigate Neblux through the Main Galaxy and guided Wonders — a quiet atlas of how fields and ideas meet.">
+    <link rel="canonical" href="https://neblux.linku.tech/atlas.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Neblux">
+    <meta property="og:url" content="https://neblux.linku.tech/atlas.html">
+    <meta property="og:title" content="Graph Atlas — Neblux">
+    <meta property="og:description" content="Choose a region of the Neblux knowledge universe: the Main Galaxy or a guided Wonder.">
+    <meta property="og:image" content="https://neblux.linku.tech/og-image.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_TW">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Graph Atlas — Neblux">
+    <meta name="twitter:description" content="Choose the Main Galaxy or follow a guided Wonder through Neblux.">
+    <meta name="twitter:image" content="https://neblux.linku.tech/og-image.png">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/neblux-fonts.css">
     <link rel="stylesheet" href="/neblux-theme.css">
     <link rel="stylesheet" href="/src/styles/pages/atlas.css">
     <script type="module" src="/src/atlas/atlas-main.js"></script>
 </head>
 <body>
-    <a class="skip-link" href="#atlas-directory">Skip to Atlas directory</a>
+    <a class="skip-link" href="#atlas-directory" data-atlas-copy="skipToDirectory">Skip to Atlas directory</a>
     <main class="atlas-shell">
         <header class="atlas-header">
             <div>
@@ -24,17 +40,18 @@
                 <h1 class="atlas-title" data-atlas-copy="title">Graph Atlas</h1>
                 <p class="atlas-subtitle" data-atlas-copy="subtitle">A quiet map for tracing how fields and ideas meet.</p>
             </div>
-            <div class="atlas-language" aria-label="Language">
+            <div class="atlas-language" aria-label="Language" data-atlas-aria="language">
                 <button type="button" data-atlas-lang="en" aria-pressed="true">EN</button>
                 <button type="button" data-atlas-lang="zh" aria-pressed="false">中</button>
                 <button type="button" data-atlas-lang="ja" aria-pressed="false">日</button>
             </div>
         </header>
+        <noscript><p class="atlas-fallback">The visual map needs JavaScript. The complete static directory remains available below.</p></noscript>
         <p id="atlas-status" role="status" aria-live="polite"></p>
         <p id="atlas-fallback" class="atlas-fallback" hidden>Atlas data is unavailable. The static Wonder directory remains available.</p>
         <div class="atlas-grid">
-            <section id="atlas-stage" class="atlas-stage" aria-label="Graph Atlas visual map">
-                <canvas id="atlas-canvas" aria-label="Interactive Graph Atlas. Drag to pan, scroll to zoom, or use the directory."></canvas>
+            <section id="atlas-stage" class="atlas-stage" aria-label="Graph Atlas visual map" data-atlas-aria="visualMap">
+                <canvas id="atlas-canvas" aria-label="Interactive Graph Atlas. Drag to pan, scroll to zoom, or use the directory." data-atlas-aria="interactiveMap"></canvas>
                 <div id="atlas-tooltip" class="atlas-tooltip" role="tooltip" hidden></div>
                 <div class="atlas-controls" role="group" aria-label="Atlas controls" data-atlas-aria="controls">
                     <button id="atlas-zoom-out" type="button" aria-label="Zoom out" data-atlas-aria="zoomOut">−</button>

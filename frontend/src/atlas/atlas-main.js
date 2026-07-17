@@ -1,7 +1,7 @@
-import { createAtlasRenderer } from './atlas-renderer.js';
+import { createAtlasEngineAdapter } from './atlas-engine-adapter.js';
 import { getInitialLang, t } from './atlas-i18n.js';
 import { setActiveRegion, setAtlasStatus, syncDirectory, syncStaticCopy } from './atlas-accessibility.js';
-import { createAtlasState, normalizeAtlasIndex, resetCamera, setCameraZoom } from './atlas-state.js';
+import { createAtlasState, normalizeAtlasIndex } from './atlas-state.js';
 
 const root = document;
 const canvas = root.querySelector('#atlas-canvas');
@@ -9,14 +9,13 @@ const stage = root.querySelector('#atlas-stage');
 const fallback = root.querySelector('#atlas-fallback');
 const tooltip = root.querySelector('#atlas-tooltip');
 const state = createAtlasState(getInitialLang());
-const renderer = createAtlasRenderer(canvas, () => state);
+const renderer = createAtlasEngineAdapter(canvas, state.index, state.lang);
 const canvasAvailable = renderer.available;
 let drag = null;
 
 function draw() {
     renderer.resize();
-    renderer.clampCamera();
-    renderer.draw();
+    renderer.render();
 }
 
 function updateCopy() {
@@ -48,15 +47,14 @@ function handlePointerMove(event) {
         renderer.panByScreenDelta(event.clientX - drag.x, event.clientY - drag.y);
         const moved = drag.moved || Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) > 4;
         drag = { ...drag, x: event.clientX, y: event.clientY, moved };
-        draw();
         return;
     }
     const region = renderer.hitTest(event.clientX, event.clientY);
-    if (state.hoveredRegionId !== region?.id) {
+    if (state.hoveredRegionId !== region?.id || (region && tooltip.hidden)) {
         state.hoveredRegionId = region?.id || null;
         canvas.style.cursor = region ? 'pointer' : 'grab';
         showTooltip(region, event);
-        draw();
+        renderer.setHovered(state.hoveredRegionId);
     }
 }
 
@@ -79,7 +77,7 @@ function attachCanvasInteraction() {
         canvas.style.cursor = 'grab';
         if (!completedDrag?.moved) {
             const region = renderer.hitTest(event.clientX, event.clientY);
-            if (region) window.location.assign(region.route);
+            if (region) window.location.assign(renderer.routeFor(region.id));
         }
     });
     canvas.addEventListener('pointercancel', () => {
@@ -91,13 +89,12 @@ function attachCanvasInteraction() {
             state.hoveredRegionId = null;
             tooltip.hidden = true;
             setActiveRegion(root, null);
-            draw();
+            renderer.setHovered(null);
         }
     });
     canvas.addEventListener('wheel', (event) => {
         event.preventDefault();
-        setCameraZoom(state, state.camera.zoom * (event.deltaY > 0 ? 0.9 : 1.1));
-        draw();
+        renderer.zoomBy(event.deltaY > 0 ? 0.9 : 1.1, event.clientX, event.clientY);
     }, { passive: false });
 }
 
@@ -107,7 +104,9 @@ async function loadIndex() {
         if (!response.ok) throw new Error(`Atlas index request failed (${response.status})`);
         const index = await response.json();
         if (!index?.mainGalaxy || !index.wonders || !Array.isArray(index.roads)) throw new Error('Atlas index has an invalid shape');
-        state.index = normalizeAtlasIndex(index);
+        const normalized = normalizeAtlasIndex(index);
+        renderer.setIndex(normalized, state.lang, { resetView: true });
+        state.index = normalized;
         state.usingFallback = false;
         state.loadState = canvasAvailable ? 'ready' : 'canvas-unavailable';
         fallback.hidden = canvasAvailable;
@@ -127,24 +126,25 @@ function setLanguage(lang) {
     state.lang = lang;
     try { localStorage.setItem('neblux-lang', lang); } catch { /* storage is optional */ }
     updateCopy();
+    renderer.setLanguage(lang);
     if (state.loadState === 'ready') setAtlasStatus(root, t(state.lang, 'ready'));
 }
 
 function initControls() {
-    root.querySelector('#atlas-zoom-in').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 1.16); renderer.clampCamera(); draw(); });
-    root.querySelector('#atlas-zoom-out').addEventListener('click', () => { setCameraZoom(state, state.camera.zoom * 0.86); renderer.clampCamera(); draw(); });
-    root.querySelector('#atlas-reset').addEventListener('click', () => { resetCamera(state); draw(); });
+    root.querySelector('#atlas-zoom-in').addEventListener('click', () => renderer.zoomBy(1.16));
+    root.querySelector('#atlas-zoom-out').addEventListener('click', () => renderer.zoomBy(0.86));
+    root.querySelector('#atlas-reset').addEventListener('click', () => renderer.reset());
     root.querySelectorAll('[data-atlas-lang]').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.atlasLang)));
     root.querySelectorAll('[data-region-id]').forEach((link) => {
         link.addEventListener('focus', () => {
             state.hoveredRegionId = link.dataset.regionId;
             setActiveRegion(root, state.hoveredRegionId);
-            draw();
+            renderer.setHovered(state.hoveredRegionId);
         });
         link.addEventListener('blur', () => {
             state.hoveredRegionId = null;
             setActiveRegion(root, null);
-            draw();
+            renderer.setHovered(null);
         });
     });
     window.addEventListener('resize', draw, { passive: true });
@@ -155,9 +155,12 @@ window.__nebluxAtlas = {
     loadState: () => state.loadState,
     regionIds: () => [state.index.mainGalaxy, ...state.index.wonders].map((region) => region.id),
     screenRegion: (id) => renderer.regionScreenPosition(id),
-    camera: () => ({ ...state.camera }),
+    camera: () => renderer.camera(),
     redrawCount: () => renderer.redrawCount,
     canvasAvailable: () => canvasAvailable,
+    rendererKind: () => renderer.rendererKind(),
+    sceneSize: () => renderer.sceneSize(),
+    stats: () => renderer.stats(),
 };
 
 syncStaticCopy(root, state.lang);
@@ -167,3 +170,6 @@ attachCanvasInteraction();
 initControls();
 draw();
 loadIndex();
+window.addEventListener('pagehide', (event) => {
+    if (!event.persisted) renderer.destroy();
+});

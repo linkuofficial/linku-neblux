@@ -34,7 +34,7 @@ const WONDER_IDS = [
 // ===== UI STRINGS =====
 const UI = {
     en: {
-        hdrTitle: 'Neblux Wonders', home: 'Home', graph: 'Graph', tours: 'Tours', progress: 'Tour progress',
+        hdrTitle: 'Neblux Wonders', home: 'Home', graph: 'Atlas', tours: 'Tours', progress: 'Tour progress',
         loading: 'Loading…', retry: 'Retry',
         tagHook: 'A QUESTION', tagExample: 'FOR INSTANCE', tagSurprise: 'THE TWIST',
         cueNext: 'Up next', cueOutward: 'Go further', recWhy: 'from “{via}”, keep falling',
@@ -53,7 +53,7 @@ const UI = {
         errLoad: "Couldn't load this tour.",
     },
     zh: {
-        hdrTitle: 'Neblux 驚奇之旅', home: '首頁', graph: '圖譜', tours: '驚奇之旅', progress: '旅程進度',
+        hdrTitle: 'Neblux 驚奇之旅', home: '首頁', graph: '圖譜星圖', tours: '驚奇之旅', progress: '旅程進度',
         loading: '載入中…', retry: '重試',
         tagHook: '先想想', tagExample: '舉個例', tagSurprise: '意外的是',
         cueNext: '接下來', cueOutward: '想真的學會', recWhy: '從『{via}』，繼續往下墜',
@@ -72,7 +72,7 @@ const UI = {
         errLoad: '這趟旅程載入失敗。',
     },
     ja: {
-        hdrTitle: 'Neblux Wonders', home: 'ホーム', graph: 'グラフ', tours: 'ツアー', progress: 'ツアーの進捗',
+        hdrTitle: 'Neblux 驚きの旅', home: 'ホーム', graph: 'Atlas', tours: 'ツアー', progress: 'ツアーの進捗',
         loading: '読み込み中…', retry: '再試行',
         tagHook: 'まず考えて', tagExample: 'たとえば', tagSurprise: '意外にも',
         cueNext: '次は', cueOutward: 'さらに先へ', recWhy: '「{via}」から、もっと深くへ',
@@ -85,7 +85,7 @@ const UI = {
         recordBack: 'ツアーに戻る', recordDate: '{date} に歩き終えた',
         echoAction: '私も心を動かされた', echoOrdinal: 'ここで心を動かされた {n} 人目です',
         steps: 'ステップ', hint: '✦ 星をタップして、その歩へ',
-        pickerKicker: 'Wonders', pickerTitle: 'ツアーを選ぶ',
+        pickerKicker: '驚きの旅', pickerTitle: 'ツアーを選ぶ',
         pickerSubtitle: '好奇心の糸を一つ選んで、一歩ずつたどってみましょう。',
         cardGo: 'このツアーへ →',
         errLoad: 'このツアーを読み込めませんでした。',
@@ -1191,7 +1191,7 @@ async function renderRecord(id) {
     }
 
     // Footer source line + actions (actions hidden in print via @media print).
-    $('wr-source').textContent = `Neblux Wonders · neblux.linku.tech/wonders.html?w=${id}`;
+    $('wr-source').textContent = `Neblux ${t('tours')} · neblux.linku.tech/wonders.html?w=${id}`;
     const printBtn = $('wr-print');
     printBtn.textContent = t('recordPrint');
     printBtn.onclick = () => window.print();

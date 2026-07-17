@@ -4,7 +4,7 @@
  * s-plane / transformer inline tooltip so future pages get the behaviour for
  * free by following the markup contract — no per-page JS.
  *
- * Markup contract (all inside a .formal section):
+ * Markup contract (inside a .formal section or a standalone .formal-details):
  *   span.sym[data-sym][data-tip][tabindex="0"]   — a formula symbol
  *   dl.symbol-gloss > dt[data-sym]               — glossary; the keyboard/AT stops
  *   p.sym-explainer                              — its initial text is the default hint
@@ -23,7 +23,7 @@
 (function () {
     'use strict';
 
-    const formalSection = document.querySelector('.formal');
+    const formalSection = document.querySelector('.formal, .formal-details');
     if (!formalSection) return;
 
     const symExplainer = formalSection.querySelector('.sym-explainer') || document.querySelector('.sym-explainer');

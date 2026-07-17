@@ -7,9 +7,9 @@ const FALLBACK_LAYOUT = {
         summary: { en: 'A navigable map of how fields and ideas connect.', zh: '探索不同領域與想法如何彼此連結的導航星系。', ja: '分野とアイデアのつながりをたどるための航行星系。' },
     },
     wonders: [
-        { id: 'edge-ai', x: 650, y: 360, radius: 110, hitRadius: 140, route: '/wonders.html?w=edge-ai', domains: ['TEC', 'ENG'], scale: 'medium', title: { en: 'Edge AI' }, summary: { en: 'Intelligence close to the world it serves.' } },
-        { id: 'light', x: -700, y: -250, radius: 120, hitRadius: 150, route: '/wonders.html?w=light', domains: ['PHY'], scale: 'medium', title: { en: 'Light' }, summary: { en: 'A journey through waves, colour, and observation.' } },
-        { id: 'quantum', x: -350, y: 500, radius: 115, hitRadius: 145, route: '/wonders.html?w=quantum', domains: ['PHY', 'MAT'], scale: 'medium', title: { en: 'Quantum Reality' }, summary: { en: 'Where measurement changes what can be known.' } },
+        { id: 'edge-ai', x: 650, y: 360, radius: 110, hitRadius: 140, route: '/wonders.html?w=edge-ai', domains: ['TEC', 'ENG'], scale: 'medium', title: { en: 'Edge AI', zh: '邊緣 AI', ja: 'エッジ AI' }, summary: { en: 'Intelligence close to the world it serves.', zh: '貼近它所服務世界的智慧。', ja: '役立つ現場のすぐそばにある知能。' } },
+        { id: 'light', x: -700, y: -250, radius: 120, hitRadius: 150, route: '/wonders.html?w=light', domains: ['PHY'], scale: 'medium', title: { en: 'Light', zh: '光', ja: '光' }, summary: { en: 'A journey through waves, colour, and observation.', zh: '穿越波、色彩與觀測的一段旅程。', ja: '波、色、観測をたどる旅。' } },
+        { id: 'quantum', x: -350, y: 500, radius: 115, hitRadius: 145, route: '/wonders.html?w=quantum', domains: ['PHY', 'MAT'], scale: 'medium', title: { en: 'Quantum Reality', zh: '量子真實', ja: '量子の世界' }, summary: { en: 'Where measurement changes what can be known.', zh: '測量會改變可知之事的地方。', ja: '測定が、知りうることを変える場所。' } },
     ],
     roads: [{ id: 'light-quantum', from: 'wonder:light', to: 'wonder:quantum', via: 'wave_particle_duality_concept', strength: 'strong' }],
 };
@@ -20,7 +20,6 @@ export function createAtlasState(lang) {
         loadState: 'loading',
         index: FALLBACK_LAYOUT,
         usingFallback: true,
-        camera: { x: 0, y: 0, zoom: 1 },
         hoveredRegionId: null,
     };
 }
@@ -49,18 +48,6 @@ export function normalizeAtlasIndex(index) {
         })),
         roads: (index.roads || []).map((road) => ({ strength: road.strength || road.strengthClass, ...road })),
     };
-}
-
-export function clampZoom(value) {
-    return Math.min(2.4, Math.max(0.7, value));
-}
-
-export function resetCamera(state) {
-    state.camera = { x: 0, y: 0, zoom: 1 };
-}
-
-export function setCameraZoom(state, zoom) {
-    state.camera.zoom = clampZoom(zoom);
 }
 
 export function allRegions(index) {

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="用兩條重新合併的路徑，看懂量子疊加如何產生相長與相消。">
+  <title>量子疊加｜Neblux Depth</title><link rel="stylesheet" href="./quantum-depth.css?v=4">
+</head>
+<body>
+<header class="site-header" aria-label="Neblux Depth"><a class="brand" href="/">Neblux</a><span>Depth candidate · 02</span></header>
+<main data-quantum-depth="superposition">
+  <header class="hero">
+    <p class="eyebrow">Quantum Depth</p><h1>量子疊加<span class="topic-en">Quantum Superposition</span></h1>
+    <p class="deck">量子系統不必先選定一個可能狀態。不同可能狀態的振幅可以一起演化，重新相遇時甚至彼此消掉。</p>
+    <figure class="metaphor"><svg viewBox="0 0 340 84" role="img" aria-label="兩圈水波重疊後有些地方增強，有些地方抵消"><g fill="none" stroke-width="2"><circle cx="125" cy="42" r="12" stroke="#aa8cff"/><circle cx="125" cy="42" r="26" stroke="#aa8cff" opacity=".6"/><circle cx="215" cy="42" r="12" stroke="#5ee7f2"/><circle cx="215" cy="42" r="26" stroke="#5ee7f2" opacity=".6"/></g><path d="M145 42 Q170 8 195 42 Q170 76 145 42" fill="rgba(116,230,170,.18)" stroke="#74e6aa"/></svg><figcaption>兩道波重疊時，有些地方抬得更高，有些地方剛好壓平。量子疊加也要先合併「振幅」，不能只把普通機率相加。</figcaption></figure>
+  </header>
+  <section aria-labelledby="play-title"><p class="section-kicker">1 先動手玩</p><h2 id="play-title">讓第二條路徑慢慢錯開，出口會怎麼變？</h2><p class="intro-copy">兩條可能路徑在右側重新合併。拖動相對相位，觀察同一批量子如何在兩個出口間重新分配。</p>
+    <div class="lab-surface"><div class="canvas-wrap"><canvas aria-label="兩路徑量子疊加與兩個輸出口機率互動圖" role="img"></canvas></div>
+      <ul class="canvas-legend" aria-label="圖例"><li><i class="legend-line legend-violet"></i>可能路徑 1</li><li><i class="legend-line legend-cyan"></i>可能路徑 2</li><li><i class="legend-line legend-green"></i>亮口</li><li><i class="legend-line legend-rose"></i>暗口</li></ul>
+      <div class="control-row"><div><label class="control-label" for="relative-phase"><span><i class="chip chip-violet"></i>相對相位</span><output id="relative-phase-value" class="control-value">0π</output></label><span class="control-copy">只改變兩條可能性重新相遇的步調</span></div><input id="relative-phase" type="range" min="0" max="6.283185307" value="0" step="0.031415927"></div>
+      <p class="result-line" data-result aria-live="polite"></p>
+      <noscript><div class="static-fallback"><svg viewBox="0 0 640 180" role="img" aria-label="兩條路徑合併後一個出口增強，另一出口抵消"><path d="M30 90 L160 90 L320 35 L450 90" fill="none" stroke="#aa8cff" stroke-width="4"/><path d="M160 90 L320 145 L450 90" fill="none" stroke="#5ee7f2" stroke-width="4"/><rect x="500" y="30" width="42" height="120" fill="rgba(170,199,226,.12)"/><rect x="500" y="30" width="42" height="120" fill="#74e6aa"/><rect x="564" y="30" width="42" height="120" fill="rgba(170,199,226,.12)"/></svg><p>同相的兩條可能性在亮口相長、在暗口相消；改變相對相位會交換兩個出口的機率。</p></div></noscript>
+    </div>
+  </section>
+  <section aria-labelledby="observe-title"><p class="section-kicker">2 觀察</p><h2 id="observe-title">兩條可能性不是兩群偷偷分流的粒子</h2><p>如果每顆量子早已選定一條路，只把兩條路的普通機率相加，移動相位不該讓出口從全亮變成全暗。畫面改變的原因是兩條路徑的<strong>複數振幅</strong>一起參與最後結果。</p><p class="takeaway"><strong>一句帶走：</strong>量子疊加是狀態振幅的線性組合；振幅合併後，機率可以出現相長與相消。</p><p class="misconception"><strong>不是：</strong>粒子被切成兩半，也不是我們單純不知道它早已選了哪一條路。</p></section>
+  <section aria-labelledby="use-title"><p class="section-kicker">3 哪裡用得到</p><h2 id="use-title">讓不同可能性彼此計算</h2><ul class="usecase-list"><li><strong>干涉儀</strong>利用相位造成的出口變化測量極小的路徑差。</li><li><strong>原子鐘</strong>操控原子內部狀態的疊加，以穩定頻率作為時間基準。</li><li><strong>量子計算</strong>量子閘改變振幅與相位，最後以干涉強化需要的結果。</li></ul></section>
+  <details class="formal-details"><summary><span class="section-kicker">4 寫成式子</span><h2>疊加真正相加的是什麼？</h2><span class="summary-hint">打開來看相位如何進入振幅</span></summary><div class="formal-body">
+    <p class="formula"><span class="sym sym-cyan" data-sym="state" data-tip="合併後的量子狀態">ψ</span> = <span class="sym sym-violet" data-sym="path1" data-tip="第一個可能狀態的振幅">ψ₁</span> + e<sup>i<span class="sym sym-amber" data-sym="phase" data-tip="兩個可能狀態之間的相對相位">φ</span></sup><span class="sym sym-cyan" data-sym="path2" data-tip="第二個可能狀態的振幅">ψ₂</span></p>
+    <p>畫面使用理想、等振幅的兩路徑模型，因此亮口機率是 `(1+cos φ)/2`。這是教學切片，不代表所有疊加都只有兩個狀態或兩個出口。</p>
+    <dl class="symbol-gloss"><dt data-sym="path1"><span class="sym sym-violet">ψ₁</span></dt><dd>第一個可能狀態。</dd><dt data-sym="path2"><span class="sym sym-cyan">ψ₂</span></dt><dd>第二個可能狀態。</dd><dt data-sym="phase"><span class="sym sym-amber">φ</span></dt><dd>相對相位；決定重合時相長或相消的程度。</dd><dt data-sym="state"><span class="sym sym-cyan">ψ</span></dt><dd>兩個可能狀態組合後的整體狀態。</dd></dl><p class="sym-explainer" aria-live="polite">把游標移到算式符號上（手機點一下），看白話說明。</p><div class="sym-tip" role="tooltip" hidden></div>
+  </div></details>
+  <section class="sources" aria-labelledby="source-title"><p class="section-kicker">來源</p><h2 id="source-title">內容依據</h2><ul><li><a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/resources/mit8_04s13_lec01/">MIT 8.04 Lecture 1: Introduction to Superposition</a></li><li><a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/resources/mit8_04s13_lec03/">MIT 8.04 Lecture 3: The Wave Function</a></li></ul></section>
+</main>
+<footer class="page-footer">Neblux Depth candidate · zh-Hant · v0.1 · 尚未公開審核</footer>
+<script id="node-meta" type="application/json">{"depth_id":"quantum-superposition","node_id":"wave_particle_duality_concept","spec_version":"0.2"}</script><script type="module" src="./quantum-depth.js?v=3"></script><script type="module" src="./sym-tooltip.js?v=2"></script>
+</body></html>
